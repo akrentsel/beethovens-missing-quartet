@@ -1,0 +1,96 @@
+%%label II. Adagio molto espressivo
+%%note Adagio in B flat major: a hushed hymn built on the cell's major form (F, G, A, B flat), darkened in the middle by its true minor form, then sung again by the cello under flowing figuration.
+X:1
+T:Beethoven’s Missing Quartet
+T:II. Adagio molto espressivo
+C:Lor, in the manner of Beethoven
+M:4/4
+L:1/8
+Q:"Adagio molto espressivo" 1/4=54
+%%score [1 | 2 | 3 | 4]
+V:1 clef=treble name="Vl. I"
+V:2 clef=treble name="Vl. II"
+V:3 clef=alto name="Vla."
+V:4 clef=bass name="Vc."
+K:Bb
+V:1
+%%MIDI program 40
+V:2
+%%MIDI program 40
+V:3
+%%MIDI program 41
+V:4
+%%MIDI program 42
+% ---- A, bars 1-8: the hymn (F, G, A, B flat: the cell in major), first violin in its low register; half close, then full close
+[V:1] !p!F4 G2 A2 | B4 c2 d2 | e3 d c2 B2 | (c2 B2) A4 |
+[V:2] !p!D4 E2 E2 | D4 E2 F2 | G4 E2 D2 | G2 F6 |
+[V:3] !p!B,4 G,2 C2 | B,4 G,2 B,2 | B,4 C2 G,2 | G,2 D2 C4 |
+[V:4] !p!B,,4 E,2 F,2 | D,4 C,2 B,,2 | E,4 F,,2 G,,2 | E,2 F,6 |
+[V:1] F4 G2 A2 | B2 d2 g4 | (f2 e2) (d2 c2) | B6 z2 |
+[V:2] B,2 (B,C) E2 E2 | D2 D2 E4 | B2 c2 B2 A2 | F6 z2 |
+[V:3] F,4 B,2 F,2 | G,2 B,2 B,4 | F2 E2 D2 E2 | D6 z2 |
+[V:4] D,4 E,2 F,2 | G,,2 F,,2 E,,4 | D,2 E,2 F,2 F,2 | B,,6 z2 |
+% ---- bars 9-12: second violin answers, turning to F major
+[V:1] z8 | z8 | z8 | z8 |
+[V:2] d4 (c2 B2) | A3 B c2 f2 | (d2 =e2) f2 (=ed) | c4 c2 z2 |
+[V:3] B,4 B,2 G,2 | C4 F,2 A,2 | G,2 B,2 A,2 B,2 | A,6 z2 |
+[V:4] G,,4 =E,,4 | F,,4 A,,2 D,2 | B,,2 C,2 A,,2 C,2 | F,,4 F,,2 z2 |
+% ---- bars 13-16: the hymn returns and climbs to its peak (G), full close
+[V:1] F4 G2 A2 | B2 c2 d2 e2 | g2 f2 (ed) c2 | B6 z2 |
+[V:2] D2 F2 E2 E2 | D2 G2 B4 | B2 B2 G2 A2 | F6 z2 |
+[V:3] B,2 B,2 G,2 C2 | D2 C2 B,2 B,2 | B,2 B,2 C2 C2 | D6 z2 |
+[V:4] B,,4 E,2 F,2 | D,2 E,2 F,2 G,2 | E,2 D,2 C,2 F,,2 | B,,6 z2 |
+% ---- Link, bars 17-20: the head echoed over a tonic pedal; G flat creeps in, half close on F
+[V:1] !pp!F4 G2 A2 | B4 _G4 | _G4 F4 | F6 !fermata!z2 |
+[V:2] !pp!D4 E2 E2 | D4 E4 | E8 | E6 !fermata!z2 |
+[V:3] !pp!B,4 G,2 C2 | _A,4 _G,4 | C4 =A,4 | A,6 !fermata!z2 |
+[V:4] !pp!B,,8 | B,,8 | F,,8 | F,,6 !fermata!z2 |
+% ---- B, bars 21-24: B flat minor; a lament in the first violin over pulsing inner parts
+[V:1] [K:Bbm] !p!d4 (c2 B2) | B4 =A4 | f4 (e2 d2) | c6 z2 |
+[V:2] [K:Bbm] z!p!DDD zDDD | zEEE zEEE | zDDD zGGG | zFFF zFFF |
+[V:3] [K:Bbm] z!p!F,F,F, zF,F,F, | zB,B,B, zCCC | zB,B,B, zB,B,B, | z=A,A,A, zA,A,A, |
+[V:4] [K:Bbm] !p!B,,2 z2 B,,2 z2 | G,,2 z2 F,,2 z2 | D,2 z2 G,,2 z2 | F,,2 z2 F,,2 z2 |
+% ---- bars 25-28: the lament repeated by the viola, a first-violin counterline above it, the second violin pulsing
+[V:1] z2 !p!f4 d2 | e4 c4 | B4 (d2 B2) | c4 =A2 z2 |
+[V:2] z!pp!B,B,B, zB,B,B, | zEEE zEEE | zDDD zDDD | zFFF zFFF |
+[V:3] !mp!D4 (C2 B,2) | B,4 =A,4 | F4 (E2 D2) | C6 z2 |
+[V:4] !pp!B,,2 z2 B,,2 z2 | G,,2 z2 F,,2 z2 | D,2 z2 G,,2 z2 | F,,2 z2 F,,2 z2 |
+% ---- bars 29-30: the intrusion: the cell in its true minor form (F, G flat, A, B flat), unison, as the motto of movement I
+[V:1] !ff!f6 !sfz!!>!g2 | =a2 b2 z4 |
+[V:2] !ff!F6 !sfz!!>!G2 | =A2 B2 z4 |
+[V:3] !ff!F,6 !sfz!!>!G,2 | =A,2 B,2 z4 |
+[V:4] !ff!F,,6 !sfz!!>!G,,2 | =A,,2 B,,2 z4 |
+% ---- bars 31-37: G minor; falling sighs, then a chromatic bass climbs to the climax: the cell on D, harmonised, the violins in octaves up to G6, the high point of the movement (D, E flat, F sharp, G)
+[V:1] [K:Gm] !p!_A4 G4 | G4 ^F4 | !mp!d4 c4 | !mf!d4 f4 | !f!(e2 g2) (g2 b2) | !ff!d'6 !sfz!!>!e'2 | ^f'2 g'2 z4 |
+[V:2] [K:Gm] !p!F4 E4 | E4 D4 | !mp!G4 ^F4 | !mf!G4 G4 | !f!c4 =e4 | !ff!d6 !sfz!!>!e2 | ^f2 g2 z4 |
+[V:3] [K:Gm] !p!D4 B,4 | C4 C4 | !mp!B,4 D4 | !mf!D4 D4 | !f!E4 =E4 | !ff![^FA]6 !sfz!!>![Ac]2 | [Ac]2 [GB]2 z4 |
+[V:4] [K:Gm] !p!B,,4 E,4 | C,4 D,4 | !mp!G,,4 A,,4 | !mf!B,,4 =B,,4 | !f!C,4 ^C,4 | !ff!D,8 | D,2 G,,2 z4 |
+% ---- Retransition, bars 38-41: the storm subsides; over a dominant pedal the viola recalls the hymn's first notes
+[V:1] !p!d4 c4 | B4 A4 | [K:Bb] !pp!z8 | (c2 B2) A2 !fermata!z2 |
+[V:2] !p!B4 G4 | F4 E4 | [K:Bb] !pp!E4 D2 C2 | E6 !fermata!z2 |
+[V:3] !p!G,4 G,4 | C4 C4 | [K:Bb] !pp!F,4 G,2 A,2 | C6 !fermata!z2 |
+[V:4] !p!G,,4 E,4 | F,,4 F,,4 | [K:Bb] !pp!F,,4 F,,4 | F,,6 !fermata!z2 |
+% ---- A', bars 42-49: the hymn sung by the cello in its tenor register, the viola as bass; flowing eighths in the first violin, then in the second
+[V:1] !p!(Bdfd) (Be) (cA) | (fdBf) (ec) (Bd) | (geBe) (cf) (Bd) | (ce) (df) (cA) (fe) |
+[V:2] !p!D2 B,2 E4 | D4 E2 F2 | G4 E2 D2 | G2 D2 E4 |
+[V:3] !p!D,4 E,2 F,2 | D,4 C,2 B,2 | E,4 F,2 G,2 | E,2 F,6 |
+[V:4] !mp!F,4 G,2 A,2 | B,4 C2 D2 | E3 D C2 B,2 | (C2 B,2) A,4 |
+[V:1] !pp!f4 c4 | d4 B4 | B2 c2 B2 A2 | B6 z2 |
+[V:2] !p!(DFBD) (EG) (CE) | (DB,GD) (EGBG) | (DF) (EG) (FD) (EC) | (DFDB,) D2 z2 |
+[V:3] !p!D,4 C,2 A,2 | G,2 F,2 E,4 | D,2 E,2 F,2 F,2 | D,4 F,2 z2 |
+[V:4] !mp!F,4 G,2 A,2 | B,2 D2 G4 | (F2 E2) (D2 C2) | B,2 F,2 B,,2 z2 |
+% ---- bars 50-53: the answering phrase now in the first violin, the viola in triplets, to F major
+[V:1] !p!d4 (c2 B2) | A3 B c2 f2 | (d2 =e2) f2 (=ed) | c4 c2 z2 |
+[V:2] !p!B,4 B,2 G,2 | C4 C2 A,2 | G,2 B,2 A,2 B,2 | A,4 E2 z2 |
+[V:3] !p!(3G,B,D (3B,DB, (3=E,G,C (3G,B,G, | (3F,A,C (3A,F,A, (3F,A,C (3D,F,A, | (3G,B,D (3=E,G,B, (3F,A,C (3G,=E,B, | (3F,A,C (3FCA, (3E,A,C (3E,A,C |
+[V:4] !p!G,,4 =E,,4 | F,,4 A,,2 D,2 | B,,2 C,2 A,,2 C,2 | F,,4 F,,2 z2 |
+% ---- bars 54-57: the hymn climbs once more, now to B flat, full close
+[V:1] !mf!F4 G2 A2 | B2 c2 (de) (fg) | b2 f2 (ed) c2 | !p!B6 z2 |
+[V:2] !mf!D2 F2 E2 E2 | D2 G2 B4 | B2 B2 G2 A2 | !p!F6 z2 |
+[V:3] !mf!(3D,F,B, (3F,B,D (3E,G,B, (3F,A,C | (3F,B,D (3G,CE (3F,B,D (3B,EG | (3G,B,E (3B,DF (3G,CE (3CEC | !p!(3D,F,B, (3DB,F, D2 z2 |
+[V:4] !mf!B,,4 E,2 F,2 | D,2 E,2 F,2 G,2 | E,2 D,2 C,2 F,,2 | !p!B,,6 z2 |
+% ---- Coda, bars 58-65: over a tonic pedal the cell sounds in the second violin (major), then in the viola (minor, with G flat); a plagal close darkened by G flat; last, the cell in the cello, pianissimo
+[V:1] !p!d4 e4 | d6 z2 | B4 B2 c2 | d6 z2 | !pp!g4 _g4 | f8 | d2 B2 c2 d2 | d6 !fermata!z2 |]
+[V:2] !p!F4 G2 A2 | B6 z2 | D4 E4 | D6 z2 | !pp!E8 | D8 | B2 G2 F2 F2 | F6 !fermata!z2 |]
+[V:3] !p!B,4 B,2 C2 | D6 z2 | F,4 _G,2 =A,2 | B,6 z2 | !pp!B,8 | B,8 | D2 E2 E2 D2 | B,6 !fermata!z2 |]
+[V:4] !p!B,,8 | B,,6 z2 | B,,8 | B,,6 z2 | !pp!E,8 | B,,8 | F,,2 G,,2 A,,2 B,,2 | B,,6 !fermata!z2 |]

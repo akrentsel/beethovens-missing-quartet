@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Composition notebook — Beethoven’s Missing Quartet</title>
+<meta name="description" content="A public account of the themes, revisions, and engineering checks behind an original AI-composed quartet inspired by Beethoven.">
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#fbfaf5;color:#17232b}body{font:18px/1.6 'Old Standard TT',Georgia,serif}header{background:#8fa5b2;padding:36px max(22px,calc((100% - 760px)/2)) 30px}header p{margin:12px 0 0;max-width:65ch}h1{font-weight:400;font-size:clamp(34px,6vw,54px);line-height:1.12;margin:22px 0 12px}h2{font-size:28px;line-height:1.2;margin:44px 0 14px;font-weight:400}h3{font-size:21px;margin:26px 0 8px}main,footer{max-width:804px;margin:auto;padding:0 22px}a{color:inherit;text-underline-offset:3px}a:hover{color:#765019}a:focus-visible,summary:focus-visible{outline:2px solid #b8741a;outline-offset:4px}.lede{font-size:21px}.cell{font-size:clamp(25px,5vw,40px);text-align:center;margin:28px 0 4px;letter-spacing:.06em}.caption{text-align:center;color:#4d575e;font-size:16px}p{margin:12px 0}li{margin:8px 0}ul{padding-left:23px}.movement{border-top:1px solid #b9bec0;padding-top:2px;margin-top:30px}.meta{color:#4d575e;font-size:16px}details{margin:18px 0}summary{cursor:pointer;font-size:19px}details p{padding-left:18px}code{font:14px/1.5 ui-monospace,monospace;overflow-wrap:anywhere}footer{margin-top:44px;padding-top:20px;padding-bottom:36px;border-top:1px solid #b9bec0}.notice{border:1px solid #b9bec0;padding:14px 18px;margin:28px 0;font-size:17px}nav{display:flex;gap:22px;flex-wrap:wrap;font-size:17px}@media(max-width:480px){body{font-size:17px}header{padding:24px 20px}h2{font-size:25px}}
+</style>
+</head>
+<body>
+<header>
+<nav aria-label="Navigation"><a href="index.html">Listen to the quartet</a><a href="transcript.html">Search the conversation logs</a><a href="https://github.com/akrentsel/beethovens-missing-quartet">Scores &amp; source</a></nav>
+<h1>The composition notebook</h1>
+<p class="lede">How Beethoven’s Missing Quartet was written, revised, and made playable.</p>
+<p>An original AI-composed homage in D minor, not a rediscovered Beethoven work. Composed on November 14, 2026.</p>
+</header>
+<main>
+<div class="notice">This is an edited, high-level account of the composition process, based on the recorded briefs, completion reports, score revisions, and test results. It is not a verbatim transcript or a disclosure of private internal reasoning. The musical judgments are analytical: the agents did not listen to the performance.</div>
+<h2>One small cell links four movements</h2>
+<p>The starting idea was to write a new quartet inspired by Beethoven’s middle-period language: concentrated motives, dialogue between instruments, abrupt changes of dynamics, and silences that interrupt an otherwise clear phrase.</p>
+<div class="cell" aria-label="A, B flat, C sharp, D">A &nbsp; B♭ &nbsp; C♯ &nbsp; D</div>
+<p class="caption">A semitone up, a diminished seventh down, then a semitone up.</p>
+<p>The minor-mode cell is transformed rather than quoted mechanically. Its major counterpart rises by step: A–B–C♯–D. That transformation connects the slow movement’s hymn, the scherzo’s trio, and the finale’s D-major coda.</p>
+<p>One lead agent wrote movement I and built the player. Three subagents each wrote a different movement from a shared musical brief, then made a revision pass. The lead integrated the scores and checked their playback.</p>
+
+<h2>Each movement gives the cell a different role</h2>
+<section class="movement">
+<h3>I. Poco sostenuto. Allegro agitato</h3>
+<p class="meta">153 bars · approximately 6:22 · D minor · sonata form</p>
+<p>The slow introduction introduces the cell from the cello upward through all four instruments. The Allegro turns it into a fortissimo octave motto, interrupted by quiet answers. A singing second theme moves to F major; the development darkens it and passes the cell through imitative entries.</p>
+<p>The reprise briefly offers D major before the minor motto interrupts it. The coda remembers the slow introduction, then closes emphatically in D minor.</p>
+<details><summary>Revision and playback decisions</summary><p>Flagged parallels were re-voiced in the accompaniment and cadences. The slow introduction’s tied notes were shortened by re-articulating them, because the sampled strings stop sustaining after about six seconds. Key changes needed a player fix to preserve the viola and cello clefs.</p></details>
+<p><a href="scores/01-dminor-i.abc">Read the ABC score</a></p>
+</section>
+<section class="movement">
+<h3>II. Adagio molto espressivo</h3>
+<p class="meta">65 bars · approximately 4:49 · B♭ major · A–B–A′ with coda</p>
+<p>The opening hymn uses the cell’s major form: F–G–A–B♭. The middle section turns to B♭ minor and G minor, with the minor cell intruding in octaves. On the return, the cello sings the hymn in its tenor register while the viola supplies the bass.</p>
+<details><summary>What changed in the revision</summary><p>One bar was added to prepare the climax: a chromatic bass now climbs G–A–B♭–B–C–C♯ toward D. Pulsing notes above the viola’s lament became a counterline. The returning hymn was decorated rather than simply copied, and the cello’s cadence was reshaped to resolve the melody before dropping to the bass.</p><p>The part-writing pass also changed unresolved sevenths and doubled leading tones. The viola’s triplets remain only partly covered by the automated parallel-motion check, which samples on an eighth-note grid.</p></details>
+<p><a href="scores/02-dminor-ii.abc">Read the ABC score</a></p>
+</section>
+<section class="movement">
+<h3>III. Scherzo. Allegro molto</h3>
+<p class="meta">168 written bars, with repeats · approximately 3:09 · D minor; D-major trio</p>
+<p>The cell becomes a terse two-bar gesture, thrown between instruments with displaced accents, hemiolas, and sudden gaps. The trio turns it into a rustic rising tune over a D–A drone. The scherzo returns, written out rather than left as a da-capo instruction.</p>
+<details><summary>What changed in the revision</summary><p>A quiet cello pedal was added beneath the sparse fragments in bars 33–40 and their return. The trio’s drone now yields to dominant-to-tonic bass motion at its cadences. In the coda, two silent bars became an accented dominant preparation before the final outburst.</p><p>Some silence was deliberately retained: a strong cadence followed by nothing is part of the scherzo’s character. Several chordal sevenths and incomplete cadences were also corrected.</p></details>
+<p><a href="scores/03-dminor-iii.abc">Read the ABC score</a></p>
+</section>
+<section class="movement">
+<h3>IV. Allegro con fuoco. Presto</h3>
+<p class="meta">197 bars · approximately 3:45 · D-minor rondo; D-major coda</p>
+<p>A galloping refrain transforms the cell into A–B♭–A–C♯–D. A hymn-like F-major episode contrasts with it, and a later fugato gives the cell successive entries. The last coda turns the refrain major and quickens to Presto.</p>
+<details><summary>What changed in the revision</summary><p>A repeated refrain return now begins quietly and rebuilds, with the second violin shadowing the tune instead of merely pulsing. Sustained viola notes fill out the approach to the climax, whose dynamics now rise in stages. The ending retains its high first-violin flourish over the rising major-mode cell in the bass.</p><p>The fugato still begins thinly, and the finale is shorter than originally planned. Those are places to revisit after listening, not defects an automated check can settle.</p></details>
+<p><a href="scores/04-dminor-iv.abc">Read the ABC score</a></p>
+</section>
+
+<h2>The player needed as much testing as the score</h2>
+<p>ABC notation stores each score as editable text. <a href="https://www.abcjs.net/">abcjs</a> engraves it and builds a performance from instrument samples. Several problems were reproduced and fixed during development:</p>
+<ul>
+<li><strong>Silent playback:</strong> instrument choices were being changed after the library selected its samples, and numeric instrument IDs replaced names. Selecting programs earlier restored sound.</li>
+<li><strong>Resume and seek:</strong> pause did not reset the library’s toggle state; seeking also left a stale start time. The transport was changed to pause, seek, then resume in the correct order.</li>
+<li><strong>Missing accents:</strong> a bare <code>!sfz!</code> printed but did not change note velocity. An explicit accent was added alongside it.</li>
+<li><strong>Slow string attacks:</strong> short bowed notes were much quieter than long notes. The player gives them a bounded level boost; the artistic effect still needs human listening.</li>
+<li><strong>Clipping:</strong> loud passages exceeded full scale. The rendered stereo buffer is scaled to a peak of 0.9 before playback.</li>
+</ul>
+
+<h2>Checks are evidence, not a verdict on the music</h2>
+<p>All four final scores passed the project’s structural checks: matching bar counts, bar durations, instrument ranges, and its sampled parallel-fifths-and-octaves test. The parser reported no warnings. Headless-browser tests produced non-silent buffers for every movement, with no samples exceeding full scale after normalization.</p>
+<p>Those checks do <em>not</em> prove that the counterpoint is flawless or that the quartet succeeds musically. Deliberate octave doubling is exempted; triplets and double stops are incompletely represented in the parallel checker. Phrasing, balance, idiomatic bowing, and the sense of a convincing large-scale argument remain matters for performers and listeners.</p>
+<p>The first user confirmed that playback was audible. No agent judged the completed quartet by ear. If something feels static, too abrupt, or unconvincing, the score is meant to be revised—not defended by a passing test.</p>
+<p class="meta">Sources for this account: the recorded composition briefs, movement-completion and revision reports, score comments, and browser/audio test outputs. Summarized and edited for public reading; raw private chat logs are not included.</p>
+</main>
+<footer><nav><a href="index.html">Back to the music</a><a href="https://github.com/akrentsel/beethovens-missing-quartet">Browse the repository</a></nav></footer>
+</body>
+</html>
