@@ -30,6 +30,7 @@ For a static-only preview, serve this directory with any HTTP server. Voting nee
 - `index.html`, `assets/library.*`: composer catalogue, completed works, requests and queue.
 - `data/catalog.json`: composer groups, forms and work/movement manifests.
 - `work.html`, `assets/player.*`: manifest-driven notation and sampled playback, using [abcjs](https://www.abcjs.net/).
+- `assets/vendor/abcjs-basic-min.js`: pinned browser library with a reproducible key-aware trill fix; see `docs/trill-playback.md` and `node tools/build-abcjs.mjs --check`.
 - `beethoven.html`: the original self-contained quartet player, kept available.
 - `scores/`: ABC notation. The player supports varying part counts and honors score instrument programs.
 - `notebook.html`, `transcript.html`, `transcript.json`: the first quartet’s notebook and public conversation record. Private internal reasoning, credentials and raw private histories are not published.

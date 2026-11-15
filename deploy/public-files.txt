@@ -11,6 +11,8 @@ assets/player.css
 assets/player.js
 assets/legacy-host.js
 assets/favicon.svg
+assets/vendor/abcjs-basic-min.js
+assets/vendor/abcjs_basic.LICENSE
 data/catalog.json
 scores/01-dminor-i.abc
 scores/02-dminor-ii.abc

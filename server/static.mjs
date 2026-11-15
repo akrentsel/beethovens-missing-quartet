@@ -12,6 +12,8 @@ const EXACT = new Map([
   ['/transcript.html', 'transcript.html'],
   ['/transcript.json', 'transcript.json'],
   ['/data/catalog.json', 'data/catalog.json'],
+  ['/assets/vendor/abcjs-basic-min.js', 'assets/vendor/abcjs-basic-min.js'],
+  ['/assets/vendor/abcjs_basic.LICENSE', 'assets/vendor/abcjs_basic.LICENSE'],
 ]);
 const DIRS = new Set(['assets', 'scores']);
 const NAME = /^[A-Za-z0-9][A-Za-z0-9_-]*(?:\.[A-Za-z0-9_-]+)*$/;
