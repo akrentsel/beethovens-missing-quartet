@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "title": "Missing Works",
+  "eras": [
+    {
+      "id": "baroque",
+      "label": "Baroque",
+      "description": "Counterpoint, dance, and the singing line."
+    },
+    {
+      "id": "classical",
+      "label": "Classical",
+      "description": "Conversation, proportion, and invention."
+    },
+    {
+      "id": "romantic",
+      "label": "Romantic & late Romantic",
+      "description": "Intimacy and ambition, from sonata to symphony."
+    },
+    {
+      "id": "modern-european",
+      "label": "20th-century European",
+      "description": "New colours, new rhythms, and old forms reimagined."
+    },
+    {
+      "id": "american",
+      "label": "American, modern & contemporary",
+      "description": "A broad tradition, from concert hall to minimalism."
+    }
+  ],
+  "composers": [
+    {
+      "id": "bach",
+      "name": "Johann Sebastian Bach",
+      "shortName": "Bach",
+      "years": "1685–1750",
+      "eraId": "baroque"
+    },
+    {
+      "id": "handel",
+      "name": "George Frideric Handel",
+      "shortName": "Handel",
+      "years": "1685–1759",
+      "eraId": "baroque"
+    },
+    {
+      "id": "vivaldi",
+      "name": "Antonio Vivaldi",
+      "shortName": "Vivaldi",
+      "years": "1678–1741",
+      "eraId": "baroque"
+    },
+    {
+      "id": "telemann",
+      "name": "Georg Philipp Telemann",
+      "shortName": "Telemann",
+      "years": "1681–1767",
+      "eraId": "baroque"
+    },
+    {
+      "id": "corelli",
+      "name": "Arcangelo Corelli",
+      "shortName": "Corelli",
+      "years": "1653–1713",
+      "eraId": "baroque"
+    },
+    {
+      "id": "purcell",
+      "name": "Henry Purcell",
+      "shortName": "Purcell",
+      "years": "1659–1695",
+      "eraId": "baroque"
+    },
+    {
+      "id": "scarlatti",
+      "name": "Domenico Scarlatti",
+      "shortName": "Scarlatti",
+      "years": "1685–1757",
+      "eraId": "baroque"
+    },
+    {
+      "id": "haydn",
+      "name": "Joseph Haydn",
+      "shortName": "Haydn",
+      "years": "1732–1809",
+      "eraId": "classical"
+    },
+    {
+      "id": "mozart",
+      "name": "Wolfgang Amadeus Mozart",
+      "shortName": "Mozart",
+      "years": "1756–1791",
+      "eraId": "classical"
+    },
+    {
+      "id": "cpe-bach",
+      "name": "Carl Philipp Emanuel Bach",
+      "shortName": "C. P. E. Bach",
+      "years": "1714–1788",
+      "eraId": "classical"
+    },
+    {
+      "id": "boccherini",
+      "name": "Luigi Boccherini",
+      "shortName": "Boccherini",
+      "years": "1743–1805",
+      "eraId": "classical"
+    },
+    {
+      "id": "clementi",
+      "name": "Muzio Clementi",
+      "shortName": "Clementi",
+      "years": "1752–1832",
+      "eraId": "classical"
+    },
+    {
+      "id": "hummel",
+      "name": "Johann Nepomuk Hummel",
+      "shortName": "Hummel",
+      "years": "1778–1837",
+      "eraId": "classical"
+    },
+    {
+      "id": "beethoven",
+      "name": "Ludwig van Beethoven",
+      "shortName": "Beethoven",
+      "years": "1770–1827",
+      "eraId": "romantic"
+    },
+    {
+      "id": "schubert",
+      "name": "Franz Schubert",
+      "shortName": "Schubert",
+      "years": "1797–1828",
+      "eraId": "romantic"
+    },
+    {
+      "id": "schumann",
+      "name": "Robert Schumann",
+      "shortName": "Schumann",
+      "years": "1810–1856",
+      "eraId": "romantic"
+    },
+    {
+      "id": "chopin",
+      "name": "Frédéric Chopin",
+      "shortName": "Chopin",
+      "years": "1810–1849",
+      "eraId": "romantic"
+    },
+    {
+      "id": "brahms",
+      "name": "Johannes Brahms",
+      "shortName": "Brahms",
+      "years": "1833–1897",
+      "eraId": "romantic"
+    },
+    {
+      "id": "tchaikovsky",
+      "name": "Pyotr Ilyich Tchaikovsky",
+      "shortName": "Tchaikovsky",
+      "years": "1840–1893",
+      "eraId": "romantic"
+    },
+    {
+      "id": "dvorak",
+      "name": "Antonín Dvořák",
+      "shortName": "Dvořák",
+      "years": "1841–1904",
+      "eraId": "romantic"
+    },
+    {
+      "id": "sibelius",
+      "name": "Jean Sibelius",
+      "shortName": "Sibelius",
+      "years": "1865–1957",
+      "eraId": "romantic"
+    },
+    {
+      "id": "debussy",
+      "name": "Claude Debussy",
+      "shortName": "Debussy",
+      "years": "1862–1918",
+      "eraId": "modern-european"
+    },
+    {
+      "id": "ravel",
+      "name": "Maurice Ravel",
+      "shortName": "Ravel",
+      "years": "1875–1937",
+      "eraId": "modern-european"
+    },
+    {
+      "id": "stravinsky",
+      "name": "Igor Stravinsky",
+      "shortName": "Stravinsky",
+      "years": "1882–1971",
+      "eraId": "modern-european"
+    },
+    {
+      "id": "bartok",
+      "name": "Béla Bartók",
+      "shortName": "Bartók",
+      "years": "1881–1945",
+      "eraId": "modern-european"
+    },
+    {
+      "id": "prokofiev",
+      "name": "Sergei Prokofiev",
+      "shortName": "Prokofiev",
+      "years": "1891–1953",
+      "eraId": "modern-european"
+    },
+    {
+      "id": "shostakovich",
+      "name": "Dmitri Shostakovich",
+      "shortName": "Shostakovich",
+      "years": "1906–1975",
+      "eraId": "modern-european"
+    },
+    {
+      "id": "britten",
+      "name": "Benjamin Britten",
+      "shortName": "Britten",
+      "years": "1913–1976",
+      "eraId": "modern-european"
+    },
+    {
+      "id": "ives",
+      "name": "Charles Ives",
+      "shortName": "Ives",
+      "years": "1874–1954",
+      "eraId": "american"
+    },
+    {
+      "id": "price",
+      "name": "Florence Price",
+      "shortName": "Florence Price",
+      "years": "1887–1953",
+      "eraId": "american"
+    },
+    {
+      "id": "gershwin",
+      "name": "George Gershwin",
+      "shortName": "Gershwin",
+      "years": "1898–1937",
+      "eraId": "american"
+    },
+    {
+      "id": "copland",
+      "name": "Aaron Copland",
+      "shortName": "Copland",
+      "years": "1900–1990",
+      "eraId": "american"
+    },
+    {
+      "id": "barber",
+      "name": "Samuel Barber",
+      "shortName": "Barber",
+      "years": "1910–1981",
+      "eraId": "american"
+    },
+    {
+      "id": "bernstein",
+      "name": "Leonard Bernstein",
+      "shortName": "Bernstein",
+      "years": "1918–1990",
+      "eraId": "american"
+    },
+    {
+      "id": "glass",
+      "name": "Philip Glass",
+      "shortName": "Philip Glass",
+      "years": "1937–",
+      "eraId": "american"
+    },
+    {
+      "id": "adams",
+      "name": "John Adams",
+      "shortName": "John Adams",
+      "years": "1947–",
+      "eraId": "american"
+    }
+  ],
+  "forms": [
+    {
+      "id": "string-quartet",
+      "label": "String quartet",
+      "description": "Two violins, viola, and cello."
+    },
+    {
+      "id": "violin-sonata",
+      "label": "Violin sonata",
+      "description": "Violin and piano."
+    },
+    {
+      "id": "piano-sonata",
+      "label": "Piano sonata",
+      "description": "Solo piano."
+    },
+    {
+      "id": "symphony",
+      "label": "Symphony",
+      "description": "An orchestral work in multiple movements."
+    }
+  ],
+  "works": [
+    {
+      "id": "beethoven-quartet-d-minor",
+      "composerId": "beethoven",
+      "formId": "string-quartet",
+      "round": 1,
+      "title": "Beethoven’s Missing Quartet",
+      "subtitle": "String quartet in D minor",
+      "description": "One four-note cell, four movements: a new AI-composed homage, not a rediscovered work by Beethoven.",
+      "durationSeconds": 1085,
+      "date": "2026-11-14",
+      "status": "completed",
+      "notebook": "notebook.html",
+      "transcript": "transcript.html",
+      "legacyUrl": "beethoven.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Poco sostenuto. Allegro agitato",
+          "note": "Slow introduction and sonata-form Allegro.",
+          "source": "scores/01-dminor-i.abc",
+          "durationSeconds": 382
+        },
+        {
+          "id": "ii",
+          "label": "II. Adagio molto espressivo",
+          "note": "A B-flat-major hymn with a darker middle.",
+          "source": "scores/02-dminor-ii.abc",
+          "durationSeconds": 289
+        },
+        {
+          "id": "iii",
+          "label": "III. Scherzo. Allegro molto",
+          "note": "A terse D-minor scherzo and a rustic D-major trio.",
+          "source": "scores/03-dminor-iii.abc",
+          "durationSeconds": 189
+        },
+        {
+          "id": "iv",
+          "label": "IV. Allegro con fuoco. Presto",
+          "note": "A rondo with a fugato and a D-major release.",
+          "source": "scores/04-dminor-iv.abc",
+          "durationSeconds": 225
+        }
+      ]
+    }
+  ]
+}

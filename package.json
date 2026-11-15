@@ -1,0 +1,13 @@
+{
+  "name": "missing-works",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A composer-inspired listening library and anonymous commissioning queue",
+  "engines": {"node": ">=24"},
+  "scripts": {
+    "start": "node server/index.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "queue": "node server/admin.mjs queue"
+  }
+}

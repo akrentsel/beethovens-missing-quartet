@@ -1,0 +1,17 @@
+% TEST FIXTURE — not a catalogue work.
+X:1
+T:Fixture: two parts
+C:Test fixture
+M:3/4
+L:1/8
+Q:1/4=160
+%%score Vn | Pf
+V:Vn clef=treble name="Violin"
+V:Pf clef=bass name="Piano"
+K:Am
+V:Vn
+%%MIDI program 40
+e2 ab c'2 | b2 ag e2 | a6 |
+V:Pf
+%%MIDI program 0
+A,2 E2 A2 | E,2 B,2 E2 | A,6 |

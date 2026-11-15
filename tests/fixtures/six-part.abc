@@ -1,0 +1,39 @@
+% TEST FIXTURE — not a catalogue work. Six parts with a key change.
+X:1
+T:Fixture: six parts
+C:Test fixture
+M:4/4
+L:1/8
+Q:1/4=168
+%%score [Fl | Hn | Vn | Va | Vc | Cb]
+V:Fl clef=treble name="Flute"
+V:Hn clef=treble name="Horn"
+V:Vn clef=treble name="Violins"
+V:Va clef=alto name="Viola"
+V:Vc clef=bass name="Cello"
+V:Cb clef=bass name="Bass"
+K:D
+V:Fl
+%%MIDI program 73
+V:Hn
+%%MIDI program 60
+V:Vn
+%%MIDI program 48
+V:Va
+%%MIDI program 41
+V:Vc
+%%MIDI program 42
+V:Cb
+%%MIDI program 43
+[V:Fl] f2a2 d'4 | a8 |
+[V:Hn] A4 F4 | A8 |
+[V:Vn] dddd ffff | a8 |
+[V:Va] A2F2 A2d2 | c8 |
+[V:Vc] D2F2 A,2D2 | A,8 |
+[V:Cb] D,4 D,4 | A,,8 |
+[V:Fl] [K:Bb] f2d2 B4 | b8 |]
+[V:Hn] [K:Bb] F4 D4 | F8 |]
+[V:Vn] [K:Bb] BBBB dddd | f8 |]
+[V:Va] [K:Bb] F2D2 F2B2 | d8 |]
+[V:Vc] [K:Bb] B,2D2 F,2B,2 | B,8 |]
+[V:Cb] [K:Bb] B,,4 B,,4 | B,,8 |]

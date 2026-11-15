@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="assets/legacy-host.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beethoven’s Missing Quartet</title>
+<meta name="description" content="An original AI-composed string quartet in four movements, inspired by Beethoven. Listen, follow the score, and read the composition notebook.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cover: #8fa5b2;      /* urtext-edition blue-grey */
+    --cover-deep: #7b93a1;
+    --ink: #17232b;
+    --paper: #fbfaf5;
+    --rosin: #b8741a;      /* playback cursor, active states */
+    --graphite: #4d575e;
+    --rule: rgba(23, 35, 43, .28);
+    --serif: "Old Standard TT", "Century Schoolbook", "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--cover); color: var(--ink); }
+  body { font-family: var(--serif); font-size: 16px; line-height: 1.45; }
+  button, select, input, textarea { font: inherit; color: inherit; }
+
+  .desk { max-width: 1180px; margin: 0 auto; }
+
+  /* ---- cover ---- */
+  .cover { padding: 26px 22px 18px; text-align: center; }
+  .cover .composer { font-size: 15px; letter-spacing: .32em; text-transform: uppercase; margin: 0 0 10px; padding-left: .32em; }
+  .cover h1 { font-weight: 400; font-size: clamp(28px, 5.2vw, 46px); line-height: 1.08; margin: 0; letter-spacing: .01em; }
+  .cover .movement { font-style: italic; font-size: clamp(17px, 2.6vw, 21px); margin: 8px 0 0; }
+  .cover .rule { width: 64px; height: 0; border-top: 1px solid var(--ink); margin: 14px auto 12px; }
+  .cover .note { font-size: 15px; max-width: 62ch; margin: 0 auto; color: var(--ink); }
+  .contents { display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: center; margin: 14px 0 0; padding: 0; list-style: none; }
+  .contents button { background: none; border: 0; border-bottom: 1px solid transparent; padding: 2px 0; cursor: pointer; font-size: 16px; }
+  .contents button[aria-current="true"] { border-bottom-color: var(--ink); font-weight: 700; }
+  .contents button:hover { border-bottom-color: var(--ink); }
+
+  /* ---- transport ---- */
+  .transport { background: var(--ink); color: var(--paper); padding: 12px 16px 12px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px 16px; align-items: center; }
+  .play { width: 54px; height: 54px; border-radius: 50%; border: 1.5px solid var(--paper); background: transparent; color: var(--paper); cursor: pointer; display: grid; place-items: center; padding: 0; }
+  .play:hover { background: rgba(251, 250, 245, .12); }
+  .play svg { width: 22px; height: 22px; fill: currentColor; }
+  .play[data-state="loading"] { border-style: dashed; cursor: progress; }
+  @media (prefers-reduced-motion: no-preference) {
+    .play[data-state="loading"] { animation: turn 2.4s linear infinite; }
+    @keyframes turn { to { transform: rotate(360deg); } }
+  }
+  .seek { display: grid; grid-template-columns: minmax(0, 1fr); gap: 3px; min-width: 0; }
+  .seek-top { display: flex; justify-content: space-between; gap: 12px; font-size: 15px; font-variant-numeric: tabular-nums; }
+  .seek-top .status { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-style: italic; }
+  .seek-top #clock { flex: none; }
+  input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 18px; background: transparent; margin: 0; cursor: pointer; }
+  input[type=range]::-webkit-slider-runnable-track { height: 2px; background: currentColor; opacity: .55; }
+  input[type=range]::-moz-range-track { height: 2px; background: currentColor; opacity: .55; }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; border-radius: 50%; background: var(--rosin); border: 1.5px solid var(--paper); margin-top: -5px; }
+  input[type=range]::-moz-range-thumb { width: 10px; height: 10px; border-radius: 50%; background: var(--rosin); border: 1.5px solid var(--paper); }
+  .options { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px 22px; align-items: center; font-size: 15px; border-top: 1px solid rgba(251, 250, 245, .25); padding-top: 10px; }
+  .options label { display: inline-flex; align-items: center; gap: 7px; }
+  .options select { background: var(--ink); color: var(--paper); border: 1px solid rgba(251, 250, 245, .5); border-radius: 0; padding: 2px 6px; }
+  .options .tempo input { width: 120px; }
+  .options input[type=checkbox] { accent-color: var(--rosin); width: 15px; height: 15px; margin: 0; }
+  .options .tempo output { min-width: 3.2em; font-variant-numeric: tabular-nums; }
+  .parts { display: inline-flex; gap: 0; border: 1px solid rgba(251, 250, 245, .5); }
+  .parts button { background: transparent; color: var(--paper); border: 0; border-left: 1px solid rgba(251, 250, 245, .5); padding: 2px 9px; cursor: pointer; }
+  .parts button:first-child { border-left: 0; }
+  .parts button[aria-pressed="false"] { text-decoration: line-through; opacity: .5; }
+  :focus-visible { outline: 2px solid var(--rosin); outline-offset: 2px; }
+
+  /* ---- score ---- */
+  .sheet { background: var(--paper); height: 620px; overflow-y: auto; overflow-x: hidden; position: relative; padding: 6px 10px 40px; scroll-behavior: smooth; }
+  .sheet svg { display: block; }
+  .sheet .abcjs-cursor { stroke: var(--rosin); stroke-width: 2.5; opacity: .85; }
+  .sheet .on { fill: var(--rosin); stroke: var(--rosin); }
+  .sheet .abcjs-note, .sheet .abcjs-rest { cursor: pointer; }
+  .warn { background: var(--paper); border-top: 1px solid var(--rule); padding: 8px 14px; font-size: 15px; white-space: pre-wrap; }
+  .warn:empty { display: none; }
+
+  /* ---- source ---- */
+  .source { padding: 14px 18px 22px; font-size: 15px; }
+  .source summary { cursor: pointer; }
+  .source p { max-width: 70ch; margin: 10px 0; }
+  .source textarea { width: 100%; height: 320px; background: var(--paper); border: 1px solid var(--ink); border-radius: 0; padding: 10px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 13px; line-height: 1.4; white-space: pre; resize: vertical; }
+  .source .links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 8px; }
+  .source .links button { background: none; border: 0; border-bottom: 1px solid var(--ink); padding: 0; cursor: pointer; }
+  .source .links a { color: inherit; }
+
+  @media (max-width: 520px) {
+    .cover { padding: 18px 14px 14px; }
+    .sheet { height: 520px; padding: 4px 2px 30px; }
+    .options .tempo input { width: 90px; }
+  }
+</style>
+</head>
+<body>
+<div class="desk">
+  <header class="cover">
+    <p class="composer" id="composer"></p>
+    <h1 id="title"></h1>
+    <p class="movement" id="movement"></p>
+    <p class="note" style="margin-top:12px">An original AI-composed homage. Not a lost work by Beethoven.</p>
+    <p style="margin:10px 0"><a style="color:inherit" href="https://lost-compositions.exe.xyz/notebook.html">Composition notebook</a> &nbsp; / &nbsp; <a style="color:inherit" href="https://lost-compositions.exe.xyz/transcript.html">Search the conversation logs</a></p>
+    <div class="rule"></div>
+    <p class="note" id="note"></p>
+    <ul class="contents" id="contents"></ul>
+  </header>
+
+  <section class="transport" aria-label="Playback">
+    <button class="play" id="play" data-state="stopped" aria-label="Play">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path id="playIcon" d="M7 4l14 8-14 8z"/></svg>
+    </button>
+    <div class="seek">
+      <div class="seek-top"><span class="status" id="status">Press play. The samples take a few seconds to load.</span><span id="clock">0:00 / 0:00</span></div>
+      <input type="range" id="seek" min="0" max="1000" value="0" aria-label="Position">
+    </div>
+    <div class="options">
+      <label class="tempo">Tempo <input type="range" id="tempo" min="50" max="130" step="5" value="100"><output id="tempoOut">100%</output></label>
+      <label>Sound
+        <select id="sound">
+          <option value="solo">Solo strings</option>
+          <option value="section">String section</option>
+          <option value="piano">Piano reduction</option>
+        </select>
+      </label>
+      <span class="parts" id="parts" role="group" aria-label="Parts"></span>
+      <label><input type="checkbox" id="attacca" checked> Play on into the next movement</label>
+    </div>
+  </section>
+
+  <main class="sheet" id="sheet"><div id="paper"></div></main>
+  <div class="warn" id="warn"></div>
+  <div id="synthHost" hidden></div>
+
+  <details class="source">
+    <summary>Source in ABC notation (editable)</summary>
+    <p>This is the whole score as text. Edit it and the page re-engraves; press play to hear the change.</p>
+    <textarea id="abc" spellcheck="false" aria-label="ABC source"></textarea>
+    <div class="links">
+      <button id="dlAbc">Download .abc</button>
+      <button id="dlMidi">Download MIDI</button>
+      <button id="reset">Undo my edits</button>
+    </div>
+  </details>
+</div>
+
+<script type="text/plain" class="piece" data-id="01-dminor-i" data-label="I. Poco sostenuto. Allegro agitato" data-note="The first movement, complete: slow introduction, sonata-form Allegro (exposition repeated), and a coda that remembers the introduction. Updated Nov 14, 10:45 AM PT.">
+X:1
+T:Beethoven’s Missing Quartet
+T:I. Poco sostenuto. Allegro agitato
+C:Lor, in the manner of Beethoven
+M:4/4
+L:1/8
+Q:"Poco sostenuto" 1/4=52
+%%score [1 | 2 | 3 | 4]
+V:1 clef=treble name="Vl. I"
+V:2 clef=treble name="Vl. II"
+V:3 clef=alto name="Vla."
+V:4 clef=bass name="Vc."
+K:Dm
+V:1
+%%MIDI program 40
+V:2
+%%MIDI program 40
+V:3
+%%MIDI program 41
+V:4
+%%MIDI program 42
+% ---- Introduction, bars 1-8: the four-note cell (A, B flat, C sharp, D) enters in each part in turn
+[V:1] z8 | z8 | z8 | !p!a4 b4 |
+[V:2] z8 | z8 | !pp!A4 B4 | !p!^C4 D4 |
+[V:3] z8 | !pp!A,4 B,4 | ^C,4 D,4 | !p!G,4 F,4 |
+[V:4] !pp!A,,4 B,,4 | ^C,,4 D,,4 | A,,4 G,,4 | !p!A,,4 D,4 |
+[V:1] ^c4 d4 | !mf!e4 !f!f4 | !p!f4 e4 | !pp!e6 !fermata!z2 ||
+[V:2] E4 D4 | !mf!D8 | !p!D4 ^C4 | !pp!^C6 !fermata!z2 ||
+[V:3] G,4 F,4 | !mf!B,4 !f!G,2 ^G,2 | !p!A,8 | !pp!A,6 !fermata!z2 ||
+[V:4] A,,4 F,,4 | !mf!G,,4 !f!B,,4 | !p!A,,8 | !pp!A,,6 !fermata!z2 ||
+% ---- Allegro. First group, bars 9-16: the cell as a unison motto, answered quietly; then again on D, turning to G minor
+[V:1] |: [Q:"Allegro agitato" 1/4=144] !ff!a6 !sfz!!>!b2 | ^c2 d2 z4 | z2 !p!f2 (ed) (^cd) | e4 z4 |
+[V:2] |: !ff!A6 !sfz!!>!B2 | ^C2 D2 z4 | z2 !p!D2 D2 E2 | ^C4 z4 |
+[V:3] |: !ff!A,6 !sfz!!>!B,2 | ^C,2 D,2 z4 | z2 !p!A,2 G,2 E,2 | E,4 z4 |
+[V:4] |: !ff!A,,6 !sfz!!>!B,,2 | ^C,,2 D,,2 z4 | z2 !p!D,2 B,,2 A,,2 | A,,4 z4 |
+[V:1] !ff!d'6 !sfz!!>!_e'2 | ^f2 g2 z4 | z2 !p!b2 (ag) (fe) | d4 ^c2 z2 |
+[V:2] !ff!d6 !sfz!!>!_e2 | ^F2 G2 z4 | z2 !p!G2 A2 G2 | F4 E2 z2 |
+[V:3] !ff!D6 !sfz!!>!_E2 | ^F,2 G,2 z4 | z2 !p!D2 D2 B,2 | A,4 A,2 z2 |
+[V:4] !ff!D,6 !sfz!!>!_E,2 | ^F,,2 G,,2 z4 | z2 !p!G,,2 F,,2 G,,2 | A,,4 A,,2 z2 |
+% ---- bars 17-24: the theme takes flight over pulsing inner parts; Neapolitan climax and full close
+[V:1] !f!f6 (ed) | ^c2 e2 g2 b2 | a6 (gf) | ^f2 a2 c'2 _e'2 |
+[V:2] !f!FFFF FFFF | GGGG GGGG | FFFF FFFF | DDDD DDDD |
+[V:3] !f!A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, |
+[V:4] !f!D,2 z2 z D, C, B,, | A,,2 z2 z A,, B,, ^C, | D,2 z2 z F, E, D, | C,2 z2 z C, A,, C, |
+[V:1] d'6 (c'b) | !ff!!sfz!!>!_e'4 d'4 | d'4 ^c'4 | d'2 z2 z a b ^c' |
+[V:2] DDDD DDDD | !ff!_EEEE FFFF | FFFF EEEE | D2 z2 z A B ^c |
+[V:3] G,G,G,G, G,G,G,G, | !ff!B,B,B,B, =B,=B,=B,=B, | A,A,A,A, G,G,G,G, | F,2 z2 z A, B, ^C |
+[V:4] B,,2 z2 z B,, D, G, | !ff!G,,2 G,,2 ^G,,2 ^G,,2 | A,,2 A,,2 A,,2 A,,2 | D,,2 z2 z A,, B,, ^C, |
+% ---- Transition, bars 25-33: the cell climbs by fourths (D, G, C), the motto on C, a gentle answer in F major
+[V:1] d'2 z2 z d _e ^f | g2 z2 z g _a =b | !ff!c'6 !sfz!!>!_d'2 | e2 f2 z4 |
+[V:2] d2 z2 z D _E ^F | G2 z2 z G _A =B | !ff!c6 !sfz!!>!_d2 | E2 F2 z4 |
+[V:3] D2 z2 z D, _E, ^F, | G,2 z2 z G, _A, =B, | !ff!C6 !sfz!!>!_D2 | E,2 F,2 z4 |
+[V:4] D,2 z2 z D,, _E,, ^F,, | G,,2 z2 z G,, _A,, =B,, | !ff!C,6 !sfz!!>!_D,2 | E,,2 F,,2 z4 |
+[V:1] z2 !p!a2 (gf) (ef) | g4 z4 | z8 | z8 | z2 !pp!(G2 A2 =B2) |
+[V:2] z2 !p!F2 G2 G2 | E4 z4 | z2 !pp!A2 (GF) (EF) | G4 z4 | z8 |
+[V:3] z2 !p!C2 D2 G,2 | G,4 z4 | z2 !pp!C2 D2 C2 | E4 z4 | z8 |
+[V:4] z2 !p!F,2 B,,2 C,2 | C,4 z4 | z2 !pp!F,,2 B,,2 C,2 | C,4 z4 | z8 |
+% ---- Second group, bars 34-41: a singing theme in F major, first violin
+[V:1] !p!c4 f4 | (e2 d2) c4 | d4 g4 | (f2 e2) (d2 c2) |
+[V:2] !p!A8 | B4 A4 | F8 | A2 G2 F2 E2 |
+[V:3] !p!A,CA,C A,CA,C | CECE CFCF | B,DB,D B,DB,D | A,CG,C G,CG,C |
+[V:4] !p!F,,8 | G,,4 A,,4 | B,,8 | C,8 |
+[V:1] c4 a4 | (g2 f2) d4 | g2 b2 (ag) (fe) | f4 z4 |
+[V:2] A4 c4 | B2 A2 F4 | G4 (cB) (AG) | A4 z4 |
+[V:3] A,CA,C A,CA,C | A,F,A,F, A,F,A,F, | B,DB,D A,CG,C | A,CA,C A,2 z2 |
+[V:4] F,,8 | D,8 | B,,4 C,4 | F,,4 z4 |
+% ---- bars 42-48: the theme in the second violin, the first violin winding above it
+[V:1] z2 !p!(ab c'd' c'a) | (gab c') (afac') | (bab c') (d'c'bd') | (ac'gb) (faeg) |
+[V:2] !mp!c4 f4 | (e2 d2) c4 | d4 g4 | (f2 e2) (d2 c2) |
+[V:3] !p!A,CA,C A,CA,C | CECE CFCF | B,DB,D B,DB,D | A,CG,C G,CG,C |
+[V:4] !p!F,,8 | G,,4 A,,4 | B,,8 | C,8 |
+[V:1] !mf!(fgaf) (f'e'd'c') | (bd'ad') (fgag) | !f!(bc'd') c'- c'4 |
+[V:2] !mf!c4 a4 | (g2 f2) d4 | !f!g2 b2 (ag) (fe) |
+[V:3] !mf!A,CA,C A,CA,C | F,A,F,A, F,A,F,A, | !f!B,DB,D A,CG,B, |
+[V:4] !mf!F,,8 | D,8 | !f!B,,4 C,4 |
+% ---- bars 49-55: the cadence is broken off by the D minor motto; a quiet answer, then a broad close in F
+[V:1] !ff!a6 !sfz!!>!b2 | ^c2 d2 z4 | z2 !p!a2 (gf) (ef) | g4 z4 |
+[V:2] !ff!A6 !sfz!!>!B2 | ^C2 D2 z4 | z2 !p!F2 G2 G2 | E4 z4 |
+[V:3] !ff![F,A,]6 [G,E]2 | [G,E]2 [F,D]2 z4 | z2 !p!C2 D2 G,2 | G,4 z4 |
+[V:4] !ff!D,6 G,,2 | A,,2 D,2 z4 | z2 !p!F,2 B,,2 C,2 | C,4 z4 |
+[V:1] !f!d2 b2 (ag) (fe) | f2 c'2 b2 d'2 | !ff!!trill!e'8 |
+[V:2] !f!D2 B2 (AG) (FE) | F2 A2 G4 | !ff!B8 |
+[V:3] !f!F,A,B,D A,CG,B, | CFCF B,DB,D | !ff!G,CG,C G,CG,C |
+[V:4] !f!D,2 B,,2 C,4 | A,,4 B,,4 | !ff!C,2 C,2 C,2 C,2 |
+% ---- Closing bars 56-63: the cell turned major (C, D, E, F) in the low strings, and a quiet end
+[V:1] !f!f'2 z6 | z2 !p!a2 g2 e2 | f2 z6 | z2 c'2 b2 g2 |
+[V:2] !f!A2 z6 | z2 !p!f2 e2 c2 | c2 z6 | z2 a2 g2 e2 |
+[V:3] !f!F2 z2 z !p!C D E | F2 C2 B,2 B,2 | A,2 z2 z C D E | F2 A,2 B,2 B,2 |
+[V:4] !f!F,,2 z2 z !p!C, D, E, | F,2 z2 C,2 C,2 | F,,2 z2 z C, D, E, | F,2 z2 C,2 C,2 |
+[V:1] a2 z2 z c d e | !pp!f2 z2 e2 z2 | F2 z2 E2 z2 | F4 z4 :|
+[V:2] f2 z2 z A B c | !pp!c2 z2 B2 z2 | C2 z2 B,2 z2 | C4 z4 :|
+[V:3] A,2 z6 | !pp!A,2 z2 G,2 z2 | A,2 z2 G,2 z2 | A,4 z4 :|
+[V:4] F,,2 z6 | !pp!F,,2 z2 C,2 z2 | F,,2 z2 C,2 z2 | F,,4 z4 :|
+% ---- Development, bars 64-71: the singing theme in F minor and G minor, each answered by the cell in the cello
+[V:1] !pp!c4 f4 | (_e2 _d2) c4 | c6 z2 | z8 |
+[V:2] !pp!_A8 | F4 =E4 | =E6 z2 | z8 |
+[V:3] !pp!C8 | B,4 G,4 | G,6 z2 | z8 |
+[V:4] !pp!F,,8 | B,,4 C,4 | !p!C,6 _D,2 | E,,2 F,,2 z4 |
+[V:1] z8 | z8 | !pp!A6 z2 | z2 !p!B2 z4 |
+[V:2] !pp!D4 G4 | (F2 _E2) D4 | D6 z2 | z2 !p!D2 z4 |
+[V:3] !pp!B,8 | G,4 ^F,4 | ^F,6 z2 | z2 !p!G,2 z4 |
+[V:4] !pp!G,,8 | C,4 D,4 | !mf!D,6 _E,2 | ^F,,2 G,,2 z4 |
+% ---- bars 72-79: fugato. The cell enters in viola (C minor), second violin (F minor), first violin (B flat minor); climax
+[V:1] z2 !mf!=B2 z2 d2 | z2 _e2 z4 | z2 !f!=e2 z2 g2 | z2 _a2 z4 |
+[V:2] z2 !mf!D2 z2 F2 | z2 G2 z4 | !f!c6 _d2 | =E2 F2 z4 |
+[V:3] !mf!G6 _A2 | =B,2 C2 z4 | z2 !f!(B_A) (GF) (=EG) | (BG) (_AF) c2 z2 |
+[V:4] z2 !mf!(F,_E,) (D,C,) (=B,,D,) | (F,D,) (_E,C,) G,2 z2 | !f!C,2 z2 C,2 z2 | C,2 F,,2 z4 |
+[V:1] !f!f6 _g2 | =A2 B2 z4 | !ff!f'6 !sfz!!>!e'2 | e'4 z4 |
+[V:2] z2 !f!(_e_d) (cB) (=Ac) | (_ec) (_dB) f2 z2 | !ff!B6 !sfz!!>!G2 | G4 z4 |
+[V:3] z2 !f!C2 z2 _E2 | z2 _D2 z4 | !ff!_D6 !sfz!!>!^C2 | ^C4 z4 |
+[V:4] !f!F,,2 z2 F,,2 z2 | F,,2 B,,2 z4 | !ff!B,,6 !sfz!!>!B,,2 | A,,4 z4 |
+% ---- bars 80-87: over a dominant pedal the first two notes of the cell sigh and thin out to silence
+[V:1] z8 | z8 | !pp!e6 f2 | e4 z4 |
+[V:2] !pp!^C6 D2 | ^C4 z4 | ^c6 d2 | ^c4 z4 |
+[V:3] !pp!A,6 B,2 | A,4 z4 | A,6 z2 | A,4 z4 |
+[V:4] !pp!A,,2 z2 A,,2 z2 | A,,2 z2 A,,2 z2 | A,,2 z2 A,,2 z2 | A,,2 z2 A,,2 z2 |
+[V:1] z2 !pp!(b2 a2) z2 | z8 | z8 | z8 |
+[V:2] z8 | z8 | z2 !pp!(B2 A2) z2 | z8 |
+[V:3] z8 | z2 !pp!(B,2 A,2) z2 | z8 | z8 |
+[V:4] !pp!A,,2 z2 A,,2 z2 | A,,2 z2 A,,2 z2 | A,,2 z6 | z8 |
+% ---- Reprise, bars 88-103: the first group returns unchanged
+[V:1] !ff!a6 !sfz!!>!b2 | ^c2 d2 z4 | z2 !p!f2 (ed) (^cd) | e4 z4 |
+[V:2] !ff!A6 !sfz!!>!B2 | ^C2 D2 z4 | z2 !p!D2 D2 E2 | ^C4 z4 |
+[V:3] !ff!A,6 !sfz!!>!B,2 | ^C,2 D,2 z4 | z2 !p!A,2 G,2 E,2 | E,4 z4 |
+[V:4] !ff!A,,6 !sfz!!>!B,,2 | ^C,,2 D,,2 z4 | z2 !p!D,2 B,,2 A,,2 | A,,4 z4 |
+[V:1] !ff!d'6 !sfz!!>!_e'2 | ^f2 g2 z4 | z2 !p!b2 (ag) (fe) | d4 ^c2 z2 |
+[V:2] !ff!d6 !sfz!!>!_e2 | ^F2 G2 z4 | z2 !p!G2 A2 G2 | F4 E2 z2 |
+[V:3] !ff!D6 !sfz!!>!_E2 | ^F,2 G,2 z4 | z2 !p!D2 D2 B,2 | A,4 A,2 z2 |
+[V:4] !ff!D,6 !sfz!!>!_E,2 | ^F,,2 G,,2 z4 | z2 !p!G,,2 F,,2 G,,2 | A,,4 A,,2 z2 |
+[V:1] !f!f6 (ed) | ^c2 e2 g2 b2 | a6 (gf) | ^f2 a2 c'2 _e'2 |
+[V:2] !f!FFFF FFFF | GGGG GGGG | FFFF FFFF | DDDD DDDD |
+[V:3] !f!A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, |
+[V:4] !f!D,2 z2 z D, C, B,, | A,,2 z2 z A,, B,, ^C, | D,2 z2 z F, E, D, | C,2 z2 z C, A,, C, |
+[V:1] d'6 (c'b) | !ff!!sfz!!>!_e'4 d'4 | d'4 ^c'4 | d'2 z2 z a b ^c' |
+[V:2] DDDD DDDD | !ff!_EEEE FFFF | FFFF EEEE | D2 z2 z A B ^c |
+[V:3] G,G,G,G, G,G,G,G, | !ff!B,B,B,B, =B,=B,=B,=B, | A,A,A,A, G,G,G,G, | F,2 z2 z A, B, ^C |
+[V:4] B,,2 z2 z B,, D, G, | !ff!G,,2 G,,2 ^G,,2 ^G,,2 | A,,2 A,,2 A,,2 A,,2 | D,,2 z2 z A,, B,, ^C, |
+% ---- bars 104-111: the way round is shortened; the quiet answer now comes in D major
+[V:1] d'2 z2 z e f ^g | !ff!a6 !sfz!!>!b2 | ^c2 d2 z4 |
+[V:2] d2 z2 z E F ^G | !ff!A6 !sfz!!>!B2 | ^C2 D2 z4 |
+[V:3] D2 z2 z E, F, ^G, | !ff!A,6 !sfz!!>!B,2 | ^C,2 D,2 z4 |
+[V:4] D,2 z2 z E,, F,, ^G,, | !ff!A,,6 !sfz!!>!B,,2 | ^C,,2 D,,2 z4 |
+[V:1] [K:D clef=treble] z2 !p!f2 (ed) (cd) | e4 z4 | z8 | z8 | z2 !pp!(E2 F2 ^G2) |
+[V:2] [K:D clef=treble] z2 !p!D2 E2 E2 | C4 z4 | z2 !pp!F2 (ED) (CD) | E4 z4 | z8 |
+[V:3] [K:D clef=alto] z2 !p!A,2 B,2 E,2 | E,4 z4 | z2 !pp!A,2 B,2 A,2 | C4 z4 | z8 |
+[V:4] [K:D clef=bass] z2 !p!D,2 G,,2 A,,2 | A,,4 z4 | z2 !pp!D,,2 G,,2 A,,2 | A,,4 z4 | z8 |
+% ---- bars 112-119: the singing theme in D major
+[V:1] !p!A4 d4 | (c2 B2) A4 | B4 e4 | (d2 c2) (B2 A2) |
+[V:2] !p!F8 | G4 F4 | D8 | F2 E2 D2 C2 |
+[V:3] !p!F,A,F,A, F,A,F,A, | A,CA,C A,DA,D | G,B,G,B, G,B,G,B, | F,A,E,A, E,A,E,A, |
+[V:4] !p!D,,8 | E,,4 F,,4 | G,,8 | A,,8 |
+[V:1] A4 f4 | (e2 d2) B4 | e2 g2 (fe) (dc) | d4 z4 |
+[V:2] F4 A4 | G2 F2 D4 | E4 (AG) (FE) | F4 z4 |
+[V:3] F,A,F,A, F,A,F,A, | F,D,F,D, F,D,F,D, | G,B,G,B, F,A,E,A, | F,A,F,A, F,2 z2 |
+[V:4] D,,8 | B,,8 | G,,4 A,,4 | D,,4 z4 |
+% ---- bars 120-126: second violin sings, first violin winds above
+[V:1] z2 !p!(fg ab af) | (efga) (fdfa) | (gfga) (bagb) | (faeg) (dfce) |
+[V:2] !mp!A4 d4 | (c2 B2) A4 | B4 e4 | (d2 c2) (B2 A2) |
+[V:3] !p!F,A,F,A, F,A,F,A, | A,CA,C A,DA,D | G,B,G,B, G,B,G,B, | F,A,E,A, E,A,E,A, |
+[V:4] !p!D,,8 | E,,4 F,,4 | G,,8 | A,,8 |
+[V:1] !mf!(defd) (d'c'ba) | (gbfb) (defe) | !f!(gab) a- a4 |
+[V:2] !mf!A4 f4 | (e2 d2) B4 | !f!e2 g2 (fe) (dc) |
+[V:3] !mf!F,A,F,A, F,A,F,A, | D,F,D,F, D,F,D,F, | !f!G,B,G,B, F,A,E,G, |
+[V:4] !mf!D,,8 | B,,8 | !f!G,,4 A,,4 |
+% ---- bars 127-133: D major is struck down by the motto in D minor; the answer and the close stay in the minor
+[V:1] [K:Dm clef=treble] !ff!a6 !sfz!!>!b2 | ^c2 d2 z4 | z2 !p!f2 (ed) (^cd) | e4 z4 |
+[V:2] [K:Dm clef=treble] !ff!A6 !sfz!!>!B2 | ^C2 D2 z4 | z2 !p!D2 D2 E2 | ^C4 z4 |
+[V:3] [K:Dm clef=alto] !ff![F,A,]6 [G,E]2 | [G,E]2 [F,D]2 z4 | z2 !p!A,2 G,2 E,2 | E,4 z4 |
+[V:4] [K:Dm clef=bass] !ff!D,6 G,,2 | A,,2 D,2 z4 | z2 !p!D,2 B,,2 A,,2 | A,,4 z4 |
+[V:1] !f!B2 g2 (fe) (d^c) | d2 a2 b2 d'2 | !ff!!trill!e'8 |
+[V:2] !f!B,2 G2 (FE) (D^C) | D2 F2 G4 | !ff!E8 |
+[V:3] !f!D,F,B,D A,DE,G, | A,DA,D G,DG,D | !ff!G,^CG,^C G,^CG,^C |
+[V:4] !f!B,,2 G,,2 A,,4 | F,,4 B,,4 | !ff!A,,2 A,,2 A,,2 A,,2 |
+% ---- Coda, bars 134-138: the close, with the cell rising in the low strings
+[V:1] !f!d'2 z6 | z2 !p!f2 e2 ^c2 | d2 z6 | z2 a2 g2 e2 | f2 z6 |
+[V:2] !f!A2 z6 | z2 !p!d2 ^c2 A2 | A2 z6 | z2 f2 e2 ^c2 | d2 z6 |
+[V:3] !f!F,2 z2 z !p!A, B, ^C | D2 A,2 G,2 G,2 | F,2 z2 z A, B, ^C | D2 F,2 G,2 G,2 | F,2 z6 |
+[V:4] !f!D,,2 z2 z !p!A,, B,, ^C, | D,2 z2 A,,2 A,,2 | D,,2 z2 z A,, B,, ^C, | D,2 z2 A,,2 A,,2 | D,,2 z6 |
+% ---- bars 139-142: the slow introduction remembered
+[V:1] [Q:"Poco sostenuto" 1/4=52] !pp!a4 b4 | ^c4 d4 | !mf!e4 !f!f4 | !p!f4 e4 |
+[V:2] !pp!^C4 D4 | E4 D4 | !mf!D8 | !p!D4 ^C4 |
+[V:3] !pp!G,4 F,4 | G,4 F,4 | !mf!B,4 !f!G,2 ^G,2 | !p!A,8 |
+[V:4] !pp!A,,4 D,4 | A,,4 F,,4 | !mf!G,,4 !f!B,,4 | !p!A,,8 |
+% ---- bars 143-153: Allegro again. Motto, Neapolitan cadence, and the cell three times to end
+[V:1] [Q:"Allegro agitato" 1/4=144] !ff!a6 !sfz!!>!b2 | ^c2 d2 z4 | d'6 !sfz!!>!_e'2 | ^f2 g2 z4 |
+[V:2] !ff!A6 !sfz!!>!B2 | ^C2 D2 z4 | d6 !sfz!!>!_e2 | ^F2 G2 z4 |
+[V:3] !ff!A,6 !sfz!!>!B,2 | ^C,2 D,2 z4 | D6 !sfz!!>!_E2 | ^F,2 G,2 z4 |
+[V:4] !ff!A,,6 !sfz!!>!B,,2 | ^C,,2 D,,2 z4 | D,6 !sfz!!>!_E,2 | ^F,,2 G,,2 z4 |
+[V:1] !ff!d'6 (c'b) | !sfz!!>!_e'4 d'4 | d'4 ^c'4 | d'2 z2 z a b ^c' |
+[V:2] !ff!DDDD DDDD | _EEEE FFFF | FFFF EEEE | D2 z2 z A B ^c |
+[V:3] !ff!G,G,G,G, G,G,G,G, | B,B,B,B, =B,=B,=B,=B, | A,A,A,A, G,G,G,G, | F,2 z2 z A, B, ^C |
+[V:4] !ff!B,,2 z2 z B,, D, G, | G,,2 G,,2 ^G,,2 ^G,,2 | A,,2 A,,2 A,,2 A,,2 | D,,2 z2 z A,, B,, ^C, |
+[V:1] d'2 z2 z a b ^c' | [DAf]2 z2 [A,E^c]2 z2 | [DAf]4 z4 |]
+[V:2] d2 z2 z A B ^c | [DA]2 z2 [EA]2 z2 | [DA]4 z4 |]
+[V:3] D2 z2 z A, B, ^C | [D,A,]2 z2 [E,^C]2 z2 | [D,A,]4 z4 |]
+[V:4] D,2 z2 z A,, B,, ^C, | D,,2 z2 A,,2 z2 | [D,,A,,]4 z4 |]
+</script>
+<script type="text/plain" class="piece" data-id="02-dminor-ii" data-label="II. Adagio molto espressivo" data-note="Adagio in B flat major: a hushed hymn built on the cell's major form (F, G, A, B flat), darkened in the middle by its true minor form, then sung again by the cello under flowing figuration.">
+X:1
+T:Beethoven’s Missing Quartet
+T:II. Adagio molto espressivo
+C:Lor, in the manner of Beethoven
+M:4/4
+L:1/8
+Q:"Adagio molto espressivo" 1/4=54
+%%score [1 | 2 | 3 | 4]
+V:1 clef=treble name="Vl. I"
+V:2 clef=treble name="Vl. II"
+V:3 clef=alto name="Vla."
+V:4 clef=bass name="Vc."
+K:Bb
+V:1
+%%MIDI program 40
+V:2
+%%MIDI program 40
+V:3
+%%MIDI program 41
+V:4
+%%MIDI program 42
+% ---- A, bars 1-8: the hymn (F, G, A, B flat: the cell in major), first violin in its low register; half close, then full close
+[V:1] !p!F4 G2 A2 | B4 c2 d2 | e3 d c2 B2 | (c2 B2) A4 |
+[V:2] !p!D4 E2 E2 | D4 E2 F2 | G4 E2 D2 | G2 F6 |
+[V:3] !p!B,4 G,2 C2 | B,4 G,2 B,2 | B,4 C2 G,2 | G,2 D2 C4 |
+[V:4] !p!B,,4 E,2 F,2 | D,4 C,2 B,,2 | E,4 F,,2 G,,2 | E,2 F,6 |
+[V:1] F4 G2 A2 | B2 d2 g4 | (f2 e2) (d2 c2) | B6 z2 |
+[V:2] B,2 (B,C) E2 E2 | D2 D2 E4 | B2 c2 B2 A2 | F6 z2 |
+[V:3] F,4 B,2 F,2 | G,2 B,2 B,4 | F2 E2 D2 E2 | D6 z2 |
+[V:4] D,4 E,2 F,2 | G,,2 F,,2 E,,4 | D,2 E,2 F,2 F,2 | B,,6 z2 |
+% ---- bars 9-12: second violin answers, turning to F major
+[V:1] z8 | z8 | z8 | z8 |
+[V:2] d4 (c2 B2) | A3 B c2 f2 | (d2 =e2) f2 (=ed) | c4 c2 z2 |
+[V:3] B,4 B,2 G,2 | C4 F,2 A,2 | G,2 B,2 A,2 B,2 | A,6 z2 |
+[V:4] G,,4 =E,,4 | F,,4 A,,2 D,2 | B,,2 C,2 A,,2 C,2 | F,,4 F,,2 z2 |
+% ---- bars 13-16: the hymn returns and climbs to its peak (G), full close
+[V:1] F4 G2 A2 | B2 c2 d2 e2 | g2 f2 (ed) c2 | B6 z2 |
+[V:2] D2 F2 E2 E2 | D2 G2 B4 | B2 B2 G2 A2 | F6 z2 |
+[V:3] B,2 B,2 G,2 C2 | D2 C2 B,2 B,2 | B,2 B,2 C2 C2 | D6 z2 |
+[V:4] B,,4 E,2 F,2 | D,2 E,2 F,2 G,2 | E,2 D,2 C,2 F,,2 | B,,6 z2 |
+% ---- Link, bars 17-20: the head echoed over a tonic pedal; G flat creeps in, half close on F
+[V:1] !pp!F4 G2 A2 | B4 _G4 | _G4 F4 | F6 !fermata!z2 |
+[V:2] !pp!D4 E2 E2 | D4 E4 | E8 | E6 !fermata!z2 |
+[V:3] !pp!B,4 G,2 C2 | _A,4 _G,4 | C4 =A,4 | A,6 !fermata!z2 |
+[V:4] !pp!B,,8 | B,,8 | F,,8 | F,,6 !fermata!z2 |
+% ---- B, bars 21-24: B flat minor; a lament in the first violin over pulsing inner parts
+[V:1] [K:Bbm] !p!d4 (c2 B2) | B4 =A4 | f4 (e2 d2) | c6 z2 |
+[V:2] [K:Bbm] z!p!DDD zDDD | zEEE zEEE | zDDD zGGG | zFFF zFFF |
+[V:3] [K:Bbm] z!p!F,F,F, zF,F,F, | zB,B,B, zCCC | zB,B,B, zB,B,B, | z=A,A,A, zA,A,A, |
+[V:4] [K:Bbm] !p!B,,2 z2 B,,2 z2 | G,,2 z2 F,,2 z2 | D,2 z2 G,,2 z2 | F,,2 z2 F,,2 z2 |
+% ---- bars 25-28: the lament repeated by the viola, a first-violin counterline above it, the second violin pulsing
+[V:1] z2 !p!f4 d2 | e4 c4 | B4 (d2 B2) | c4 =A2 z2 |
+[V:2] z!pp!B,B,B, zB,B,B, | zEEE zEEE | zDDD zDDD | zFFF zFFF |
+[V:3] !mp!D4 (C2 B,2) | B,4 =A,4 | F4 (E2 D2) | C6 z2 |
+[V:4] !pp!B,,2 z2 B,,2 z2 | G,,2 z2 F,,2 z2 | D,2 z2 G,,2 z2 | F,,2 z2 F,,2 z2 |
+% ---- bars 29-30: the intrusion: the cell in its true minor form (F, G flat, A, B flat), unison, as the motto of movement I
+[V:1] !ff!f6 !sfz!!>!g2 | =a2 b2 z4 |
+[V:2] !ff!F6 !sfz!!>!G2 | =A2 B2 z4 |
+[V:3] !ff!F,6 !sfz!!>!G,2 | =A,2 B,2 z4 |
+[V:4] !ff!F,,6 !sfz!!>!G,,2 | =A,,2 B,,2 z4 |
+% ---- bars 31-37: G minor; falling sighs, then a chromatic bass climbs to the climax: the cell on D, harmonised, the violins in octaves up to G6, the high point of the movement (D, E flat, F sharp, G)
+[V:1] [K:Gm] !p!_A4 G4 | G4 ^F4 | !mp!d4 c4 | !mf!d4 f4 | !f!(e2 g2) (g2 b2) | !ff!d'6 !sfz!!>!e'2 | ^f'2 g'2 z4 |
+[V:2] [K:Gm] !p!F4 E4 | E4 D4 | !mp!G4 ^F4 | !mf!G4 G4 | !f!c4 =e4 | !ff!d6 !sfz!!>!e2 | ^f2 g2 z4 |
+[V:3] [K:Gm] !p!D4 B,4 | C4 C4 | !mp!B,4 D4 | !mf!D4 D4 | !f!E4 =E4 | !ff![^FA]6 !sfz!!>![Ac]2 | [Ac]2 [GB]2 z4 |
+[V:4] [K:Gm] !p!B,,4 E,4 | C,4 D,4 | !mp!G,,4 A,,4 | !mf!B,,4 =B,,4 | !f!C,4 ^C,4 | !ff!D,8 | D,2 G,,2 z4 |
+% ---- Retransition, bars 38-41: the storm subsides; over a dominant pedal the viola recalls the hymn's first notes
+[V:1] !p!d4 c4 | B4 A4 | [K:Bb] !pp!z8 | (c2 B2) A2 !fermata!z2 |
+[V:2] !p!B4 G4 | F4 E4 | [K:Bb] !pp!E4 D2 C2 | E6 !fermata!z2 |
+[V:3] !p!G,4 G,4 | C4 C4 | [K:Bb] !pp!F,4 G,2 A,2 | C6 !fermata!z2 |
+[V:4] !p!G,,4 E,4 | F,,4 F,,4 | [K:Bb] !pp!F,,4 F,,4 | F,,6 !fermata!z2 |
+% ---- A', bars 42-49: the hymn sung by the cello in its tenor register, the viola as bass; flowing eighths in the first violin, then in the second
+[V:1] !p!(Bdfd) (Be) (cA) | (fdBf) (ec) (Bd) | (geBe) (cf) (Bd) | (ce) (df) (cA) (fe) |
+[V:2] !p!D2 B,2 E4 | D4 E2 F2 | G4 E2 D2 | G2 D2 E4 |
+[V:3] !p!D,4 E,2 F,2 | D,4 C,2 B,2 | E,4 F,2 G,2 | E,2 F,6 |
+[V:4] !mp!F,4 G,2 A,2 | B,4 C2 D2 | E3 D C2 B,2 | (C2 B,2) A,4 |
+[V:1] !pp!f4 c4 | d4 B4 | B2 c2 B2 A2 | B6 z2 |
+[V:2] !p!(DFBD) (EG) (CE) | (DB,GD) (EGBG) | (DF) (EG) (FD) (EC) | (DFDB,) D2 z2 |
+[V:3] !p!D,4 C,2 A,2 | G,2 F,2 E,4 | D,2 E,2 F,2 F,2 | D,4 F,2 z2 |
+[V:4] !mp!F,4 G,2 A,2 | B,2 D2 G4 | (F2 E2) (D2 C2) | B,2 F,2 B,,2 z2 |
+% ---- bars 50-53: the answering phrase now in the first violin, the viola in triplets, to F major
+[V:1] !p!d4 (c2 B2) | A3 B c2 f2 | (d2 =e2) f2 (=ed) | c4 c2 z2 |
+[V:2] !p!B,4 B,2 G,2 | C4 C2 A,2 | G,2 B,2 A,2 B,2 | A,4 E2 z2 |
+[V:3] !p!(3G,B,D (3B,DB, (3=E,G,C (3G,B,G, | (3F,A,C (3A,F,A, (3F,A,C (3D,F,A, | (3G,B,D (3=E,G,B, (3F,A,C (3G,=E,B, | (3F,A,C (3FCA, (3E,A,C (3E,A,C |
+[V:4] !p!G,,4 =E,,4 | F,,4 A,,2 D,2 | B,,2 C,2 A,,2 C,2 | F,,4 F,,2 z2 |
+% ---- bars 54-57: the hymn climbs once more, now to B flat, full close
+[V:1] !mf!F4 G2 A2 | B2 c2 (de) (fg) | b2 f2 (ed) c2 | !p!B6 z2 |
+[V:2] !mf!D2 F2 E2 E2 | D2 G2 B4 | B2 B2 G2 A2 | !p!F6 z2 |
+[V:3] !mf!(3D,F,B, (3F,B,D (3E,G,B, (3F,A,C | (3F,B,D (3G,CE (3F,B,D (3B,EG | (3G,B,E (3B,DF (3G,CE (3CEC | !p!(3D,F,B, (3DB,F, D2 z2 |
+[V:4] !mf!B,,4 E,2 F,2 | D,2 E,2 F,2 G,2 | E,2 D,2 C,2 F,,2 | !p!B,,6 z2 |
+% ---- Coda, bars 58-65: over a tonic pedal the cell sounds in the second violin (major), then in the viola (minor, with G flat); a plagal close darkened by G flat; last, the cell in the cello, pianissimo
+[V:1] !p!d4 e4 | d6 z2 | B4 B2 c2 | d6 z2 | !pp!g4 _g4 | f8 | d2 B2 c2 d2 | d6 !fermata!z2 |]
+[V:2] !p!F4 G2 A2 | B6 z2 | D4 E4 | D6 z2 | !pp!E8 | D8 | B2 G2 F2 F2 | F6 !fermata!z2 |]
+[V:3] !p!B,4 B,2 C2 | D6 z2 | F,4 _G,2 =A,2 | B,6 z2 | !pp!B,8 | B,8 | D2 E2 E2 D2 | B,6 !fermata!z2 |]
+[V:4] !p!B,,8 | B,,6 z2 | B,,8 | B,,6 z2 | !pp!E,8 | B,,8 | F,,2 G,,2 A,,2 B,,2 | B,,6 !fermata!z2 |]
+</script>
+<script type="text/plain" class="piece" data-id="03-dminor-iii" data-label="III. Scherzo. Allegro molto" data-note="A terse scherzo built from the quartet's four-note cell (A, B flat, C sharp, D) thrown between the instruments in two-bar shards, with off-beat accents, hemiolas and bars of silence; the trio in D major turns the cell into a rising rustic tune over an open-string drone.">
+X:1
+T:Beethoven’s Missing Quartet
+T:III. Scherzo. Allegro molto
+C:Lor, in the manner of Beethoven
+M:3/4
+L:1/8
+Q:"Allegro molto" 3/4=84
+%%score [1 | 2 | 3 | 4]
+V:1 clef=treble name="Vl. I"
+V:2 clef=treble name="Vl. II"
+V:3 clef=alto name="Vla."
+V:4 clef=bass name="Vc."
+K:Dm
+V:1
+%%MIDI program 40
+V:2
+%%MIDI program 40
+V:3
+%%MIDI program 41
+V:4
+%%MIDI program 42
+% ---- SCHERZO a, bars 1-8: the cell as a two-bar motto, low strings; answered on E by the violins; tutti; hemiola to the cadence
+[V:1] |: !f!z6 | z6 | !p!z2 e2 f2 | ^G2 A2 z2 |
+[V:2] |: !f!z6 | z6 | !p!z2 E2 F2 | ^G,2 A,2 z2 |
+[V:3] |: !f!z2 A,2 B,2 | ^C,2 D,2 z2 | !p!z6 | z6 |
+[V:4] |: !f!z2 A,,2 B,,2 | ^C,,2 D,,2 z2 | !p!z6 | z6 |
+[V:1] !f!z2 a2 b2 | ^c2 d2 z2 | !ff!!>!g4 f2- | f2 !>!e4 |
+[V:2] !f!z2 f2 g2 | G2 F2 z2 | !ff!d4 d2- | d2 ^c4 |
+[V:3] !f!z2 D2 B,2 | A,2 A,2 z2 | !ff!B,4 A,2- | A,2 G,4 |
+[V:4] !f!z2 D,2 G,,2 | A,,2 D,,2 z2 | !ff!G,,4 A,,2- | A,,2 !>!A,,4 |
+% ---- bars 9-16: piano; the cell on D (viola) and on G (second violin); hemiola on the cell in F (C, D flat, E, F); a bar of silence
+[V:1] !p!z6 | z6 | z6 | z6 |
+[V:2] !p!z6 | z6 | z2 g2 _a2 | =B2 c2 z2 |
+[V:3] !p!z2 D2 _E2 | ^F,2 G,2 z2 | z2 E2 F2 | D2 E2 z2 |
+[V:4] !p!D,2 z4 | z2 G,,2 z2 | C,2 z4 | z2 C,2 z2 |
+[V:1] !f!c'4 _d'2- | _d'2 e4 | !sfz!!>!f2 z4 | z6 :|
+[V:2] !f!a4 b2- | b2 G4 | !sfz!!>!c2 z4 | z6 :|
+[V:3] !f!F4 G2- | G2 B,4 | !sfz!!>!A,2 z4 | z6 :|
+[V:4] !f!A,4 E,2- | E,2 C,4 | !sfz!!>!F,,2 z4 | z6 :|
+% ---- SCHERZO b, bars 17-24: the motto on C (low), answered on F (violins); off-beat accents through B flat minor and a diminished seventh to A
+[V:1] |: !f!z6 | z6 | !p!z2 f2 _g2 | A2 B2 z2 |
+[V:2] |: !f!z6 | z6 | !p!z2 F2 _G2 | A,2 B,2 z2 |
+[V:3] |: !f!z2 C2 _D2 | E,2 F,2 z2 | !p!z6 | z6 |
+[V:4] |: !f!z2 C,2 _D,2 | E,,2 F,,2 z2 | !p!z6 | z6 |
+[V:1] !f!z2 !sfz!!>!f4 | z2 !sfz!!>!g4 | z2 !sfz!!>!b4 | !sfz!!>!a2 z4 |
+[V:2] !f!z2 !sfz!!>!_d4 | z2 !sfz!!>!_d4 | z2 !sfz!!>!g4 | !sfz!!>!g2 z4 |
+[V:3] !f!z2 !sfz!!>!B,4 | z2 !sfz!!>!B,4 | z2 !sfz!!>!E4 | !sfz!!>!^C2 z4 |
+[V:4] !f!z2 !sfz!!>!B,,4 | z2 !sfz!!>!E,,4 | z2 !sfz!!>!^C,,4 | !sfz!!>!A,,2 z4 |
+% ---- bars 25-32: over a dominant pedal the cell on E climbs through viola, second and first violin; unison hemiola, then silence
+[V:1] !p!z6 | z6 | z2 !mf!e'2 f'2 | ^g2 a2 z2 |
+[V:2] !p!z6 | z2 e2 f2 | !mf!^G2 A2 z2 | A2 z4 |
+[V:3] !p!z2 E2 F2 | ^G,2 A,2 z2 | !mf!A,2 z4 | A,2 z4 |
+[V:4] !p!A,,2 z4 | A,,2 z4 | !mf!A,,2 z4 | A,,2 z4 |
+[V:1] !ff!!>!e4 !>!f2- | f2 !>!^G4 | A2 z4 | z6 |
+[V:2] !ff!E4 F2- | F2 ^G,4 | A,2 z4 | z6 |
+[V:3] !ff!E4 F2- | F2 ^G,4 | A,2 z4 | z6 |
+[V:4] !ff!E,4 F,2- | F,2 ^G,,4 | A,,2 z4 | z6 |
+% ---- bars 33-40: the motto's first two notes only, pianissimo, climbing from cello to first violin over a soft pulse on A
+[V:1] !pp!z6 | z6 | z6 | z6 |
+[V:2] !pp!z6 | z6 | z6 | z6 |
+[V:3] !pp!z6 | z6 | z2 A,2 B,2 | z6 |
+[V:4] !pp!z2 A,,2 B,,2 | A,,2 z4 | A,,2 z4 | A,,2 z4 |
+[V:1] z6 | z6 | z2 a2 b2 | z6 |
+[V:2] z2 A2 B2 | z6 | z6 | z6 |
+[V:3] z6 | z6 | z6 | z6 |
+[V:4] A,,2 z4 | A,,2 z4 | A,,2 z4 | A,,2 z4 |
+% ---- SCHERZO a', bars 41-48: the whole motto at last, fortissimo in four octaves; answer on E in the low strings; the tutti motto now in the bass; hemiola as before
+[V:1] !ff!z2 a2 b2 | ^c2 d2 z2 | !p!z6 | z6 |
+[V:2] !ff!z2 A2 B2 | ^C2 D2 z2 | !p!z6 | z6 |
+[V:3] !ff!z2 A,2 B,2 | ^C,2 D,2 z2 | !p!z2 E2 F2 | ^G,2 A,2 z2 |
+[V:4] !ff!z2 A,,2 B,,2 | ^C,,2 D,,2 z2 | !p!z2 E,2 F,2 | ^G,,2 A,,2 z2 |
+[V:1] !f!z2 a2 g2 | e2 f2 z2 | !ff!!>!g4 f2- | f2 !>!e4 |
+[V:2] !f!z2 f2 d2 | A2 A2 z2 | !ff!d4 d2- | d2 ^c4 |
+[V:3] !f!z2 D2 D2 | G2 F2 z2 | !ff!B,4 A,2- | A,2 G,4 |
+[V:4] !f!z2 A,,2 B,,2 | ^C,,2 D,,2 z2 | !ff!G,,4 A,,2- | A,,2 !>!A,,4 |
+% ---- bars 49-56: the cell on E (viola) and on A (second violin); the hemiola now on the cell itself in D minor; silence
+[V:1] !p!z6 | z6 | z6 | z6 |
+[V:2] !p!z6 | z6 | z2 A2 B2 | ^C2 D2 z2 |
+[V:3] !p!z2 E2 F2 | ^G,2 A,2 z2 | z2 F,2 G,2 | E,2 F,2 z2 |
+[V:4] !p!A,,2 z4 | z2 A,,2 z2 | D,2 z4 | z2 D,2 z2 |
+[V:1] !f!a4 b2- | b2 ^c4 | !sfz!!>!d2 z4 | z6 :|
+[V:2] !f!f4 g2- | g2 E4 | !sfz!!>!A2 z4 | z6 :|
+[V:3] !f!D4 E2- | E2 G,4 | !sfz!!>!F,2 z4 | z6 :|
+[V:4] !f!F,4 ^C,2- | ^C,2 A,,4 | !sfz!!>!D,,2 z4 | z6 :|
+% ---- TRIO c, bars 57-64 (D major): the cell made major (A, B, C sharp, D) as a rustic tune in the viola over the cello's open-string drone
+[V:1] |: [K:D] !p!z6 | z6 | z6 | z6 | g6 | (g4 f2) | e6 | e6 |
+[V:2] |: [K:D] !p!d6- | (d2 e4) | d6 | d6 | d6 | c6 | A6 | c6 |
+[V:3] |: [K:D] !p!(A,4 B,2 | C4 D2 | F4 E2 | D6) | (G4 F2 | E4 D2 | C4 B,2 | A,6) |
+[V:4] |: [K:D] !p![D,A,]6 | [D,A,]6 | [D,A,]6 | [D,A,]6 | [D,A,]6 | [D,A,]6 | A,,6 | A,,6 |
+% ---- bars 65-72: the tune passes to the first violin, the second in thirds below, the viola on the afterbeats
+[V:1] !mp!(A4 B2 | c4 d2 | f4 e2 | d4 B2) | (A4 d2 | c4 e2 | d4 c2 | d6) :|
+[V:2] !mp!(F4 G2 | A4 B2 | d4 c2 | B4 G2) | (F4 B2 | A4 c2 | B4 A2 | A6) :|
+[V:3] !mp!z2 D2 D2 | z2 E2 E2 | z2 A,2 A,2 | z2 B,2 B,2 | z2 D2 D2 | z2 E2 E2 | z2 G2 G2 | F6 :|
+[V:4] !mp![D,A,]6 | [D,A,]6 | [D,A,]6 | [D,A,]6 | [D,A,]6 | [D,A,]6 | A,,6 | [D,A,]6 :|
+% ---- TRIO d, bars 73-80: the drone stops; the cello sings the cell in G major, then on E towards A
+[V:1] |: !p!d6 | d6 | (d4 =c2) | B6 | !mf!e6 | (d4 c2) | !f!(e4 f2) | g6 |
+[V:2] |: !p!G6 | A6 | (G4 F2) | G6 | !mf!G6 | (B4 A2) | !f!c6 | e6 |
+[V:3] |: !p!z2 B,2 B,2 | z2 =C2 C2 | z2 B,2 D2 | z2 D2 D2 | !mf!z2 B,2 B,2 | z2 E2 E2 | !f!z2 A,2 A,2 | z2 C2 C2 |
+[V:4] |: !p!(D,4 E,2 | F,4 G,2 | B,4 A,2 | G,6) | !mf!(E,4 F,2 | ^G,4 A,2) | !f!A,,6 | (E,4 C,2) |
+% ---- TRIO c', bars 81-88: the tune now in the cello, the viola taking over the drone, the violins above
+[V:1] !p!f6 | g6 | a6 | f6 | g6 | (g4 f2) | e6 | e6 |
+[V:2] !p!d6 | e6 | d6 | d6 | d6 | c6 | A6 | A6 |
+[V:3] !p![DA]6 | [DA]6 | [DA]6 | [DA]6 | [DA]6 | [DA]6 | [DA]6 | [CA]6 |
+[V:4] !p!(A,,4 B,,2 | C,4 D,2 | F,4 E,2 | D,6) | (G,4 F,2 | E,4 D,2 | C,4 B,,2 | A,,6) |
+% ---- bars 89-96: the first violin's phrase again, closing in D
+[V:1] !mp!(A4 B2 | c4 d2 | f4 e2 | d4 B2) | (A4 d2 | c4 e2 | d4 c2 | d6) :|
+[V:2] !mp!(F4 G2 | A4 B2 | d4 c2 | B4 G2) | (F4 B2 | A4 c2 | B4 A2 | A6) :|
+[V:3] !mp!z2 D2 D2 | z2 E2 E2 | z2 A,2 A,2 | z2 B,2 B,2 | z2 D2 D2 | z2 E2 E2 | z2 G2 G2 | F6 :|
+[V:4] !mp![D,A,]6 | [D,A,]6 | [D,A,]6 | [D,A,]6 | [D,A,]6 | [D,A,]6 | A,,6 | [D,A,]6 :|
+% ---- DA CAPO, written out without repeats: SCHERZO a, bars 97-104: the cell as a two-bar motto, low strings; answered on E by the violins; tutti; hemiola to the cadence
+[V:1] [K:Dm] !f!z6 | z6 | !p!z2 e2 f2 | ^G2 A2 z2 |
+[V:2] [K:Dm] !f!z6 | z6 | !p!z2 E2 F2 | ^G,2 A,2 z2 |
+[V:3] [K:Dm] !f!z2 A,2 B,2 | ^C,2 D,2 z2 | !p!z6 | z6 |
+[V:4] [K:Dm] !f!z2 A,,2 B,,2 | ^C,,2 D,,2 z2 | !p!z6 | z6 |
+[V:1] !f!z2 a2 b2 | ^c2 d2 z2 | !ff!!>!g4 f2- | f2 !>!e4 |
+[V:2] !f!z2 f2 g2 | G2 F2 z2 | !ff!d4 d2- | d2 ^c4 |
+[V:3] !f!z2 D2 B,2 | A,2 A,2 z2 | !ff!B,4 A,2- | A,2 G,4 |
+[V:4] !f!z2 D,2 G,,2 | A,,2 D,,2 z2 | !ff!G,,4 A,,2- | A,,2 !>!A,,4 |
+% ---- da capo: bars 105-112: piano; the cell on D (viola) and on G (second violin); hemiola on the cell in F (C, D flat, E, F); a bar of silence
+[V:1] !p!z6 | z6 | z6 | z6 |
+[V:2] !p!z6 | z6 | z2 g2 _a2 | =B2 c2 z2 |
+[V:3] !p!z2 D2 _E2 | ^F,2 G,2 z2 | z2 E2 F2 | D2 E2 z2 |
+[V:4] !p!D,2 z4 | z2 G,,2 z2 | C,2 z4 | z2 C,2 z2 |
+[V:1] !f!c'4 _d'2- | _d'2 e4 | !sfz!!>!f2 z4 | z6 |
+[V:2] !f!a4 b2- | b2 G4 | !sfz!!>!c2 z4 | z6 |
+[V:3] !f!F4 G2- | G2 B,4 | !sfz!!>!A,2 z4 | z6 |
+[V:4] !f!A,4 E,2- | E,2 C,4 | !sfz!!>!F,,2 z4 | z6 |
+% ---- da capo: SCHERZO b, bars 113-120: the motto on C (low), answered on F (violins); off-beat accents through B flat minor and a diminished seventh to A
+[V:1] !f!z6 | z6 | !p!z2 f2 _g2 | A2 B2 z2 |
+[V:2] !f!z6 | z6 | !p!z2 F2 _G2 | A,2 B,2 z2 |
+[V:3] !f!z2 C2 _D2 | E,2 F,2 z2 | !p!z6 | z6 |
+[V:4] !f!z2 C,2 _D,2 | E,,2 F,,2 z2 | !p!z6 | z6 |
+[V:1] !f!z2 !sfz!!>!f4 | z2 !sfz!!>!g4 | z2 !sfz!!>!b4 | !sfz!!>!a2 z4 |
+[V:2] !f!z2 !sfz!!>!_d4 | z2 !sfz!!>!_d4 | z2 !sfz!!>!g4 | !sfz!!>!g2 z4 |
+[V:3] !f!z2 !sfz!!>!B,4 | z2 !sfz!!>!B,4 | z2 !sfz!!>!E4 | !sfz!!>!^C2 z4 |
+[V:4] !f!z2 !sfz!!>!B,,4 | z2 !sfz!!>!E,,4 | z2 !sfz!!>!^C,,4 | !sfz!!>!A,,2 z4 |
+% ---- da capo: bars 121-128: over a dominant pedal the cell on E climbs through viola, second and first violin; unison hemiola, then silence
+[V:1] !p!z6 | z6 | z2 !mf!e'2 f'2 | ^g2 a2 z2 |
+[V:2] !p!z6 | z2 e2 f2 | !mf!^G2 A2 z2 | A2 z4 |
+[V:3] !p!z2 E2 F2 | ^G,2 A,2 z2 | !mf!A,2 z4 | A,2 z4 |
+[V:4] !p!A,,2 z4 | A,,2 z4 | !mf!A,,2 z4 | A,,2 z4 |
+[V:1] !ff!!>!e4 !>!f2- | f2 !>!^G4 | A2 z4 | z6 |
+[V:2] !ff!E4 F2- | F2 ^G,4 | A,2 z4 | z6 |
+[V:3] !ff!E4 F2- | F2 ^G,4 | A,2 z4 | z6 |
+[V:4] !ff!E,4 F,2- | F,2 ^G,,4 | A,,2 z4 | z6 |
+% ---- da capo: bars 129-136: the motto's first two notes only, pianissimo, climbing from cello to first violin over a soft pulse on A
+[V:1] !pp!z6 | z6 | z6 | z6 |
+[V:2] !pp!z6 | z6 | z6 | z6 |
+[V:3] !pp!z6 | z6 | z2 A,2 B,2 | z6 |
+[V:4] !pp!z2 A,,2 B,,2 | A,,2 z4 | A,,2 z4 | A,,2 z4 |
+[V:1] z6 | z6 | z2 a2 b2 | z6 |
+[V:2] z2 A2 B2 | z6 | z6 | z6 |
+[V:3] z6 | z6 | z6 | z6 |
+[V:4] A,,2 z4 | A,,2 z4 | A,,2 z4 | A,,2 z4 |
+% ---- da capo: SCHERZO a', bars 137-144: the whole motto at last, fortissimo in four octaves; answer on E in the low strings; the tutti motto now in the bass; hemiola as before
+[V:1] !ff!z2 a2 b2 | ^c2 d2 z2 | !p!z6 | z6 |
+[V:2] !ff!z2 A2 B2 | ^C2 D2 z2 | !p!z6 | z6 |
+[V:3] !ff!z2 A,2 B,2 | ^C,2 D,2 z2 | !p!z2 E2 F2 | ^G,2 A,2 z2 |
+[V:4] !ff!z2 A,,2 B,,2 | ^C,,2 D,,2 z2 | !p!z2 E,2 F,2 | ^G,,2 A,,2 z2 |
+[V:1] !f!z2 a2 g2 | e2 f2 z2 | !ff!!>!g4 f2- | f2 !>!e4 |
+[V:2] !f!z2 f2 d2 | A2 A2 z2 | !ff!d4 d2- | d2 ^c4 |
+[V:3] !f!z2 D2 D2 | G2 F2 z2 | !ff!B,4 A,2- | A,2 G,4 |
+[V:4] !f!z2 A,,2 B,,2 | ^C,,2 D,,2 z2 | !ff!G,,4 A,,2- | A,,2 !>!A,,4 |
+% ---- da capo: bars 145-152: the cell on E (viola) and on A (second violin); the hemiola now on the cell itself in D minor; silence
+[V:1] !p!z6 | z6 | z6 | z6 |
+[V:2] !p!z6 | z6 | z2 A2 B2 | ^C2 D2 z2 |
+[V:3] !p!z2 E2 F2 | ^G,2 A,2 z2 | z2 F,2 G,2 | E,2 F,2 z2 |
+[V:4] !p!A,,2 z4 | z2 A,,2 z2 | D,2 z4 | z2 D,2 z2 |
+[V:1] !f!a4 b2- | b2 ^c4 | !sfz!!>!d2 z4 | z6 ||
+[V:2] !f!f4 g2- | g2 E4 | !sfz!!>!A2 z4 | z6 ||
+[V:3] !f!D4 E2- | E2 G,4 | !sfz!!>!F,2 z4 | z6 ||
+[V:4] !f!F,4 ^C,2- | ^C,2 A,,4 | !sfz!!>!D,,2 z4 | z6 ||
+% ---- CODA, bars 153-160: the trio's rising cell, now in minor (A, B flat, C sharp, D), pianissimo in cello then viola; the motto fades upwards
+[V:1] !pp!z6 | z6 | z6 | z6 | z2 a2 b2 | ^c2 d2 z2 | z6 | z6 |
+[V:2] !pp!(F4 G2 | G4 F2) | (F4 G2 | G4 F2) | z6 | z6 | z6 | z6 |
+[V:3] !pp!D6 | (E4 D2) | (A,4 B,2 | ^C4 D2) | z6 | z6 | z6 | z6 |
+[V:4] !pp!(A,,4 B,,2 | ^C,4 D,2) | D,6 | D,6 | z6 | z6 | z2 A,,2 B,,2 | ^C,,2 D,,2 z2 |
+% ---- bars 161-168: the dominant hammered, piano then forte; a fortissimo hemiola on the cell over the cello's descent; the motto's head once more, pianissimo, then the last word
+[V:1] !p!z2 a2 a2 | !f!!>!a2 !>!a2 !>!a2 | !ff!!>!a4 !>!b2- | b2 !>!^c4 | !sfz!!>!d2 z4 | !pp!z6 | !ff!!>!d2 z4 | !fermata!z6 |]
+[V:2] !p!z2 A2 A2 | !f!!>!A2 !>!A2 !>!A2 | !ff!f4 g2- | g2 E4 | !sfz!!>!A2 z4 | !pp!z6 | !ff!!>!D2 z4 | !fermata!z6 |]
+[V:3] !p!z2 A,2 A,2 | !f!!>!A,2 !>!A,2 !>!A,2 | !ff!D4 E2- | E2 G,4 | !sfz!!>!F,2 z4 | !pp!z6 | !ff!!>!D,2 z4 | !fermata!z6 |]
+[V:4] !p!z2 A,,2 A,,2 | !f!!>!A,,2 !>!A,,2 !>!A,,2 | !ff!D,,4 ^C,,2- | ^C,,2 A,,4 | !sfz!!>!D,,2 z4 | !pp!z2 A,,2 B,,2 | !ff!!>!D,,2 z4 | !fermata!z6 |]
+</script>
+<script type="text/plain" class="piece" data-id="04-dminor-iv" data-label="IV. Allegro con fuoco. Presto" data-note="Finale: a galloping rondo whose refrain is built on the cell (A, B flat, C sharp, D); a hymn in F major, a fugato on the cell, and a Presto coda in D major where the cell finally rises by step.">
+X:4
+T:Beethoven’s Missing Quartet
+T:IV. Allegro con fuoco
+C:Lor, in the manner of Beethoven
+M:2/4
+L:1/8
+Q:"Allegro con fuoco" 1/4=100
+%%score [1 | 2 | 3 | 4]
+V:1 clef=treble name="Vl. I"
+V:2 clef=treble name="Vl. II"
+V:3 clef=alto name="Vla."
+V:4 clef=bass name="Vc."
+K:Dm
+V:1
+%%MIDI program 40
+V:2
+%%MIDI program 40
+V:3
+%%MIDI program 41
+V:4
+%%MIDI program 42
+% ---- Refrain A, bars 1-8: the cell as a galloping dance tune (A, B flat, A, down to C sharp, D), first violin over off-beat pulses
+[V:1] !p!a2 b a | ^c2 d2 | f2 g f | e2 A2 | b2 c' b | a2 d'2 | b2 a g | f2 e2 |
+[V:2] !p!z F z F | z G z F | z B z B | z E z E | z D z D | z F z F | z ^c z ^c | z ^c z ^c |
+[V:3] !p!z D z D | z A, z A, | z F z F | z ^C z ^C | z G, z G, | z A, z A, | z G z G | z E z E |
+[V:4] !p!D,2 A,,2 | E,2 F,2 | B,,2 G,,2 | A,,2 A,,2 | G,,2 B,,2 | F,2 D,2 | E,2 E,2 | A,,2 ^C,2 |
+% ---- bars 9-16: the tune again over a galloping cello; the cell on G (D, E flat, F sharp, G) and a full close
+[V:1] a2 b a | ^c2 d2 | f2 g f | e2 a2 | !f!d'2 !sfz!!>!_e' d' | ^f2 g2 | !p!b g e ^c | d2 z2 |
+[V:2] z F z F | z G z F | z B z B | z ^c z ^c | !f!z B z B | z c z B | !p!z G z G | F2 z2 |
+[V:3] z D z D | z A, z A, | z F z F | z E z E | !f!z D z D | z D z D | !p!z E z E | A,2 z2 |
+[V:4] D, D, A,,2 | E, E, F,2 | B,, B,, G,,2 | A,, A,, A,,2 | !f!G,, G,, G,,2 | A,, A,, G,,2 | !p!A,, A,, A,,2 | D,2 z2 |
+% ---- bars 17-24: the motto in four octaves, ff; Neapolitan-coloured cadence, then a silence
+[V:1] !ff!a2 b a | ^c2 d2 | b a g f | e2 z2 | !sfz!!>!d'2 b2 | !sfz!!>!^c'2 e'2 | d'2 z2 | z4 |
+[V:2] !ff!A2 B A | ^C2 D2 | B A G F | E2 z2 | !sfz!!>!g2 d2 | !sfz!!>!g4 | f2 z2 | z4 |
+[V:3] !ff!A,2 B, A, | ^C,2 D,2 | B, A, G, F, | E,2 z2 | !sfz!!>!F2 G2 | !sfz!!>!E2 ^C2 | D2 z2 | z4 |
+[V:4] !ff!A,,2 B,, A,, | ^C,,2 D,,2 | B,, A,, G,, F,, | E,,2 z2 | !sfz!!>!B,,2 G,,2 | !sfz!!>!A,,2 A,,2 | D,2 z2 | z4 |
+% ---- Transition, bars 25-32: the tune's head in the viola, then the cell on C (C, D flat, E, F) climbs to the dominant of F
+[V:1] !p!z4 | z4 | z4 | z4 | !mf!c'2 _d' c' | e2 f2 | !f!b2 g2 | !p!e2 !fermata!z2 |
+[V:2] !p!z4 | z4 | c2 _d c | E2 F2 | !mf!G2 G2 | G2 F2 | !f!e2 c2 | !p!B2 !fermata!z2 |
+[V:3] !p!A2 B A | ^C2 D2 | E2 E2 | B,2 A,2 | !mf!E2 E2 | C2 C2 | !f!G2 E2 | !p!G2 !fermata!z2 |
+[V:4] !p!D,2 z2 | A,,2 D,2 | C,2 C,2 | C,2 F,2 | !mf!C,2 C,2 | B,,2 A,,2 | !f!C,2 C,2 | !p!C,2 !fermata!z2 |
+% ---- Episode B, bars 33-40: a hymn in F major, first violin (its first four notes are the cell's major form on C)
+[V:1] !p!c2 d2 | e2 f2 | a3 g | f2 c2 | d2 e2 | f2 g2 | a2 g2 | g4 |
+[V:2] !p!A2 A2 | c2 c2 | F2 G2 | A2 F2 | F2 E2 | A2 G2 | F2 E2 | E4 |
+[V:3] !p!C2 F2 | G2 F2 | D2 E2 | C2 A,2 | D2 G,2 | C2 D2 | C2 C2 | C4 |
+[V:4] !p!F,2 D,2 | C,2 A,,2 | D,2 C,2 | F,2 A,,2 | B,,2 C,2 | A,,2 B,,2 | C,2 C,2 | C,4 |
+% ---- bars 41-48: the hymn sung by the cello in its tenor register, viola as bass, violins sustaining above
+[V:1] f4 | g2 f2 | f2 g2 | a2 f2 | a2 b2 | c'2 c'2 | c'2 b2 | a4 |
+[V:2] A4 | c2 c2 | d2 e2 | c2 d2 | f2 d2 | f2 g2 | a2 g2 | f4 |
+[V:3] F,2 D,2 | C,2 A,2 | D,2 C,2 | F,2 B,2 | A,2 G,2 | F,2 E,2 | C,2 C,2 | F,4 |
+[V:4] !mp!C2 D2 | E2 F2 | A3 G | F2 d2 | c2 B2 | A2 G2 | F2 E2 | F4 |
+% ---- bars 49-56: the hymn once more in the first violin, quieter, over softly pulsing inner parts, now closing in F
+[V:1] !pp!c2 d2 | e2 f2 | a3 g | f2 c2 | d2 e2 | f2 g2 | a2 g2 | f4 |
+[V:2] !pp!A A A A | c c c c | F F G G | A A F F | F F E E | A A G G | F F E E | F4 |
+[V:3] !pp!C2 F2 | G2 F2 | D2 E2 | C2 A,2 | D2 G,2 | C2 D2 | C2 B,2 | A,4 |
+[V:4] !pp!F,2 D,2 | C,2 A,,2 | D,2 C,2 | F,2 A,,2 | B,,2 C,2 | A,,2 B,,2 | C,2 C,2 | F,,4 |
+% ---- bars 57-64: the hymn's rising head climbs through G minor and A to the original cell in D minor, ff
+[V:1] !mf!d2 e2 | ^f2 g2 | !f!e2 ^f2 | ^g2 a2 | !ff!a2 b2 | ^c'2 d'2 | !sfz!!>!d'2 ^c'2 | ^c'2 z2 |
+[V:2] !mf!G2 G2 | D2 D2 | !f!A2 A2 | d2 ^c2 | !ff!d2 d2 | e2 a2 | !sfz!!>!d2 e2 | e2 z2 |
+[V:3] !mf!D2 C2 | C2 B,2 | !f!E2 D2 | E2 E2 | !ff!F2 G2 | G2 F2 | !sfz!!>!G2 E2 | E2 z2 |
+[V:4] !mf!B,,2 C,2 | A,,2 B,,2 | !f!^C,2 D,2 | =B,,2 A,,2 | !ff!D,2 G,,2 | E,2 F,2 | !sfz!!>!B,,2 A,,2 | A,,2 z2 |
+% ---- Retransition, bars 65-76: over a whispered A pedal the tune's head is passed up from viola to first violin; off-beat sforzandi; silence
+[V:1] !pp!z4 | z4 | z4 | z4 | !mp!a2 b a | ^c2 d2 | !mf!a2 b a | ^c'2 d'2 |
+[V:2] !pp!z4 | z4 | e2 f e | ^G2 A2 | !mp!A4 | G2 F2 | !mf!^c2 d ^c | e2 f2 |
+[V:3] !pp!A2 B A | ^C2 D2 | ^C4 | D2 ^C2 | !mp!E4 | E2 D2 | !mf!E4 | G2 A2 |
+[V:4] !pp!A,, A,, A,,2 | A,, A,, A,,2 | A,, A,, A,,2 | A,, A,, A,,2 | !mp!A,, A,, A,,2 | A,, A,, A,,2 | !mf!A,, A,, A,,2 | A,, A,, A,,2 |
+[V:1] !ff!z !sfz!!>!g z !sfz!!>!g | z !sfz!!>!b z !sfz!!>!b | !p!z4 | !fermata!z4 |
+[V:2] !ff!z e z e | z g z g | !p!z4 | !fermata!z4 |
+[V:3] !ff!z ^c z ^c | z e z e | !p!z4 | !fermata!z4 |
+[V:4] !ff!A,, z A,, z | A,, z A,, z | !p!A,,2 z2 | !fermata!z4 |
+% ---- Refrain A', bars 77-84: the tune an octave lower in the viola, first violin silent
+[V:1] !p!z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:2] !p!z F z F | z G z F | z B z B | z E z E | z D z D | z F z F | z ^c z ^c | z ^c z ^c |
+[V:3] !p!A2 B A | ^C2 D2 | F2 G F | E2 A,2 | B2 c B | A2 d2 | B2 A G | F2 E2 |
+[V:4] !p!D,2 A,,2 | E,2 F,2 | B,,2 G,,2 | A,,2 A,,2 | G,,2 B,,2 | F,2 D,2 | E,2 E,2 | A,,2 ^C,2 |
+% ---- bars 85-92: first violin takes the tune back, inner parts now drive in steady eighths
+[V:1] !mf!a2 b a | ^c2 d2 | f2 g f | e2 a2 | !f!d'2 !sfz!!>!_e' d' | ^f2 g2 | b g e ^c | d2 z2 |
+[V:2] !mf!F F F F | G G F F | B B B B | e e e e | !f!B B B B | c c B B | G G G G | F2 z2 |
+[V:3] !mf!D D D D | A, A, A, A, | F F F F | ^C ^C ^C ^C | !f!D D D D | D D D D | ^C ^C ^C ^C | A,2 z2 |
+[V:4] !mf!D, D, A,,2 | E, E, F,2 | B,, B,, G,,2 | A,, A,, A,,2 | !f!G,, G,, G,,2 | A,, A,, G,,2 | A,, A,, A,,2 | D,2 z2 |
+% ---- bars 93-100: the motto in octaves as before, but the cadence is broken off on B flat (deceptive), sfz, and silence
+[V:1] !ff!a2 b a | ^c2 d2 | b a g f | e2 z2 | !sfz!!>!d'2 b2 | !sfz!!>!^c'2 e'2 | !sfz!!>!d'2 z2 | !fermata!z4 |
+[V:2] !ff!A2 B A | ^C2 D2 | B A G F | E2 z2 | !sfz!!>!g2 d2 | !sfz!!>!g4 | !sfz!!>!f2 z2 | !fermata!z4 |
+[V:3] !ff!A,2 B, A, | ^C,2 D,2 | B, A, G, F, | E,2 z2 | !sfz!!>!F2 G2 | !sfz!!>!E2 ^C2 | !sfz!!>!D2 z2 | !fermata!z4 |
+[V:4] !ff!A,,2 B,, A,, | ^C,,2 D,,2 | B,, A,, G,, F,, | E,,2 z2 | !sfz!!>!B,,2 G,,2 | !sfz!!>!A,,2 A,,2 | !sfz!!>!B,,2 z2 | !fermata!z4 |
+% ---- Episode C, fugato, bars 101-118: subject = the cell in quarters plus a running eighth tail; cello (D minor), viola (answer, A minor), second violin (D minor), first violin (A minor)
+[V:1] !p!z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:2] !p!z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:3] !p!z4 | z4 | z4 | z4 | E2 F2 | ^G,2 A,2 | =B, C D =B, | C A, =B, ^G, | A,2 ^C2 | D2 ^C2 |
+[V:4] !p!A,2 B,2 | ^C,2 D,2 | E, F, G, E, | F, D, E, ^C, | D, C, D, F, | E, D, C, =B,, | E,2 D,2 | A,,2 E,2 | A,, =B,, ^C, A,, | F, D, E, A,, |
+[V:1] z4 | z4 | z4 | z4 | !mf!e2 f2 | ^g2 a2 | =b c' d' =b | c' a =b ^g |
+[V:2] !mp!a2 b2 | ^c2 d2 | e f g e | f d e ^c | !mf!d c d f | e d c =B | e2 d2 | A2 e2 |
+[V:3] !mp!F E F D | A G F E | A2 G2 | D2 A2 | !mf!A2 A2 | E2 A2 | D2 A2 | E2 E2 |
+[V:4] !mp!D,2 G,,2 | A,,2 D,2 | ^C,2 A,,2 | D,2 A,,2 | !mf!F,2 D,2 | E,2 A,,2 | ^G,,2 F,,2 | E,,2 E,2 |
+% ---- bars 119-126: episode: the subject's tail passed between the violins down a circle of fifths (A minor to A)
+[V:1] !p!c d e c | d4 | =B c d =B | c4 | !mp!A B c A | B4 | ^c d e ^c | e4 |
+[V:2] !p!A4 | F G A F | G4 | E F G E | !mp!F4 | D E F D | G4 | E F G E |
+[V:3] !p!E4 | A,4 | D4 | G,4 | !mp!C4 | F,4 | E4 | ^C4 |
+[V:4] !p!A,2 E,2 | D,2 A,,2 | G,,2 D,2 | C,2 G,,2 | !mp!F,,2 C,2 | B,,2 F,2 | A,,2 E,2 | A,,2 A,,2 |
+% ---- bars 127-134: the cell in augmentation in the cello (A, B flat, C sharp, D, then on up chromatically to A), eighth-note tail fragments above, crescendo into the climax
+[V:1] !mf!e f g e | z b z b | a g e g | z d' z d' | !f!a f d a | b g e g | f d =B d | !ff!e4 |
+[V:2] !mf!z ^c z ^c | d e f d | z e z e | f d a f | !f!z d z d | z ^c z ^c | z F z F | !ff!^c4 |
+[V:3] !mf!G4 | F4 | A4 | A4 | !f!A4 | E4 | D4 | !ff!A4 |
+[V:4] !mf!A,4 | B,4 | ^C,4 | D,4 | !f!F,4 | G,4 | ^G,4 | !ff!A,4 |
+% ---- bars 135-143: climax: the cell in long notes, violins in octaves, against a falling bass; Neapolitan, dominant, silence
+[V:1] a4 | b4 | ^c'4 | d'4 | !sfz!!>!_e'2 z2 | !sfz!!>!^c'2 z2 | !p!g4 | !pp!g4 | !fermata!z4 |
+[V:2] A4 | B4 | ^c4 | d4 | !sfz!!>!_e2 z2 | !sfz!!>!g2 z2 | !p!^c4 | !pp!^c4 | !fermata!z4 |
+[V:3] ^C ^C ^C ^C | D D D D | G G G G | F F F F | !sfz!!>!B,2 z2 | !sfz!!>!E2 z2 | !p!E4 | !pp!E4 | !fermata!z4 |
+[V:4] A,, A,, A,,2 | G,, G,, G,,2 | E,, E,, E,,2 | D,, D,, D,,2 | !sfz!!>!G,,2 z2 | !sfz!!>!A,,2 z2 | !p!A,,4 | !pp!A,,4 | !fermata!z4 |
+% ---- Refrain A'', bars 144-151: forte, the tune in both violins in octaves, viola pulses below, cello gallops
+[V:1] !f!a2 b a | ^c2 d2 | f2 g f | e2 A2 | b2 c' b | a2 d'2 | b2 a g | f2 e2 |
+[V:2] !f!A2 B A | ^C2 D2 | F2 G F | E2 A,2 | B2 c B | A2 d2 | B2 A G | F2 E2 |
+[V:3] !f!z F, z F, | z G, z F, | z F, z F, | z E, z E, | z G, z G, | z F, z F, | z G, z G, | z E, z E, |
+[V:4] !f!D, D, A,,2 | E, E, F,2 | B,, B,, G,,2 | A,, A,, A,,2 | G,, G,, B,,2 | F, F, D,2 | E, E, E,2 | A,, A,, ^C,2 |
+% ---- bars 152-159: subito piano, the second violin now shadows the tune in thirds and sixths; crescendo to ff
+[V:1] !p!a2 b a | ^c2 d2 | !mf!f2 g f | e2 a2 | !ff!d'2 !sfz!!>!_e' d' | ^f2 g2 | b g e ^c | d2 z2 |
+[V:2] !p!f2 g f | A2 A2 | !mf!d2 d B | e2 e2 | !ff!b2 c' b | c2 B2 | G G G G | F2 z2 |
+[V:3] !p!D D D D | A, A, A, A, | !mf!F F F F | ^C ^C ^C ^C | !ff!D D D D | D D D D | ^C ^C ^C ^C | A,2 z2 |
+[V:4] !p!D, D, A,,2 | E, E, F,2 | !mf!B,, B,, G,,2 | A,, A,, A,,2 | !ff!G,, G,, G,,2 | A,, A,, G,,2 | A,, A,, A,,2 | D,2 z2 |
+% ---- bars 160-165: the motto in octaves; the cadence halts on the dominant
+[V:1] !ff!a2 b a | ^c2 d2 | b a g f | e2 z2 | !sfz!!>!d'2 b2 | !sfz!!>!^c'2 !fermata!e'2 |
+[V:2] !ff!A2 B A | ^C2 D2 | B A G F | E2 z2 | !sfz!!>!g2 d2 | !sfz!!>!g2 !fermata!g2 |
+[V:3] !ff!A,2 B, A, | ^C,2 D,2 | B, A, G, F, | E,2 z2 | !sfz!!>!F2 G2 | !sfz!!>!E2 !fermata!^C2 |
+[V:4] !ff!A,,2 B,, A,, | ^C,,2 D,,2 | B,, A,, G,, F,, | E,,2 z2 | !sfz!!>!B,,2 G,,2 | !sfz!!>!A,,2 !fermata!A,,2 |
+% ---- Coda, Presto, D major, bars 166-173: the tune turned major, so that the cell now rises by step (A, B, A, C sharp, D); second violin, then first violin
+[V:1] [K:D] [Q:"Presto" 1/4=144] !pp!z4 | z4 | z4 | z4 | !p!a2 b a | c'2 d'2 | !mf!f'2 g' f' | e'2 a2 |
+[V:2] [K:D] !pp!A2 B A | c2 d2 | f2 g f | e2 A2 | !p!z f z f | z e z f | !mf!z a z d | z c z c |
+[V:3] [K:D] !pp!z F z F | z E z F | z A z D | z C z C | !p!z D z D | z G z F | !mf!z F z D | z E z E |
+[V:4] [K:D] !pp!D, D, D,2 | A,, A,, D,2 | D, D, G,,2 | A,, A,, A,,2 | !p!D, D, D,2 | A,, A,, D,2 | !mf!D, D, G,,2 | A,, A,, A,,2 |
+% ---- bars 174-181: the cello sings the tune under off-beat chords
+[V:1] !f!z c' z c' | z c' z d' | z a z a | z e' z e' | z b z b | z d' z d' | z g z g | f2 z2 |
+[V:2] !f!z G z G | z G z A | z d z d | z c z c | z d z d | z A z d | z B z c | d2 z2 |
+[V:3] !f!z E z E | z E z F | z A z A | z A z A | z F z F | z F z F | z D z E | F2 z2 |
+[V:4] !f!A,2 B, A, | C2 D2 | F2 G F | E2 A,2 | B,2 C B, | A,2 D2 | G,2 A,2 | D,2 z2 |
+% ---- bars 182-189: everyone: the major tune in octaves over a galloping bass
+[V:1] !ff!a2 b a | c'2 d'2 | f2 g f | e2 a2 | b2 c' b | a2 d'2 | g2 e c | d2 z2 |
+[V:2] !ff!A2 B A | c2 d2 | F2 G F | E2 A2 | B2 c B | A2 d2 | G2 E C | D2 z2 |
+[V:3] !ff!F F F F | E E F F | D D D D | C C C C | D D D D | D D F F | E E A, A, | A,2 z2 |
+[V:4] !ff!D, D, D,2 | A,, A,, D,2 | D, D, G,,2 | A,, A,, A,,2 | G,, G,, G,,2 | A,, A,, F,,2 | G,, G,, A,,2 | D,2 z2 |
+% ---- bars 190-197: the cell rises in long notes in the bass (A, B, C sharp, D) under a falling first violin; final chords
+[V:1] f'2 d' a | g'2 d' b | g'2 e' c' | f'2 d'2 | d'2 z2 | c'2 z2 | d'2 z2 | !fermata!d'4 |]
+[V:2] d4 | d4 | e4 | d4 | f2 z2 | e2 z2 | f2 z2 | !fermata![Af]4 |]
+[V:3] F4 | G4 | G4 | F4 | A,2 z2 | A,2 z2 | A,2 z2 | !fermata![D,A,]4 |]
+[V:4] A,,4 | B,,4 | C,4 | D,4 | D,,2 z2 | A,,2 z2 | D,,2 z2 | !fermata![D,,A,,]4 |]
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/abcjs@6.5.2/dist/abcjs-basic-min.js"></script>
+<script>
+(function () {
+  "use strict";
+  var SOUNDFONT = "https://paulrosen.github.io/midi-js-soundfonts/abcjs/";
+  var SOUNDS = { solo: [40, 40, 41, 42], section: [48, 48, 48, 48], piano: [0, 0, 0, 0] };
+  var PART_NAMES = ["Vl. I", "Vl. II", "Vla.", "Vc."];
+  var PLAY = "M7 4l14 8-14 8z", PAUSE = "M6 4h4v16H6zM14 4h4v16h-4z";
+  var $ = function (id) { return document.getElementById(id); };
+
+  var pieces = Array.prototype.map.call(document.querySelectorAll("script.piece"), function (s) {
+    return { id: s.dataset.id, label: s.dataset.label, note: s.dataset.note || "", abc: s.textContent.replace(/^\n/, "") };
+  });
+  var current = null, visualObj = null, synthControl = null, cursorLine = null, lit = [];
+  var partsOn = [true, true, true, true];
+  var state = "stopped";       // stopped | loading | playing | paused
+  var audioStale = true;       // tune must be (re)loaded into the synth before playing
+  var totalSeconds = 0, dragging = false, lastTop = null, fetched = {}, nextTimer = null;
+
+  function field(abc, key) {
+    var out = [], re = new RegExp("^" + key + ":\\s*(.*)$", "gm"), m;
+    while ((m = re.exec(abc))) out.push(m[1].trim());
+    return out;
+  }
+  function fmt(s) { s = Math.max(0, Math.round(s)); return Math.floor(s / 60) + ":" + ("0" + (s % 60)).slice(-2); }
+  function setStatus(t) { $("status").textContent = t; }
+  function setState(s) {
+    state = s;
+    var b = $("play");
+    b.dataset.state = s;
+    b.setAttribute("aria-label", s === "playing" ? "Pause" : "Play");
+    $("playIcon").setAttribute("d", s === "playing" ? PAUSE : PLAY);
+  }
+
+  /* ---------- engraving ---------- */
+  // Two abcjs quirks around a key change inside a piece: an inline [K:...] forgets the
+  // voice's clef, and every source line after it redraws the key signature. So from the
+  // first key change on, rebuild the body as one long line per voice per key section and
+  // put the clef back into each [K:...]. Only the copy that is engraved is changed.
+  function normalizeKeyChanges(abc) {
+    var lines = abc.split("\n"), clefs = {}, head = [], text = {}, order = [], started = false;
+    lines.forEach(function (l) { var m = /^V:\s*(\S+).*clef=(\w+)/.exec(l); if (m) clefs[m[1]] = m[2]; });
+    lines.forEach(function (l) {
+      var m = /^\[V:\s*(\S+)\]\s*(.*)$/.exec(l);
+      if (!started && m && m[2].indexOf("[K:") >= 0) started = true;
+      if (!started) { head.push(l); return; }
+      if (!m) return;                                  // comments and blank lines inside are dropped
+      if (!(m[1] in text)) { text[m[1]] = ""; order.push(m[1]); }
+      text[m[1]] += (text[m[1]] ? " " : "") + m[2];
+    });
+    if (!started) return abc;
+    var parts = order.map(function (v) { return text[v].split(/(?=\[K:)/); });
+    var n = parts[0].length;
+    if (parts.some(function (p) { return p.length !== n; })) return abc;   // voices disagree: leave it alone
+    for (var i = 0; i < n; i++) order.forEach(function (v, k) {
+      var seg = parts[k][i].replace(/^\[K:([^\]]*)\]/, function (tag, key) {
+        return /clef=/.test(key) || !clefs[v] ? tag : "[K:" + key + " clef=" + clefs[v] + "]";
+      });
+      if (seg.trim()) head.push("[V:" + v + "] " + seg);
+    });
+    return head.join("\n") + "\n";
+  }
+
+  function engrave() {
+    var abc = $("abc").value;
+    var titles = field(abc, "T");
+    $("title").textContent = titles[0] || "Untitled";
+    $("movement").textContent = titles.slice(1).join(" \u2014 ");
+    $("composer").textContent = field(abc, "C")[0] || "";
+    // The cover shows title and composer, so keep them off the sheet. Blank them
+    // in place (same length) so character positions still match the textarea.
+    var body = normalizeKeyChanges(abc).replace(/^([TC]):.*$/gm, function (line, k) { return k === "T" ? "T:" + Array(line.length - 1).join(" ") : "%" + Array(line.length).join(" "); });
+    var w = Math.max($("sheet").clientWidth - 24, 520);
+    var out = ABCJS.renderAbc("paper", body, {
+      responsive: "resize", add_classes: true, staffwidth: w,
+      wrap: { minSpacing: 2.0, maxSpacing: 2.8, preferredMeasuresPerLine: w > 900 ? 5 : w > 640 ? 4 : 3 },
+      paddingtop: 0, paddingbottom: 10, paddingleft: 6, paddingright: 6,
+      foregroundColor: "#17232b", selectionColor: "#17232b",
+      clickListener: onNoteClick,
+      format: { vocalfont: "Old Standard TT 13", annotationfont: "Old Standard TT italic 13", tempofont: "Old Standard TT bold 14", voicefont: "Old Standard TT italic 13", measurefont: "Old Standard TT italic 11", partsfont: "Old Standard TT bold 15" }
+    });
+    visualObj = out[0];
+    if (visualObj) overridePrograms(visualObj);
+    var warnings = (visualObj && visualObj.warnings) || [];
+    $("warn").textContent = warnings.length ? "Notation problems:\n" + warnings.map(function (x) { return x.replace(/<[^>]+>/g, ""); }).join("\n") : "";
+    var svg = document.querySelector("#paper svg");
+    cursorLine = null; lit = []; lastTop = null;
+    if (svg) {
+      cursorLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      cursorLine.setAttribute("class", "abcjs-cursor");
+      svg.appendChild(cursorLine);
+    }
+    audioStale = true;
+  }
+
+  /* ---------- playback ---------- */
+  var cursorControl = {
+    onStart: function () { },
+    onBeat: function (beat, totalBeats, totalMs) {
+      totalSeconds = totalMs / 1000;
+      if (!dragging && totalBeats) $("seek").value = Math.round(1000 * beat / totalBeats);
+      $("clock").textContent = fmt(totalSeconds * beat / (totalBeats || 1)) + " / " + fmt(totalSeconds);
+    },
+    onEvent: function (ev) {
+      if (!ev || (ev.measureStart && ev.left === null)) return;
+      lit.forEach(function (el) { el.classList.remove("on"); });
+      lit = [];
+      (ev.elements || []).forEach(function (group) { Array.prototype.forEach.call(group, function (el) { el.classList.add("on"); lit.push(el); }); });
+      if (cursorLine) {
+        cursorLine.setAttribute("x1", ev.left - 3); cursorLine.setAttribute("x2", ev.left - 3);
+        cursorLine.setAttribute("y1", ev.top); cursorLine.setAttribute("y2", ev.top + ev.height);
+        if (ev.top !== lastTop) { lastTop = ev.top; follow(); }
+      }
+      if (ev.measureNumber != null && state === "playing") setStatus("Bar " + (ev.measureNumber + 1));
+    },
+    onFinished: function () {
+      lit.forEach(function (el) { el.classList.remove("on"); }); lit = [];
+      if (cursorLine) { cursorLine.setAttribute("y1", 0); cursorLine.setAttribute("y2", 0); }
+      var wasPlaying = state === "playing";
+      setState("stopped"); setStatus("Fine."); $("seek").value = 0;
+      $("clock").textContent = fmt(0) + " / " + fmt(totalSeconds);
+      // After a movement ends by itself, go on to the next one after a short pause.
+      var i = pieces.indexOf(current);
+      if (wasPlaying && $("attacca").checked && i >= 0 && i < pieces.length - 1) {
+        setStatus("Next: " + pieces[i + 1].label);
+        clearTimeout(nextTimer);
+        nextTimer = setTimeout(function () { if (state === "stopped" && current === pieces[i]) { openPiece(pieces[i + 1]); togglePlay(); } }, 2500);
+      }
+    }
+  };
+  function follow() {
+    var sheet = $("sheet"), r = cursorLine.getBoundingClientRect(), s = sheet.getBoundingClientRect();
+    var target = sheet.scrollTop + (r.top - s.top) - 24;
+    if (Math.abs(target - sheet.scrollTop) > 8) sheet.scrollTo({ top: Math.max(0, target) });
+  }
+  function audioParams() {
+    var off = [];
+    partsOn.forEach(function (on, i) { if (!on) off.push(i); });
+    // Measured: at the default level (about 0.4) loud unison passages peak near 2.0 and clip; 0.19 keeps the peak just under 1.
+    // pan spreads the quartet across the stage: first violin left, cello right.
+    return { soundFontUrl: SOUNDFONT, voicesOff: off.length ? off : false, soundFontVolumeMultiplier: 0.19, pan: [-0.6, -0.2, 0.25, 0.6] };
+  }
+  // Set each part's instrument where abcjs builds the sequence, before it decides which
+  // soundfont samples to load. (A sequenceCallback runs after loading, and there the
+  // instrument is a name, so overriding it there gave silence.)
+  function overridePrograms(vo) {
+    var build = vo.setUpAudio;
+    vo.setUpAudio = function (options) {
+      var seq = build.call(this, options);
+      var programs = SOUNDS[$("sound").value] || SOUNDS.solo;
+      var secPerWhole = 240 / (seq.tempo || 120);
+      seq.tracks.forEach(function (track, i) {
+        var p = programs[Math.min(i, programs.length - 1)];
+        track.forEach(function (e) {
+          if (e.cmd === "program" || e.cmd === "note") e.instrument = p;
+          // The bowed samples swell slowly (measured: 6 to 9 dB under full level 0.2 s in), so
+          // short notes come out much softer than long ones. Lift them: up to +6 dB for the
+          // shortest, nothing for notes of about a second or more. Piano needs none.
+          if (e.cmd === "note" && p !== 0) {
+            var d = e.duration * secPerWhole;
+            var lift = d >= 0.9 ? 0 : d <= 0.15 ? 6 : 6 * (0.9 - d) / 0.75;
+            e.volume = Math.round(e.volume * Math.pow(10, lift / 20));
+          }
+        });
+      });
+      return seq;
+    };
+  }
+  function ensureSynth() {
+    if (synthControl) return;
+    synthControl = new ABCJS.synth.SynthController();
+    synthControl.load("#synthHost", cursorControl, { displayPlay: true, displayProgress: true, displayWarp: true, displayRestart: true });
+  }
+  // abcjs downloads one mp3 per note and remembers a failed download for the life of the
+  // page, so a single network hiccup would silence the piece until a reload. Fetch the
+  // samples first, a few at a time and with retries; abcjs then finds them in the HTTP cache.
+  function sampleUrls() {
+    var seen = {}, urls = [];
+    visualObj.setUpAudio(audioParams()).tracks.forEach(function (track) {
+      track.forEach(function (e) {
+        if (e.cmd !== "note") return;
+        var inst = typeof e.instrument === "number" ? ABCJS.synth.instrumentIndexToName[e.instrument] : e.instrument;
+        var url = SOUNDFONT + inst + "-mp3/" + ABCJS.synth.pitchToNoteName[e.pitch] + ".mp3";
+        if (!seen[url]) { seen[url] = true; urls.push(url); }
+      });
+    });
+    return urls;
+  }
+  function fetchSample(url, attempt) {
+    return fetch(url).then(function (r) { if (!r.ok) throw new Error("Can't load sound at " + url + " status=" + r.status); return r.arrayBuffer(); })
+      .catch(function (err) {
+        if (attempt >= 4) throw err;
+        return new Promise(function (r) { setTimeout(r, 400 * attempt); }).then(function () { return fetchSample(url, attempt + 1); });
+      });
+  }
+  function prefetchSamples() {
+    var urls = sampleUrls().filter(function (u) { return !fetched[u]; }), done = 0, next = 0;
+    if (!urls.length) return Promise.resolve();
+    function worker() {
+      if (next >= urls.length) return Promise.resolve();
+      var url = urls[next++];
+      return fetchSample(url, 1).then(function () {
+        fetched[url] = true; done++;
+        setStatus("Loading the instruments\u2026 " + done + " of " + urls.length + " notes");
+        return worker();
+      });
+    }
+    return Promise.all([0, 1, 2, 3, 4, 5].map(worker));
+  }
+  function loadAudio() {
+    ensureSynth();
+    setState("loading"); setStatus("Loading the instruments\u2026");
+    return prefetchSamples().then(function () {
+      setStatus("Preparing the sound\u2026");
+      return synthControl.setTune(visualObj, true, audioParams());
+    }).then(function () {
+      audioStale = false;
+      var warp = +$("tempo").value;
+      return warp === 100 ? null : synthControl.setWarp(warp);
+    }).then(normalize);
+  }
+  // abcjs renders the whole piece into one buffer and has no limiter, so loud tutti can run
+  // past full scale and distort. Scale the finished buffer so that its peak sits at 0.9.
+  function normalize() {
+    var b = synthControl && synthControl.midiBuffer && synthControl.midiBuffer.audioBuffers && synthControl.midiBuffer.audioBuffers[0];
+    if (!b) return;
+    var peak = 0, c, d, i;
+    for (c = 0; c < b.numberOfChannels; c++) { d = b.getChannelData(c); for (i = 0; i < d.length; i++) { var a = d[i] < 0 ? -d[i] : d[i]; if (a > peak) peak = a; } }
+    if (!peak) return;
+    var g = 0.9 / peak;
+    for (c = 0; c < b.numberOfChannels; c++) { d = b.getChannelData(c); for (i = 0; i < d.length; i++) d[i] *= g; }
+  }
+  function fail(err) {
+    setState("stopped");
+    setStatus("Could not start the sound: " + (err && err.message ? err.message : err));
+    if (window.console) console.error(err);
+  }
+  function togglePlay() {
+    if (!ABCJS.synth.supportsAudio()) { setStatus("This browser has no Web Audio, so the score is silent here."); return; }
+    if (state === "loading") return;
+    // SynthController.play() is a toggle: it pauses when started. Its pause() does not clear
+    // the started flag, so pausing with pause() made the next play() pause again.
+    if (state === "playing") { setState("paused"); setStatus("Paused."); synthControl.play().catch(fail); return; }
+    var go = function () { return Promise.resolve(synthControl.play()).then(function () { setState("playing"); }); };
+    (audioStale ? loadAudio().then(go) : go()).catch(fail);
+  }
+  function stopForChange() {
+    // Anything that changes the sound needs the audio rebuilt on the next play.
+    audioStale = true;
+    if (synthControl && (state === "playing" || state === "paused")) { try { synthControl.pause(); synthControl.restart(); synthControl.pause(); } catch (e) { } }
+    if (state !== "stopped") setStatus("Changed. Press play to hear it.");
+    setState("stopped"); $("seek").value = 0;
+  }
+  function seekTo(fraction) {
+    if (!synthControl || audioStale) return;
+    fraction = Math.min(0.999, Math.max(0, fraction));
+    if (state !== "playing") { synthControl.seek(fraction); return; }
+    // abcjs's seek while sound runs leaves its start time stale, so a later pause/resume
+    // would jump back. Pause (play() toggles), seek, resume.
+    synthControl.play().then(function () { synthControl.seek(fraction); return synthControl.play(); }).catch(fail);
+  }
+  function onNoteClick(abcElem) {
+    if (audioStale || !totalSeconds || !abcElem || abcElem.currentTrackMilliseconds == null) return;
+    var ms = abcElem.currentTrackMilliseconds;
+    if (Array.isArray(ms)) ms = ms[0];
+    seekTo(ms / (totalSeconds * 1000));
+  }
+
+  /* ---------- library ---------- */
+  function openPiece(p) {
+    if (state !== "stopped") stopForChange();
+    current = p;
+    $("abc").value = p.abc;
+    $("note").textContent = p.note;
+    Array.prototype.forEach.call($("contents").children, function (li) {
+      li.firstChild.setAttribute("aria-current", li.firstChild.dataset.id === p.id ? "true" : "false");
+    });
+    engrave();
+    $("sheet").scrollTop = 0;
+    $("clock").textContent = "0:00 / 0:00";
+    setStatus("Press play. The samples take a few seconds to load.");
+  }
+  function download(name, blob) {
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+
+  /* ---------- wiring ---------- */
+  if (pieces.length > 1) pieces.forEach(function (p) {
+    var li = document.createElement("li"), b = document.createElement("button");
+    b.textContent = p.label; b.dataset.id = p.id;
+    b.addEventListener("click", function () { openPiece(p); });
+    li.appendChild(b); $("contents").appendChild(li);
+  });
+  PART_NAMES.forEach(function (name, i) {
+    var b = document.createElement("button");
+    b.textContent = name; b.setAttribute("aria-pressed", "true"); b.title = "Mute or unmute " + name;
+    b.addEventListener("click", function () {
+      partsOn[i] = !partsOn[i]; b.setAttribute("aria-pressed", String(partsOn[i])); stopForChange();
+    });
+    $("parts").appendChild(b);
+  });
+  $("play").addEventListener("click", togglePlay);
+  $("sound").addEventListener("change", stopForChange);
+  $("tempo").addEventListener("input", function () { $("tempoOut").textContent = this.value + "%"; });
+  $("tempo").addEventListener("change", function () {
+    if (!synthControl || audioStale || state === "loading") return;  // a change made while loading is picked up below
+    var was = state;
+    setState("loading"); setStatus("Changing the tempo\u2026");
+    var warp = +this.value;
+    // Change tempo while paused (setWarp's own resume-and-seek has the stale-start-time
+    // problem described in seekTo), then resume ourselves.
+    (was === "playing" ? synthControl.play() : Promise.resolve()).then(function () {
+      return synthControl.setWarp(warp);
+    }).then(normalize).then(function () {
+      return was === "playing" ? synthControl.play() : null;
+    }).then(function () {
+      setState(was); setStatus(was === "playing" ? "" : "Tempo set. Press play.");
+      if (+$("tempo").value !== warp) $("tempo").dispatchEvent(new Event("change"));
+    }).catch(fail);
+  });
+  $("seek").addEventListener("input", function () { dragging = true; });
+  $("seek").addEventListener("change", function () { dragging = false; seekTo(this.value / 1000); });
+  var typing = null;
+  $("abc").addEventListener("input", function () {
+    clearTimeout(typing);
+    typing = setTimeout(function () { if (state !== "stopped") stopForChange(); engrave(); }, 400);
+  });
+  $("reset").addEventListener("click", function () { if (current) openPiece(current); });
+  $("dlAbc").addEventListener("click", function () { download((current ? current.id : "score") + ".abc", new Blob([$("abc").value], { type: "text/plain" })); });
+  $("dlMidi").addEventListener("click", function () {
+    var midi = ABCJS.synth.getMidiFile($("abc").value, { midiOutputType: "binary" });
+    download((current ? current.id : "score") + ".mid", new Blob([midi[0]], { type: "audio/midi" }));
+  });
+  var resizing = null, lastW = 0;
+  new ResizeObserver(function () {
+    var w = $("sheet").clientWidth;
+    if (Math.abs(w - lastW) < 40) return;
+    lastW = w; clearTimeout(resizing);
+    resizing = setTimeout(function () { if (state === "stopped" && current) engrave(); }, 250);
+  }).observe($("sheet"));
+
+  window.quartetDesk = { state: function () { return state; }, synth: function () { return synthControl; } };
+  if (pieces.length) { lastW = $("sheet").clientWidth; openPiece(pieces[0]); }
+})();
+</script>
+</body>
+</html>

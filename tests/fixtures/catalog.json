@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "title": "Missing Works TEST FIXTURES — not catalogue works",
+  "eras": [{ "id": "test", "label": "Test", "description": "Player test fixtures only." }],
+  "composers": [{ "id": "test-fixture", "name": "Test Fixture", "shortName": "Test Fixture", "years": "", "eraId": "test" }],
+  "forms": [{ "id": "symphony", "label": "Symphony", "description": "Fixture" }],
+  "works": [
+    { "id": "fixture-one", "composerId": "test-fixture", "formId": "symphony", "title": "Fixture: one part", "subtitle": "Test only", "description": "Player test fixture.", "status": "completed",
+      "movements": [{ "id": "i", "label": "Single flute line", "source": "tests/fixtures/one-part.abc", "durationSeconds": 7 }] },
+    { "id": "fixture-two", "composerId": "test-fixture", "formId": "symphony", "title": "Fixture: two parts", "status": "completed",
+      "movements": [{ "id": "i", "label": "Violin and piano", "source": "tests/fixtures/two-part.abc", "durationSeconds": 3 }] },
+    { "id": "fixture-three", "composerId": "test-fixture", "formId": "symphony", "title": "Fixture: three parts", "status": "completed",
+      "movements": [{ "id": "i", "label": "Clarinet and two piano voices", "source": "tests/fixtures/three-part.abc", "durationSeconds": 3 }] },
+    { "id": "fixture-multi", "composerId": "test-fixture", "formId": "symphony", "title": "Fixture: movements", "status": "completed",
+      "movements": [
+        { "id": "a", "label": "A. Six parts", "source": "tests/fixtures/six-part.abc", "durationSeconds": 6 },
+        { "id": "b", "label": "B. Two parts", "source": "tests/fixtures/two-part.abc", "durationSeconds": 3 },
+        { "id": "c", "label": "C. Missing file", "source": "tests/fixtures/does-not-exist.abc" }
+      ] },
+    { "id": "fixture-bad-path", "composerId": "test-fixture", "formId": "symphony", "title": "Fixture: unsafe path", "status": "completed",
+      "movements": [{ "id": "i", "label": "Traversal", "source": "../../etc/passwd.abc" }] }
+  ]
+}

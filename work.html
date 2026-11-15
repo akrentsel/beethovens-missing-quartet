@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="assets/legacy-host.js"></script>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Listen — Missing Works</title>
+<meta name="description" content="Follow the score and listen to an AI-composed homage from Missing Works.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/library.css">
+<link rel="stylesheet" href="assets/player.css">
+</head>
+<body class="pl-body">
+<a class="skip" href="#pl-transport">Skip to the player</a>
+<header class="site-header">
+  <a class="wordmark" href="index.html" aria-label="Missing Works home">Missing Works<span class="brand-rule" aria-hidden="true"></span></a>
+  <nav aria-label="Main navigation"><a href="index.html#browse">Composers</a><a href="index.html#works" aria-current="page">Listen</a><a href="index.html#queue">The next work</a></nav>
+</header>
+
+<main id="main" class="pl-main" data-mw-player>
+  <p class="loading" id="pl-loading">Loading the catalogue…</p>
+
+  <section class="pl-missing" id="pl-missing" hidden aria-labelledby="pl-missing-title">
+    <h1 id="pl-missing-title">We could not find that work</h1>
+    <p id="pl-missing-detail"></p>
+    <div id="pl-missing-list" hidden>
+      <h2>Completed works</h2>
+      <ul id="pl-missing-works"></ul>
+    </div>
+    <p><a class="button-link" href="index.html">Browse the library</a></p>
+  </section>
+
+  <div id="pl-app" hidden>
+    <nav class="breadcrumb pl-crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Missing Works</a> <span aria-hidden="true">/</span>
+      <a id="pl-crumb-composer" href="index.html">Composer</a> <span aria-hidden="true">/</span>
+      <span id="pl-crumb-work" aria-current="page"></span>
+    </nav>
+
+    <div class="pl-layout">
+      <header class="pl-head">
+        <p class="pl-kicker" id="pl-kicker"></p>
+        <h1 id="pl-title"></h1>
+        <p class="pl-subtitle" id="pl-subtitle"></p>
+        <p class="pl-disclaimer" role="note"><strong>AI-composed homage</strong>, not an original or rediscovered work<span id="pl-disclaimer-who"></span>. No composer endorsement. Sampled playback, not live performers.</p>
+      </header>
+
+      <nav class="pl-side" aria-labelledby="pl-movements-h">
+        <h2 class="pl-h2" id="pl-movements-h">Movements</h2>
+        <ol class="pl-movements" id="pl-movements"></ol>
+      </nav>
+
+      <div class="pl-about">
+        <p class="pl-description" id="pl-description"></p>
+        <p class="pl-links" id="pl-links">
+          <a id="pl-notebook" href="#" hidden>Composition notebook</a>
+          <a id="pl-transcript" href="#" hidden>Conversation transcript</a>
+          <a id="pl-legacy" href="#" hidden>Original single-page player</a>
+        </p>
+      </div>
+
+      <section class="pl-stage" aria-label="Score and playback">
+        <div class="pl-now">
+          <h2 class="pl-movement" id="pl-movement"></h2>
+          <p class="pl-movement-note" id="pl-movement-note"></p>
+        </div>
+
+        <div class="pl-transport" id="pl-transport" role="group" aria-label="Playback controls" tabindex="-1">
+          <button class="pl-play" id="pl-play" type="button" data-state="idle" aria-label="Play" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path id="pl-play-icon" d="M7 4l14 8-14 8z"/></svg>
+            <span id="pl-play-text" aria-hidden="true">Play</span>
+          </button>
+          <div class="pl-seek">
+            <div class="pl-seek-top">
+              <span class="pl-status" id="pl-status" role="status" aria-live="polite"></span>
+              <span class="pl-clock" id="pl-clock">0:00 / 0:00</span>
+            </div>
+            <input type="range" id="pl-seek" min="0" max="1000" value="0" aria-label="Position in movement">
+          </div>
+          <div class="pl-options">
+            <label class="pl-tempo">Tempo <input type="range" id="pl-tempo" min="50" max="130" step="5" value="100"><output id="pl-tempo-out" for="pl-tempo">100%</output></label>
+            <label class="pl-sound">Sound
+              <select id="pl-sound">
+                <option value="score" selected>Score instruments</option>
+                <option value="piano">Piano reduction</option>
+              </select>
+            </label>
+            <label class="pl-attacca" id="pl-attacca-wrap"><input type="checkbox" id="pl-attacca" checked> Continue to the next movement</label>
+          </div>
+          <div class="pl-parts-row" id="pl-parts-wrap" hidden>
+            <span class="pl-parts-label">Parts <span class="pl-parts-count" id="pl-parts-count"></span></span>
+            <span class="pl-parts" id="pl-parts" role="group" aria-label="Mute or unmute parts"></span>
+          </div>
+        </div>
+
+        <div class="status-note error pl-error" id="pl-error" role="alert" hidden>
+          <span id="pl-error-text"></span>
+          <button type="button" class="secondary-button" id="pl-retry" hidden>Try again</button>
+        </div>
+
+        <div class="pl-sheet" id="pl-sheet" tabindex="0" aria-label="Score. Click a note to start from there."><div id="pl-paper"></div></div>
+        <div class="pl-warn" id="pl-warn"></div>
+        <div id="pl-synth-host" hidden></div>
+
+        <details class="pl-source">
+          <summary>Source in ABC notation (editable)</summary>
+          <p>This is the whole movement as text. Edit it and the score re-engraves; press play to hear the change. Your edits stay in this tab only. <span id="pl-edited" hidden>(edited)</span></p>
+          <textarea id="pl-abc" spellcheck="false" aria-label="ABC source"></textarea>
+          <div class="pl-source-actions">
+            <button type="button" class="secondary-button" id="pl-dl-abc">Download .abc</button>
+            <button type="button" class="secondary-button" id="pl-dl-midi">Download MIDI</button>
+            <button type="button" class="text-button" id="pl-reset">Undo my edits</button>
+          </div>
+        </details>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div><a class="footer-brand" href="index.html">Missing Works</a><p>New music inspired by composers we admire.<br>AI-composed homages, not rediscovered originals or endorsements.</p></div>
+  <div><a href="index.html">Back to the library</a></div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/abcjs@6.5.2/dist/abcjs-basic-min.js"></script>
+<script src="assets/player.js"></script>
+</body>
+</html>

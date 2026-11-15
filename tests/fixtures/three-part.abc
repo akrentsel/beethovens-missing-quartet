@@ -1,0 +1,21 @@
+% TEST FIXTURE — not a catalogue work. Two voices share the piano staff.
+X:1
+T:Fixture: three parts
+C:Test fixture
+M:4/4
+L:1/8
+Q:1/4=160
+%%score Cl | (Up Down)
+V:Cl clef=treble name="Clarinet"
+V:Up clef=treble name="Piano"
+V:Down clef=treble
+K:F
+V:Cl
+%%MIDI program 71
+c2f2 a2g2 | f8 |
+V:Up
+%%MIDI program 0
+A4 c4 | A8 |
+V:Down
+%%MIDI program 0
+F4 E4 | F8 |
