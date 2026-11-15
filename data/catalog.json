@@ -349,6 +349,50 @@
           "durationSeconds": 225
         }
       ]
+    },
+    {
+      "id": "bach-violin-sonata-1",
+      "composerId": "bach",
+      "formId": "violin-sonata",
+      "round": 1,
+      "title": "Bach’s Missing Violin Sonata",
+      "subtitle": "Sonata in E minor for violin and keyboard",
+      "description": "Four movements, slow–fast–slow–fast, grown from one rising motto (B–E–F♯–G): a new AI-composed homage to Bach’s sonatas for violin and obbligato keyboard, not a rediscovered work by Bach.",
+      "durationSeconds": 578,
+      "date": "2026-11-15",
+      "status": "completed",
+      "notebook": "bach-violin-sonata-1-notebook.html",
+      "transcript": "bach-violin-sonata-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Adagio",
+          "note": "A two-bar subject passes from violin to right hand to bass; a chromatic lament bass before the return.",
+          "source": "scores/bach-violin-sonata-1-i.abc",
+          "durationSeconds": 126
+        },
+        {
+          "id": "ii",
+          "label": "II. Allegro",
+          "note": "A three-voice fugue in da capo form, with a stretto before the close.",
+          "source": "scores/bach-violin-sonata-1-ii.abc",
+          "durationSeconds": 153
+        },
+        {
+          "id": "iii",
+          "label": "III. Andante un poco",
+          "note": "G major. A canon at the octave between violin and right hand over a detached bass.",
+          "source": "scores/bach-violin-sonata-1-iii.abc",
+          "durationSeconds": 187
+        },
+        {
+          "id": "iv",
+          "label": "IV. Allegro",
+          "note": "A fugal gigue; the subject returns upside down after the double bar.",
+          "source": "scores/bach-violin-sonata-1-iv.abc",
+          "durationSeconds": 112
+        }
+      ]
     }
   ]
 }

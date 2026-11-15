@@ -18,3 +18,10 @@ scores/01-dminor-i.abc
 scores/02-dminor-ii.abc
 scores/03-dminor-iii.abc
 scores/04-dminor-iv.abc
+bach-violin-sonata-1-notebook.html
+bach-violin-sonata-1-transcript.html
+bach-violin-sonata-1-transcript.json
+scores/bach-violin-sonata-1-i.abc
+scores/bach-violin-sonata-1-ii.abc
+scores/bach-violin-sonata-1-iii.abc
+scores/bach-violin-sonata-1-iv.abc

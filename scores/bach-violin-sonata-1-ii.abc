@@ -1,0 +1,107 @@
+%%label II. Allegro
+%%note A three-voice fugue in E minor in da capo form. The subject is answered by the right hand and taken by the bass, with a stretto before the close; the middle section visits G, D, A minor and B minor before the opening returns.
+X:1
+T:Bach’s Missing Violin Sonata
+T:II. Allegro
+C:Lor, in the manner of J. S. Bach
+M:4/4
+L:1/16
+Q:"Allegro" 1/4=80
+%%score 1 {2 3}
+% Dynamics are balance marks for the site's sampled playback: its violin sample is about 12 dB louder than its piano sample, so the violin is marked several levels below the keyboard. These marks are a playback compromise, not dynamics for live players.
+V:1 clef=treble name="Violin"
+V:2 clef=treble name="Kbd. r.h."
+V:3 clef=bass name="Kbd. l.h."
+K:Em
+V:1
+%%MIDI program 40
+V:2
+%%MIDI program 0
+V:3
+%%MIDI program 0
+% bars 1-2: subject in the violin, bass accompaniment
+[V:1] !pp!z2B2 e2f2 g2e2 c'2^d2 | e2ba g2fe ^d2ef B2z2 |
+[V:2] z16 | z16 |
+[V:3] !f!E,2G,2 E,2^D,2 E,2G,2 A,2B,2 | E,2G,2 C,2A,,2 B,,2A,,2 G,,2B,,2 |
+% bars 3-4: tonal answer in the right hand, countersubject in the violin
+[V:1] efg2 fde2 fed2 ed^c2 | d^cd2 BAG2 FEF2 Bdf2 |
+[V:2] !f!z2E2 B2^c2 d2B2 g2^A2 | B2fe d2^cB ^A2Bc F2z2 |
+[V:3] E,2G,2 B,,2^A,,2 B,,2G,,2 E,2F,2 | B,,2D,2 G,,2E,,2 F,,2E,,2 D,,2D,2 |
+% bar 5: link back to E minor
+[V:1] g2fe c'2ba b2ag f2^d2 |
+[V:2] BAB2 edc2 B^c^d2 AFA2 |
+[V:3] G,,2G,2 A,,2F,,2 B,,2B,2 B,,2z2 |
+% bars 6-7: subject in the bass, countersubject in the right hand, a slower line in the violin
+[V:1] e2^d2 e4- e2b2 c'4 | b4- b2a2 a2g2 f2z2 |
+[V:2] GAB2 BGA2 BAG2 AGF2 | GFG2 EDC2 B,A,B,2 ^DFB2 |
+[V:3] z2B,,2 E,2F,2 G,2E,2 C2^D,2 | E,2B,A, G,2F,E, ^D,2E,F, B,,2z2 |
+% bars 8-11: first episode. The subject's first notes pass between violin and right hand over a running bass
+[V:1] e2B2 e2f2 g8 | f2A2 d2e2 f8 | e2G2 c2d2 e8 | ^d2fa c'2ba f2ag fedf |
+[V:2] G2B2 G4 c2E2 A2B2 | c8 B2D2 G2A2 | B8 A2c2 B2A2 | FAB2 AF^D2 FAB2 A2z2 |
+[V:3] E,B,G,F, E,D,C,B,, A,,E,C,B,, A,,B,,C,A,, | D,A,F,E, D,C,B,,A,, G,,D,B,,A,, G,,A,,B,,D, | C,G,E,D, C,B,,A,,G,, F,,C,A,,G,, F,,E,,F,,A,, | B,,F,^D,F, B,,D,B,,F,, B,,D,F,D, B,,2B,,2 |
+% bars 12-14: stretto. Right hand, then the violin in its lowest register, then the bass
+[V:1] e4 z4 z2B,2 E2F2 | G2E2 c2^D2 E2F2 G2c2 | B2e4B2 b4- b2a2 |
+[V:2] z2B2 e2f2 g2e2 c'2^d2 | e2ba g2fe gab2 bga2 | bag2 agf2 gfg2 edc2 |
+[V:3] E,2G,2 E,2^D,2 E,2G,2 C,2B,,2 | E,2G,2 E,2B,,2 z2B,,2 E,2F,2 | G,2E,2 C2^D,2 E,2B,A, G,2F,E, |
+% bars 15-17: the subject's head over a dominant pedal, interrupted cadence, close
+[V:1] a2g2 z2B2 e2f2 g2e2 | c'2^d2 e2c'b a4 !trill!f3e | e12 z4 ||
+[V:2] BAB2 GAB2 BGA2 BAG2 | AGF2 E2G2 c2e2- e2^d2 | [GBe]12 z4 ||
+[V:3] ^D,2E,F, B,,2B,2 B,,2B,2 B,,2B,2 | B,,2B,2 C,2E,2 A,,2F,,2 B,,4 | [E,,E,]12 z4 ||
+% ---- middle section ----
+% bars 18-19: subject in G major in the violin, countersubject in the right hand
+[V:1] !ppp!z2d2 g2a2 b2g2 e'2f2 | g2d'c' b2ag f2ga d2z2 |
+[V:2] !mf!GAB2 dBc2 dcB2 cBA2 | BAB2 GFE2 DCD2 BGd2 |
+[V:3] !mf!G,,2B,,2 G,,2F,,2 G,,2G,2 C,2D,2 | G,,2B,,2 E,2C,2 D,2C,2 B,,2D,2 |
+% bars 20-21: subject in D major in the right hand, countersubject in the violin
+[V:1] def2 afg2 agf2 gfe2 | fef2 d^cB2 AGA2 dfa2 |
+[V:2] z2A2 d2e2 f2d2 b2^c2 | d2ag f2ed ^c2de A2z2 |
+[V:3] B,,2F,,2 D,2^C,2 D,2B,,2 G,,2A,,2 | D,2F,2 B,,2G,,2 A,,2G,,2 F,,2F,2 |
+% bars 22-24: second episode. Descending runs answer each other round the circle of fifths
+[V:1] d'2c'b a2gf g2z2 z4 | c'2ba g2fe f2z2 z4 | b2ag f2e^d e2z2 z4 |
+[V:2] z8 g2fe d2cB | c2z2 z4 f2ed c2BA | B2z2 z4 e2dc B2A^G |
+[V:3] D,2F,2 D,2A,,2 G,,2B,,2 G,,2D,2 | C,2E,2 C,2G,,2 F,,2A,,2 F,,2C,2 | B,,2F,2 B,,2F,,2 E,2B,,2 E,2B,,2 |
+% bars 25-26: subject in A minor in the bass
+[V:1] cde2 ecd2 edc2 dcB2 | cBc2 AG=F2 EDE2 ^GBe2 |
+[V:2] A2^G2 A4- A2e2 =f4 | e4- e2d2- d2c2 B2z2 |
+[V:3] !f!z2E,,2 A,,2B,,2 C,2A,,2 =F,2^G,,2 | A,,2E,D, C,2B,,A,, ^G,,2A,,B,, E,,2z2 |
+% bars 27-29: third episode. The first episode's material with the upper voices exchanged, turning to B minor
+[V:1] c2E2 A2B2 c8 | B2D2 G2A2 B8 | ^A2^ce g2fe c2ed cBAc |
+[V:2] A8 f2A2 d2e2 | f8 e2g2 e2^c2 | ^cef2 ec^A2 cef2 e2z2 |
+[V:3] A,,E,C,B,, A,,B,,C,A,, D,A,F,E, D,C,B,,A,, | G,,D,B,,A,, G,,A,,B,,D, ^C,G,E,D, C,B,,C,G,, | F,,^C,^A,,C, F,,A,,F,,^C,, F,,A,,C,A,, F,,2F,,2 |
+% bars 30-31: subject in B minor in the violin, countersubject above it in the right hand
+[V:1] !pp!z2F2 B2^c2 d2B2 g2^A2 | B2fe d2^cB ^A2Bc F2z2 |
+[V:2] !f!d^cd2 fde2 fed2 edc2 | d^cd2 BAG2 FEF2 Bdf2 |
+[V:3] B,,2D,2 B,,2^A,,2 B,,2G,,2 E,2F,2 | B,,2D,2 G,,2E,,2 F,,2E,,2 D,,2D,2 |
+% bars 32-34: cadence in B minor; then the opening returns (da capo)
+[V:1] e2gf e2^c2 d2fe d2B2 | g2ba g2b2 d'2^c'b !trill!c'3b | b12 z4 |
+[V:2] gab2 gag2 fga2 gag2 | e2^c2 e2g2 B4 ^A4 | [FBd]12 z4 |
+[V:3] E,2E,,2 A,,2A,2 D,2B,,2 G,,2B,,2 | E,2G,2 E,2^C,2 F,4 F,,4 | B,,12 z4 |
+% ---- da capo: bars 35-51 repeat bars 1-17 ----
+% bars 1-2: subject in the violin, bass accompaniment
+[V:1] !pp!z2B2 e2f2 g2e2 c'2^d2 | e2ba g2fe ^d2ef B2z2 |
+[V:2] z16 | z16 |
+[V:3] !f!E,2G,2 E,2^D,2 E,2G,2 A,2B,2 | E,2G,2 C,2A,,2 B,,2A,,2 G,,2B,,2 |
+% bars 3-4: tonal answer in the right hand, countersubject in the violin
+[V:1] efg2 fde2 fed2 ed^c2 | d^cd2 BAG2 FEF2 Bdf2 |
+[V:2] !f!z2E2 B2^c2 d2B2 g2^A2 | B2fe d2^cB ^A2Bc F2z2 |
+[V:3] E,2G,2 B,,2^A,,2 B,,2G,,2 E,2F,2 | B,,2D,2 G,,2E,,2 F,,2E,,2 D,,2D,2 |
+% bar 5: link back to E minor
+[V:1] g2fe c'2ba b2ag f2^d2 |
+[V:2] BAB2 edc2 B^c^d2 AFA2 |
+[V:3] G,,2G,2 A,,2F,,2 B,,2B,2 B,,2z2 |
+% bars 6-7: subject in the bass, countersubject in the right hand, a slower line in the violin
+[V:1] e2^d2 e4- e2b2 c'4 | b4- b2a2 a2g2 f2z2 |
+[V:2] GAB2 BGA2 BAG2 AGF2 | GFG2 EDC2 B,A,B,2 ^DFB2 |
+[V:3] z2B,,2 E,2F,2 G,2E,2 C2^D,2 | E,2B,A, G,2F,E, ^D,2E,F, B,,2z2 |
+% bars 8-11: first episode. The subject's first notes pass between violin and right hand over a running bass
+[V:1] e2B2 e2f2 g8 | f2A2 d2e2 f8 | e2G2 c2d2 e8 | ^d2fa c'2ba f2ag fedf |
+[V:2] G2B2 G4 c2E2 A2B2 | c8 B2D2 G2A2 | B8 A2c2 B2A2 | FAB2 AF^D2 FAB2 A2z2 |
+[V:3] E,B,G,F, E,D,C,B,, A,,E,C,B,, A,,B,,C,A,, | D,A,F,E, D,C,B,,A,, G,,D,B,,A,, G,,A,,B,,D, | C,G,E,D, C,B,,A,,G,, F,,C,A,,G,, F,,E,,F,,A,, | B,,F,^D,F, B,,D,B,,F,, B,,D,F,D, B,,2B,,2 |
+% bars 12-14: stretto. Right hand, then the violin in its lowest register, then the bass
+[V:1] e4 z4 z2B,2 E2F2 | G2E2 c2^D2 E2F2 G2c2 | B2e4B2 b4- b2a2 |
+[V:2] z2B2 e2f2 g2e2 c'2^d2 | e2ba g2fe gab2 bga2 | bag2 agf2 gfg2 edc2 |
+[V:3] E,2G,2 E,2^D,2 E,2G,2 C,2B,,2 | E,2G,2 E,2B,,2 z2B,,2 E,2F,2 | G,2E,2 C2^D,2 E,2B,A, G,2F,E, |
+% bars 15-17: the subject's head over a dominant pedal, interrupted cadence, close
+[V:1] a2g2 z2B2 e2f2 g2e2 | c'2^d2 e2c'b a4 !trill!f3e | !fermata!e12 z4 |]
+[V:2] BAB2 GAB2 BGA2 BAG2 | AGF2 E2G2 c2e2- e2^d2 | !fermata![GBe]12 z4 |]
+[V:3] ^D,2E,F, B,,2B,2 B,,2B,2 B,,2B,2 | B,,2B,2 C,2E,2 A,,2F,,2 B,,4 | !fermata![E,,E,]12 z4 |]

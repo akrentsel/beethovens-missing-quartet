@@ -1,0 +1,77 @@
+%%label IV. Allegro
+%%note E minor. A fugal gigue in two repeated halves. The subject is the sonata's motto in gigue rhythm; after the double bar it returns upside down, and near the end the subject and its inversion sound together.
+X:1
+T:Bach’s Missing Violin Sonata
+T:IV. Allegro
+C:Lor, in the manner of J. S. Bach
+M:6/8
+L:1/8
+Q:"Allegro" 3/8=84
+%%score 1 {2 3}
+% Dynamics are balance marks for the site's sampled playback: its violin sample is about 12 dB louder than its piano sample, so the violin is marked several levels below the keyboard. These marks are a playback compromise, not dynamics for live players.
+V:1 clef=treble name="Violin"
+V:2 clef=treble name="Kbd. r.h."
+V:3 clef=bass name="Kbd. l.h."
+K:Em
+V:1
+%%MIDI program 40
+V:2
+%%MIDI program 0
+V:3
+%%MIDI program 0
+% bars 1-2: subject in the violin (the motto B, E, F sharp, G in gigue rhythm)
+[V:1] !pp!B |: e2f g2e | c'2b agf |
+[V:2] z |: z6 | z3 z2!ff!F |
+[V:3] z |: !ff!E,2B,, E,2G, | A,2A,, B,,3 |
+% bars 3-4: answer in B minor in the right hand, countersubject in the violin
+[V:1] g2e fgb | e'2d' ^c'2^a |
+[V:2] B2^c d2B | g2f ed^c |
+[V:3] G,3 B,,2D, | E,3 F,2F,, |
+% bars 5-6: link back to E minor
+[V:1] b2f g2b | a2c' b2a |
+[V:2] d2f e2g | c2e ^d2f |
+[V:3] B,,2D, E,2E, | A,,3 B,,2B,, |
+% bars 7-8: subject in the bass
+[V:1] g2e' d'3 | c'3 b3 |
+[V:2] g2a bag | a2g f2^d |
+[V:3] E,2F, G,2E, | C2B, A,G,F, |
+% bars 9-12: sequence round the circle of fifths, a chain of sevenths in gigue rhythm
+[V:1] !ppp!g2a g3 | f2e f3 | e2d e3 | ^d2e e3 |
+[V:2] !f!e3 c2d | c3 B2c | B3 A2B | A3 G2B |
+[V:3] !f!E,B,G, A,,E,C, | D,A,F, G,,D,B,, | C,G,E, F,,C,A,, | B,,F,^D, E,B,G, |
+% bars 13-16: cadence in B minor
+[V:1] e2g f2^a | !pp!b2f d'2b | e'2^c' !trill!c'3 |1 b3 z2B :|2 b3 z2b |:
+[V:2] ^c2e c2e | !ff!d2f B2d | g2e ^A2e |1 d3 z3 :|2 d3 z3 |:
+[V:3] E,3 F,2F,, | !ff!B,,2D, G,,2G, | E,2E, F,3 |1 B,,3 z3 :|2 B,,3 z3 |:
+% bars 17-18: the subject upside down in B minor (violin)
+[V:1] f2e d2f | ^a2b ^c'd'e' |
+[V:2] z6 | z3 z2e |
+[V:3] B,,2B,, D,2B,, | F,2F,, B,,2G,, |
+% bars 19-20: inverted answer in E minor (right hand)
+[V:1] e'2c' b2g | b2g abc' |
+[V:2] B2A G2B | ^d2e fga |
+[V:3] E,2E, E,2E, | B,,2E, ^D,E,E, |
+% bars 21-22: inverted subject in the bass
+[V:1] b6 | b3 e'3 |
+[V:2] g3 e2^d | B2G ABc |
+[V:3] B,,2A,, G,,2B,, | ^D,2E, F,G,A, |
+% bars 23-26: the chain of sevenths with the upper voices exchanged; cadence in G major
+[V:1] !ppp!b3 c'2d' | c'3 b2d' | e'2c' d'2c' | b2g d2g |
+[V:2] !f!g2a g3 | f2g f3 | e2g f2a | g2d B2G |
+[V:3] !f!G,B,E, A,,E,C, | D,A,F, G,,D,B,, | C,G,E, D,A,F, | G,,2G, G,,2G, |
+% bars 27-28: to the dominant
+[V:1] e'2g a2c' | b2a g2B |
+[V:2] g2e c2e | ^d2f e2e |
+[V:3] C,3 A,,3 | B,,3 B,,2z |
+% bars 29-30: the subject (violin) and its inversion (right hand) together
+[V:1] !pp!e2f g2e | c'2b agf |
+[V:2] !ff!B2A G2B | ^d2e fga |
+[V:3] !ff!E,2E, E,2E, | B,,2E, B,,2B,, |
+% bars 31-32: subject in the bass, countersubject in the violin
+[V:1] g2a bag | a2g f2^d |
+[V:2] g2e d3 | e3 B3 |
+[V:3] E,2F, G,2E, | C2B, A,G,F, |
+% bars 33-39: closing sequence, dominant pedal and cadence
+[V:1] e2g c'2e' | c'2a f2a | g2b e'2b | a2f ^d2f | g2e a2c' | b2g !trill!f3 |1 e3 z2b :|2 !fermata!e6 |]
+[V:2] G2B e2g | c2e A2c | B2e g2e | f2^d B2A | G2B c2e | e2e ^d3 |1 [GB]3 z3 :|2 !fermata![GBe]6 |]
+[V:3] G,2E, C,3 | A,,2C, F,,3 | B,,3 B,,3 | B,,3 B,,3 | E,2G, A,3 | B,3 B,,3 |1 E,3 z3 :|2 !fermata![E,,E,]6 |]

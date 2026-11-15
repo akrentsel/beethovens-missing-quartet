@@ -1,0 +1,63 @@
+%%label III. Andante un poco
+%%note G major. A canon at the octave between violin and right hand, one bar apart, over a detached bass; in the middle the right hand leads in E minor with the sonata's opening motto and the violin follows.
+X:1
+T:Bach’s Missing Violin Sonata
+T:III. Andante un poco
+C:Lor, in the manner of J. S. Bach
+M:3/4
+L:1/8
+Q:"Andante un poco" 1/4=54
+%%score 1 {2 3}
+% Dynamics are balance marks for the site's sampled playback: its violin sample is about 12 dB louder than its piano sample, so the violin is marked several levels below the keyboard. These marks are a playback compromise, not dynamics for live players.
+V:1 clef=treble name="Violin"
+V:2 clef=treble name="Kbd. r.h."
+V:3 clef=bass name="Kbd. l.h."
+K:G
+V:1
+%%MIDI program 40
+V:2
+%%MIDI program 0
+V:3
+%%MIDI program 0
+% bars 1-8: canon at the octave. The violin leads, the right hand follows one bar later; G major turning to D
+[V:1] !ppp!|: d2 g2 ab | d'b c'e' ag | b2 g/a/g fe | d/e/f/g/ bg ag |
+[V:2] !mf!|: z6 | D2 G2 AB | dB ce AG | B2 G/A/G FE |
+[V:3] !mf!|: G,z E,z D,z | B,,z E,z D,z | B,,z E,,z D,,z | G,,z G,,z D,,z |
+[V:1] b2 e'2 d'^c' | d'f ge ae | f2 b2 ^c'e' | d'a bf ge |
+[V:2] D/E/F/G/ BG AG | B2 e2 d^c | dF GE AE | F2 B2 ^ce |
+[V:3] G,,z E,,z A,,z | G,,z E,,z A,,z | D,z B,,z A,,z | D,,z G,,z A,,z |
+% bars 9-16: the canon continues in D major
+[V:1] !pp!A2 d2 ef | fa bd' ^c'a | d'2 g2 eg | fa bd' ^c'e' |
+[V:2] !f!dA BF GE | A,2 D2 EF | FA Bd ^cA | d2 G2 EG |
+[V:3] !f!D,z D,z A,,z | F,,z D,,z A,,z | F,,z G,,z A,,z | F,,z G,,z A,,z |
+[V:1] d'3b ag | fb a/b/a/g/ fe | d'2 e'2 d'^c' | d'2 a2 ba |
+[V:2] FA Bd ^ce | d3B AG | FB A/B/A/G/ FE | d2 e2 d^c |
+[V:3] D,,z G,,z A,,z | B,,z F,,z A,,z | B,,z ^C,z A,,z | B,,z ^C,z A,,z |
+% bar 17: link
+[V:1] [1 f2 a2 f2 :|[2 f2 a2 b2- |
+[V:2] [1 d2 A2 d2 :|[2 d2 A2 F2 |
+[V:3] [1 D,z D,z D,,z :|[2 D,,z D,,z ^D,,z |
+% bars 18-26: the right hand leads in E minor with the sonata's opening motto; the violin follows an octave higher
+[V:1] !ppp!b6 | B2 e2 fg | bg ac' fe | g2 e/f/e ^d^c |
+[V:2] !mf!B,2 E2 FG | BG Ac FE | G2 E/F/E ^D^C | B,/C/D/E/ GE FE |
+[V:3] !mf!E,,z E,,z D,,z | G,,z C,z B,,z | G,,z C,z A,,z | B,,z E,z B,,z |
+[V:1] !pp!B/c/d/e/ ge fe | g2 e'2 b^a | bd eg f^c | d2 b2 ^a^c' |
+[V:2] !f!G2 e2 B^A | BD EG F^C | D2 B2 ^A^c | BF GD E^C |
+[V:3] !f!G,,z B,,z F,,z | B,,z G,,z F,,z | B,,z G,,z F,,z | B,,z E,,z F,,z |
+[V:1] bf gd e^c |
+[V:2] D2 B,2 ^A,2 |
+[V:3] D,,z G,,z F,,z |
+% bars 27-29: free retransition
+[V:1] !ppp!d2 ^d2 f2 | g3f e2 | d3c BA |
+[V:2] !mf!B,F BA F^D | EG BG ce | FA cA FD |
+[V:3] !mf!B,,z B,,z A,,z | G,,z E,,z C,z | D,z D,z D,z |
+% bars 30-39: the violin leads again; the canon closes in G
+[V:1] !pp!d2 g2 ab | d'b c'e' ag | b2 g/a/g fe | d/e/f/g/ bg ag |
+[V:2] !f!z6 | D2 G2 AB | dB ce AG | B2 G/A/G FE |
+[V:3] !f!G,,z G,,z D,z | B,,z E,z D,z | B,,z E,,z D,,z | G,,z G,,z D,z |
+[V:1] b2 e'2 d'c' | d'b c'g af | b2 e2 fa | d'2 c'2 !trill!a2 |
+[V:2] D/E/F/G/ BG AG | B2 e2 dc | dB cG AF | B2 E2 FA |
+[V:3] B,,z G,,z D,z | B,,z A,,z D,z | G,,z A,,z D,z | B,,z C,z D,z |
+[V:1] !ppp!b2 a2 f2 | !fermata!g6 |]
+[V:2] !mf!d2 c2 !trill!A2 | !fermata![DG]6 |]
+[V:3] !mf!B,,z C,z D,z | !fermata!G,,6 |]
