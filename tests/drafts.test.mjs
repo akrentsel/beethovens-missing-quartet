@@ -19,13 +19,18 @@ import { publishDraft, defaultDraftRoot } from '../server/drafts.mjs';
 import { buildPayload, parseArgs } from '../tools/publish-draft.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const CATALOG_PATH = join(ROOT, 'data/catalog.json');
+// Draft round 1 must remain open in this fixture, regardless of the live catalogue.
+const CATALOG_PATH = join(ROOT, 'tests/fixtures/backend-catalog.json');
 const CLI = join(ROOT, 'server/draft-cli.mjs');
 const TOOL = join(ROOT, 'tools/publish-draft.mjs');
 const ORIGIN = 'https://lost-compositions.exe.xyz';
 const REQ = 'bach:violin-sonata:1';
 const tmpRoot = mkdtempSync(join(tmpdir(), 'mw-drafts-'));
-after(() => rmSync(tmpRoot, { recursive: true, force: true }));
+const allApps = new Set();
+after(async () => {
+  await Promise.all([...allApps].map(app => app.close()));
+  rmSync(tmpRoot, { recursive: true, force: true });
+});
 let counter = 0;
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 
@@ -80,8 +85,7 @@ function world() {
   const dir = join(tmpRoot, `w${++counter}`);
   const t = { dir, dbPath: join(dir, 'db', 'votes.sqlite'), draftRoot: join(dir, 'drafts') };
   const store = new VoteStore({ dbPath: t.dbPath, catalog: loadCatalog(CATALOG_PATH) });
-  store.startRequest(REQ);
-  store.close();
+  try { store.startRequest(REQ); } finally { store.close(); }
   return t;
 }
 
@@ -113,6 +117,7 @@ function runCli(t, args, input) {
 
 async function startApp(t, opts = {}) {
   const app = createApp({ dbPath: t.dbPath, catalogPath: CATALOG_PATH, draftRoot: t.draftRoot, ...opts });
+  allApps.add(app);
   await new Promise((r) => app.server.listen(0, '127.0.0.1', r));
   app.port = app.server.address().port;
   return app;

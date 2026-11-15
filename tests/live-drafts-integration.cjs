@@ -4,7 +4,7 @@ const {mkdtempSync,rmSync}=require('node:fs');const {join}=require('node:path');
 (async()=>{
  const {createApp}=await import('../server/app.mjs');const {publishDraft}=await import('../server/drafts.mjs');const {validatePayload}=await import('../server/draft-validation.mjs');
  const dir=mkdtempSync(join(tmpdir(),'mw-real-drafts-')),base='http://127.0.0.1:8898';let p;
- const app=createApp({dbPath:join(dir,'votes.sqlite'),draftRoot:join(dir,'drafts'),allowedOrigins:[base],serveStatic:true});
+ const app=createApp({dbPath:join(dir,'votes.sqlite'),draftRoot:join(dir,'drafts'),catalogPath:join(__dirname,'fixtures/backend-catalog.json'),allowedOrigins:[base],serveStatic:true});
  const abc=n=>`X:1\nT:TEST ONLY — not a composition\nM:4/4\nL:1/8\nQ:1/4=120\n%%score 1 {2 3}\nV:1 clef=treble name="Violin"\nV:2 clef=treble name="Keyboard RH"\nV:3 clef=bass name="Keyboard LH"\nK:C\nV:1\n%%MIDI program 40\nV:2\n%%MIDI program 0\nV:3\n%%MIDI program 0\n[V:1] ${'c8 | '.repeat(n).trim()}]\n[V:2] ${'G8 | '.repeat(n).trim()}]\n[V:3] ${'C,8 | '.repeat(n).trim()}]\n`;
  const publish=(n,expected)=>publishDraft({root:join(dir,'drafts'),store:app.store,payload:validatePayload({id:'test-integration-draft',requestId:'bach:violin-sonata:1',title:'TEST ONLY — live API integration',changeNote:`Test snapshot of ${n} bars`,expectedRevision:expected,movements:[{id:'i',label:'Test movement',abc:abc(n)}]})});
  try{

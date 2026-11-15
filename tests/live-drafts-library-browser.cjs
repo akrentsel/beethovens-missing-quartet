@@ -1,13 +1,14 @@
 // Test-only draft metadata server. No votes or drafts are written to production.
 const {createServer}=require('node:http');const fs=require('node:fs');const path=require('node:path');
 const assert=require('node:assert/strict');const {launch}=require('./browser.cjs');
-const root=path.resolve(__dirname,'..'),cat=JSON.parse(fs.readFileSync(path.join(root,'data/catalog.json')));
+const root=path.resolve(__dirname,'..'),cat=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/backend-catalog.json')));
 let drafts=[],fail=false,calls=0;
 const record={id:'bach-violin-sonata-1',requestId:'bach:violin-sonata:1',composerId:'bach',formId:'violin-sonata',title:'Test snapshot — not a new composition',revision:1,publishedAt:'2026-11-15T20:00:00Z',changeNote:'Opening phrase <script>not executable</script>',status:'composing',completedWorkId:null,movements:[{id:'i',label:'I. Adagio',bars:8}]};
 const server=createServer((req,res)=>{
  const p=new URL(req.url,'http://localhost').pathname;
  const json=(v,status=200)=>{res.writeHead(status,{'Content-Type':'application/json','Cache-Control':'no-store'});res.end(JSON.stringify(v))};
  if(p==='/config.json')return json({apiBaseUrl:'http://127.0.0.1:8896'});
+ if(p==='/data/catalog.json')return json(cat);
  if(p==='/api/requests')return json({requests:[{id:'bach:violin-sonata:1',composerId:'bach',formId:'violin-sonata',round:1,status:'composing',votes:1,voted:false,createdAt:'2026-11-15T19:00:00Z',workId:null}],updatedAt:new Date().toISOString()});
  if(p==='/api/drafts'){calls++;return fail?json({error:'test offline'},503):json({drafts});}
  let file=path.join(root,p==='/'?'index.html':p);

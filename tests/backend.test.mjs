@@ -15,16 +15,24 @@ import { loadCatalog } from '../server/catalog.mjs';
 import { RateLimiter, normaliseIp } from '../server/rate-limit.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const CATALOG_PATH = join(ROOT, 'data/catalog.json');
+// Keep workflow preconditions fixed as real composers finish and publish works.
+const CATALOG_PATH = join(ROOT, 'tests/fixtures/backend-catalog.json');
 const ORIGIN = 'https://lost-compositions.exe.xyz';
 const tmpRoot = mkdtempSync(join(tmpdir(), 'mw-backend-'));
-after(() => rmSync(tmpRoot, { recursive: true, force: true }));
+const allApps = new Set();
+// An assertion can fail before a test reaches its local finally block. Close every
+// temporary listener anyway, rather than hanging the whole test runner.
+after(async () => {
+  await Promise.all([...allApps].map(app => app.close()));
+  rmSync(tmpRoot, { recursive: true, force: true });
+});
 let dbCounter = 0;
 const freshDb = () => join(tmpRoot, `db${++dbCounter}`, 'votes.sqlite');
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 
 async function start(opts = {}) {
   const app = createApp({ dbPath: opts.dbPath ?? freshDb(), catalogPath: CATALOG_PATH, rateLimitPerMinute: 10_000, globalRateLimitPerMinute: 100_000, ...opts });
+  allApps.add(app);
   await new Promise((r) => app.server.listen(0, '127.0.0.1', r));
   app.port = app.server.address().port;
   return app;
@@ -44,6 +52,7 @@ function request(app, { method = 'GET', path = '/', headers = {}, body, chunked 
       });
     });
     req.on('error', reject);
+    req.setTimeout(5000, () => req.destroy(new Error('Test HTTP request timed out')));
     if (body !== undefined) {
       if (chunked) {
         const buf = Buffer.from(body);
@@ -105,6 +114,22 @@ describe('seeding', () => {
     }
     assert.ok(typeof r.json.updatedAt === 'string' && !Number.isNaN(Date.parse(r.json.updatedAt)));
     assert.match(r.headers['cache-control'], /no-store/);
+  });
+
+  test('a newly completed Bach work seeds round 2 without changing fixture workflow preconditions', async () => {
+    const future = JSON.parse(readFileSync(CATALOG_PATH, 'utf8'));
+    future.works.push({ id: 'test-bach-finished', composerId: 'bach', formId: 'violin-sonata', round: 1, status: 'completed', title: 'TEST FIXTURE' });
+    const futurePath = join(tmpRoot, 'catalog-future-bach.json');
+    writeFileSync(futurePath, JSON.stringify(future));
+    const updated = await start({ catalogPath: futurePath });
+    try {
+      const state = await list(updated);
+      assert.equal(find(state, 'bach:violin-sonata:1').status, 'completed');
+      assert.equal(find(state, 'bach:violin-sonata:2').status, 'open');
+      assert.equal((await vote(updated, randomUUID(), 'bach:violin-sonata:1')).status, 409);
+      assert.equal((await vote(updated, randomUUID(), 'bach:violin-sonata:2')).status, 200);
+      assert.equal(find(await list(app), 'bach:violin-sonata:1').status, 'open', 'independent baseline fixture is unchanged');
+    } finally { await updated.close(); }
   });
 
   test('database enforces status, composer, form and one active round per combination', () => {

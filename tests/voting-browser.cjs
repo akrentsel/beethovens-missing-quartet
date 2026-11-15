@@ -8,7 +8,7 @@ const {randomUUID}=require('node:crypto');
 const assert=require('node:assert/strict');
 const dir=mkdtempSync(join(tmpdir(),'mw-vote-e2e-')),base='http://127.0.0.1:8891';
 let server,p;
-async function start(){server=spawn(process.execPath,['server/index.mjs'],{cwd:resolve(__dirname,'..'),env:{...process.env,PORT:'8891',DB_PATH:join(dir,'votes.sqlite'),SERVE_STATIC:'true',ALLOWED_ORIGINS:base},stdio:['ignore','pipe','pipe']});let err='';server.stderr.on('data',x=>err+=x);for(let i=0;i<60;i++){try{if((await fetch(base+'/api/health')).ok)return;}catch{}await new Promise(r=>setTimeout(r,100));}throw Error('Server startup failed: '+err);}
+async function start(){server=spawn(process.execPath,['server/index.mjs'],{cwd:resolve(__dirname,'..'),env:{...process.env,PORT:'8891',DB_PATH:join(dir,'votes.sqlite'),CATALOG_PATH:join(__dirname,'fixtures/backend-catalog.json'),SERVE_STATIC:'true',ALLOWED_ORIGINS:base},stdio:['ignore','pipe','pipe']});let err='';server.stderr.on('data',x=>err+=x);for(let i=0;i<60;i++){try{if((await fetch(base+'/api/health')).ok)return;}catch{}await new Promise(r=>setTimeout(r,100));}throw Error('Server startup failed: '+err);}
 async function stop(){if(server&&server.exitCode===null){const done=new Promise(r=>server.once('exit',r));server.kill('SIGTERM');await done;}}
 async function wait(expr,ms=15000){const t=Date.now();while(Date.now()-t<ms){if(await p.eval(expr))return;await p.sleep(100);}throw Error('Timed out '+expr);}
 const A=randomUUID(),B=randomUUID(),id='brahms:symphony:1';
