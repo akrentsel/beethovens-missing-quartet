@@ -3,6 +3,7 @@ const assert=require('node:assert/strict');
 const BASE=process.env.TEST_BASE_URL||'http://127.0.0.1:8890/';
 const wait=async(p,expr,ms=10000)=>{const t=Date.now();while(Date.now()-t<ms){if(await p.eval(expr))return;await p.sleep(100);}throw Error('Timed out: '+expr)};
 (async()=>{
+ const catalog=await(await fetch(BASE+'data/catalog.json')).json();
  const p=await launch({width:1280,height:1050});
  try{
   await p.open(BASE);await wait(p,"document.querySelectorAll('.composer-row').length===36");
@@ -19,10 +20,10 @@ const wait=async(p,expr,ms=10000)=>{const t=Date.now();while(Date.now()-t<ms){if
   await p.eval("document.querySelector('[data-form=piano-sonata]').click()");
   assert.equal(await p.eval("document.querySelector('[data-form=piano-sonata]').getAttribute('aria-pressed')"),'true');
   await p.eval("location.hash='composer/beethoven'");await p.sleep(150);
-  assert.equal(await p.eval("document.querySelectorAll('.work-record').length"),1);
+  assert.equal(await p.eval("document.querySelectorAll('.work-record').length"),catalog.works.filter(w=>w.composerId==='beethoven').length);
   assert.ok(await p.eval("document.querySelector('.work-record a.button-link').href.includes('work.html?id=beethoven-quartet-d-minor')"));
   await p.shot('/tmp/mw-composer-tested.png');
-  await p.eval("location.hash='works'");await p.sleep(150);assert.equal(await p.eval("document.querySelectorAll('.work-record').length"),1);
+  await p.eval("location.hash='works'");await p.sleep(150);assert.equal(await p.eval("document.querySelectorAll('.work-record').length"),catalog.works.length);
   await p.eval("location.hash='queue'");await p.sleep(150);assert.equal(await p.eval("document.querySelector('h1').textContent"),'The next work');
   await p.eval("location.hash='composer/not-real'");await p.sleep(150);assert.ok(await p.eval("document.querySelector('h1').textContent.includes('not here')"));
   await p.eval("location.hash='browse'");await p.sleep(150);

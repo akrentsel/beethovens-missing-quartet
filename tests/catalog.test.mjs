@@ -14,12 +14,12 @@ test('catalogue has the approved 36 composers in five populated groups and four 
  for(const id of ['beethoven','sibelius','brahms','shostakovich','stravinsky','price','adams'])assert.ok(catalog.composers.some(c=>c.id===id));
 });
 test('work manifests point only to existing relative public files and correct composer/form',()=>{
- assert.equal(catalog.works.length,1,'no fictional completed pieces');
+ assert.ok(catalog.works.some(w=>w.id==='beethoven-quartet-d-minor'),'preserve the original completed quartet');
  for(const w of catalog.works){assert.ok(catalog.composers.some(c=>c.id===w.composerId));assert.ok(catalog.forms.some(f=>f.id===w.formId));assert.equal(w.status,'completed');assert.ok(w.movements.length>0);
-  for(const p of [w.notebook,w.transcript,w.legacyUrl,...w.movements.map(m=>m.source)]){assert.ok(!p.includes('..')&&!p.includes('://')&&!p.startsWith('/'));assert.ok(fs.existsSync(path.join(root,p)),p);}
+  for(const p of [w.notebook,w.transcript,w.legacyUrl,...w.movements.map(m=>m.source)].filter(Boolean)){assert.ok(!p.includes('..')&&!p.includes('://')&&!p.startsWith('/'));assert.ok(fs.existsSync(path.join(root,p)),p);}
   assert.equal(w.durationSeconds,w.movements.reduce((s,m)=>s+m.durationSeconds,0));
  }
- assert.equal(catalog.works[0].movements.length,4);
+ assert.equal(catalog.works.find(w=>w.id==='beethoven-quartet-d-minor').movements.length,4);
 });
 test('search ignores diacritics and combines with era filter',()=>{
  assert.equal(matchingComposers(catalog,'dvorak')[0].id,'dvorak');

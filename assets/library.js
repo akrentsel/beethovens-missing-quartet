@@ -18,6 +18,31 @@ async function boot(){
  const button=(text,fn,cls)=>{const b=el('button',text,cls);b.type='button';b.addEventListener('click',fn);return b;};
  let catalog,base='',requests=[],apiState='loading',apiError='',lastUpdated='',token=null,storageError=false,sequence=0;
  let selectedEra='',query='',selectedForm='string-quartet',queueEra='',queueForm='',queueState='active',busy=new Set(),messages=new Map();
+ let drafts=[],draftState='loading',draftBusy=false,draftTimer=null,draftStopped=false,draftFailures=0;
+ const draftForRequest=id=>drafts.find(d=>d.requestId===id);
+ const draftUrl=d=>`work.html?draft=${encodeURIComponent(d.id)}`;
+ function draftRegion(composerId=''){const box=el('section',undefined,'live-drafts');box.dataset.draftComposer=composerId;return box;}
+ function updateDraftUI(){
+  document.querySelectorAll('[data-draft-composer]').forEach(box=>{
+   const cId=box.dataset.draftComposer;box.replaceChildren();
+   const live=drafts.filter(d=>(d.status!=='completed'||!catalog.works.some(w=>w.id===d.completedWorkId))&&(!cId||d.composerId===cId));
+   const waiting=requests.filter(r=>r.status==='composing'&&(!cId||r.composerId===cId)&&!draftForRequest(r.id));
+   const empty=box.closest('.works-list')?.querySelector('.empty-state');if(empty)empty.hidden=live.length>0;
+   box.hidden=!live.length&&!waiting.length;if(box.hidden)return;
+   box.append(el('h2',live.length&&live.every(d=>d.status==='completed')?'New from the studio':'In the studio'));
+   for(const d of live){const card=el('article',undefined,'draft-record');const total=d.movements.reduce((s,m)=>s+(m.bars||0),0);card.append(el('p',`${d.status==='completed'?'Now finished':d.status==='open'?'Paused draft':'Live draft'} · revision ${d.revision} · ${total} written bars`,'meta'),el('h3',d.title),el('p',d.changeNote||'A new playable snapshot is ready.','small-copy'),link(d.status==='completed'?'Listen to the finished work':'Listen to the live draft',d.status==='completed'&&d.completedWorkId?`work.html?id=${encodeURIComponent(d.completedWorkId)}`:draftUrl(d),'button-link'));if(d.status==='completed')card.append(link('Browse the draft history',draftUrl(d),'draft-history-link'));const time=el('time',new Date(d.publishedAt).toLocaleString(),'meta');time.dateTime=d.publishedAt;card.append(el('p','Published ','meta'));card.lastChild.append(time);box.append(card);}
+   for(const r of waiting){const label=`${composer(r.composerId)?.shortName||r.composerId} — ${form(r.formId)?.label||r.formId}`;const p=el('p',undefined,'draft-waiting');p.append(el('strong',label),el('br'),el('span',draftState==='error'?'Draft updates are unavailable right now. Please try again.':'Being composed. The first playable snapshot has not been published yet.'));box.append(p);}
+   if(draftState==='error'){const n=el('p',undefined,'small-copy');n.append(el('span','Live updates are temporarily unavailable. '),button('Try again',loadDrafts,'text-button'));box.append(n);}
+  });
+  document.querySelectorAll('[data-draft-request]').forEach(cell=>{const d=draftForRequest(cell.dataset.draftRequest);const old=cell.querySelector('.draft-queue-link');if(old)old.remove();if(d&&d.status!=='completed'){const a=link(d.status==='composing'?'Listen to draft':'Draft history',draftUrl(d),'draft-queue-link');cell.append(a);}});
+  document.querySelectorAll('[data-work-id]').forEach(card=>{const d=drafts.find(d=>d.id===card.dataset.workId||d.completedWorkId===card.dataset.workId);if(d&&!card.querySelector('.draft-history-link'))card.querySelector('.text-links')?.append(link('Draft history',draftUrl(d),'draft-history-link'));});
+ }
+ async function loadDrafts(){
+  clearTimeout(draftTimer);if(!base||draftBusy||draftStopped||document.hidden)return;draftBusy=true;
+  try{const d=await request('/api/drafts');if(!Array.isArray(d.drafts)||d.drafts.some(x=>!x||typeof x.id!=='string'||!/^[a-z0-9][a-z0-9-]{0,79}$/.test(x.id)||!Number.isSafeInteger(x.revision)||x.revision<1||!composer(x.composerId)||!form(x.formId)||!['open','composing','completed'].includes(x.status)||!Array.isArray(x.movements)||x.movements.some(m=>!Number.isFinite(m.bars)||m.bars<0)))throw Error('Invalid draft response');drafts=d.drafts;draftState='ready';draftFailures=0;}
+  catch(e){draftState='error';draftFailures++;}
+  finally{draftBusy=false;updateDraftUI();if(!draftStopped&&!document.hidden)draftTimer=setTimeout(loadDrafts,Math.min(60000,15000*Math.pow(2,Math.min(draftFailures,2))));}
+ }
  function route(){const raw=location.hash.slice(1);if(!raw||raw==='browse')return {view:'browse'};if(raw==='works'||raw==='queue')return {view:raw};if(raw.startsWith('composer/'))return {view:'composer',id:raw.slice(9)};return {view:'missing'};}
  function composer(id){return catalog.composers.find(c=>c.id===id);}
  function form(id){return catalog.forms.find(f=>f.id===id);}
@@ -26,7 +51,7 @@ async function boot(){
  function makeHeader(title,subtitle,crumb){const h=el('section',undefined,'page-heading');if(crumb)h.append(link(crumb.text,crumb.url,'breadcrumb'));h.append(el('h1',title));if(subtitle)h.append(el('p',subtitle,'subtitle'));return h;}
  function playLink(w){const a=link('Listen & follow the score',`work.html?id=${encodeURIComponent(w.id)}`,'button-link');const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 12 14');svg.setAttribute('aria-hidden','true');const path=document.createElementNS(svg.namespaceURI,'path');path.setAttribute('d','M1 1L11 7L1 13Z');svg.append(path);a.prepend(svg);return a;}
  function featured(w){const f=el('article',undefined,'featured');f.append(el('p','First on the shelf','section-kicker'));f.firstChild.style.color='#d6e5e7';f.append(el('h2',w.title),el('p',`${w.subtitle || form(w.formId).label} · ${formatDuration(w.durationSeconds)} of music`,'meta'));const lines=el('div',undefined,'work-lines');lines.setAttribute('aria-hidden','true');['I','II','III','IV'].forEach(n=>lines.append(el('span',n)));f.append(lines,playLink(w));return f;}
- function workRecord(w){const a=el('article',undefined,'work-record');a.append(el('p',`Inspired by ${composer(w.composerId).shortName}`,'meta'),el('h3',w.title),el('p',w.description),el('p',`${form(w.formId).label} · ${w.movements.length} movements · ${formatDuration(w.durationSeconds)}`,'work-meta'),playLink(w));const links=el('div',undefined,'text-links');if(w.notebook)links.append(link('Composition notebook',w.notebook));if(w.transcript)links.append(link('Conversation logs',w.transcript));a.append(links);return a;}
+ function workRecord(w){const a=el('article',undefined,'work-record');a.dataset.workId=w.id;a.append(el('p',`Inspired by ${composer(w.composerId).shortName}`,'meta'),el('h3',w.title),el('p',w.description),el('p',`${form(w.formId).label} · ${w.movements.length} movements · ${formatDuration(w.durationSeconds)}`,'work-meta'),playLink(w));const links=el('div',undefined,'text-links');if(w.notebook)links.append(link('Composition notebook',w.notebook));if(w.transcript)links.append(link('Conversation logs',w.transcript));a.append(links);return a;}
  function apiNotice(){
   const n=el('div',undefined,'status-note');n.setAttribute('role','status');
   if(apiState==='loading')n.textContent='Connecting to the shared voting queue…';
@@ -42,7 +67,7 @@ async function boot(){
   for(const era of catalog.eras){const cs=filtered.filter(c=>c.eraId===era.id);if(!cs.length)continue;const section=el('section',undefined,'era-section');const heading=el('div',undefined,'era-heading');heading.append(el('h3',era.label),el('span',`${cs.length} composers`));const list=el('div',undefined,'composer-list');for(const c of cs){const row=link('',`#composer/${c.id}`,'composer-row');const w=worksFor(c.id);row.append(el('span',c.shortName,'composer-name'),el('span',c.years,'years'),el('span',w.length?`${w.length} work to hear`:'Request a work','availability'),el('span','›','row-arrow'));list.append(row);}section.append(heading,list);container.append(section);}
  }
  function renderBrowse(){
-  const hero=el('section',undefined,'hero'),intro=el('div');intro.append(el('p','A listening library, chosen by you','section-kicker'),el('h1','What would you like to hear next?'),el('p','Choose a composer. Choose a form. Vote for a new work, then follow its score as you listen.','intro'),el('p','Original AI-composed homages. Not lost works, and not a claim to reproduce a composer’s genius.','disclaimer'));hero.append(intro,featured(catalog.works[0]));root.append(hero);
+  const hero=el('section',undefined,'hero'),intro=el('div');intro.append(el('p','A listening library, chosen by you','section-kicker'),el('h1','What would you like to hear next?'),el('p','Choose a composer. Choose a form. Vote for a new work, then follow its score as you listen.','intro'),el('p','Original AI-composed homages. Not lost works, and not a claim to reproduce a composer’s genius.','disclaimer'));hero.append(intro,featured(catalog.works[0]));root.append(hero,draftRegion());
   const top=el('div',undefined,'catalogue-top');top.append(el('h2','Browse the composers'));const label=el('label','Find a composer','search-label'),input=el('input');input.type='search';input.value=query;input.placeholder='Brahms, Shostakovich, Price…';input.id='composer-search';label.append(input);top.append(label);root.append(top);
   const count=el('p',undefined,'composer-count');count.setAttribute('aria-live','polite');root.append(count);
   const layout=el('div',undefined,'browse-layout'),aside=el('aside'),nav=el('nav',undefined,'era-nav');nav.setAttribute('aria-label','Filter composers by era');const rows=el('div');
@@ -52,11 +77,12 @@ async function boot(){
   const active=rankRequests(requests.filter(r=>r.status!=='completed'&&(r.votes>0||r.status==='composing'))).slice(0,5);
   if(active.length)queue.append(queueTable(active));else if(apiState==='ready')queue.append(el('p','No votes yet. Open a composer and be the first to choose a work.','empty-state'));root.append(queue);
  }
- function renderWorks(){root.append(makeHeader('On the shelf','Every finished work, ready to hear. More will arrive as the queue is composed.'));const grid=el('div',undefined,'work-grid');catalog.works.forEach(w=>grid.append(workRecord(w)));root.append(grid);}
+ function renderWorks(){root.append(makeHeader('On the shelf','Every finished work, ready to hear. More will arrive as the queue is composed.'));const grid=el('div',undefined,'work-grid');catalog.works.forEach(w=>grid.append(workRecord(w)));root.append(grid,draftRegion());}
  function renderComposer(id){
   const c=composer(id);if(!c){renderMissing();return;}const era=catalog.eras.find(e=>e.id===c.eraId);root.append(makeHeader(c.shortName,`${c.name} · ${c.years}`,{text:`All composers / ${era.label}`,url:'#browse'}));
   const layout=el('div',undefined,'composer-detail'),works=el('section',undefined,'works-list');works.append(el('h2','Listen'));
   const list=worksFor(id);if(list.length)list.forEach(w=>works.append(workRecord(w)));else{const empty=el('div',undefined,'empty-state');empty.append(el('p','Nothing on this shelf yet.'),el('p',`Choose a form and help decide the first work inspired by ${c.shortName}.`,'small-copy'));works.append(empty);}
+  works.append(draftRegion(id));
   const panel=el('section',undefined,'request-panel');panel.append(el('h2',list.length?'Choose the next work':'Choose the first work'),el('p',`What would you like to hear in conversation with ${c.shortName}’s musical world?`,'explanation'));
   const options=el('div',undefined,'form-options');options.setAttribute('role','group');options.setAttribute('aria-label','Type of piece');
   for(const f of catalog.forms){const b=button(f.label,()=>{selectedForm=f.id;messages.clear();render();document.querySelector(`[data-form="${f.id}"]`)?.focus();});b.dataset.form=f.id;b.setAttribute('aria-pressed',String(selectedForm===f.id));options.append(b);}panel.append(options,el('p',form(selectedForm).description,'small-copy'));const target=el('div');target.id='vote-region';panel.append(target);layout.append(works,panel);root.append(layout);renderVoteRegion(id);
@@ -75,7 +101,7 @@ async function boot(){
  }
  function queueTable(rows){
   const wrap=el('div',undefined,'queue-wrap'),table=el('table',undefined,'queue-table');table.setAttribute('aria-label','Composition requests ranked by votes');const head=el('thead'),tr=el('tr');['Composer & form','Status','Votes'].forEach(t=>tr.append(el('th',t)));head.append(tr);table.append(head);const body=el('tbody');
-  for(const r of rows){const c=composer(r.composerId),f=form(r.formId);if(!c||!f)continue;const row=el('tr'),title=el('td');title.append(link(c.shortName,`#composer/${c.id}`,'queue-composer'),el('div',`${f.label}${r.round>1?' · request '+r.round:''}`,'meta'));title.firstChild.addEventListener('click',()=>{selectedForm=f.id;});const state=el('td',r.status==='composing'?'Being composed':r.status==='completed'?'Completed':'Open','state-label');if(r.status==='completed'&&r.workId){const w=catalog.works.find(w=>w.id===r.workId);if(w){state.append(el('br'),link('Listen',`work.html?id=${encodeURIComponent(w.id)}`));}}row.append(title,state,el('td',String(r.votes),'queue-count'));body.append(row);}table.append(body);wrap.append(table);return wrap;
+  for(const r of rows){const c=composer(r.composerId),f=form(r.formId);if(!c||!f)continue;const row=el('tr'),title=el('td');title.append(link(c.shortName,`#composer/${c.id}`,'queue-composer'),el('div',`${f.label}${r.round>1?' · request '+r.round:''}`,'meta'));title.firstChild.addEventListener('click',()=>{selectedForm=f.id;});const state=el('td',r.status==='composing'?'Being composed':r.status==='completed'?'Completed':'Open','state-label');state.dataset.draftRequest=r.id;if(r.status==='completed'&&r.workId){const w=catalog.works.find(w=>w.id===r.workId);if(w){state.append(el('br'),link('Listen',`work.html?id=${encodeURIComponent(w.id)}`));}}row.append(title,state,el('td',String(r.votes),'queue-count'));body.append(row);}table.append(body);wrap.append(table);return wrap;
  }
  function renderQueue(){
   root.append(makeHeader('The next work','A shared queue of quartets, sonatas, and symphonies. Your votes set the direction.'));
@@ -88,17 +114,20 @@ async function boot(){
   root.append(link('Browse composers','#browse','return-link'));
  }
  function renderMissing(){root.append(makeHeader('That shelf is not here.','The composer or page could not be found.'),link('Back to the catalogue','#browse','button-link'));}
- function render(){if(!catalog)return;root.replaceChildren();const r=route();document.querySelectorAll('[data-nav]').forEach(a=>a.setAttribute('aria-current',a.dataset.nav===(r.view==='composer'?'browse':r.view)?'page':'false'));document.title=(r.view==='composer'&&composer(r.id)?composer(r.id).shortName+' — ':'')+'Missing Works';if(r.view==='browse')renderBrowse();else if(r.view==='works')renderWorks();else if(r.view==='composer')renderComposer(r.id);else if(r.view==='queue')renderQueue();else renderMissing();}
+ function render(){if(!catalog)return;root.replaceChildren();const r=route();document.querySelectorAll('[data-nav]').forEach(a=>a.setAttribute('aria-current',a.dataset.nav===(r.view==='composer'?'browse':r.view)?'page':'false'));document.title=(r.view==='composer'&&composer(r.id)?composer(r.id).shortName+' — ':'')+'Missing Works';if(r.view==='browse')renderBrowse();else if(r.view==='works')renderWorks();else if(r.view==='composer')renderComposer(r.id);else if(r.view==='queue')renderQueue();else renderMissing();updateDraftUI();}
  async function request(path,options={}){const ac=new AbortController(),timer=setTimeout(()=>ac.abort(),15000);try{const headers={...(token?{'X-Voter-Token':token}:{}),...options.headers};const r=await fetch(base+path,{...options,headers,signal:ac.signal,cache:'no-store'});const data=await r.json().catch(()=>({}));if(!r.ok){const e=Error(typeof data.error==='string'?data.error:'The request could not be saved.');e.status=r.status;throw e;}return data;}finally{clearTimeout(timer);}}
  async function loadVotes(){if(!base){apiState='unconfigured';render();return;}if(busy.size)return;const n=++sequence;apiState='loading';render();try{const d=await request('/api/requests');if(n!==sequence)return;if(!Array.isArray(d.requests)||d.requests.some(r=>typeof r.id!=='string'||!Number.isInteger(r.votes)||r.votes<0||!['open','composing','completed'].includes(r.status)||!composer(r.composerId)||!form(r.formId)))throw Error('Invalid voting response');requests=d.requests;apiState='ready';apiError='';lastUpdated=new Date().toISOString();}catch(e){if(n!==sequence)return;apiState='error';apiError=e.message;}render();}
  async function castVote(id,voted){if(!token||busy.has(id)||apiState!=='ready')return;busy.add(id);sequence++;messages.delete(id);const active=route();renderVoteRegion(active.id);try{const d=await request('/api/votes',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({requestId:id,voted})});if(!d.request||d.request.id!==id||!Number.isInteger(d.request.votes))throw Error('Invalid save response');requests=requests.map(r=>r.id===id?d.request:r);messages.set(id,voted?'Your vote is saved. Thank you.':'Your vote was removed.');lastUpdated=new Date().toISOString();}catch(e){messages.set(id,e.status===429?'Too many changes. Please wait a minute and try again.':e.status===409?'This round has closed. Refresh the totals to see its status.':'Your vote was not confirmed. Please try again.');}finally{busy.delete(id);if(route().view==='composer')renderVoteRegion(route().id);}}
  document.querySelector('.skip').addEventListener('click',e=>{e.preventDefault();root.focus();root.scrollIntoView({block:'start'});});
  $('privacy-toggle').addEventListener('click',()=>{const p=$('privacy-note');p.hidden=!p.hidden;$('privacy-toggle').setAttribute('aria-expanded',String(!p.hidden));});
  window.addEventListener('hashchange',()=>{render();window.scrollTo({top:0,behavior:'instant'});});
+ document.addEventListener('visibilitychange',()=>{clearTimeout(draftTimer);if(!document.hidden){draftStopped=false;loadDrafts();}});
+ window.addEventListener('pagehide',()=>{draftStopped=true;clearTimeout(draftTimer);});
+ window.addEventListener('pageshow',()=>{draftStopped=false;if(catalog&&base)loadDrafts();});
  try{
   const r=await fetch('data/catalog.json');if(!r.ok)throw Error('Catalogue unavailable');catalog=await r.json();
   try{const stored=localStorage.getItem(TOKEN_KEY);token=stored&&UUID.test(stored)?stored:crypto.randomUUID();localStorage.setItem(TOKEN_KEY,token);}catch(e){token=null;storageError=true;}
   try{const c=await fetch('config.json');if(!c.ok)throw Error('Configuration unavailable');base=validApiBase((await c.json()).apiBaseUrl,location.origin);}catch(e){apiState='error';apiError=e.message;render();return;}
-  render();await loadVotes();
+  render();await Promise.all([loadVotes(),loadDrafts()]);
  }catch(e){root.replaceChildren(makeHeader('The catalogue could not load.','Please refresh the page or try again in a moment.'),link('Open the original quartet player','beethoven.html','button-link'));}
 }

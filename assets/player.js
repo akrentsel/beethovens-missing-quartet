@@ -247,13 +247,132 @@
     return { dispose: dispose, build: build };
   }
 
+  /* ---------- live drafts (work.html?draft=ID) ---------- */
+
+  var DRAFT_STATUSES = ["composing", "completed", "open"];
+  var POLL_MS = 5000, POLL_MAX_MS = 60000;
+
+  function validRevision(n) { return typeof n === "number" && isFinite(n) && n >= 1 && n <= 1e9 && Math.floor(n) === n; }
+  // ?revision=N: null when absent, NaN when present but not a plain positive integer.
+  function revisionParam(s) {
+    if (s == null || s === "") return null;
+    return /^[1-9][0-9]{0,8}$/.test(s) ? +s : NaN;
+  }
+  // Relative, same-origin API paths only; never a URL taken from a response.
+  function draftApiPath(id, rev) {
+    if (!validWorkId(id) || (rev != null && !validRevision(rev))) return null;
+    return "api/drafts/" + id + (rev != null ? "/revisions/" + rev : "");
+  }
+  function str(v, max) { return v == null ? "" : String(v).slice(0, max || 400); }
+  function badDraft(msg) { var e = new Error(msg); e.badDraft = true; return e; }
+
+  // Check one snapshot manifest from the draft API and return a clean copy. Throws when the
+  // shape, IDs, revision or source paths are not exactly what this site publishes.
+  function validateDraftManifest(work, id, rev) {
+    if (!work || typeof work !== "object" || Array.isArray(work)) throw badDraft("the draft has no manifest");
+    if (work.id !== id) throw badDraft("the draft manifest names a different work");
+    if (!validRevision(work.revision)) throw badDraft("the draft revision number is not valid");
+    if (rev != null && work.revision !== rev) throw badDraft("the server sent revision " + work.revision + " instead of " + rev);
+    if (work.status !== "draft") throw badDraft("the snapshot is not marked as a draft");
+    if (!Array.isArray(work.movements) || !work.movements.length || work.movements.length > 60) throw badDraft("the draft lists no movements");
+    var prefix = "api/drafts/" + id + "/revisions/" + work.revision + "/", seen = {};
+    var movements = work.movements.map(function (m, i) {
+      if (!m || typeof m !== "object") throw badDraft("movement " + (i + 1) + " is malformed");
+      var mid = m.id;
+      if (typeof mid !== "string" || !/^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$/.test(mid) || seen[mid]) throw badDraft("movement " + (i + 1) + " has a bad or repeated id");
+      seen[mid] = true;
+      var src = m.source;
+      if (typeof src !== "string" || src.indexOf(prefix) !== 0 || !/^[A-Za-z0-9][A-Za-z0-9._-]{0,79}\.abc$/.test(src.slice(prefix.length)) || !safeRelativePath(src, [".abc"]))
+        throw badDraft("the score path for movement " + (i + 1) + " is not this revision's own file");
+      var bars = m.bars;
+      return {
+        id: mid, label: str(m.label || "Movement " + (i + 1), 200), note: str(m.note, 600), source: src,
+        bars: typeof bars === "number" && isFinite(bars) && bars >= 0 && Math.floor(bars) === bars ? bars : null,
+        durationSeconds: typeof m.durationSeconds === "number" && isFinite(m.durationSeconds) && m.durationSeconds > 0 ? m.durationSeconds : 0
+      };
+    });
+    var t = typeof work.publishedAt === "string" ? Date.parse(work.publishedAt) : NaN;
+    return {
+      id: id, requestId: str(work.requestId, 120), composerId: str(work.composerId, 80), formId: str(work.formId, 80),
+      round: typeof work.round === "number" ? work.round : null,
+      title: str(work.title || id, 200), subtitle: str(work.subtitle, 300), description: str(work.description, 2000),
+      status: "draft", revision: work.revision, publishedAt: isFinite(t) ? new Date(t).toISOString() : null,
+      changeNote: str(work.changeNote, 2000), durationSeconds: typeof work.durationSeconds === "number" && isFinite(work.durationSeconds) ? work.durationSeconds : 0,
+      movements: movements
+    };
+  }
+
+  // GET api/drafts/ID -> { work, revisions, status, completedWorkId }.
+  function validateDraftResponse(json, id) {
+    if (!json || typeof json !== "object") throw badDraft("the draft service sent no data");
+    var work = validateDraftManifest(json.work, id, null);
+    if (DRAFT_STATUSES.indexOf(json.status) < 0) throw badDraft("the draft status is unknown");
+    var completedWorkId = json.status === "completed" && validWorkId(json.completedWorkId) ? json.completedWorkId : null;
+    var byRev = {};
+    (Array.isArray(json.revisions) ? json.revisions : []).forEach(function (r) {
+      if (!r || !validRevision(r.revision) || r.revision > work.revision) return;
+      var t = typeof r.publishedAt === "string" ? Date.parse(r.publishedAt) : NaN;
+      byRev[r.revision] = { revision: r.revision, publishedAt: isFinite(t) ? new Date(t).toISOString() : null, changeNote: str(r.changeNote, 2000) };
+    });
+    byRev[work.revision] = { revision: work.revision, publishedAt: work.publishedAt, changeNote: work.changeNote };
+    var revisions = Object.keys(byRev).map(function (k) { return byRev[k]; }).sort(function (a, b) { return a.revision - b.revision; });
+    return { work: work, revisions: revisions, status: json.status, completedWorkId: completedWorkId };
+  }
+
+  // Delay before the next metadata check: 5 s, then doubling per failure, at most 60 s.
+  function pollDelay(failures) { return failures > 0 ? Math.min(POLL_MS * Math.pow(2, failures), POLL_MAX_MS) : POLL_MS; }
+
+  // What to do about a newer revision. "apply": load it now; "offer": keep the current take
+  // and show a switch button; "newer": the listener chose an older revision, just say so.
+  function draftDecision(o) {
+    if (!o || !(o.latest > o.viewing)) return "none";
+    if (!o.follow) return "newer";
+    if (o.state !== "idle" || o.continuing || o.edited || o.busy) return "offer";
+    return "apply";
+  }
+
+  // Bars from abcjs note timings (tune.noteTimings after setTiming). measureNumber counts
+  // the written bars from 0 (a pickup is the first); repeats replay a measureNumber.
+  function barMap(timings) {
+    var starts = {}, end = null, max = -1, last = null, repeats = false;
+    (timings || []).forEach(function (e) {
+      if (!e || typeof e.milliseconds !== "number") return;
+      if (e.type === "end") { end = end == null ? e.milliseconds : Math.max(end, e.milliseconds); return; }
+      var m = e.measureNumber;
+      if (typeof m !== "number" || m < 0) return;
+      if (!(m in starts)) starts[m] = e.milliseconds;
+      else if (m !== last || e.measureStart) repeats = true;     // a bar heard again (a one-bar repeat stays consecutive)
+      if (m > max) max = m;
+      last = m;
+    });
+    if (end == null || end <= 0 || max < 0) return null;
+    return { count: max + 1, starts: starts, end: end, repeats: repeats };
+  }
+  // Where bar `bar` (1-based) starts, as a fraction of the movement. Clamped to the bars there are.
+  function barSeek(map, bar) {
+    if (!map || typeof bar !== "number" || !isFinite(bar)) return null;
+    var want = Math.round(bar), b = Math.min(Math.max(1, want), map.count), k = b - 1;
+    while (k < map.count && !(k in map.starts)) k++;
+    if (!(k in map.starts)) return null;
+    var ms = map.starts[k];
+    return { bar: k + 1, requested: want, clamped: k + 1 !== want, ms: ms, fraction: Math.min(0.999, Math.max(0, ms / map.end)), repeats: map.repeats };
+  }
+
+  // A cheap sanity check before an ABC text may replace a playable take.
+  function looksLikeAbc(text) {
+    return typeof text === "string" && text.length > 0 && text.length < 2000000 && /^X:/m.test(text) && /^K:/m.test(text);
+  }
+
   var core = {
     BOWED: BOWED, isBowed: isBowed, shortNoteLift: shortNoteLift, validWorkId: validWorkId,
     safeRelativePath: safeRelativePath, resolveSameOrigin: resolveSameOrigin, catalogPathFrom: catalogPathFrom,
     findWork: findWork, fmtTime: fmtTime, field: field, normalizeKeyChanges: normalizeKeyChanges,
     blankTitles: blankTitles, blankMetaDirectives: blankMetaDirectives, voiceTitles: voiceTitles, trackProgram: trackProgram, partsFromTune: partsFromTune,
     panFor: panFor, applySound: applySound, isMidiHeader: isMidiHeader, normalizeChannels: normalizeChannels,
-    runBounded: runBounded, createSynthLifecycle: createSynthLifecycle
+    runBounded: runBounded, createSynthLifecycle: createSynthLifecycle,
+    validRevision: validRevision, revisionParam: revisionParam, draftApiPath: draftApiPath,
+    validateDraftManifest: validateDraftManifest, validateDraftResponse: validateDraftResponse,
+    pollDelay: pollDelay, draftDecision: draftDecision, barMap: barMap, barSeek: barSeek, looksLikeAbc: looksLikeAbc
   };
   if (typeof module === "object" && module.exports) module.exports = core;
   if (typeof window === "undefined" || typeof document === "undefined") return;
@@ -273,8 +392,10 @@
     state: "idle",                      // idle | loading | playing | paused
     audioStale: true, gen: 0, totalSeconds: 0, pendingSeek: null,
     dragging: false, lastTop: null, cursorLine: null, lit: [], fetched: {}, nextTimer: null,
-    lastPeak: 0, retry: null
+    lastPeak: 0, retry: null,
+    urlCache: {}, barInfo: undefined     // fetched ABC by URL; bar positions of the engraved tune
   };
+  var D = null;                         // live-draft state; null on finished works (?id=)
 
   function setStatus(t) { $("pl-status").textContent = t; }
   function setState(s) {
@@ -286,6 +407,7 @@
     $("pl-play-text").textContent = s === "playing" ? "Pause" : s === "loading" ? "Loading" : s === "paused" ? "Resume" : "Play";
     b.setAttribute("aria-busy", s === "loading" ? "true" : "false");
     $("pl-tempo").disabled = s === "loading";
+    if (D && D.started) { renderOffer(); $("pl-stop").disabled = s === "idle" && !S.nextTimer; }
   }
   function showError(msg, retry) {
     S.retry = retry || null;
@@ -337,6 +459,7 @@
       format: { annotationfont: "Newsreader italic 13", tempofont: "Newsreader bold 14", voicefont: "Newsreader italic 13", measurefont: "Newsreader italic 11", partsfont: "Newsreader bold 15", gchordfont: "Newsreader 13", vocalfont: "Newsreader 13" }
     });
     S.visualObj = out[0] || null;
+    S.barInfo = undefined;
     var warnings = (S.visualObj && S.visualObj.warnings) || [];
     $("pl-warn").textContent = warnings.length ? "Notation problems:\n" + warnings.map(function (x) { return String(x).replace(/<[^>]+>/g, ""); }).join("\n") : "";
     S.cursorLine = null; S.lit = []; S.lastTop = null;
@@ -554,13 +677,19 @@
   /* ---------- movements ---------- */
   function fetchSource(i) {
     if (S.sources[i] != null) return Promise.resolve(S.sources[i]);
-    var m = S.movements[i];
-    var url = resolveSameOrigin(m.source, location.href, [".abc"]);
-    if (!url) return Promise.reject(new Error("the score path for \u201c" + m.label + "\u201d is not a local .abc file"));
+    var m = S.movements[i], movements = S.movements;
+    return fetchAbc(m.source, m.label).then(function (t) { if (S.movements === movements) S.sources[i] = t; return t; });
+  }
+  // Fetch one ABC file by its manifest path. Draft revision files are immutable, so they are
+  // kept by URL for the life of the page (switching back to an old revision is instant).
+  function fetchAbc(source, label) {
+    var url = resolveSameOrigin(source, location.href, [".abc"]);
+    if (!url) return Promise.reject(new Error("the score path for \u201c" + label + "\u201d is not a local .abc file"));
+    if (S.urlCache[url] != null) return Promise.resolve(S.urlCache[url]);
     return fetch(url, { cache: "no-cache" }).then(function (r) {
       if (!r.ok) throw new Error("the score file did not load (HTTP " + r.status + ")");
       return r.text();
-    }).then(function (t) { S.sources[i] = t; return t; });
+    }).then(function (t) { if (D) S.urlCache[url] = t; return t; });
   }
   function openMovement(i) {
     stopAll(null);
@@ -585,6 +714,7 @@
       $("pl-play").disabled = false;
       $("pl-sheet").setAttribute("aria-busy", "false");
       setStatus("Ready. Press play to listen.");
+      if (D) afterDraftMovement();
       return true;
     }).catch(function (err) {
       if (gen !== S.gen) return false;
@@ -655,10 +785,12 @@
     var list = $("pl-movements");
     list.textContent = "";
     S.movements.forEach(function (m, i) {
-      var li = el("li"), b = el("button", { type: "button", "aria-current": "false" });
+      var li = el("li"), b = el("button", { type: "button", "aria-current": String(i === S.current) });
       b.dataset.index = i;
+      b.dataset.id = m.id;
       b.appendChild(el("span", { class: "pl-mv-label" }, m.label));
-      if (m.durationSeconds) b.appendChild(el("span", { class: "pl-mv-time" }, fmtTime(m.durationSeconds)));
+      if (D) b.appendChild(el("span", { class: "pl-mv-time pl-mv-bars" }, m.bars == null ? "" : m.bars === 1 ? "1 bar" : m.bars + " bars"));
+      else if (m.durationSeconds) b.appendChild(el("span", { class: "pl-mv-time" }, fmtTime(m.durationSeconds)));
       b.addEventListener("click", function () { if (i !== S.current || S.sources[i] == null) openMovement(i); });
       li.appendChild(b); list.appendChild(li);
     });
@@ -734,11 +866,420 @@
     });
   }
 
+  /* ---------- live drafts ---------- */
+  // A draft is a series of immutable published revisions. The take on screen (score and
+  // audio) is replaced only when the listener is idle and following the latest revision, or
+  // when they press a switch button. Polling never touches the score or the sound otherwise.
+
+  // Edits count from the first keystroke: the textarea is compared with the loaded source, so
+  // a poll inside the 400 ms re-engrave debounce still sees them.
+  function hasEdits() {
+    if (Object.keys(S.edited).length) return true;
+    var src = S.sources[S.current];
+    return S.current >= 0 && src != null && $("pl-abc").value !== src;
+  }
+  function draftLog(entry) { entry.at = Date.now(); D.log.push(entry); if (D.log.length > 200) D.log.shift(); }
+  function errText(err) { return err && err.message ? err.message : String(err); }
+  function fmtWhen(iso) {
+    if (!iso) return "";
+    var d = new Date(iso);
+    try { return d.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" }); } catch (e) { return d.toLocaleString(); }
+  }
+  function catalogEntry(list, id) {
+    var hit = null;
+    (S.catalog && Array.isArray(S.catalog[list]) ? S.catalog[list] : []).forEach(function (x) { if (x && x.id === id) hit = x; });
+    return hit;
+  }
+  function fetchDraftJson(path) {
+    return fetch(path, { cache: "no-store", headers: { Accept: "application/json" } }).then(function (r) {
+      if (r.status === 404) { var e = new Error("not published (HTTP 404)"); e.notFound = true; throw e; }
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json().catch(function () { throw new Error("the draft service did not send JSON"); });
+    });
+  }
+  function abcParses(text) {
+    if (!looksLikeAbc(text)) return false;
+    try { var t = ABCJS.parseOnly(text); return !!(t && t[0] && t[0].lines && t[0].lines.length); } catch (e) { return false; }
+  }
+
+  function startDraft(params, catalogPath) {
+    var id = params.get("draft") || "";
+    if (!validWorkId(id)) { notFound("That draft address is not valid", "Draft names use lower-case letters, digits and hyphens. Choose a work below or see the queue.", null); return; }
+    var pin = revisionParam(params.get("revision"));
+    D = {
+      id: id, pin: validRevision(pin) ? pin : null, badPin: pin !== null && !validRevision(pin),
+      follow: !validRevision(pin), viewing: 0, work: null, latest: 0, latestWork: null, revisions: [],
+      status: null, completedWorkId: null, started: false, timer: null, inflight: null, failures: 0,
+      nextDelay: POLL_MS, paused: false, token: 0, applying: null, confirm: null, confirmFollow: false,
+      snaps: {}, log: [], polls: 0, lastError: null, want: params.get("movement") || "", optionsKey: ""
+    };
+    document.body.classList.add("pl-is-draft");
+    $("pl-loading").textContent = "Loading the draft\u2026";
+    fetch(catalogPath, { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }).then(function (catalog) {
+      S.catalog = catalog;     // only for composer and form names; a draft needs no catalogue entry
+      if (!window.ABCJS || !ABCJS.renderAbc) {
+        showWaiting("The score cannot be shown", "The notation library did not load. Check the connection and reload the page.", "");
+        $("pl-waiting-retry").onclick = function () { location.reload(); };
+        return;
+      }
+      wire(); wireDraft();
+      checkDraft();
+    });
+  }
+
+  function showWaiting(title, detail, status) {
+    document.title = "Draft not ready yet \u2014 Missing Works";
+    $("pl-loading").hidden = true;
+    $("pl-app").hidden = true;
+    $("pl-waiting").hidden = false;
+    $("pl-waiting-title").textContent = title;
+    $("pl-waiting-detail").textContent = detail;
+    $("pl-waiting-status").textContent = status;
+    // Draft IDs start with the composer ID (e.g. bach-...); link that composer when it exists.
+    var c = null;
+    (S.catalog && Array.isArray(S.catalog.composers) ? S.catalog.composers : []).forEach(function (x) {
+      if (x && validWorkId(x.id) && D && D.id.indexOf(x.id + "-") === 0) c = x;
+    });
+    var a = $("pl-waiting-composer");
+    if (c) { a.href = "index.html#composer/" + encodeURIComponent(c.id); a.textContent = "More from " + (c.shortName || c.name); a.hidden = false; } else a.hidden = true;
+  }
+  function waitingForFirst() {
+    var wait = Math.round(pollDelay(D.failures) / 1000);
+    showWaiting("The first draft is not ready yet",
+      "Nothing from this composition has been published yet. Keep this page open: the score appears here as soon as the first section is published.",
+      D.lastError ? "Could not reach the draft service (" + D.lastError + "). Trying again in " + wait + " s." : "Checking every " + wait + " seconds.");
+  }
+
+  /* polling: one request at a time, every 5 s while visible, backing off after failures */
+  function checkDraft() {
+    if (!D) return Promise.resolve(null);
+    if (D.inflight) return D.inflight;
+    clearTimeout(D.timer); D.timer = null;
+    D.polls++;
+    var p = fetchDraftJson(draftApiPath(D.id)).then(function (json) {
+      var meta = validateDraftResponse(json, D.id);
+      D.failures = 0; D.lastError = null;
+      return onDraftMeta(meta);
+    }).catch(function (err) {
+      if (err && err.notFound && !D.started) { D.failures = 0; D.lastError = null; return; }
+      D.failures++; D.lastError = errText(err);
+      draftLog({ t: "fail", error: D.lastError, failures: D.failures });
+    }).then(function () {
+      D.inflight = null;
+      schedulePoll();
+      if (!D.started) waitingForFirst(); else renderConn();
+      return draftState();
+    });
+    D.inflight = p;
+    return p;
+  }
+  function schedulePoll() {
+    clearTimeout(D.timer); D.timer = null;
+    D.nextDelay = pollDelay(D.failures);
+    if (D.paused || document.hidden || D.inflight) return;
+    D.timer = setTimeout(checkDraft, D.nextDelay);
+  }
+  function pausePolling() { if (D) { clearTimeout(D.timer); D.timer = null; } }
+  function resumePolling() { if (D && !D.paused && !document.hidden && !D.inflight) checkDraft(); }
+
+  function onDraftMeta(meta) {
+    var rev = meta.work.revision;
+    if (rev < D.latest) { draftLog({ t: "stale", revision: rev, latest: D.latest }); return; }   // never go backwards
+    D.latest = rev; D.latestWork = meta.work; D.snaps[rev] = meta.work;
+    var by = {};
+    D.revisions.concat(meta.revisions).forEach(function (r) { by[r.revision] = r; });
+    D.revisions = Object.keys(by).map(function (k) { return by[k]; }).sort(function (a, b) { return a.revision - b.revision; });
+    D.status = meta.status; D.completedWorkId = meta.completedWorkId;
+    if (!D.started) return showFirstDraft();
+    renderDraft();
+    return reconcileDraft();
+  }
+  function decide() {
+    return draftDecision({
+      latest: D.latest, viewing: D.viewing, follow: D.follow, state: S.state, continuing: !!S.nextTimer,
+      edited: hasEdits(), busy: D.applying != null || D.confirm != null || $("pl-sheet").getAttribute("aria-busy") === "true"
+    });
+  }
+  function reconcileDraft() {
+    var action = decide();
+    if (action !== "none") draftLog({ t: "decide", revision: D.latest, viewing: D.viewing, state: S.state, edited: hasEdits(), action: action });
+    if (action === "apply") return applySnapshot(D.latest, { auto: true });
+    renderOffer();
+  }
+
+  function showFirstDraft() {
+    var latest = D.latestWork, pinNote = D.badPin ? "That revision number is not valid, so this is the latest revision." : "";
+    var p = D.pin ? getSnapshot(D.pin).catch(function (err) {
+      pinNote = "Revision " + D.pin + " could not be opened (" + errText(err) + "), so this is the latest revision.";
+      D.pin = null; D.follow = true;
+      return latest;
+    }) : Promise.resolve(latest);
+    return p.then(function (work) {
+      var idx = 0;
+      work.movements.forEach(function (m, i) { if (m.id === D.want) idx = i; });
+      var opened = commitSnapshot(work, idx, null, { first: true });
+      if (pinNote) showDraftMsg(pinNote, null);
+      return opened;
+    });
+  }
+  function getSnapshot(rev) {
+    if (D.snaps[rev]) return Promise.resolve(D.snaps[rev]);
+    return fetchDraftJson(draftApiPath(D.id, rev)).then(function (json) {
+      var work = validateDraftManifest(json && json.work, D.id, rev);
+      D.snaps[rev] = work;
+      return work;
+    });
+  }
+
+  // Load and check revision `rev` completely before anything on screen changes. A newer
+  // request (token) wins; failures leave the current take exactly as it was.
+  function applySnapshot(rev, opts) {
+    var token = ++D.token, cur = S.movements[S.current], prevId = cur ? cur.id : D.want, prevLabel = cur ? cur.label : "", target = null;
+    D.applying = rev;
+    renderOffer();
+    draftLog({ t: "load", revision: rev, auto: !!opts.auto });
+    return getSnapshot(rev).then(function (work) {
+      if (token !== D.token) return null;
+      var idx = -1;
+      work.movements.forEach(function (m, i) { if (m.id === prevId) idx = i; });
+      target = { work: work, idx: idx < 0 ? 0 : idx, fallback: idx < 0 && !!prevLabel };
+      var m = work.movements[target.idx];
+      return fetchAbc(m.source, m.label);
+    }).then(function (text) {
+      if (token !== D.token) { draftLog({ t: "superseded", revision: rev }); return false; }
+      if (!abcParses(text)) throw new Error("its score could not be read");
+      D.applying = null;
+      if (opts.auto && decide() !== "apply") { draftLog({ t: "deferred", revision: rev, state: S.state }); renderOffer(); return false; }
+      commitSnapshot(target.work, target.idx, text, { auto: opts.auto, bar: opts.bar, fallbackFrom: target.fallback ? prevLabel : null });
+      return true;
+    }).catch(function (err) {
+      if (token !== D.token) return false;
+      D.applying = null;
+      draftLog({ t: "loadfail", revision: rev, error: errText(err) });
+      showDraftMsg("Revision " + rev + " could not be loaded (" + errText(err) + "). Still showing revision " + D.viewing + ".",
+        opts.auto ? null : function () { switchTo(rev, { bar: opts.bar }); });
+      renderOffer();
+      return false;
+    });
+  }
+
+  function commitSnapshot(work, idx, text, opts) {
+    // Automatic updates keep the reader's place; one already at the bottom follows the new
+    // bottom so freshly appended bars come into view. Explicit switches start at the top.
+    var sheet = $("pl-sheet"), keepTop = sheet.scrollTop, atBottom = keepTop > 0 && keepTop + sheet.clientHeight >= sheet.scrollHeight - 8;
+    stopAll(null);
+    clearDraftMsg();
+    D.work = work; D.viewing = work.revision; D.snaps[work.revision] = work; D.confirm = null;
+    S.info = { work: work, composer: catalogEntry("composers", work.composerId), form: catalogEntry("forms", work.formId) };
+    S.movements = work.movements.map(function (m) {
+      return { id: m.id, label: m.label, note: m.note, source: m.source, durationSeconds: m.durationSeconds, bars: m.bars };
+    });
+    S.sources = {};
+    if (text != null) S.sources[idx] = text;
+    S.edited = {}; $("pl-edited").hidden = true;
+    S.current = -1; S.pendingSeek = null;
+    buildPage(S.info);
+    D.started = true;
+    $("pl-waiting").hidden = true;
+    renderDraft();
+    updateDraftUrl();
+    draftLog({ t: "applied", revision: work.revision, movement: work.movements[idx].id, auto: !!opts.auto, first: !!opts.first });
+    var p = openMovement(idx);
+    if (opts.fallbackFrom) showDraftMsg("\u201c" + opts.fallbackFrom + "\u201d is not in revision " + work.revision + ", so this is \u201c" + work.movements[idx].label + "\u201d.", null);
+    return p.then(function (ok) {
+      if (ok && opts.auto) sheet.scrollTo({ top: atBottom ? sheet.scrollHeight : keepTop, behavior: "instant" });
+      if (!ok || opts.first) return ok;
+      if (opts.bar != null) goToBar(opts.bar);
+      else setStatus((opts.auto ? "Updated to revision " : "Revision ") + work.revision + ". Press play to listen.");
+      return ok;
+    });
+  }
+
+  function switchTo(rev, opts) {
+    if (opts.follow != null) D.follow = opts.follow;
+    $("pl-follow").checked = D.follow;
+    D.confirm = null;
+    clearDraftMsg();
+    if (S.state !== "idle" || S.nextTimer) stopAll("Stopped. Opening revision " + rev + "\u2026");
+    updateDraftUrl();
+    return applySnapshot(rev, { auto: false, bar: opts.bar });
+  }
+
+  function updateDraftUrl() {
+    var p = new URLSearchParams(location.search);
+    p.set("draft", D.id);
+    if (D.follow || !D.viewing) p.delete("revision"); else p.set("revision", String(D.viewing));
+    try { history.replaceState(history.state, "", location.pathname + "?" + p.toString() + location.hash); } catch (e) { }
+  }
+
+  /* bars */
+  function currentBarMap() {
+    if (S.barInfo === undefined) {
+      S.barInfo = null;
+      try {
+        var t = S.visualObj && S.visualObj.setTiming ? S.visualObj.setTiming() : null;
+        S.barInfo = barMap((S.visualObj && S.visualObj.noteTimings) || t);
+      } catch (e) { S.barInfo = null; }
+    }
+    return S.barInfo;
+  }
+  // Seek to the start of a written bar, using abcjs's own note timings (tempo changes and
+  // repeats included). With repeats, the first time through the bar is used.
+  function goToBar(n) {
+    var map = currentBarMap(), t = barSeek(map, +n);
+    if (!t) { setStatus("Bar positions are not available for this score. Click a note to start there."); return null; }
+    seekTo(t.fraction);
+    setStatus((t.clamped ? "This movement has " + map.count + " bars. " : "") + (S.state === "playing" ? "Jumped to bar " : "Will start at bar ") + t.bar + (t.repeats ? " (first time through)" : "") + ".");
+    return t;
+  }
+  function afterDraftMovement() {
+    var map = currentBarMap();
+    $("pl-goto").hidden = !map;
+    if (map) $("pl-bar-of").textContent = "of " + map.count;     // no max attribute: larger numbers are clamped, not refused
+    renderOffer();
+  }
+
+  /* rendering */
+  function renderDraft() {
+    var w = D.work, c = S.info && S.info.composer, f = S.info && S.info.form;
+    $("pl-draft").hidden = false;
+    $("pl-stop").hidden = false;
+    document.title = "Draft: " + w.title + " \u2014 Missing Works";
+    $("pl-kicker").textContent = ["Live draft", c ? "After " + c.name : "", f ? f.label : ""].filter(Boolean).join(" \u00b7 ");
+    $("pl-crumb-work").textContent = w.title + " (draft)";
+    $("pl-draft-rev").textContent = "Revision " + w.revision + (D.viewing === D.latest ? " \u00b7 latest" : " of " + D.latest);
+    var t = $("pl-draft-time");
+    t.textContent = w.publishedAt ? "published " + fmtWhen(w.publishedAt) : "";
+    if (w.publishedAt) t.setAttribute("datetime", w.publishedAt); else t.removeAttribute("datetime");
+    $("pl-draft-note").textContent = w.changeNote;
+    $("pl-draft-note").hidden = !w.changeNote;
+    var st = $("pl-draft-state");
+    st.dataset.status = D.status || "";
+    st.textContent = D.status === "completed" ? "Composition finished" : D.status === "open" ? "Paused \u2014 not being composed right now" : "Being composed now";
+    var done = D.status === "completed" && D.completedWorkId;
+    $("pl-draft-done").hidden = !done;
+    if (done) $("pl-draft-final").href = "work.html?id=" + encodeURIComponent(D.completedWorkId);
+    var key = D.revisions.map(function (r) { return r.revision; }).join(",") + "|" + D.latest;
+    var sel = $("pl-revision");
+    if (key !== D.optionsKey) {
+      D.optionsKey = key;
+      sel.textContent = "";
+      D.revisions.slice().reverse().forEach(function (r) {
+        var o = el("option", { value: String(r.revision) }, "Revision " + r.revision + (r.revision === D.latest ? " (latest)" : "") + (r.publishedAt ? " \u2014 " + fmtWhen(r.publishedAt) : ""));
+        if (r.changeNote) o.title = r.changeNote;
+        sel.appendChild(o);
+      });
+    }
+    sel.value = String(D.viewing);
+    $("pl-follow").checked = D.follow;
+    renderOffer();
+  }
+  function renderOffer() {
+    var box = $("pl-update");
+    if (!D || !D.started) { box.hidden = true; return; }
+    var keep = $("pl-keep"), barWrap = $("pl-update-bar-wrap"), btn = $("pl-switch"), live = $("pl-update-text");
+    // A live region: write only real changes, so state changes do not re-announce it.
+    var say = function (v) { if (live.textContent !== v) live.textContent = v; };
+    keep.hidden = true; barWrap.hidden = true; btn.hidden = false;
+    if (D.confirm != null) {
+      say("Opening revision " + D.confirm + " discards your edits to this movement.");
+      btn.textContent = "Discard my edits and open revision " + D.confirm;
+      keep.hidden = false; box.hidden = false; box.dataset.kind = "confirm";
+      return;
+    }
+    if (D.applying != null) {
+      say("Loading revision " + D.applying + "\u2026");
+      btn.hidden = true; box.hidden = false; box.dataset.kind = "loading";
+      return;
+    }
+    if (!(D.latest > D.viewing)) { box.hidden = true; box.dataset.kind = ""; return; }
+    var cur = S.movements[S.current], lm = null, edited = hasEdits();
+    if (cur && D.latestWork) D.latestWork.movements.forEach(function (m) { if (m.id === cur.id) lm = m; });
+    var grew = lm && cur && lm.bars != null && cur.bars != null && lm.bars !== cur.bars ? " This movement has " + lm.bars + " bars there (" + cur.bars + " here)." : "";
+    var why = !D.follow ? "" : S.state !== "idle" || S.nextTimer ? " This take stays as it is until you switch or stop." : edited ? " Your edits stay until you switch." : "";
+    say((D.follow ? "Revision " + D.latest + " is ready." : "You are on revision " + D.viewing + "; the latest is revision " + D.latest + ".") + grew + why);
+    btn.textContent = edited ? "Discard my edits and switch to revision " + D.latest : D.follow ? "Switch to revision " + D.latest : "Back to latest (revision " + D.latest + ")";
+    barWrap.hidden = false;
+    $("pl-update-bar").max = lm && lm.bars ? lm.bars : "";
+    box.hidden = false; box.dataset.kind = D.follow ? "offer" : "newer";
+  }
+  function renderConn() {
+    var box = $("pl-conn");
+    if (!D.started || !D.failures) { box.hidden = true; return; }
+    $("pl-conn-text").textContent = "Can\u2019t reach the draft service (" + D.lastError + "). Still on revision " + D.viewing + "; it keeps playing. Next check in " + Math.round(D.nextDelay / 1000) + " s.";
+    box.hidden = false;
+  }
+  function showDraftMsg(msg, retry) {
+    D.msgRetry = retry;
+    $("pl-draft-msg-text").textContent = msg;
+    $("pl-draft-msg-retry").hidden = !retry;
+    $("pl-draft-msg").hidden = false;
+  }
+  function clearDraftMsg() { if (D) D.msgRetry = null; $("pl-draft-msg").hidden = true; }
+
+  function wireDraft() {
+    $("pl-waiting-retry").onclick = function () { checkDraft(); };
+    $("pl-conn-retry").addEventListener("click", function () { checkDraft(); });
+    $("pl-draft-msg-retry").addEventListener("click", function () { var r = D.msgRetry; clearDraftMsg(); if (r) r(); });
+    $("pl-draft-msg-close").addEventListener("click", clearDraftMsg);
+    $("pl-revision").addEventListener("change", function () {
+      var r = +this.value;
+      this.value = String(D.viewing);          // shows the take actually on screen until it changes
+      if (!validRevision(r) || r === D.viewing) return;
+      var follow = r === D.latest ? D.follow : false;
+      if (hasEdits()) { D.confirm = r; D.confirmFollow = follow; renderOffer(); return; }
+      switchTo(r, { follow: follow });
+    });
+    $("pl-follow").addEventListener("change", function () {
+      D.follow = this.checked;
+      updateDraftUrl();
+      if (D.follow) reconcileDraft(); else renderOffer();
+    });
+    $("pl-switch").addEventListener("click", function () {
+      if (D.confirm != null) { var r = D.confirm; switchTo(r, { follow: D.confirmFollow }); return; }
+      if (!(D.latest > D.viewing)) return;
+      var v = $("pl-update-bar").value.trim(), bar = /^[0-9]{1,6}$/.test(v) && +v >= 1 ? +v : null;
+      switchTo(D.latest, { follow: true, bar: bar });
+    });
+    $("pl-keep").addEventListener("click", function () { D.confirm = null; renderOffer(); });
+    // Stop (draft only): silence the take without autoplay; a queued revision then follows
+    // the usual rule (applied only when following latest and the source is unedited).
+    $("pl-stop").addEventListener("click", function () {
+      stopAll("Stopped.");
+      $("pl-stop").disabled = true;
+      reconcileDraft();
+    });
+    $("pl-goto").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var v = $("pl-bar").value.trim();
+      if (!/^[0-9]{1,6}$/.test(v) || +v < 1) { setStatus("Type a bar number, 1 or more."); return; }
+      goToBar(+v);
+    });
+    $("pl-abc").addEventListener("input", function () { renderOffer(); });
+    $("pl-reset").addEventListener("click", function () { renderOffer(); });
+    document.addEventListener("visibilitychange", function () { if (document.hidden) pausePolling(); else resumePolling(); });
+    window.addEventListener("pagehide", function () { D.paused = true; pausePolling(); });
+    window.addEventListener("pageshow", function () { if (!D.paused) return; D.paused = false; resumePolling(); });
+  }
+
+  function draftState() {
+    if (!D) return null;
+    var cur = S.movements[S.current];
+    return {
+      id: D.id, viewing: D.viewing, latest: D.latest, follow: D.follow, status: D.status, completedWorkId: D.completedWorkId,
+      started: D.started, polls: D.polls, failures: D.failures, nextDelay: D.nextDelay, inflight: !!D.inflight, timer: !!D.timer,
+      applying: D.applying, confirm: D.confirm, edited: hasEdits(), movement: cur ? cur.id : null,
+      bars: S.movements.map(function (m) { return m.bars; }), revisions: D.revisions.map(function (r) { return r.revision; }),
+      offer: !$("pl-update").hidden && $("pl-update").dataset.kind, conn: !$("pl-conn").hidden, log: D.log.slice()
+    };
+  }
+
   function start() {
     var params = new URLSearchParams(location.search);
     var id = params.get("id") || "";
     var catalogPath = catalogPathFrom(params.get("catalog"));
     if (!catalogPath) { notFound("That catalogue is not available", "The page address points at a catalogue file this player will not read.", null); return; }
+    if (params.has("draft")) { startDraft(params, catalogPath); return; }
     var load = function () {
       $("pl-loading").textContent = "Loading the catalogue\u2026";
       return fetch(catalogPath, { cache: "no-cache" }).then(function (r) {
@@ -783,7 +1324,11 @@
     parts: function () { return S.parts.map(function (p, i) { return { label: p.label, program: p.program, on: S.partsOn[i] }; }); },
     current: function () { return S.current; }, peak: function () { return S.lastPeak; },
     audioParams: function () { return audioParams(); }, midiBytes: function () { return Array.prototype.slice.call(midiBytes(), 0, 14); },
-    seek: seekTo, stop: function () { stopAll("Stopped."); }
+    seek: seekTo, stop: function () { stopAll("Stopped."); },
+    // live drafts
+    revision: function () { return D ? D.viewing : null; }, draft: draftState,
+    checkDraft: function () { return D ? checkDraft() : Promise.resolve(null); },
+    goToBar: function (n) { return D ? goToBar(n) : null; }, bars: function () { return D ? currentBarMap() : null; }
   };
 
   if (document.querySelector("[data-mw-player]")) {

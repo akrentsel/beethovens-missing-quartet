@@ -33,6 +33,14 @@
     <p><a class="button-link" href="index.html">Browse the library</a></p>
   </section>
 
+  <section class="pl-missing pl-waiting" id="pl-waiting" hidden aria-labelledby="pl-waiting-title">
+    <p class="pl-draft-badge">Live draft</p>
+    <h1 id="pl-waiting-title">The first draft is not ready yet</h1>
+    <p id="pl-waiting-detail"></p>
+    <p class="pl-waiting-status"><span id="pl-waiting-status" role="status" aria-live="polite"></span> <button type="button" class="secondary-button" id="pl-waiting-retry">Check now</button></p>
+    <p class="pl-waiting-links"><a id="pl-waiting-composer" href="index.html" hidden>Composer</a><a href="index.html#queue">The next work</a><a href="index.html#works">Finished works</a></p>
+  </section>
+
   <div id="pl-app" hidden>
     <nav class="breadcrumb pl-crumbs" aria-label="Breadcrumb">
       <a href="index.html">Missing Works</a> <span aria-hidden="true">/</span>
@@ -46,6 +54,16 @@
         <h1 id="pl-title"></h1>
         <p class="pl-subtitle" id="pl-subtitle"></p>
         <p class="pl-disclaimer" role="note"><strong>AI-composed homage</strong>, not an original or rediscovered work<span id="pl-disclaimer-who"></span>. No composer endorsement. Sampled playback, not live performers.</p>
+        <section class="pl-draft" id="pl-draft" hidden aria-label="Live draft">
+          <p class="pl-draft-top"><span class="pl-draft-badge">Draft</span> <strong id="pl-draft-rev"></strong> <time id="pl-draft-time"></time></p>
+          <p class="pl-draft-state" id="pl-draft-state"></p>
+          <p class="pl-draft-note" id="pl-draft-note" hidden></p>
+          <p class="pl-draft-done" id="pl-draft-done" hidden>This work is finished. <a id="pl-draft-final" href="index.html">Listen to the completed work</a></p>
+          <div class="pl-draft-controls">
+            <label>Take <select id="pl-revision" aria-label="Revision"></select></label>
+            <label class="pl-follow"><input type="checkbox" id="pl-follow" checked> Follow latest</label>
+          </div>
+        </section>
       </header>
 
       <nav class="pl-side" aria-labelledby="pl-movements-h">
@@ -68,6 +86,17 @@
           <p class="pl-movement-note" id="pl-movement-note"></p>
         </div>
 
+        <div class="pl-notice pl-update" id="pl-update" hidden>
+          <p id="pl-update-text" role="status" aria-live="polite"></p>
+          <div class="pl-update-actions">
+            <label id="pl-update-bar-wrap">Start at bar <input type="number" id="pl-update-bar" min="1" step="1" inputmode="numeric" placeholder="1"></label>
+            <button type="button" class="secondary-button" id="pl-switch">Switch</button>
+            <button type="button" class="text-button" id="pl-keep" hidden>Keep my edits</button>
+          </div>
+        </div>
+        <div class="pl-notice pl-conn" id="pl-conn" role="alert" hidden><span id="pl-conn-text"></span> <button type="button" class="secondary-button" id="pl-conn-retry">Check now</button></div>
+        <div class="pl-notice" id="pl-draft-msg" role="alert" hidden><span id="pl-draft-msg-text"></span> <button type="button" class="secondary-button" id="pl-draft-msg-retry" hidden>Try again</button> <button type="button" class="text-button" id="pl-draft-msg-close">Dismiss</button></div>
+
         <div class="pl-transport" id="pl-transport" role="group" aria-label="Playback controls" tabindex="-1">
           <button class="pl-play" id="pl-play" type="button" data-state="idle" aria-label="Play" disabled>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path id="pl-play-icon" d="M7 4l14 8-14 8z"/></svg>
@@ -88,6 +117,8 @@
                 <option value="piano">Piano reduction</option>
               </select>
             </label>
+            <button type="button" class="pl-stop" id="pl-stop" hidden disabled>Stop</button>
+            <form class="pl-goto" id="pl-goto" hidden><label>Go to bar <input type="number" id="pl-bar" min="1" step="1" inputmode="numeric" aria-describedby="pl-bar-convention"></label> <span id="pl-bar-of"></span> <button type="submit">Go</button><small id="pl-bar-convention">Navigation counts a pickup as bar 1.</small></form>
             <label class="pl-attacca" id="pl-attacca-wrap"><input type="checkbox" id="pl-attacca" checked> Continue to the next movement</label>
           </div>
           <div class="pl-parts-row" id="pl-parts-wrap" hidden>

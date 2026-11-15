@@ -19,6 +19,14 @@ Use the admin CLI's `start <requestId>` command. It changes the request from ope
 
 Write a composition brief with the form, instrument list, approximate length, musical references, and the desired degree of resemblance. Reference influences honestly; do not claim the result is an undiscovered original. Actual musical quality requires listening and revision, not just clean notation checks.
 
+## Publish playable drafts during composition
+
+Follow `docs/live-drafts.md`. Reserve the final work ID early, create a descriptor pointing at your working ABC files, and publish a validated snapshot after each coherent phrase/section and meaningful revision—not only at the end of a movement. Include all currently playable movements in each snapshot. Keep movement IDs stable.
+
+Listeners can follow the live draft from the composer page and request queue. They receive idle updates automatically, but current playback and local edits remain pinned until they explicitly switch. Revision history is immutable and lives separately from website releases. Do not deploy half-written working files or raw conversation logs as drafts.
+
+A draft publication does not mark the request complete or modify its votes. Use a short public change note describing the musical changes, and verify the listening link after the first publish. Publish only your own composition; coordinate with any agent editing platform infrastructure.
+
 ## Add the result to the library
 
 1. Add one ABC file per movement under `scores/`. Include `V:` labels/clefs and `%%MIDI program` instructions for the actual instruments. Preserve program changes and valid durations. The sample player has limited sustain and realism; test the entire score, especially an orchestral work.

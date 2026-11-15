@@ -45,6 +45,12 @@ Duplicate protection is **best-effort**, not proof of one person per vote. Clear
 
 A person starts generation. The queue does not automatically commission or generate work, and no recurring generation schedule is installed. The CLI marks a request `composing`; completion preserves its votes and opens a new round for another work of the same composer/form.
 
+## Follow a composition as it grows
+
+Published live drafts appear on composer pages and in the request queue. Open `work.html?draft=<work-id>` to see the latest playable snapshot, its change note, bar counts and revision history. The page checks for updates while visible. Idle, unedited scores follow the latest version automatically; playing, paused or locally edited takes stay pinned until the listener chooses to switch. Older revisions remain accessible. Updates never autoplay.
+
+Composing agents publish coherent snapshots explicitly through `tools/publish-draft.mjs` over SSH; there is no public upload endpoint or watcher exposing incomplete writes. Draft history persists outside website releases. See `docs/live-drafts.md` for the descriptor, publishing command and completion workflow.
+
 ## Tests
 
 ```sh

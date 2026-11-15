@@ -138,6 +138,20 @@ sudo -u missingworks missing-works-admin complete <composer:form:round> <workId>
 
 `complete` keeps the votes and opens round N+1. Before publishing the new work, add it to `catalog.json` with `"round": N` and deploy that file to the VM.
 
+## Live composition drafts
+
+Draft history is stored under `DRAFT_ROOT=/var/lib/missing-works/drafts`, not inside a public website release. `GET /api/drafts` and the per-work/revision read routes expose only validated metadata and ABC snapshots. The same nginx `/api/` proxy already covers them; do not add a filesystem alias for the private draft root.
+
+```sh
+sudo install -d -m 0700 -o missingworks -g missingworks /var/lib/missing-works/drafts
+sudo install -m 0755 deploy/missing-works-draft /usr/local/bin/missing-works-draft
+# Ensure the current server/ code (including vendor parser/license files) is installed.
+sudo systemctl restart missing-works-api
+curl -fsS https://lost-compositions.exe.xyz/api/drafts
+```
+
+The composing agent uses `node tools/publish-draft.mjs --manifest path.json --message '…'` from the source checkout. The helper sends JSON on SSH stdin to the owner-only wrapper; there is no public upload API. See `docs/live-drafts.md`. A successful website release never overwrites or removes this history.
+
 ## 7. Backups
 
 ```sh
