@@ -1,0 +1,27 @@
+[Unit]
+Description=Missing Works vote database backup
+
+[Service]
+Type=oneshot
+User=missingworks
+Group=missingworks
+ExecStart=/usr/local/bin/missing-works-backup
+StateDirectory=missing-works
+StateDirectoryMode=0700
+ReadWritePaths=/var/lib/missing-works /var/backups/missing-works
+UMask=0077
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+PrivateNetwork=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictNamespaces=yes
+RestrictSUIDSGID=yes
+LockPersonality=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+CapabilityBoundingSet=

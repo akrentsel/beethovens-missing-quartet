@@ -1,0 +1,20 @@
+# OPTIONAL alternative to exe.dev + nginx: Caddy terminates HTTPS itself on a
+# plain VM (ports 80/443 open). Not used for the exe.dev deployment.
+#
+# >>> REPLACE api.example.com WITH THE REAL API HOSTNAME (DNS A/AAAA -> VM) <<<
+#
+# Caddy (2.5+) ignores client-sent X-Forwarded-For unless trusted_proxies is set
+# and sends the connecting client's address, so the rightmost entry the API uses
+# is the real client. No `log` directive: no access logs with client IPs.
+
+api.example.com {
+	request_body {
+		max_size 4KB
+	}
+	handle /api/* {
+		reverse_proxy 127.0.0.1:3000
+	}
+	handle {
+		respond 404
+	}
+}

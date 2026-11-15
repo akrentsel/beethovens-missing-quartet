@@ -1,0 +1,8 @@
+#!/bin/sh
+# Install as /usr/local/bin/missing-works-admin (root:root 0755) and run as the
+# service user, e.g.:  sudo -u missingworks missing-works-admin queue
+set -eu
+set -a
+. /etc/missing-works/api.env
+set +a
+exec /usr/local/bin/node /opt/missing-works/server/admin.mjs "$@"
