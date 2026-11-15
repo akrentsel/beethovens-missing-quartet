@@ -1,0 +1,11 @@
+#!/bin/sh
+# Install as /usr/local/bin/missing-works-draft (root:root 0755) and run as the
+# service user with the payload on stdin, e.g. from tools/publish-draft.mjs:
+#   ssh HOST sudo -n -u missingworks /usr/local/bin/missing-works-draft publish < payload.json
+# Needs DB_PATH, CATALOG_PATH and DRAFT_ROOT (default /var/lib/missing-works/drafts,
+# i.e. next to DB_PATH) from api.env; DRAFT_ROOT must be writable by missingworks.
+set -eu
+set -a
+. /etc/missing-works/api.env
+set +a
+exec /usr/local/bin/node /opt/missing-works/server/draft-cli.mjs "$@"

@@ -6,6 +6,7 @@ import { VoteStore, AppError, hashVoterToken, REQUEST_ID_RE } from './db.mjs';
 import { loadCatalog } from './catalog.mjs';
 import { RateLimiter, clientKey } from './rate-limit.mjs';
 import { serveStatic } from './static.mjs';
+import { createDraftRoutes, defaultDraftRoot } from './drafts.mjs';
 
 export const REPO_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const PRODUCTION_ORIGIN = 'https://lost-compositions.exe.xyz';
@@ -41,10 +42,13 @@ export function optionsFromEnv(env = process.env) {
     const u = new URL(o);
     if (u.origin !== o) throw new Error(`ALLOWED_ORIGINS entry is not a bare origin: ${o}`);
   }
+  const dbPath = env.DB_PATH || resolve(REPO_ROOT, 'var/votes.sqlite');
   return {
     host: env.HOST || '127.0.0.1',
     port,
-    dbPath: env.DB_PATH || resolve(REPO_ROOT, 'var/votes.sqlite'),
+    dbPath,
+    // Live draft snapshots live outside website releases (production: /var/lib/missing-works/drafts).
+    draftRoot: env.DRAFT_ROOT ? resolve(env.DRAFT_ROOT) : defaultDraftRoot(dbPath),
     catalogPath: env.CATALOG_PATH || resolve(REPO_ROOT, 'data/catalog.json'),
     allowedOrigins,
     trustProxy: envBool(env.TRUST_PROXY),
@@ -70,6 +74,7 @@ export function createApp(opts) {
     now,
   } = opts;
   if (!dbPath) throw new Error('dbPath is required');
+  const draftRoot = opts.draftRoot === undefined ? defaultDraftRoot(dbPath) : opts.draftRoot;
   const store = new VoteStore({ dbPath, catalog, now });
   const origins = new Set(allowedOrigins);
   const limiter = new RateLimiter({ perClient: rateLimitPerMinute, global: globalRateLimitPerMinute, maxClients: maxRateClients });
@@ -89,6 +94,8 @@ export function createApp(opts) {
   function sendError(res, status, code, message, extra) {
     sendJson(res, status, { error: { code, message } }, extra);
   }
+
+  const handleDrafts = createDraftRoutes({ root: draftRoot, store, sendJson, sendError });
 
   function readBody(req) {
     return new Promise((resolveBody, reject) => {
@@ -169,6 +176,10 @@ export function createApp(opts) {
       const body = parseVoteBody(await readBody(req));
       const request = store.setVote(body.requestId, voter, body.voted);
       return sendJson(res, 200, { request }, cors);
+    }
+    if (path === '/api/drafts' || path.startsWith('/api/drafts/')) {
+      // Read-only. Drafts are published only by the owner over SSH (server/draft-cli.mjs).
+      return handleDrafts(req, res, path, cors);
     }
     return sendError(res, 404, 'not_found', 'Not found', cors);
   }
