@@ -1,0 +1,169 @@
+%%label I. Allegro con brio
+%%note A major, mostly in 7/8 (2+2+3). A curtain-raiser states the quartet's motto (two rising fourths and a falling third); the first theme passes from first violin to viola over a plucked cello figure; a 5/8 transition leads to a sung second theme in C major built from the same two fourths. The development is a fugato whose climax plays both themes at once; the second theme returns in A.
+X:1
+T:Bernstein’s Missing Quartet
+T:I. Allegro con brio
+C:Lor, in the manner of Leonard Bernstein
+M:7/8
+L:1/8
+Q:"Allegro con brio" 1/4=132
+%%score [1 | 2 | 3 | 4]
+V:1 clef=treble name="Vl. I"
+V:2 clef=treble name="Vl. II"
+V:3 clef=alto name="Vla."
+V:4 clef=bass name="Vc."
+K:A
+V:1
+%%MIDI program 40
+V:2
+%%MIDI program 40
+V:3
+%%MIDI program 41
+V:4
+%%MIDI program 42
+% bars 1-2: Curtain-raiser. The motto (E, A, D, B) in the violins, its inversion below; two stacks of open fifths
+[V:1] [M:7/8] !ff!!>!e2 !>!a2 !>!d'ba | !>!e2 z2 !>!f z2 |
+[V:2] [M:7/8] !ff!!>!E2 !>!A2 !>!dBA | !>!A2 z2 !>!B z2 |
+[V:3] [M:7/8] !ff!!>!A2 !>!E2 !>!B,DE | !>!D2 z2 !>!E z2 |
+[V:4] [M:7/8] !ff!!>!A,2 !>!E,2 !>!B,,D,E, | !>!=G,,2 z2 !>!A,, z2 | [I:MIDI program 45]
+% bars 3-4: The rocking accompaniment alone
+[V:1] z7 | z7 |
+[V:2] z7 | z4 z !p!.B.A |
+[V:3] !p!z .E z .C z .E.C | z .E z .C z .E.C |
+[V:4] "pizz."!mf!A,,2 E,2 A,E,A,, | A,,2 E,2 A,E,A,, |
+% bars 5-8: First theme in the first violin, second violin in sixths and tenths below
+[V:1] !mf!e2 a2 d'ba | c'2 b2 afe | d2 =g2 =c'ag | [M:3/4] bc' d'2 !>!e'2 | [M:7/8]
+[V:2] !mp!c2 e2 f3 | A2 G2 F3 | B2 d2 e3 | [M:3/4] GA B2 !>!B2 | [M:7/8]
+[V:3] z .E z .C z .E.C | z .E z .C z .E.C | z .D z .B, z .D.B, | [M:3/4] z .D z .D .E.D | [M:7/8]
+[V:4] A,,2 E,2 A,E,A,, | F,,2 C,2 F,C,F,, | =G,,2 D,2 =G,D,G,, | [M:3/4] E,2 F,2 G,2 | [M:7/8]
+% bars 9-12: The theme in the viola, a descant above
+[V:1] !mp!e'4- e'd'c' | a4- abc' | =g4- gab | [M:3/4] g2 ab !>!e'2 | [M:7/8]
+[V:2] !p!z .c z .e z .B.e | z .c z .A z .c.A | z .B z .d z .B.d | [M:3/4] z .G z .B .d.B | [M:7/8]
+[V:3] !mf!E2 A2 dBA | c2 B2 AFE | D2 =G2 =cAG | [M:3/4] Bc d2 !>!e2 | [M:7/8]
+[V:4] A,,2 E,2 A,E,A,, | F,,2 C,2 F,C,F,, | =G,,2 D,2 =G,D,G,, | [M:3/4] E,2 F,2 G,2 | [M:7/8] [I:MIDI program 42]
+% bars 13-14: The curtain-raiser returns
+[V:1] !ff!!>!e2 !>!a2 !>!d'ba | !>!e2 z2 !>!f z2 | [M:5/8]
+[V:2] !ff!!>!E2 !>!A2 !>!dBA | !>!A2 z2 !>!B z2 | [M:5/8]
+[V:3] !ff!!>!A2 !>!E2 !>!B,DE | !>!D2 z2 !>!E z2 | [M:5/8]
+[V:4] "arco"!ff!!>!A,2 !>!E,2 !>!B,,D,E, | !>!=G,,2 z2 !>!A,, z2 | [M:5/8]
+% bars 15-20: Transition. The motto in even eighths makes a 5/8 bar and climbs through the four instruments; then two bars a half step astray (A flat, B flat)
+[V:1] !mp!ead'ba | !<(!a2 a3 | a2 =g3 | a2 a3!<)! | [M:7/8]
+[V:2] !p!F2 F3 | !<(!B2 B3 | !mp!=G=c=fdc | =c2 c3!<)! | [M:7/8]
+[V:3] !p!A,2 A,3 | !mp!FBecB | !<(!A2 A3 | =F2 F3!<)! | [M:7/8]
+[V:4] !p!D,2 D,3 | !<(!E,2 E,3 | =F,2 F,3 | !mf!D,=G,=CA,G,!<)! | [M:7/8]
+[V:1] !ff!!>!_e2 !>!_a2 !>!_d'_ba | !>!=f2 !>!_b2 !>!_e'=c'b | [M:3/4]
+[V:2] !ff!!>!_E2 !>!_A2 !>!_d_BA | !>!=F2 !>!_B2 !>!_e=cB | [M:3/4]
+[V:3] !f!z ._E z .=C z .E.C | z .=F z .D z .F.D | [M:3/4]
+[V:4] !f!._A,,2 ._E,2 ._A,.E,.A,, | ._B,,2 .=F,2 ._B,.F,.B,, | [M:3/4]
+% bar 21: A C major stack of fifths
+[V:1] !>!=c'2 z4 | [Q:"Meno mosso, cantabile" 1/4=100]
+[V:2] !>!e2 z4 | [Q:"Meno mosso, cantabile" 1/4=100]
+[V:3] !ff!!>![DA]2 z4 | [Q:"Meno mosso, cantabile" 1/4=100]
+[V:4] !ff!!>![=C,,=G,,]2 z4 | [Q:"Meno mosso, cantabile" 1/4=100] [I:MIDI program 45]
+% bars 22-23: Second theme, C major. Two bars of accompaniment
+[V:1] z6 | z6 |
+[V:2] !pp!(=Gd=gdGd) | (=Gd=gdGd) |
+[V:3] z6 | z6 |
+[V:4] "pizz."!p!=C,,3 =G,, =C,2 | =C,,3 =G,, =C,2 |
+% bars 24-31: The second theme in the viola: the motto's two fourths, now slow and sung (G, C, F), over a swaying pizzicato
+[V:1] z6 | z2 !pp!(e'd' b2) | z6 | z2 (d'b =g2) | !p!(e'4 =c'2) | (b4 d'2) | (_e'3 d' =c'2) | (_a4 =g2) |
+[V:2] (=Gd=gdGd) | (Be=geBe) | (AdfdAd) | (=G=cecGc) | (A=c=fcAc) | (Bd=fdBd) | (=c_e=gece) | (_A=c=fcBd) |
+[V:3] !mf!(=G,2 =C2 =F2- | =FD E4) | (F2 =G2 B2- | BA =G4) | (A2 =c2 e2- | ed B2 =G2) | (_A3 =G _E2) | (=F4 D2) |
+[V:4] =C,,3 =G,, =C,2 | =C,,3 =G,, =C,2 | =C,,3 A,, D,2 | =C,,3 =G,, E,2 | =F,,3 =C, =F,2 | =G,,3 D, =G,2 | _A,,3 _E, _A,2 | _D,3 _A, =G,,2 | [I:MIDI program 42]
+% bars 32-39: The second theme in the first violin; second violin in thirds and sixths, the viola flowing, the cello bowed
+[V:1] !mf!(=G2 =c2 =f2- | =fd e4) | (f2 =g2 b2- | ba =g4) | (a2 =c'2 e'2- | e'd' b2 =g2) | (_a3 =g _e2) | (=f4 d2) |
+[V:2] !p!(E4 D2) | (B,2 =GA B2) | (d2 e2 f2) | (=g2 ed =c2) | (=c2 e2 a2) | (a2 =f2 d2) | (=c3 _B =G2) | (d4 _B2) |
+[V:3] !pp!(=G,D=GDG,D) | (=G,E=GEG,E) | (A,DADA,D) | (=G,=CECG,C) | (A,=C=FCA,C) | (B,D=FDB,D) | (_A,=C_ECA,C) | (_B,D=FDB,D) |
+[V:4] "arco"!p!=C,6 | =C,6 | =C,6 | =C,4 E,2 | =F,,4 A,,2 | =G,,4 B,,2 | _A,,4 =C,2 | _B,,4 D,2 |
+% bar 40: Arrival on C with an added ninth
+[V:1] !p!!>(!e6!>)! | [Q:"Tempo I" 1/4=132] [M:7/8]
+[V:2] !>(!=G6!>)! | [Q:"Tempo I" 1/4=132] [M:7/8]
+[V:3] !>(!D6!>)! | [Q:"Tempo I" 1/4=132] [M:7/8]
+[V:4] !>(!=C,6!>)! | [Q:"Tempo I" 1/4=132] [M:7/8] [I:MIDI program 45]
+% bars 41-46: Development. A fugato on the first theme, entries rising by fifths (C, G, D) over the plucked figure
+[V:1] z7 | z7 | z7 | z7 | !mf!A2 d2 =ged | f2 e2 dBA |
+[V:2] z7 | z7 | !mp!D2 =G2 =cAG | B2 A2 =GED | !mp!z f2 a2 c'a | d'2 c'2 b3 |
+[V:3] !mp!=G,2 =C2 =FDC | E2 D2 =CA,=G, | !p!z B2 d2 fd | =g2 f2 e3 | z .D z .F z .A.F | z .D z .F z .A.F |
+[V:4] "pizz."!p!=C,,2 =G,,2 =C,G,,C,, | =C,,2 =G,,2 =C,G,,C,, | =G,,2 D,2 =G,D,G,, | =G,,2 D,2 =G,D,G,, | !mp!D,2 A,,2 D,A,,D, | D,2 A,,2 D,A,,D, |
+% bars 47-54: Interlude: the second theme, hushed, in 7/8 in E flat; then in the cello in G under the first theme. The two themes are tried together before the climax
+[V:1] !pp!_B2 _e2 _a3- | _a=f =g2- g3 | a2 _b2 d'3- | d'=c' _b2- b3 | !p!d2 =g2 =c'ag | a2 =g2 edB | e2 a2 d'ba | b2 a2 =ged | [M:5/8]
+[V:2] z7 | z7 | z7 | z7 | !pp!z .d z .B z .d.A | z .d z .B z .d.B | z .e z .A z .e.c | z .d z .B z .d.B | [M:5/8]
+[V:3] !pp!z ._B, z .=G, z .B,.=F, | z ._B, z .=G, z .B,.G, | z .=C z .=F, z .C.A, | z ._B, z .=G, z .B,.G, | [I:MIDI program 45] "pizz."!p!=G,2 D2 =GDG, | =G,2 D2 =GDG, | =G,2 E2 AEG, | =G,2 D2 =GDG, | [M:5/8] [I:MIDI program 41]
+[V:4] !pp!_E,,2 _B,,2 _E,B,,E,, | _E,,2 _B,,2 _E,B,,E,, | _E,,2 =C,2 =F,C,E,, | _E,,2 _B,,2 _E,B,,E,, | [I:MIDI program 42] "arco"!mp!D,2 =G,2 =C3- | =CA, B,2- B,3 | C2 D2 F3- | FE D2- D3 | [M:5/8] [I:MIDI program 42]
+% bars 55-58: Stretto on the motto in 5/8 over a dominant pedal, the last bar in parallel fourths
+[V:1] z2z3 | z2z3 | !mf!ad'=g'e'd' | !f!!<(!be'a'f'e'!<)! | [M:7/8]
+[V:2] !p!E2 E3 | !mf!ead'ba | a2 a3 | !f!!<(!fbe'c'b!<)! | [M:7/8]
+[V:3] "arco"!mp!B,EAFE | E2 E3 | !mf!B2 B3 | !f!!<(!cfbgf!<)! | [M:7/8]
+[V:4] "arco"!mp!!>!E,2 !>!E,3 | !>!E,2 !>!E,3 | !mf!!>!E,2 !>!E,3 | !f!!>!E,2 !>!E,3 | [M:7/8]
+% bars 59-62: Climax in F. The second theme, broadened, in the first violin over the first theme in the second violin: both begin with the same two fourths
+[V:1] !ff!=c2 =f2 _b3- | _b=g a2- a3 | b2 =c'2 e'3- | e'd' =c'2- c'3 |
+[V:2] !ff!=C2 =F2 _B=GF | =G2 =F2 D=CA, | D2 =G2 =cAG | A2 =G2 =FD=C |
+[V:3] !f!z .=C z .A, z .C.=G, | z .=C z .A, z .C.A, | z .D z .=G, z .D.B, | z .=C z .A, z .C.A, |
+[V:4] !f!.=F,,2 .=C,2 .=F,.C,.F,, | .=F,,2 .=C,2 .=F,.C,.F,, | .=F,,2 .D,2 .=G,.D,.F,, | .=F,,2 .=C,2 .=F,.C,.F,, |
+% bars 63-64: Retransition. Dominant with a suspended fourth, then with both thirds at once
+[V:1] !ff!!>!e2 !>!e2 !>!e3 | !>!=g2 !>!g2 !>!g3 | [M:7/8]
+[V:2] !ff!!>!A2 !>!A2 !>!A3 | !>!G2 !>!G2 !>!G3 | [M:7/8]
+[V:3] !ff!!>![B,D]2 !>![B,D]2 !>![B,D]3 | !>![B,D]2 !>![B,D]2 !>![B,D]3 | [M:7/8]
+[V:4] !ff!!>!E,,2 !>!E,2 !>!E,,3 | !>!E,,2 !>!E,2 !>!E,,3 | [M:7/8] [I:MIDI program 42]
+% bars 65-66: RECAPITULATION. The curtain-raiser
+[V:1] !ff!!>!e2 !>!a2 !>!d'ba | !>!e2 z2 !>!f z2 | [M:7/8]
+[V:2] !ff!!>!E2 !>!A2 !>!dBA | !>!A2 z2 !>!B z2 | [M:7/8]
+[V:3] !ff!!>!A2 !>!E2 !>!B,DE | !>!D2 z2 !>!E z2 | [M:7/8]
+[V:4] "arco"!ff!!>!A,2 !>!E,2 !>!B,,D,E, | !>!=G,,2 z2 !>!A,, z2 | [M:7/8] [I:MIDI program 45]
+% bars 67-70: First theme in first violin and viola in octaves, the plucked figure below
+[V:1] !f!e2 a2 d'ba | c'2 b2 afe | d2 =g2 =c'ag | [M:3/4] bc' d'2 !>!e'2 | [M:7/8]
+[V:2] !mf!c2 e2 f3 | A2 G2 F3 | B2 d2 e3 | [M:3/4] GA B2 !>!B2 | [M:7/8]
+[V:3] !f!E2 A2 dBA | c2 B2 AFE | D2 =G2 =cAG | [M:3/4] Bc d2 !>!e2 | [M:7/8]
+[V:4] "pizz."!f!A,,2 E,2 A,E,A,, | F,,2 C,2 F,C,F,, | =G,,2 D,2 =G,D,G,, | [M:3/4] E,2 F,2 G,2 | [M:7/8] [I:MIDI program 42]
+% bars 71-72: The curtain-raiser again
+[V:1] !ff!!>!e2 !>!a2 !>!d'ba | !>!e2 z2 !>!f z2 | [M:5/8]
+[V:2] !ff!!>!E2 !>!A2 !>!dBA | !>!A2 z2 !>!B z2 | [M:5/8]
+[V:3] !ff!!>!A2 !>!E2 !>!B,DE | !>!D2 z2 !>!E z2 | [M:5/8]
+[V:4] "arco"!ff!!>!A,2 !>!E,2 !>!B,,D,E, | !>!=G,,2 z2 !>!A,, z2 | [M:5/8]
+% bars 73-78: The transition, a minor third lower, now lands on A
+[V:1] !mp!cfbgf | !<(!f2 f3 | f2 e3 | f2 f3!<)! | [M:7/8]
+[V:2] !p!^D2 D3 | !<(!G2 G3 | !mp!EAdBA | A2 A3!<)! | [M:7/8]
+[V:3] !p!F,2 F,3 | !mp!^DGc^AG | !<(!F2 F3 | D2 D3!<)! | [M:7/8]
+[V:4] !p!B,,2 B,,3 | !<(!C,2 C,3 | D,2 D,3 | !mf!B,,E,A,F,E,!<)! | [M:7/8]
+[V:1] !ff!!>!=c2 !>!=f2 !>!_b=gf | !>!d2 !>!=g2 !>!=c'ag | [M:3/4]
+[V:2] !ff!!>!=C2 !>!=F2 !>!_B=GF | !>!D2 !>!=G2 !>!=cAG | [M:3/4]
+[V:3] !f!z .=C z .A, z .C.A, | z .D z .B, z .D.B, | [M:3/4]
+[V:4] !f!.=F,,2 .=C,2 .=F,.C,.F,, | .=G,,2 .D,2 .=G,.D,.G,, | [M:3/4]
+% bar 79: A major
+[V:1] !>!a2 z4 | [Q:"Meno mosso, cantabile" 1/4=100]
+[V:2] !>!c2 z4 | [Q:"Meno mosso, cantabile" 1/4=100]
+[V:3] !ff!!>![B,F]2 z4 | [Q:"Meno mosso, cantabile" 1/4=100]
+[V:4] !ff!!>![A,,E,]2 z4 | [Q:"Meno mosso, cantabile" 1/4=100] [I:MIDI program 45]
+% bars 80-89: The second theme in the home key: two bars of accompaniment, then the viola as before
+[V:1] z6 | z6 |
+[V:2] !pp!(EBeBEB) | (EBeBEB) |
+[V:3] z6 | z6 |
+[V:4] "pizz."!p!A,,3 E, A,2 | A,,3 E, A,2 |
+[V:1] z6 | z2 !pp!(c'b g2) | z6 | z2 (bg e2) | !p!(c'4 a2) | (g4 b2) | (=c'3 b a2) | (=f4 e2) |
+[V:2] (EBeBEB) | (GcecGc) | (FB^dBFB) | (EAcAEA) | (FAdAFA) | (GBdBGB) | (A=cecAc) | (=FAdAGB) |
+[V:3] !mf!(E,2 A,2 D2- | DB, C4) | (^D2 E2 G2- | GF E4) | (F2 A2 c2- | cB G2 E2) | (=F3 E =C2) | (D4 B,2) |
+[V:4] A,,3 E, A,2 | A,,3 E, A,2 | A,,3 F, B,2 | A,,3 E, C2 | D,,3 A,, D,2 | E,,3 B,, E,2 | =F,,3 =C, =F,2 | _B,,3 =F, E,,2 | [I:MIDI program 42]
+% bars 90-98: The first violin takes it
+[V:1] !mf!(E2 A2 d2- | dB c4) | (^d2 e2 g2- | gf e4) | (f2 a2 c'2- | c'b g2 e2) | (=f3 e =c2) | (d4 B2) |
+[V:2] !p!(C4 B,2) | (G,2 EF G2) | (B2 c2 ^d2) | (e2 cB A2) | (A2 c2 f2) | (f2 d2 B2) | (A3 =G E2) | (B4 =G2) |
+[V:3] !pp!(E,B,EB,E,B,) | (E,CECE,C) | (F,B,FB,F,B,) | (E,A,CA,E,A,) | (F,A,DA,F,A,) | (G,B,DB,G,B,) | (=F,A,=CA,F,A,) | (=G,B,DB,G,B,) |
+[V:4] "arco"!p!A,,6 | A,,6 | A,,6 | A,,4 C,2 | D,,4 F,,2 | E,,4 G,,2 | =F,,4 A,,2 | =G,,4 B,,2 |
+[V:1] !p!!>(!c6!>)! | [Q:"Tempo I" 1/4=132] [M:7/8]
+[V:2] !>(!E6!>)! | [Q:"Tempo I" 1/4=132] [M:7/8]
+[V:3] !>(!B,6!>)! | [Q:"Tempo I" 1/4=132] [M:7/8]
+[V:4] !>(!A,,6!>)! | [Q:"Tempo I" 1/4=132] [M:7/8] [I:MIDI program 45]
+% bars 99-102: CODA. The first theme in close imitation
+[V:1] z7 | !mf!e2 a2 d'ba | !f!c'2 b2 afe | [M:3/4] !<(!bc' d'2 !>!e'2!<)! | [M:7/8]
+[V:2] !p!E2 A2 dBA | !mp!c2 B2 AFE | !mf!z .e z .c z .e.c | [M:3/4] !<(!GA B2 !>!B2!<)! | [M:7/8]
+[V:3] !p!z .E z .C z .E.C | z .E z .C z .E.C | !f!E2 A2 dBA | [M:3/4] !<(!Bc d2 !>!e2!<)! | [M:7/8]
+[V:4] "pizz."!mp!A,,2 E,2 A,E,A,, | A,,2 E,2 A,E,A,, | [I:MIDI program 42] "arco"!f!E,2 A,2 DB,A, | [M:3/4] !<(!E,2 F,2 G,2!<)! | [M:7/8] [I:MIDI program 42]
+% bars 103-104: The curtain-raiser a last time
+[V:1] !ff!!>!e2 !>!a2 !>!d'ba | !>!e2 z2 !>!f z2 | [M:5/8]
+[V:2] !ff!!>!E2 !>!A2 !>!dBA | !>!A2 z2 !>!B z2 | [M:5/8]
+[V:3] !ff!!>!A2 !>!E2 !>!B,DE | !>!D2 z2 !>!E z2 | [M:5/8]
+[V:4] "arco"!ff!!>!A,2 !>!E,2 !>!B,,D,E, | !>!=G,,2 z2 !>!A,, z2 | [M:5/8]
+% bars 105-106: The motto in even eighths, all four in octaves, and a final chord of A with an added sixth
+[V:1] !ff!!>!ea!>!d'ba | [M:3/4] !>!a'2 z4 |]
+[V:2] !ff!!>!EA!>!dBA | [M:3/4] !>![Af]2 z4 |]
+[V:3] !ff!!>!EA!>!dBA | [M:3/4] !>![Ec]2 z4 |]
+[V:4] !ff!!>!E,A,!>!DB,A, | [M:3/4] !>![A,,E,]2 z4 |]

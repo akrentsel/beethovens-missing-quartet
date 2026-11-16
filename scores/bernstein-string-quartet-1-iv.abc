@@ -1,0 +1,106 @@
+%%label IV. Finale: Allegro giocoso
+%%note A major, a rondo in 6/8 that keeps tipping into 3/4. The refrain is the motto as a dance; the first episode sets the slow movement's song over plucked strings; the second is a fugato in F sharp minor; the coda combines song and dance and recalls the first movement's curtain-raiser.
+X:1
+T:Bernstein’s Missing Quartet
+T:IV. Finale: Allegro giocoso
+C:Lor, in the manner of Leonard Bernstein
+M:6/8
+L:1/8
+Q:"Allegro giocoso" 3/8=100
+%%score [1 | 2 | 3 | 4]
+V:1 clef=treble name="Vl. I"
+V:2 clef=treble name="Vl. II"
+V:3 clef=alto name="Vla."
+V:4 clef=bass name="Vc."
+K:A
+V:1
+%%MIDI program 40
+V:2
+%%MIDI program 40
+V:3
+%%MIDI program 41
+V:4
+%%MIDI program 42
+% bars 1-16: REFRAIN, first strain, played twice: the motto as a dance, 6/8 and 3/4 by turns; the violins in thirds, the viola clapping across the beat
+[V:1] [M:6/8] !f!e2a d'2b | a2 c'2 e'2 | f'2e' d'2b | c'2 b2 a2 | e2a d'2b | a2 c'2 e'2 | =g'2=f' e'2=c' | d'2 b2 g2 | [M:6/8]
+[V:2] [M:6/8] !f!c2e f2g | f2 a2 c'2 | d'2b b2=g | a2 g2 e2 | c2e f2g | f2 a2 c'2 | e'2d' =c'2=g | b2 g2 e2 | [M:6/8]
+[V:3] [M:6/8] !mf!.E2 .E2 .E2 | z .C.E z .C.E | .D2 .D2 .D2 | z .E.E z .E.E | .E2 .E2 .E2 | z .C.E z .C.E | .E2 .E2 .E2 | z .D.D z .D.D | [M:6/8]
+[V:4] [M:6/8] [I:MIDI program 45] "pizz."!f!A,,3 E,3 | A,,2 C,2 E,2 | =G,,3 D,3 | E,2 E,,2 A,,2 | A,,3 E,3 | A,,2 C,2 E,2 | =C,3 =G,,3 | E,,2 G,,2 B,,2 | [M:6/8] [I:MIDI program 45]
+[V:1] !f!e2a d'2b | a2 c'2 e'2 | f'2e' d'2b | c'2 b2 a2 | e2a d'2b | a2 c'2 e'2 | =g'2=f' e'2=c' | d'2 b2 g2 |
+[V:2] !f!c2e f2g | f2 a2 c'2 | d'2b b2=g | a2 g2 e2 | c2e f2g | f2 a2 c'2 | e'2d' =c'2=g | b2 g2 e2 |
+[V:3] !mf!.E2 .E2 .E2 | z .C.E z .C.E | .D2 .D2 .D2 | z .E.E z .E.E | .E2 .E2 .E2 | z .C.E z .C.E | .E2 .E2 .E2 | z .D.D z .D.D |
+[V:4] "pizz."!f!A,,3 E,3 | A,,2 C,2 E,2 | =G,,3 D,3 | E,2 E,,2 A,,2 | A,,3 E,3 | A,,2 C,2 E,2 | =C,3 =G,,3 | E,,2 G,,2 B,,2 | [I:MIDI program 42]
+% bars 17-32: REFRAIN, second strain, played twice: the tune in viola and cello, the violins clapping; the motto closes it in octaves
+[V:1] !mf!.[Ae]2 .[Ae]2 .[Ae]2 | z .[ce].[ce] z .[ce].[ce] | .[db]2 .[db]2 .[db]2 | z .[ce].[ce] z .[ce].[ce] | !f!f'2d' b2a | g2 b2 d'2 | !ff!!>!e2a !>!d'2b | !>!a3 z3 |
+[V:2] !mf!.[EA]2 .[EA]2 .[EA]2 | z .[EA].[EA] z .[EA].[EA] | .[=G,D]2 .[G,D]2 .[G,D]2 | z .[EA].[EA] z .[EA].[EA] | !f!d'2b f2f | e2 g2 b2 | !ff!!>!E2A !>!d2B | !>![Ec]3 z3 |
+[V:3] !f!E2A d2B | A2 c2 e2 | f2e d2B | c2 B2 A2 | A2F D2D | D2 E2 G2 | !ff!!>!E2A !>!d2B | !>![A,E]3 z3 |
+[V:4] "arco"!f!E,2A, D2B, | A,2 C2 E2 | F2E D2B, | C2 B,2 A,2 | D,3 D,3 | E,2 E,2 E,2 | !ff!!>!E,2A, !>!D2B, | !>!A,,3 z3 | [I:MIDI program 42]
+[V:1] !mf!.[Ae]2 .[Ae]2 .[Ae]2 | z .[ce].[ce] z .[ce].[ce] | .[db]2 .[db]2 .[db]2 | z .[ce].[ce] z .[ce].[ce] | !f!f'2d' b2a | g2 b2 d'2 | !ff!!>!e2a !>!d'2b | !>!a3 z3 |
+[V:2] !mf!.[EA]2 .[EA]2 .[EA]2 | z .[EA].[EA] z .[EA].[EA] | .[=G,D]2 .[G,D]2 .[G,D]2 | z .[EA].[EA] z .[EA].[EA] | !f!d'2b f2f | e2 g2 b2 | !ff!!>!E2A !>!d2B | !>![Ec]3 z3 | [I:MIDI program 45]
+[V:3] !f!E2A d2B | A2 c2 e2 | f2e d2B | c2 B2 A2 | A2F D2D | D2 E2 G2 | !ff!!>!E2A !>!d2B | !>![A,E]3 z3 | [I:MIDI program 45]
+[V:4] "arco"!f!E,2A, D2B, | A,2 C2 E2 | F2E D2B, | C2 B,2 A,2 | D,3 D,3 | E,2 E,2 E,2 | !ff!!>!E,2A, !>!D2B, | !>!A,,3 z3 | [I:MIDI program 45]
+% bars 33-48: FIRST EPISODE, C major: the slow movement's song in the first violin over plucked strings
+[V:2] "pizz."!mp!d2 d2 d2 | A2 A2 A2 | A2 A2 A2 | A2 A2 A2 | =c2 c2 c2 | =c2 c2 c2 | =c2 c2 c2 | =G2 G2 G2 |
+[V:2] A2 A2 A2 | =G2 G2 G2 | A2 A2 B2 | A2 A2 A2 | A2 A2 A2 | _A2 A2 A2 | d2 d2 d2 | =c2 c2 G2 | [I:MIDI program 45]
+[V:4] "pizz."!mp!=C,3 =G,,3 | =F,,3 =C,3 | D,3 A,,3 | =G,,3 D,3 | =F,,3 =C,3 | =G,,3 D,3 | A,,3 E,3 | =G,,3 D,3 |
+[V:4] =F,,3 =C,3 | E,3 B,,3 | D,3 =G,,3 | A,,3 E,3 | =F,,3 =C,3 | =F,,3 =C,3 | =C,3 =G,,3 | =C,3 E,,3 | [I:MIDI program 45]
+[V:1] !mf!(=G3 =c3 | =f6) | (d6 | e3 =c3) | (A3 d3 | =g6) | (e6 | d3 B3) |
+[V:1] (=c'3 b3 | a3 =g3) | (f3 =g3 | e6) | (=G3 =c3 | =f3 d3) | =c6 | =c3 z3 |
+[V:3] "pizz."!mp!z EE z EE | z DD z DD | z =FF z FF | z =FF z FF | z EE z EE | z =FF z FF | z =GG z GG | z =FF z FF |
+[V:3] z EE z EE | z DD z DD | z =CC z DD | z =CC z CC | z EE z EE | z DD z DD | z EE z EE | z EE z EE | [I:MIDI program 41]
+% bars 49-64: The song again in the viola, a descant in the first violin
+[V:2] "pizz."!mp!d2 d2 d2 | A2 A2 A2 | A2 A2 A2 | A2 A2 A2 | =c2 c2 c2 | =c2 c2 c2 | =c2 c2 c2 | =G2 G2 G2 |
+[V:2] A2 A2 A2 | =G2 G2 G2 | A2 A2 B2 | A2 A2 A2 | A2 A2 A2 | _A2 A2 A2 | d2 d2 d2 | =c2 c2 G2 | [M:6/8]
+[V:4] "pizz."!mp!=C,3 =G,,3 | =F,,3 =C,3 | D,3 A,,3 | =G,,3 D,3 | =F,,3 =C,3 | =G,,3 D,3 | A,,3 E,3 | =G,,3 D,3 |
+[V:4] =F,,3 =C,3 | E,3 B,,3 | D,3 =G,,3 | A,,3 E,3 | =F,,3 =C,3 | =F,,3 =C,3 | =C,3 =G,,3 | =C,3 E,,3 | [M:6/8] [I:MIDI program 45]
+[V:1] !p!e'6 | (d'3 =c'3) | (a3 =c'3) | (a3 =g3) | (=c'3 e'3) | (d'3 =f'3) | (e'3 =c'3) | (b3 d'3) |
+[V:1] (a3 e'3) | (d'3 b3) | (=c'3 b3) | (=c'2b a2e) | (a3 =c'3) | (_a3 =c'3) | (d'3 e'3) | e'3 e'3 | [M:6/8]
+[V:3] "arco"!mf!(=G,3 =C3 | =F6) | (D6 | E3 =C3) | (A,3 D3 | =G6) | (E6 | D3 B,3) |
+[V:3] (=c3 B3 | A3 =G3) | (F3 =G3 | E6) | (=G,3 =C3 | =F3 D3) | =C6 | =C3 z3 | [M:6/8]
+% bars 65-80: REFRAIN, each strain once
+[V:1] !f!e2a d'2b | a2 c'2 e'2 | f'2e' d'2b | c'2 b2 a2 | e2a d'2b | a2 c'2 e'2 | =g'2=f' e'2=c' | d'2 b2 g2 |
+[V:2] !f!c2e f2g | f2 a2 c'2 | d'2b b2=g | a2 g2 e2 | c2e f2g | f2 a2 c'2 | e'2d' =c'2=g | b2 g2 e2 |
+[V:3] !mf!.E2 .E2 .E2 | z .C.E z .C.E | .D2 .D2 .D2 | z .E.E z .E.E | .E2 .E2 .E2 | z .C.E z .C.E | .E2 .E2 .E2 | z .D.D z .D.D |
+[V:4] "pizz."!f!A,,3 E,3 | A,,2 C,2 E,2 | =G,,3 D,3 | E,2 E,,2 A,,2 | A,,3 E,3 | A,,2 C,2 E,2 | =C,3 =G,,3 | E,,2 G,,2 B,,2 | [I:MIDI program 42]
+[V:1] !mf!.[Ae]2 .[Ae]2 .[Ae]2 | z .[ce].[ce] z .[ce].[ce] | .[db]2 .[db]2 .[db]2 | z .[ce].[ce] z .[ce].[ce] | !f!f'2d' b2a | g2 b2 d'2 | !ff!!>!e2a !>!d'2b | !>!a3 z3 |
+[V:2] !mf!.[EA]2 .[EA]2 .[EA]2 | z .[EA].[EA] z .[EA].[EA] | .[=G,D]2 .[G,D]2 .[G,D]2 | z .[EA].[EA] z .[EA].[EA] | !f!d'2b f2f | e2 g2 b2 | !ff!!>!E2A !>!d2B | !>![Ec]3 z3 | [I:MIDI program 40]
+[V:3] !f!E2A d2B | A2 c2 e2 | f2e d2B | c2 B2 A2 | A2F D2D | D2 E2 G2 | !ff!!>!E2A !>!d2B | !>![A,E]3 z3 |
+[V:4] "arco"!f!E,2A, D2B, | A,2 C2 E2 | F2E D2B, | C2 B,2 A,2 | D,3 D,3 | E,2 E,2 E,2 | !ff!!>!E,2A, !>!D2B, | !>!A,,3 z3 | [I:MIDI program 45]
+% bars 81-96: SECOND EPISODE: fugato in F sharp minor on the refrain, each entry against a counter-line that crosses its rhythm
+[V:1] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:2] "arco"!p!.c2 .c2 .c2 | z .c.c z .c.c | .B2 .B2 .B2 | z .c.c z .A.A | !mf!G2c f2^d | c2 e2 g2 | a2g f2^d | e2 ^d2 c2 |
+[V:3] !mf!C2F B2G | F2 A2 c2 | d2c B2G | A2 G2 F2 | !p!.E2 .^D2 .C2 | G,2C E2C | .F2 .E2 .^D2 | C2E G2G, |
+[V:4] "pizz."!p!F,,3 C,3 | F,,3 C,3 | D,3 C,3 | C,3 F,,3 | C,3 G,,3 | C,3 G,,3 | A,,3 G,,3 | G,,3 C,3 | [I:MIDI program 42]
+[V:1] z6 | z6 | z6 | z6 | !f!g2c' f'2^d' | c'2 e'2 g'2 | a'2g' f'2^d' | e'2 ^d'2 c'2 |
+[V:2] !mp!.A2 .G2 .F2 | C2F A2F | .B2 .A2 .G2 | F2G c2C | !mf!.e2 .^d2 .c2 | G2c e2c | .f2 .e2 .^d2 | c2e g2G |
+[V:3] !mp!.c2 .c2 .c2 | z .c.c z .c.c | .B2 .B2 .B2 | z .c.c z .c.c | !mf!.G2 .G2 .G2 | z .G.G z .G.G | .A2 .A2 .A2 | z .G.G z .G.G |
+[V:4] "arco"!mf!C,2F, B,2G, | F,2 A,2 C2 | D2C B,2G, | A,2 G,2 F,2 | [I:MIDI program 45] "pizz."!mf!C,3 G,,3 | C,3 G,,3 | A,,3 G,,3 | G,,3 C,3 | [I:MIDI program 42]
+% bars 97-104: The head climbs back to A; two bars of the first movement's 7/8; four bars on the dominant
+[V:1] !f!c2f b2g | e2a d'2b | [M:7/8] !ff!e2 a2 d'ba | c'2 b2 afe | [M:6/8] !f!b2 b2 b2 | c'2 c'2 c'2 | d'2 d'2 d'2 | !ff!e'2 e'2 e'2 | [M:6/8]
+[V:2] !f!C2F B2G | E2A d2B | [M:7/8] !ff!E2 A2 dBA | c2 B2 AFE | [M:6/8] !f!g2 g2 g2 | a2 a2 a2 | b2 b2 b2 | !ff!b2 b2 b2 | [M:6/8]
+[V:3] !f!.F2 .F2 .F2 | z .E.E z .E.E | [M:7/8] !f!z .E z .C z .E.C | z .E z .C z .E.C | [M:6/8] !f!z DD z DD | z EE z EE | z FF z FF | !ff!z GG z GG | [M:6/8]
+[V:4] "arco"!f!.F,,3 .C,3 | .A,,3 .E,3 | [M:7/8] .A,,2 .E,2 .A,.E,.A,, | .F,,2 .C,2 .F,.C,.F,, | [M:6/8] E,,3 E,3 | E,,3 E,3 | E,,3 E,3 | !ff!E,,2 E,2 E,2 | [M:6/8] [I:MIDI program 45]
+% bars 105-120: REFRAIN, each strain once
+[V:1] !f!e2a d'2b | a2 c'2 e'2 | f'2e' d'2b | c'2 b2 a2 | e2a d'2b | a2 c'2 e'2 | =g'2=f' e'2=c' | d'2 b2 g2 |
+[V:2] !f!c2e f2g | f2 a2 c'2 | d'2b b2=g | a2 g2 e2 | c2e f2g | f2 a2 c'2 | e'2d' =c'2=g | b2 g2 e2 |
+[V:3] !mf!.E2 .E2 .E2 | z .C.E z .C.E | .D2 .D2 .D2 | z .E.E z .E.E | .E2 .E2 .E2 | z .C.E z .C.E | .E2 .E2 .E2 | z .D.D z .D.D |
+[V:4] "pizz."!f!A,,3 E,3 | A,,2 C,2 E,2 | =G,,3 D,3 | E,2 E,,2 A,,2 | A,,3 E,3 | A,,2 C,2 E,2 | =C,3 =G,,3 | E,,2 G,,2 B,,2 | [I:MIDI program 42]
+[V:1] !mf!.[Ae]2 .[Ae]2 .[Ae]2 | z .[ce].[ce] z .[ce].[ce] | .[db]2 .[db]2 .[db]2 | z .[ce].[ce] z .[ce].[ce] | !f!f'2d' b2a | g2 b2 d'2 | !ff!!>!e2a !>!d'2b | !>!a3 z3 |
+[V:2] !mf!.[EA]2 .[EA]2 .[EA]2 | z .[EA].[EA] z .[EA].[EA] | .[=G,D]2 .[G,D]2 .[G,D]2 | z .[EA].[EA] z .[EA].[EA] | !f!d'2b f2f | e2 g2 b2 | !ff!!>!E2A !>!d2B | !>![Ec]3 z3 |
+[V:3] !f!E2A d2B | A2 c2 e2 | f2e d2B | c2 B2 A2 | A2F D2D | D2 E2 G2 | !ff!!>!E2A !>!d2B | !>![A,E]3 z3 |
+[V:4] "arco"!f!E,2A, D2B, | A,2 C2 E2 | F2E D2B, | C2 B,2 A,2 | D,3 D,3 | E,2 E,2 E,2 | !ff!!>!E,2A, !>!D2B, | !>!A,,3 z3 | [I:MIDI program 42]
+% bars 121-128: CODA: the song's opening, broad, in the violins over the dance in the viola
+[V:1] !ff!e3 a3 | d'6 | b6 | c'3 a3 | f3 b3 | e'6 | c'6 | b3 g3 | [M:7/8]
+[V:2] !ff!E3 A3 | d6 | B6 | c3 A3 | F3 B3 | e6 | c6 | B3 G3 | [M:7/8]
+[V:3] !f!E2A d2B | F2 A2 d2 | f2e d2B | c2 B2 A2 | D2F A2c | E2 A2 d2 | F2A c2e | e2 d2 B2 | [M:7/8]
+[V:4] "arco"!f!A,,3 E,3 | D,3 A,,3 | B,,3 E,3 | A,,2 C,2 E,2 | D,3 A,3 | E,3 B,,3 | F,3 C,3 | E,2 G,2 B,2 | [M:7/8]
+% bars 129-130: The first movement's curtain-raiser
+[V:1] !ff!!>!e2 !>!a2 !>!d'ba | !>!e2 z2 !>!f z2 | [M:6/8]
+[V:2] !ff!!>!E2 !>!A2 !>!dBA | !>!A2 z2 !>!B z2 | [M:6/8]
+[V:3] !ff!!>!A2 !>!E2 !>!B,DE | !>!D2 z2 !>!E z2 | [M:6/8]
+[V:4] !ff!!>!A,2 !>!E,2 !>!B,,D,E, | !>!=G,,2 z2 !>!A,, z2 | [M:6/8]
+% bars 131-132: Last cadence: F, G, A in three strides
+[V:1] !ff!!>!=c'2 !>!d'2 !>!e'2 | !>!a'3 z3 |]
+[V:2] !ff!!>!a2 !>!b2 !>!c'2 | !>![Af]3 z3 |]
+[V:3] !ff!!>!=c2 !>!d2 !>!e2 | !>![Ec]3 z3 |]
+[V:4] !ff!!>!=F,,2 !>!=G,,2 !>!A,,2 | !>![A,,E,]3 z3 |]

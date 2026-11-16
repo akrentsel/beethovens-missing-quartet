@@ -1,0 +1,100 @@
+%%label II. Scherzo: Riffs
+%%note D minor, 12/8 swing. A twelve-bar blues built from the quartet's motto: call and response over a plucked walking bass, a written-out solo chorus for the first violin, a chorus of traded solos, a hushed fugato on a riff subject, and the blues again.
+X:1
+T:Bernstein’s Missing Quartet
+T:II. Scherzo: Riffs
+C:Lor, in the manner of Leonard Bernstein
+M:12/8
+L:1/8
+Q:"With a relaxed swing" 3/8=120
+%%score [1 | 2 | 3 | 4]
+V:1 clef=treble name="Vl. I"
+V:2 clef=treble name="Vl. II"
+V:3 clef=alto name="Vla."
+V:4 clef=bass name="Vc."
+K:Dm
+V:1
+%%MIDI program 40
+V:2
+%%MIDI program 40
+V:3
+%%MIDI program 41
+V:4
+%%MIDI program 42
+% bars 1-2: The walking bass alone
+[V:1] [M:12/8] z12 | z12 |
+[V:2] [M:12/8] z12 | !p!z3 .c z2 z3 .c z2 |
+[V:3] [M:12/8] z12 | !p!z3 .F z2 z3 .F z2 |
+[V:4] [M:12/8] [I:MIDI program 45] "pizz."!mf!D,3 F,3 A,3 C3 | D3 C3 A,3 C3 |
+% bars 3-14: First chorus. The call is the motto (A, D, G, E) in swing; second violin and viola answer in fourths and thirds
+[V:1] !mf!z2 A d2 g- g2 e d2 z | z12 | z2 A d2 g- g2 a c'3 | z12 |
+[V:1] z2 d g2 c'- c'2 a g2 z | z12 | z2 A d2 g- g2 e d2 z | z12 |
+[V:1] !f!!>!g2 z z2 !>!g- g2 z !>!g2 z | z2 !>!c'- c'2 z z2 !>!c'- c'2 z | z2 A d2 g- g2 e d2 z | !>!.c' z2 z3 !>!.c' z2 z3 |
+[V:2] !p!z3 .c z2 z3 .c z2 | !mf!z2 F _A2 G- G2 F D3 | !p!z3 .c z2 z3 .c z2 | !mf!z2 ^F A2 c- c2 A _A3 |
+[V:2] !p!z3 .F z2 z3 .F z2 | !mf!z2 B d2 c- c2 B G3 | !p!z3 .c z2 z3 .c z2 | z3 .c z2 z3 .c z2 |
+[V:2] !f!!>!d2 z z2 !>!d- d2 z !>!d2 z | z2 !>!^c- c2 z z2 !>!c- c2 z | z2 E A2 d- d2 =B A2 z | !>!.^c z2 z3 !>!.c z2 z3 |
+[V:3] !p!z3 .F z2 z3 .F z2 | !mf!z2 C _E2 D- D2 C A,3 | !p!z3 .F z2 z3 .F z2 | !mf!z2 D ^F2 A- A2 G F3 |
+[V:3] !p!z3 .B, z2 z3 .B, z2 | !mf!z2 F A2 G- G2 F D3 | !p!z3 .F z2 z3 .F z2 | !mf!z2 A, D2 F _A2 G F2 D |
+[V:3] !f!!>!_A2 z z2 !>!A- A2 z !>!A2 z | z2 !>!G- G2 z z2 !>!G- G2 z | z2 A, D2 G- G2 E D2 z | !>!.G z2 z3 !>!.G z2 z3 |
+[V:4] D,3 F,3 A,3 _A,3 | G,3 F,3 D,3 _E,3 | D,3 A,,3 =B,,3 C,3 | D,3 ^F,3 A,3 _A,3 |
+[V:4] G,3 B,,3 D,3 F,3 | G,3 F,3 D,3 _E,3 | D,3 F,3 A,3 C3 | D3 C3 A,3 C3 |
+[V:4] B,3 D,3 F,3 _A,3 | A,3 G,3 E,3 ^C,3 | D,3 F,3 A,3 B,3 | A,3 z3 A,,3 z3 |
+% bars 15-26: Second chorus. The first violin takes a solo over the same answers
+[V:1] !mf!a2f d2f a2c' d'2c' | b2g d2g b2a g2f | e2d A2d f2_a g2f | ^f2a c'2_e' d'2c' _a2f |
+[V:1] g2b d'2g' f'2d' b2g | a2g f2d _e2f g2f | a3- a2f d2f a2z | z2d' c'2a g2f d2c |
+[V:1] !f!d2f _a2c' d'2a f2d | ^c2e g2b a2g e2c | d2e a2d' f'3- f'2d' | !>!.c' z2 z3 !>!.c' z2 z3 | [I:MIDI program 45]
+[V:2] !p!z3 .c z2 z3 .c z2 | !mf!z2 F _A2 G- G2 F D3 | !p!z3 .c z2 z3 .c z2 | !mf!z2 ^F A2 c- c2 A _A3 |
+[V:2] !p!z3 .F z2 z3 .F z2 | !mf!z2 B d2 c- c2 B G3 | !p!z3 .c z2 z3 .c z2 | z3 .c z2 z3 .c z2 |
+[V:2] !f!!>!d2 z z2 !>!d- d2 z !>!d2 z | z2 !>!^c- c2 z z2 !>!c- c2 z | z2 E A2 d- d2 =B A2 z | !>!.^c z2 z3 !>!.c z2 z3 |
+[V:3] !p!z3 .F z2 z3 .F z2 | !mf!z2 C _E2 D- D2 C A,3 | !p!z3 .F z2 z3 .F z2 | !mf!z2 D ^F2 A- A2 G F3 |
+[V:3] !p!z3 .B, z2 z3 .B, z2 | !mf!z2 F A2 G- G2 F D3 | !p!z3 .F z2 z3 .F z2 | !mf!z2 A, D2 F _A2 G F2 D |
+[V:3] !f!!>!_A2 z z2 !>!A- A2 z !>!A2 z | z2 !>!G- G2 z z2 !>!G- G2 z | z2 A, D2 G- G2 E D2 z | !>!.G z2 z3 !>!.G z2 z3 |
+[V:4] D,3 F,3 A,3 _A,3 | G,3 F,3 D,3 _E,3 | D,3 A,,3 =B,,3 C,3 | D,3 ^F,3 A,3 _A,3 |
+[V:4] G,3 B,,3 D,3 F,3 | G,3 F,3 D,3 _E,3 | D,3 F,3 A,3 C3 | D3 C3 A,3 C3 |
+[V:4] B,3 D,3 F,3 _A,3 | A,3 G,3 E,3 ^C,3 | D,3 F,3 A,3 B,3 | A,3 z3 A,,3 z3 |
+% bars 27-38: Third chorus: second violin and viola trade two-bar solos, the first violin plucks the off-beats
+[V:1] "pizz."!mp!z3 .a z2 z3 .a z2 | z3 .d z2 z3 .d z2 | z3 .e z2 z3 .e z2 | z3 .e z2 z3 .e z2 |
+[V:1] z3 .d z2 z3 .d z2 | z3 .d z2 z3 .d z2 | z3 .e z2 z3 .e z2 | z3 .e z2 z3 .e z2 |
+[V:1] z3 .d' z2 z3 .d' z2 | z3 .a z2 z3 .a z2 | [I:MIDI program 40] "arco"!f!z2 A d2 g- g2 e d2 z | !>!.c' z2 z3 !>!.c' z2 z3 |
+[V:2] !mf!z2 d f2 a c'3- c'2 a | b2 g d2 B d2 f g2 z | !p!z3 .c z2 z3 .c z2 | z3 .c z2 z3 .c z2 |
+[V:2] !mf!d'3- d'2 b g2 f d2 B | c2 d f2 g b2 g f2 z | !p!z3 .c z2 z3 .c z2 | z3 .c z2 z3 .c z2 |
+[V:2] !f!d2 f _a2 f d2 f a3 | ^c2 e g2 e c2 e g3 | z2 E A2 d- d2 =B A2 z | !>!.^c z2 z3 !>!.c z2 z3 |
+[V:3] !p!z3 .F z2 z3 .F z2 | z3 .B, z2 z3 .B, z2 | !mf!z2 A, D2 F A2 c d2 A | c2 A ^F2 D F2 A c3 |
+[V:3] !p!z3 .B, z2 z3 .B, z2 | z3 .B, z2 z3 .B, z2 | !mf!z2 d c2 A F2 D F2 A | G2 F D2 C D3- D2 z |
+[V:3] !f!B,2 D F2 D B,2 D F3 | A,2 ^C E2 C A,2 C E3 | z2 A, D2 G- G2 E D2 z | !>!.G z2 z3 !>!.G z2 z3 |
+[V:4] D,3 F,3 A,3 _A,3 | G,3 F,3 D,3 _E,3 | D,3 A,,3 =B,,3 C,3 | D,3 ^F,3 A,3 _A,3 |
+[V:4] G,3 B,,3 D,3 F,3 | G,3 F,3 D,3 _E,3 | D,3 F,3 A,3 C3 | D3 C3 A,3 C3 |
+[V:4] B,3 D,3 F,3 _A,3 | A,3 G,3 E,3 ^C,3 | D,3 F,3 A,3 B,3 | A,3 z3 A,,3 z3 |
+% bars 39-46: Fugato. A riff subject from the motto, answered a fifth higher, over a counter-line that walks down
+[V:1] z12 | z12 | z12 | z12 | z12 | z12 | !p!z2 e a2 d' =b2 a c'2 _e' | d'2 c' a2 g a3- a2 z |
+[V:2] z12 | z12 | !pp!z2 E A2 d =B2 A c2 _e | d2 c A2 G A3- A2 z | !p!f2 z e2 z d2 z _d2 z | c2 z B2 z A3- A2 z | z2 e- e2 z z2 _e- e2 z | z2 d- d2 z c3- c2 z |
+[V:3] !pp!z2 A, D2 G E2 D F2 _A | G2 F D2 C D3- D2 z | C2 z =B,2 z A,2 z _A,2 z | G,2 z F,2 z E,3- E,2 z | !p!z2 A- A2 z z2 _A- A2 z | z2 G- G2 z F3- F2 z | z12 | z12 |
+[V:4] z12 | z12 | z12 | z12 | [I:MIDI program 42] "arco"!p!z2 A,, D,2 G, E,2 D, F,2 _A, | G,2 F, D,2 C, D,3- D,2 z | C2 z =B,2 z A,2 z _A,2 z | G,2 z F,2 z E,3- E,2 z | [I:MIDI program 45]
+% bars 47-50: Episode on the subject's blue tail, rising
+[V:1] !mp!z3 f2 _a g2 f d3 | z12 | !mf!z3 c'2 _e' d'2 c' a3 | !f!z2 !>!c'- c'2 z z2 !>!c'- c'2 z |
+[V:2] !p!z3 .c z2 z3 .c z2 | !mp!z3 b2 _d' c'2 b g3 | !mp!z3 .g z2 z3 .g z2 | !f!z2 !>!^c- c2 z z2 !>!c- c2 z |
+[V:3] !p!z3 .F z2 z3 .F z2 | z3 .B z2 z3 .B z2 | !mp!z3 .^c z2 z3 .c z2 | !f!z2 !>!G- G2 z z2 !>!G- G2 z |
+[V:4] "pizz."!mp!D,3 F,3 A,3 C3 | G,3 B,,3 D,3 F,3 | A,,3 ^C,3 E,3 G,3 | !f!A,3 G,3 E,3 ^C,3 |
+% bars 51-54: The subject's head in close imitation over a dominant pedal
+[V:1] z12 | !mf!z2 a d'2 g' e'2 d' z3 | !f!z2 a d'2 g' e'2 d' c'2 a | !ff!!>!g2 z z2 !>!c'- c'2 z z3 |
+[V:2] z6 !mf!z2 A d2 g | e2 d z3 z2 A d2 g | !f!e2 d z2 A d2 g e2 d | !ff!!>!^c2 z z2 !>!f- f2 z z3 |
+[V:3] !mp!z2 A, D2 G E2 D z3 | z6 z2 A, D2 G | !f!E2 D F2 A G2 F D2 C | !ff!!>!G2 z z2 !>!G- G2 z z3 |
+[V:4] !mf!A,,3 A,,3 A,,3 A,,3 | A,,3 A,,3 A,,3 A,,3 | !f!A,,3 =B,,3 ^C,3 E,3 | !ff!A,3 z3 A,,3 z3 | [I:MIDI program 42]
+% bars 55-66: The blues returns, the call an octave higher, the bass bowed
+[V:1] !f!z2 a d'2 g'- g'2 e' d'2 z | z12 | z2 a d'2 g'- g'2 a' c''3 | z12 |
+[V:1] z2 d' g'2 c''- c''2 a' g'2 z | z12 | z2 a d'2 g'- g'2 e' d'2 z | z12 |
+[V:1] !ff!!>!g'2 z z2 !>!g'- g'2 z !>!g'2 z | z2 !>!c''- c''2 z z2 !>!c''- c''2 z | z2 a d'2 g'- g'2 e' d'2 z | !>!.c'' z2 z3 !>!.c'' z2 z3 |
+[V:2] !p!z3 .c z2 z3 .c z2 | !mf!z2 F _A2 G- G2 F D3 | !p!z3 .c z2 z3 .c z2 | !mf!z2 ^F A2 c- c2 A _A3 |
+[V:2] !p!z3 .F z2 z3 .F z2 | !mf!z2 B d2 c- c2 B G3 | !p!z3 .c z2 z3 .c z2 | z3 .c z2 z3 .c z2 |
+[V:2] !f!!>!d2 z z2 !>!d- d2 z !>!d2 z | z2 !>!^c- c2 z z2 !>!c- c2 z | z2 E A2 d- d2 =B A2 z | !>!.^c z2 z3 !>!.c z2 z3 |
+[V:3] !p!z3 .F z2 z3 .F z2 | !mf!z2 C _E2 D- D2 C A,3 | !p!z3 .F z2 z3 .F z2 | !mf!z2 D ^F2 A- A2 G F3 |
+[V:3] !p!z3 .B, z2 z3 .B, z2 | !mf!z2 F A2 G- G2 F D3 | !p!z3 .F z2 z3 .F z2 | !mf!z2 A, D2 F _A2 G F2 D |
+[V:3] !f!!>!_A2 z z2 !>!A- A2 z !>!A2 z | z2 !>!G- G2 z z2 !>!G- G2 z | z2 A, D2 G- G2 E D2 z | !>!.G z2 z3 !>!.G z2 z3 |
+[V:4] "arco"!f!.D,2 .D, .F,2 .F, .A,2 .A, ._A,2 .A, | .G,2 .G, .F,2 .F, .D,2 .D, ._E,2 .E, | .D,2 .D, .A,,2 .A,, .=B,,2 .B,, .C,2 .C, | .D,2 .D, .^F,2 .F, .A,2 .A, ._A,2 .A, |
+[V:4] .G,2 .G, .B,,2 .B,, .D,2 .D, .F,2 .F, | .G,2 .G, .F,2 .F, .D,2 .D, ._E,2 .E, | .D,2 .D, .F,2 .F, .A,2 .A, .C2 .C | .D2 .D .C2 .C .A,2 .A, .C2 .C |
+[V:4] .B,2 .B, .D,2 .D, .F,2 .F, ._A,2 .A, | .A,2 .A, .G,2 .G, .E,2 .E, .^C,2 .C, | .D,2 .D, .F,2 .F, .A,2 .A, .B,2 .B, | .A,2 .A, z3 .A,,2 .A,, z3 | [I:MIDI program 45]
+% bars 67-70: Coda. The bass walks off; the subject and the call are remembered; a plucked chord of D minor with added sixth and ninth
+[V:1] z12 | z12 | z12 | [I:MIDI program 45] "pizz."!p!z3 z3 .e z2 z3 |]
+[V:2] z12 | z12 | !pp!z2 A d2 g- g2 e d2 z | [I:MIDI program 45] "pizz."!p!z3 z3 .=B z2 z3 |]
+[V:3] z12 | !pp!z2 A, D2 G E2 D z3 | z12 | [I:MIDI program 45] "pizz."!p!z3 z3 .F z2 z3 |]
+[V:4] "pizz."!p!D,3 F,3 A,3 _A,3 | G,3 F,3 D,3 _E,3 | !pp!D,3 z3 z3 z3 | !p!z3 z3 .D, z2 z3 |]

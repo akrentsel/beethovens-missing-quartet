@@ -393,6 +393,50 @@
           "durationSeconds": 112
         }
       ]
+    },
+    {
+      "id": "bernstein-string-quartet-1",
+      "composerId": "bernstein",
+      "formId": "string-quartet",
+      "round": 1,
+      "title": "Bernstein’s Missing Quartet",
+      "subtitle": "String quartet in A",
+      "description": "One motto of two rising fourths, four movements: a 7/8 Allegro, a blues scherzo, a song in 5/4 and a dancing finale. A new AI-composed homage, not a work by Leonard Bernstein.",
+      "durationSeconds": 715,
+      "date": "2026-11-16",
+      "status": "completed",
+      "notebook": "bernstein-string-quartet-1-notebook.html",
+      "transcript": "bernstein-string-quartet-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Allegro con brio",
+          "note": "A 7/8 sonata movement on the motto: fanfare, plucked first theme, a sung second theme, and a fugato whose climax plays both themes at once.",
+          "source": "scores/bernstein-string-quartet-1-i.abc",
+          "durationSeconds": 169
+        },
+        {
+          "id": "ii",
+          "label": "II. Scherzo: Riffs",
+          "note": "A twelve-bar blues in 12/8 swing over a walking bass, with solo choruses and a hushed fugato.",
+          "source": "scores/bernstein-string-quartet-1-ii.abc",
+          "durationSeconds": 140
+        },
+        {
+          "id": "iii",
+          "label": "III. Andante con tenerezza",
+          "note": "A song in 5/4 that opens with the motto’s two rising fourths; a restless middle; the cello sings the song a last time.",
+          "source": "scores/bernstein-string-quartet-1-iii.abc",
+          "durationSeconds": 247
+        },
+        {
+          "id": "iv",
+          "label": "IV. Finale: Allegro giocoso",
+          "note": "A rondo in 6/8 against 3/4; the slow movement’s song returns over the dance.",
+          "source": "scores/bernstein-string-quartet-1-iv.abc",
+          "durationSeconds": 159
+        }
+      ]
     }
   ]
 }

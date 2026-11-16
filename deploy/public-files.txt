@@ -25,3 +25,10 @@ scores/bach-violin-sonata-1-i.abc
 scores/bach-violin-sonata-1-ii.abc
 scores/bach-violin-sonata-1-iii.abc
 scores/bach-violin-sonata-1-iv.abc
+bernstein-string-quartet-1-notebook.html
+bernstein-string-quartet-1-transcript.html
+bernstein-string-quartet-1-transcript.json
+scores/bernstein-string-quartet-1-i.abc
+scores/bernstein-string-quartet-1-ii.abc
+scores/bernstein-string-quartet-1-iii.abc
+scores/bernstein-string-quartet-1-iv.abc
