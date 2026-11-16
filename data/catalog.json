@@ -481,6 +481,50 @@
           "durationSeconds": 140
         }
       ]
+    },
+    {
+      "id": "beethoven-symphony-1",
+      "composerId": "beethoven",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Beethoven’s Missing Symphony",
+      "subtitle": "Symphony in F minor",
+      "description": "A compact symphony in F minor on one terse motto, which the finale turns to F major: Allegro, variations, scherzo with a horn trio, finale. A new AI-composed homage, not a rediscovered work by Beethoven.",
+      "durationSeconds": 643,
+      "date": "2026-11-16",
+      "status": "completed",
+      "notebook": "beethoven-symphony-1-notebook.html",
+      "transcript": "beethoven-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Allegro con brio",
+          "note": "Sonata form on a motto in octaves (a dotted rise to D flat, falling to C), with a fugato in the development.",
+          "source": "scores/beethoven-symphony-1-i.abc",
+          "durationSeconds": 226
+        },
+        {
+          "id": "ii",
+          "label": "II. Andante con moto",
+          "note": "A hymn-like theme in D flat with two variations, a minor episode and a clarinet coda.",
+          "source": "scores/beethoven-symphony-1-ii.abc",
+          "durationSeconds": 133
+        },
+        {
+          "id": "iii",
+          "label": "III. Scherzo: Allegro vivace",
+          "note": "A clipped F minor scherzo with a trio for the two horns.",
+          "source": "scores/beethoven-symphony-1-iii.abc",
+          "durationSeconds": 100
+        },
+        {
+          "id": "iv",
+          "label": "IV. Finale: Allegro molto",
+          "note": "The motto in the major as main theme, a singing second theme, and a Presto coda.",
+          "source": "scores/beethoven-symphony-1-iv.abc",
+          "durationSeconds": 184
+        }
+      ]
     }
   ]
 }

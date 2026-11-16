@@ -1,0 +1,113 @@
+%%label II. Andante con moto
+%%note D flat major. A hymn-like theme in the strings; a variation with the theme in the woodwind over a running cello line and plucked chords; an episode in the minor; a variation for the full orchestra; a quiet coda for the clarinet.
+X:1
+T:Beethoven’s Missing Symphony
+T:II. Andante con moto
+C:Lor, in the manner of Beethoven
+M:2/4
+L:1/8
+Q:"Andante con moto" 1/4=58
+%%score [fl ob cl bn] [hn tp] tm [v1 v2 va vc cb]
+% The score is written at sounding pitch. Dynamics in the wind, brass and double-bass parts are set one to three levels below the strings to balance the playback samples of this site; they are a playback compromise, not dynamics for live players.
+V:fl clef=treble name="Fl."
+V:ob clef=treble name="Ob."
+V:cl clef=treble name="Cl."
+V:bn clef=bass name="Bn."
+V:hn clef=treble name="Hn."
+V:tp clef=treble name="Tpt."
+V:tm clef=bass name="Timp."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:Db
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tp
+%%MIDI program 56
+V:tm
+%%MIDI program 47
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-16: Theme: strings
+[V:fl] [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tp] [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] [M:2/4] !p!A2 d2 | f3 e | d2 c2 | d4 | e2 f2 | g3 f | e2 d2 | e4 | f2 a2 | b3 a | g2 f2 | e4 | d2 f2 | e3 d | c2 e2 | d4 |
+[V:v2] [M:2/4] !p!F2 A2 | A3 A | B2 G2 | F4 | c2 d2 | B3 B | G2 =G2 | A4 | d2 f2 | g3 g | e2 d2 | c4 | A2 d2 | B3 B | G2 G2 | F4 | [I:MIDI program 45]
+[V:va] [M:2/4] !p!D2 F2 | D3 E | G2 E2 | A,4 | E2 A2 | D4 | B,4 | C4 | A2 A2 | B4 | B2 G2 | G4 | F2 A2 | G4 | E4 | D4 | [I:MIDI program 45]
+[V:vc] [M:2/4] !p!D,2 D,2 | D,3 C, | G,,2 A,,2 | D,4 | A,,2 F,2 | G,,4 | E,4 | A,,4 | F,2 F,2 | G,,4 | E,4 | A,,4 | D,2 D,2 | G,,4 | A,,4 | D,4 |
+[V:cb] [M:2/4] [I:MIDI program 45] "pizz."!pppp!D,,2 z2 | D,,2 z2 | G,,,2 z2 | D,,2 z2 | A,,,2 z2 | G,,,2 z2 | E,,2 z2 | A,,,2 z2 | F,,2 z2 | G,,,2 z2 | E,,2 z2 | A,,,2 z2 | D,,2 z2 | G,,,2 z2 | A,,,2 z2 | D,,2 z2 |
+% bars 17-32: Variation 1: the theme in flute and clarinet, the cellos running beneath, the other strings plucked
+[V:fl] !p!a2 d'2 | f'3 e' | d'2 c'2 | d'4 | e'2 f'2 | g'3 f' | e'2 d'2 | e'4 | f'2 a'2 | b'3 a' | g'2 f'2 | e'4 | d'2 f'2 | e'3 d' | c'2 e'2 | d'4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] !mp!A2 d2 | f3 e | d2 c2 | d4 | e2 f2 | g3 f | e2 d2 | e4 | f2 a2 | b3 a | g2 f2 | e4 | d2 f2 | e3 d | c2 e2 | d4 |
+[V:bn] !p!D,2 D,2 | D,3 C, | G,,2 A,,2 | D,4 | A,,2 F,2 | G,,4 | E,4 | A,,4 | F,2 F,2 | G,,4 | E,4 | A,,4 | D,2 D,2 | G,,4 | A,,4 | D,4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | [I:MIDI program 48]
+[V:v2] "pizz."!p!z F z A | z A z A | z B z G | z F z F | z c z d | z B z B | z G z =G | z A z A | z d z f | z g z g | z e z d | z c z c | z A z d | z B z B | z G z G | z F z F | [I:MIDI program 48]
+[V:va] "pizz."!p!z D z F | z D z D | z G z E | z A, z A, | z E z A | z D z D | z B, z B, | z C z C | z A z A | z B z B | z B z G | z G z G | z F z A | z G z G | z E z E | z D z D | [I:MIDI program 48]
+[V:vc] !p!D,A,F,A, | D,A,C,A, | G,,D,A,,E, | D,A,F,A, | A,,E,F,A, | G,,D,B,D, | E,B,E,B, | A,,E,A,E, | F,A,DA, | G,,D,B,D, | E,G,B,G, | A,,E,G,E, | D,A,F,A, | G,,D,B,D, | A,,E,G,E, | D,A,D,2 |
+[V:cb] !pppp!D,,2 z2 | D,,2 z2 | G,,,2 z2 | D,,2 z2 | A,,,2 z2 | G,,,2 z2 | E,,2 z2 | A,,,2 z2 | F,,2 z2 | G,,,2 z2 | E,,2 z2 | A,,,2 z2 | D,,2 z2 | G,,,2 z2 | A,,,2 z2 | D,,2 z2 | [I:MIDI program 43]
+% bars 33-40: Episode in the minor (written as C sharp minor): the theme's first half, full and dark, ending on the dominant
+[V:fl] !p!^g2 ^c'2 | =e'3 ^d' | ^c'2 =c'2 | ^c'4 | ^d'2 =e'2 | ^f'3 =e' | ^d'2 ^c'2 | !pp!^d'4 |
+[V:ob] !mp!^G2 ^c2 | =e3 ^d | ^c2 ^B2 | ^c4 | ^d2 =e2 | ^f3 =e | ^d2 ^c2 | !p!^d4 |
+[V:cl] !mp!=E2 ^G2 | ^G3 G | =A2 ^F2 | =E4 | ^B2 ^c2 | =A3 A | ^F2 =G2 | !p!^G4 |
+[V:bn] !mp!^C,2 C,2 | ^C,3 ^B,, | ^F,,2 ^G,,2 | ^C,4 | ^G,,2 =E,2 | ^F,,4 | ^D,4 | !p!^G,,4 |
+[V:hn] !mp![^C=E]4 | [^C=E]4 | [^C^F]2 [^B,^D]2 | [^C=E]4 | [^B,^D]2 [^C=E]2 | [^C^F]4 | [^C^F]2 [C=G]2 | !p![^B,^D]4 |
+[V:tp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] !f!D,2 z2 | z4 | z2 A,,2 | D,2 z2 | A,,2 z2 | z4 | z4 | !mf!A,,2 A,,2 |
+[V:v1] "arco"!f!^G2 ^c2 | =e3 ^d | ^c2 ^B2 | ^c4 | ^d2 =e2 | ^f3 =e | ^d2 ^c2 | !mf!^d4 |
+[V:v2] "arco"!f!=E2 ^G2 | ^G3 G | =A2 ^F2 | =E4 | ^B2 ^c2 | =A3 A | ^F2 =G2 | !mf!^G4 |
+[V:va] "arco"!f!^C2 =E2 | ^C3 ^D | ^F2 ^D2 | ^G,4 | ^D2 ^G2 | ^C4 | =A,4 | !mf!^B,4 |
+[V:vc] !f!^C,2 C,2 | ^C,3 ^B,, | ^F,,2 ^G,,2 | ^C,4 | ^G,,2 =E,2 | ^F,,4 | ^D,4 | !mf!^G,,4 |
+[V:cb] "arco"!p!^C,,2 C,,2 | ^C,,3 =C,, | ^F,,,2 ^G,,,2 | ^C,,4 | ^G,,,2 =E,,2 | ^F,,,4 | ^D,,4 | !pp!^G,,,4 |
+% bars 41-56: Variation 2: the theme in the full orchestra, the cello line bowed
+[V:fl] !p!a2 d'2 | f'3 e' | d'2 c'2 | d'4 | e'2 f'2 | g'3 f' | e'2 d'2 | e'4 | f'2 a'2 | b'3 a' | g'2 f'2 | e'4 | d'2 f'2 | e'3 d' | c'2 e'2 | d'4 |
+[V:ob] !mp!A2 d2 | f3 e | d2 c2 | d4 | e2 f2 | g3 f | e2 d2 | e4 | f2 a2 | b3 a | g2 f2 | e4 | d2 f2 | e3 d | c2 e2 | d4 |
+[V:cl] !mp!F2 A2 | A3 A | B2 G2 | F4 | c2 d2 | B3 B | G2 =G2 | A4 | d2 f2 | g3 g | e2 d2 | c4 | A2 d2 | B3 B | G2 G2 | F4 |
+[V:bn] !mp!D,2 D,2 | D,3 C, | G,,2 A,,2 | D,4 | A,,2 F,2 | G,,4 | E,4 | A,,4 | F,2 F,2 | G,,4 | E,4 | A,,4 | D,2 D,2 | G,,4 | A,,4 | D,4 |
+[V:hn] !p![DF]4 | [DF]2 [CE]2 | [DG]2 [CE]2 | [DF]4 | [CE]2 [DF]2 | [DG]4 | [EG]2 [E=G]2 | [CE]4 | [DF]4 | [DG]4 | [EG]4 | [CE]4 | [DF]4 | [DG]4 | [CE]4 | [DF]4 |
+[V:tp] !mp!A2 z2 | z4 | z4 | A2 z2 | z4 | z4 | z4 | e2 e2 | z4 | z4 | z4 | e2 z2 | A2 z2 | z4 | e2 e2 | A2 z2 |
+[V:tm] !mf!D,2 z2 | z4 | z4 | D,2 z2 | z4 | z4 | z4 | A,,2 A,,2 | z4 | z4 | z4 | A,,2 z2 | D,2 z2 | z4 | A,,2 A,,2 | D,2 z2 |
+[V:v1] !f!a2 d'2 | f'3 e' | d'2 c'2 | d'4 | e'2 f'2 | g'3 f' | e'2 d'2 | e'4 | f'2 a'2 | b'3 a' | g'2 f'2 | e'4 | d'2 f'2 | e'3 d' | c'2 e'2 | d'4 |
+[V:v2] !f!F2 A2 | A3 A | B2 G2 | F4 | c2 d2 | B3 B | G2 =G2 | A4 | d2 f2 | g3 g | e2 d2 | c4 | A2 d2 | B3 B | G2 G2 | F4 |
+[V:va] !f!D2 F2 | D3 E | G2 E2 | A,4 | E2 A2 | D4 | B,4 | C4 | A2 A2 | B4 | B2 G2 | G4 | F2 A2 | G4 | E4 | D4 |
+[V:vc] !f!D,A,F,A, | D,A,C,A, | G,,D,A,,E, | D,A,F,A, | A,,E,F,A, | G,,D,B,D, | E,B,E,B, | A,,E,A,E, | F,A,DA, | G,,D,B,D, | E,G,B,G, | A,,E,G,E, | D,A,F,A, | G,,D,B,D, | A,,E,G,E, | D,A,D,2 |
+[V:cb] !p!D,,2 D,,2 | D,,3 C,, | G,,,2 A,,,2 | D,,4 | A,,,2 F,,2 | G,,,4 | E,,4 | A,,,4 | F,,2 F,,2 | G,,,4 | E,,4 | A,,,4 | D,,2 D,,2 | G,,,4 | A,,,4 | D,,4 | [I:MIDI program 45]
+% bars 57-64: Coda: the clarinet remembers the theme; a plagal close
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] !p!A2 d2 | f3 e | d2 c2 | d4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | !ppp![DG]4 | [DF]4- | [DF]4 | z4 |]
+[V:tp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !pp!F2 A2 | A3 A | B2 G2 | F4 | !p!b4 | a4- | a4 | [I:MIDI program 45] "pizz."a2 z2 |]
+[V:v2] !pp!D2 F2 | D3 E | G2 E2 | D4 | !p!g4 | f4- | f4 | [I:MIDI program 45] "pizz."f2 z2 |]
+[V:va] !pp!A,4 | A,4 | B,2 A,2 | A,4 | !p!d4 | d4- | d4 | [I:MIDI program 45] "pizz."d2 z2 |]
+[V:vc] !pp!D,4 | D,3 C, | G,,2 A,,2 | D,4 | !p!G,,4 | D,4- | D,4 | [I:MIDI program 45] "pizz."D,2 z2 |]
+[V:cb] "pizz."!pppp!D,,2 z2 | z4 | G,,,2 A,,,2 | D,,2 z2 | G,,,2 z2 | D,,2 z2 | z4 | D,,2 z2 |]

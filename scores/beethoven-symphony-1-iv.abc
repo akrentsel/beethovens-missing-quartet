@@ -1,0 +1,280 @@
+%%label IV. Finale: Allegro molto
+%%note F major. The first movement's motto returns in the major as the main theme; a singing second theme in C; a development that passes the motto's opening through several keys and lets its minor-key sigh be heard once more; a Presto coda.
+X:1
+T:Beethoven’s Missing Symphony
+T:IV. Finale: Allegro molto
+C:Lor, in the manner of Beethoven
+M:4/4
+L:1/8
+Q:"Allegro molto" 1/4=160
+%%score [fl ob cl bn] [hn tp] tm [v1 v2 va vc cb]
+% The score is written at sounding pitch. Dynamics in the wind, brass and double-bass parts are set one to three levels below the strings to balance the playback samples of this site; they are a playback compromise, not dynamics for live players.
+V:fl clef=treble name="Fl."
+V:ob clef=treble name="Ob."
+V:cl clef=treble name="Cl."
+V:bn clef=bass name="Bn."
+V:hn clef=treble name="Hn."
+V:tp clef=treble name="Tpt."
+V:tm clef=bass name="Timp."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:F
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tp
+%%MIDI program 56
+V:tm
+%%MIDI program 47
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-4: The motto in the major: full orchestra
+[V:fl] [M:4/4] !mp!f3 g a2 c'2 | !sfz!d'4 c'2 z2 | b3 c' d'2 f'2 | !sfz!g'4 e'2 z2 |
+[V:ob] [M:4/4] !mf!F3 G A2 c2 | !sfz!d4 c2 z2 | B3 c d2 f2 | !sfz!g4 e2 z2 |
+[V:cl] [M:4/4] !mf!F3 G A2 c2 | !sfz!d4 c2 z2 | B3 c d2 f2 | !sfz!g4 e2 z2 |
+[V:bn] [M:4/4] !mf!F,2 F,2 F,2 F,2 | B,,4 F,2 z2 | B,,2 B,,2 B,,2 B,,2 | C,4 C,2 z2 |
+[V:hn] [M:4/4] !mf![A,C]8 | [B,D]4 [A,C]2 z2 | [B,D]8 | [CE]4 [CE]2 z2 |
+[V:tp] [M:4/4] !f!c2 z6 | z4 c2 z2 | z8 | c4 c2 z2 |
+[V:tm] [M:4/4] !ff!F,,2 z6 | z4 F,,2 z2 | z8 | C,4 C,2 z2 |
+[V:v1] [M:4/4] !ff!F3 G A2 c2 | !sfz!d4 c2 z2 | B3 c d2 f2 | !sfz!g4 e2 z2 | [I:MIDI program 48]
+[V:v2] [M:4/4] !ff!C3 E F2 A2 | B4 A2 z2 | F3 A B2 d2 | e4 c2 z2 | [I:MIDI program 48]
+[V:va] [M:4/4] !ff!CCCC CCCC | DDDD CC z2 | DDDD DDDD | BBBB BB z2 | [I:MIDI program 48]
+[V:vc] [M:4/4] [I:MIDI program 48] "arco"!ff!F,2 F,2 F,2 F,2 | B,,4 F,2 z2 | B,,2 B,,2 B,,2 B,,2 | C,4 C,2 z2 | [I:MIDI program 48]
+[V:cb] [M:4/4] [I:MIDI program 43] "arco"!mp!F,,2 F,,2 F,,2 F,,2 | B,,,4 F,,2 z2 | B,,,2 B,,,2 B,,,2 B,,,2 | C,,4 C,,2 z2 | [I:MIDI program 43]
+% bars 5-8: Its continuation: arpeggios and a full close
+[V:fl] !mp!f'2 a'2 c''2 a'2 | b'2 g'2 e'2 c'2 | f'2 a'2 g'2 e'2 | f'6 z2 |
+[V:ob] !mf!f2 a2 c'2 a2 | b2 g2 e2 c2 | f2 a2 g2 e2 | f6 z2 |
+[V:cl] !mf!f2 a2 c'2 a2 | b2 g2 e2 c2 | f2 a2 g2 e2 | f6 z2 |
+[V:bn] !mf!F,2 F,2 F,2 F,2 | C,2 C,2 C,2 C,2 | F,2 F,2 C,2 C,2 | F,,6 z2 |
+[V:hn] !mf![A,C]8 | [CE]8 | [A,C]4 [CE]4 | [A,C]6 z2 |
+[V:tp] !f!c2 cc c4 | c2 cc c4 | c4 c4 | c6 z2 |
+[V:tm] !ff!F,,2 F,,F,, F,,4 | C,2 C,C, C,4 | F,,4 C,4 | F,,6 z2 |
+[V:v1] "arco"!ff!f2 a2 c'2 a2 | b2 g2 e2 c2 | f2 a2 g2 e2 | f6 z2 | [I:MIDI program 45]
+[V:v2] "arco"!ff!c2 f2 a2 f2 | g2 e2 c2 B2 | c2 f2 e2 B2 | A6 z2 | [I:MIDI program 45]
+[V:va] "arco"!ff!AAAA AAAA | BBBB BBBB | AAAA BBBB | AAAA A2 z2 | [I:MIDI program 45]
+[V:vc] "arco"!ff!F,2 F,2 F,2 F,2 | C,2 C,2 C,2 C,2 | F,2 F,2 C,2 C,2 | F,,6 z2 | [I:MIDI program 45]
+[V:cb] "arco"!mp!F,,2 F,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 C,,2 | F,,2 F,,2 C,,2 C,,2 | F,,,6 z2 | [I:MIDI program 45]
+% bars 9-16: The motto quietly in the woodwind over plucked strings, then the full close again
+[V:fl] !p!f3 g a2 c'2 | d'4 c'2 z2 | b3 c' d'2 f'2 | g'4 e'2 z2 |
+[V:ob] z8 | z8 | z8 | z8 |
+[V:cl] !mp!F3 G A2 c2 | d4 c2 z2 | B3 c d2 f2 | g4 e2 z2 |
+[V:bn] !mp!F,3 G, A,2 C2 | D4 C2 z2 | B,3 C D2 F2 | G4 E2 z2 |
+[V:hn] z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 |
+[V:v1] "pizz."!p!c2 z6 | d2 z2 c2 z2 | d2 z6 | e2 z2 e2 z2 | [I:MIDI program 48]
+[V:v2] "pizz."!p!A2 z6 | B2 z2 A2 z2 | B2 z6 | B2 z2 B2 z2 | [I:MIDI program 48]
+[V:va] "pizz."!p!F2 z6 | F2 z2 F2 z2 | F2 z6 | G2 z2 G2 z2 | [I:MIDI program 48]
+[V:vc] "pizz."!p!F,2 z6 | B,,2 z2 F,2 z2 | B,,2 z6 | C,2 z2 C,2 z2 | [I:MIDI program 48]
+[V:cb] "pizz."!pppp!F,,2 z6 | B,,,2 z2 F,,2 z2 | B,,,2 z6 | C,,2 z2 C,,2 z2 | [I:MIDI program 43]
+[V:fl] !mp!f'2 a'2 c''2 a'2 | b'2 g'2 e'2 c'2 | f'2 a'2 g'2 e'2 | f'6 z2 |
+[V:ob] !mf!f2 a2 c'2 a2 | b2 g2 e2 c2 | f2 a2 g2 e2 | f6 z2 |
+[V:cl] !mf!f2 a2 c'2 a2 | b2 g2 e2 c2 | f2 a2 g2 e2 | f6 z2 |
+[V:bn] !mf!F,2 F,2 F,2 F,2 | C,2 C,2 C,2 C,2 | F,2 F,2 C,2 C,2 | F,,6 z2 |
+[V:hn] !mf![A,C]8 | [CE]8 | [A,C]4 [CE]4 | [A,C]6 z2 |
+[V:tp] !f!c2 cc c4 | c2 cc c4 | c4 c4 | c6 z2 |
+[V:tm] !ff!F,,2 F,,F,, F,,4 | C,2 C,C, C,4 | F,,4 C,4 | F,,6 z2 |
+[V:v1] "arco"!ff!f2 a2 c'2 a2 | b2 g2 e2 c2 | f2 a2 g2 e2 | f6 z2 |
+[V:v2] "arco"!ff!c2 f2 a2 f2 | g2 e2 c2 B2 | c2 f2 e2 B2 | A6 z2 |
+[V:va] "arco"!ff!AAAA AAAA | BBBB BBBB | AAAA BBBB | AAAA A2 z2 |
+[V:vc] "arco"!ff!F,2 F,2 F,2 F,2 | C,2 C,2 C,2 C,2 | F,2 F,2 C,2 C,2 | F,,6 z2 |
+[V:cb] "arco"!mp!F,,2 F,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 C,,2 | F,,2 F,,2 C,,2 C,,2 | F,,,6 z2 |
+% bars 17-24: Transition: the motto's opening in the basses, sighs above, to the dominant of C
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] !mp!F,3 G, A,2 C2 | z8 | !mp!D,3 E, ^F,2 A,2 | z8 | !p!G,,2 G,,2 G,,2 G,,2 | G,,2 G,,2 G,,2 G,,2 | !ppp!G,,8- | G,,4 z4 |
+[V:hn] z8 | z8 | z8 | z8 | !p![G,D]8 | [G,D]8 | !ppp![G,D]8- | [G,D]4 z4 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !f!c'2 z6 | d'4 c'2 z2 | a2 z6 | =b4 a2 z2 | !mf!g2 f2 e2 d2 | c2 =B2 A2 G2 | !p!F8- | F4 z4 |
+[V:v2] !f!a2 z6 | b4 a2 z2 | ^f2 z6 | g4 ^f2 z2 | !mf!D8 | D8 | !p!D8- | D4 z4 |
+[V:va] !f!f2 z6 | f4 f2 z2 | d2 z6 | d4 d2 z2 | !mf!=B,B,B,B, B,B,B,B, | =B,B,B,B, B,B,B,B, | !p!=B,8- | =B,4 z4 |
+[V:vc] !f!F,3 G, A,2 C2 | z8 | !f!D,3 E, ^F,2 A,2 | z8 | !mf!G,,2 G,,2 G,,2 G,,2 | G,,2 G,,2 G,,2 G,,2 | !p!G,,8- | G,,4 z4 | [I:MIDI program 45]
+[V:cb] !p!F,,3 G,, A,,2 C,2 | z8 | !p!D,,3 E,, ^F,,2 A,,2 | z8 | !pp!G,,,2 G,,,2 G,,,2 G,,,2 | G,,,2 G,,,2 G,,,2 G,,,2 | !pppp!G,,,8- | G,,,4 z4 | [I:MIDI program 45]
+% bars 25-32: Second theme, C major: clarinet and bassoon over held and plucked strings
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] !mp!g6 e2 | c'4 =b2 a2 | g6 f2 | e6 z2 | a6 f2 | d'4 c'2 =b2 | c'4 d'2 =b2 | c'6 z2 |
+[V:bn] !mp!G,6 E,2 | C4 =B,2 A,2 | G,6 F,2 | E,6 z2 | A,6 F,2 | D4 C2 =B,2 | C4 D2 =B,2 | C6 z2 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v2] !pp!E8 | E4 D2 E2 | D8 | E8 | F8 | F8 | E4 F4 | E8 |
+[V:va] !pp!G,8 | G,4 G,2 C2 | =B,8 | C8 | A,8 | D8 | G,4 =B,4 | G,8 |
+[V:vc] "pizz."!p!C,2 z2 C,2 z2 | C,2 z2 =B,,2 A,,2 | G,,2 z2 G,,2 z2 | C,2 z2 C,2 z2 | F,,2 z2 F,,2 z2 | G,,2 z2 G,,2 z2 | G,,2 z2 G,,2 z2 | C,2 z6 | [I:MIDI program 48]
+[V:cb] "pizz."!pppp!C,,2 z2 C,,2 z2 | C,,2 z2 =B,,,2 A,,,2 | G,,,2 z2 G,,,2 z2 | C,,2 z2 C,,2 z2 | F,,,2 z2 F,,,2 z2 | G,,,2 z2 G,,,2 z2 | G,,,2 z2 G,,,2 z2 | C,,2 z6 | [I:MIDI program 43]
+% bars 33-40: The second theme in the violins
+[V:fl] !pp!g6 e2 | c'4 =b2 a2 | g6 f2 | e6 z2 | !p!a6 f2 | d'4 c'2 =b2 | c'4 d'2 =b2 | c'6 z2 |
+[V:ob] !p!G6 E2 | c4 =B2 A2 | G6 F2 | E6 z2 | !mp!A6 F2 | d4 c2 =B2 | c4 d2 =B2 | c6 z2 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] !p!C,4 C,4 | C,4 =B,,2 A,,2 | G,,4 G,,4 | C,4 C,4 | !mp!F,,4 F,,4 | G,,4 G,,4 | G,,4 G,,4 | C,6 z2 |
+[V:hn] !ppp![CE]8 | [CE]4 [=B,D]2 [CE]2 | [=B,D]8 | [CE]8 | !p![CF]8 | [=B,D]8 | [CE]4 [=B,D]4 | [CE]6 z2 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !mf!g6 e2 | c'4 =b2 a2 | g6 f2 | e6 z2 | !f!a6 f2 | d'4 c'2 =b2 | c'4 d'2 =b2 | c'6 z2 |
+[V:v2] !mf!e6 c2 | e4 d2 c2 | =B6 d2 | c6 z2 | !f!f6 c2 | f4 e2 d2 | e4 f2 d2 | e6 z2 |
+[V:va] !mp!GGGG GGGG | GGGG GGAA | GGGG GGGG | GGGG GGGG | !mf!AAAA AAAA | GGGG GGGG | GGGG GGGG | GGGG G2 z2 |
+[V:vc] "arco"!mf!C,4 C,4 | C,4 =B,,2 A,,2 | G,,4 G,,4 | C,4 C,4 | !f!F,,4 F,,4 | G,,4 G,,4 | G,,4 G,,4 | C,6 z2 |
+[V:cb] "arco"!pp!C,,4 C,,4 | C,,4 =B,,,2 A,,,2 | G,,,4 G,,,4 | C,,4 C,,4 | !p!F,,,4 F,,,4 | G,,,4 G,,,4 | G,,,4 G,,,4 | C,,6 z2 |
+% bars 41-48: Closing: the motto's opening in C, and hammered chords
+[V:fl] !mp!c3 d e2 g2 | a4 g2 z2 | c3 d e2 g2 | a4 g2 z2 | c'2 g2 e2 c2 | g2 f2 d2 =B2 | !>!c4 !>!c4 | !>!c6 z2 |
+[V:ob] !mf!c3 d e2 g2 | a4 g2 z2 | c3 d e2 g2 | a4 g2 z2 | c'2 g2 e2 c2 | g2 f2 d2 =B2 | !>!c4 !>!c4 | !>!c6 z2 |
+[V:cl] !mf!E3 F G2 c2 | f4 e2 z2 | E3 F G2 c2 | f4 e2 z2 | e2 c2 G2 E2 | =B2 d2 B2 G2 | E4 E4 | E6 z2 |
+[V:bn] !mf!C,3 D, E,2 G,2 | C,4 C,2 z2 | C,3 D, E,2 G,2 | C,4 C,2 z2 | C,2 E,2 G,2 C2 | G,,2 G,,2 G,,2 G,,2 | C,4 C,4 | C,6 z2 |
+[V:hn] !mf![CE]8 | [CF]4 [CE]2 z2 | [CE]8 | [CF]4 [CE]2 z2 | [CE]8 | [=B,D]8 | [CE]4 [CE]4 | [CE]6 z2 |
+[V:tp] !f!c2 z6 | z4 c2 z2 | c2 z6 | z4 c2 z2 | c2 cc c4 | G2 GG G4 | c4 c4 | c6 z2 |
+[V:tm] !ff!C,2 z6 | z4 C,2 z2 | C,2 z6 | z4 C,2 z2 | C,2 C,C, C,4 | z8 | C,4 C,4 | C,6 z2 |
+[V:v1] !ff!c3 d e2 g2 | a4 g2 z2 | c3 d e2 g2 | a4 g2 z2 | c'2 g2 e2 c2 | g2 f2 d2 =B2 | !>!c4 !>!c4 | !>!c6 z2 |
+[V:v2] !ff!E3 F G2 c2 | f4 e2 z2 | E3 F G2 c2 | f4 e2 z2 | e2 c2 G2 E2 | =B2 d2 B2 G2 | E4 E4 | E6 z2 |
+[V:va] !ff!GGGG GGGG | AAAA GG z2 | GGGG GGGG | AAAA GG z2 | GGGG GGGG | FFFF FFFF | G4 G4 | G6 z2 |
+[V:vc] !ff!C,3 D, E,2 G,2 | C,4 C,2 z2 | C,3 D, E,2 G,2 | C,4 C,2 z2 | C,2 E,2 G,2 C2 | G,,2 G,,2 G,,2 G,,2 | C,4 C,4 | C,6 z2 |
+[V:cb] !mp!C,,3 D,, E,,2 G,,2 | C,,4 C,,2 z2 | C,,3 D,, E,,2 G,,2 | C,,4 C,,2 z2 | C,,2 E,,2 G,,2 C,2 | G,,,2 G,,,2 G,,,2 G,,,2 | C,,4 C,,4 | C,,6 z2 |
+% bars 49-56: Development: the motto's opening, in its minor form, in D minor (strings), B flat (woodwind), G minor and E flat
+[V:fl] z8 | z8 | !p!b3 c' d'2 f'2 | g'4 f'2 z2 | z8 | z8 | !p!_e'3 f' g'2 b'2 | c''4 b'2 z2 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | !mp!B3 c d2 f2 | g4 f2 z2 | z8 | z8 | !mp!_e3 f g2 b2 | c'4 b2 z2 |
+[V:bn] z8 | z8 | !mp!B,3 C D2 F2 | G4 F2 z2 | z8 | z8 | !mp!_E3 F G2 B2 | c4 B2 z2 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !p!D3 E F2 A2 | B4 A2 z2 | z8 | z8 | !mf!G3 A B2 d2 | _e4 d2 z2 | z8 | z8 |
+[V:v2] !p!D3 E F2 A2 | B4 A2 z2 | !pp!d8 | d8 | !mf!G,3 A, B,2 D2 | _E4 D2 z2 | !p!B8 | B8 |
+[V:va] !pp!F,8 | F,8 | B,8 | B,8 | !p!B,8 | B,8 | G8 | G8 |
+[V:vc] !pp!D,8 | D,8 | B,,8 | B,,8 | !p!G,,8 | G,,8 | _E,8 | _E,8 |
+[V:cb] !pppp!D,,8 | D,,8 | B,,,8 | B,,,8 | !pppp!G,,,8 | G,,,8 | _E,,8 | _E,,8 |
+% bars 57-64: Over the dominant: the motto's opening with its minor sixth, bass and treble by turns, growing
+[V:fl] !p!g'2 z6 | z8 | !p!c'3 d' e'2 g'2 | _a'4 g'2 z2 | !mp!c''2 z6 | z8 | !mp!c'3 d' e'2 g'2 | _a'4 g'2 z2 |
+[V:ob] !mp!g2 z6 | z8 | !mp!c3 d e2 g2 | _a4 g2 z2 | !mf!c'2 z6 | z8 | !mf!c3 d e2 g2 | _a4 g2 z2 |
+[V:cl] !mp!e2 z6 | z8 | !mp!E3 F G2 c2 | f4 e2 z2 | !mf!g2 z6 | z8 | !mf!E3 F G2 c2 | f4 e2 z2 |
+[V:bn] !mp!C,3 D, E,2 G,2 | _A,4 G,2 z2 | !mp!C,2 C,2 C,2 C,2 | C,2 C,2 C,2 C,2 | !mf!C,3 D, E,2 G,2 | _A,4 G,2 z2 | C,2 C,2 C,2 C,2 | C,2 C,2 C,2 C,2 |
+[V:hn] !mp![CE]2 z6 | z8 | [CE]8 | [CE]6 z2 | !mf![CE]2 z6 | z8 | [CE]8 | [CE]6 z2 |
+[V:tp] z8 | z8 | z8 | z8 | !f!c2 z6 | z8 | c2 cc c4 | c6 z2 |
+[V:tm] !f!C,2 z6 | z8 | C,2 z2 C,2 z2 | C,2 z6 | !ff!C,2 z6 | z8 | C,2 C,C, C,4 | C,2 C,C, C,4 |
+[V:v1] !f!g2 z6 | z8 | !f!c3 d e2 g2 | _a4 g2 z2 | !ff!c'2 z6 | z8 | !ff!c3 d e2 g2 | _a4 g2 z2 |
+[V:v2] !f!e2 z6 | z8 | !f!E3 F G2 c2 | f4 e2 z2 | !ff!g2 z6 | z8 | !ff!E3 F G2 c2 | f4 e2 z2 |
+[V:va] !f!c2 z6 | z8 | !f!GGGG GGGG | GGGG GG z2 | !ff!e2 z6 | z8 | !ff!GGGG GGGG | GGGG GG z2 |
+[V:vc] !f!C,3 D, E,2 G,2 | _A,4 G,2 z2 | !f!C,2 C,2 C,2 C,2 | C,2 C,2 C,2 C,2 | !ff!C,3 D, E,2 G,2 | _A,4 G,2 z2 | C,2 C,2 C,2 C,2 | C,2 C,2 C,2 C,2 |
+[V:cb] !p!C,,3 D,, E,,2 G,,2 | _A,,4 G,,2 z2 | !p!C,,2 C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 C,,2 | !mp!C,,3 D,, E,,2 G,,2 | _A,,4 G,,2 z2 | C,,2 C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 C,,2 |
+% bars 65-72: Dominant seventh arpeggios; the first movement's sigh, quietly; a scale back to the theme
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | [M:4/4]
+[V:ob] z8 | z8 | z8 | z8 | !p!b4 g2 z2 | b4 g2 z2 | z8 | z8 | [M:4/4]
+[V:cl] z8 | z8 | z8 | z8 | !p!_d'4 c'2 z2 | _d'4 c'2 z2 | z8 | z8 | [M:4/4]
+[V:bn] !mf!C,2 C,2 C,2 C,2 | C,2 C,2 C,2 C,2 | C,2 C,2 C,2 C,2 | C,2 z6 | !p!E4 E2 z2 | E4 E2 z2 | z8 | z8 | [M:4/4]
+[V:hn] !mf![CE]8 | [CE]8 | [CE]8 | [CE]2 z6 | z8 | z8 | z8 | !mp![CE]8 | [M:4/4]
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | [M:4/4]
+[V:tm] !ff!C,2 C,C, C,4 | C,2 C,C, C,4 | C,2 C,C, C,4 | C,2 z6 | !p!C,2 z6 | C,2 z6 | z8 | !f!C,C,C,C, C,C,C,C, | [M:4/4]
+[V:v1] !ff!g2 b2 g2 e2 | c2 e2 g2 b2 | c'2 b2 g2 e2 | c2 z6 | z8 | z8 | !mf!CDEF GABc | !f!defg abc'd' | [M:4/4]
+[V:v2] !ff!e2 g2 e2 c2 | G2 c2 e2 g2 | g2 g2 e2 c2 | G2 z6 | z8 | z8 | !mf!CDEF GABc | !f!defg abc'd' | [M:4/4]
+[V:va] !ff!BBBB BBBB | BBBB BBBB | BBBB BBBB | B2 z6 | z8 | z8 | !mf!C,D,E,F, G,A,B,C | !f!DEFG ABcd | [M:4/4]
+[V:vc] !ff!C,2 C,2 C,2 C,2 | C,2 C,2 C,2 C,2 | C,2 C,2 C,2 C,2 | C,2 z6 | z8 | z8 | !mf!C,D,E,F, G,A,B,C | !f!C,2 C,2 C,2 C,2 | [M:4/4] [I:MIDI program 48]
+[V:cb] !mp!C,,2 C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 C,,2 | C,,2 z6 | z8 | z8 | z8 | !p!C,,2 C,,2 C,,2 C,,2 | [M:4/4] [I:MIDI program 43]
+% bars 73-80: Recapitulation
+[V:fl] !mp!f3 g a2 c'2 | !sfz!d'4 c'2 z2 | b3 c' d'2 f'2 | !sfz!g'4 e'2 z2 |
+[V:ob] !mf!F3 G A2 c2 | !sfz!d4 c2 z2 | B3 c d2 f2 | !sfz!g4 e2 z2 |
+[V:cl] !mf!F3 G A2 c2 | !sfz!d4 c2 z2 | B3 c d2 f2 | !sfz!g4 e2 z2 |
+[V:bn] !mf!F,2 F,2 F,2 F,2 | B,,4 F,2 z2 | B,,2 B,,2 B,,2 B,,2 | C,4 C,2 z2 |
+[V:hn] !mf![A,C]8 | [B,D]4 [A,C]2 z2 | [B,D]8 | [CE]4 [CE]2 z2 |
+[V:tp] !f!c2 z6 | z4 c2 z2 | z8 | c4 c2 z2 |
+[V:tm] !ff!F,,2 z6 | z4 F,,2 z2 | z8 | C,4 C,2 z2 |
+[V:v1] !ff!F3 G A2 c2 | !sfz!d4 c2 z2 | B3 c d2 f2 | !sfz!g4 e2 z2 | [I:MIDI program 48]
+[V:v2] !ff!C3 E F2 A2 | B4 A2 z2 | F3 A B2 d2 | e4 c2 z2 | [I:MIDI program 48]
+[V:va] !ff!CCCC CCCC | DDDD CC z2 | DDDD DDDD | BBBB BB z2 | [I:MIDI program 48]
+[V:vc] "arco"!ff!F,2 F,2 F,2 F,2 | B,,4 F,2 z2 | B,,2 B,,2 B,,2 B,,2 | C,4 C,2 z2 | [I:MIDI program 48]
+[V:cb] "arco"!mp!F,,2 F,,2 F,,2 F,,2 | B,,,4 F,,2 z2 | B,,,2 B,,,2 B,,,2 B,,,2 | C,,4 C,,2 z2 | [I:MIDI program 43]
+[V:fl] !mp!f'2 a'2 c''2 a'2 | b'2 g'2 e'2 c'2 | f'2 a'2 g'2 e'2 | f'6 z2 |
+[V:ob] !mf!f2 a2 c'2 a2 | b2 g2 e2 c2 | f2 a2 g2 e2 | f6 z2 |
+[V:cl] !mf!f2 a2 c'2 a2 | b2 g2 e2 c2 | f2 a2 g2 e2 | f6 z2 |
+[V:bn] !mf!F,2 F,2 F,2 F,2 | C,2 C,2 C,2 C,2 | F,2 F,2 C,2 C,2 | F,,6 z2 |
+[V:hn] !mf![A,C]8 | [CE]8 | [A,C]4 [CE]4 | [A,C]6 z2 |
+[V:tp] !f!c2 cc c4 | c2 cc c4 | c4 c4 | c6 z2 |
+[V:tm] !ff!F,,2 F,,F,, F,,4 | C,2 C,C, C,4 | F,,4 C,4 | F,,6 z2 |
+[V:v1] "arco"!ff!f2 a2 c'2 a2 | b2 g2 e2 c2 | f2 a2 g2 e2 | f6 z2 |
+[V:v2] "arco"!ff!c2 f2 a2 f2 | g2 e2 c2 B2 | c2 f2 e2 B2 | A6 z2 |
+[V:va] "arco"!ff!AAAA AAAA | BBBB BBBB | AAAA BBBB | AAAA A2 z2 |
+[V:vc] "arco"!ff!F,2 F,2 F,2 F,2 | C,2 C,2 C,2 C,2 | F,2 F,2 C,2 C,2 | F,,6 z2 |
+[V:cb] "arco"!mp!F,,2 F,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 C,,2 | F,,2 F,,2 C,,2 C,,2 | F,,,6 z2 |
+% bars 81-88: Transition, now to the dominant of F
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] !mp!F,3 G, A,2 C2 | z8 | !mp!B,,3 C, D,2 F,2 | z8 | !p!C,2 C,2 C,2 C,2 | C,2 C,2 C,2 C,2 | !ppp!C,8- | C,4 z4 |
+[V:hn] z8 | z8 | z8 | z8 | !p![C,G,]8 | [C,G,]8 | !ppp![C,G,]8- | [C,G,]4 z4 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !f!c'2 z6 | d'4 c'2 z2 | f2 z6 | g4 f2 z2 | !mf!c'2 b2 a2 g2 | f2 e2 d2 c2 | !p!B8- | B4 z4 |
+[V:v2] !f!a2 z6 | b4 a2 z2 | d2 z6 | d4 d2 z2 | !mf!G8 | G8 | !p!G8- | G4 z4 |
+[V:va] !f!f2 z6 | f4 f2 z2 | B2 z6 | B4 B2 z2 | !mf!EEEE EEEE | EEEE EEEE | !p!E8- | E4 z4 |
+[V:vc] !f!F,3 G, A,2 C2 | z8 | !f!B,,3 C, D,2 F,2 | z8 | !mf!C,2 C,2 C,2 C,2 | C,2 C,2 C,2 C,2 | !p!C,8- | C,4 z4 | [I:MIDI program 45]
+[V:cb] !p!F,,3 G,, A,,2 C,2 | z8 | !p!B,,,3 C,, D,,2 F,,2 | z8 | !pp!C,,2 C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 C,,2 | !pppp!C,,8- | C,,4 z4 | [I:MIDI program 45]
+% bars 89-96: Second theme in F major
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] !mp!c'6 a2 | f'4 e'2 d'2 | c'6 b2 | a6 z2 | d'6 b2 | g'4 f'2 e'2 | f'4 g'2 e'2 | f'6 z2 |
+[V:bn] !mp!C6 A,2 | F4 E2 D2 | C6 B,2 | A,6 z2 | D6 B,2 | G4 F2 E2 | F4 G2 E2 | F6 z2 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v2] !pp!A8 | A4 G2 A2 | G8 | A8 | B8 | B8 | A4 B4 | A8 |
+[V:va] !pp!C8 | C4 C2 F2 | E8 | F8 | D8 | G8 | C4 E4 | C8 |
+[V:vc] "pizz."!p!F,2 z2 F,2 z2 | F,2 z2 E,2 D,2 | C,2 z2 C,2 z2 | F,2 z2 F,2 z2 | B,,2 z2 B,,2 z2 | C,2 z2 C,2 z2 | C,2 z2 C,2 z2 | F,2 z6 | [I:MIDI program 48]
+[V:cb] "pizz."!pppp!F,,2 z2 F,,2 z2 | F,,2 z2 E,,2 D,,2 | C,,2 z2 C,,2 z2 | F,,2 z2 F,,2 z2 | B,,,2 z2 B,,,2 z2 | C,,2 z2 C,,2 z2 | C,,2 z2 C,,2 z2 | F,,2 z6 | [I:MIDI program 43]
+% bars 97-104: The second theme in the violins
+[V:fl] !pp!c'6 a2 | f'4 e'2 d'2 | c'6 b2 | a6 z2 | !p!d'6 b2 | g'4 f'2 e'2 | f'4 g'2 e'2 | f'6 z2 |
+[V:ob] !p!c6 A2 | f4 e2 d2 | c6 B2 | A6 z2 | !mp!d6 B2 | g4 f2 e2 | f4 g2 e2 | f6 z2 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] !p!F,4 F,4 | F,4 E,2 D,2 | C,4 C,4 | F,4 F,4 | !mp!B,,4 B,,4 | C,4 C,4 | C,4 C,4 | F,6 z2 |
+[V:hn] !ppp![FA]8 | [FA]4 [EG]2 [FA]2 | [EG]8 | [FA]8 | !p![FB]8 | [EG]8 | [FA]4 [EG]4 | [FA]6 z2 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !mf!c'6 a2 | f'4 e'2 d'2 | c'6 b2 | a6 z2 | !f!d'6 b2 | g'4 f'2 e'2 | f'4 g'2 e'2 | f'6 z2 |
+[V:v2] !mf!a6 f2 | a4 g2 f2 | e6 g2 | f6 z2 | !f!b6 f2 | b4 a2 g2 | a4 b2 g2 | a6 z2 |
+[V:va] !mp!cccc cccc | cccc ccdd | cccc cccc | cccc cccc | !mf!dddd dddd | cccc cccc | cccc cccc | cccc c2 z2 |
+[V:vc] "arco"!mf!F,4 F,4 | F,4 E,2 D,2 | C,4 C,4 | F,4 F,4 | !f!B,,4 B,,4 | C,4 C,4 | C,4 C,4 | F,6 z2 |
+[V:cb] "arco"!pp!F,,4 F,,4 | F,,4 E,,2 D,,2 | C,,4 C,,4 | F,,4 F,,4 | !p!B,,,4 B,,,4 | C,,4 C,,4 | C,,4 C,,4 | F,,6 z2 |
+% bars 105-112: Closing in F major
+[V:fl] !mp!f3 g a2 c'2 | d'4 c'2 z2 | f3 g a2 c'2 | d'4 c'2 z2 | f'2 c'2 a2 f2 | c'2 b2 g2 e2 | !>!f4 !>!f4 | !>!f6 z2 | [Q:"Presto" 1/4=184]
+[V:ob] !mf!f3 g a2 c'2 | d'4 c'2 z2 | f3 g a2 c'2 | d'4 c'2 z2 | f'2 c'2 a2 f2 | c'2 b2 g2 e2 | !>!f4 !>!f4 | !>!f6 z2 |
+[V:cl] !mf!A3 B c2 f2 | b4 a2 z2 | A3 B c2 f2 | b4 a2 z2 | a2 f2 c2 A2 | e2 g2 e2 c2 | A4 A4 | A6 z2 |
+[V:bn] !mf!F,3 G, A,2 C2 | F,4 F,2 z2 | F,3 G, A,2 C2 | F,4 F,2 z2 | F,2 A,2 C2 F2 | C,2 C,2 C,2 C,2 | F,4 F,4 | F,6 z2 |
+[V:hn] !mf![FA]8 | [FB]4 [FA]2 z2 | [FA]8 | [FB]4 [FA]2 z2 | [FA]8 | [EG]8 | [FA]4 [FA]4 | [FA]6 z2 |
+[V:tp] !f!f2 z6 | z4 f2 z2 | f2 z6 | z4 f2 z2 | f2 ff f4 | c2 cc c4 | f4 f4 | f6 z2 |
+[V:tm] !ff!F,2 z6 | z4 F,2 z2 | F,2 z6 | z4 F,2 z2 | F,2 F,F, F,4 | z8 | F,4 F,4 | F,6 z2 |
+[V:v1] !ff!f3 g a2 c'2 | d'4 c'2 z2 | f3 g a2 c'2 | d'4 c'2 z2 | f'2 c'2 a2 f2 | c'2 b2 g2 e2 | !>!f4 !>!f4 | !>!f6 z2 |
+[V:v2] !ff!A3 B c2 f2 | b4 a2 z2 | A3 B c2 f2 | b4 a2 z2 | a2 f2 c2 A2 | e2 g2 e2 c2 | A4 A4 | A6 z2 |
+[V:va] !ff!cccc cccc | dddd cc z2 | cccc cccc | dddd cc z2 | cccc cccc | BBBB BBBB | c4 c4 | c6 z2 |
+[V:vc] !ff!F,3 G, A,2 C2 | F,4 F,2 z2 | F,3 G, A,2 C2 | F,4 F,2 z2 | F,2 A,2 C2 F2 | C,2 C,2 C,2 C,2 | F,4 F,4 | F,6 z2 |
+[V:cb] !mp!F,,3 G,, A,,2 C,2 | F,,4 F,,2 z2 | F,,3 G,, A,,2 C,2 | F,,4 F,,2 z2 | F,,2 A,,2 C,2 F,2 | C,,2 C,,2 C,,2 C,,2 | F,,4 F,,4 | F,,6 z2 |
+% bars 113-124: Presto: the motto in the major twice more, falling arpeggios, and the last chords
+[V:fl] !mp!f3 g a2 c'2 | d'4 c'2 z2 | f3 g a2 c'2 | d'4 c'2 z2 | f'2 c'2 a2 f2 | c'2 a2 f2 c2 | f2 z2 e2 z2 | f2 z2 e2 z2 | f2 z2 f2 z2 | e2 z2 f2 z2 | f8 | !fermata!f6 z2 |]
+[V:ob] !mf!f3 g a2 c'2 | d'4 c'2 z2 | f3 g a2 c'2 | d'4 c'2 z2 | f'2 c'2 a2 f2 | c'2 a2 f2 c2 | f2 z2 e2 z2 | f2 z2 e2 z2 | f2 z2 f2 z2 | e2 z2 f2 z2 | f8 | !fermata!f6 z2 |]
+[V:cl] !mf!A3 c f2 a2 | b4 a2 z2 | A3 c f2 a2 | b4 a2 z2 | a2 f2 c2 A2 | a2 f2 c2 A2 | c2 z2 B2 z2 | c2 z2 B2 z2 | c2 z2 c2 z2 | B2 z2 c2 z2 | c8 | !fermata!c6 z2 |]
+[V:bn] !mf!F,2 F,2 F,2 F,2 | B,,4 F,2 z2 | F,2 F,2 F,2 F,2 | B,,4 F,2 z2 | F,2 A,2 C2 A,2 | F,2 A,2 C2 A,2 | F,2 z2 C,2 z2 | F,2 z2 C,2 z2 | F,2 z2 F,2 z2 | C,2 z2 F,2 z2 | F,,8 | !fermata!F,,6 z2 |]
+[V:hn] !mf![A,C]8 | [B,D]4 [A,C]2 z2 | [A,C]8 | [B,D]4 [A,C]2 z2 | [A,C]8 | [A,C]8 | [A,C]2 z2 [CE]2 z2 | [A,C]2 z2 [CE]2 z2 | [A,C]2 z2 [A,C]2 z2 | [CE]2 z2 [A,C]2 z2 | [A,C]8 | !fermata![A,C]6 z2 |]
+[V:tp] !f!c2 z6 | z4 c2 z2 | c2 z6 | z4 c2 z2 | c2 cc c4 | c2 cc c4 | c2 z2 c2 z2 | c2 z2 c2 z2 | c2 z2 c2 z2 | c2 z2 c2 z2 | c8 | !fermata!c6 z2 |]
+[V:tm] !ff!F,,2 z6 | z4 F,,2 z2 | F,,2 z6 | z4 F,,2 z2 | F,,2 F,,F,, F,,4 | F,,2 F,,F,, F,,4 | F,,2 z2 C,2 z2 | F,,2 z2 C,2 z2 | F,,2 z2 F,,2 z2 | C,2 z2 F,,2 z2 | F,,F,,F,,F,, F,,F,,F,,F,, | !fermata!F,,6 z2 |]
+[V:v1] !ff!f3 g a2 c'2 | d'4 c'2 z2 | f3 g a2 c'2 | d'4 c'2 z2 | f'2 c'2 a2 f2 | c'2 a2 f2 c2 | f2 z2 e2 z2 | f2 z2 e2 z2 | f2 z2 f2 z2 | e2 z2 f2 z2 | f8 | !fermata!f6 z2 |]
+[V:v2] !ff!A3 c f2 a2 | b4 a2 z2 | A3 c f2 a2 | b4 a2 z2 | a2 f2 c2 A2 | a2 f2 c2 A2 | c2 z2 B2 z2 | c2 z2 B2 z2 | c2 z2 c2 z2 | B2 z2 c2 z2 | c8 | !fermata!c6 z2 |]
+[V:va] !ff!cccc cccc | dddd cc z2 | cccc cccc | dddd cc z2 | cccc cccc | cccc cccc | A2 z2 G2 z2 | A2 z2 G2 z2 | A2 z2 A2 z2 | G2 z2 A2 z2 | A8 | !fermata!A6 z2 |]
+[V:vc] !ff!F,2 F,2 F,2 F,2 | B,,4 F,2 z2 | F,2 F,2 F,2 F,2 | B,,4 F,2 z2 | F,2 A,2 C2 A,2 | F,2 A,2 C2 A,2 | F,2 z2 C,2 z2 | F,2 z2 C,2 z2 | F,2 z2 F,2 z2 | C,2 z2 F,2 z2 | F,,8 | !fermata!F,,6 z2 |]
+[V:cb] !mp!F,,2 F,,2 F,,2 F,,2 | B,,,4 F,,2 z2 | F,,2 F,,2 F,,2 F,,2 | B,,,4 F,,2 z2 | F,,2 A,,2 C,2 A,,2 | F,,2 A,,2 C,2 A,,2 | F,,2 z2 C,,2 z2 | F,,2 z2 C,,2 z2 | F,,2 z2 F,,2 z2 | C,,2 z2 F,,2 z2 | F,,,8 | !fermata!F,,,6 z2 |]

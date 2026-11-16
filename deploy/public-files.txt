@@ -39,3 +39,10 @@ scores/dvorak-symphony-1-i.abc
 scores/dvorak-symphony-1-ii.abc
 scores/dvorak-symphony-1-iii.abc
 scores/dvorak-symphony-1-iv.abc
+beethoven-symphony-1-notebook.html
+beethoven-symphony-1-transcript.html
+beethoven-symphony-1-transcript.json
+scores/beethoven-symphony-1-i.abc
+scores/beethoven-symphony-1-ii.abc
+scores/beethoven-symphony-1-iii.abc
+scores/beethoven-symphony-1-iv.abc
