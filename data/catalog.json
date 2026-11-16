@@ -437,6 +437,50 @@
           "durationSeconds": 159
         }
       ]
+    },
+    {
+      "id": "dvorak-symphony-1",
+      "composerId": "dvorak",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Dvořák’s Missing Symphony",
+      "subtitle": "Symphony in B minor",
+      "description": "A compact four-movement symphony for a twelve-staff orchestra: sonata Allegro, Adagio with a dumka, furiant, and a finale that recalls the earlier themes. A new AI-composed homage, not a rediscovered work by Dvořák.",
+      "durationSeconds": 686,
+      "date": "2026-11-16",
+      "status": "completed",
+      "notebook": "dvorak-symphony-1-notebook.html",
+      "transcript": "dvorak-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Allegro maestoso",
+          "note": "Sonata form in B minor: a brooding theme with a flat seventh, a pentatonic second theme in D, a recapitulation that turns to B major and back.",
+          "source": "scores/dvorak-symphony-1-i.abc",
+          "durationSeconds": 236
+        },
+        {
+          "id": "ii",
+          "label": "II. Adagio",
+          "note": "A wind chorale frames a pentatonic song for oboe; the middle is a small dumka in G minor.",
+          "source": "scores/dvorak-symphony-1-ii.abc",
+          "durationSeconds": 182
+        },
+        {
+          "id": "iii",
+          "label": "III. Scherzo: Furiant",
+          "note": "A furiant in D major with its two-against-three strides, and a drone trio in G.",
+          "source": "scores/dvorak-symphony-1-iii.abc",
+          "durationSeconds": 128
+        },
+        {
+          "id": "iv",
+          "label": "IV. Finale: Allegro con fuoco",
+          "note": "A stamping B minor dance, a broad second theme, and a B major coda on the first movement’s theme.",
+          "source": "scores/dvorak-symphony-1-iv.abc",
+          "durationSeconds": 140
+        }
+      ]
     }
   ]
 }

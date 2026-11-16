@@ -32,3 +32,10 @@ scores/bernstein-string-quartet-1-i.abc
 scores/bernstein-string-quartet-1-ii.abc
 scores/bernstein-string-quartet-1-iii.abc
 scores/bernstein-string-quartet-1-iv.abc
+dvorak-symphony-1-notebook.html
+dvorak-symphony-1-transcript.html
+dvorak-symphony-1-transcript.json
+scores/dvorak-symphony-1-i.abc
+scores/dvorak-symphony-1-ii.abc
+scores/dvorak-symphony-1-iii.abc
+scores/dvorak-symphony-1-iv.abc

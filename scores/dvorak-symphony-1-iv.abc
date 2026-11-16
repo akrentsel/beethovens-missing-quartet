@@ -1,0 +1,230 @@
+%%label IV. Finale: Allegro con fuoco
+%%note B minor, 2/4. A stamping dance tune; a broad second theme in D major for cellos and clarinet, then violins; a development in which horns and trumpets recall the first movement's theme and the oboe recalls the Adagio's song; the second theme returns in B major, and the coda sets the first movement's theme, broadened, over the dance rhythm.
+X:1
+T:Dvořák’s Missing Symphony
+T:IV. Finale: Allegro con fuoco
+C:Lor, in the manner of Antonín Dvořák
+M:2/4
+L:1/8
+Q:"Allegro con fuoco" 1/4=126
+%%score [fl ob cl bn] [hn tp] tm [v1 v2 va vc cb]
+% The score is written at sounding pitch. Dynamics in the wind, brass and double-bass parts are set one to three levels below the strings to balance the playback samples of this site; they are a playback compromise, not dynamics for live players.
+V:fl clef=treble name="Fl."
+V:ob clef=treble name="Ob."
+V:cl clef=treble name="Cl."
+V:bn clef=bass name="Bn."
+V:hn clef=treble name="Hn."
+V:tp clef=treble name="Tpt."
+V:tm clef=bass name="Timp."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:Bm
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tp
+%%MIDI program 56
+V:tm
+%%MIDI program 47
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-4: Four bars of drum and low strings
+[V:fl] [M:2/4] z4 | z4 | z4 | z4 |
+[V:ob] [M:2/4] z4 | z4 | z4 | z4 |
+[V:cl] [M:2/4] z4 | z4 | z4 | z4 |
+[V:bn] [M:2/4] !mp!B,,2 z2 | B,,2 z2 | B,,2 z2 | B,,2 F,2 |
+[V:hn] [M:2/4] !mp![B,F]4- | [B,F]4 | [B,F]4- | [B,F]4 |
+[V:tp] [M:2/4] z4 | z4 | z4 | z4 |
+[V:tm] [M:2/4] !f!B,,2 B,,B,, | B,,2 B,,B,, | B,,2 B,,B,, | B,,B,, B,,B,, |
+[V:v1] [M:2/4] z4 | z4 | z4 | z4 |
+[V:v2] [M:2/4] z4 | z4 | z4 | z4 |
+[V:va] [M:2/4] z4 | z4 | z4 | z4 |
+[V:vc] [M:2/4] !f!B,,2 z2 | B,,2 z2 | B,,2 z2 | B,,2 F,2 |
+[V:cb] [M:2/4] !p!B,,,2 z2 | B,,,2 z2 | B,,,2 z2 | B,,,2 F,,2 |
+% bars 5-12: The dance tune in the violins
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] !p!z D z D | z D z D | z D z D | z E z D | z C z C | z E z E | z E z E | z C z D |
+[V:bn] !mp!B,,2 z2 | B,,2 z2 | D,2 z2 | E,2 D,2 | F,2 z2 | F,2 z2 | E,2 z2 | F,2 B,,2 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] !mf!B,,2 z2 | z4 | z4 | z4 | F,,2 z2 | z4 | z4 | F,,2 B,,2 |
+[V:v1] !f!B2 Bc | d2 de | f2 af | e2 d2 | c2 cd | e2 ef | gf ed | c^A B2 |
+[V:v2] !f!B,2 B,C | D2 DE | F2 AF | E2 D2 | C2 CD | E2 EF | GF ED | C^A, B,2 |
+[V:va] !mf!z F z F | z F z F | z F z A | z G z F | z F z F | z F z F | z G z G | z F z F |
+[V:vc] !f!B,,2 z2 | B,,2 z2 | D,2 z2 | E,2 D,2 | F,2 z2 | F,2 z2 | E,2 z2 | F,2 B,,2 |
+[V:cb] !p!B,,,2 z2 | B,,,2 z2 | D,,2 z2 | E,,2 D,,2 | F,,2 z2 | F,,2 z2 | E,,2 z2 | F,,2 B,,,2 |
+% bars 13-20: The tune in the full orchestra
+[V:fl] !mp!b2 bc' | d'2 d'e' | f'2 a'f' | e'2 d'2 | c'2 c'd' | e'2 e'f' | g'f' e'd' | c'^a b2 |
+[V:ob] !mf!B2 Bc | d2 de | f2 af | e2 d2 | c2 cd | e2 ef | gf ed | c^A B2 |
+[V:cl] !mf!B2 Bc | d2 de | f2 af | e2 d2 | c2 cd | e2 ef | gf ed | c^A B2 |
+[V:bn] !mf!B,,2 B,,2 | B,,2 B,,2 | D,2 D,2 | E,2 D,2 | F,2 F,2 | F,2 F,2 | E,2 E,2 | F,2 B,,2 |
+[V:hn] !mp![DF]4 | [DF]4 | [DF]4 | [EG]2 [DF]2 | [CF]4 | [CE]4 | [EG]4 | [CE]2 [DF]2 |
+[V:tp] !mf!B2 z2 | z4 | z4 | z4 | f2 ff | f2 z2 | z4 | f2 B2 |
+[V:tm] !f!B,,2 B,,B,, | B,,2 z2 | z4 | z4 | F,,2 F,,F,, | F,,2 z2 | z4 | F,,2 B,,2 |
+[V:v1] !ff!b2 bc' | d'2 d'e' | f'2 a'f' | e'2 d'2 | c'2 c'd' | e'2 e'f' | g'f' e'd' | c'^a b2 |
+[V:v2] !ff!B2 Bc | d2 de | f2 af | e2 d2 | c2 cd | e2 ef | gf ed | c^A B2 |
+[V:va] !f!FFFF | FFFF | FFAA | GGFF | FFFF | EEEE | GGGG | FFFF |
+[V:vc] !ff!B,,2 B,,2 | B,,2 B,,2 | D,2 D,2 | E,2 D,2 | F,2 F,2 | F,2 F,2 | E,2 E,2 | F,2 B,,2 |
+[V:cb] !mp!B,,,2 B,,,2 | B,,,2 B,,,2 | D,,2 D,,2 | E,,2 D,,2 | F,,2 F,,2 | F,,2 F,,2 | E,,2 E,,2 | F,,2 B,,,2 |
+% bars 21-28: Transition: the tune's first notes climb in D and settle on its dominant
+[V:fl] !p!d2 de | f2 fg | a2 ab | c'2 c'd' | z4 | z4 | z4 | z4 |
+[V:ob] !mp!d2 de | f2 fg | a2 ab | c'2 c'd' | z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | !pp!e2 d2 | c2 B2 |
+[V:bn] !mp!D,2 z2 | D,2 z2 | A,,2 z2 | A,,2 z2 | !p!A,,4- | A,,4 | !ppp!A,,4- | A,,4 |
+[V:hn] !p![DF]4 | [DF]4 | [CE]4 | [CE]4 | [A,E]4- | [A,E]4 | !ppp![A,E]4- | [A,E]4 |
+[V:tp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !f!d2 de | f2 fg | a2 ab | c'2 c'd' | !mf!e'4- | e'2 c'2 | !p!a4- | a4 |
+[V:v2] !f!D2 DE | F2 FG | A2 AB | c2 cd | !mf!e4- | e2 c2 | !p!A4- | A4 |
+[V:va] !f!FFFF | AAAA | AAAA | GGGG | !mf!G4- | G4 | !p!G4- | G4 |
+[V:vc] !f!D,2 z2 | D,2 z2 | A,,2 z2 | A,,2 z2 | !mf!A,,4- | A,,4 | !p!A,,4- | A,,4 |
+[V:cb] !p!D,,2 z2 | D,,2 z2 | A,,,2 z2 | A,,,2 z2 | !pp!A,,,4- | A,,,4 | !pppp!A,,,4- | A,,,4 | [I:MIDI program 45]
+% bars 29-44: Second theme, D major: cellos and clarinet under pulsing violins
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] !p!F4 | A4 | B2 A2 | F4 | E2 F2 | A2 B2 | A4- | A4 | d4 | B4 | A2 F2 | E4 | D2 E2 | F2 A2 | E4 | D4 |
+[V:bn] !ppp!D,4 | D,4 | G,,2 D,2 | D,4 | A,,4 | A,,4 | A,,4 | A,,4 | G,,4 | G,,4 | A,,4 | A,,4 | G,,4 | A,,4 | A,,4 | D,4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !pp!z A z A | z A z A | z B z A | z A z A | z A z A | z G z G | z A z A | z A z A | z B z B | z B z B | z A z A | z G z G | z B z B | z A z A | z G z G | z F z F |
+[V:v2] !pp!z F z F | z F z F | z G z F | z F z F | z E z E | z E z E | z E z E | z E z E | z G z G | z G z G | z F z F | z E z E | z G z G | z F z F | z E z E | z D z D |
+[V:va] !pp!D4 | D4 | D4 | D4 | C4 | C4 | C4 | C4 | D4 | D4 | D4 | C4 | D4 | D4 | C4 | D4 |
+[V:vc] !mf!F4 | A4 | B2 A2 | F4 | E2 F2 | A2 B2 | A4- | A4 | d4 | B4 | A2 F2 | E4 | D2 E2 | F2 A2 | E4 | D4 |
+[V:cb] "pizz."!pppp!D,,2 z2 | D,,2 z2 | G,,,2 D,,2 | D,,2 z2 | A,,,2 z2 | A,,,2 z2 | A,,,2 z2 | A,,,2 z2 | G,,,2 z2 | G,,,2 z2 | A,,,2 z2 | A,,,2 z2 | G,,,2 z2 | A,,,2 z2 | A,,,2 z2 | D,,2 z2 | [I:MIDI program 43]
+% bars 45-60: The second theme in the violins and woodwind
+[V:fl] !p!f4 | a4 | b2 a2 | f4 | e2 f2 | a2 b2 | a4- | a4 | d'4 | b4 | a2 f2 | e4 | d2 e2 | f2 a2 | e4 | d4 |
+[V:ob] !mp!f4 | a4 | b2 a2 | f4 | e2 f2 | a2 b2 | a4- | a4 | d'4 | b4 | a2 f2 | e4 | d2 e2 | f2 a2 | e4 | d4 |
+[V:cl] !mp!F4 | A4 | B2 A2 | F4 | E2 F2 | A2 B2 | A4- | A4 | d4 | B4 | A2 F2 | E4 | D2 E2 | F2 A2 | E4 | D4 |
+[V:bn] !mp!D,4 | D,4 | G,,2 D,2 | D,4 | A,,4 | A,,4 | A,,4 | A,,4 | G,,4 | G,,4 | A,,4 | A,,4 | G,,4 | A,,4 | A,,4 | D,4 |
+[V:hn] !p![DF]4 | [DF]4 | [DG]2 [DF]2 | [DF]4 | [CE]4 | [CE]4 | [CE]4 | [CE]4 | [DG]4 | [DG]4 | [DF]4 | [CE]4 | [DG]4 | [DF]4 | [CE]4 | [DF]4 |
+[V:tp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] !mf!D,2 z2 | z4 | z4 | z4 | A,,2 z2 | z4 | z4 | z4 | z4 | z4 | z4 | A,,2 z2 | z4 | z4 | A,,2 A,,2 | D,2 z2 |
+[V:v1] !f!f4 | a4 | b2 a2 | f4 | e2 f2 | a2 b2 | a4- | a4 | d'4 | b4 | a2 f2 | e4 | d2 e2 | f2 a2 | e4 | d4 |
+[V:v2] !f!d4 | f4 | g2 f2 | d4 | c2 d2 | e2 g2 | e4- | e4 | b4 | g4 | f2 d2 | c4 | B2 B2 | d2 f2 | c4 | A4 |
+[V:va] !mf!A,DFD | A,DFD | B,DA,D | A,DFD | A,CEC | A,CGC | A,CEC | A,CEC | B,DGD | B,DGD | A,DFD | A,CEC | B,DGD | A,DFD | A,CGC | A,DFD |
+[V:vc] !f!D,4 | D,4 | G,,2 D,2 | D,4 | A,,4 | A,,4 | A,,4 | A,,4 | G,,4 | G,,4 | A,,4 | A,,4 | G,,4 | A,,4 | A,,4 | D,4 |
+[V:cb] "arco"!p!D,,4 | D,,4 | G,,,2 D,,2 | D,,4 | A,,,4 | A,,,4 | A,,,4 | A,,,4 | G,,,4 | G,,,4 | A,,,4 | A,,,4 | G,,,4 | A,,,4 | A,,,4 | D,,4 |
+% bars 61-68: Development: the tune's first two bars enter one above another, cellos to first violins
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] z4 | z4 | z4 | z4 | z4 | z4 | !mf!e2 ef | g2 ga |
+[V:v2] z4 | z4 | z4 | z4 | !mp!A2 AB | c2 cd | e2 z2 | B2 z2 |
+[V:va] z4 | z4 | !p!D2 DE | F2 FG | A2 z2 | A2 z2 | G2 z2 | G2 z2 |
+[V:vc] !p!G,2 G,A, | B,2 B,=C | D2 z2 | D,2 z2 | A,,2 z2 | A,,2 z2 | E,2 z2 | E,2 z2 |
+[V:cb] !pppp!G,,,2 z2 | G,,,2 z2 | D,,2 z2 | D,,2 z2 | A,,,2 z2 | A,,,2 z2 | E,,2 z2 | E,,2 z2 |
+% bars 69-76: Horns, then trumpets, recall the first movement's theme at half speed over the dance rhythm in the basses
+[V:fl] !p!g4 | f4 | f4 | f4 | f4 | g4 | g4 | a4 |
+[V:ob] !mp!e4 | d4 | e4 | d2 c2 | d4 | d4 | e4 | e4 |
+[V:cl] !mp!B4 | B4 | ^A4 | B2 ^A2 | B4 | B4 | B4 | c4 |
+[V:bn] !mp!E,2 E,F, | B,,2 B,,C, | F,2 F,2 | B,,2 F,,2 | B,,2 B,,C, | G,,2 G,,A,, | E,2 E,F, | A,,2 A,,2 |
+[V:hn] !mp!B,4 | F4- | F2 E2 | D2 C2 | D4 | B,4- | B,4 | A,4 |
+[V:tp] z4 | z4 | z4 | z4 | !mf!d4 | B4- | B4 | A4 |
+[V:tm] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !f!gggg | ffff | ffff | ffff | ffff | gggg | gggg | aaaa |
+[V:v2] !f!eeee | dddd | eeee | ddcc | dddd | dddd | eeee | eeee |
+[V:va] !f!BBBB | BBBB | ^AAAA | BB^AA | BBBB | BBBB | BBBB | cccc |
+[V:vc] !f!E,2 E,F, | B,,2 B,,C, | F,2 F,2 | B,,2 F,,2 | B,,2 B,,C, | G,,2 G,,A,, | E,2 E,F, | A,,2 A,,2 |
+[V:cb] !p!E,,2 E,,F,, | B,,,2 B,,,C,, | F,,2 F,,2 | B,,,2 F,,,2 | B,,,2 B,,,C,, | G,,,2 G,,,A,,, | E,,2 E,,F,, | A,,,2 A,,,2 |
+% bars 77-84: The oboe recalls the Adagio's song over a held A; the clarinet answers over the dominant of B
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] !p!a3 f | a2 b2 | d'3 b | a4 | z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 | !p!f3 ^d | f2 ^g2 | b3 ^g | f4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !pp!f4 | f4 | f4 | f4 | B4 | B4 | B4 | ^A4 |
+[V:v2] !pp!d4 | d4 | d4 | d4 | F4 | F4 | F4 | F4 |
+[V:va] !pp!A4 | A4 | A4 | A4 | ^D4 | ^D4 | ^D4 | E4 |
+[V:vc] !pp!A,,4 | A,,4 | A,,4 | A,,4 | F,4 | F,4 | F,4 | F,4 |
+[V:cb] !pppp!A,,,4 | A,,,4 | A,,,4 | A,,,4 | F,,4 | F,,4 | F,,4 | F,,4 |
+% bars 85-92: Dominant pedal: the tune's first notes climb again and a scale leads back
+[V:fl] z4 | z4 | !p!g2 ga | ^a2 ab | !mp!c'2 c'2 | c'2 c'2 | c^d ef | ^g^a ba |
+[V:ob] z4 | z4 | !mp!G2 GA | ^A2 AB | !mf!c2 c2 | c2 c2 | C^D EF | ^G^A BA |
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] !p!F,2 F,2 | F,2 F,2 | !mp!F,2 F,2 | F,2 F,2 | !mf!F,2 F,2 | F,2 F,2 | F,2 F,2 | F,2 F,,2 |
+[V:hn] z4 | z4 | !mp![CE]4 | [CE]4 | !mf![CE]4- | [CE]4 | [CE]4- | [CE]4 |
+[V:tp] z4 | z4 | z4 | z4 | !f!f2 f2 | f2 f2 | f4- | f4 |
+[V:tm] !mf!F,,2 z2 | F,,2 z2 | !f!F,,2 F,,2 | F,,2 F,,2 | !ff!F,,F,,F,,F,, | F,,F,,F,,F,, | F,,F,,F,,F,, | F,,F,,F,,F,, |
+[V:v1] !mf!c2 cd | e2 ef | !f!g2 ga | ^a2 ab | !ff!c'2 c'2 | c'2 c'2 | c^d ef | ^g^a ba |
+[V:v2] !mf!C2 CD | E2 EF | !f!G2 GA | ^A2 AB | !ff!c2 c2 | c2 c2 | C^D EF | ^G^A BA |
+[V:va] !mf!EEEE | EEEE | !f!EEEE | EEEE | !ff!EEEE | EEEE | EEEE | EEEE |
+[V:vc] !mf!F,2 F,2 | F,2 F,2 | !f!F,2 F,2 | F,2 F,2 | !ff!F,2 F,2 | F,2 F,2 | F,2 F,2 | F,2 F,,2 |
+[V:cb] !pp!F,,2 F,,2 | F,,2 F,,2 | !p!F,,2 F,,2 | F,,2 F,,2 | !mp!F,,2 F,,2 | F,,2 F,,2 | F,,2 F,,2 | F,,2 F,,,2 |
+% bars 93-100: The dance tune returns in the full orchestra
+[V:fl] !mp!b2 bc' | d'2 d'e' | f'2 a'f' | e'2 d'2 | c'2 c'd' | e'2 e'f' | g'f' e'd' | c'^a b2 |
+[V:ob] !mf!B2 Bc | d2 de | f2 af | e2 d2 | c2 cd | e2 ef | gf ed | c^A B2 |
+[V:cl] !mf!B2 Bc | d2 de | f2 af | e2 d2 | c2 cd | e2 ef | gf ed | c^A B2 |
+[V:bn] !mf!B,,2 B,,2 | B,,2 B,,2 | D,2 D,2 | E,2 D,2 | F,2 F,2 | F,2 F,2 | E,2 E,2 | F,2 B,,2 |
+[V:hn] !mp![DF]4 | [DF]4 | [DF]4 | [EG]2 [DF]2 | [CF]4 | [CE]4 | [EG]4 | [CE]2 [DF]2 |
+[V:tp] !mf!B2 z2 | z4 | z4 | z4 | f2 ff | f2 z2 | z4 | f2 B2 |
+[V:tm] !f!B,,2 B,,B,, | B,,2 z2 | z4 | z4 | F,,2 F,,F,, | F,,2 z2 | z4 | F,,2 B,,2 |
+[V:v1] !ff!b2 bc' | d'2 d'e' | f'2 a'f' | e'2 d'2 | c'2 c'd' | e'2 e'f' | g'f' e'd' | c'^a b2 |
+[V:v2] !ff!B2 Bc | d2 de | f2 af | e2 d2 | c2 cd | e2 ef | gf ed | c^A B2 |
+[V:va] !f!FFFF | FFFF | FFAA | GGFF | FFFF | EEEE | GGGG | FFFF |
+[V:vc] !ff!B,,2 B,,2 | B,,2 B,,2 | D,2 D,2 | E,2 D,2 | F,2 F,2 | F,2 F,2 | E,2 E,2 | F,2 B,,2 |
+[V:cb] !mp!B,,,2 B,,,2 | B,,,2 B,,,2 | D,,2 D,,2 | E,,2 D,,2 | F,,2 F,,2 | F,,2 F,,2 | E,,2 E,,2 | F,,2 B,,,2 | [I:MIDI program 43]
+% bars 101-116: The second theme returns in B major
+[V:fl] !p!^d4 | f4 | ^g2 f2 | ^d4 | c2 ^d2 | f2 ^g2 | f4- | f4 | b4 | ^g4 | f2 ^d2 | c4 | B2 c2 | ^d2 f2 | c4 | B4 | [Q:"Maestoso" 1/4=96]
+[V:ob] !mp!^d4 | f4 | ^g2 f2 | ^d4 | c2 ^d2 | f2 ^g2 | f4- | f4 | b4 | ^g4 | f2 ^d2 | c4 | B2 c2 | ^d2 f2 | c4 | B4 |
+[V:cl] !mp!^D4 | F4 | ^G2 F2 | ^D4 | C2 ^D2 | F2 ^G2 | F4- | F4 | B4 | ^G4 | F2 ^D2 | C4 | B,2 C2 | ^D2 F2 | C4 | B,4 |
+[V:bn] !mp!B,,4 | B,,4 | E,,2 B,,2 | B,,4 | F,,4 | F,,4 | F,,4 | F,,4 | E,,4 | E,,4 | F,,4 | F,,4 | E,,4 | F,,4 | F,,4 | B,,4 |
+[V:hn] !p![B,^D]4 | [B,^D]4 | [B,E]2 [B,^D]2 | [B,^D]4 | [^A,C]4 | [^A,C]4 | [^A,C]4 | [^A,C]4 | [B,E]4 | [B,E]4 | [B,^D]4 | [^A,C]4 | [B,E]4 | [B,^D]4 | [^A,C]4 | [B,^D]4 |
+[V:tp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] !mf!B,,2 z2 | z4 | z4 | z4 | F,,2 z2 | z4 | z4 | z4 | z4 | z4 | z4 | F,,2 z2 | z4 | z4 | F,,2 F,,2 | B,,2 z2 |
+[V:v1] !f!^d4 | f4 | ^g2 f2 | ^d4 | c2 ^d2 | f2 ^g2 | f4- | f4 | b4 | ^g4 | f2 ^d2 | c4 | B2 c2 | ^d2 f2 | c4 | B4 |
+[V:v2] !f!B4 | ^d4 | e2 ^d2 | B4 | ^A2 B2 | c2 e2 | c4- | c4 | ^g4 | e4 | ^d2 B2 | ^A4 | ^G2 G2 | B2 ^d2 | ^A4 | F4 |
+[V:va] !mf!F,B,^DB, | F,B,^DB, | ^G,B,F,B, | F,B,^DB, | F,^A,CA, | F,^A,EA, | F,^A,CA, | F,^A,CA, | ^G,B,EB, | ^G,B,EB, | F,B,^DB, | F,^A,CA, | ^G,B,EB, | F,B,^DB, | F,^A,EA, | F,B,^DB, |
+[V:vc] !f!B,,4 | B,,4 | E,,2 B,,2 | B,,4 | F,,4 | F,,4 | F,,4 | F,,4 | E,,4 | E,,4 | F,,4 | F,,4 | E,,4 | F,,4 | F,,4 | B,,4 |
+[V:cb] "arco"!p!B,,,4 | B,,,4 | E,,,2 B,,,2 | B,,,4 | F,,,4 | F,,,4 | F,,,4 | F,,,4 | E,,,4 | E,,,4 | F,,,4 | F,,,4 | E,,,4 | F,,,4 | F,,,4 | B,,,4 |
+% bars 117-132: Coda, B major: trumpets, horns and the bass instruments play the first movement's theme at half speed; the strings keep the dance rhythm
+[V:fl] !p!b2 bb | b2 bb | b2 bb | b2 ^aa | b2 bb | b2 bb | b2 bb | a2 aa | b2 bb | b2 bb | b2 bb | b2 bb | ^a2 aa | c'2 c'c' | e'2 e'e' | e'2 e'e' | [Q:"Più mosso" 1/4=144]
+[V:ob] !mp!f2 ff | f2 ff | f2 ^gg | f2 ff | f2 ff | ^g2 gg | ^g2 gg | e2 ee | f2 ff | f2 ff | ^g2 ff | ^g2 gg | f2 ff | f2 ff | f2 ff | ^a2 aa |
+[V:cl] !mp!^d2 dd | ^d2 dd | ^d2 ee | ^d2 cc | ^d2 dd | ^d2 dd | e2 ee | c2 cc | ^d2 dd | ^d2 dd | e2 ^dd | e2 ee | c2 cc | c2 cc | c2 cc | c2 cc |
+[V:bn] !mf!B,,4 | F,4- | F,2 E,2 | ^D,2 C,2 | ^D,4 | B,,4- | B,,4 | A,,4 | B,,4 | ^D,4 | E,2 F,2 | ^G,2 E,2 | F,4- | F,4- | F,4 | z4 |
+[V:hn] !mf!B,4 | F4- | F2 E2 | ^D2 C2 | ^D4 | B,4- | B,4 | A,4 | B,4 | ^D4 | E2 F2 | ^G2 E2 | F4- | F4- | F4 | z4 |
+[V:tp] !f!B4 | f4- | f2 e2 | ^d2 c2 | ^d4 | B4- | B4 | A4 | B4 | ^d4 | e2 f2 | ^g2 e2 | f4- | f4- | f4 | z4 |
+[V:tm] !f!B,,2 B,,B,, | B,,2 z2 | z4 | B,,2 F,,2 | B,,2 z2 | z4 | z4 | z4 | B,,2 B,,B,, | B,,2 z2 | z4 | z4 | F,,2 F,,F,, | F,,2 F,,F,, | F,,F,,F,,F,, | F,,F,,F,,F,, |
+[V:v1] !f!b2 bb | b2 bb | b2 bb | b2 ^aa | b2 bb | b2 bb | b2 bb | a2 aa | b2 bb | b2 bb | b2 bb | b2 bb | ^a2 aa | c'2 c'c' | e'2 e'e' | e'2 e'e' |
+[V:v2] !f!f2 ff | f2 ff | f2 ^gg | f2 ff | f2 ff | ^g2 gg | ^g2 gg | e2 ee | f2 ff | f2 ff | ^g2 ff | ^g2 gg | f2 ff | f2 ff | f2 ff | ^a2 aa |
+[V:va] !f!^d2 dd | ^d2 dd | ^d2 ee | ^d2 cc | ^d2 dd | ^d2 dd | e2 ee | c2 cc | ^d2 dd | ^d2 dd | e2 ^dd | e2 ee | c2 cc | c2 cc | c2 cc | c2 cc |
+[V:vc] !ff!B,,4 | F,4- | F,2 E,2 | ^D,2 C,2 | ^D,4 | B,,4- | B,,4 | A,,4 | B,,4 | ^D,4 | E,2 F,2 | ^G,2 E,2 | F,4- | F,4- | F,4 | z4 |
+[V:cb] !p!B,,,4 | B,,,4 | B,,,2 E,,2 | B,,,2 F,,2 | B,,,4 | ^G,,4 | E,,4 | A,,,4 | B,,,4 | B,,,4 | E,,2 F,,2 | E,,4 | F,,4 | F,,4 | F,,4 | F,,4 |
+% bars 133-143: Faster: the dance tune in the major, and three chords of B major
+[V:fl] !mp!b2 bc' | ^d'2 d'e' | f'2 ^g'f' | e'2 ^d'2 | c'2 c'^d' | e'2 e'f' | ^g'f' e'^d' | c'^a b2 | b2 z2 | b2 z2 | !fermata!b4 |]
+[V:ob] !mf!B2 Bc | ^d2 de | f2 ^gf | e2 ^d2 | c2 c^d | e2 ef | ^gf e^d | c^A B2 | B2 z2 | B2 z2 | !fermata!B4 |]
+[V:cl] !mf!B2 Bc | ^d2 de | f2 ^gf | e2 ^d2 | c2 c^d | e2 ef | ^gf e^d | c^A B2 | B2 z2 | B2 z2 | !fermata!B4 |]
+[V:bn] !mf!B,,2 B,,2 | B,,2 B,,2 | ^D,2 D,2 | E,2 ^D,2 | F,2 F,2 | F,2 F,2 | E,2 E,2 | F,2 B,,2 | B,,2 z2 | B,,2 z2 | !fermata!B,,4 |]
+[V:hn] !mf![^DF]4 | [^DF]4 | [^DF]4 | [E^G]2 [^DF]2 | [CF]4 | [CE]4 | [E^G]4 | [CE]2 [^DF]2 | [^DF]2 z2 | [^DF]2 z2 | !fermata![^DF]4 |]
+[V:tp] !f!B2 z2 | z4 | z4 | z4 | f2 ff | f2 z2 | z4 | f2 B2 | ^d2 z2 | ^d2 z2 | !fermata!^d4 |]
+[V:tm] !ff!B,,2 B,,B,, | B,,2 z2 | z4 | z4 | F,,2 F,,F,, | F,,2 z2 | z4 | F,,2 B,,2 | B,,2 z2 | B,,2 z2 | !fermata!B,,4 |]
+[V:v1] !ff!b2 bc' | ^d'2 d'e' | f'2 ^g'f' | e'2 ^d'2 | c'2 c'^d' | e'2 e'f' | ^g'f' e'^d' | c'^a b2 | b2 z2 | b2 z2 | !fermata!b4 |]
+[V:v2] !ff!B2 Bc | ^d2 de | f2 ^gf | e2 ^d2 | c2 c^d | e2 ef | ^gf e^d | c^A B2 | B2 z2 | B2 z2 | !fermata!B4 |]
+[V:va] !ff!FFFF | FFFF | FFFF | ^GGFF | FFFF | EEEE | ^GGGG | FFFF | f2 z2 | f2 z2 | !fermata!f4 |]
+[V:vc] !ff!B,,2 B,,2 | B,,2 B,,2 | ^D,2 D,2 | E,2 ^D,2 | F,2 F,2 | F,2 F,2 | E,2 E,2 | F,2 B,,2 | B,,2 z2 | B,,2 z2 | !fermata!B,,4 |]
+[V:cb] !mp!B,,,2 B,,,2 | B,,,2 B,,,2 | ^D,,2 D,,2 | E,,2 ^D,,2 | F,,2 F,,2 | F,,2 F,,2 | E,,2 E,,2 | F,,2 B,,,2 | B,,,2 z2 | B,,,2 z2 | !fermata!B,,,4 |]
