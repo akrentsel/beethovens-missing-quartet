@@ -1,0 +1,52 @@
+%%label Movement I
+%%note G minor. Viola and second violin rock through an eight-chord cycle in mirrored arpeggios over a held cello; the first violin adds a slow line; a brighter middle section sets three against two; the cycle returns with everything in motion and then thins out.
+X:1
+T:Glass’s Missing Quartet
+T:Movement I
+C:Lor, in the manner of Philip Glass
+M:4/4
+L:1/8
+Q:1/4=112
+%%score [v1 | v2 | va | vc]
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+K:Gm
+V:v1
+%%MIDI program 40
+V:v2
+%%MIDI program 40
+V:va
+%%MIDI program 41
+V:vc
+%%MIDI program 42
+% bars 1-16: The cycle: viola alone over the cello, then the second violin in mirror motion
+[V:v1] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v2] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:va] [M:4/4] !p!G,B,DB, G,B,DB, | G,B,DB, G,B,DB, | G,B,EB, G,B,EB, | G,B,EB, G,B,EB, | G,CEC G,CEC | G,CEC G,CEC | A,D^FD A,DFD | A,D^FD A,DFD |
+[V:vc] [M:4/4] !p!G,,8 | G,,8 | G,,8 | G,,8 | G,,8 | G,,8 | ^F,,8 | ^F,,8 |
+[V:v1] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v2] !p!dBGB dBGB | dBGB dBGB | dBFB dBFB | dBFB dBFB | eBGB eBGB | eBGB eBGB | dAGA dAGA | dA^FA dAFA |
+[V:va] G,B,DB, G,B,DB, | G,B,DB, G,B,DB, | F,B,DB, F,B,DB, | F,B,DB, F,B,DB, | G,B,EB, G,B,EB, | G,B,EB, G,B,EB, | A,D^FD A,DFD | A,D^FD A,DFD |
+[V:vc] G,,8 | G,,8 | B,,8 | B,,8 | E,,8 | E,,8 | D,8 | D,8 |
+% bars 17-32: The cycle again; the first violin enters with one long note to a bar
+[V:v1] !mp!g8 | b8 | b8 | g8 | c'8 | g8 | a8 | ^f8 | g8 | d'8 | d'8 | b8 | e'8 | b8 | a8 | a8 |
+[V:v2] !p!BGDG BGDG | BGDG BGDG | BGEG BGEG | BGEG BGEG | cGEG cGEG | cGEG cGEG | A^FDF AFDF | A^FDF AFDF | dBGB dBGB | dBGB dBGB | dBFB dBFB | dBFB dBFB | eBGB eBGB | eBGB eBGB | dAGA dAGA | dA^FA dAFA |
+[V:va] !p!G,B,DB, G,B,DB, | G,B,DB, G,B,DB, | G,B,EB, G,B,EB, | G,B,EB, G,B,EB, | G,CEC G,CEC | G,CEC G,CEC | A,D^FD A,DFD | A,D^FD A,DFD | G,B,DB, G,B,DB, | G,B,DB, G,B,DB, | F,B,DB, F,B,DB, | F,B,DB, F,B,DB, | G,B,EB, G,B,EB, | G,B,EB, G,B,EB, | A,D^FD A,DFD | A,D^FD A,DFD |
+[V:vc] !p!G,,8 | G,,8 | G,,8 | G,,8 | G,,8 | G,,8 | ^F,,8 | ^F,,8 | G,,8 | G,,8 | B,,8 | B,,8 | E,,8 | E,,8 | D,8 | D,8 |
+% bars 33-48: Middle section in B flat: the second violin plays three notes to the viola's four
+[V:v1] !mf!f'8 | d'8 | d'8 | b8 | e'8 | g'8 | f'8 | c'8 | d'8 | f'8 | g'8 | d'8 | b8 | e'8 | c'8 | a8 |
+[V:v2] !mf!(3F2B2d2 (3F2B2d2 | (3F2B2d2 (3F2B2d2 | (3G2B2d2 (3G2B2d2 | (3G2B2d2 (3G2B2d2 | (3G2B2e2 (3G2B2e2 | (3G2B2e2 (3G2B2e2 | (3A2c2f2 (3A2c2f2 | (3A2c2f2 (3A2c2f2 | (3F2B2d2 (3F2B2d2 | (3F2B2d2 (3F2B2d2 | (3G2B2d2 (3G2B2d2 | (3G2B2d2 (3G2B2d2 | (3G2B2e2 (3G2B2e2 | (3G2B2e2 (3G2B2e2 | (3A2c2f2 (3A2c2f2 | (3A2c2f2 (3A2c2f2 |
+[V:va] !mp!F,B,DB, F,B,DB, | F,B,DB, F,B,DB, | G,B,DB, G,B,DB, | G,B,DB, G,B,DB, | G,B,EB, G,B,EB, | G,B,EB, G,B,EB, | A,CFC A,CFC | A,CFC A,CFC | F,B,DB, F,B,DB, | F,B,DB, F,B,DB, | G,B,DB, G,B,DB, | G,B,DB, G,B,DB, | G,B,EB, G,B,EB, | G,B,EB, G,B,EB, | A,CFC A,CFC | A,CFC A,CFC |
+[V:vc] !mf!B,,6 B,,2 | B,,6 B,,2 | G,,6 G,,2 | G,,6 G,,2 | E,6 E,2 | E,6 E,2 | F,,6 F,,2 | F,,6 F,,2 | B,,6 B,,2 | B,,6 B,,2 | G,,6 G,,2 | G,,6 G,,2 | E,6 E,2 | E,6 E,2 | F,,6 F,,2 | F,,6 F,,2 |
+% bars 49-64: The cycle a third time: the first violin in half notes, the cello walking
+[V:v1] !f!d'4 b4 | g4 b4 | b4 g4 | e'4 b4 | c'4 g4 | e'4 c'4 | d'4 a4 | ^f4 a4 | g4 b4 | d'4 g'4 | f'4 d'4 | b4 d'4 | e'4 b4 | g4 b4 | a4 g4 | ^f4 a4 |
+[V:v2] !mf!BGDG BGDG | BGDG BGDG | BGEG BGEG | BGEG BGEG | cGEG cGEG | cGEG cGEG | A^FDF AFDF | A^FDF AFDF | dBGB dBGB | dBGB dBGB | dBFB dBFB | dBFB dBFB | eBGB eBGB | eBGB eBGB | dAGA dAGA | dA^FA dAFA |
+[V:va] !mf!G,B,DB, G,B,DB, | G,B,DB, G,B,DB, | G,B,EB, G,B,EB, | G,B,EB, G,B,EB, | G,CEC G,CEC | G,CEC G,CEC | A,D^FD A,DFD | A,D^FD A,DFD | G,B,DB, G,B,DB, | G,B,DB, G,B,DB, | F,B,DB, F,B,DB, | F,B,DB, F,B,DB, | G,B,EB, G,B,EB, | G,B,EB, G,B,EB, | A,D^FD A,DFD | A,D^FD A,DFD |
+[V:vc] !f!G,,2 D,2 G,2 D,2 | G,,2 D,2 G,2 D,2 | G,,2 D,2 G,2 D,2 | G,,2 D,2 G,2 D,2 | G,,2 D,2 G,2 D,2 | G,,2 D,2 G,2 D,2 | ^F,,2 D,2 A,2 D,2 | ^F,,2 D,2 A,2 D,2 | G,,2 D,2 G,2 D,2 | G,,2 D,2 G,2 D,2 | B,,2 F,2 B,2 F,2 | B,,2 F,2 B,2 F,2 | E,,2 B,,2 E,2 B,,2 | E,,2 B,,2 E,2 B,,2 | D,2 A,2 D2 A,2 | D,2 A,2 D2 A,2 |
+% bars 65-72: The texture thins to the viola and stops on G minor
+[V:v1] !p!g8 | z8 | z8 | z8 | z8 | z8 | z8 | !fermata!d8 |]
+[V:v2] !p!BGDG BGDG | BGDG BGDG | BGDG BGDG | BGDG BGDG | z8 | z8 | z8 | !fermata!B8 |]
+[V:va] !p!G,B,DB, G,B,DB, | G,B,DB, G,B,DB, | G,B,DB, G,B,DB, | G,B,DB, G,B,DB, | G,B,DB, G,B,DB, | G,B,DB, G,B,DB, | G,B,DB, G,B,DB, | !fermata!D8 |]
+[V:vc] !p!G,,8 | G,,8 | G,,8 | G,,8 | G,,8 | G,,8 | z8 | !fermata!G,,8 |]

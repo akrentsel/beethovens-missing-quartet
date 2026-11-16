@@ -46,3 +46,10 @@ scores/beethoven-symphony-1-i.abc
 scores/beethoven-symphony-1-ii.abc
 scores/beethoven-symphony-1-iii.abc
 scores/beethoven-symphony-1-iv.abc
+glass-string-quartet-1-notebook.html
+glass-string-quartet-1-transcript.html
+glass-string-quartet-1-transcript.json
+scores/glass-string-quartet-1-i.abc
+scores/glass-string-quartet-1-ii.abc
+scores/glass-string-quartet-1-iii.abc
+scores/glass-string-quartet-1-iv.abc

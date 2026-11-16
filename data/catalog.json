@@ -525,6 +525,50 @@
           "durationSeconds": 184
         }
       ]
+    },
+    {
+      "id": "glass-string-quartet-1",
+      "composerId": "glass",
+      "formId": "string-quartet",
+      "round": 1,
+      "title": "Glass’s Missing Quartet",
+      "subtitle": "String quartet in G minor",
+      "description": "Four movements built from chord cycles, mirrored arpeggios and bars that grow and shrink by one beat. A new AI-composed homage, not a work by Philip Glass.",
+      "durationSeconds": 542,
+      "date": "2026-11-16",
+      "status": "completed",
+      "notebook": "glass-string-quartet-1-notebook.html",
+      "transcript": "glass-string-quartet-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "Movement I",
+          "note": "An eight-chord cycle in G minor in mirrored arpeggios, with a slow violin line and a three-against-two middle.",
+          "source": "scores/glass-string-quartet-1-i.abc",
+          "durationSeconds": 154
+        },
+        {
+          "id": "ii",
+          "label": "Movement II",
+          "note": "A rising scale gains a note at each return; the bars grow from three beats to six and shrink again.",
+          "source": "scores/glass-string-quartet-1-ii.abc",
+          "durationSeconds": 168
+        },
+        {
+          "id": "iii",
+          "label": "Movement III",
+          "note": "Interlocking arpeggios in C minor in bars of six, seven and eight eighths.",
+          "source": "scores/glass-string-quartet-1-iii.abc",
+          "durationSeconds": 84
+        },
+        {
+          "id": "iv",
+          "label": "Movement IV",
+          "note": "The first cycle returns under a climbing scale and thins to the viola alone.",
+          "source": "scores/glass-string-quartet-1-iv.abc",
+          "durationSeconds": 136
+        }
+      ]
     }
   ]
 }

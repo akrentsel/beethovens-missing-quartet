@@ -1,0 +1,38 @@
+%%label Movement II
+%%note E flat major. Over a rocking viola and held notes, the first violin plays a rising scale that gains one note at each return, so the bars grow from three beats to six; in the middle the scale falls and the bars shrink again; a short return.
+X:1
+T:Glass’s Missing Quartet
+T:Movement II
+C:Lor, in the manner of Philip Glass
+M:3/4
+L:1/8
+Q:1/4=60
+%%score [v1 | v2 | va | vc]
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+K:Eb
+V:v1
+%%MIDI program 40
+V:v2
+%%MIDI program 40
+V:va
+%%MIDI program 41
+V:vc
+%%MIDI program 42
+% bars 1-16: A rising scale that grows by one note at each return: bars of three, four, five and six beats
+[V:v1] [M:3/4] !mp!g2 a2 b2 | e2 f2 g2 | c2 d2 e2 | d2 e2 f2 | [M:4/4] g2 a2 b2 c'2 | e2 f2 g2 a2 | c2 d2 e2 f2 | d2 e2 f2 g2 | [M:5/4] g2 a2 b2 c'2 d'2 | e2 f2 g2 a2 b2 | c2 d2 e2 f2 g2 | d2 e2 f2 g2 a2 | [M:6/4] g2 a2 b2 c'2 d'2 e'2 | e2 f2 g2 a2 b2 c'2 | c2 d2 e2 f2 g2 a2 | d2 e2 f2 g2 a2 b2 | [M:6/4]
+[V:v2] [M:3/4] !pp!E6 | E6 | E6 | D6 | [M:4/4] E8 | E8 | E8 | D8 | [M:5/4] E6 E4 | E6 E4 | E6 E4 | D6 D4 | [M:6/4] E6 E6 | E6 E6 | E6 E6 | D6 D6 | [M:6/4]
+[V:va] [M:3/4] !p!G,B,G,B,G,B, | G,CG,CG,C | A,CA,CA,C | F,B,F,B,F,B, | [M:4/4] G,B,G,B,G,B,G,B, | G,CG,CG,CG,C | A,CA,CA,CA,C | F,B,F,B,F,B,F,B, | [M:5/4] G,B,G,B,G,B,G,B,G,B, | G,CG,CG,CG,CG,C | A,CA,CA,CA,CA,C | F,B,F,B,F,B,F,B,F,B, | [M:6/4] G,B,G,B,G,B,G,B,G,B,G,B, | G,CG,CG,CG,CG,CG,C | A,CA,CA,CA,CA,CA,C | F,B,F,B,F,B,F,B,F,B,F,B, | [M:6/4]
+[V:vc] [M:3/4] !p!E,,6 | C,6 | A,,6 | B,,6 | [M:4/4] E,,8 | C,8 | A,,8 | B,,8 | [M:5/4] E,,6 E,,4 | C,6 C,4 | A,,6 A,,4 | B,,6 B,,4 | [M:6/4] E,,6 E,,6 | C,6 C,6 | A,,6 A,,6 | B,,6 B,,6 | [M:6/4]
+% bars 17-32: The scale falls, in C minor, and the bars shrink from six beats to three
+[V:v1] !mf!c'2 b2 a2 g2 f2 e2 | a2 g2 f2 e2 d2 c2 | f2 e2 d2 c2 B2 A2 | g2 f2 e2 d2 c2 =B2 | [M:5/4] c'2 b2 a2 g2 f2 | a2 g2 f2 e2 d2 | f2 e2 d2 c2 B2 | g2 f2 e2 d2 c2 | [M:4/4] c'2 b2 a2 g2 | a2 g2 f2 e2 | f2 e2 d2 c2 | g2 f2 e2 d2 | [M:3/4] c'2 b2 a2 | a2 g2 f2 | f2 e2 d2 | g2 f2 e2 | [M:3/4]
+[V:v2] !p!E6 E6 | E6 E6 | F6 F6 | D6 D6 | [M:5/4] E6 E4 | E6 E4 | F6 F4 | D6 D4 | [M:4/4] E8 | E8 | F8 | D8 | [M:3/4] E6 | E6 | F6 | D6 | [M:3/4]
+[V:va] !mp!G,CG,CG,CG,CG,CG,C | A,CA,CA,CA,CA,CA,C | F,A,F,A,F,A,F,A,F,A,F,A, | G,=B,G,B,G,B,G,B,G,B,G,B, | [M:5/4] G,CG,CG,CG,CG,C | A,CA,CA,CA,CA,C | F,A,F,A,F,A,F,A,F,A, | G,=B,G,B,G,B,G,B,G,B, | [M:4/4] G,CG,CG,CG,C | A,CA,CA,CA,C | F,A,F,A,F,A,F,A, | G,=B,G,B,G,B,G,B, | [M:3/4] G,CG,CG,C | A,CA,CA,C | F,A,F,A,F,A, | G,=B,G,B,G,B, | [M:3/4]
+[V:vc] !mp!C,6 C,6 | A,,6 A,,6 | F,,6 F,,6 | G,,6 G,,6 | [M:5/4] C,6 C,4 | A,,6 A,,4 | F,,6 F,,4 | G,,6 G,,4 | [M:4/4] C,8 | A,,8 | F,,8 | G,,8 | [M:3/4] C,6 | A,,6 | F,,6 | G,,6 | [M:3/4]
+% bars 33-39: The opening returns and comes to rest on E flat
+[V:v1] !p!g2 a2 b2 | e2 f2 g2 | c2 d2 e2 | d2 e2 f2 | [M:4/4] g8 | g8 | !fermata!g8 |]
+[V:v2] !pp!E6 | E6 | E6 | D6 | [M:4/4] E8 | E8 | !fermata!E8 |]
+[V:va] !p!G,B,G,B,G,B, | G,CG,CG,C | A,CA,CA,C | F,B,F,B,F,B, | [M:4/4] G,B,G,B, G,B,G,B, | G,B,G,B, G,B,G,B, | !fermata!B,8 |]
+[V:vc] !p!E,,6 | C,6 | A,,6 | B,,6 | [M:4/4] E,,8 | E,,8 | !fermata!E,,8 |]
