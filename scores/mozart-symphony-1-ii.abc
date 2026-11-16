@@ -1,0 +1,119 @@
+%%label II. Andante
+%%note A flat major. A song for the violins, repeated by clarinet and flute; a middle section in F minor that grows loud and falls back; the song again, lightly ornamented, with the flute above the violins.
+X:1
+T:Mozart’s Missing Symphony
+T:II. Andante
+C:Lor, in the manner of Mozart
+M:3/4
+L:1/8
+Q:"Andante" 1/4=72
+%%score [fl ob cl bn] hn [v1 v2 va vc cb]
+% The score is written at sounding pitch. Dynamics in the wind, horn and double-bass parts are set two or three levels below the strings to balance the playback samples of this site; they are a playback compromise, not dynamics for live players.
+V:fl clef=treble name="Fl."
+V:ob clef=treble name="Ob."
+V:cl clef=treble name="Cl."
+V:bn clef=bass name="Bn."
+V:hn clef=treble name="Hn."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:Ab
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-8: The song: violins
+[V:fl] [M:3/4] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:ob] [M:3/4] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] [M:3/4] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:bn] [M:3/4] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] [M:3/4] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] [M:3/4] !p!e4 c2 | d3 c B2 | c4 e2 | B4 z2 | f4 d2 | e3 d c2 | B3 c d2 | A4 z2 |
+[V:v2] [M:3/4] !pp!A6 | B,6 | A6 | E6 | D6 | A6 | B,6 | A6 |
+[V:va] [M:3/4] !pp!CE,CE,CE, | G,DG,DG,D | CE,CE,CE, | G,B,G,B,G,B, | F,A,F,A,F,A, | CE,CE,CE, | G,DG,DG,D | CE,CE,CE, |
+[V:vc] [M:3/4] !p!A,,2 z4 | E,2 z4 | A,,2 z4 | E,2 z4 | D,2 z4 | E,2 z4 | E,2 z4 | A,,2 z4 |
+[V:cb] [M:3/4] !pppp!A,,,2 z4 | E,,2 z4 | A,,,2 z4 | E,,2 z4 | D,,2 z4 | E,,2 z4 | E,,2 z4 | A,,,2 z4 |
+% bars 9-16: The song in clarinet and flute
+[V:fl] !p!e'4 c'2 | d'3 c' b2 | c'4 e'2 | b4 z2 | f'4 d'2 | e'3 d' c'2 | b3 c' d'2 | a4 z2 |
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] !mp!e4 c2 | d3 c B2 | c4 e2 | B4 z2 | f4 d2 | e3 d c2 | B3 c d2 | A4 z2 |
+[V:bn] !p!A,,6 | E,6 | A,,6 | E,6 | D,6 | E,6 | E,6 | A,,6 |
+[V:hn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v2] !pp!A6 | B,6 | A6 | E6 | D6 | A6 | B,6 | A6 |
+[V:va] !pp!CE,CE,CE, | G,DG,DG,D | CE,CE,CE, | G,B,G,B,G,B, | F,A,F,A,F,A, | CE,CE,CE, | G,DG,DG,D | CE,CE,CE, |
+[V:vc] !p!A,,2 z4 | E,2 z4 | A,,2 z4 | E,2 z4 | D,2 z4 | E,2 z4 | E,2 z4 | A,,2 z4 |
+[V:cb] !pppp!A,,,2 z4 | E,,2 z4 | A,,,2 z4 | E,,2 z4 | D,,2 z4 | E,,2 z4 | E,,2 z4 | A,,,2 z4 |
+% bars 17-20: Middle section, F minor
+[V:fl] z6 | z6 | z6 | z6 |
+[V:ob] z6 | z6 | z6 | z6 |
+[V:cl] z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 |
+[V:hn] z6 | z6 | z6 | z6 |
+[V:v1] !p!c4 f2 | a3 g f2 | =e4 g2 | b3 a g2 |
+[V:v2] !pp!F6 | F6 | G6 | G6 |
+[V:va] !pp!A,CA,CA,C | A,CA,CA,C | =E,B,E,B,E,B, | =E,B,E,B,E,B, |
+[V:vc] !p!F,2 z4 | F,2 z4 | C,2 z4 | C,2 z4 |
+[V:cb] !pppp!F,,2 z4 | F,,2 z4 | C,,2 z4 | C,,2 z4 |
+% bars 21-24: It grows loud
+[V:fl] !p!a4 c'2 | d'3 c' b2 | a4 f2 | g3 f =e2 |
+[V:ob] !mp!a4 c'2 | d'3 c' b2 | a4 f2 | g3 f =e2 |
+[V:cl] !mp![Ac]6 | [DF]6 | [Ac]6 | [=EB]6 |
+[V:bn] !mp!F,2 F,2 F,2 | B,,2 B,,2 B,,2 | C,2 C,2 C,2 | C,2 C,2 C,2 |
+[V:hn] !mp![F,C]6 | [B,F]6 | [F,C]6 | [G,C]6 |
+[V:v1] !f!a4 c'2 | d'3 c' b2 | a4 f2 | g3 f =e2 |
+[V:v2] !f!FFFFFF | B,B,B,B,B,B, | FFFFFF | GGGGGG |
+[V:va] !f!A,A,A,A,A,A, | DDDDDD | A,A,A,A,A,A, | =E,E,E,E,E,E, |
+[V:vc] !f!F,F,F,F,F,F, | B,,B,,B,,B,,B,,B,, | C,C,C,C,C,C, | C,C,C,C,C,C, |
+[V:cb] !p!F,,2 F,,2 F,,2 | B,,,2 B,,,2 B,,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 |
+% bars 25-28: and falls back to the dominant of A flat
+[V:fl] z6 | z6 | z6 | z6 |
+[V:ob] z6 | z6 | z6 | z6 |
+[V:cl] z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 |
+[V:hn] z6 | z6 | z6 | z6 |
+[V:v1] !p!f4 z2 | e4 g2 | b3 a g2 | e4 z2 |
+[V:v2] !pp!F6 | B,6 | B,6 | B,6 |
+[V:va] !pp!A,CA,CA,C | G,DG,DG,D | G,DG,DG,D | G,DG,DG,D |
+[V:vc] !p!F,2 z4 | E,2 z4 | E,2 z4 | E,2 z4 |
+[V:cb] !pppp!F,,2 z4 | E,,2 z4 | E,,2 z4 | E,,2 z4 |
+% bars 29-36: The song returns with passing notes, the flute doubling the violins an octave higher
+[V:fl] !p!e'2 d'2 c'2 | d'3 c' b2 | c'2 d'2 e'2 | b4 z2 | f'2 e'2 d'2 | e'3 d' c'2 | b3 c' d'2 | a4 z2 |
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] !p!e2 d2 c2 | d3 c B2 | c2 d2 e2 | B4 z2 | f2 e2 d2 | e3 d c2 | B3 c d2 | A4 z2 |
+[V:v2] !pp!A6 | B,6 | A6 | E6 | D6 | A6 | B,6 | A6 |
+[V:va] !pp!CE,CE,CE, | G,DG,DG,D | CE,CE,CE, | G,B,G,B,G,B, | F,A,F,A,F,A, | CE,CE,CE, | G,DG,DG,D | CE,CE,CE, |
+[V:vc] !p!A,,2 z4 | E,2 z4 | A,,2 z4 | E,2 z4 | D,2 z4 | E,2 z4 | E,2 z4 | A,,2 z4 |
+[V:cb] !pppp!A,,,2 z4 | E,,2 z4 | A,,,2 z4 | E,,2 z4 | D,,2 z4 | E,,2 z4 | E,,2 z4 | A,,,2 z4 |
+% bars 37-40: Four bars to close
+[V:fl] z6 | z6 | z6 | z6 |]
+[V:ob] z6 | z6 | z6 | z6 |]
+[V:cl] z6 | z6 | z6 | z6 |]
+[V:bn] z6 | z6 | z6 | z6 |]
+[V:hn] z6 | z6 | z6 | z6 |]
+[V:v1] !p!c4 e2 | B3 c d2 | A6 | !fermata!A4 z2 |]
+[V:v2] !pp!A6 | B,6 | A6 | A6 |]
+[V:va] !pp!CE,CE,CE, | G,DG,DG,D | CE,CE,CE, | CE,CE,CE, |]
+[V:vc] !p!A,,2 z4 | E,2 z4 | A,,2 z4 | A,,2 z4 |]
+[V:cb] !pppp!A,,,2 z4 | E,,2 z4 | A,,,2 z4 | A,,,2 z4 |]

@@ -53,3 +53,10 @@ scores/glass-string-quartet-1-i.abc
 scores/glass-string-quartet-1-ii.abc
 scores/glass-string-quartet-1-iii.abc
 scores/glass-string-quartet-1-iv.abc
+mozart-symphony-1-notebook.html
+mozart-symphony-1-transcript.html
+mozart-symphony-1-transcript.json
+scores/mozart-symphony-1-i.abc
+scores/mozart-symphony-1-ii.abc
+scores/mozart-symphony-1-iii.abc
+scores/mozart-symphony-1-iv.abc

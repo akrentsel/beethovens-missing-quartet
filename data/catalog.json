@@ -569,6 +569,50 @@
           "durationSeconds": 136
         }
       ]
+    },
+    {
+      "id": "mozart-symphony-1",
+      "composerId": "mozart",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Mozart’s Missing Symphony",
+      "subtitle": "Symphony in C minor",
+      "description": "A compact symphony in C minor, a key Mozart never used for a symphony: Allegro, Andante, Menuetto and Finale for flute, oboes, clarinets, bassoons, horns and strings. A new AI-composed homage, not a rediscovered work by Mozart.",
+      "durationSeconds": 603,
+      "date": "2026-11-16",
+      "status": "completed",
+      "notebook": "mozart-symphony-1-notebook.html",
+      "transcript": "mozart-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Allegro",
+          "note": "Sonata form in C minor with the exposition repeated; the second theme returns in the minor.",
+          "source": "scores/mozart-symphony-1-i.abc",
+          "durationSeconds": 262
+        },
+        {
+          "id": "ii",
+          "label": "II. Andante",
+          "note": "A song in A flat for violins and woodwind with a middle section in F minor.",
+          "source": "scores/mozart-symphony-1-ii.abc",
+          "durationSeconds": 100
+        },
+        {
+          "id": "iii",
+          "label": "III. Menuetto: Allegretto",
+          "note": "A sturdy C minor minuet and a C major trio for the woodwind.",
+          "source": "scores/mozart-symphony-1-iii.abc",
+          "durationSeconds": 103
+        },
+        {
+          "id": "iv",
+          "label": "IV. Finale: Allegro assai",
+          "note": "A scurrying C minor finale that stays in the minor to the end.",
+          "source": "scores/mozart-symphony-1-iv.abc",
+          "durationSeconds": 138
+        }
+      ]
     }
   ]
 }
