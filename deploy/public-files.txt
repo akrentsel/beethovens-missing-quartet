@@ -60,3 +60,10 @@ scores/mozart-symphony-1-i.abc
 scores/mozart-symphony-1-ii.abc
 scores/mozart-symphony-1-iii.abc
 scores/mozart-symphony-1-iv.abc
+shostakovich-symphony-1-notebook.html
+shostakovich-symphony-1-transcript.html
+shostakovich-symphony-1-transcript.json
+scores/shostakovich-symphony-1-i.abc
+scores/shostakovich-symphony-1-ii.abc
+scores/shostakovich-symphony-1-iii.abc
+scores/shostakovich-symphony-1-iv.abc

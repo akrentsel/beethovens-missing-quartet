@@ -613,6 +613,50 @@
           "durationSeconds": 138
         }
       ]
+    },
+    {
+      "id": "shostakovich-symphony-1",
+      "composerId": "shostakovich",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Shostakovich’s Missing Symphony",
+      "subtitle": "Symphony in A minor",
+      "description": "A bleak Moderato, a wrong-note polka, a Largo with an oboe lament, and a march that ends in a hammered A major. A new AI-composed homage, not a work by Dmitri Shostakovich.",
+      "durationSeconds": 669,
+      "date": "2026-11-16",
+      "status": "completed",
+      "notebook": "shostakovich-symphony-1-notebook.html",
+      "transcript": "shostakovich-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Moderato",
+          "note": "A bleak theme in the low strings, a lonely flute melody, and a march rhythm that builds to a climax and breaks off.",
+          "source": "scores/shostakovich-symphony-1-i.abc",
+          "durationSeconds": 219
+        },
+        {
+          "id": "ii",
+          "label": "II. Allegretto",
+          "note": "A shrill wrong-note polka with xylophone and a clownish bassoon trio.",
+          "source": "scores/shostakovich-symphony-1-ii.abc",
+          "durationSeconds": 108
+        },
+        {
+          "id": "iii",
+          "label": "III. Largo",
+          "note": "A string chorale, an oboe lament, and a climax for the full orchestra that drains away.",
+          "source": "scores/shostakovich-symphony-1-iii.abc",
+          "durationSeconds": 194
+        },
+        {
+          "id": "iv",
+          "label": "IV. Allegro non troppo",
+          "note": "A march on the first movement’s theme; the coda turns it to A major over one repeated note.",
+          "source": "scores/shostakovich-symphony-1-iv.abc",
+          "durationSeconds": 148
+        }
+      ]
     }
   ]
 }

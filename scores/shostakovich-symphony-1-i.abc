@@ -1,0 +1,219 @@
+%%label I. Moderato
+%%note A minor. A bleak theme in the low strings (a rising fifth, a half step, and a flattened second degree); a lonely flute melody over an open fifth; a march rhythm that builds to the theme in the full orchestra and collapses; the flute plays the theme alone, and the movement ends on a half-step sigh.
+X:1
+T:Shostakovich’s Missing Symphony
+T:I. Moderato
+C:Lor, in the manner of Shostakovich
+M:4/4
+L:1/8
+Q:"Moderato" 1/4=72
+%%score [fl ob cl bn] [hn tp tb] tm xy [v1 v2 va vc cb]
+% The score is written at sounding pitch. Dynamics in the wind, brass and double-bass parts are set one to three levels below the strings to balance the playback samples of this site; they are a playback compromise, not dynamics for live players.
+V:fl clef=treble name="Fl."
+V:ob clef=treble name="Ob."
+V:cl clef=treble name="Cl."
+V:bn clef=bass name="Bn."
+V:hn clef=treble name="Hn."
+V:tp clef=treble name="Tpt."
+V:tb clef=bass name="Tbn."
+V:tm clef=bass name="Timp."
+V:xy clef=treble name="Xyl."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:Am
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tp
+%%MIDI program 56
+V:tb
+%%MIDI program 57
+V:tm
+%%MIDI program 47
+V:xy
+%%MIDI program 13
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-8: The theme in cellos and basses alone; from the fifth bar the violas add a second line
+[V:fl] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tp] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tb] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:xy] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v2] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:va] [M:4/4] z8 | z8 | z8 | z8 | !p!B4 c4 | d4 c2 _B2 | A4 F2 D2 | E8 |
+[V:vc] [M:4/4] !mf!A,,4 E,3 F, | E,4 _B,,2 A,,2 | C,4 G,3 _A, | G,4 _D,2 C,2 | E,2 F,2 G,2 _A,2 | _B,4 A,2 G,2 | F,3 E, D,2 _B,,2 | A,,8 |
+[V:cb] [M:4/4] !pp!A,,,4 E,,3 F,, | E,,4 _B,,,2 A,,,2 | C,,4 G,,3 _A,, | G,,4 _D,,2 C,,2 | E,,2 F,,2 G,,2 _A,,2 | _B,,4 A,,2 G,,2 | F,,3 E,, D,,2 _B,,,2 | A,,,8 |
+% bars 9-16: The theme in the first violins over pulsing violas and a held bass
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tb] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:xy] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !mp!A4 e3 f | e4 _B2 A2 | c4 g3 _a | g4 _d2 c2 | e2 f2 g2 _a2 | _b4 a2 g2 | f3 e d2 _B2 | A8 |
+[V:v2] !p!E8 | E4 D4 | _E8 | _E4 F4 | G4 _A4 | G8 | F4 D4 | E8 |
+[V:va] !pp!A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | _EEEE EEEE | GGGG GGGG | CCCC CCCC | DDDD DDDD | DDDD DDDD | CCCC CCCC |
+[V:vc] !p!A,,8 | A,,8 | C,8 | C,8 | C,8 | G,,8 | _B,,8 | A,,8 | [I:MIDI program 45]
+[V:cb] !pppp!A,,,8 | A,,,8 | C,,8 | C,,8 | C,,8 | G,,,8 | _B,,,8 | A,,,8 | [I:MIDI program 45]
+% bars 17-24: A lonely melody for the flute over an open fifth and plucked basses
+[V:fl] !p!b6 a g | ^f4 e2 z2 | c'6 b a | g4 ^f2 z2 | b2 d'2 c'2 b2 | a4 g2 e2 | f6 e d | e8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tb] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:xy] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v2] !pp!E8 | E8 | E8 | E8 | G8 | E8 | F8 | E8 |
+[V:va] !pp!B,8 | B,8 | C8 | B,8 | B,8 | C8 | C8 | B,8 |
+[V:vc] "pizz."!p!E,2 z6 | E,2 z6 | C,2 z6 | B,,2 z6 | E,2 z6 | A,,2 z6 | F,,2 z6 | E,2 z6 |
+[V:cb] "pizz."!pppp!E,,2 z6 | E,,2 z6 | C,,2 z6 | B,,,2 z6 | E,,2 z6 | A,,,2 z6 | F,,,2 z6 | E,,2 z6 |
+% bars 25-32: The clarinet answers, sinking toward the flattened second degree
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | [Q:"Poco più mosso" 1/4=84]
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] !mp!e6 d c | B4 A2 z2 | f6 e d | ^c4 A2 z2 | e2 g2 f2 e2 | d4 ^c2 A2 | _B6 A G | A8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tb] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:xy] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v2] !pp!E8 | E8 | F8 | E8 | F8 | F4 E4 | D8 | E8 |
+[V:va] !pp!A,8 | A,8 | A,8 | A,8 | A,8 | A,8 | _B,8 | A,8 |
+[V:vc] !p!A,,2 z6 | A,,2 z6 | D,2 z6 | A,,2 z6 | D,2 z6 | D,2 z2 A,,2 z2 | _B,,2 z6 | A,,2 z6 | [I:MIDI program 48]
+[V:cb] !pppp!A,,,2 z6 | A,,,2 z6 | D,,2 z6 | A,,,2 z6 | D,,2 z6 | D,,2 z2 A,,,2 z2 | _B,,,2 z6 | A,,,2 z6 | [I:MIDI program 43]
+% bars 33-36: A march rhythm begins in the basses and drum; horns, then trumpets, take the head of the theme
+[V:fl] z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 |
+[V:bn] !p!A,,2 A,,A,, A,,2 A,,A,, | A,,2 A,,A,, A,,2 A,,A,, | C,2 C,C, C,2 C,C, | C,2 C,C, C,2 C,C, |
+[V:hn] !mp!A,4 E3 F | E4 _B,2 A,2 | z8 | z8 |
+[V:tp] z8 | z8 | !mf!c4 g3 _a | g4 _d2 c2 |
+[V:tb] z8 | z8 | z8 | z8 |
+[V:tm] !mf!A,,2 A,,A,, A,,2 A,,A,, | A,,2 A,,A,, A,,2 A,,A,, | z8 | z8 |
+[V:xy] z8 | z8 | z8 | z8 |
+[V:v1] z8 | z8 | z8 | z8 |
+[V:v2] z8 | z8 | z8 | z8 |
+[V:va] !mp!EEEE EEEE | EEEE DDDD | _EEEE EEEE | _EEEE FFFF |
+[V:vc] "arco"!mf!A,,2 A,,A,, A,,2 A,,A,, | A,,2 A,,A,, A,,2 A,,A,, | C,2 C,C, C,2 C,C, | C,2 C,C, C,2 C,C, |
+[V:cb] "arco"!pp!A,,,2 A,,,A,,, A,,,2 A,,,A,,, | A,,,2 A,,,A,,, A,,,2 A,,,A,,, | C,,2 C,,C,, C,,2 C,,C,, | C,,2 C,,C,, C,,2 C,,C,, |
+% bars 37-40: The violins and woodwind push the theme's rising steps upward
+[V:fl] !p!e2 f2 g2 _a2 | _b4 a2 g2 | g2 _a2 _b2 c'2 | _d'4 c'2 _b2 |
+[V:ob] !mp!E2 F2 G2 _A2 | _B4 A2 G2 | G2 _A2 _B2 c2 | _d4 c2 _B2 |
+[V:cl] z8 | z8 | z8 | z8 |
+[V:bn] !mp!C,2 C,C, C,2 C,C, | G,,2 G,,G,, G,,2 G,,G,, | _E,2 E,E, E,2 E,E, | _B,,2 B,,B,, B,,2 B,,B,, |
+[V:hn] !mp![EG]8 | [_B,D]8 | [_EG]8 | [_DF]8 |
+[V:tp] z8 | z8 | z8 | z8 |
+[V:tb] !mp!C,8 | G,,8 | _E,8 | _B,,8 |
+[V:tm] z8 | z8 | z8 | z8 |
+[V:xy] z8 | z8 | z8 | z8 |
+[V:v1] !f!e2 f2 g2 _a2 | _b4 a2 g2 | g2 _a2 _b2 c'2 | _d'4 c'2 _b2 |
+[V:v2] !f!E2 F2 G2 _A2 | _B4 A2 G2 | G2 _A2 _B2 c2 | _d4 c2 _B2 |
+[V:va] !f!GGGG GGGG | GGGG GGGG | GGGG GGGG | FFFF FFFF |
+[V:vc] !f!C,2 C,C, C,2 C,C, | G,,2 G,,G,, G,,2 G,,G,, | _E,2 E,E, E,2 E,E, | _B,,2 B,,B,, B,,2 B,,B,, |
+[V:cb] !p!C,,2 C,,C,, C,,2 C,,C,, | G,,,2 G,,,G,,, G,,,2 G,,,G,,, | _E,,2 E,,E,, E,,2 E,,E,, | _B,,,2 B,,,B,,, B,,,2 B,,,B,,, |
+% bars 41-44: Over the dominant the theme's half step (E, F) is hammered, faster and faster
+[V:fl] !mp!e'4 f'4 | e'4 f'4 | e'2 f'2 e'2 f'2 | e'f'e'f' e'f'^g'b' |
+[V:ob] !mf!e4 f4 | e4 f4 | e2 f2 e2 f2 | efef ef^gb |
+[V:cl] !mf!e4 f4 | e4 f4 | e2 f2 e2 f2 | efef ef^gb |
+[V:bn] !mf!E,2 E,E, E,2 E,E, | E,2 E,E, E,2 E,E, | E,2 E,E, E,2 E,E, | E,2 E,E, E,2 E,E, |
+[V:hn] !mf![E^G]8 | [E^G]8 | [E^G]8 | [E^G]8 |
+[V:tp] !mf!B8 | B8 | !f!e2 ee e2 ee | e2 ee e2 ee |
+[V:tb] !mf!E,8 | E,8 | E,8 | E,8 |
+[V:tm] !f!E,2 E,E, E,2 E,E, | E,2 E,E, E,2 E,E, | !ff!E,2 E,E, E,2 E,E, | E,2 E,E, E,2 E,E, |
+[V:xy] z8 | z8 | z8 | z8 |
+[V:v1] !ff!e'4 f'4 | e'4 f'4 | e'2 f'2 e'2 f'2 | e'f'e'f' e'f'^g'b' |
+[V:v2] !ff!e4 f4 | e4 f4 | e2 f2 e2 f2 | efef ef^gb |
+[V:va] !ff!BBBB BBBB | BBBB BBBB | BBBB BBBB | BBBB BBBB |
+[V:vc] !ff!E,2 E,E, E,2 E,E, | E,2 E,E, E,2 E,E, | E,2 E,E, E,2 E,E, | E,2 E,E, E,2 E,E, |
+[V:cb] !mp!E,,2 E,,E,, E,,2 E,,E,, | E,,2 E,,E,, E,,2 E,,E,, | E,,2 E,,E,, E,,2 E,,E,, | E,,2 E,,E,, E,,2 E,,E,, |
+% bars 45-48: The theme in the full orchestra, in octaves, over the march rhythm
+[V:fl] !mf!a4 e'3 f' | e'4 _b2 a2 | c'4 g'3 _a' | g'4 _d'2 c'2 | [Q:"Tempo I" 1/4=72]
+[V:ob] !f!A4 e3 f | e4 _B2 A2 | c4 g3 _a | g4 _d2 c2 |
+[V:cl] !f!A4 e3 f | e4 _B2 A2 | c4 g3 _a | g4 _d2 c2 |
+[V:bn] !f!A,,2 A,,A,, A,,2 A,,A,, | A,,2 A,,A,, A,,2 A,,A,, | C,2 C,C, C,2 C,C, | C,2 C,C, C,2 C,C, |
+[V:hn] !f!A,4 E3 F | E4 _B,2 A,2 | C4 G3 _A | G4 _D2 C2 |
+[V:tp] !ff!A4 e3 f | e4 _B2 A2 | c4 g3 _a | g4 _d2 c2 |
+[V:tb] !f!A,,8 | A,,8 | C,8 | C,8 |
+[V:tm] !fff!A,,2 A,,A,, A,,2 A,,A,, | A,,2 A,,A,, A,,2 A,,A,, | A,,2 z6 | z8 |
+[V:xy] !fff!a4 e'3 f' | e'4 _b2 a2 | c'4 g'3 _a' | g'4 _d'2 c'2 |
+[V:v1] !fff!a4 e'3 f' | e'4 _b2 a2 | c'4 g'3 _a' | g'4 _d'2 c'2 |
+[V:v2] !fff!A4 e3 f | e4 _B2 A2 | c4 g3 _a | g4 _d2 c2 |
+[V:va] !fff!A2 AA A2 AA | A2 AA A2 AA | G2 GG G2 GG | G2 GG G2 GG |
+[V:vc] !fff!A,,2 A,,A,, A,,2 A,,A,, | A,,2 A,,A,, A,,2 A,,A,, | C,2 C,C, C,2 C,C, | C,2 C,C, C,2 C,C, |
+[V:cb] !mf!A,,,2 A,,,A,,, A,,,2 A,,,A,,, | A,,,2 A,,,A,,, A,,,2 A,,,A,,, | C,,2 C,,C,, C,,2 C,,C,, | C,,2 C,,C,, C,,2 C,,C,, |
+% bars 49-52: It breaks off; the drum keeps the rhythm, quietly, over a held bass
+[V:fl] z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 |
+[V:tb] z8 | z8 | z8 | z8 |
+[V:tm] !p!A,,2 A,,A,, A,,2 z2 | A,,2 A,,A,, A,,2 z2 | !pp!A,,2 z6 | z8 |
+[V:xy] z8 | z8 | z8 | z8 |
+[V:v1] z8 | z8 | z8 | z8 |
+[V:v2] z8 | z8 | z8 | z8 |
+[V:va] z8 | z8 | z8 | z8 |
+[V:vc] !p!A,,8 | A,,8 | !pp!A,,8 | A,,8 |
+[V:cb] !pppp!A,,,8 | A,,,8 | !pppp!A,,,8 | A,,,8 |
+% bars 53-60: The flute plays the theme alone, high and cold, over the pulsing violas
+[V:fl] !p!a4 e'3 f' | e'4 _b2 a2 | c'4 g'3 _a' | g'4 _d'2 c'2 | e'2 f'2 g'2 _a'2 | _b'4 a'2 g'2 | f'3 e' d'2 _b2 | a8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tb] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:xy] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v2] !pp!E8 | E4 D4 | _E8 | _E4 F4 | G4 _A4 | G8 | F4 D4 | E8 |
+[V:va] !pp!A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | _EEEE EEEE | GGGG GGGG | CCCC CCCC | DDDD DDDD | DDDD DDDD | CCCC CCCC |
+[V:vc] !pp!A,,8 | A,,8 | C,8 | C,8 | C,8 | G,,8 | _B,,8 | A,,8 | [I:MIDI program 45]
+[V:cb] !pppp!A,,,8 | A,,,8 | C,,8 | C,,8 | C,,8 | G,,,8 | _B,,,8 | A,,,8 | [I:MIDI program 45]
+% bars 61-68: Coda: the head of the theme plucked in the basses under a high held fifth; the clarinet sighs the half step; A minor without its third
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:cl] z8 | z8 | !p!e4 f4 | e8 | z8 | z8 | z8 | z8 |]
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:tb] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:xy] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:v1] !pp!e'8 | e'8 | e'8 | e'8 | e'8 | e'8 | e'8 | !fermata!e'8 |]
+[V:v2] !pp!a8 | a8 | a8 | a8 | a8 | a8 | a8 | !fermata!a8 |]
+[V:va] z8 | z8 | z8 | z8 | z8 | z8 | !pp!E8 | !fermata!E8 |]
+[V:vc] "pizz."!p!A,,2 z2 E,2 z F, | E,2 z2 _B,,2 A,,2 | z8 | z8 | A,,2 z2 E,2 z2 | A,,2 z6 | [I:MIDI program 48] "arco"!pp!A,,8 | !fermata!A,,8 |]
+[V:cb] "pizz."!pppp!A,,,2 z2 E,,2 z F,, | E,,2 z2 _B,,,2 A,,,2 | z8 | z8 | A,,,2 z2 E,,2 z2 | A,,,2 z6 | z8 | !fermata!A,,,2 z6 |]

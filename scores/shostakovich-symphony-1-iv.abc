@@ -1,0 +1,189 @@
+%%label IV. Allegro non troppo
+%%note A minor, ending in A major. A march grown from the first movement's theme, in the brass over hammering strings; a second strain; the first movement's flute melody recalled by cellos and horn; a short fugato; the march again; a slower coda in which the brass turn the theme to the major while the rest of the orchestra repeats one note.
+X:1
+T:Shostakovich’s Missing Symphony
+T:IV. Allegro non troppo
+C:Lor, in the manner of Shostakovich
+M:4/4
+L:1/8
+Q:"Allegro non troppo" 1/4=126
+%%score [fl ob cl bn] [hn tp tb] tm xy [v1 v2 va vc cb]
+% The score is written at sounding pitch. Dynamics in the wind, brass and double-bass parts are set one to three levels below the strings to balance the playback samples of this site; they are a playback compromise, not dynamics for live players.
+V:fl clef=treble name="Fl."
+V:ob clef=treble name="Ob."
+V:cl clef=treble name="Cl."
+V:bn clef=bass name="Bn."
+V:hn clef=treble name="Hn."
+V:tp clef=treble name="Tpt."
+V:tb clef=bass name="Tbn."
+V:tm clef=bass name="Timp."
+V:xy clef=treble name="Xyl."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:Am
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tp
+%%MIDI program 56
+V:tb
+%%MIDI program 57
+V:tm
+%%MIDI program 47
+V:xy
+%%MIDI program 13
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-2: Two bars of drum and basses
+[V:fl] [M:4/4] z8 | z8 |
+[V:ob] [M:4/4] z8 | z8 |
+[V:cl] [M:4/4] z8 | z8 |
+[V:bn] [M:4/4] z8 | z8 |
+[V:hn] [M:4/4] z8 | z8 |
+[V:tp] [M:4/4] z8 | z8 |
+[V:tb] [M:4/4] z8 | z8 |
+[V:tm] [M:4/4] !f!A,,2 E,,2 A,,2 E,,2 | A,,2 E,,2 A,,2 E,,2 |
+[V:xy] [M:4/4] z8 | z8 |
+[V:v1] [M:4/4] z8 | z8 |
+[V:v2] [M:4/4] z8 | z8 |
+[V:va] [M:4/4] z8 | z8 |
+[V:vc] [M:4/4] !f!A,,2 E,2 A,,2 E,2 | A,,2 E,2 A,,2 E,2 | [I:MIDI program 48]
+[V:cb] [M:4/4] !p!A,,,2 E,,2 A,,,2 E,,2 | A,,,2 E,,2 A,,,2 E,,2 | [I:MIDI program 43]
+% bars 3-10: The march: trumpets and trombones, the woodwind doubling, the strings hammering the harmony
+[V:fl] !mp!a2 e'2 e'3 d' | c'2 b2 a4 | _b2 f'2 f'3 e' | d'2 c'2 _b4 | c'2 g'2 g'3 f' | e'2 d'2 ^c'2 e'2 | a'4 ^g'2 e'2 | a'6 z2 |
+[V:ob] !mf!A2 e2 e3 d | c2 B2 A4 | _B2 f2 f3 e | d2 c2 _B4 | c2 g2 g3 f | e2 d2 ^c2 e2 | a4 ^g2 e2 | a6 z2 |
+[V:cl] !mf!A2 e2 e3 d | c2 B2 A4 | _B2 f2 f3 e | d2 c2 _B4 | c2 g2 g3 f | e2 d2 ^c2 e2 | a4 ^g2 e2 | a6 z2 |
+[V:bn] !mp!A,,2 E,2 A,,2 E,2 | A,,2 E,2 A,,2 E,2 | _B,,2 F,2 B,,2 F,2 | _B,,2 F,2 B,,2 F,2 | C,2 G,2 C,2 G,2 | D,2 D,2 A,,2 A,,2 | E,2 E,2 E,2 E,2 | A,,2 E,2 A,,2 z2 |
+[V:hn] !mp![CE]8 | [CE]8 | [DF]8 | [DF]8 | [EG]8 | [DF]4 [^CE]4 | [EA]4 [E^G]4 | [CE]8 |
+[V:tp] !f!A2 e2 e3 d | c2 B2 A4 | _B2 f2 f3 e | d2 c2 _B4 | c2 g2 g3 f | e2 d2 ^c2 e2 | a4 ^g2 e2 | a6 z2 |
+[V:tb] !mf!A,2 E2 E3 D | C2 B,2 A,4 | _B,2 F2 F3 E | D2 C2 _B,4 | C2 G2 G3 F | E2 D2 ^C2 E2 | A4 ^G2 E2 | A6 z2 |
+[V:tm] !f!A,,2 E,,2 A,,2 E,,2 | A,,2 E,,2 A,,2 E,,2 | z8 | z8 | z8 | z4 A,,2 A,,2 | E,,2 E,,2 E,,2 E,,2 | A,,2 E,,2 A,,2 z2 |
+[V:xy] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !f!eeee eeee | eeee eeee | ffff ffff | ffff ffff | gggg gggg | ffff eeee | eeee eeee | eeee eeee |
+[V:v2] !f!cccc cccc | cccc cccc | dddd dddd | dddd dddd | eeee eeee | dddd ^cccc | BBBB BBBB | cccc cccc |
+[V:va] !f!AAAA AAAA | AAAA AAAA | _BBBB BBBB | _BBBB BBBB | cccc cccc | AAAA AAAA | AAAA ^GGGG | AAAA AAAA |
+[V:vc] "arco"!f!A,,2 E,2 A,,2 E,2 | A,,2 E,2 A,,2 E,2 | _B,,2 F,2 B,,2 F,2 | _B,,2 F,2 B,,2 F,2 | C,2 G,2 C,2 G,2 | D,2 D,2 A,,2 A,,2 | E,2 E,2 E,2 E,2 | A,,2 E,2 A,,2 z2 |
+[V:cb] "arco"!p!A,,,2 E,,2 A,,,2 E,,2 | A,,,2 E,,2 A,,,2 E,,2 | _B,,,2 F,,2 B,,,2 F,,2 | _B,,,2 F,,2 B,,,2 F,,2 | C,,2 G,,2 C,,2 G,,2 | D,,2 D,,2 A,,,2 A,,,2 | E,,2 E,,2 E,,2 E,,2 | A,,,2 E,,2 A,,,2 z2 |
+% bars 11-18: Second strain: violins and woodwind
+[V:fl] !p!e2 g2 c'3 b | a2 g2 e4 | f2 a2 d'3 c' | b2 a2 ^g4 | e2 g2 c'3 b | a2 c'2 e'4 | d'2 b2 ^g2 b2 | a6 z2 |
+[V:ob] !mp!E2 G2 c3 B | A2 G2 E4 | F2 A2 d3 c | B2 A2 ^G4 | E2 G2 c3 B | A2 c2 e4 | d2 B2 ^G2 B2 | A6 z2 |
+[V:cl] !mp!E2 G2 c3 B | A2 G2 E4 | F2 A2 d3 c | B2 A2 ^G4 | E2 G2 c3 B | A2 c2 e4 | d2 B2 ^G2 B2 | A6 z2 |
+[V:bn] !mp!C,2 G,2 C,2 G,2 | A,,2 E,2 A,,2 E,2 | D,2 A,2 D,2 A,2 | E,2 E,2 E,2 E,2 | C,2 G,2 C,2 G,2 | A,,2 E,2 A,,2 E,2 | E,2 E,2 E,2 E,2 | A,,2 E,2 A,,2 z2 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tb] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:xy] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !f!e2 g2 c'3 b | a2 g2 e4 | f2 a2 d'3 c' | b2 a2 ^g4 | e2 g2 c'3 b | a2 c'2 e'4 | d'2 b2 ^g2 b2 | a6 z2 |
+[V:v2] !mf!GGGG GGGG | EEEE EEEE | FFFF FFFF | EEEE EEEE | GGGG GGGG | EEEE EEEE | EEEE EEEE | EEEE EEEE |
+[V:va] !mf!EEEE EEEE | CCCC CCCC | DDDD DDDD | B,B,B,B, B,B,B,B, | EEEE EEEE | CCCC CCCC | DDDD DDDD | CCCC CCCC |
+[V:vc] !f!C,2 G,2 C,2 G,2 | A,,2 E,2 A,,2 E,2 | D,2 A,2 D,2 A,2 | E,2 E,2 E,2 E,2 | C,2 G,2 C,2 G,2 | A,,2 E,2 A,,2 E,2 | E,2 E,2 E,2 E,2 | A,,2 E,2 A,,2 z2 | [I:MIDI program 45]
+[V:cb] !p!C,,2 G,,2 C,,2 G,,2 | A,,,2 E,,2 A,,,2 E,,2 | D,,2 A,,2 D,,2 A,,2 | E,,2 E,,2 E,,2 E,,2 | C,,2 G,,2 C,,2 G,,2 | A,,,2 E,,2 A,,,2 E,,2 | E,,2 E,,2 E,,2 E,,2 | A,,,2 E,,2 A,,,2 z2 | [I:MIDI program 45]
+% bars 19-26: The march quietly in the violins, the clarinets marking the off-beats, the basses plucked
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] !p!z2 [ce]2 z2 [ce]2 | z2 [ce]2 z2 [ce]2 | z2 [df]2 z2 [df]2 | z2 [df]2 z2 [df]2 | z2 [eg]2 z2 [eg]2 | z2 [df]2 z2 [^ce]2 | z2 [ea]2 z2 [e^g]2 | z2 [ce]2 z4 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tb] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:xy] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !mf!A2 e2 e3 d | c2 B2 A4 | _B2 f2 f3 e | d2 c2 _B4 | c2 g2 g3 f | e2 d2 ^c2 e2 | a4 ^g2 e2 | a6 z2 |
+[V:v2] !mf!A,2 E2 E3 D | C2 B,2 A,4 | _B,2 F2 F3 E | D2 C2 _B,4 | C2 G2 G3 F | E2 D2 ^C2 E2 | A4 ^G2 E2 | A6 z2 |
+[V:va] !p!AAAA AAAA | AAAA AAAA | _BBBB BBBB | _BBBB BBBB | cccc cccc | AAAA AAAA | AAAA ^GGGG | AAAA AAAA |
+[V:vc] "pizz."!mf!A,,2 E,2 A,,2 E,2 | A,,2 E,2 A,,2 E,2 | _B,,2 F,2 B,,2 F,2 | _B,,2 F,2 B,,2 F,2 | C,2 G,2 C,2 G,2 | D,2 D,2 A,,2 A,,2 | E,2 E,2 E,2 E,2 | A,,2 E,2 A,,2 z2 | [I:MIDI program 48]
+[V:cb] "pizz."!pp!A,,,2 E,,2 A,,,2 E,,2 | A,,,2 E,,2 A,,,2 E,,2 | _B,,,2 F,,2 B,,,2 F,,2 | _B,,,2 F,,2 B,,,2 F,,2 | C,,2 G,,2 C,,2 G,,2 | D,,2 D,,2 A,,,2 A,,,2 | E,,2 E,,2 E,,2 E,,2 | A,,,2 E,,2 A,,,2 z2 | [I:MIDI program 45]
+% bars 27-34: Cellos and horn recall the first movement's flute melody over the march rhythm, very quiet
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] !p!B,6 A, G, | ^F,4 E,2 z2 | C6 B, A, | G,4 ^F,2 z2 | B,2 D2 C2 B,2 | A,4 G,2 E,2 | F,6 E, D, | E,8 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tb] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:xy] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !pp!b8 | b8 | c'8 | b8 | b8 | c'8 | c'8 | b8 |
+[V:v2] !pp!g8 | g8 | g8 | g8 | g8 | a8 | a8 | ^g8 |
+[V:va] !pp!E2 EE E2 EE | E2 EE E2 EE | C2 CC C2 CC | B,2 B,B, B,2 B,B, | E2 EE E2 EE | A,2 A,A, A,2 A,A, | F2 FF F2 FF | E2 EE E2 EE |
+[V:vc] "arco"!mf!B,6 A, G, | ^F,4 E,2 z2 | C6 B, A, | G,4 ^F,2 z2 | B,2 D2 C2 B,2 | A,4 G,2 E,2 | F,6 E, D, | E,8 |
+[V:cb] "pizz."!pppp!E,,2 z6 | E,,2 z6 | C,,2 z6 | B,,,2 z6 | E,,2 z6 | A,,,2 z6 | F,,2 z6 | E,,2 z6 | [I:MIDI program 43]
+% bars 35-42: Fugato on the head of the march: low strings, second violins, first violins, each a fifth higher
+[V:fl] z8 | z8 | z8 | z8 | !p!b2 ^f'2 f'3 e' | d'2 ^c'2 b2 z2 | !mp!e'2 e'e' e'2 e'e' | e'2 e'e' e'2 e'e' |
+[V:ob] z8 | z8 | !p!e2 b2 b3 a | g2 ^f2 e2 z2 | z8 | z8 | !mf!b2 bb b2 bb | b2 bb b2 bb |
+[V:cl] z8 | z8 | z8 | z8 | !mp!B2 ^f2 f3 e | d2 ^c2 B2 z2 | !mf!e2 ee e2 ee | e2 ee e2 ee |
+[V:bn] !p!A,,2 E,2 E,3 D, | C,2 B,,2 A,,2 z2 | E,2 G,2 B,2 G,2 | E,2 D,2 C,2 B,,2 | !mp!B,,2 B,,2 B,,2 B,,2 | B,,2 B,,2 B,,2 B,,2 | !mf!E,2 E,E, E,2 E,E, | E,2 E,E, E,2 E,E, |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | !mf![E^G]2 [EG][EG] [EG]2 [EG][EG] | [E^G]2 [EG][EG] [EG]2 [EG][EG] |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | !f!e2 ee e2 ee | e2 ee e2 ee |
+[V:tb] z8 | z8 | z8 | z8 | z8 | z8 | !mf!E,2 E,E, E,2 E,E, | E,2 E,E, E,2 E,E, |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | !ff!E,,2 E,,E,, E,,2 E,,E,, | E,,2 E,,E,, E,,2 E,,E,, |
+[V:xy] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] z8 | z8 | z8 | z8 | !f!b2 ^f'2 f'3 e' | d'2 ^c'2 b2 z2 | !ff!e'2 e'e' e'2 e'e' | e'2 e'e' e'2 e'e' |
+[V:v2] z8 | z8 | !mf!e2 b2 b3 a | g2 ^f2 e2 z2 | !f!B2 d2 ^f2 d2 | B2 A2 G2 ^F2 | !ff!b2 bb b2 bb | b2 bb b2 bb |
+[V:va] !mf!A,2 E2 E3 D | C2 B,2 A,2 z2 | E2 G2 B2 G2 | E2 D2 C2 B,2 | !f!B,2 B,2 B,2 B,2 | B,2 B,2 B,2 B,2 | !ff!E2 EE E2 EE | E2 EE E2 EE |
+[V:vc] !mf!A,,2 E,2 E,3 D, | C,2 B,,2 A,,2 z2 | E,2 G,2 B,2 G,2 | E,2 D,2 C,2 B,,2 | !f!B,,2 B,,2 B,,2 B,,2 | B,,2 B,,2 B,,2 B,,2 | !ff!E,2 E,E, E,2 E,E, | E,2 E,E, E,2 E,E, | [I:MIDI program 48]
+[V:cb] "arco"!pp!A,,,2 E,,2 E,,3 D,, | C,,2 B,,,2 A,,,2 z2 | E,,2 G,,2 B,,2 G,,2 | E,,2 D,,2 C,,2 B,,,2 | !p!B,,,2 B,,,2 B,,,2 B,,,2 | B,,,2 B,,,2 B,,,2 B,,,2 | !mp!E,,2 E,,E,, E,,2 E,,E,, | E,,2 E,,E,, E,,2 E,,E,, | [I:MIDI program 43]
+% bars 43-50: The march returns
+[V:fl] !mp!a2 e'2 e'3 d' | c'2 b2 a4 | _b2 f'2 f'3 e' | d'2 c'2 _b4 | c'2 g'2 g'3 f' | e'2 d'2 ^c'2 e'2 | a'4 ^g'2 e'2 | a'6 z2 |
+[V:ob] !mf!A2 e2 e3 d | c2 B2 A4 | _B2 f2 f3 e | d2 c2 _B4 | c2 g2 g3 f | e2 d2 ^c2 e2 | a4 ^g2 e2 | a6 z2 |
+[V:cl] !mf!A2 e2 e3 d | c2 B2 A4 | _B2 f2 f3 e | d2 c2 _B4 | c2 g2 g3 f | e2 d2 ^c2 e2 | a4 ^g2 e2 | a6 z2 |
+[V:bn] !mp!A,,2 E,2 A,,2 E,2 | A,,2 E,2 A,,2 E,2 | _B,,2 F,2 B,,2 F,2 | _B,,2 F,2 B,,2 F,2 | C,2 G,2 C,2 G,2 | D,2 D,2 A,,2 A,,2 | E,2 E,2 E,2 E,2 | A,,2 E,2 A,,2 z2 |
+[V:hn] !mp![CE]8 | [CE]8 | [DF]8 | [DF]8 | [EG]8 | [DF]4 [^CE]4 | [EA]4 [E^G]4 | [CE]8 |
+[V:tp] !f!A2 e2 e3 d | c2 B2 A4 | _B2 f2 f3 e | d2 c2 _B4 | c2 g2 g3 f | e2 d2 ^c2 e2 | a4 ^g2 e2 | a6 z2 |
+[V:tb] !mf!A,2 E2 E3 D | C2 B,2 A,4 | _B,2 F2 F3 E | D2 C2 _B,4 | C2 G2 G3 F | E2 D2 ^C2 E2 | A4 ^G2 E2 | A6 z2 |
+[V:tm] !f!A,,2 E,,2 A,,2 E,,2 | A,,2 E,,2 A,,2 E,,2 | z8 | z8 | z8 | z4 A,,2 A,,2 | E,,2 E,,2 E,,2 E,,2 | A,,2 E,,2 A,,2 z2 |
+[V:xy] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !f!eeee eeee | eeee eeee | ffff ffff | ffff ffff | gggg gggg | ffff eeee | eeee eeee | eeee eeee |
+[V:v2] !f!cccc cccc | cccc cccc | dddd dddd | dddd dddd | eeee eeee | dddd ^cccc | BBBB BBBB | cccc cccc |
+[V:va] !f!AAAA AAAA | AAAA AAAA | _BBBB BBBB | _BBBB BBBB | cccc cccc | AAAA AAAA | AAAA ^GGGG | AAAA AAAA |
+[V:vc] "arco"!f!A,,2 E,2 A,,2 E,2 | A,,2 E,2 A,,2 E,2 | _B,,2 F,2 B,,2 F,2 | _B,,2 F,2 B,,2 F,2 | C,2 G,2 C,2 G,2 | D,2 D,2 A,,2 A,,2 | E,2 E,2 E,2 E,2 | A,,2 E,2 A,,2 z2 |
+[V:cb] "arco"!p!A,,,2 E,,2 A,,,2 E,,2 | A,,,2 E,,2 A,,,2 E,,2 | _B,,,2 F,,2 B,,,2 F,,2 | _B,,,2 F,,2 B,,,2 F,,2 | C,,2 G,,2 C,,2 G,,2 | D,,2 D,,2 A,,,2 A,,,2 | E,,2 E,,2 E,,2 E,,2 | A,,,2 E,,2 A,,,2 z2 |
+% bars 51-58: Second strain again
+[V:fl] !p!e2 g2 c'3 b | a2 g2 e4 | f2 a2 d'3 c' | b2 a2 ^g4 | e2 g2 c'3 b | a2 c'2 e'4 | d'2 b2 ^g2 b2 | a6 z2 | [Q:"Maestoso" 1/4=104]
+[V:ob] !mp!E2 G2 c3 B | A2 G2 E4 | F2 A2 d3 c | B2 A2 ^G4 | E2 G2 c3 B | A2 c2 e4 | d2 B2 ^G2 B2 | A6 z2 |
+[V:cl] !mp!E2 G2 c3 B | A2 G2 E4 | F2 A2 d3 c | B2 A2 ^G4 | E2 G2 c3 B | A2 c2 e4 | d2 B2 ^G2 B2 | A6 z2 |
+[V:bn] !mp!C,2 G,2 C,2 G,2 | A,,2 E,2 A,,2 E,2 | D,2 A,2 D,2 A,2 | E,2 E,2 E,2 E,2 | C,2 G,2 C,2 G,2 | A,,2 E,2 A,,2 E,2 | E,2 E,2 E,2 E,2 | A,,2 E,2 A,,2 z2 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tb] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:xy] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !f!e2 g2 c'3 b | a2 g2 e4 | f2 a2 d'3 c' | b2 a2 ^g4 | e2 g2 c'3 b | a2 c'2 e'4 | d'2 b2 ^g2 b2 | a6 z2 |
+[V:v2] !mf!GGGG GGGG | EEEE EEEE | FFFF FFFF | EEEE EEEE | GGGG GGGG | EEEE EEEE | EEEE EEEE | EEEE EEEE |
+[V:va] !mf!EEEE EEEE | CCCC CCCC | DDDD DDDD | B,B,B,B, B,B,B,B, | EEEE EEEE | CCCC CCCC | DDDD DDDD | CCCC CCCC |
+[V:vc] !f!C,2 G,2 C,2 G,2 | A,,2 E,2 A,,2 E,2 | D,2 A,2 D,2 A,2 | E,2 E,2 E,2 E,2 | C,2 G,2 C,2 G,2 | A,,2 E,2 A,,2 E,2 | E,2 E,2 E,2 E,2 | A,,2 E,2 A,,2 z2 |
+[V:cb] !p!C,,2 G,,2 C,,2 G,,2 | A,,,2 E,,2 A,,,2 E,,2 | D,,2 A,,2 D,,2 A,,2 | E,,2 E,,2 E,,2 E,,2 | C,,2 G,,2 C,,2 G,,2 | A,,,2 E,,2 A,,,2 E,,2 | E,,2 E,,2 E,,2 E,,2 | A,,,2 E,,2 A,,,2 z2 |
+% bars 59-74: Coda, slower: trumpets, horns and trombones broaden the head of the theme and turn it to A major; everything else repeats A
+[V:fl] !mp!a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | !mf!a'2 a'a' a'2 a'a' | a'2 a'a' a'2 a'a' | a'8 | !fermata!a'8 |]
+[V:ob] !mf!aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | !f!a2 aa a2 aa | a2 aa a2 aa | a8 | !fermata!a8 |]
+[V:cl] !mf!AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | !f!A2 AA A2 AA | A2 AA A2 AA | A8 | !fermata!A8 |]
+[V:bn] !mf!A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | !f!A,,2 A,,A,, A,,2 A,,A,, | A,,2 A,,A,, A,,2 A,,A,, | A,,8 | !fermata!A,,8 |]
+[V:hn] !f!A,4 E4 | E6 D2 | ^C4 B,4 | A,8 | _B,4 F4 | F6 E2 | D4 ^C4 | E8 | A4 ^G4 | ^F4 E4 | A4 ^G4 | ^F4 E4 | A2 AA A2 AA | A2 AA A2 AA | A8 | !fermata!A8 |]
+[V:tp] !ff!A4 e4 | e6 d2 | ^c4 B4 | A8 | _B4 f4 | f6 e2 | d4 ^c4 | e8 | a4 ^g4 | ^f4 e4 | a4 ^g4 | ^f4 e4 | a2 aa a2 aa | a2 aa a2 aa | a8 | !fermata!a8 |]
+[V:tb] !f!A,4 E4 | E6 D2 | ^C4 B,4 | A,8 | _B,4 F4 | F6 E2 | D4 ^C4 | E8 | A4 ^G4 | ^F4 E4 | A4 ^G4 | ^F4 E4 | A2 AA A2 AA | A2 AA A2 AA | A8 | !fermata!A8 |]
+[V:tm] !ff!A,,2 E,,2 A,,2 E,,2 | A,,2 E,,2 A,,2 E,,2 | A,,2 E,,2 A,,2 E,,2 | A,,2 E,,2 A,,2 E,,2 | A,,2 E,,2 A,,2 E,,2 | A,,2 E,,2 A,,2 E,,2 | A,,2 E,,2 A,,2 E,,2 | A,,2 E,,2 A,,2 E,,2 | A,,2 E,,2 A,,2 E,,2 | A,,2 E,,2 A,,2 E,,2 | A,,2 E,,2 A,,2 E,,2 | A,,2 E,,2 A,,2 E,,2 | !fff!A,,2 A,,A,, A,,2 A,,A,, | A,,2 A,,A,, A,,2 A,,A,, | A,,A,,A,,A,, A,,A,,A,,A,, | !fermata!A,,8 |]
+[V:xy] !ff!a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | a'a'a'a' a'a'a'a' | !fff!a'2 a'a' a'2 a'a' | a'2 a'a' a'2 a'a' | a'8 | !fermata!a'8 |]
+[V:v1] !ff!aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | aaaa aaaa | !fff!a2 aa a2 aa | a2 aa a2 aa | a8 | !fermata!a8 |]
+[V:v2] !ff!AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | AAAA AAAA | !fff!e2 ee e2 ee | e2 ee e2 ee | e8 | !fermata!e8 |]
+[V:va] !ff!A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | A,A,A,A, A,A,A,A, | !fff!^c2 cc c2 cc | ^c2 cc c2 cc | ^c8 | !fermata!^c8 |]
+[V:vc] !ff!A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 A,,2 | !fff!A,,2 A,,A,, A,,2 A,,A,, | A,,2 A,,A,, A,,2 A,,A,, | A,,8 | !fermata!A,,8 |]
+[V:cb] !mp!A,,,2 A,,,2 A,,,2 A,,,2 | A,,,2 A,,,2 A,,,2 A,,,2 | A,,,2 A,,,2 A,,,2 A,,,2 | A,,,2 A,,,2 A,,,2 A,,,2 | A,,,2 A,,,2 A,,,2 A,,,2 | A,,,2 A,,,2 A,,,2 A,,,2 | A,,,2 A,,,2 A,,,2 A,,,2 | A,,,2 A,,,2 A,,,2 A,,,2 | A,,,2 A,,,2 A,,,2 A,,,2 | A,,,2 A,,,2 A,,,2 A,,,2 | A,,,2 A,,,2 A,,,2 A,,,2 | A,,,2 A,,,2 A,,,2 A,,,2 | !mf!A,,,2 A,,,A,,, A,,,2 A,,,A,,, | A,,,2 A,,,A,,, A,,,2 A,,,A,,, | A,,,8 | !fermata!A,,,8 |]

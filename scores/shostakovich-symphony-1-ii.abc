@@ -1,0 +1,335 @@
+%%label II. Allegretto
+%%note C major with wrong notes. A shrill polka for flute and clarinet over a plucked oom-pah, then the full orchestra with xylophone; scurrying strings and a mock fanfare; a clownish trio for the bassoon in A flat; the polka again, its tune now in the xylophone, and a curt ending.
+X:1
+T:Shostakovich’s Missing Symphony
+T:II. Allegretto
+C:Lor, in the manner of Shostakovich
+M:2/4
+L:1/8
+Q:"Allegretto" 1/4=138
+%%score [fl ob cl bn] [hn tp tb] tm xy [v1 v2 va vc cb]
+% The score is written at sounding pitch. Dynamics in the wind, brass and double-bass parts are set one to three levels below the strings to balance the playback samples of this site; they are a playback compromise, not dynamics for live players.
+V:fl clef=treble name="Fl."
+V:ob clef=treble name="Ob."
+V:cl clef=treble name="Cl."
+V:bn clef=bass name="Bn."
+V:hn clef=treble name="Hn."
+V:tp clef=treble name="Tpt."
+V:tb clef=bass name="Tbn."
+V:tm clef=bass name="Timp."
+V:xy clef=treble name="Xyl."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:C
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tp
+%%MIDI program 56
+V:tb
+%%MIDI program 57
+V:tm
+%%MIDI program 47
+V:xy
+%%MIDI program 13
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-10: Two bars of oom-pah, then the polka tune in flute and clarinet
+[V:fl] [M:2/4] z4 | z4 | !p!c'2 g a/b/ | c'2 _e'2 | d' c' b a | g2 z2 | c'2 g a/b/ | c'2 ^f'2 | g' _e' d' b | c'2 z2 |
+[V:ob] [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] [M:2/4] z4 | z4 | !mp!c2 G A/B/ | c2 _e2 | d c B A | G2 z2 | c2 G A/B/ | c2 ^f2 | g _e d B | c2 z2 |
+[V:bn] [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tp] [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tb] [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:xy] [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | [I:MIDI program 48]
+[V:v2] [M:2/4] [I:MIDI program 45] "pizz."!p!z E z E | z E z E | z E z E | z _E z E | z F z F | z D z D | z E z E | z _E z E | z D z D | z E z E | [I:MIDI program 48]
+[V:va] [M:2/4] [I:MIDI program 45] "pizz."!p!z G, z G, | z G, z G, | z G, z G, | z G, z G, | z B, z B, | z B, z B, | z G, z G, | z C z C | z B, z B, | z G, z G, | [I:MIDI program 48]
+[V:vc] [M:2/4] [I:MIDI program 45] "pizz."!mf!C, z G,, z | C, z G,, z | C, z G,, z | C, z G,, z | G,, z D, z | G,, z G,, z | C, z G,, z | _A,, z A,, z | G,, z G,, z | C, z C, z | [I:MIDI program 48]
+[V:cb] [M:2/4] [I:MIDI program 45] "pizz."!pp!C,, z G,,, z | C,, z G,,, z | C,, z G,,, z | C,, z G,,, z | G,,, z D,, z | G,,, z G,,, z | C,, z G,,, z | _A,,, z A,,, z | G,,, z G,,, z | C,, z C,, z | [I:MIDI program 43]
+% bars 11-18: The tune in the full orchestra with xylophone
+[V:fl] !mp!c'2 g a/b/ | c'2 _e'2 | d' c' b a | g2 z2 | c'2 g a/b/ | c'2 ^f'2 | g' _e' d' b | c'2 z2 |
+[V:ob] !mf!c2 G A/B/ | c2 _e2 | d c B A | G2 z2 | c2 G A/B/ | c2 ^f2 | g _e d B | c2 z2 |
+[V:cl] !mf!c2 G A/B/ | c2 _e2 | d c B A | G2 z2 | c2 G A/B/ | c2 ^f2 | g _e d B | c2 z2 |
+[V:bn] !mf!C, z G,, z | C, z G,, z | G,, z D, z | G,, z G,, z | C, z G,, z | _A,, z A,, z | G,, z G,, z | C, z C, z |
+[V:hn] !mp!z [EG] z [EG] | z [_EG] z [EG] | z [DF] z [DF] | z [DG] z [DG] | z [EG] z [EG] | z [C_E] z [CE] | z [DG] z [DG] | z [EG] z [EG] |
+[V:tp] !mf!z c z c | z c z c | z B z B | z B z B | z c z c | z c z c | z B z B | c2 z2 |
+[V:tb] !mp!C, z G,, z | C, z G,, z | G,, z D, z | G,, z G,, z | C, z G,, z | _A,, z A,, z | G,, z G,, z | C, z C, z |
+[V:tm] !f!C, z G,, z | C, z G,, z | G,, z z2 | G,, z G,, z | C, z G,, z | z4 | G,, z G,, z | C, z C, z |
+[V:xy] !ff!c'2 g a/b/ | c'2 _e'2 | d' c' b a | g2 z2 | c'2 g a/b/ | c'2 ^f'2 | g' _e' d' b | c'2 z2 |
+[V:v1] "arco"!ff!c'2 g a/b/ | c'2 _e'2 | d' c' b a | g2 z2 | c'2 g a/b/ | c'2 ^f'2 | g' _e' d' b | c'2 z2 |
+[V:v2] "arco"!ff!c2 G A/B/ | c2 _e2 | d c B A | G2 z2 | c2 G A/B/ | c2 ^f2 | g _e d B | c2 z2 |
+[V:va] "arco"!f!z [G,E] z [G,E] | z [G,_E] z [G,E] | z [B,F] z [B,F] | z [B,D] z [B,D] | z [G,E] z [G,E] | z [C_E] z [CE] | z [B,D] z [B,D] | z [G,E] z [G,E] |
+[V:vc] "arco"!ff!C, z G,, z | C, z G,, z | G,, z D, z | G,, z G,, z | C, z G,, z | _A,, z A,, z | G,, z G,, z | C, z C, z |
+[V:cb] "arco"!mp!C,, z G,,, z | C,, z G,,, z | G,,, z D,, z | G,,, z G,,, z | C,, z G,,, z | _A,,, z A,,, z | G,,, z G,,, z | C,, z C,, z |
+% bars 19-26: Scurrying strings in C minor, then a minor third higher
+[V:fl] z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 |
+[V:tp] z4 | z4 | z4 | z4 |
+[V:tb] z4 | z4 | z4 | z4 |
+[V:tm] z4 | z4 | z4 | z4 |
+[V:xy] z4 | z4 | z4 | z4 |
+[V:v1] !f!c/d/_e/f/ g/f/e/d/ | c/d/_e/f/ g/_a/b/c'/ | _b/_a/g/f/ _e/d/c/B/ | c2 z2 |
+[V:v2] !f!C/D/_E/F/ G/F/E/D/ | C/D/_E/F/ G/_A/B/c/ | _B/_A/G/F/ _E/D/C/B,/ | C2 z2 |
+[V:va] !f!C/D/_E/F/ G/F/E/D/ | C/D/_E/F/ G/_A/B/c/ | _B/_A/G/F/ _E/D/C/B,/ | C2 z2 |
+[V:vc] !f!C,2 z2 | C,2 z2 | G,,2 z2 | C,2 z2 |
+[V:cb] !p!C,,2 z2 | C,,2 z2 | G,,,2 z2 | C,,2 z2 |
+[V:fl] z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 |
+[V:tp] z4 | z4 | z4 | z4 |
+[V:tb] z4 | z4 | z4 | z4 |
+[V:tm] z4 | z4 | z4 | z4 |
+[V:xy] z4 | z4 | z4 | z4 |
+[V:v1] !f!_e/f/_g/_a/ _b/a/g/f/ | _e/f/_g/_a/ _b/=b/d'/_e'/ | _d'/b/_b/_a/ _g/f/_e/d/ | _e2 z2 |
+[V:v2] !f!_E/F/_G/_A/ _B/A/G/F/ | _E/F/_G/_A/ _B/=B/d/_e/ | _d/B/_B/_A/ _G/F/_E/D/ | _E2 z2 |
+[V:va] !f!_E/F/_G/_A/ _B/A/G/F/ | _E/F/_G/_A/ _B/=B/d/_e/ | _d/B/_B/_A/ _G/F/_E/D/ | _E2 z2 |
+[V:vc] !f!_E,2 z2 | _E,2 z2 | _B,,2 z2 | _E,2 z2 |
+[V:cb] !p!_E,,2 z2 | _E,,2 z2 | _B,,,2 z2 | _E,,2 z2 |
+% bars 27-34: A mock fanfare on G with a flattened upper neighbour, twice
+[V:fl] !mp!g'/_a'/g'/a'/ g'/a'/g'/a'/ | g'/_a'/g'/a'/ g'/a'/g'/a'/ | _a'/_b'/a'/b'/ a'/b'/a'/b'/ | g'2 z2 |
+[V:ob] !mf!g/_a/g/a/ g/a/g/a/ | g/_a/g/a/ g/a/g/a/ | _a/_b/a/b/ a/b/a/b/ | g2 z2 |
+[V:cl] !mf!g/_a/g/a/ g/a/g/a/ | g/_a/g/a/ g/a/g/a/ | _a/_b/a/b/ a/b/a/b/ | g2 z2 |
+[V:bn] !mp!G,, z G,, z | G,, z G,, z | _A,, z A,, z | G,,2 z2 |
+[V:hn] !mp![B,D]4 | [B,D]4 | [C_E]4 | [B,D]2 z2 |
+[V:tp] !f!G G/G/ G2 | G G/G/ G2 | _A A/A/ A2 | G2 z2 |
+[V:tb] !mp!G,,4 | G,,4 | _A,,4 | G,,2 z2 |
+[V:tm] !f!G,, G,,/G,,/ G,,2 | G,, G,,/G,,/ G,,2 | z4 | G,,2 z2 |
+[V:xy] z4 | z4 | z4 | z4 |
+[V:v1] !f!z d' z d' | z d' z d' | z _e' z e' | d'2 z2 |
+[V:v2] !f!z b z b | z b z b | z c' z c' | b2 z2 |
+[V:va] !f!z g z g | z g z g | z _a z a | g2 z2 |
+[V:vc] !f!G,, z G,, z | G,, z G,, z | _A,, z A,, z | G,,2 z2 |
+[V:cb] !p!G,,, z G,,, z | G,,, z G,,, z | _A,,, z A,,, z | G,,,2 z2 |
+[V:fl] !mp!g'/_a'/g'/a'/ g'/a'/g'/a'/ | g'/_a'/g'/a'/ g'/a'/g'/a'/ | _a'/_b'/a'/b'/ a'/b'/a'/b'/ | g'2 z2 |
+[V:ob] !mf!g/_a/g/a/ g/a/g/a/ | g/_a/g/a/ g/a/g/a/ | _a/_b/a/b/ a/b/a/b/ | g2 z2 |
+[V:cl] !mf!g/_a/g/a/ g/a/g/a/ | g/_a/g/a/ g/a/g/a/ | _a/_b/a/b/ a/b/a/b/ | g2 z2 |
+[V:bn] !mp!G,, z G,, z | G,, z G,, z | _A,, z A,, z | G,,2 z2 |
+[V:hn] !mp![B,D]4 | [B,D]4 | [C_E]4 | [B,D]2 z2 |
+[V:tp] !f!G G/G/ G2 | G G/G/ G2 | _A A/A/ A2 | G2 z2 |
+[V:tb] !mp!G,,4 | G,,4 | _A,,4 | G,,2 z2 |
+[V:tm] !f!G,, G,,/G,,/ G,,2 | G,, G,,/G,,/ G,,2 | z4 | G,,2 z2 |
+[V:xy] z4 | z4 | z4 | z4 |
+[V:v1] !f!z d' z d' | z d' z d' | z _e' z e' | d'2 z2 | [I:MIDI program 48]
+[V:v2] !f!z b z b | z b z b | z c' z c' | b2 z2 | [I:MIDI program 48]
+[V:va] !f!z g z g | z g z g | z _a z a | g2 z2 | [I:MIDI program 48]
+[V:vc] !f!G,, z G,, z | G,, z G,, z | _A,, z A,, z | G,,2 z2 | [I:MIDI program 48]
+[V:cb] !p!G,,, z G,,, z | G,,, z G,,, z | _A,,, z A,,, z | G,,,2 z2 | [I:MIDI program 43]
+% bars 35-42: The tune again in the full orchestra
+[V:fl] !mp!c'2 g a/b/ | c'2 _e'2 | d' c' b a | g2 z2 | c'2 g a/b/ | c'2 ^f'2 | g' _e' d' b | c'2 z2 |
+[V:ob] !mf!c2 G A/B/ | c2 _e2 | d c B A | G2 z2 | c2 G A/B/ | c2 ^f2 | g _e d B | c2 z2 |
+[V:cl] !mf!c2 G A/B/ | c2 _e2 | d c B A | G2 z2 | c2 G A/B/ | c2 ^f2 | g _e d B | c2 z2 |
+[V:bn] !mf!C, z G,, z | C, z G,, z | G,, z D, z | G,, z G,, z | C, z G,, z | _A,, z A,, z | G,, z G,, z | C, z C, z |
+[V:hn] !mp!z [EG] z [EG] | z [_EG] z [EG] | z [DF] z [DF] | z [DG] z [DG] | z [EG] z [EG] | z [C_E] z [CE] | z [DG] z [DG] | z [EG] z [EG] |
+[V:tp] !mf!z c z c | z c z c | z B z B | z B z B | z c z c | z c z c | z B z B | c2 z2 |
+[V:tb] !mp!C, z G,, z | C, z G,, z | G,, z D, z | G,, z G,, z | C, z G,, z | _A,, z A,, z | G,, z G,, z | C, z C, z |
+[V:tm] !f!C, z G,, z | C, z G,, z | G,, z z2 | G,, z G,, z | C, z G,, z | z4 | G,, z G,, z | C, z C, z |
+[V:xy] !ff!c'2 g a/b/ | c'2 _e'2 | d' c' b a | g2 z2 | c'2 g a/b/ | c'2 ^f'2 | g' _e' d' b | c'2 z2 |
+[V:v1] "arco"!ff!c'2 g a/b/ | c'2 _e'2 | d' c' b a | g2 z2 | c'2 g a/b/ | c'2 ^f'2 | g' _e' d' b | c'2 z2 |
+[V:v2] "arco"!ff!c2 G A/B/ | c2 _e2 | d c B A | G2 z2 | c2 G A/B/ | c2 ^f2 | g _e d B | c2 z2 | [I:MIDI program 45]
+[V:va] "arco"!f!z [G,E] z [G,E] | z [G,_E] z [G,E] | z [B,F] z [B,F] | z [B,D] z [B,D] | z [G,E] z [G,E] | z [C_E] z [CE] | z [B,D] z [B,D] | z [G,E] z [G,E] | [I:MIDI program 45]
+[V:vc] "arco"!ff!C, z G,, z | C, z G,, z | G,, z D, z | G,, z G,, z | C, z G,, z | _A,, z A,, z | G,, z G,, z | C, z C, z | [I:MIDI program 45]
+[V:cb] "arco"!mp!C,, z G,,, z | C,, z G,,, z | G,,, z D,, z | G,,, z G,,, z | C,, z G,,, z | _A,,, z A,,, z | G,,, z G,,, z | C,, z C,, z | [I:MIDI program 45]
+% bars 43-50: Trio, A flat major: a clownish tune for the bassoon over plucked strings
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] !mp!_E,2 _A, C | _E2 _D2 | C _B, _A, G, | _A,2 z2 | F,2 _B, _D | F2 E2 | _D C _B, G, | _A,2 z2 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tb] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:xy] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v2] "pizz."!p!z C z C | z C z C | z _D z D | z C z C | z _D z D | z E z E | z _D z D | z C z C |
+[V:va] "pizz."!p!z _A, z A, | z _A, z A, | z G, z G, | z _A, z A, | z F, z F, | z G, z G, | z G, z G, | z _E, z E, |
+[V:vc] "pizz."!p!_A,, z _E, z | _A,, z _E, z | _E, z _B,, z | _A,, z _E, z | _B,, z F, z | C, z C, z | _E, z E, z | _A,, z A,, z |
+[V:cb] "pizz."!pppp!_A,,, z _E,, z | _A,,, z _E,, z | _E,, z _B,,, z | _A,,, z _E,, z | _B,,, z F,, z | C,, z C,, z | _E,, z E,, z | _A,,, z A,,, z |
+% bars 51-58: The clarinet takes the tune, the flute an octave above
+[V:fl] !p!_e2 _a c' | _e'2 _d'2 | c' _b _a g | _a2 z2 | f2 _b _d' | f'2 e'2 | _d' c' _b g | _a2 z2 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] !mp!_E2 _A c | _e2 _d2 | c _B _A G | _A2 z2 | F2 _B _d | f2 e2 | _d c _B G | _A2 z2 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tb] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:xy] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | [I:MIDI program 48]
+[V:v2] !p!z C z C | z C z C | z _D z D | z C z C | z _D z D | z E z E | z _D z D | z C z C | [I:MIDI program 48]
+[V:va] !p!z _A, z A, | z _A, z A, | z G, z G, | z _A, z A, | z F, z F, | z G, z G, | z G, z G, | z _E, z E, |
+[V:vc] !p!_A,, z _E, z | _A,, z _E, z | _E, z _B,, z | _A,, z _E, z | _B,, z F, z | C, z C, z | _E, z E, z | _A,, z A,, z |
+[V:cb] !pppp!_A,,, z _E,, z | _A,,, z _E,, z | _E,, z _B,,, z | _A,,, z _E,, z | _B,,, z F,, z | C,, z C,, z | _E,, z E,, z | _A,,, z A,,, z |
+% bars 59-66: The violins slither down in parallel sixths over a plucked pedal
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tb] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:xy] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] "arco"!mf!c'2 b2 | _b2 a2 | _a2 g2 | _g2 f2 | e2 _e2 | _d2 c2 | _B2 _A2 | G2 z2 |
+[V:v2] "arco"!mf!_e2 d2 | _d2 c2 | B2 _B2 | A2 _A2 | G2 _G2 | F2 E2 | _D2 C2 | _B,2 z2 | [I:MIDI program 45]
+[V:va] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | [I:MIDI program 45]
+[V:vc] !p!_E, z E, z | _E, z E, z | _E, z E, z | _E, z E, z | _E, z E, z | _E, z E, z | _E, z E, z | _E,2 z2 | [I:MIDI program 45]
+[V:cb] !pppp!_E,, z E,, z | _E,, z E,, z | _E,, z E,, z | _E,, z E,, z | _E,, z E,, z | _E,, z E,, z | _E,, z E,, z | _E,,2 z2 | [I:MIDI program 45]
+% bars 67-74: The bassoon again
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] !mp!_E,2 _A, C | _E2 _D2 | C _B, _A, G, | _A,2 z2 | F,2 _B, _D | F2 E2 | _D C _B, G, | _A,2 z2 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tb] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:xy] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | [I:MIDI program 45]
+[V:v2] "pizz."!p!z C z C | z C z C | z _D z D | z C z C | z _D z D | z E z E | z _D z D | z C z C | [I:MIDI program 45]
+[V:va] "pizz."!p!z _A, z A, | z _A, z A, | z G, z G, | z _A, z A, | z F, z F, | z G, z G, | z G, z G, | z _E, z E, | [I:MIDI program 45]
+[V:vc] "pizz."!p!_A,, z _E, z | _A,, z _E, z | _E, z _B,, z | _A,, z _E, z | _B,, z F, z | C, z C, z | _E, z E, z | _A,, z A,, z | [I:MIDI program 45]
+[V:cb] "pizz."!pppp!_A,,, z _E,, z | _A,,, z _E,, z | _E,, z _B,,, z | _A,,, z _E,, z | _B,,, z F,, z | C,, z C,, z | _E,, z E,, z | _A,,, z A,,, z | [I:MIDI program 45]
+% bars 75-84: The polka returns: the tune now in the xylophone, plucked violins and a high bassoon
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | !mp!C2 G, A,/B,/ | C2 _E2 | D C B, A, | G,2 z2 | C2 G, A,/B,/ | C2 ^F2 | G _E D B, | C2 z2 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tb] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tm] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:xy] z4 | z4 | !f!c'2 g a/b/ | c'2 _e'2 | d' c' b a | g2 z2 | c'2 g a/b/ | c'2 ^f'2 | g' _e' d' b | c'2 z2 |
+[V:v1] "pizz."z4 | z4 | !f!c2 G A/B/ | c2 _e2 | d c B A | G2 z2 | c2 G A/B/ | c2 ^f2 | g _e d B | c2 z2 | [I:MIDI program 48]
+[V:v2] "pizz."!p!z E z E | z E z E | z E z E | z _E z E | z F z F | z D z D | z E z E | z _E z E | z D z D | z E z E | [I:MIDI program 48]
+[V:va] "pizz."!p!z G, z G, | z G, z G, | z G, z G, | z G, z G, | z B, z B, | z B, z B, | z G, z G, | z C z C | z B, z B, | z G, z G, | [I:MIDI program 48]
+[V:vc] "pizz."!mf!C, z G,, z | C, z G,, z | C, z G,, z | C, z G,, z | G,, z D, z | G,, z G,, z | C, z G,, z | _A,, z A,, z | G,, z G,, z | C, z C, z | [I:MIDI program 48]
+[V:cb] "pizz."!pp!C,, z G,,, z | C,, z G,,, z | C,, z G,,, z | C,, z G,,, z | G,,, z D,, z | G,,, z G,,, z | C,, z G,,, z | _A,,, z A,,, z | G,,, z G,,, z | C,, z C,, z | [I:MIDI program 43]
+% bars 85-92: The tune in the full orchestra with xylophone
+[V:fl] !mp!c'2 g a/b/ | c'2 _e'2 | d' c' b a | g2 z2 | c'2 g a/b/ | c'2 ^f'2 | g' _e' d' b | c'2 z2 |
+[V:ob] !mf!c2 G A/B/ | c2 _e2 | d c B A | G2 z2 | c2 G A/B/ | c2 ^f2 | g _e d B | c2 z2 |
+[V:cl] !mf!c2 G A/B/ | c2 _e2 | d c B A | G2 z2 | c2 G A/B/ | c2 ^f2 | g _e d B | c2 z2 |
+[V:bn] !mf!C, z G,, z | C, z G,, z | G,, z D, z | G,, z G,, z | C, z G,, z | _A,, z A,, z | G,, z G,, z | C, z C, z |
+[V:hn] !mp!z [EG] z [EG] | z [_EG] z [EG] | z [DF] z [DF] | z [DG] z [DG] | z [EG] z [EG] | z [C_E] z [CE] | z [DG] z [DG] | z [EG] z [EG] |
+[V:tp] !mf!z c z c | z c z c | z B z B | z B z B | z c z c | z c z c | z B z B | c2 z2 |
+[V:tb] !mp!C, z G,, z | C, z G,, z | G,, z D, z | G,, z G,, z | C, z G,, z | _A,, z A,, z | G,, z G,, z | C, z C, z |
+[V:tm] !f!C, z G,, z | C, z G,, z | G,, z z2 | G,, z G,, z | C, z G,, z | z4 | G,, z G,, z | C, z C, z |
+[V:xy] !ff!c'2 g a/b/ | c'2 _e'2 | d' c' b a | g2 z2 | c'2 g a/b/ | c'2 ^f'2 | g' _e' d' b | c'2 z2 |
+[V:v1] "arco"!ff!c'2 g a/b/ | c'2 _e'2 | d' c' b a | g2 z2 | c'2 g a/b/ | c'2 ^f'2 | g' _e' d' b | c'2 z2 |
+[V:v2] "arco"!ff!c2 G A/B/ | c2 _e2 | d c B A | G2 z2 | c2 G A/B/ | c2 ^f2 | g _e d B | c2 z2 |
+[V:va] "arco"!f!z [G,E] z [G,E] | z [G,_E] z [G,E] | z [B,F] z [B,F] | z [B,D] z [B,D] | z [G,E] z [G,E] | z [C_E] z [CE] | z [B,D] z [B,D] | z [G,E] z [G,E] |
+[V:vc] "arco"!ff!C, z G,, z | C, z G,, z | G,, z D, z | G,, z G,, z | C, z G,, z | _A,, z A,, z | G,, z G,, z | C, z C, z |
+[V:cb] "arco"!mp!C,, z G,,, z | C,, z G,,, z | G,,, z D,, z | G,,, z G,,, z | C,, z G,,, z | _A,,, z A,,, z | G,,, z G,,, z | C,, z C,, z |
+% bars 93-100: Scurrying strings in C minor, then a minor third higher
+[V:fl] z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 |
+[V:tp] z4 | z4 | z4 | z4 |
+[V:tb] z4 | z4 | z4 | z4 |
+[V:tm] z4 | z4 | z4 | z4 |
+[V:xy] z4 | z4 | z4 | z4 |
+[V:v1] !f!c/d/_e/f/ g/f/e/d/ | c/d/_e/f/ g/_a/b/c'/ | _b/_a/g/f/ _e/d/c/B/ | c2 z2 |
+[V:v2] !f!C/D/_E/F/ G/F/E/D/ | C/D/_E/F/ G/_A/B/c/ | _B/_A/G/F/ _E/D/C/B,/ | C2 z2 |
+[V:va] !f!C/D/_E/F/ G/F/E/D/ | C/D/_E/F/ G/_A/B/c/ | _B/_A/G/F/ _E/D/C/B,/ | C2 z2 |
+[V:vc] !f!C,2 z2 | C,2 z2 | G,,2 z2 | C,2 z2 |
+[V:cb] !p!C,,2 z2 | C,,2 z2 | G,,,2 z2 | C,,2 z2 |
+[V:fl] z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 |
+[V:tp] z4 | z4 | z4 | z4 |
+[V:tb] z4 | z4 | z4 | z4 |
+[V:tm] z4 | z4 | z4 | z4 |
+[V:xy] z4 | z4 | z4 | z4 |
+[V:v1] !f!_e/f/_g/_a/ _b/a/g/f/ | _e/f/_g/_a/ _b/=b/d'/_e'/ | _d'/b/_b/_a/ _g/f/_e/d/ | _e2 z2 |
+[V:v2] !f!_E/F/_G/_A/ _B/A/G/F/ | _E/F/_G/_A/ _B/=B/d/_e/ | _d/B/_B/_A/ _G/F/_E/D/ | _E2 z2 |
+[V:va] !f!_E/F/_G/_A/ _B/A/G/F/ | _E/F/_G/_A/ _B/=B/d/_e/ | _d/B/_B/_A/ _G/F/_E/D/ | _E2 z2 |
+[V:vc] !f!_E,2 z2 | _E,2 z2 | _B,,2 z2 | _E,2 z2 |
+[V:cb] !p!_E,,2 z2 | _E,,2 z2 | _B,,,2 z2 | _E,,2 z2 |
+% bars 101-108: A mock fanfare on G with a flattened upper neighbour, twice
+[V:fl] !mp!g'/_a'/g'/a'/ g'/a'/g'/a'/ | g'/_a'/g'/a'/ g'/a'/g'/a'/ | _a'/_b'/a'/b'/ a'/b'/a'/b'/ | g'2 z2 |
+[V:ob] !mf!g/_a/g/a/ g/a/g/a/ | g/_a/g/a/ g/a/g/a/ | _a/_b/a/b/ a/b/a/b/ | g2 z2 |
+[V:cl] !mf!g/_a/g/a/ g/a/g/a/ | g/_a/g/a/ g/a/g/a/ | _a/_b/a/b/ a/b/a/b/ | g2 z2 |
+[V:bn] !mp!G,, z G,, z | G,, z G,, z | _A,, z A,, z | G,,2 z2 |
+[V:hn] !mp![B,D]4 | [B,D]4 | [C_E]4 | [B,D]2 z2 |
+[V:tp] !f!G G/G/ G2 | G G/G/ G2 | _A A/A/ A2 | G2 z2 |
+[V:tb] !mp!G,,4 | G,,4 | _A,,4 | G,,2 z2 |
+[V:tm] !f!G,, G,,/G,,/ G,,2 | G,, G,,/G,,/ G,,2 | z4 | G,,2 z2 |
+[V:xy] z4 | z4 | z4 | z4 |
+[V:v1] !f!z d' z d' | z d' z d' | z _e' z e' | d'2 z2 |
+[V:v2] !f!z b z b | z b z b | z c' z c' | b2 z2 |
+[V:va] !f!z g z g | z g z g | z _a z a | g2 z2 |
+[V:vc] !f!G,, z G,, z | G,, z G,, z | _A,, z A,, z | G,,2 z2 |
+[V:cb] !p!G,,, z G,,, z | G,,, z G,,, z | _A,,, z A,,, z | G,,,2 z2 |
+[V:fl] !mp!g'/_a'/g'/a'/ g'/a'/g'/a'/ | g'/_a'/g'/a'/ g'/a'/g'/a'/ | _a'/_b'/a'/b'/ a'/b'/a'/b'/ | g'2 z2 |
+[V:ob] !mf!g/_a/g/a/ g/a/g/a/ | g/_a/g/a/ g/a/g/a/ | _a/_b/a/b/ a/b/a/b/ | g2 z2 |
+[V:cl] !mf!g/_a/g/a/ g/a/g/a/ | g/_a/g/a/ g/a/g/a/ | _a/_b/a/b/ a/b/a/b/ | g2 z2 |
+[V:bn] !mp!G,, z G,, z | G,, z G,, z | _A,, z A,, z | G,,2 z2 |
+[V:hn] !mp![B,D]4 | [B,D]4 | [C_E]4 | [B,D]2 z2 |
+[V:tp] !f!G G/G/ G2 | G G/G/ G2 | _A A/A/ A2 | G2 z2 |
+[V:tb] !mp!G,,4 | G,,4 | _A,,4 | G,,2 z2 |
+[V:tm] !f!G,, G,,/G,,/ G,,2 | G,, G,,/G,,/ G,,2 | z4 | G,,2 z2 |
+[V:xy] z4 | z4 | z4 | z4 |
+[V:v1] !f!z d' z d' | z d' z d' | z _e' z e' | d'2 z2 | [I:MIDI program 48]
+[V:v2] !f!z b z b | z b z b | z c' z c' | b2 z2 | [I:MIDI program 48]
+[V:va] !f!z g z g | z g z g | z _a z a | g2 z2 | [I:MIDI program 48]
+[V:vc] !f!G,, z G,, z | G,, z G,, z | _A,, z A,, z | G,,2 z2 | [I:MIDI program 48]
+[V:cb] !p!G,,, z G,,, z | G,,, z G,,, z | _A,,, z A,,, z | G,,,2 z2 | [I:MIDI program 43]
+% bars 109-116: The tune again in the full orchestra
+[V:fl] !mp!c'2 g a/b/ | c'2 _e'2 | d' c' b a | g2 z2 | c'2 g a/b/ | c'2 ^f'2 | g' _e' d' b | c'2 z2 |
+[V:ob] !mf!c2 G A/B/ | c2 _e2 | d c B A | G2 z2 | c2 G A/B/ | c2 ^f2 | g _e d B | c2 z2 |
+[V:cl] !mf!c2 G A/B/ | c2 _e2 | d c B A | G2 z2 | c2 G A/B/ | c2 ^f2 | g _e d B | c2 z2 |
+[V:bn] !mf!C, z G,, z | C, z G,, z | G,, z D, z | G,, z G,, z | C, z G,, z | _A,, z A,, z | G,, z G,, z | C, z C, z |
+[V:hn] !mp!z [EG] z [EG] | z [_EG] z [EG] | z [DF] z [DF] | z [DG] z [DG] | z [EG] z [EG] | z [C_E] z [CE] | z [DG] z [DG] | z [EG] z [EG] |
+[V:tp] !mf!z c z c | z c z c | z B z B | z B z B | z c z c | z c z c | z B z B | c2 z2 |
+[V:tb] !mp!C, z G,, z | C, z G,, z | G,, z D, z | G,, z G,, z | C, z G,, z | _A,, z A,, z | G,, z G,, z | C, z C, z |
+[V:tm] !f!C, z G,, z | C, z G,, z | G,, z z2 | G,, z G,, z | C, z G,, z | z4 | G,, z G,, z | C, z C, z |
+[V:xy] !ff!c'2 g a/b/ | c'2 _e'2 | d' c' b a | g2 z2 | c'2 g a/b/ | c'2 ^f'2 | g' _e' d' b | c'2 z2 |
+[V:v1] "arco"!ff!c'2 g a/b/ | c'2 _e'2 | d' c' b a | g2 z2 | c'2 g a/b/ | c'2 ^f'2 | g' _e' d' b | c'2 z2 |
+[V:v2] "arco"!ff!c2 G A/B/ | c2 _e2 | d c B A | G2 z2 | c2 G A/B/ | c2 ^f2 | g _e d B | c2 z2 |
+[V:va] "arco"!f!z [G,E] z [G,E] | z [G,_E] z [G,E] | z [B,F] z [B,F] | z [B,D] z [B,D] | z [G,E] z [G,E] | z [C_E] z [CE] | z [B,D] z [B,D] | z [G,E] z [G,E] |
+[V:vc] "arco"!ff!C, z G,, z | C, z G,, z | G,, z D, z | G,, z G,, z | C, z G,, z | _A,, z A,, z | G,, z G,, z | C, z C, z |
+[V:cb] "arco"!mp!C,, z G,,, z | C,, z G,,, z | G,,, z D,, z | G,,, z G,,, z | C,, z G,,, z | _A,,, z A,,, z | G,,, z G,,, z | C,, z C,, z |
+% bars 117-124: A curt ending: the tune's head in the clarinet, then in the bassoon, and three chords
+[V:fl] z4 | z4 | z4 | z4 | !mp!c' z g z | _a z g z | c' z z2 | c'2 z2 |]
+[V:ob] z4 | z4 | z4 | z4 | !mf!e z e z | _e z d z | e z z2 | e2 z2 |]
+[V:cl] !mp!c2 G A/B/ | c2 z2 | z4 | z4 | !mf!c' z g z | _a z g z | c' z z2 | c'2 z2 |]
+[V:bn] z4 | z4 | !mp!C,2 G,, A,,/B,,/ | C,2 z2 | !mf!C, z G,, z | _A,, z G,, z | C, z z2 | C,2 z2 |]
+[V:hn] z4 | z4 | z4 | z4 | !mf![EG] z [EG] z | [C_E] z [B,D] z | [EG] z z2 | [EG]2 z2 |]
+[V:tp] z4 | z4 | z4 | z4 | !f!c z c z | c z B z | c z z2 | c2 z2 |]
+[V:tb] z4 | z4 | z4 | z4 | !mf!C, z G,, z | _A,, z G,, z | C, z z2 | C,2 z2 |]
+[V:tm] z4 | z4 | z4 | z4 | !ff!C, z G,, z | z G,, z2 | C, z z2 | C,2 z2 |]
+[V:xy] z4 | z4 | z4 | z4 | !ff!c' z g z | _a z g z | c' z z2 | c'2 z2 |]
+[V:v1] z4 | z4 | z4 | z4 | !ff!c' z g z | _a z g z | c' z z2 | c'2 z2 |]
+[V:v2] z4 | z4 | z4 | z4 | !ff!e z e z | _e z d z | e z z2 | e2 z2 |]
+[V:va] z4 | z4 | z4 | z4 | !ff!G z G z | c z B z | G z z2 | G2 z2 |]
+[V:vc] z4 | z4 | z4 | z4 | !ff!C, z G,, z | _A,, z G,, z | C, z z2 | C,2 z2 |]
+[V:cb] z4 | z4 | z4 | z4 | !mp!C,, z G,,, z | _A,,, z G,,, z | C,, z z2 | C,,2 z2 |]
