@@ -1,0 +1,220 @@
+{
+ "title": "Ravel’s Missing Symphony — public composition log",
+ "scope": "The log the composing agent (Claude) kept while writing this work: the request, its progress messages, the commands it ran on the score and their output, draft publications and test results, up to the publication step. It was written during the work, entry by entry; it is not an automatic export of the whole session, and the same session composed other works whose entries are not included here.",
+ "policy": "Messages and tool output are recorded as they occurred, shortened where marked. Private internal reasoning, credentials, access details, private paths and unrelated conversation are not included. Statements made during the work may be provisional or mistaken; later corrections remain in the log.",
+ "sessions": {
+  "main": "Composition session"
+ },
+ "entries": [
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:26:44.000Z",
+   "kind": "message",
+   "speaker": "User",
+   "text": "[A long batch brief was pasted: compose and publish one original symphony for each composer in the Missing Works catalogue who has no completed symphony, one composer at a time, claiming each open symphony request through the admin command, publishing live drafts early, testing every movement in the real browser player, writing a notebook and a public composition log, deploying an atomic release, and completing the request only after the public work is verified. Every work must be labelled an original AI-composed homage. For composers outside the symphonic tradition it asks for an honest counterfactual.]\n\nNOW I know I said to do all composers, but how about we actually do half of the composers in each section? just to save some money.",
+   "notes": [
+    "the pasted batch brief is summarised in brackets; the last sentence is verbatim"
+   ],
+   "id": "entry-0001"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:26:44.000Z",
+   "kind": "tool",
+   "speaker": "Queue claim",
+   "text": "GET /api/requests -> ravel:symphony:1 status open, votes 0; no request in status composing\nmissing-works-admin start ravel:symphony:1",
+   "notes": [
+    "access details omitted"
+   ],
+   "id": "entry-0002"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:26:44.000Z",
+   "kind": "result",
+   "speaker": "Queue claim",
+   "text": "started ravel:symphony:1",
+   "notes": [],
+   "id": "entry-0003"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:26:44.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "Composition brief — Ravel’s Missing Symphony (work id ravel-symphony-1)\n\nHonest counterfactual: Ravel wrote no symphony and distrusted the form. His multi-movement abstract works are chamber music and the two piano concertos; his orchestral works are ballets, dances and orchestrations. This piece imagines a compact “Symphonie en ré” that borrows the four-movement plan of his String Quartet and Sonatine (moderate first movement, quick pizzicato scherzo with a slow middle, very slow movement, fast finale in an uneven metre) and scores it for his kind of orchestra. No theme is taken from Ravel.\n\nOrchestra (14 staves, sounding pitch): 2 flutes, 2 oboes, cor anglais, 2 clarinets, 2 bassoons, 4 horns, 2 trumpets, harp, celesta, strings. No timpani or percussion.\n\nLanguage: modes instead of major and minor (Dorian on D, Aeolian on A), chords of the seventh and ninth and with added sixths as the normal consonances, melodies doubled at the octave by unlike instruments, harp and celesta figuration, parallel chord motion. Because of this the usual checks are relaxed for this work: half-step clashes inside chords and parallel fifths and octaves are part of the style and are not reported.\n\nMovements\nI. Modéré, 3/4, D Dorian: sonata form in miniature; second theme in F for cor anglais, returning in D major.\nII. Assez vif, 6/8, A minor: scherzo with the strings plucked throughout the fast sections, and a slow bowed middle for cor anglais.\nIII. Très lent, 3/4, B flat: a long flute melody over a slow waltz-like accompaniment of harp and strings.\nIV. Vif, 5/8, D: a short finale in a three-plus-two metre.\n\nTarget length about ten minutes; the conciseness is deliberate. Compromise known from the start: melodies and the chord of every bar are written by hand; a program writes harp and celesta figuration, held chords and the fuller textures from the chord plan.",
+   "notes": [],
+   "id": "entry-0004"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:27:51.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. First movement (half-step clashes inside seventh and ninth chords and parallel motion are not reported for this work).",
+   "notes": [],
+   "id": "entry-0005"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:27:51.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Modéré: 100 bars written, 188s played; activity fl:50 ob:44 eh:15 cl:55 bn:20 hn:88 tpt:40 harp:96 cel:24 v1:98 v2:100 va:100 vc:100 cb:100\n    validator ok: 100 bars, 187.5s, 14 voices; abcjs playback matches the model (2082 notes)",
+   "notes": [],
+   "id": "entry-0006"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:27:52.582Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 1 with this public change note:\nFirst playable draft: the whole first movement — a calm Dorian theme for clarinet and flute, a second theme in F for cor anglais over harp, a short development that climbs by minor thirds, and a reprise that ends in D major.",
+   "notes": [],
+   "id": "entry-0007"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:27:58.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=ravel-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0008"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:27:58.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Modéré100 bars | load 1.5s | state playing | clock 0:01 / 3:08 | {\"peak\":0.9,\"seconds\":187.7,\"rms\":0.0898,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 C. A.:69 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Harp:46 Cel.:8 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0009"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:27:58.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "First playable Ravel draft is live: https://lost-compositions.exe.xyz/work.html?draft=ravel-symphony-1 (first movement, 3:08). Writing the pizzicato scherzo, the slow movement and the 5/8 finale.",
+   "notes": [],
+   "id": "entry-0010"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:28:21.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m2, m3, m4: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Movements II–IV, with the revision pass: one passage of the finale lowered an octave (above the violins' range); cor anglais, clarinets and bassoons, idle in the first draft of the slow movement, given the tune's lower octave and held harmony; celesta added to the finale.",
+   "notes": [],
+   "id": "entry-0011"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:28:21.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Assez vif, très rythmé: 96 bars written, 112s played; activity fl:45 ob:33 eh:7 cl:55 bn:16 hn:33 tpt:33 harp:58 cel:8 v1:84 v2:77 va:77 vc:100 cb:100\n    validator ok: 96 bars, 111.7s, 14 voices; abcjs playback matches the model (2398 notes)\n  III. Très lent: 50 bars written, 167s played; activity fl:61 ob:23 eh:23 cl:71 bn:112 hn:48 harp:176 cel:40 v1:83 v2:74 va:74 vc:49 cb:49\n    validator ok: 50 bars, 166.7s, 13 voices; abcjs playback matches the model (1069 notes)\n  IV. Vif: 88 bars written, 105s played; activity fl:69 ob:109 eh:8 cl:117 bn:54 hn:109 tpt:109 harp:100 cel:27 v1:95 v2:100 va:100 vc:100 cb:100\n    validator ok: 88 bars, 104.8s, 14 voices; abcjs playback matches the model (2948 notes)",
+   "notes": [],
+   "id": "entry-0012"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:28:22.437Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 2 with this public change note:\nComplete, revised draft: added the plucked scherzo with its slow bowed middle, the very slow movement for flute over harp, and the finale in five-eight; in revision the idle woodwind were given parts in the slow movement and the celesta added to the finale. This revision matches the published score.",
+   "notes": [],
+   "id": "entry-0013"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:28:41.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=ravel-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0014"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:28:41.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Modéré100 bars | load 2.6s | state playing | clock 0:01 / 3:08 | {\"peak\":0.9,\"seconds\":187.7,\"rms\":0.0898,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 C. A.:69 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Harp:46 Cel.:8 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   II. Assez vif, très rythmé96 bars | load 1.5s | state playing | clock 0:01 / 1:52 | {\"peak\":0.9,\"seconds\":111.9,\"rms\":0.0878,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 C. A.:69 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Harp:46 Cel.:8 Vl. I:45 Vl. II:45 Vla.:45 Vc.:45 Cb.:45\nok   III. Très lent50 bars | load 0.8s | state playing | clock 0:01 / 2:47 | {\"peak\":0.9,\"seconds\":166.9,\"rms\":0.13,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 C. A.:69 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Harp:46 Cel.:8 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   IV. Vif88 bars | load 0.8s | state playing | clock 0:01 / 1:45 | {\"peak\":0.9,\"seconds\":105,\"rms\":0.1279,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 C. A.:69 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Harp:46 Cel.:8 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0015"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:29:03.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m2: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Second movement rebuilt: the change from plucked to bowed strings for the slow middle section (and back) was being ignored by the site's notation library because the instruction stood at the start of a line; it is now written at the end of the preceding line. Checked in the library's audio sequence: the first-violin notes now carry program 45 (pizzicato), 48 (bowed) and 45 again.",
+   "notes": [],
+   "id": "entry-0016"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:29:03.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Assez vif, très rythmé: 96 bars written, 112s played; activity fl:45 ob:33 eh:7 cl:55 bn:16 hn:33 tpt:33 harp:58 cel:8 v1:84 v2:77 va:77 vc:100 cb:100\n    validator ok: 96 bars, 111.7s, 14 voices; abcjs playback matches the model (2398 notes)",
+   "notes": [],
+   "id": "entry-0017"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:29:04.088Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 3 with this public change note:\nThe scherzo's strings now really change from plucked to bowed for the slow middle section and back (the instruction had been ignored in playback). This revision matches the published score.",
+   "notes": [],
+   "id": "entry-0018"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:29:20.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=ravel-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0019"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:29:20.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Modéré100 bars | load 1.1s | state playing | clock 0:01 / 3:08 | {\"peak\":0.9,\"seconds\":187.7,\"rms\":0.0898,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 C. A.:69 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Harp:46 Cel.:8 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   II. Assez vif, très rythmé96 bars | load 0.5s | state playing | clock 0:01 / 1:52 | {\"peak\":0.9,\"seconds\":111.9,\"rms\":0.0892,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 C. A.:69 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Harp:46 Cel.:8 Vl. I:45 Vl. II:45 Vla.:45 Vc.:45 Cb.:45\nok   III. Très lent50 bars | load 0.4s | state playing | clock 0:01 / 2:47 | {\"peak\":0.9,\"seconds\":166.9,\"rms\":0.13,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 C. A.:69 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Harp:46 Cel.:8 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   IV. Vif88 bars | load 0.5s | state playing | clock 0:01 / 1:45 | {\"peak\":0.9,\"seconds\":105,\"rms\":0.1279,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 C. A.:69 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Harp:46 Cel.:8 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0020"
+  }
+ ]
+}

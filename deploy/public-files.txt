@@ -128,3 +128,10 @@ scores/chopin-symphony-1-i.abc
 scores/chopin-symphony-1-ii.abc
 scores/chopin-symphony-1-iii.abc
 scores/chopin-symphony-1-iv.abc
+ravel-symphony-1-notebook.html
+ravel-symphony-1-transcript.html
+ravel-symphony-1-transcript.json
+scores/ravel-symphony-1-i.abc
+scores/ravel-symphony-1-ii.abc
+scores/ravel-symphony-1-iii.abc
+scores/ravel-symphony-1-iv.abc

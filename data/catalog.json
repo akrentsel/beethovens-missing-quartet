@@ -1039,6 +1039,50 @@
           "durationSeconds": 124
         }
       ]
+    },
+    {
+      "id": "ravel-symphony-1",
+      "composerId": "ravel",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Ravel’s Missing Symphony",
+      "subtitle": "Symphonie en ré",
+      "description": "Ravel wrote no symphony. This imagines a compact one on the four-movement plan of his String Quartet: a modal Modéré, a plucked scherzo with a slow bowed middle, a very slow movement for flute over harp, and a finale in five-eight time, for an orchestra with cor anglais, harp and celesta. A new AI-composed homage, not a rediscovered work by Ravel.",
+      "durationSeconds": 572,
+      "date": "2026-11-18",
+      "status": "completed",
+      "notebook": "ravel-symphony-1-notebook.html",
+      "transcript": "ravel-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Modéré",
+          "note": "D Dorian: a calm theme over seventh chords and a second theme for cor anglais over harp.",
+          "source": "scores/ravel-symphony-1-i.abc",
+          "durationSeconds": 188
+        },
+        {
+          "id": "ii",
+          "label": "II. Assez vif, très rythmé",
+          "note": "A minor: plucked strings and cross-rhythms around a slow bowed middle section.",
+          "source": "scores/ravel-symphony-1-ii.abc",
+          "durationSeconds": 112
+        },
+        {
+          "id": "iii",
+          "label": "III. Très lent",
+          "note": "B flat: a long flute melody over a slow waltz-like accompaniment of harp and strings.",
+          "source": "scores/ravel-symphony-1-iii.abc",
+          "durationSeconds": 167
+        },
+        {
+          "id": "iv",
+          "label": "IV. Vif",
+          "note": "D major in five-eight time: a darting theme and a coda that keeps repeating its opening bar.",
+          "source": "scores/ravel-symphony-1-iv.abc",
+          "durationSeconds": 105
+        }
+      ]
     }
   ]
 }

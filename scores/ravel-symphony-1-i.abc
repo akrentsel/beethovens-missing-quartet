@@ -1,0 +1,279 @@
+%%label I. Modéré
+%%note D, in the Dorian mode. A calm theme for clarinet and flute over seventh chords; a second theme in F for cor anglais over harp.
+X:1
+T:Ravel’s Missing Symphony
+T:I. Modéré
+C:Claude (AI), in the manner of Maurice Ravel
+M:3/4
+L:1/8
+Q:"Modéré, très doux" 1/4=96
+%%score [fl ob eh cl bn] [hn tpt] harp cel [v1 v2 va vc cb]
+% Original AI-composed homage. The score is written at sounding pitch.
+V:fl clef=treble name="Fl. I, II"
+V:ob clef=treble name="Ob. I, II"
+V:eh clef=treble name="C. A."
+V:cl clef=treble name="Cl. I, II"
+V:bn clef=bass name="Bn. I, II"
+V:hn clef=treble name="Hn. I–IV"
+V:tpt clef=treble name="Tpt. I, II"
+V:harp clef=treble name="Harp"
+V:cel clef=treble name="Cel."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:Ddor
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:eh
+%%MIDI program 69
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tpt
+%%MIDI program 56
+V:harp
+%%MIDI program 46
+V:cel
+%%MIDI program 8
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-8: [A1] First theme: clarinet with the flute an octave above, over quiet seventh chords and harp
+[V:fl] !p!d'4 a2 | c'2 d'2 e'2 | f'4 e'd' | e'6 | a4 c'2 | d'2 b2 g2 | a2 c'2 e'2 | d'4 z2 |
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:eh] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] !mp!d'4 a2 | c'2 d'2 e'2 | f'4 e'd' | e'6 | a4 c'2 | d'2 b2 g2 | a2 c'2 e'2 | d'4 z2 |
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tpt] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:harp] !p!A,C DF DC | A,C EG EC | A,C FA FC | G,C EG EC | G,C EA EC | G,B, DG DB, | G,C EA EC | F,C DA DC |
+[V:cel] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] !p!F6 | G6 | F6 | E6 | E6 | D6 | C6 | F6 |
+[V:v2] !p!D6 | C6 | C6 | C6 | C6 | B,6 | A,6 | C6 |
+[V:va] !p!C6 | A,6 | A,6 | G,6 | G,6 | G,6 | G,6 | A,6 |
+[V:vc] !p!D,,6 | A,,6 | F,,6 | C,,6 | A,,6 | G,,6 | A,,6 | D,6 |
+[V:cb] !p!D,,6 | A,,,6 | F,,,6 | C,,6 | A,,,6 | G,,,6 | A,,,6 | D,,6 |
+% bars 9-16: [A2] The violins take it, horns holding
+[V:fl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:eh] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] !p![CF]6 | [CG]6 | [CA]6 | [CE]6 | [CG]6 | [B,G]6 | [CG]6 | [CF]6 |
+[V:tpt] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:harp] !p!A,C DF DC | A,C EG EC | A,C FA FC | G,C EG EC | G,C EA EC | G,B, DG DB, | G,C EA EC | F,C DA DC |
+[V:cel] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] !mp!d'4 a2 | c'2 d'2 e'2 | f'4 e'd' | e'6 | a4 c'2 | d'2 b2 g2 | a2 c'2 e'2 | d'4 z2 |
+[V:v2] !mp!F6 | G6 | A6 | E6 | G6 | G6 | G6 | F6 |
+[V:va] !mp!C6 | C6 | C6 | C6 | C6 | B,6 | C6 | C6 |
+[V:vc] !mp!D,,6 | A,,6 | F,,6 | C,,6 | A,,6 | G,,6 | A,,6 | D,6 |
+[V:cb] !mp!D,,6 | A,,,6 | F,,,6 | C,,6 | A,,,6 | G,,,6 | A,,,6 | D,,6 |
+% bars 17-20: [TR] Four bars rise through B flat and C
+[V:fl] !mf!d'2 f'2 a'2 | g'2 e'2 c'2 | d'2 f'2 a'2 | _b'2 g'2 e'2 |
+[V:ob] !mf![Ad]6 | [_Be]6 | [Ad]6 | [_Be]6 |
+[V:eh] z6 | z6 | z6 | z6 |
+[V:cl] !mf![DA]6 | [E_B]6 | [DA]6 | [E_B]6 |
+[V:bn] !mf!_B,,2 B,,2 B,,2 | C,2 C,2 C,2 | _B,,2 B,,2 B,,2 | C,2 C,2 C,2 |
+[V:hn] !mf![A,D]6 | [_B,E]6 | [A,D]6 | [_B,E]6 |
+[V:tpt] !mf![Ad]6 | [_Be]6 | [Ad]6 | [_Be]6 |
+[V:harp] !mf!_B,D FA FD | _B,D Ec ED | A,D F_B FD | G,C E_B EC |
+[V:cel] z6 | z6 | z6 | z6 |
+[V:v1] !mf!d'2 f'2 a'2 | g'2 e'2 c'2 | d'2 f'2 a'2 | _b'2 g'2 e'2 |
+[V:v2] !mf!AA AA AA | _BB BB BB | AA AA AA | _BB BB BB |
+[V:va] !mf!DD DD DD | EE EE EE | DD DD DD | EE EE EE |
+[V:vc] !mf!_B,,2 B,,2 B,,2 | C,2 C,2 C,2 | _B,,2 B,,2 B,,2 | C,2 C,2 C,2 |
+[V:cb] !mf!_B,,,2 B,,,2 B,,,2 | C,,2 C,,2 C,,2 | _B,,,2 B,,,2 B,,,2 | C,,2 C,,2 C,,2 |
+% bars 21-28: [S1] Second theme in F: cor anglais over harp and held strings
+[V:fl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:eh] !mp!A4 c2 | d3c A2 | c4 e2 | f3e d2 | c4 A2 | _B2 d2 e2 | c4 A2 | A4 z2 |
+[V:cl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tpt] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:harp] !p!A,C EF EC | G,_B, DF DB, | G,A, CE CA, | F,A, _B,D B,A, | F,A, CE CA, | F,_B, DG CB, | E,A, CF CA, | D,A, CF CA, |
+[V:cel] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] !p!A6 | _B6 | c6 | _B6 | c6 | _B4 B2 | A6 | A6 |
+[V:v2] !p!F6 | G6 | G6 | A6 | F6 | G4 G2 | F6 | F6 |
+[V:va] !p!E6 | F6 | E6 | D6 | E6 | F4 E2 | E6 | D6 |
+[V:vc] !p!F,,6 | G,,6 | A,,6 | _B,,6 | A,,6 | G,,4 C,2 | F,6 | F,6 |
+[V:cb] !p!F,,,6 | G,,,6 | A,,,6 | _B,,,6 | A,,,6 | G,,,4 C,,2 | F,,6 | F,,6 |
+% bars 29-36: [S2] Repeated by violins and flute with celesta
+[V:fl] !p!a4 c'2 | d'3c' a2 | c'4 e'2 | f'3e' d'2 | c'4 a2 | _b2 d'2 e'2 | c'4 a2 | a4 z2 |
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:eh] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tpt] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:harp] !p!A,C EF EC | G,_B, DF DB, | G,A, CE CA, | F,A, _B,D B,A, | F,A, CE CA, | F,_B, DG CB, | E,A, CF CA, | D,A, CF CA, |
+[V:cel] !pp!f'e' c'a c'e' | f'd' _bg bd' | e'c' ag ac' | d'_b af ab | e'c' af ac' | g'd' _bf bc' | f'c' ae ac' | f'c' ad ac' |
+[V:v1] !mp!a4 c'2 | d'3c' a2 | c'4 e'2 | f'3e' d'2 | c'4 a2 | _b2 d'2 e'2 | c'4 a2 | a4 z2 |
+[V:v2] !p!E6 | F6 | G6 | A6 | c6 | _B4 B2 | A6 | A6 |
+[V:va] !p!A,6 | _B,6 | C6 | D6 | E6 | F4 E2 | E6 | D6 |
+[V:vc] !p!F,,6 | G,,6 | A,,6 | _B,,6 | A,,6 | G,,4 C,2 | F,6 | F,6 |
+[V:cb] !p!F,,,6 | G,,,6 | A,,,6 | _B,,,6 | A,,,6 | G,,,4 C,,2 | F,,6 | F,,6 |
+% bars 37-40: [K] A closing phrase that falls back towards D
+[V:fl] z6 | z6 | z6 | z6 |
+[V:ob] !mp!f'2 d'2 a2 | b2 d'2 f'2 | f'2 d'2 a2 | g2 e'2 d'2 |
+[V:eh] z6 | z6 | z6 | z6 |
+[V:cl] z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 |
+[V:hn] !pp![CF]6 | [B,F]6 | [CF]6 | [DG]6 |
+[V:tpt] z6 | z6 | z6 | z6 |
+[V:harp] !p!A,C DF DC | G,B, DF DB, | A,C DF DC | A,D EG ED |
+[V:cel] z6 | z6 | z6 | z6 |
+[V:v1] !p!F6 | F6 | F6 | G6 |
+[V:v2] !p!D6 | D6 | D6 | D6 |
+[V:va] !p!C6 | B,6 | C6 | A,6 |
+[V:vc] !p!D,,6 | G,,6 | D,,6 | A,,6 |
+[V:cb] !p!D,,6 | G,,,6 | D,,6 | A,,,6 |
+% bars 41-48: [D1] Development: the first theme a third higher, for flute alone over harp
+[V:fl] !pp!^f'4 ^c'2 | e'2 ^f'2 ^g'2 | a'4 ^g'^f' | ^g'6 | ^c'4 e'2 | ^f'2 ^d'2 b2 | ^c'2 e'2 ^g'2 | ^f'4 z2 |
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:eh] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tpt] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:harp] !p!A,^C E^F EC | B,^C E^G EC | A,^C EA EC | ^G,B, EB EB, | ^G,B, E^c EB, | ^F,B, ^DB DB, | ^G,B, E^c EB, | ^F,A, E^c EA, |
+[V:cel] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] !pp!A6 | B6 | A6 | ^G6 | ^G6 | ^F6 | E6 | E6 |
+[V:v2] !pp!^F6 | E6 | E6 | E6 | E6 | ^D6 | ^C6 | ^C6 |
+[V:va] !pp!E6 | ^C6 | ^C6 | B,6 | B,6 | B,6 | B,6 | A,6 |
+[V:vc] !pp!^F,,6 | ^C,,6 | A,,6 | E,,6 | ^C,,6 | B,,6 | ^C,6 | ^F,6 |
+[V:cb] !pp!^F,,,6 | ^C,,6 | A,,,6 | E,,,6 | ^C,,6 | B,,,6 | ^C,,6 | ^F,,6 |
+% bars 49-56: [D2] Its first two bars climb by minor thirds, the orchestra filling out
+[V:fl] !mf!d'4 a2 | c'2 d'2 e'2 | f'4 c'2 | ^d'2 f'2 g'2 | ^g'4 ^d'2 | ^f'2 ^g'2 _b'2 | b'4 ^f'2 | a'2 b'2 ^c''2 |
+[V:ob] !mf![Fc]6 | [Gc]6 | [^G^d]6 | [_B^d]6 | [B^f]6 | [^c^f]6 | [da]6 | [ea]6 |
+[V:eh] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] !mf![CF]6 | [CG]6 | [^D^G]6 | [^D_B]6 | [^FB]6 | [^F^c]6 | [Ad]6 | [Ae]6 |
+[V:bn] !mf!D,,2 D,,2 D,,2 | A,,2 A,,2 A,,2 | F,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 | ^G,,2 G,,2 G,,2 | ^D,,2 D,,2 D,,2 | B,,2 B,,2 B,,2 | ^F,,2 F,,2 F,,2 |
+[V:hn] !mf![CF]6 | [CG]6 | [^D^G]6 | [^D_B]6 | [^FB]6 | [^F_B]6 | [DA]6 | [EA]6 |
+[V:tpt] !mf![Fc]6 | [Gc]6 | [^G^d]6 | [_B^d]6 | [B^f]6 | [^c^f]6 | [Ad]6 | [Ae]6 |
+[V:harp] !mf!A,C DF DC | A,C EG EC | ^G,C ^DF DC | _B,C ^DG DC | ^G,B, ^D^F DB, | _B,^C ^D^F DC | A,B, D^F DB, | A,^C E^F EC |
+[V:cel] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] !mf!d'4 a2 | c'2 d'2 e'2 | f'4 c'2 | ^d'2 f'2 g'2 | ^g'4 ^d'2 | ^f'2 ^g'2 _b'2 | b'4 ^f'2 | a'2 b'2 ^c''2 |
+[V:v2] !mf!FF FF FF | GG GG GG | ^GG GG GG | _BB BB BB | BB BB BB | ^cc cc cc | dd dd dd | ^cc cc cc |
+[V:va] !mf!CC CC CC | CC CC CC | ^DD DD DD | ^DD DD DD | ^FF FF FF | ^FF FF FF | AA AA AA | AA AA AA |
+[V:vc] !mf!D,,2 D,,2 D,,2 | A,,2 A,,2 A,,2 | F,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 | ^G,,2 G,,2 G,,2 | ^D,,2 D,,2 D,,2 | B,,2 B,,2 B,,2 | ^F,,2 F,,2 F,,2 |
+[V:cb] !mf!D,,2 D,,2 D,,2 | A,,,2 A,,,2 A,,,2 | F,,,2 F,,,2 F,,,2 | C,,2 C,,2 C,,2 | ^G,,,2 G,,,2 G,,,2 | ^D,,2 D,,2 D,,2 | B,,,2 B,,,2 B,,,2 | ^F,,,2 F,,,2 F,,,2 |
+% bars 57-60: [D3] Climax on a ninth chord, then a slow descent to the dominant
+[V:fl] !ff!b'2 ^g'2 e'2 | d'2 b2 ^g2 | g2 a2 d'2 | ^c'2 e'2 a'2 |
+[V:ob] !ff![^Gd]6 | [^Gd]6 | [Gd]6 | [G^c]6 |
+[V:eh] z6 | z6 | z6 | z6 |
+[V:cl] !ff![D^G]6 | [D^G]6 | [DG]6 | [^CG]6 |
+[V:bn] !ff!E,,2 E,,2 E,,2 | E,,2 E,,2 E,,2 | A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 |
+[V:hn] !ff![^G,D]6 | [^G,D]6 | [G,D]6 | [G,^C]6 |
+[V:tpt] !ff![^Gd]6 | [^Gd]6 | [Gd]6 | [G^c]6 |
+[V:harp] !mf!B,D E^G ED | B,D E^G ED | A,D EG ED | A,^C EG EC |
+[V:cel] z6 | z6 | z6 | z6 |
+[V:v1] !ff!b'2 ^g'2 e'2 | d'2 b2 ^g2 | g2 a2 d'2 | ^c'2 e'2 a'2 |
+[V:v2] !ff!^GG GG GG | ^GG GG GG | GG GG GG | GG GG GG |
+[V:va] !ff!DD DD DD | DD DD DD | DD DD DD | ^CC CC CC |
+[V:vc] !ff!E,,2 E,,2 E,,2 | E,,2 E,,2 E,,2 | A,,2 A,,2 A,,2 | A,,2 A,,2 A,,2 |
+[V:cb] !ff!E,,,2 E,,,2 E,,,2 | E,,,2 E,,,2 E,,,2 | A,,,2 A,,,2 A,,,2 | A,,,2 A,,,2 A,,,2 |
+% bars 61-64: [D4] Stillness
+[V:fl] z6 | z6 | z6 | z6 |
+[V:ob] z6 | z6 | z6 | z6 |
+[V:eh] z6 | z6 | z6 | z6 |
+[V:cl] z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 |
+[V:hn] !p![G,D]6 | [G,D]6 | [G,^C]6 | [G,^C]6 |
+[V:tpt] z6 | z6 | z6 | z6 |
+[V:harp] z6 | z6 | z6 | z6 |
+[V:cel] z6 | z6 | z6 | z6 |
+[V:v1] !pp!a'6 | a'4 g'2 | e'6 | e'4 z2 |
+[V:v2] !pp!G6 | G6 | G6 | G6 |
+[V:va] !pp!D6 | D6 | ^C6 | ^C6 |
+[V:vc] !pp!A,,6 | A,,6 | A,,6 | A,,6 |
+[V:cb] !pp!A,,,6 | A,,,6 | A,,,6 | A,,,6 |
+% bars 65-72: [R A] Reprise: the first theme in the strings, clarinet doubling
+[V:fl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:eh] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] !p!d4 A2 | c2 d2 e2 | f4 ed | e6 | A4 c2 | d2 B2 G2 | A2 c2 e2 | d4 z2 |
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tpt] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:harp] !p!A,C DF DC | A,C EG EC | A,C FA FC | G,C EG EC | G,C EA EC | G,B, DG DB, | G,C EA EC | F,C DA DC |
+[V:cel] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] !mp!d'4 a2 | c'2 d'2 e'2 | f'4 e'd' | e'6 | a4 c'2 | d'2 b2 g2 | a2 c'2 e'2 | d'4 z2 |
+[V:v2] !mp!F6 | G6 | A6 | E6 | G6 | G6 | G6 | F6 |
+[V:va] !mp!C6 | C6 | C6 | C6 | C6 | B,6 | C6 | C6 |
+[V:vc] !mp!D,,6 | A,,6 | F,,6 | C,,6 | A,,6 | G,,6 | A,,6 | D,6 |
+[V:cb] !mp!D,,6 | A,,,6 | F,,,6 | C,,6 | A,,,6 | G,,,6 | A,,,6 | D,,6 |
+% bars 73-76: [R TR] The rising bars, turned to stay
+[V:fl] !mf!d'2 f'2 a'2 | g'2 e'2 c'2 | d'2 f'2 a'2 | a'2 g'2 e'2 ||
+[V:ob] !mf![Ad]6 | [_Be]6 | [Ad]6 | [G^c]6 ||
+[V:eh] z6 | z6 | z6 | z6 ||
+[V:cl] !mf![DA]6 | [E_B]6 | [DA]6 | [^CG]6 ||
+[V:bn] !mf!_B,,2 B,,2 B,,2 | C,2 C,2 C,2 | _B,,2 B,,2 B,,2 | A,,2 A,,2 A,,2 ||
+[V:hn] !mf![A,D]6 | [_B,E]6 | [A,D]6 | [G,^C]6 ||
+[V:tpt] !mf![Ad]6 | [_Be]6 | [Ad]6 | [G^c]6 ||
+[V:harp] !mf!_B,D FA FD | _B,D Ec ED | A,D F_B FD | G,^C EA EC ||
+[V:cel] z6 | z6 | z6 | z6 ||
+[V:v1] !mf!d'2 f'2 a'2 | g'2 e'2 c'2 | d'2 f'2 a'2 | a'2 g'2 e'2 ||
+[V:v2] !mf!AA AA AA | _BB BB BB | AA AA AA | GG GG GG ||
+[V:va] !mf!DD DD DD | EE EE EE | DD DD DD | ^CC CC CC ||
+[V:vc] !mf!_B,,2 B,,2 B,,2 | C,2 C,2 C,2 | _B,,2 B,,2 B,,2 | A,,2 A,,2 A,,2 ||
+[V:cb] !mf!_B,,,2 B,,,2 B,,,2 | C,,2 C,,2 C,,2 | _B,,,2 B,,,2 B,,,2 | A,,,2 A,,,2 A,,,2 ||
+% bars 77-84: [R S1] The second theme in D major: cor anglais
+[V:fl] [K:D] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:ob] [K:D] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:eh] [K:D] !mp!F4 A2 | B3A F2 | A4 c2 | d3c B2 | A4 F2 | G2 B2 c2 | A4 F2 | F4 z2 |
+[V:cl] [K:D] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:bn] [K:D] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] [K:D] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tpt] [K:D] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:harp] [K:D] !p!A,C DF DC | G,B, DE DB, | F,A, CE CA, | F,B, DG DB, | A,C DA DC | G,D EB EC | F,C DA DC | F,B, DA DB, |
+[V:cel] [K:D] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] [K:D] !p!F6 | G6 | A6 | G6 | A6 | G4 G2 | F6 | F6 |
+[V:v2] [K:D] !p!D6 | E6 | E6 | F6 | D6 | E4 E2 | D6 | D6 |
+[V:va] [K:D] !p!C6 | D6 | C6 | B,6 | C6 | D4 C2 | C6 | B,6 |
+[V:vc] [K:D] !p!D,,6 | E,,6 | F,,6 | G,,6 | F,,6 | E,,4 A,,2 | D,6 | D,6 |
+[V:cb] [K:D] !p!D,,6 | E,,,6 | F,,,6 | G,,,6 | F,,,6 | E,,,4 A,,,2 | D,,6 | D,,6 |
+% bars 85-92: [R S2] Violins, flute and celesta
+[V:fl] !p!f'4 a'2 | b'3a' f'2 | a'4 c''2 | d''3c'' b'2 | a'4 f'2 | g'2 b'2 c''2 | a'4 f'2 | f'4 z2 |
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:eh] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tpt] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:harp] !p!A,C DF DC | G,B, DE DB, | F,A, CE CA, | F,B, DG DB, | A,C DA DC | G,D EB EC | F,C DA DC | F,B, DA DB, |
+[V:cel] !pp!d'c' af ac' | d'b ge gb | c'a fe fa | bg fd fg | c'a fd fa | e'b gd ga | d'a fc fa | ba fd fa |
+[V:v1] !mp!f'4 a'2 | b'3a' f'2 | a'4 c''2 | d''3c'' b'2 | a'4 f'2 | g'2 b'2 c''2 | a'4 f'2 | f'4 z2 |
+[V:v2] !p!F6 | G6 | A6 | B6 | A6 | G4 G2 | F6 | F6 |
+[V:va] !p!C6 | D6 | E6 | F6 | C6 | D4 C2 | C6 | B,6 |
+[V:vc] !p!D,,6 | E,,6 | F,,6 | G,,6 | F,,6 | E,,4 A,,2 | D,6 | D,6 |
+[V:cb] !p!D,,6 | E,,,6 | F,,,6 | G,,,6 | F,,,6 | E,,,4 A,,,2 | D,,6 | D,,6 |
+% bars 93-100: [Coda] Coda: the first theme’s opening in the major, dissolving into a chord with added sixth and ninth
+[V:fl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |]
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |]
+[V:eh] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |]
+[V:cl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |]
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |]
+[V:hn] !p![DF]6 | [DA]6 | [B,G]6 | [DG]6 | [DF]6 | [B,F]6 | [B,F]6 | [B,F]6 |]
+[V:tpt] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |]
+[V:harp] !p!A,D FA FD | A,D FB FD | G,D GB GD | G,D EA ED | A,D FA FD | G,D FB FD | A,D FB FD | A,D FB FD |]
+[V:cel] !pp!f'd' af ad' | f'd' af ad' | g'd' bg bd' | g'd' ae ad' | f'd' ad ad' | f'b gd gb | e'b fd fb | e'b fd fb |]
+[V:v1] !pp!a4 d'2 | c'2 d'2 e'2 | g'4 f'e' | e'6 | f'4 a'2 | b'4 f'2 | e'6 | f'4 z2 |]
+[V:v2] !pp!F6 | A6 | B6 | G6 | F6 | F6 | F6 | F6 |]
+[V:va] !pp!D6 | D6 | D6 | D6 | D6 | B,6 | B,6 | B,6 |]
+[V:vc] !pp!D,,6 | B,,6 | G,,6 | A,,6 | D,6 | G,6 | D,6 | D,6 |]
+[V:cb] !pp!D,,6 | B,,,6 | G,,,6 | A,,,6 | D,,6 | G,,6 | D,,6 | D,,6 |]
