@@ -142,3 +142,10 @@ scores/stravinsky-symphony-1-i.abc
 scores/stravinsky-symphony-1-ii.abc
 scores/stravinsky-symphony-1-iii.abc
 scores/stravinsky-symphony-1-iv.abc
+ives-symphony-1-notebook.html
+ives-symphony-1-transcript.html
+ives-symphony-1-transcript.json
+scores/ives-symphony-1-i.abc
+scores/ives-symphony-1-ii.abc
+scores/ives-symphony-1-iii.abc
+scores/ives-symphony-1-iv.abc

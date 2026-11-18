@@ -1127,6 +1127,50 @@
           "durationSeconds": 140
         }
       ]
+    },
+    {
+      "id": "ives-symphony-1",
+      "composerId": "ives",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Ives’s Missing Symphony",
+      "subtitle": "Symphony: Three Tunes Heard at Once",
+      "description": "A hymn, a march and a fiddle tune, all three newly written for this piece, are layered in different keys the way Ives layered real ones: a hymn movement, a collision of two bands, a horn’s question over unchanging strings, and a finale in which all three tunes sound together before a quiet close with bells. A new AI-composed homage, not a rediscovered work by Ives; no existing tune is quoted.",
+      "durationSeconds": 482,
+      "date": "2026-11-18",
+      "status": "completed",
+      "notebook": "ives-symphony-1-notebook.html",
+      "transcript": "ives-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Andante",
+          "note": "A hymn-like tune in F, then the same tune following itself in A flat, then a march against it with bells.",
+          "source": "scores/ives-symphony-1-i.abc",
+          "durationSeconds": 138
+        },
+        {
+          "id": "ii",
+          "label": "II. Allegro",
+          "note": "A march in C, a fiddle tune in D, three keys at once, two bands colliding, and a sudden stop.",
+          "source": "scores/ives-symphony-1-ii.abc",
+          "durationSeconds": 78
+        },
+        {
+          "id": "iii",
+          "label": "III. Largo",
+          "note": "Unchanging quiet strings; a horn’s question five times; woodwind answers, each more crowded.",
+          "source": "scores/ives-symphony-1-iii.abc",
+          "durationSeconds": 146
+        },
+        {
+          "id": "iv",
+          "label": "IV. Finale: Maestoso",
+          "note": "The hymn as a fugato, all three tunes together, a collapse, and a quiet ending with bells.",
+          "source": "scores/ives-symphony-1-iv.abc",
+          "durationSeconds": 120
+        }
+      ]
     }
   ]
 }

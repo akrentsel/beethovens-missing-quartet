@@ -1,0 +1,129 @@
+%%label I. Andante
+%%note A hymn-like tune in F for the strings; other instruments join with the same tune in other keys and a march from another direction.
+X:1
+T:Ives’s Missing Symphony
+T:I. Andante
+C:Claude (AI), in the manner of Charles Ives
+M:4/4
+L:1/8
+Q:"Andante" 1/4=66
+%%score [fl ob cl bn] [hn tpt tbn] timp bells [v1 v2 va vc cb]
+% Original AI-composed homage. The score is written at sounding pitch.
+V:fl clef=treble name="Fl. I, II"
+V:ob clef=treble name="Ob. I, II"
+V:cl clef=treble name="Cl. I, II"
+V:bn clef=bass name="Bn. I, II"
+V:hn clef=treble name="Hn. I–IV"
+V:tpt clef=treble name="Tpt. I, II"
+V:tbn clef=bass name="Tbn. I–III"
+V:timp clef=bass name="Timp."
+V:bells clef=treble name="Bells"
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:F
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tpt
+%%MIDI program 56
+V:tbn
+%%MIDI program 57
+V:timp
+%%MIDI program 47
+V:bells
+%%MIDI program 14
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-8: [1] The hymn tune, quietly, in the first violins over a plain string harmony
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tpt] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tbn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bells] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !mp!c'4 f'4 | f'2 g'2 a'4 | a'4 b'2 a'2 | g'6 z2 | a'4 c''4 | b'2 a'2 g'4 | f'4 a'2 g'2 | f'6 z2 |
+[V:v2] !p!C4 C4 | D4 C4 | B,4 A,4 | C4 C4 | C4 C4 | B,4 C4 | D4 C4 | C4 C4 |
+[V:va] !p!A,4 A,4 | A,4 F,4 | F,4 F,4 | G,4 G,4 | A,4 F,4 | F,4 G,4 | A,4 B,4 | A,4 A,4 |
+[V:vc] !p!F,,4 F,,4 | D,,4 A,,4 | B,,4 F,,4 | C,,4 C,,4 | F,,4 A,,4 | B,,4 C,4 | D,4 C,4 | F,4 F,4 |
+[V:cb] !p!F,,,4 F,,,4 | D,,4 A,,,4 | B,,,4 F,,,4 | C,,4 C,,4 | F,,,4 A,,,4 | B,,,4 C,,4 | D,,4 C,,4 | F,,4 F,,4 |
+% bars 9-16: [2] The tune moves to cellos and bassoon; a flute adds a descant
+[V:fl] !p!z4 c'4 | d'2 e'2 f'4 | f'4 d'2 f'2 | e'6 z2 | f'4 a'4 | g'2 f'2 e'4 | d'4 f'2 e'2 | c'6 z2 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] !mp!C4 F4 | F2 G2 A4 | A4 B2 A2 | G6 z2 | A4 c4 | B2 A2 G4 | F4 A2 G2 | F6 z2 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tpt] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tbn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bells] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !p!F4 F4 | F4 F4 | D4 C4 | E4 E4 | F4 F4 | D4 E4 | F4 E4 | F4 F4 |
+[V:v2] !p!C4 C4 | D4 C4 | B,4 A,4 | C4 C4 | C4 C4 | B,4 C4 | D4 C4 | C4 C4 |
+[V:va] !p!A,4 A,4 | A,4 F,4 | F,4 F,4 | G,4 G,4 | A,4 F,4 | F,4 G,4 | A,4 B,4 | A,4 A,4 |
+[V:vc] !mp!C4 F4 | F2 G2 A4 | A4 B2 A2 | G6 z2 | A4 c4 | B2 A2 G4 | F4 A2 G2 | F6 z2 |
+[V:cb] !p!F,,,4 F,,,4 | D,,4 A,,,4 | B,,,4 F,,,4 | C,,4 C,,4 | F,,,4 A,,,4 | B,,,4 C,,4 | D,,4 C,,4 | F,,4 F,,4 |
+% bars 17-24: [3] Horns have the tune in F; oboes and clarinets follow a bar later with the same tune in A flat
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] z8 | !mf!_e4 _a4 | _a2 b2 c'4 | c'4 _d'2 c'2 | b6 z2 | c'4 _e'4 | _d'2 c'2 b4 | _a4 c'2 b2 |
+[V:cl] z8 | !mf!_e4 _a4 | _a2 b2 c'4 | c'4 _d'2 c'2 | b6 z2 | c'4 _e'4 | _d'2 c'2 b4 | _a4 c'2 b2 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] !mf!C4 F4 | F2 G2 A4 | A4 B2 A2 | G6 z2 | A4 c4 | B2 A2 G4 | F4 A2 G2 | F6 z2 |
+[V:tpt] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tbn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bells] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !mp!F4 F4 | F4 F4 | D4 C4 | E4 E4 | F4 F4 | D4 E4 | F4 E4 | F4 F4 |
+[V:v2] !mp!C4 C4 | D4 C4 | B,4 A,4 | C4 C4 | C4 C4 | B,4 C4 | D4 C4 | C4 C4 |
+[V:va] !mp!A,4 A,4 | A,4 F,4 | F,4 F,4 | G,4 G,4 | A,4 F,4 | F,4 G,4 | A,4 B,4 | A,4 A,4 |
+[V:vc] !mp!F,,4 F,,4 | D,,4 A,,4 | B,,4 F,,4 | C,,4 C,,4 | F,,4 A,,4 | B,,4 C,4 | D,4 C,4 | F,4 F,4 |
+[V:cb] !mp!F,,,4 F,,,4 | D,,4 A,,,4 | B,,,4 F,,,4 | C,,4 C,,4 | F,,,4 A,,,4 | B,,,4 C,,4 | D,,4 C,,4 | F,,4 F,,4 |
+% bars 25-32: [4] Everything at once: the hymn in F in trumpets, trombones and violins, the march tune in D flat in flutes and oboes, bells striking
+[V:fl] !f!_a2 fa _d'2 d'2 | c'b _af a2 z2 | f2 _a_d' f'2 _e'2 | _d'c' bc' d'2 z2 | _a2 fa _d'2 d'2 | c'b _af a2 z2 | f2 _a_d' f'2 _e'2 | _d'c' bc' d'2 z2 |
+[V:ob] !f!_a2 fa _d'2 d'2 | c'b _af a2 z2 | f2 _a_d' f'2 _e'2 | _d'c' bc' d'2 z2 | _a2 fa _d'2 d'2 | c'b _af a2 z2 | f2 _a_d' f'2 _e'2 | _d'c' bc' d'2 z2 |
+[V:cl] z8 | !f!_e4 _a4 | _a2 b2 c'4 | c'4 _d'2 c'2 | b6 z2 | c'4 _e'4 | _d'2 c'2 b4 | _a4 c'2 b2 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tpt] !f!c4 f4 | f2 g2 a4 | a4 b2 a2 | g6 z2 | a4 c'4 | b2 a2 g4 | f4 a2 g2 | f6 z2 |
+[V:tbn] !f!C,4 F,4 | F,2 G,2 A,4 | A,4 B,2 A,2 | G,6 z2 | A,4 C4 | B,2 A,2 G,4 | F,4 A,2 G,2 | F,6 z2 |
+[V:timp] !f!F,2 z2 C,2 z2 | F,2 z2 C,2 z2 | F,2 z2 C,2 z2 | C,2 C,2 C,2 z2 | F,2 z2 C,2 z2 | F,2 z2 C,2 z2 | F,2 z2 C,2 C,2 | F,2 z6 |
+[V:bells] !f!f4 z4 | c4 z4 | f4 z4 | c4 z4 | f4 c4 | f4 c4 | f4 c4 | f8 |
+[V:v1] !f!c'4 f'4 | f'2 g'2 a'4 | a'4 b'2 a'2 | g'6 z2 | a'4 c''4 | b'2 a'2 g'4 | f'4 a'2 g'2 | f'6 z2 |
+[V:v2] !f!C2 C2 C2 C2 | D2 D2 C2 C2 | B,2 B,2 A,2 A,2 | C2 C2 C2 C2 | C2 C2 C2 C2 | B,2 B,2 C2 C2 | D2 D2 C2 C2 | C2 C2 C2 C2 |
+[V:va] !f!A,2 A,2 A,2 A,2 | A,2 A,2 F,2 F,2 | F,2 F,2 F,2 F,2 | G,2 G,2 G,2 G,2 | A,2 A,2 F,2 F,2 | F,2 F,2 G,2 G,2 | A,2 A,2 B,2 B,2 | A,2 A,2 A,2 A,2 |
+[V:vc] !f!F,,2 F,,2 F,,2 F,,2 | D,,2 D,,2 A,,2 A,,2 | B,,2 B,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 C,,2 | F,,2 F,,2 A,,2 A,,2 | B,,2 B,,2 C,2 C,2 | D,2 D,2 C,2 C,2 | F,2 F,2 F,2 F,2 |
+[V:cb] !f!F,,,2 F,,,2 F,,,2 F,,,2 | D,,2 D,,2 A,,,2 A,,,2 | B,,,2 B,,,2 F,,,2 F,,,2 | C,,2 C,,2 C,,2 C,,2 | F,,,2 F,,,2 A,,,2 A,,,2 | B,,,2 B,,,2 C,,2 C,,2 | D,,2 D,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 F,,2 |
+% bars 33-38: [5] It stops. The strings finish the hymn alone, very quietly; a flute remembers the tune in the wrong key, and the last chord is left open
+[V:fl] z8 | z8 | !pp!_g4 =b4 | =b2 _d'2 _e'4 | _e'4 =e'2 _e'2 | z8 |]
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:tpt] z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:tbn] z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:timp] z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:bells] z8 | z8 | z8 | !pp!f4 z4 | z8 | c4 z4 |]
+[V:v1] !pp!a'4 c''4 | b'2 a'2 g'4 | f'4 a'2 g'2 | f'6 z2 | f'8 | f'4 z4 |]
+[V:v2] !pp!C4 C4 | B,4 C4 | D4 C4 | C4 C4 | C4 C4 | C4 C4 |]
+[V:va] !pp!A,4 F,4 | F,4 G,4 | A,4 B,4 | A,4 A,4 | A,4 A,4 | A,4 A,4 |]
+[V:vc] !pp!F,,4 A,,4 | B,,4 C,4 | D,4 C,4 | F,4 F,4 | F,4 F,4 | F,4 F,4 |]
+[V:cb] !pp!F,,,4 A,,,4 | B,,,4 C,,4 | D,,4 C,,4 | F,,4 F,,4 | F,,4 F,,4 | F,,4 F,,4 |]

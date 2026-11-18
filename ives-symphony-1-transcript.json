@@ -1,0 +1,250 @@
+{
+ "title": "Ives’s Missing Symphony — public composition log",
+ "scope": "The log the composing agent (Claude) kept while writing this work: the request, its progress messages, the commands it ran on the score and their output, draft publications and test results, up to the publication step. It was written during the work, entry by entry; it is not an automatic export of the whole session, and the same session composed other works whose entries are not included here.",
+ "policy": "Messages and tool output are recorded as they occurred, shortened where marked. Private internal reasoning, credentials, access details, private paths and unrelated conversation are not included. Statements made during the work may be provisional or mistaken; later corrections remain in the log.",
+ "sessions": {
+  "main": "Composition session"
+ },
+ "entries": [
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:36:28.000Z",
+   "kind": "message",
+   "speaker": "User",
+   "text": "[A long batch brief was pasted: compose and publish one original symphony for each composer in the Missing Works catalogue who has no completed symphony, one composer at a time, claiming each open symphony request through the admin command, publishing live drafts early, testing every movement in the real browser player, writing a notebook and a public composition log, deploying an atomic release, and completing the request only after the public work is verified. Every work must be labelled an original AI-composed homage, with new thematic material rather than recognisable existing melodies.]\n\nNOW I know I said to do all composers, but how about we actually do half of the composers in each section? just to save some money.",
+   "notes": [
+    "the pasted batch brief is summarised in brackets; the last sentence is verbatim"
+   ],
+   "id": "entry-0001"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:36:28.000Z",
+   "kind": "tool",
+   "speaker": "Queue claim",
+   "text": "GET /api/requests -> ives:symphony:1 status open, votes 0; no request in status composing\nmissing-works-admin start ives:symphony:1",
+   "notes": [
+    "access details omitted"
+   ],
+   "id": "entry-0002"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:36:28.000Z",
+   "kind": "result",
+   "speaker": "Queue claim",
+   "text": "started ives:symphony:1",
+   "notes": [],
+   "id": "entry-0003"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:36:28.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "Composition brief — Ives’s Missing Symphony (work id ives-symphony-1)\n\nCharles Ives wrote four numbered symphonies. Their most personal feature is the use of hymns, marches and fiddle tunes that his listeners knew, quoted and piled on top of one another in different keys and speeds. A homage cannot do that honestly with real tunes here: this library asks for new thematic material, not recognisable existing melodies. So the first decision was to write three plain tunes of my own in those three manners — a hymn in F, a quickstep march in C and a fiddle tune in D — and then to treat them as Ives treated borrowed ones. Nothing is quoted from Ives or from any hymnal or march.\n\nOrchestra (14 staves, sounding pitch): pairs of flutes, oboes, clarinets and bassoons, four horns, two trumpets, three trombones, timpani, tubular bells, strings.\n\nMovements\nI. Andante: the hymn, plainly, then with the same hymn following in another key, then with the march against it and bells; it breaks off and ends quietly on an open chord.\nII. Allegro: the march; the fiddle tune enters in another key while the march’s bass keeps going; both bands at once; a sudden stop.\nIII. Largo: a very slow, very quiet string chorale that never changes; a horn asks the same five-note question five times; the woodwind answer four times, each time faster and more crowded, and the last question is left unanswered. The idea is that of “The Unanswered Question”; the notes are new.\nIV. Finale: the hymn as a short fugato, then all three tunes together at full strength, a collapse, and a quiet close with the hymn far away and bells.\n\nTarget length about eight minutes. Because simultaneous keys are the point, the half-step and parallel-motion checks are switched off for this work; bar lengths, ranges, sustain and playback are still checked. Compromise known from the start: the tunes and their layering are written by hand; the plain string harmony under them is realised by a program from a chord plan.",
+   "notes": [],
+   "id": "entry-0004"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:37:41.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. First movement (clashes between simultaneous keys are intended and not reported for this work); a bell part written above the instrument's range was lowered an octave.",
+   "notes": [],
+   "id": "entry-0005"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:37:41.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Andante: 38 bars written, 138s played; activity fl:44 ob:36 cl:35 bn:19 hn:19 tpt:19 tbn:19 timp:11 bells:18 v1:95 v2:100 va:100 vc:98 cb:100\n    validator ok: 38 bars, 138.2s, 14 voices; abcjs playback matches the model (707 notes)",
+   "notes": [],
+   "id": "entry-0006"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:37:42.271Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 1 with this public change note:\nFirst playable draft: the first movement — a newly written hymn-like tune in F, then the same tune following itself in A flat, then a march against it with bells, and a quiet open ending.",
+   "notes": [],
+   "id": "entry-0007"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:37:46.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=ives-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0008"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:37:46.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Andante38 bars | load 0.7s | state playing | clock 0:01 / 2:18 | {\"peak\":0.9,\"seconds\":138.4,\"rms\":0.106,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III:57 Timp.:47 Bells:14 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0009"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:37:46.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "First playable Ives draft is live: https://lost-compositions.exe.xyz/work.html?draft=ives-symphony-1 (first movement, 2:18). Writing the other three movements.",
+   "notes": [],
+   "id": "entry-0010"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:38:06.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m2, m3, m4: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Movements II–IV; after the first build the horn's question, one oboe answer and a flute echo were lowered into range.",
+   "notes": [],
+   "id": "entry-0011"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:38:06.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Allegro: 70 bars written, 70s played; activity fl:65 ob:71 cl:107 bn:81 hn:115 tpt:62 tbn:145 timp:22 bells:0 v1:70 v2:52 va:41 vc:87 cb:87\n    validator ok: 70 bars, 70s, 14 voices; abcjs playback matches the model (1845 notes)\n  III. Largo: 28 bars written, 146s played; activity fl:24 ob:24 cl:24 hn:31 v1:100 v2:100 va:100 vc:100 cb:100\n    RANGE ob: Ab6 at bar 23+9/2 (range Bb3-G6)\n    validator ok: 28 bars, 146.1s, 9 voices; abcjs playback matches the model (464 notes)\n  IV. Finale: Maestoso: 38 bars written, 120s played; activity fl:58 ob:59 cl:60 bn:31 hn:60 tpt:59 tbn:51 timp:22 bells:35 v1:81 v2:88 va:94 vc:99 cb:99\n    validator ok: 38 bars, 120s, 14 voices; abcjs playback matches the model (1284 notes)",
+   "notes": [],
+   "id": "entry-0012"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:38:06.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m2: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Revision pass, second movement: eight bars added in which three keys sound at once (fiddle tune in D, bass in C, the trio strain in F in the clarinets), with bells, before the two bands collide.",
+   "notes": [],
+   "id": "entry-0013"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:38:06.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Allegro: 78 bars written, 78s played; activity fl:58 ob:64 cl:105 bn:82 hn:103 tpt:56 tbn:146 timp:20 bells:6 v1:73 v2:57 va:37 vc:88 cb:88\n    validator ok: 78 bars, 78s, 14 voices; abcjs playback matches the model (2086 notes)",
+   "notes": [],
+   "id": "entry-0014"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:38:06.722Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 2 with this public change note:\nFirst complete draft: added the march-against-fiddle-tune Allegro, the Largo with a horn's repeated question over unchanging strings, and the Finale in which hymn, march and fiddle tune sound together. A revision pass follows.",
+   "notes": [],
+   "id": "entry-0015"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:38:07.483Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 3 with this public change note:\nRevision: the Allegro gains eight bars in three keys at once before the collision. This revision matches the published score.",
+   "notes": [],
+   "id": "entry-0016"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:38:23.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=ives-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0017"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:38:23.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Andante38 bars | load 0.7s | state playing | clock 0:01 / 2:18 | {\"peak\":0.9,\"seconds\":138.4,\"rms\":0.106,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III:57 Timp.:47 Bells:14 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   II. Allegro78 bars | load 0.6s | state playing | clock 0:01 / 1:18 | {\"peak\":0.9,\"seconds\":78.2,\"rms\":0.1152,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III:57 Timp.:47 Bells:14 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   III. Largo28 bars | load 0.3s | state playing | clock 0:01 / 2:26 | {\"peak\":0.9,\"seconds\":146.3,\"rms\":0.1045,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Hn. I–IV:60 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   IV. Finale: Maestoso38 bars | load 0.7s | state playing | clock 0:01 / 2:00 | {\"peak\":0.9,\"seconds\":120.2,\"rms\":0.1014,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III:57 Timp.:47 Bells:14 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0018"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:39:03.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m3: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Third movement: one oboe note (A flat above the staff, beyond the range limit used by the checker) replaced.",
+   "notes": [],
+   "id": "entry-0019"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:39:03.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "III. Largo: 28 bars written, 146s played; activity fl:24 ob:24 cl:24 hn:31 v1:100 v2:100 va:100 vc:100 cb:100\n    validator ok: 28 bars, 146.1s, 9 voices; abcjs playback matches the model (464 notes)",
+   "notes": [],
+   "id": "entry-0020"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:39:03.861Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 4 with this public change note:\nOne out-of-range oboe note in the Largo replaced. This revision matches the published score.",
+   "notes": [],
+   "id": "entry-0021"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:39:20.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=ives-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0022"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:39:20.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Andante38 bars | load 1.4s | state playing | clock 0:01 / 2:18 | {\"peak\":0.9,\"seconds\":138.4,\"rms\":0.106,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III:57 Timp.:47 Bells:14 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   II. Allegro78 bars | load 1.2s | state playing | clock 0:01 / 1:18 | {\"peak\":0.9,\"seconds\":78.2,\"rms\":0.1152,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III:57 Timp.:47 Bells:14 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   III. Largo28 bars | load 0.4s | state playing | clock 0:01 / 2:26 | {\"peak\":0.9,\"seconds\":146.3,\"rms\":0.1045,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Hn. I–IV:60 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   IV. Finale: Maestoso38 bars | load 0.8s | state playing | clock 0:01 / 2:00 | {\"peak\":0.9,\"seconds\":120.2,\"rms\":0.1014,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III:57 Timp.:47 Bells:14 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0023"
+  }
+ ]
+}
