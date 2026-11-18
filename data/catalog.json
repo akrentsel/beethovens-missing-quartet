@@ -907,6 +907,50 @@
           "durationSeconds": 116
         }
       ]
+    },
+    {
+      "id": "schubert-symphony-1",
+      "composerId": "schubert",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Schubert’s Missing Symphony",
+      "subtitle": "Symphony in A major",
+      "description": "A lyrical four-movement symphony in A major, a key Schubert never used for one: a clarinet song and a cello theme that arrives a third away from where it is expected, a walking Andante, a Scherzo with a ländler Trio, and a Finale in constant motion. For double woodwind, horns, trumpets, timpani and strings. A new AI-composed homage, not a rediscovered or completed work by Schubert.",
+      "durationSeconds": 947,
+      "date": "2026-11-18",
+      "status": "completed",
+      "notebook": "schubert-symphony-1-notebook.html",
+      "transcript": "schubert-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Allegro moderato",
+          "note": "A clarinet song over murmuring strings; the cellos’ second theme arrives in a distant C major.",
+          "source": "scores/schubert-symphony-1-i.abc",
+          "durationSeconds": 434
+        },
+        {
+          "id": "ii",
+          "label": "II. Andante con moto",
+          "note": "F major: a walking song shadowed by the minor, with a stormy D minor episode.",
+          "source": "scores/schubert-symphony-1-ii.abc",
+          "durationSeconds": 174
+        },
+        {
+          "id": "iii",
+          "label": "III. Scherzo: Allegro vivace – Trio",
+          "note": "A quick scherzo that drops suddenly into C major, and a ländler Trio for clarinet.",
+          "source": "scores/schubert-symphony-1-iii.abc",
+          "durationSeconds": 196
+        },
+        {
+          "id": "iv",
+          "label": "IV. Finale: Allegro vivace",
+          "note": "A sonata-rondo in constant motion with a singing second theme for the woodwind.",
+          "source": "scores/schubert-symphony-1-iv.abc",
+          "durationSeconds": 143
+        }
+      ]
     }
   ]
 }

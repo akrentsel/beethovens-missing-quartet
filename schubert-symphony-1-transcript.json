@@ -1,0 +1,220 @@
+{
+ "title": "Schubert’s Missing Symphony — public composition log",
+ "scope": "The log the composing agent (Claude) kept while writing this work: the request, its progress messages, the commands it ran on the score and their output, draft publications and test results, up to the publication step. It was written during the work, entry by entry; it is not an automatic export of the whole session, and the same session composed other works whose entries are not included here.",
+ "policy": "Messages and tool output are recorded as they occurred, shortened where marked. Private internal reasoning, credentials, access details, private paths and unrelated conversation are not included. Statements made during the work may be provisional or mistaken; later corrections remain in the log.",
+ "sessions": {
+  "main": "Composition session"
+ },
+ "entries": [
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:07:09.000Z",
+   "kind": "message",
+   "speaker": "User",
+   "text": "[A long batch brief was pasted: compose and publish one original symphony for each composer in the Missing Works catalogue who has no completed symphony, one composer at a time, claiming each open symphony request through the admin command, publishing live drafts early, testing every movement in the real browser player, writing a notebook and a public composition log, deploying an atomic release, and completing the request only after the public work is verified. Every work must be labelled an original AI-composed homage.]\n\nNOW I know I said to do all composers, but how about we actually do half of the composers in each section? just to save some money.",
+   "notes": [
+    "the pasted batch brief is summarised in brackets; the last sentence is verbatim"
+   ],
+   "id": "entry-0001"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:07:09.000Z",
+   "kind": "tool",
+   "speaker": "Queue claim",
+   "text": "GET /api/requests -> schubert:symphony:1 status open, votes 0; no request in status composing\nmissing-works-admin start schubert:symphony:1",
+   "notes": [
+    "access details omitted"
+   ],
+   "id": "entry-0002"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:07:09.000Z",
+   "kind": "result",
+   "speaker": "Queue claim",
+   "text": "started schubert:symphony:1",
+   "notes": [],
+   "id": "entry-0003"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:07:09.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "Composition brief — Schubert’s Missing Symphony (work id schubert-symphony-1)\n\nA four-movement symphony in A major, a key Schubert never used for a symphony. New music in his lyrical manner; no theme is taken from him, and it is not presented as a lost or completed Schubert work.\n\nOrchestra (12 staves, sounding pitch): 2 flutes, 2 oboes, 2 clarinets, 2 bassoons, 2 horns and 2 trumpets (written as natural instruments in A; horns in F in the slow movement), timpani in A and E, strings. No trombones.\n\nMovements\nI. Allegro moderato, A major, 4/4. A song for the clarinet over murmuring strings, taken up by the violins and shaded with the minor. A dotted tutti ends on a bare E, and the second theme, for the cellos, enters a third below where it is expected, in C major; the closing theme regains E. In the reprise the same thing happens a fifth lower: the cello theme comes in F and the close in A. Exposition repeated.\nII. Andante con moto, F major (again a third below the home key), 2/4: a walking song, its second strain shadowed by F minor; a stormy D minor episode with a lyrical B flat answer; varied return.\nIII. Scherzo: Allegro vivace, A major, with a sudden drop into C major, and a ländler Trio in D for the clarinet.\nIV. Finale: Allegro vivace, 2/4: a sonata-rondo in constant motion, with a singing second theme for the woodwind.\n\nTarget length about fifteen minutes. Stylistic approach: long song-like themes, keys related by thirds, major–minor shading on a single note (F sharp to F natural), accompaniment figures that keep going under the tune. Compromise known from the start: tunes, the chord of every bar and the forms are written by hand; a program scores each passage in one of three textures (a tune over quiet strings, a woodwind band, the full orchestra) and writes accompaniment figures, wind chords and natural brass parts from the chord plan.",
+   "notes": [],
+   "id": "entry-0004"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:07:40.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. First movement. Fixes after the first build: 14 parallel octaves/fifths between first violins and bass removed (chord inversions under the minor-shaded bar of the theme, five melody notes in the dotted tutti and the storm), an accented C sharp against the seventh of the dominant softened, and the reprise of the closing group lowered an octave (it ran above the violins' range).",
+   "notes": [],
+   "id": "entry-0005"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:07:40.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Allegro moderato: 152 bars written, 426s played; activity fl:49 ob:69 cl:92 bn:45 hn:121 tpt:58 timp:17 v1:82 v2:94 va:94 vc:72 cb:66\n    validator ok: 152 bars, 426.2s, 12 voices; abcjs playback matches the model (8686 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0006"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:07:40.857Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 1 with this public change note:\nFirst playable draft: the whole first movement — a clarinet song over murmuring strings, a cello second theme that arrives in C major, development, and a reprise in which that theme comes in F.",
+   "notes": [],
+   "id": "entry-0007"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:07:49.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=schubert-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0008"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:07:49.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Allegro moderato152 bars | load 3.7s | state playing | clock 0:01 / 7:06 | {\"peak\":0.9,\"seconds\":426.4,\"rms\":0.1042,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I, II:60 Tpt. I, II:56 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0009"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:09:13.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "First playable Schubert draft is live: https://lost-compositions.exe.xyz/work.html?draft=schubert-symphony-1 (first movement, 7:06). Writing the Andante, Scherzo and Finale.",
+   "notes": [],
+   "id": "entry-0010"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:09:48.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m2, m3, m4: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Movements II–IV, after fixing 25 parallel octaves/fifths between first violins and bass found in the first build (inversions changed, and the last note of several bars of the Scherzo and Finale themes).",
+   "notes": [],
+   "id": "entry-0011"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:09:48.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Andante con moto: 96 bars written, 175s played; activity fl:31 ob:48 cl:56 bn:24 hn:108 v1:96 v2:100 va:100 vc:58 cb:58\n    validator ok: 96 bars, 174.5s, 10 voices; abcjs playback matches the model (2009 notes)\n    parallel fifths/octaves v1/vc: 0\n  III. Scherzo: Allegro vivace – Trio: 136 bars written, 196s played; activity fl:43 ob:42 cl:77 bn:33 hn:83 tpt:12 timp:4 v1:81 v2:88 va:88 vc:59 cb:59\n    validator ok: 136 bars, 195.5s, 12 voices; abcjs playback matches the model (3491 notes)\n    PAR P8 v1/vc bar 12+0 (B5/B2 -> E6/E3)\n    PAR P8 v1/vc bar 14+0 (F#6/F#3 -> B5/B2)\n    PAR P8 v1/vc bar 100+0 (B5/B2 -> E6/E3)\n    PAR P8 v1/vc bar 102+0 (F#6/F#3 -> B5/B2)\n    parallel fifths/octaves v1/vc: 4\n  IV. Finale: Allegro vivace: 172 bars written, 143s played; activity fl:69 ob:119 cl:115 bn:72 hn:135 tpt:94 timp:36 v1:82 v2:90 va:90 vc:90 cb:90\n    validator ok: 172 bars, 143.3s, 12 voices; abcjs playback matches the model (5615 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0012"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:09:49.490Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 2 with this public change note:\nFirst complete draft: added the Andante con moto in F, the Scherzo with its ländler Trio, and the sonata-rondo Finale. A revision pass follows.",
+   "notes": [],
+   "id": "entry-0013"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:10:07.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=schubert-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0014"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:10:07.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Allegro moderato152 bars | load 1.9s | state playing | clock 0:01 / 7:06 | {\"peak\":0.9,\"seconds\":426.4,\"rms\":0.1042,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I, II:60 Tpt. I, II:56 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   II. Andante con moto96 bars | load 0.7s | state playing | clock 0:01 / 2:55 | {\"peak\":0.9,\"seconds\":174.7,\"rms\":0.0949,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I, II:60 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   III. Scherzo: Allegro vivace – Trio136 bars | load 0.5s | state playing | clock 0:01 / 3:16 | {\"peak\":0.9,\"seconds\":195.7,\"rms\":0.0881,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I, II:60 Tpt. I, II:56 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   IV. Finale: Allegro vivace172 bars | load 0.6s | state playing | clock 0:01 / 2:23 | {\"peak\":0.9,\"seconds\":143.5,\"rms\":0.122,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I, II:60 Tpt. I, II:56 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0015"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:10:26.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1, m3: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Revision pass: the first movement's coda now begins with the cello theme in A major — it had been heard only in C and in F — and the horns hold the tonic under the opening murmur; four remaining parallel octaves in the Scherzo removed.",
+   "notes": [],
+   "id": "entry-0016"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:10:26.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Allegro moderato: 156 bars written, 434s played; activity fl:48 ob:68 cl:90 bn:44 hn:125 tpt:57 timp:17 v1:82 v2:94 va:94 vc:73 cb:66\n    validator ok: 156 bars, 434.5s, 12 voices; abcjs playback matches the model (8816 notes)\n    PAR P8 v1/vc bar 142+0 (A4/A4 -> B4/B4)\n    PAR P8 v1/vc bar 144+0 (A4/A4 -> B4/B4)\n    parallel fifths/octaves v1/vc: 2\n  III. Scherzo: Allegro vivace – Trio: 136 bars written, 196s played; activity fl:43 ob:42 cl:77 bn:33 hn:83 tpt:12 timp:4 v1:81 v2:88 va:88 vc:59 cb:59\n    validator ok: 136 bars, 195.5s, 12 voices; abcjs playback matches the model (3491 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0017"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:11:04.176Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 3 with this public change note:\nRevision: the first movement's coda now begins with the cello theme in A major, its home key, after being heard only in C and F; horns hold the tonic under the opening murmur; voice-leading corrections in the Scherzo. This revision matches the published score.",
+   "notes": [],
+   "id": "entry-0018"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:11:21.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=schubert-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0019"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:11:21.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Allegro moderato156 bars | load 1.7s | state playing | clock 0:01 / 7:14 | {\"peak\":0.9,\"seconds\":434.7,\"rms\":0.1035,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I, II:60 Tpt. I, II:56 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   II. Andante con moto96 bars | load 0.4s | state playing | clock 0:01 / 2:55 | {\"peak\":0.9,\"seconds\":174.7,\"rms\":0.0949,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I, II:60 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   III. Scherzo: Allegro vivace – Trio136 bars | load 0.3s | state playing | clock 0:01 / 3:16 | {\"peak\":0.9,\"seconds\":195.7,\"rms\":0.0883,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I, II:60 Tpt. I, II:56 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   IV. Finale: Allegro vivace172 bars | load 0.5s | state playing | clock 0:01 / 2:23 | {\"peak\":0.9,\"seconds\":143.5,\"rms\":0.122,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I, II:60 Tpt. I, II:56 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0020"
+  }
+ ]
+}

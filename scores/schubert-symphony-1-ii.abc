@@ -1,0 +1,185 @@
+%%label II. Andante con moto
+%%note F major. A walking song whose second strain is shadowed by the minor; a stormy D minor episode with a lyrical answer; a varied return.
+X:1
+T:Schubert’s Missing Symphony
+T:II. Andante con moto
+C:Claude (AI), in the manner of Franz Schubert
+M:2/4
+L:1/8
+Q:"Andante con moto" 1/4=66
+%%score [fl ob cl bn] [hn] [v1 v2 va vc cb]
+% Original AI-composed homage. The score is written at sounding pitch.
+V:fl clef=treble name="Fl. I, II"
+V:ob clef=treble name="Ob. I, II"
+V:cl clef=treble name="Cl. I, II"
+V:bn clef=bass name="Bn. I, II"
+V:hn clef=treble name="Hn. I, II"
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:F
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-8: [A a] The walking song: oboe over a stepping bass
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] !mp!c'2 af | b2 ge | a2 c'f' | e'3c' | d'2 af | g2 bd' | c'a g2 | f2 z2 |
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !p!AA AA | BB BB | AA AA | GG GG | AA AA | BB BB | AA BB | AA AA |
+[V:v2] !p!FF FF | GG GG | FF FF | EE EE | FF FF | GG GG | FF EE | FF FF |
+[V:va] !p!CC CC | CC CC | CC CC | CC CC | DD DD | DD DD | CC CC | CC CC |
+[V:vc] !p!F,, z F,, z | E,, z E,, z | F,, z F,, z | C,, z C,, z | D,, z D,, z | G,, z G,, z | C, z C, z | F, z F, z |
+[V:cb] !p!F,,, z F,,, z | E,,, z E,,, z | F,,, z F,,, z | C,, z C,, z | D,, z D,, z | G,,, z G,,, z | C,, z C,, z | F,, z F,, z |
+% bars 9-16: [A a2] Answered by clarinet and flute
+[V:fl] !p!c'2 af | b2 ge | a2 c'f' | e'3c' | d'2 f'd' | c'2 bg | a2 g2 | f2 z2 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] !mp!c'2 af | b2 ge | a2 c'f' | e'3c' | d'2 f'd' | c'2 bg | a2 g2 | f2 z2 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !p!AA AA | BB BB | AA AA | GG GG | AA AA | BB BB | AA BB | AA AA |
+[V:v2] !p!FF FF | GG GG | FF FF | EE EE | FF FF | EE EE | FF EE | FF FF |
+[V:va] !p!CC CC | CC CC | CC CC | CC CC | DD DD | CC CC | CC CC | CC CC |
+[V:vc] !p!F,, z F,, z | E,, z E,, z | F,, z F,, z | C,, z C,, z | D,, z D,, z | C,, z C,, z | C,, z C,, z | F,, z F,, z |
+[V:cb] !p!F,,, z F,,, z | E,,, z E,,, z | F,,, z F,,, z | C,, z C,, z | D,, z D,, z | C,, z C,, z | C,, z C,, z | F,,, z F,,, z |
+% bars 17-24: [A b] Second strain in the violins, shadowed by F minor and D flat
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] !pp![CF]4 | [Ff]4 | [Ff]4 | [CG]4 | [CF]4 | [Ff]4 | [CG]4 | [CG]4 |
+[V:v1] !mp!_a2 c'f' | f'2 _d'2 | b2 _d'2 | c'2 g2 | _a2 c'f' | _a'2 f'2 | g'2 e'2 | c'2 z2 |
+[V:v2] !p!_AA AA | _AA AA | BB BB | cc cc | cc cc | _AA AA | BB BB | BB BB |
+[V:va] !p!_A,4 | F,4 | F,4 | E,4 | _A,4 | F,4 | E,4 | E,4 |
+[V:vc] !p!F,, z F,, z | _D,, z D,, z | B,, z B,, z | C, z C, z | F, z F, z | _D, z D, z | C, z C, z | C, z C, z |
+[V:cb] !p!F,,, z F,,, z | _D,, z D,, z | B,,, z B,,, z | C,, z C,, z | F,, z F,, z | _D,, z D,, z | C,, z C,, z | C,, z C,, z |
+% bars 25-32: [B1] Storm: D minor, the full orchestra
+[V:fl] !f!d'2 ad' | ^c'2 ae' | f'2 ad' | e'4 | d'2 bd' | g2 bd' | ^c'2 e'2 | d'2 z2 |
+[V:ob] !f![FA]4 | [G_d]4 | [Fd]4 | [E_d]4 | [Fd]4 | [Bd]4 | [G_d]4 | [Fd]4 |
+[V:cl] !f![DF]4 | [_DG]4 | [DF]4 | [_DE]4 | [DF]4 | [DB]4 | [_DG]4 | [DF]4 |
+[V:bn] !f!D,,D,, D,,D,, | E,,E,, E,,E,, | D,,D,, D,,D,, | A,,A,, A,,A,, | B,,B,, B,,B,, | G,,G,, G,,G,, | A,,A,, A,,A,, | D,D, D,D, |
+[V:hn] !f![FA]2 [FA]2 | [A,A]2 [A,A]2 | [FA]2 [FA]2 | [A,A]2 [A,A]2 | [Fd]2 [Fd]2 | [Gd]2 [Gd]2 | [A,A]2 [A,A]2 | [FA]2 [FA]2 |
+[V:v1] !f!d'2 ad' | ^c'2 ae' | f'2 ad' | e'4 | d'2 bd' | g2 bd' | ^c'2 e'2 | d'2 z2 |
+[V:v2] !f!F/F/F/F/ F/F/F/F/ | G/G/G/G/ G/G/G/G/ | F/F/F/F/ F/F/F/F/ | E/E/E/E/ E/E/E/E/ | F/F/F/F/ F/F/F/F/ | B/B/B/B/ B/B/B/B/ | G/G/G/G/ G/G/G/G/ | F/F/F/F/ F/F/F/F/ |
+[V:va] !f!D/D/D/D/ D/D/D/D/ | _D/D/D/D/ D/D/D/D/ | D/D/D/D/ D/D/D/D/ | _D/D/D/D/ D/D/D/D/ | D/D/D/D/ D/D/D/D/ | D/D/D/D/ D/D/D/D/ | _D/D/D/D/ D/D/D/D/ | D/D/D/D/ D/D/D/D/ |
+[V:vc] !f!D,,D,, D,,D,, | E,,E,, E,,E,, | D,,D,, D,,D,, | A,,A,, A,,A,, | B,,B,, B,,B,, | G,,G,, G,,G,, | A,,A,, A,,A,, | D,D, D,D, |
+[V:cb] !f!D,,D,, D,,D,, | E,,,E,,, E,,,E,,, | D,,D,, D,,D,, | A,,,A,,, A,,,A,,, | B,,,B,,, B,,,B,,, | G,,,G,,, G,,,G,,, | A,,,A,,, A,,,A,,, | D,,D,, D,,D,, |
+% bars 33-40: [B2] A lyrical answer in B flat for the clarinet
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] !mp!d'2 bf | c'2 af | d'2 f'd' | c'4 | b2 d'g' | g'2 _e'2 | d'2 c'2 | b2 z2 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !p!BB BB | cc cc | BB BB | AA AA | BB BB | BB BB | BB AA | BB BB |
+[V:v2] !p!FF FF | FF FF | FF FF | FF FF | GG GG | GG GG | FF FF | FF FF |
+[V:va] !p!DD DD | _EE EE | DD DD | CC CC | DD DD | _EE EE | DD _EE | DD DD |
+[V:vc] !p!B,, z B,, z | A,, z A,, z | B,, z B,, z | F,, z F,, z | G,, z G,, z | _E,, z E,, z | F,, z F,, z | B,, z B,, z |
+[V:cb] !p!B,,, z B,,, z | A,,, z A,,, z | B,,, z B,,, z | F,,, z F,,, z | G,,, z G,,, z | _E,, z E,, z | F,,, z F,,, z | B,,, z B,,, z |
+% bars 41-48: [B3] The storm again, breaking off on the dominant of F
+[V:fl] !f!d'2 ad' | ^c'2 ae' | f'2 ad' | e'4 | d'2 bd' | g2 bd' | c'2 e'2 | c'2 z2 |
+[V:ob] !f![FA]4 | [G_d]4 | [Fd]4 | [E_d]4 | [Fd]4 | [Bd]4 | [Be]4 | [Be]4 |
+[V:cl] !f![DF]4 | [_DG]4 | [DF]4 | [_DE]4 | [DF]4 | [DB]4 | [EB]4 | [EB]4 |
+[V:bn] !f!D,,D,, D,,D,, | E,,E,, E,,E,, | D,,D,, D,,D,, | A,,A,, A,,A,, | B,,B,, B,,B,, | G,,G,, G,,G,, | C,C, C,C, | C,C, C,C, |
+[V:hn] !f![FA]2 [FA]2 | [A,A]2 [A,A]2 | [FA]2 [FA]2 | [A,A]2 [A,A]2 | [Fd]2 [Fd]2 | [Gd]2 [Gd]2 | [CG]2 [CG]2 | [CG]2 [CG]2 |
+[V:v1] !f!d'2 ad' | ^c'2 ae' | f'2 ad' | e'4 | d'2 bd' | g2 bd' | c'2 e'2 | c'2 z2 |
+[V:v2] !f!F/F/F/F/ F/F/F/F/ | G/G/G/G/ G/G/G/G/ | F/F/F/F/ F/F/F/F/ | E/E/E/E/ E/E/E/E/ | F/F/F/F/ F/F/F/F/ | B/B/B/B/ B/B/B/B/ | B/B/B/B/ B/B/B/B/ | B/B/B/B/ B/B/B/B/ |
+[V:va] !f!D/D/D/D/ D/D/D/D/ | _D/D/D/D/ D/D/D/D/ | D/D/D/D/ D/D/D/D/ | _D/D/D/D/ D/D/D/D/ | D/D/D/D/ D/D/D/D/ | D/D/D/D/ D/D/D/D/ | E/E/E/E/ E/E/E/E/ | E/E/E/E/ E/E/E/E/ |
+[V:vc] !f!D,,D,, D,,D,, | E,,E,, E,,E,, | D,,D,, D,,D,, | A,,A,, A,,A,, | B,,B,, B,,B,, | G,,G,, G,,G,, | C,C, C,C, | C,C, C,C, |
+[V:cb] !f!D,,D,, D,,D,, | E,,,E,,, E,,,E,,, | D,,D,, D,,D,, | A,,,A,,, A,,,A,,, | B,,,B,,, B,,,B,,, | G,,,G,,, G,,,G,,, | C,,C,, C,,C,, | C,,C,, C,,C,, |
+% bars 49-56: [A2 a] The song returns in the violins over running sixteenth notes
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] !pp![FA]4 | [CG]4 | [FA]4 | [CG]4 | [FA]4 | [Gd]4 | [FA]2 [CG]2 | [FA]4 |
+[V:v1] !mp!c'2 af | b2 ge | a2 c'f' | e'3c' | d'2 af | g2 bd' | c'a g2 | f2 z2 |
+[V:v2] !p!A,/F/C/F/ A,/F/C/F/ | B,/G/C/G/ B,/G/C/G/ | A,/F/C/F/ A,/F/C/F/ | G,/E/C/E/ G,/E/C/E/ | A,/F/D/F/ A,/F/D/F/ | B,/G/D/G/ B,/G/D/G/ | A,/F/C/F/ B,/E/C/E/ | A,/F/C/F/ A,/F/C/F/ |
+[V:va] !p!A,4 | B,4 | A,4 | E,4 | F,4 | B,4 | A,2 B,2 | A,4 |
+[V:vc] !p!F,, z F,, z | E,, z E,, z | F,, z F,, z | C,, z C,, z | D,, z D,, z | G,, z G,, z | C, z C, z | F, z F, z |
+[V:cb] !p!F,,, z F,,, z | E,,, z E,,, z | F,,, z F,,, z | C,, z C,, z | D,, z D,, z | G,,, z G,,, z | C,, z C,, z | F,, z F,, z |
+% bars 57-64: [A2 a2] Flute and oboe
+[V:fl] !p!c'2 af | b2 ge | a2 c'f' | e'3c' | d'2 f'd' | c'2 bg | a2 g2 | f2 z2 |
+[V:ob] !mp!c'2 af | b2 ge | a2 c'f' | e'3c' | d'2 f'd' | c'2 bg | a2 g2 | f2 z2 |
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !p!AA AA | BB BB | AA AA | GG GG | AA AA | BB BB | AA BB | AA AA |
+[V:v2] !p!FF FF | GG GG | FF FF | EE EE | FF FF | EE EE | FF EE | FF FF |
+[V:va] !p!CC CC | CC CC | CC CC | CC CC | DD DD | CC CC | CC CC | CC CC |
+[V:vc] !p!F,, z F,, z | E,, z E,, z | F,, z F,, z | C,, z C,, z | D,, z D,, z | C,, z C,, z | C,, z C,, z | F,, z F,, z |
+[V:cb] !p!F,,, z F,,, z | E,,, z E,,, z | F,,, z F,,, z | C,, z C,, z | D,, z D,, z | C,, z C,, z | C,, z C,, z | F,,, z F,,, z |
+% bars 65-72: [A2 b] The shadowed strain
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] !pp![CF]4 | [Ff]4 | [Ff]4 | [CG]4 | [CF]4 | [Ff]4 | [CG]4 | [CG]4 |
+[V:v1] !mp!_a2 c'f' | f'2 _d'2 | b2 _d'2 | c'2 g2 | _a2 c'f' | _a'2 f'2 | g'2 e'2 | c'2 z2 |
+[V:v2] !p!_AA AA | _AA AA | BB BB | cc cc | cc cc | _AA AA | BB BB | BB BB |
+[V:va] !p!_A,4 | F,4 | F,4 | E,4 | _A,4 | F,4 | E,4 | E,4 |
+[V:vc] !p!F,, z F,, z | _D,, z D,, z | B,, z B,, z | C, z C, z | F, z F, z | _D, z D, z | C, z C, z | C, z C, z |
+[V:cb] !p!F,,, z F,,, z | _D,, z D,, z | B,,, z B,,, z | C,, z C,, z | F,, z F,, z | _D,, z D,, z | C,, z C,, z | C,, z C,, z |
+% bars 73-80: [B4] The lyrical answer comes back in the home key, clarinet with bassoon below
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] !mp!a2 fc | g2 ec | a2 c'a | g4 | f2 ad' | d'2 b2 | a2 g2 | f2 z2 |
+[V:bn] !p!A,2 F,C, | G,2 E,C, | A,2 CA, | G,4 | F,2 A,D | D2 B,2 | A,2 G,2 | F,2 z2 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !p!AA AA | BB BB | AA AA | GG GG | AA AA | BB BB | AA BB | AA AA |
+[V:v2] !p!FF FF | GG GG | FF FF | EE EE | FF FF | FF FF | FF EE | FF FF |
+[V:va] !p!CC CC | CC CC | CC CC | CC CC | DD DD | DD DD | CC CC | CC CC |
+[V:vc] !p!F,, z F,, z | E,, z E,, z | F,, z F,, z | C,, z C,, z | D,, z D,, z | B,, z B,, z | C, z C, z | F, z F, z |
+[V:cb] !p!F,,, z F,,, z | E,,, z E,,, z | F,,, z F,,, z | C,, z C,, z | D,, z D,, z | B,,, z B,,, z | C,, z C,, z | F,, z F,, z |
+% bars 81-84: [Link] Four bars of major and minor in turn
+[V:fl] z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 |
+[V:v1] !pp!a2 c'2 | c'2 _e'2 | d'2 _d'2 | c'2 b2 |
+[V:v2] !pp!FF FF | _EE EE | DD _DD | CC EE |
+[V:va] !pp!A,4 | A,4 | D2 _D2 | A,2 B,2 |
+[V:vc] !pp!F,, z F,, z | F,, z F,, z | B,, z B,, z | C, z C, z |
+[V:cb] !pp!F,,, z F,,, z | F,,, z F,,, z | B,,, z B,,, z | C,, z C,, z |
+% bars 85-92: [Coda] The song a last time, very quietly
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] !p![FA]4 | [CG]4 | [FA]4 | [CG]4 | [FA]4 | [Gd]4 | [FA]2 [CG]2 | [FA]4 |
+[V:v1] !pp!c'2 af | b2 ge | a2 c'f' | e'3c' | d'2 af | g2 bd' | c'a g2 | f2 z2 |
+[V:v2] !pp!FF FF | GG GG | FF FF | EE EE | FF FF | GG GG | FF EE | FF FF |
+[V:va] !pp!A,4 | B,4 | A,4 | E,4 | F,4 | B,4 | A,2 B,2 | A,4 |
+[V:vc] !pp!F,, z F,, z | E,, z E,, z | F,, z F,, z | C,, z C,, z | D,, z D,, z | G,, z G,, z | C, z C, z | F, z F, z |
+[V:cb] !pp!F,,, z F,,, z | E,,, z E,,, z | F,,, z F,,, z | C,, z C,, z | D,, z D,, z | G,,, z G,,, z | C,, z C,, z | F,, z F,, z |
+% bars 93-96
+[V:fl] z4 | z4 | z4 | z4 |]
+[V:ob] z4 | z4 | z4 | z4 |]
+[V:cl] z4 | z4 | z4 | z4 |]
+[V:bn] z4 | z4 | z4 | z4 |]
+[V:hn] [FA]4 | [FA]4 | [FA]4 | [FA]4 |]
+[V:v1] f2 a2 | c'2 f'2 | f'4 | f2 z2 |]
+[V:v2] FF FF | FF FF | FF FF | FF FF |]
+[V:va] A,4 | A,4 | A,4 | A,4 |]
+[V:vc] F, z F, z | F, z F, z | F, z F, z | F, z F, z |]
+[V:cb] F,, z F,, z | F,, z F,, z | F,, z F,, z | F,, z F,, z |]

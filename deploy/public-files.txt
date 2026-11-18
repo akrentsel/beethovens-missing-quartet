@@ -107,3 +107,10 @@ cpe-bach-symphony-1-transcript.json
 scores/cpe-bach-symphony-1-i.abc
 scores/cpe-bach-symphony-1-ii.abc
 scores/cpe-bach-symphony-1-iii.abc
+schubert-symphony-1-notebook.html
+schubert-symphony-1-transcript.html
+schubert-symphony-1-transcript.json
+scores/schubert-symphony-1-i.abc
+scores/schubert-symphony-1-ii.abc
+scores/schubert-symphony-1-iii.abc
+scores/schubert-symphony-1-iv.abc
