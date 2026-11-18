@@ -67,3 +67,10 @@ scores/shostakovich-symphony-1-i.abc
 scores/shostakovich-symphony-1-ii.abc
 scores/shostakovich-symphony-1-iii.abc
 scores/shostakovich-symphony-1-iv.abc
+debussy-symphony-1-notebook.html
+debussy-symphony-1-transcript.html
+debussy-symphony-1-transcript.json
+scores/debussy-symphony-1-i.abc
+scores/debussy-symphony-1-ii.abc
+scores/debussy-symphony-1-iii.abc
+scores/debussy-symphony-1-iv.abc

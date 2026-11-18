@@ -1,0 +1,121 @@
+%%label III. Lent et expressif
+%%note B flat minor. The strings move in parallel seventh chords; the flute plays a long arabesque over harp and held strings; the cor anglais sings the arabesque over the chords, and the movement ends on a soft minor chord with an added ninth.
+X:1
+T:Debussy’s Missing Symphony
+T:III. Lent et expressif
+C:Lor, in the manner of Debussy
+M:4/4
+L:1/8
+Q:"Lent et expressif" 1/4=50
+%%score [fl ob eh cl bn] [hn tp] tm {hu hl} [v1 v2 va vc cb]
+% The score is written at sounding pitch. Dynamics in the wind, brass and double-bass parts are set one to three levels below the strings to balance the playback samples of this site; they are a playback compromise, not dynamics for live players.
+V:fl clef=treble name="Fl."
+V:ob clef=treble name="Ob."
+V:eh clef=treble name="C. a."
+V:cl clef=treble name="Cl."
+V:bn clef=bass name="Bn."
+V:hn clef=treble name="Hn."
+V:tp clef=treble name="Tpt."
+V:tm clef=bass name="Timp."
+V:hu clef=treble name="Hp. r.h."
+V:hl clef=bass name="Hp. l.h."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:Db
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:eh
+%%MIDI program 69
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tp
+%%MIDI program 56
+V:tm
+%%MIDI program 47
+V:hu
+%%MIDI program 46
+V:hl
+%%MIDI program 46
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-8: Parallel seventh chords in the strings, down a scale and back up
+[V:fl] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:eh] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tp] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hu] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hl] [M:4/4] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] [M:4/4] !p!d4 c4 | B4 A4 | G4 A4 | B8 | d4 e4 | f4 e4 | d4 c4 | B8 |
+[V:v2] [M:4/4] [I:MIDI program 48] "arco"!p!A4 G4 | F4 E4 | D4 E4 | F8 | A4 B4 | c4 B4 | A4 G4 | A8 |
+[V:va] [M:4/4] [I:MIDI program 48] "arco"!p!F4 E4 | D4 C4 | B,4 C4 | D8 | F4 G4 | A4 G4 | F4 E4 | F8 |
+[V:vc] [M:4/4] [I:MIDI program 48] "arco"!p!B,,4 A,,4 | G,,4 F,,4 | E,,4 F,,4 | G,,8 | B,,4 C,4 | D,4 C,4 | B,,4 A,,4 | B,,8 |
+[V:cb] [M:4/4] [I:MIDI program 45] "pizz."!pppp!B,,,2 z6 | z8 | z8 | G,,2 z6 | B,,,2 z6 | z8 | z8 | B,,,2 z6 |
+% bars 9-16: The flute's arabesque over harp and held strings
+[V:fl] !pp!f'4- f' e' d' c' | b2 d'2 f'4 | e'4- e' d' c' b | a2 c'2 e'4 | f'2 =g'2 a'4 | b'4- b' a' f' e' | d'2 f'2 e'2 c'2 | b8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:eh] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hu] !p!z4 FAdf | z4 FAdf | z4 EAce | z4 EAce | z4 Adfa | z4 DFBd | z8 | z4 FAdf |
+[V:hl] !p!B,,F,B,D z4 | B,,F,B,D z4 | A,,E,A,C z4 | A,,E,A,C z4 | D,A,DF z4 | G,,D,G,B, z4 | B,,F,B,D F,,C,F,A, | B,,F,B,D z4 |
+[V:v1] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v2] !pp!A8 | A8 | c8 | c8 | A8 | B8 | B4 A4 | A8 | [I:MIDI program 48]
+[V:va] !pp!F8 | F8 | E8 | E8 | F8 | F8 | F4 F4 | F8 | [I:MIDI program 48]
+[V:vc] !pp!B,,8 | B,,8 | A,,8 | A,,8 | D,8 | G,,8 | B,,4 F,4 | B,,8 | [I:MIDI program 48]
+[V:cb] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+% bars 17-24: The chords return; the cor anglais sings the arabesque's first phrases over them, then the flute floats above
+[V:fl] !ppp!z8 | z8 | z8 | z8 | f'8 | a'4 b'4 | f'4 e'4 | f'8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:eh] !mp!f4- f e d c | B2 d2 f4 | e4- e d c B | A2 c2 e4 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hu] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !p!d4 c4 | B4 A4 | G4 A4 | B8 | d4 e4 | f4 e4 | d4 c4 | B8 |
+[V:v2] "arco"!p!A4 G4 | F4 E4 | D4 E4 | F8 | A4 B4 | c4 B4 | A4 G4 | A8 |
+[V:va] "arco"!p!F4 E4 | D4 C4 | B,4 C4 | D8 | F4 G4 | A4 G4 | F4 E4 | F8 |
+[V:vc] "arco"!p!B,,4 A,,4 | G,,4 F,,4 | E,,4 F,,4 | G,,8 | B,,4 C,4 | D,4 C,4 | B,,4 A,,4 | B,,8 |
+[V:cb] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 | [I:MIDI program 45]
+% bars 25-26: A last chord, the minor chord with an added ninth
+[V:fl] z8 | z8 |]
+[V:ob] z8 | z8 |]
+[V:eh] z8 | z8 |]
+[V:cl] z8 | z8 |]
+[V:bn] z8 | z8 |]
+[V:hn] z8 | z8 |]
+[V:tp] z8 | z8 |]
+[V:tm] z8 | z8 |]
+[V:hu] !p!z4 Fcdf | !fermata!z8 |]
+[V:hl] !p!B,,F,B,D z4 | !fermata!B,,2 z6 |]
+[V:v1] !pp!c8 | !fermata!c8 |]
+[V:v2] !pp!F8 | !fermata!F8 |]
+[V:va] !pp!D8 | !fermata!D8 |]
+[V:vc] !pp!B,,8 | !fermata!B,,8 |]
+[V:cb] "pizz."!pppp!B,,,2 z6 | !fermata!B,,,2 z6 |]

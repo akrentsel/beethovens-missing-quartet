@@ -1,0 +1,233 @@
+%%label I. Très modéré
+%%note D flat major. Murmuring violas and harp; a call for cor anglais and horn; a floating theme for the flute; a middle section that bends the call into the whole-tone scale and rises to four descending major chords; the theme returns with the call beneath it, and the call closes the movement.
+X:1
+T:Debussy’s Missing Symphony
+T:I. Très modéré
+C:Lor, in the manner of Debussy
+M:6/8
+L:1/8
+Q:"Très modéré" 3/8=46
+%%score [fl ob eh cl bn] [hn tp] tm {hu hl} [v1 v2 va vc cb]
+% The score is written at sounding pitch. Dynamics in the wind, brass and double-bass parts are set one to three levels below the strings to balance the playback samples of this site; they are a playback compromise, not dynamics for live players.
+V:fl clef=treble name="Fl."
+V:ob clef=treble name="Ob."
+V:eh clef=treble name="C. a."
+V:cl clef=treble name="Cl."
+V:bn clef=bass name="Bn."
+V:hn clef=treble name="Hn."
+V:tp clef=treble name="Tpt."
+V:tm clef=bass name="Timp."
+V:hu clef=treble name="Hp. r.h."
+V:hl clef=bass name="Hp. l.h."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:Db
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:eh
+%%MIDI program 69
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tp
+%%MIDI program 56
+V:tm
+%%MIDI program 47
+V:hu
+%%MIDI program 46
+V:hl
+%%MIDI program 46
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-4: The violas murmur on two notes over a held bass; the harp rises through the chord
+[V:fl] [M:6/8] z6 | z6 | z6 | z6 |
+[V:ob] [M:6/8] z6 | z6 | z6 | z6 |
+[V:eh] [M:6/8] z6 | z6 | z6 | z6 |
+[V:cl] [M:6/8] z6 | z6 | z6 | z6 |
+[V:bn] [M:6/8] z6 | z6 | z6 | z6 |
+[V:hn] [M:6/8] z6 | z6 | z6 | z6 |
+[V:tp] [M:6/8] z6 | z6 | z6 | z6 |
+[V:tm] [M:6/8] z6 | z6 | z6 | z6 |
+[V:hu] [M:6/8] !p!z3 FBd | z3 FBd | z3 FBd | z3 FBd |
+[V:hl] [M:6/8] !p!D,A,D z3 | D,A,D z3 | D,A,D z3 | D,A,D z3 |
+[V:v1] [M:6/8] z6 | z6 | z6 | z6 |
+[V:v2] [M:6/8] z6 | z6 | z6 | z6 |
+[V:va] [M:6/8] !p!FAF AFA | FAF AFA | FAF AFA | FAF AFA |
+[V:vc] [M:6/8] [I:MIDI program 48] "arco"!p!D,6 | D,6 | D,6 | D,6 | [I:MIDI program 48]
+[V:cb] [M:6/8] [I:MIDI program 45] "pizz."!pppp!D,,3 z3 | D,,3 z3 | D,,3 z3 | D,,3 z3 | [I:MIDI program 45]
+% bars 5-12: The call: cor anglais, then horn a fifth lower
+[V:fl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:eh] !mp!F3 A2 B | d3 e2 f | e3 d2 B | A6 | z6 | z6 | z6 | z6 |
+[V:cl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] !mp!z6 | z6 | z6 | z6 | B,3 D2 E | G3 A2 B | A3 G2 E | D6 |
+[V:tp] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hu] !p!z3 FBd | z3 FBd | z3 DFA | z3 FBd | z3 Bde | z3 Bde | z3 GBd | z3 FBd |
+[V:hl] !p!D,A,D z3 | D,A,D z3 | B,,F,B, z3 | D,A,D z3 | G,,D,G, z3 | G,,D,G, z3 | E,B,E z3 | D,A,D z3 |
+[V:v1] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v2] !p!BdB dBd | BdB dBd | BdB dBd | BdB dBd | ded ede | ded ede | BdB dBd | BdB dBd |
+[V:va] !p!FAF AFA | FAF AFA | FAF AFA | FAF AFA | GBG BGB | GBG BGB | EGE GEG | FAF AFA |
+[V:vc] "arco"!p!D,6 | D,6 | B,,6 | D,6 | G,,6 | G,,6 | E,6 | D,6 | [I:MIDI program 48]
+[V:cb] "pizz."!pppp!D,,3 z3 | D,,3 z3 | B,,,3 z3 | D,,3 z3 | G,,,3 z3 | G,,,3 z3 | E,,3 z3 | D,,3 z3 | [I:MIDI program 45]
+% bars 13-20: First theme: the flute, over shimmering strings and harp
+[V:fl] !pp!a3 b2 d' | f'3- f'2 e' | d'2 b d'2 f' | e'6 | a3 b2 d' | f'3 =g'2 a' | f'2 e' d'2 b | a6 |
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:eh] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tp] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hu] !p!z3 FBd | z3 FBd | z3 DFA | z3 Bde | z3 FBd | z3 =Gdf | z3 Bdf | z3 FBd |
+[V:hl] !p!D,A,D z3 | D,A,D z3 | B,,F,B, z3 | G,,D,G, z3 | D,A,D z3 | E,B,E z3 | G,,D,G, z3 | D,A,D z3 |
+[V:v1] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v2] !p!BdB dBd | BdB dBd | BdB dBd | ded ede | BdB dBd | dfd fdf | dfd fdf | BdB dBd |
+[V:va] !p!FAF AFA | FAF AFA | FAF AFA | GBG BGB | FAF AFA | =GBG BGB | GBG BGB | FAF AFA |
+[V:vc] "arco"!p!D,6 | D,6 | B,,6 | G,,6 | D,6 | E,6 | G,,6 | D,6 | [I:MIDI program 48]
+[V:cb] "pizz."!pppp!D,,3 z3 | D,,3 z3 | B,,,3 z3 | G,,,3 z3 | D,,3 z3 | E,,3 z3 | G,,,3 z3 | D,,3 z3 | [I:MIDI program 45]
+% bars 21-28: The theme in the first violins and oboe, the flute floating above, horns holding the harmony
+[V:fl] !pp!f'6 | a'6 | f'6 | b'6 | f'6 | =g'6 | b'3 a'3 | f'6 | [Q:"Un peu plus animé" 3/8=54]
+[V:ob] !p!A3 B2 d | f3- f2 e | d2 B d2 f | e6 | A3 B2 d | f3 =g2 a | f2 e d2 B | A6 |
+[V:eh] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] !ppp![FA]6 | [FA]6 | [FA]6 | [GB]6 | [FA]6 | [=GB]6 | [GB]6 | [FA]6 |
+[V:tp] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hu] !p!z3 FBd | z3 FBd | z3 DFA | z3 Bde | z3 FBd | z3 =Gdf | z3 Bdf | z3 FBd |
+[V:hl] !p!D,A,D z3 | D,A,D z3 | B,,F,B, z3 | G,,D,G, z3 | D,A,D z3 | E,B,E z3 | G,,D,G, z3 | D,A,D z3 |
+[V:v1] !mf!a3 b2 d' | f'3- f'2 e' | d'2 b d'2 f' | e'6 | a3 b2 d' | f'3 =g'2 a' | f'2 e' d'2 b | a6 |
+[V:v2] !mp!BdB dBd | BdB dBd | BdB dBd | ded ede | BdB dBd | dfd fdf | dfd fdf | BdB dBd |
+[V:va] !mp!FAF AFA | FAF AFA | FAF AFA | GBG BGB | FAF AFA | =GBG BGB | GBG BGB | FAF AFA |
+[V:vc] "arco"!mp!D,6 | D,6 | B,,6 | G,,6 | D,6 | E,6 | G,,6 | D,6 | [I:MIDI program 48]
+[V:cb] "pizz."!pppp!D,,3 z3 | D,,3 z3 | B,,,3 z3 | G,,,3 z3 | D,,3 z3 | E,,3 z3 | G,,,3 z3 | D,,3 z3 | [I:MIDI program 45]
+% bars 29-32: The call bends into the whole-tone scale over a low pedal
+[V:fl] z6 | z6 | z6 | z6 |
+[V:ob] z6 | z6 | z6 | z6 |
+[V:eh] !mp!F3 =G2 =A | =B3 d2 e | d3 =B2 =A | =G6 |
+[V:cl] z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 |
+[V:hn] z6 | z6 | z6 | z6 |
+[V:tp] z6 | z6 | z6 | z6 |
+[V:tm] z6 | z6 | z6 | z6 |
+[V:hu] !p!z6 | DEF =G=A=B | z6 | def =g=a=b |
+[V:hl] !p!D,E,F, =G,=A,=B, | z6 | D,E,F, =G,=A,=B, | z6 |
+[V:v1] z6 | z6 | z6 | z6 |
+[V:v2] !p!=G=AG AGA | =G=AG AGA | =G=AG AGA | =G=AG AGA |
+[V:va] !p!DED EDE | DED EDE | DED EDE | DED EDE |
+[V:vc] "arco"!p!=B,,6 | =B,,6 | =B,,6 | =B,,6 | [I:MIDI program 48]
+[V:cb] "pizz."!pppp!=B,,,3 z3 | =B,,,3 z3 | =B,,,3 z3 | =B,,,3 z3 | [I:MIDI program 45]
+% bars 33-36: The same a step higher
+[V:fl] z6 | z6 | z6 | z6 |
+[V:ob] z6 | z6 | z6 | z6 |
+[V:eh] !mp!=G3 =A2 =B | d3 e2 f | e3 d2 =B | =A6 |
+[V:cl] z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 |
+[V:hn] z6 | z6 | z6 | z6 |
+[V:tp] z6 | z6 | z6 | z6 |
+[V:tm] z6 | z6 | z6 | z6 |
+[V:hu] !p!z6 | EF=G =A=Bd | z6 | ef=g =a=bd' |
+[V:hl] !p!E,F,=G, =A,=B,D | z6 | E,F,=G, =A,=B,D | z6 |
+[V:v1] z6 | z6 | z6 | z6 |
+[V:v2] !p!=A=BA BAB | =A=BA BAB | =A=BA BAB | =A=BA BAB |
+[V:va] !p!EFE FEF | EFE FEF | EFE FEF | EFE FEF |
+[V:vc] "arco"!p!D,6 | D,6 | D,6 | D,6 | [I:MIDI program 48]
+[V:cb] "pizz."!pppp!D,,3 z3 | D,,3 z3 | D,,3 z3 | D,,3 z3 | [I:MIDI program 43]
+% bars 37-40: Whole-tone waves rise through the strings; a muted trumpet takes the head of the call
+[V:fl] !p!f'=g'f' g'f'g' | f'=g'f' g'f'g' | =a'=b'a' b'a'b' | =a'=b'a' b'a'b' |
+[V:ob] !mp!f=gf gfg | f=gf gfg | =a=ba bab | =a=ba bab |
+[V:eh] z6 | z6 | z6 | z6 |
+[V:cl] z6 | z6 | z6 | z6 |
+[V:bn] !p!D,6 | E,6 | F,6 | =G,6 |
+[V:hn] !p![DF]6 | [E=G]6 | [F=A]6 | [=G=B]6 |
+[V:tp] !mf!z6 | z6 | "con sord."F3 =G2 =A | =B6 |
+[V:tm] z6 | z6 | z6 | z6 |
+[V:hu] !mf!def =g=a=b | def =g=a=b | def =g=a=b | def =g=a=b |
+[V:hl] !mf!D,E,F, =G,=A,=B, | D,E,F, =G,=A,=B, | D,E,F, =G,=A,=B, | D,E,F, =G,=A,=B, |
+[V:v1] !mf!def =g=a=b | d'=b=a =gfe | def =g=a=b | d'e'f' =g'=a'=b' |
+[V:v2] !mf!DEF =G=A=B | d=B=A =GFE | DEF =G=A=B | def =g=a=b |
+[V:va] !mf!F=AF AFA | F=AF AFA | F=AF AFA | F=AF AFA |
+[V:vc] "arco"!mf!D,6 | E,6 | F,6 | =G,6 | [I:MIDI program 48]
+[V:cb] "arco"!pp!D,,6 | E,,6 | F,,6 | =G,,6 | [I:MIDI program 43]
+% bars 41-44: Climax: four major chords descend by whole steps (D flat, B, A, G)
+[V:fl] !mp!a'6 | g'6 | =e'6 | =d'6 | [Q:"Retenu" 3/8=40]
+[V:ob] !mf!f'6 | e'6 | d'6 | =b6 |
+[V:eh] !mf!a6 | g6 | =e6 | =d6 |
+[V:cl] !mf!d'6 | =b6 | =a6 | =g6 |
+[V:bn] !mf!D,6 | =B,,6 | =A,,6 | =G,,6 |
+[V:hn] !mf![FA]6 | [EG]6 | [D=E]6 | [=B,=D]6 |
+[V:tp] !mf!"senza sord."d6 | =B6 | =A6 | =G6 |
+[V:tm] !f!D,3 D,3 | z6 | z6 | z6 |
+[V:hu] !f!FAd FAd | EG=B EGB | D=E=A DEA | =B,=D=G B,DG |
+[V:hl] !f!D,A,D D,A,D | =B,,G,=B, B,,G,B, | =A,,=E,=A, A,,E,A, | =G,,=D,=G, G,,D,G, |
+[V:v1] !ff!a'a'a' a'a'a' | g'g'g' g'g'g' | =e'e'e' e'e'e' | =d'd'd' d'd'd' |
+[V:v2] !ff!f'f'f' f'f'f' | e'e'e' e'e'e' | d'd'd' d'd'd' | =bbb bbb |
+[V:va] !ff!ddd ddd | =BBB BBB | =AAA AAA | =GGG GGG |
+[V:vc] "arco"!ff!D,6 | =B,,6 | =A,,6 | =G,,6 | [I:MIDI program 48]
+[V:cb] "arco"!mp!D,,6 | =B,,,6 | =A,,,6 | =G,,,6 | [I:MIDI program 45]
+% bars 45-46: The sound thins to a dominant ninth
+[V:fl] z6 | z6 | [Q:"Tempo I" 3/8=46]
+[V:ob] z6 | z6 |
+[V:eh] z6 | z6 |
+[V:cl] z6 | z6 |
+[V:bn] z6 | z6 |
+[V:hn] z6 | z6 |
+[V:tp] z6 | z6 |
+[V:tm] z6 | z6 |
+[V:hu] !p!z3 GBe | z3 GBe |
+[V:hl] !p!A,,E,A, z3 | A,,E,A, z3 |
+[V:v1] z6 | z6 |
+[V:v2] !p!cec ece | cec ece |
+[V:va] !p!GBG BGB | GBG BGB |
+[V:vc] "arco"!p!A,,6 | A,,6 | [I:MIDI program 48]
+[V:cb] "pizz."!pppp!A,,,3 z3 | A,,,3 z3 | [I:MIDI program 45]
+% bars 47-54: The theme returns in violins in octaves with the flute; the cor anglais plays the call beneath it
+[V:fl] !p!a3 b2 d' | f'3- f'2 e' | d'2 b d'2 f' | e'6 | a3 b2 d' | f'3 =g'2 a' | f'2 e' d'2 b | a6 |
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:eh] !mp!F3 A2 B | d3 e2 f | e3 d2 B | A6 | F3 A2 B | d3 e2 f | e3 d2 B | A6 |
+[V:cl] !p!BdB dBd | BdB dBd | BdB dBd | ded ede | BdB dBd | dfd fdf | dfd fdf | BdB dBd |
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] !p![FA]6 | [FA]6 | [FA]6 | [GB]6 | [FA]6 | [=GB]6 | [GB]6 | [FA]6 |
+[V:tp] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hu] !p!z3 FBd | z3 FBd | z3 DFA | z3 Bde | z3 FBd | z3 =Gdf | z3 Bdf | z3 FBd |
+[V:hl] !p!D,A,D z3 | D,A,D z3 | B,,F,B, z3 | G,,D,G, z3 | D,A,D z3 | E,B,E z3 | G,,D,G, z3 | D,A,D z3 |
+[V:v1] !f!a3 b2 d' | f'3- f'2 e' | d'2 b d'2 f' | e'6 | a3 b2 d' | f'3 =g'2 a' | f'2 e' d'2 b | a6 |
+[V:v2] !f!A3 B2 d | f3- f2 e | d2 B d2 f | e6 | A3 B2 d | f3 =g2 a | f2 e d2 B | A6 |
+[V:va] !mf!FAF AFA | FAF AFA | FAF AFA | GBG BGB | FAF AFA | =GBG BGB | GBG BGB | FAF AFA |
+[V:vc] "arco"!mf!D,6 | D,6 | B,,6 | G,,6 | D,6 | E,6 | G,,6 | D,6 | [I:MIDI program 48]
+[V:cb] "pizz."!pppp!D,,3 z3 | D,,3 z3 | B,,,3 z3 | G,,,3 z3 | D,,3 z3 | E,,3 z3 | G,,,3 z3 | D,,3 z3 | [I:MIDI program 45]
+% bars 55-64: Coda: the call in the horn, the theme's first notes in the flute, and the chord fades
+[V:fl] !pp!z6 | z6 | z6 | z6 | a3 b2 d' | f'6 | z6 | z6 | z6 | !fermata!z6 |]
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |]
+[V:eh] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |]
+[V:cl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |]
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |]
+[V:hn] !mp!F3 A2 B | d3 e2 f | e3 d2 B | A6 | z6 | z6 | z6 | z6 | z6 | z6 |]
+[V:tp] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |]
+[V:tm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |]
+[V:hu] !p!z3 FBd | z6 | z3 DFA | z6 | z3 FBd | z6 | z3 fbd' | z6 | z3 fbd' | !fermata![Fd]6 |]
+[V:hl] !p!D,A,D z3 | z6 | B,,F,B, z3 | z6 | D,A,D z3 | z6 | D,A,D z3 | z6 | D,A,D z3 | !fermata![D,A,]6 |]
+[V:v1] !pp!z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 | f'6 | !fermata!f'6 |]
+[V:v2] !pp!BdB dBd | BdB dBd | BdB dBd | BdB dBd | BdB dBd | BdB dBd | BdB dBd | BdB dBd | B6 | !fermata!B6 |]
+[V:va] !pp!FAF AFA | FAF AFA | FAF AFA | FAF AFA | FAF AFA | FAF AFA | FAF AFA | FAF AFA | A6 | !fermata!A6 |]
+[V:vc] "arco"!pp!D,6 | D,6 | B,,6 | D,6 | D,6 | D,6 | D,6 | D,6 | D,6 | !fermata!D,6 |]
+[V:cb] "pizz."!pppp!D,,3 z3 | D,,3 z3 | B,,,3 z3 | D,,3 z3 | D,,3 z3 | D,,3 z3 | D,,3 z3 | D,,3 z3 | D,,3 z3 | !fermata!D,,3 z3 |]

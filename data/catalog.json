@@ -657,6 +657,50 @@
           "durationSeconds": 148
         }
       ]
+    },
+    {
+      "id": "debussy-symphony-1",
+      "composerId": "debussy",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Debussy’s Missing Symphony",
+      "subtitle": "Symphony in D flat",
+      "description": "Four movements in shimmering strings, harp and solo winds: a floating first movement, a light 9/8 dance, a slow movement of parallel chords, and a finale that gathers the earlier themes. A new AI-composed homage, not a work by Claude Debussy.",
+      "durationSeconds": 550,
+      "date": "2026-11-17",
+      "status": "completed",
+      "notebook": "debussy-symphony-1-notebook.html",
+      "transcript": "debussy-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Très modéré",
+          "note": "Murmuring violas and harp, a call for cor anglais and horn, a floating flute theme, and a whole-tone middle.",
+          "source": "scores/debussy-symphony-1-i.abc",
+          "durationSeconds": 162
+        },
+        {
+          "id": "ii",
+          "label": "II. Assez vif et léger",
+          "note": "A light dance in 9/8 over harp and plucked basses, with a cor anglais melody in the middle.",
+          "source": "scores/debussy-symphony-1-ii.abc",
+          "durationSeconds": 125
+        },
+        {
+          "id": "iii",
+          "label": "III. Lent et expressif",
+          "note": "Parallel seventh chords in the strings and a long flute arabesque.",
+          "source": "scores/debussy-symphony-1-iii.abc",
+          "durationSeconds": 125
+        },
+        {
+          "id": "iv",
+          "label": "IV. Animé",
+          "note": "A broad pentatonic tune; the first movement’s theme, call and whole-tone music return; a bright ending.",
+          "source": "scores/debussy-symphony-1-iv.abc",
+          "durationSeconds": 138
+        }
+      ]
     }
   ]
 }
