@@ -121,3 +121,10 @@ scores/schumann-symphony-1-i.abc
 scores/schumann-symphony-1-ii.abc
 scores/schumann-symphony-1-iii.abc
 scores/schumann-symphony-1-iv.abc
+chopin-symphony-1-notebook.html
+chopin-symphony-1-transcript.html
+chopin-symphony-1-transcript.json
+scores/chopin-symphony-1-i.abc
+scores/chopin-symphony-1-ii.abc
+scores/chopin-symphony-1-iii.abc
+scores/chopin-symphony-1-iv.abc

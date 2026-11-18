@@ -995,6 +995,50 @@
           "durationSeconds": 266
         }
       ]
+    },
+    {
+      "id": "chopin-symphony-1",
+      "composerId": "chopin",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Chopin’s Missing Symphony",
+      "subtitle": "Symphony in B minor",
+      "description": "Chopin wrote no symphony and nothing for orchestra without a piano. This imagines four of his genres translated for orchestra with harp: a sonata Allegro maestoso, a Nocturne, a Mazurka and a Rondo à la krakowiak, the singing right hand given to winds and violins and the left hand’s broken chords to the harp. A new AI-composed homage, not a rediscovered work by Chopin or an orchestration of any piano piece.",
+      "durationSeconds": 784,
+      "date": "2026-11-18",
+      "status": "completed",
+      "notebook": "chopin-symphony-1-notebook.html",
+      "transcript": "chopin-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Allegro maestoso",
+          "note": "A grave B minor theme and a nocturne-like second theme over harp; the reprise skips the first theme and ends in B major.",
+          "source": "scores/chopin-symphony-1-i.abc",
+          "durationSeconds": 347
+        },
+        {
+          "id": "ii",
+          "label": "II. Nocturne: Larghetto",
+          "note": "G major: a long melody over harp arpeggios, more decorated at each return, around an agitated recitative.",
+          "source": "scores/chopin-symphony-1-ii.abc",
+          "durationSeconds": 173
+        },
+        {
+          "id": "iii",
+          "label": "III. Tempo di mazurka",
+          "note": "A B minor mazurka with a Trio in B major over a drone, with the raised fourth of the scale.",
+          "source": "scores/chopin-symphony-1-iii.abc",
+          "durationSeconds": 140
+        },
+        {
+          "id": "iv",
+          "label": "IV. Rondo à la krakowiak: Vivace",
+          "note": "B major: a rondo on a syncopated dance tune.",
+          "source": "scores/chopin-symphony-1-iv.abc",
+          "durationSeconds": 124
+        }
+      ]
     }
   ]
 }

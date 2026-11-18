@@ -1,0 +1,153 @@
+%%label II. Nocturne: Larghetto
+%%note G major. A long melody for the violins over harp arpeggios, repeated with ornament by the flute; an agitated recitative in G minor; the melody returns, decorated.
+X:1
+T:Chopin’s Missing Symphony
+T:II. Nocturne: Larghetto
+C:Claude (AI), in the manner of Frédéric Chopin
+M:12/8
+L:1/8
+Q:"Larghetto" 3/8=50
+%%score [fl ob cl bn] [hn] harp [v1 v2 va vc cb]
+% Original AI-composed homage. The score is written at sounding pitch.
+V:fl clef=treble name="Fl. I, II"
+V:ob clef=treble name="Ob. I, II"
+V:cl clef=treble name="Cl. I, II"
+V:bn clef=bass name="Bn. I, II"
+V:hn clef=treble name="Hn. I–IV"
+V:harp clef=treble name="Harp"
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:G
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:harp
+%%MIDI program 46
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-4: [A1] The melody: first violins over harp arpeggios and held strings
+[V:fl] z12 | z12 | z12 | z12 |
+[V:ob] z12 | z12 | z12 | z12 |
+[V:cl] z12 | z12 | z12 | z12 |
+[V:bn] z12 | z12 | z12 | z12 |
+[V:hn] z12 | z12 | z12 | z12 |
+[V:harp] !p!G,B,D GDB, G,B,D GDB, | F,CD ADC F,CD ADC | G,B,D GDB, E,B,E GEB, | E,CE AEC F,CD ADC |
+[V:v1] !mp!b6 d'3 g'3 | f'6 e'3 c'3 | d'6 e'3 b3 | c'3 e'3 d'3 a3 |
+[V:v2] !p!D6 D6 | F6 F6 | G6 G6 | A6 F6 |
+[V:va] !p!B,6 B,6 | C6 C6 | B,6 B,6 | C6 C6 |
+[V:vc] !p!G,,6 G,,6 | D,,6 D,,6 | G,,6 E,,6 | A,,6 D,6 |
+[V:cb] !p!G,,,6 G,,,6 | D,,6 D,,6 | G,,,6 E,,,6 | A,,,6 D,,6 |
+% bars 5-8
+[V:fl] z12 | z12 | z12 | z12 |
+[V:ob] z12 | z12 | z12 | z12 |
+[V:cl] z12 | z12 | z12 | z12 |
+[V:bn] z12 | z12 | z12 | z12 |
+[V:hn] z12 | z12 | z12 | z12 |
+[V:harp] G,B,D GDB, G,CE GEC | G,C_E GEC G,B,D GDB, | E,A,E AEA, D,A,F cFA, | D,B,G dGB, D,B,G dGB, |
+[V:v1] b3 d'3 e'3 g'3 | _e'6 d'3 b3 | e'3 c'3 a3 !trill!a3 | g6 z6 |
+[V:v2] G6 G6 | G6 G6 | E6 F6 | G6 G6 |
+[V:va] D6 E6 | _E6 B,6 | A,6 C6 | B,6 B,6 |
+[V:vc] B,,6 C,6 | C,6 D,6 | C,6 D,6 | G,6 G,6 |
+[V:cb] B,,,6 C,,6 | C,,6 D,,6 | C,,6 D,,6 | G,,6 G,,6 |
+% bars 9-12: [A2] Repeated by the flute with added turns
+[V:fl] !mp!b6 d'2e' g'3 | f'6 e'2d' c'3 | d'6 e'2d' b3 | c'2d' e'3 d'2c' a3 |
+[V:ob] z12 | z12 | z12 | z12 |
+[V:cl] z12 | z12 | z12 | z12 |
+[V:bn] z12 | z12 | z12 | z12 |
+[V:hn] z12 | z12 | z12 | z12 |
+[V:harp] !p!G,B,D GDB, G,B,D GDB, | F,CD ADC F,CD ADC | G,B,D GDB, E,B,E GEB, | E,CE AEC F,CD ADC |
+[V:v1] !p!G6 G6 | F6 F6 | G6 G6 | A6 A6 |
+[V:v2] !p!D6 D6 | D6 D6 | D6 E6 | E6 F6 |
+[V:va] !p!B,6 B,6 | C6 C6 | B,6 B,6 | C6 C6 |
+[V:vc] !p!G,,6 G,,6 | D,,6 D,,6 | G,,6 E,,6 | A,,6 D,6 |
+[V:cb] !p!G,,,6 G,,,6 | D,,6 D,,6 | G,,,6 E,,,6 | A,,,6 D,,6 |
+% bars 13-16
+[V:fl] b2c' d'3 e'2f' g'3 | _e'6 d'2c' b3 | e'2d' c'3 a3 !trill!a3 | g6 z6 |
+[V:ob] z12 | z12 | z12 | z12 |
+[V:cl] z12 | z12 | z12 | z12 |
+[V:bn] z12 | z12 | z12 | z12 |
+[V:hn] z12 | z12 | z12 | z12 |
+[V:harp] G,B,D GDB, G,CE GEC | G,C_E GEC G,B,D GDB, | E,A,E AEA, D,A,F cFA, | D,B,G dGB, D,B,G dGB, |
+[V:v1] d6 e6 | _e6 d6 | e6 d6 | d6 d6 |
+[V:v2] G6 G6 | G6 G6 | A6 F6 | G6 G6 |
+[V:va] D6 C6 | C6 B,6 | C6 C6 | B,6 B,6 |
+[V:vc] B,,6 C,6 | C,6 D,6 | C,6 D,6 | G,6 G,6 |
+[V:cb] B,,,6 C,,6 | C,,6 D,,6 | C,,6 D,,6 | G,,6 G,,6 |
+% bars 17-20: [B] Agitated middle: a recitative for the violins in G minor over trembling strings
+[V:fl] z12 | z12 | z12 | z12 |
+[V:ob] !f![_Bd]6 [Bd]6 | [Fc]6 [Fc]6 | [Gd]6 [Gd]6 | [G_e]6 [Ge]6 |
+[V:cl] !f![G_B]6 [GB]6 | [Fc]6 [Fc]6 | [Gd]6 [Gd]6 | [G_e]6 [Ge]6 |
+[V:bn] !f!G,,3 G,,3 G,,3 G,,3 | A,,3 A,,3 A,,3 A,,3 | _B,,3 B,,3 B,,3 B,,3 | _E,3 E,3 E,3 E,3 |
+[V:hn] !f![_B,D]6 [B,D]6 | [F,C]6 [F,C]6 | [G,D]6 [G,D]6 | [G,_E]6 [G,E]6 |
+[V:harp] z12 | z12 | z12 | z12 |
+[V:v1] !f!g3 _b3 d'6 | c'3 a3 f6 | g3 _b3 g'6 | g'3 _e'3 _b6 |
+[V:v2] !f!DDD DDD DDD DDD | FFF FFF FFF FFF | GGG GGG GGG GGG | GGG GGG GGG GGG |
+[V:va] !f!_B,B,B, B,B,B, B,B,B, B,B,B, | CCC CCC CCC CCC | DDD DDD DDD DDD | _EEE EEE EEE EEE |
+[V:vc] !f!G,,3 G,,3 G,,3 G,,3 | A,,3 A,,3 A,,3 A,,3 | _B,,3 B,,3 B,,3 B,,3 | _E,3 E,3 E,3 E,3 |
+[V:cb] !f!G,,,3 G,,,3 G,,,3 G,,,3 | A,,,3 A,,,3 A,,,3 A,,,3 | _B,,,3 B,,,3 B,,,3 B,,,3 | _E,,3 E,,3 E,,3 E,,3 |
+% bars 21-24
+[V:fl] z12 | z12 | z12 | z12 |
+[V:ob] [G_e]6 [Ge]6 | [G^c]6 [Gc]6 | [Fd]6 [Fd]6 | [Fc]6 [Fc]6 |
+[V:cl] [G_e]6 [Ge]6 | [G^c]6 [Gc]6 | [Fd]6 [Fd]6 | [Fc]6 [Fc]6 |
+[V:bn] C,3 C,3 C,3 C,3 | A,,3 A,,3 A,,3 A,,3 | D,3 D,3 D,3 D,3 | D,3 D,3 D,3 D,3 |
+[V:hn] [G,_E]6 [G,E]6 | [G,^C]6 [G,C]6 | [F,D]6 [F,D]6 | [F,C]6 [F,C]6 |
+[V:harp] z12 | z12 | z12 | z12 |
+[V:v1] c'3 _e'3 g'6 | g'3 e'3 ^c'6 | d'6 f'3 a'3 | c''6 a'3 f'3 |
+[V:v2] GGG GGG GGG GGG | GGG GGG GGG GGG | FFF FFF FFF FFF | FFF FFF FFF FFF |
+[V:va] _EEE EEE EEE EEE | ^CCC CCC CCC CCC | DDD DDD DDD DDD | CCC CCC CCC CCC |
+[V:vc] C,3 C,3 C,3 C,3 | A,,3 A,,3 A,,3 A,,3 | D,3 D,3 D,3 D,3 | D,3 D,3 D,3 D,3 |
+[V:cb] C,,3 C,,3 C,,3 C,,3 | A,,,3 A,,,3 A,,,3 A,,,3 | D,,3 D,,3 D,,3 D,,3 | D,,3 D,,3 D,,3 D,,3 |
+% bars 25-28: [A3] The melody returns in violins and flute with still more decoration, horns holding the harmony
+[V:fl] !p!b6 d'2e' g'3 | f'6 e'2d' c'3 | d'6 e'/f'/e'/d'/e' b3 | c'2d' e'3 d'/e'/d'/c'/b a3 |
+[V:ob] z12 | z12 | z12 | z12 |
+[V:cl] z12 | z12 | z12 | z12 |
+[V:bn] z12 | z12 | z12 | z12 |
+[V:hn] !pp![B,D]6 [B,D]6 | [CF]6 [CF]6 | [B,G]6 [B,G]6 | [CA]6 [CF]6 |
+[V:harp] !p!G,B,D GDB, G,B,D GDB, | F,CD ADC F,CD ADC | G,B,D GDB, E,B,E GEB, | E,CE AEC F,CD ADC |
+[V:v1] !mp!b6 d'2e' g'3 | f'6 e'2d' c'3 | d'6 e'/f'/e'/d'/e' b3 | c'2d' e'3 d'/e'/d'/c'/b a3 |
+[V:v2] !p!D6 D6 | F6 F6 | G6 G6 | A6 F6 |
+[V:va] !p!B,6 B,6 | C6 C6 | B,6 B,6 | C6 C6 |
+[V:vc] !p!G,,6 G,,6 | D,,6 D,,6 | G,,6 E,,6 | A,,6 D,6 |
+[V:cb] !p!G,,,6 G,,,6 | D,,6 D,,6 | G,,,6 E,,,6 | A,,,6 D,,6 |
+% bars 29-32
+[V:fl] b2c' d'3 e'2f' g'3 | _e'6 d'/e'/d'/c'/b b3 | e'2d' c'3 a3 !trill!a3 | g6 z6 |
+[V:ob] z12 | z12 | z12 | z12 |
+[V:cl] z12 | z12 | z12 | z12 |
+[V:bn] z12 | z12 | z12 | z12 |
+[V:hn] [DG]6 [EG]6 | [_EG]6 [B,G]6 | [A,E]6 [CF]6 | [B,G]6 [B,G]6 |
+[V:harp] G,B,D GDB, G,CE GEC | G,C_E GEC G,B,D GDB, | E,A,E AEA, D,A,F cFA, | D,B,G dGB, D,B,G dGB, |
+[V:v1] b2c' d'3 e'2f' g'3 | _e'6 d'/e'/d'/c'/b b3 | e'2d' c'3 a3 !trill!a3 | g6 z6 |
+[V:v2] G6 G6 | G6 G6 | E6 F6 | G6 G6 |
+[V:va] D6 E6 | _E6 B,6 | A,6 C6 | B,6 B,6 |
+[V:vc] B,,6 C,6 | C,6 D,6 | C,6 D,6 | G,6 G,6 |
+[V:cb] B,,,6 C,,6 | C,,6 D,,6 | C,,6 D,,6 | G,,6 G,,6 |
+% bars 33-36: [Coda] Four bars of farewell, with one more glance at the minor
+[V:fl] z12 | z12 | z12 | z12 |]
+[V:ob] z12 | z12 | z12 | z12 |]
+[V:cl] z12 | z12 | z12 | z12 |]
+[V:bn] z12 | z12 | z12 | z12 |]
+[V:hn] !p![B,D]6 [CE]6 | [B,D]6 [CF]6 | [B,G]6 [_EG]6 | [B,G]6 [B,G]6 |]
+[V:harp] !p!G,B,D GDB, G,CE GEC | G,B,D GDB, F,CD ADC | G,B,D GDB, G,C_E GEC | G,B,D GDB, G,B,D GDB, |]
+[V:v1] !pp!b3 d'3 e'3 g'3 | d'6 c'3 a3 | b3 d'3 _e'3 c'3 | b6 z6 |]
+[V:v2] !pp!D6 E6 | D6 F6 | G6 G6 | G6 G6 |]
+[V:va] !pp!B,6 C6 | B,6 C6 | B,6 _E6 | B,6 B,6 |]
+[V:vc] !pp!G,,6 C,6 | D,6 D,6 | G,6 C,6 | G,,6 G,,6 |]
+[V:cb] !pp!G,,,6 C,,6 | D,,6 D,,6 | G,,6 C,,6 | G,,,6 G,,,6 |]

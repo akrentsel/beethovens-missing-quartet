@@ -1,0 +1,198 @@
+{
+ "title": "Chopin’s Missing Symphony — public composition log",
+ "scope": "The log the composing agent (Claude) kept while writing this work: the request, its progress messages, the commands it ran on the score and their output, draft publications and test results, up to the publication step. It was written during the work, entry by entry; it is not an automatic export of the whole session, and the same session composed other works whose entries are not included here.",
+ "policy": "Messages and tool output are recorded as they occurred, shortened where marked. Private internal reasoning, credentials, access details, private paths and unrelated conversation are not included. Statements made during the work may be provisional or mistaken; later corrections remain in the log.",
+ "sessions": {
+  "main": "Composition session"
+ },
+ "entries": [
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:21:17.000Z",
+   "kind": "message",
+   "speaker": "User",
+   "text": "[A long batch brief was pasted: compose and publish one original symphony for each composer in the Missing Works catalogue who has no completed symphony, one composer at a time, claiming each open symphony request through the admin command, publishing live drafts early, testing every movement in the real browser player, writing a notebook and a public composition log, deploying an atomic release, and completing the request only after the public work is verified. Every work must be labelled an original AI-composed homage. For composers outside the symphonic tradition it asks for an honest counterfactual.]\n\nNOW I know I said to do all composers, but how about we actually do half of the composers in each section? just to save some money.",
+   "notes": [
+    "the pasted batch brief is summarised in brackets; the last sentence is verbatim"
+   ],
+   "id": "entry-0001"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:21:17.000Z",
+   "kind": "tool",
+   "speaker": "Queue claim",
+   "text": "GET /api/requests -> chopin:symphony:1 status open, votes 0; no request in status composing\nmissing-works-admin start chopin:symphony:1",
+   "notes": [
+    "access details omitted"
+   ],
+   "id": "entry-0002"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:21:17.000Z",
+   "kind": "result",
+   "speaker": "Queue claim",
+   "text": "started chopin:symphony:1",
+   "notes": [],
+   "id": "entry-0003"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:21:17.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "Composition brief — Chopin’s Missing Symphony (work id chopin-symphony-1)\n\nHonest counterfactual: Chopin wrote no symphony, and nothing for orchestra without a solo piano. Everything he composed starts from the keyboard. This work asks what four of his genres might become if an orchestra had to play them without a piano: a sonata first movement, a nocturne, a mazurka and a krakowiak. It is new music; no theme is taken from Chopin, and it is not an orchestration of any piano piece.\n\nHow the piano writing is translated: the singing right hand goes to clarinet, flute or violins; its ornaments are written out as triplets and sixteenth notes; the left hand’s wide broken chords go to a harp, which I have added to the orchestra of his concertos for that purpose, over held strings; the mazurka’s drone fifths go to cellos, basses and horns.\n\nOrchestra (13 staves, sounding pitch): pairs of flutes, oboes, clarinets and bassoons, four horns, two trumpets, timpani in B and F sharp, harp, strings.\n\nMovements\nI. Allegro maestoso, B minor, 4/4: a grave dotted theme; a nocturne-like second theme in D for clarinet over harp, repeated with decoration; as in his second and third piano sonatas the reprise leaves out the first theme and begins with the transition; it ends in B major, where the first theme finally returns in the coda.\nII. Nocturne: Larghetto, G major, 12/8: a long melody over harp arpeggios, repeated with ornament by the flute; an agitated recitative in G minor in the middle.\nIII. Tempo di mazurka, B minor, with a Trio in B major over a drone, with the raised fourth of Polish folk music.\nIV. Rondo à la krakowiak: Vivace, B major, 2/4, with the dance’s syncopated rhythm.\n\nTarget length about thirteen minutes. Compromise known from the start: melodies, ornaments and the chord of every bar are written by hand; a program writes the harp figuration, held chords, tutti textures and brass from the chord plan.",
+   "notes": [],
+   "id": "entry-0004"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:21:27.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. First movement; after the first build three parallel octaves between first violins and bass were removed by putting two chords in root position.",
+   "notes": [],
+   "id": "entry-0005"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:21:27.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Allegro maestoso: 108 bars written, 347s played; activity fl:61 ob:100 cl:134 bn:50 hn:138 tpt:100 timp:18 harp:34 v1:95 v2:100 va:100 vc:100 cb:100\n    validator ok: 108 bars, 346.7s, 13 voices; abcjs playback matches the model (7625 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0006"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:21:27.735Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 1 with this public change note:\nFirst playable draft: the whole first movement — a grave B minor theme, a nocturne-like second theme for clarinet over harp, and a reprise that, as in Chopin's sonatas, skips the first theme and ends in B major.",
+   "notes": [],
+   "id": "entry-0007"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:21:34.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=chopin-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0008"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:21:34.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Allegro maestoso108 bars | load 2.5s | state playing | clock 0:01 / 5:47 | {\"peak\":0.9,\"seconds\":346.9,\"rms\":0.1112,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Timp.:47 Harp:46 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0009"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:21:34.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "First playable Chopin draft is live: https://lost-compositions.exe.xyz/work.html?draft=chopin-symphony-1 (first movement, 5:47). Writing the Nocturne, Mazurka and Krakowiak.",
+   "notes": [],
+   "id": "entry-0010"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:22:58.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m2, m3, m4: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Movements II–IV. Fixes after the first build: 21 parallel octaves/fifths between first violins and bass (chord inversions changed; a few melody notes reordered) and a sustained E sharp against F sharp in the Trio shortened to a passing note.",
+   "notes": [],
+   "id": "entry-0011"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:22:58.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Nocturne: Larghetto: 36 bars written, 173s played; activity fl:41 ob:44 cl:44 bn:22 hn:111 harp:77 v1:95 v2:100 va:100 vc:100 cb:100\n    validator ok: 36 bars, 172.8s, 11 voices; abcjs playback matches the model (1167 notes)\n    parallel fifths/octaves v1/vc: 0\n  III. Tempo di mazurka: 72 bars written, 140s played; activity fl:51 ob:68 cl:68 bn:23 hn:92 tpt:30 timp:11 harp:0 v1:82 v2:66 va:66 vc:69 cb:69\n    validator ok: 72 bars, 139.6s, 13 voices; abcjs playback matches the model (1857 notes)\n    parallel fifths/octaves v1/vc: 0\n  IV. Rondo à la krakowiak: Vivace: 120 bars written, 124s played; activity fl:66 ob:119 cl:138 bn:56 hn:126 tpt:113 timp:35 harp:0 v1:82 v2:78 va:78 vc:100 cb:100\n    validator ok: 120 bars, 124.1s, 13 voices; abcjs playback matches the model (3338 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0012"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:22:59.533Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 2 with this public change note:\nFirst complete draft: added the Nocturne in G over harp arpeggios, the Mazurka with its drone Trio, and the Rondo à la krakowiak. A revision pass follows.",
+   "notes": [],
+   "id": "entry-0013"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:23:18.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m2, m3, m4: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Revision pass: the Nocturne's last return has a new, more elaborate ornamented line; the harp, which was silent after the second movement, now plays in the Mazurka's Trio and in the introduction and D major episode of the finale.",
+   "notes": [],
+   "id": "entry-0014"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:23:18.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Nocturne: Larghetto: 36 bars written, 173s played; activity fl:41 ob:44 cl:44 bn:22 hn:111 harp:77 v1:95 v2:100 va:100 vc:100 cb:100\n    validator ok: 36 bars, 172.8s, 11 voices; abcjs playback matches the model (1185 notes)\n    parallel fifths/octaves v1/vc: 0\n  III. Tempo di mazurka: 72 bars written, 140s played; activity fl:51 ob:68 cl:68 bn:23 hn:92 tpt:30 timp:11 harp:30 v1:82 v2:66 va:66 vc:69 cb:69\n    validator ok: 72 bars, 139.6s, 13 voices; abcjs playback matches the model (2049 notes)\n    parallel fifths/octaves v1/vc: 0\n  IV. Rondo à la krakowiak: Vivace: 120 bars written, 124s played; activity fl:66 ob:119 cl:138 bn:56 hn:126 tpt:113 timp:35 harp:13 v1:82 v2:78 va:78 vc:100 cb:100\n    validator ok: 120 bars, 124.1s, 13 voices; abcjs playback matches the model (3402 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0015"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:23:19.097Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 3 with this public change note:\nRevision: more elaborate ornament in the Nocturne's last return; the harp added to the Mazurka's Trio and to two passages of the finale. This revision matches the published score.",
+   "notes": [],
+   "id": "entry-0016"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:23:36.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=chopin-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0017"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:23:36.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Allegro maestoso108 bars | load 1.6s | state playing | clock 0:01 / 5:47 | {\"peak\":0.9,\"seconds\":346.9,\"rms\":0.1112,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Timp.:47 Harp:46 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   II. Nocturne: Larghetto36 bars | load 0.5s | state playing | clock 0:01 / 2:53 | {\"peak\":0.9,\"seconds\":173,\"rms\":0.1052,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Harp:46 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   III. Tempo di mazurka72 bars | load 0.4s | state playing | clock 0:01 / 2:20 | {\"peak\":0.9,\"seconds\":139.8,\"rms\":0.0993,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Timp.:47 Harp:46 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   IV. Rondo à la krakowiak: Vivace120 bars | load 0.6s | state playing | clock 0:01 / 2:04 | {\"peak\":0.9,\"seconds\":124.3,\"rms\":0.1367,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Timp.:47 Harp:46 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0018"
+  }
+ ]
+}

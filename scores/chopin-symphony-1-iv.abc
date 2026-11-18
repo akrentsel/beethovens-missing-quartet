@@ -1,0 +1,275 @@
+%%label IV. Rondo à la krakowiak: Vivace
+%%note B major. A rondo on a syncopated dance tune, with an episode in F sharp for the woodwind and a stormy one in B minor.
+X:1
+T:Chopin’s Missing Symphony
+T:IV. Rondo à la krakowiak: Vivace
+C:Claude (AI), in the manner of Frédéric Chopin
+M:2/4
+L:1/8
+Q:"Vivace" 1/4=116
+%%score [fl ob cl bn] [hn tpt] timp harp [v1 v2 va vc cb]
+% Original AI-composed homage. The score is written at sounding pitch.
+V:fl clef=treble name="Fl. I, II"
+V:ob clef=treble name="Ob. I, II"
+V:cl clef=treble name="Cl. I, II"
+V:bn clef=bass name="Bn. I, II"
+V:hn clef=treble name="Hn. I–IV"
+V:tpt clef=treble name="Tpt. I, II"
+V:timp clef=bass name="Timp."
+V:harp clef=treble name="Harp"
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:B
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tpt
+%%MIDI program 56
+V:timp
+%%MIDI program 47
+V:harp
+%%MIDI program 46
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-8: [Intro] Introduction: a horn-call figure in B minor for clarinet over held horns, pausing on the dominant
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] !mp!B4 | =d2 f2 | =g4 | =d2 B2 | e4 | =g2 b2 | f4 | A2 c2 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] !pp![B,=D]4 | [B,=D]4 | [B,=D]4 | [B,=D]4 | [B,=G]4 | [B,=G]4 | [A,E]4 | [A,E]4 |
+[V:tpt] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:timp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:harp] !p!F,B, =DF | F,B, =DF | =G,B, =D=G | =G,B, =D=G | E,B, E=G | E,B, E=G | E,A, CF | E,A, CF |
+[V:v1] z!p!F zF | zF zF | z=G zG | z=G zG | z=G zG | z=G zG | zF zF | zF zF |
+[V:v2] z!p!=D zD | z=D zD | z=D zD | z=D zD | zE zE | zE zE | zE zE | zE zE |
+[V:va] z!p!B, zB, | zB, zB, | zB, zB, | zB, zB, | zB, zB, | zB, zB, | zA, zA, | zA, zA, |
+[V:vc] !p!B,,2 B,,2 | B,,2 B,,2 | =G,,2 G,,2 | =G,,2 G,,2 | E,,2 E,,2 | E,,2 E,,2 | F,,2 F,,2 | F,,2 F,,2 |
+[V:cb] !p!B,,,2 B,,,2 | B,,,2 B,,,2 | =G,,,2 G,,,2 | =G,,,2 G,,,2 | E,,,2 E,,,2 | E,,,2 E,,,2 | F,,,2 F,,,2 | F,,,2 F,,,2 |
+% bars 9-16: [A a] The krakowiak tune, with its short–long–short rhythm: violins
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tpt] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:timp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:harp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !mp!b d'2f' | b'2 f'2 | g' e'2c' | d'2 b2 | e' g'2b' | f'2 d'2 | e' c'2a | b2 z2 |
+[V:v2] z!p!F zF | zF zF | zG zG | zF zF | zG zG | zD zD | zE zE | zD zD |
+[V:va] z!p!D zD | zD zD | zC zC | zB, zB, | zB, zB, | zB, zB, | zA, zA, | zB, zB, |
+[V:vc] !p!B,,2 B,,2 | B,,2 B,,2 | E,2 E,2 | D,2 D,2 | E,2 E,2 | F,2 F,2 | F,2 F,2 | B,,2 B,,2 |
+[V:cb] !p!B,,,2 B,,,2 | B,,,2 B,,,2 | E,,2 E,,2 | D,,2 D,,2 | E,,2 E,,2 | F,,2 F,,2 | F,,2 F,,2 | B,,,2 B,,,2 |
+% bars 17-24: [A b] Repeated by the full orchestra
+[V:fl] !f!b d'2f' | b'2 f'2 | g' e'2c' | d'2 b2 | e' g'2b' | a'2 f'2 | e' c'2a | b2 z2 |
+[V:ob] !f![Bd]4 | [Bd]4 | [Gc]4 | [FB]4 | [GB]4 | [EA]4 | [EA]4 | [DB]4 |
+[V:cl] !f![DF]4 | [DF]4 | [CG]4 | [B,F]4 | [B,G]4 | [A,E]4 | [A,E]4 | [B,D]4 |
+[V:bn] !f!B,,B,, B,,B,, | B,,B,, B,,B,, | E,E, E,E, | D,D, D,D, | E,E, E,E, | F,F, F,F, | F,F, F,F, | B,,B,, B,,B,, |
+[V:hn] !f![B,D]2 [B,D]2 | [B,D]2 [B,D]2 | [G,C]2 [G,C]2 | [F,B,]2 [F,B,]2 | [G,B,]2 [G,B,]2 | [A,E]2 [A,E]2 | [A,E]2 [A,E]2 | [B,D]2 [B,D]2 |
+[V:tpt] !f![DB]2 [DB]2 | [DB]2 [DB]2 | [CG]2 [CG]2 | [FB]2 [FB]2 | [GB]2 [GB]2 | [EA]2 [EA]2 | [EA]2 [EA]2 | [DB]2 [DB]2 |
+[V:timp] !f!B,,2 B,,2 | B,,2 B,,2 | z2 z2 | z2 z2 | z2 z2 | F,,2 F,,2 | F,,2 F,,2 | B,,2 B,,2 |
+[V:harp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !f!b d'2f' | b'2 f'2 | g' e'2c' | d'2 b2 | e' g'2b' | a'2 f'2 | e' c'2a | b2 z2 |
+[V:v2] !f!FF FF | FF FF | GG GG | FF FF | GG GG | EE EE | EE EE | DD DD |
+[V:va] !f!DD DD | DD DD | CC CC | B,B, B,B, | B,B, B,B, | A,A, A,A, | A,A, A,A, | B,B, B,B, |
+[V:vc] !f!B,,B,, B,,B,, | B,,B,, B,,B,, | E,E, E,E, | D,D, D,D, | E,E, E,E, | F,F, F,F, | F,F, F,F, | B,,B,, B,,B,, |
+[V:cb] !f!B,,,B,,, B,,,B,,, | B,,,B,,, B,,,B,,, | E,,E,, E,,E,, | D,,D,, D,,D,, | E,,E,, E,,E,, | F,,F,, F,,F,, | F,,F,, F,,F,, | B,,,B,,, B,,,B,,, |
+% bars 25-32: [B 1] First episode in F sharp: oboe and clarinet
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] !mp!A c2f | a2 f2 | g ^e2B | A2 c2 | f d2A | B2 G2 | F ^E2G | F2 z2 |
+[V:cl] !p!A c2f | a2 f2 | g ^e2B | A2 c2 | f d2A | B2 G2 | F ^E2G | F2 z2 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tpt] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:timp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:harp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] z!p!A zA | zA zA | zB zB | zA zA | zA zA | zB zB | zB zB | zA zA |
+[V:v2] z!p!F zF | zF zF | z^E zE | zF zF | zF zF | zG zG | z^E zE | zF zF |
+[V:va] z!p!C zC | zC zC | zC zC | zC zC | zD zD | zD zD | zC zC | zC zC |
+[V:vc] !p!F,,2 F,,2 | F,,2 F,,2 | C,,2 C,,2 | F,,2 F,,2 | D,,2 D,,2 | G,,2 G,,2 | C,2 C,2 | F,2 F,2 |
+[V:cb] !p!F,,,2 F,,,2 | F,,,2 F,,,2 | C,,2 C,,2 | F,,,2 F,,,2 | D,,2 D,,2 | G,,,2 G,,,2 | C,,2 C,,2 | F,,2 F,,2 |
+% bars 33-40: [B 2] Running sixteenth notes for the full orchestra, back to the dominant
+[V:fl] !f!a/c/f/A/ a/c/f/A/ | a/d/f/A/ a/d/f/A/ | b/d/g/B/ b/d/g/B/ | b/^e/g/B/ b/e/g/B/ | c'/f/a/c/ c'/f/a/c/ | d'/f/a/d/ d'/f/a/d/ | d'/g/b/d/ c'/^e/b/c/ | c'/e/a/c/ c'/e/a/c/ |
+[V:ob] !f![Ac]4 | [Af]4 | [Bg]4 | [B^e]4 | [Af]4 | [Af]4 | [Bg]2 [B^e]2 | [Ae]4 |
+[V:cl] !f![FA]4 | [FA]4 | [GB]4 | [^EB]4 | [FA]4 | [FA]4 | [GB]2 [^EB]2 | [EA]4 |
+[V:bn] !f!F,,F,, F,,F,, | D,,D,, D,,D,, | G,,G,, G,,G,, | C,C, C,C, | F,F, F,F, | D,D, D,D, | G,,G,, C,C, | F,F, F,F, |
+[V:hn] !f![A,C]2 [A,C]2 | [A,F]2 [A,F]2 | [B,G]2 [B,G]2 | [B,^E]2 [B,E]2 | [A,F]2 [A,F]2 | [A,F]2 [A,F]2 | [B,G]2 [B,^E]2 | [A,E]2 [A,E]2 |
+[V:tpt] !f![FA]2 [FA]2 | [FA]2 [FA]2 | [GB]2 [GB]2 | [^EB]2 [EB]2 | [FA]2 [FA]2 | [FA]2 [FA]2 | [GB]2 [^EB]2 | [EA]2 [EA]2 |
+[V:timp] !f!F,,2 F,,2 | z2 z2 | z2 z2 | z2 z2 | F,,2 F,,2 | z2 z2 | z2 z2 | F,,2 F,,2 |
+[V:harp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !f!a/c/f/A/ a/c/f/A/ | a/d/f/A/ a/d/f/A/ | b/d/g/B/ b/d/g/B/ | b/^e/g/B/ b/e/g/B/ | c'/f/a/c/ c'/f/a/c/ | d'/f/a/d/ d'/f/a/d/ | d'/g/b/d/ c'/^e/b/c/ | c'/e/a/c/ c'/e/a/c/ |
+[V:v2] !f!FF FF | FF FF | GG GG | ^EE EE | FF FF | FF FF | GG ^EE | EE EE |
+[V:va] !f!A,A, A,A, | A,A, A,A, | B,B, B,B, | B,B, B,B, | A,A, A,A, | A,A, A,A, | B,B, B,B, | A,A, A,A, |
+[V:vc] !f!F,,F,, F,,F,, | D,,D,, D,,D,, | G,,G,, G,,G,, | C,C, C,C, | F,F, F,F, | D,D, D,D, | G,,G,, C,C, | F,F, F,F, |
+[V:cb] !f!F,,,F,,, F,,,F,,, | D,,D,, D,,D,, | G,,,G,,, G,,,G,,, | C,,C,, C,,C,, | F,,F,, F,,F,, | D,,D,, D,,D,, | G,,,G,,, C,,C,, | F,,F,, F,,F,, |
+% bars 41-48: [A a 2] The krakowiak tune, with its short–long–short rhythm: flute and clarinet
+[V:fl] !p!b d'2f' | b'2 f'2 | g' e'2c' | d'2 b2 | e' g'2b' | f'2 d'2 | e' c'2a | b2 z2 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] !mp!B d2f | b2 f2 | g e2c | d2 B2 | e g2b | f2 d2 | e c2A | B2 z2 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tpt] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:timp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:harp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] z!p!F zF | zF zF | zG zG | zF zF | zG zG | zF zF | zF zF | zF zF |
+[V:v2] z!p!D zD | zD zD | zC zC | zD zD | zE zE | zD zD | zE zE | zD zD |
+[V:va] z!p!B, zB, | zB, zB, | zG, zG, | zB, zB, | zB, zB, | zB, zB, | zA, zA, | zB, zB, |
+[V:vc] !p!B,,2 B,,2 | B,,2 B,,2 | E,2 E,2 | D,2 D,2 | E,2 E,2 | F,2 F,2 | F,2 F,2 | B,,2 B,,2 |
+[V:cb] !p!B,,,2 B,,,2 | B,,,2 B,,,2 | E,,2 E,,2 | D,,2 D,,2 | E,,2 E,,2 | F,,2 F,,2 | F,,2 F,,2 | B,,,2 B,,,2 |
+% bars 49-56: [A b 2] Repeated by the full orchestra
+[V:fl] !f!b d'2f' | b'2 f'2 | g' e'2c' | d'2 b2 | e' g'2b' | a'2 f'2 | e' c'2a | b2 z2 ||
+[V:ob] !f![Bd]4 | [Bd]4 | [Gc]4 | [FB]4 | [GB]4 | [EA]4 | [EA]4 | [DB]4 ||
+[V:cl] !f![DF]4 | [DF]4 | [CG]4 | [B,F]4 | [B,G]4 | [A,E]4 | [A,E]4 | [B,D]4 ||
+[V:bn] !f!B,,B,, B,,B,, | B,,B,, B,,B,, | E,E, E,E, | D,D, D,D, | E,E, E,E, | F,F, F,F, | F,F, F,F, | B,,B,, B,,B,, ||
+[V:hn] !f![B,D]2 [B,D]2 | [B,D]2 [B,D]2 | [G,C]2 [G,C]2 | [F,B,]2 [F,B,]2 | [G,B,]2 [G,B,]2 | [A,E]2 [A,E]2 | [A,E]2 [A,E]2 | [B,D]2 [B,D]2 ||
+[V:tpt] !f![DB]2 [DB]2 | [DB]2 [DB]2 | [CG]2 [CG]2 | [FB]2 [FB]2 | [GB]2 [GB]2 | [EA]2 [EA]2 | [EA]2 [EA]2 | [DB]2 [DB]2 ||
+[V:timp] !f!B,,2 B,,2 | B,,2 B,,2 | z2 z2 | z2 z2 | z2 z2 | F,,2 F,,2 | F,,2 F,,2 | B,,2 B,,2 ||
+[V:harp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 ||
+[V:v1] !f!b d'2f' | b'2 f'2 | g' e'2c' | d'2 b2 | e' g'2b' | a'2 f'2 | e' c'2a | b2 z2 ||
+[V:v2] !f!FF FF | FF FF | GG GG | FF FF | GG GG | EE EE | EE EE | DD DD ||
+[V:va] !f!DD DD | DD DD | CC CC | B,B, B,B, | B,B, B,B, | A,A, A,A, | A,A, A,A, | B,B, B,B, ||
+[V:vc] !f!B,,B,, B,,B,, | B,,B,, B,,B,, | E,E, E,E, | D,D, D,D, | E,E, E,E, | F,F, F,F, | F,F, F,F, | B,,B,, B,,B,, ||
+[V:cb] !f!B,,,B,,, B,,,B,,, | B,,,B,,, B,,,B,,, | E,,E,, E,,E,, | D,,D,, D,,D,, | E,,E,, E,,E,, | F,,F,, F,,F,, | F,,F,, F,,F,, | B,,,B,,, B,,,B,,, ||
+% bars 57-64: [C 1] Second episode: B minor, stormy
+[V:fl] [K:Bm] !ff!b d'2f' | e'2 c'2 | d' f'2b' | ^a'2 f'2 | g' b'2g' | e'2 g'2 | f' ^a2c' | b2 z2 |
+[V:ob] [K:Bm] !ff![Bd]4 | [ce]4 | [df]4 | [^Ae]4 | [Gd]4 | [Ge]4 | [^Ae]4 | [Bd]4 |
+[V:cl] [K:Bm] !ff![DF]4 | [CE]4 | [DF]4 | [^A,E]4 | [G,D]4 | [G,E]4 | [^A,E]4 | [B,D]4 |
+[V:bn] [K:Bm] !ff!B,,B,, B,,B,, | ^A,,A,, A,,A,, | B,,B,, B,,B,, | F,,F,, F,,F,, | B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | B,,B,, B,,B,, |
+[V:hn] [K:Bm] !ff![B,D]2 [B,D]2 | [CE]2 [CE]2 | [DF]2 [DF]2 | [^A,E]2 [A,E]2 | [G,D]2 [G,D]2 | [G,E]2 [G,E]2 | [^A,E]2 [A,E]2 | [B,D]2 [B,D]2 |
+[V:tpt] [K:Bm] !ff![Bd]2 [Bd]2 | [ce]2 [ce]2 | [df]2 [df]2 | [^Ae]2 [Ae]2 | [Gd]2 [Gd]2 | [Ge]2 [Ge]2 | [^Ae]2 [Ae]2 | [Bd]2 [Bd]2 |
+[V:timp] [K:Bm] !ff!B,,2 B,,2 | z2 z2 | B,,2 B,,2 | F,,2 F,,2 | z2 z2 | z2 z2 | F,,2 F,,2 | B,,2 B,,2 |
+[V:harp] [K:Bm] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] [K:Bm] !ff!b d'2f' | e'2 c'2 | d' f'2b' | ^a'2 f'2 | g' b'2g' | e'2 g'2 | f' ^a2c' | b2 z2 |
+[V:v2] [K:Bm] !ff!FF FF | EE EE | FF FF | EE EE | DD DD | EE EE | EE EE | DD DD |
+[V:va] [K:Bm] !ff!DD DD | CC CC | DD DD | ^A,A, A,A, | G,G, G,G, | G,G, G,G, | ^A,A, A,A, | B,B, B,B, |
+[V:vc] [K:Bm] !ff!B,,B,, B,,B,, | ^A,,A,, A,,A,, | B,,B,, B,,B,, | F,,F,, F,,F,, | B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | B,,B,, B,,B,, |
+[V:cb] [K:Bm] !ff!B,,,B,,, B,,,B,,, | ^A,,,A,,, A,,,A,,, | B,,,B,,, B,,,B,,, | F,,,F,,, F,,,F,,, | B,,,B,,, B,,,B,,, | E,,E,, E,,E,, | F,,F,, F,,F,, | B,,,B,,, B,,,B,,, |
+% bars 65-72: [C 2] A gentle answer in D for the clarinet
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] !mp!A d2f | a2 f2 | g e2c | d2 A2 | B d2g | f2 d2 | e c2A | d2 z2 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tpt] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:timp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:harp] !p!A,D FA | A,D FA | G,C EA | A,D FA | G,D GB | A,D FA | G,C EA | A,D FA |
+[V:v1] z!p!A zA | zA zA | zA zA | zA zA | zB zB | zA zA | zA zA | zA zA |
+[V:v2] z!p!F zF | zF zF | zG zG | zF zF | zG zG | zF zF | zG zG | zF zF |
+[V:va] z!p!D zD | zD zD | zC zC | zD zD | zD zD | zD zD | zC zC | zD zD |
+[V:vc] !p!D,,2 D,,2 | D,,2 D,,2 | A,,2 A,,2 | D,2 D,2 | G,2 G,2 | A,,2 A,,2 | A,,2 A,,2 | D,2 D,2 |
+[V:cb] !p!D,,2 D,,2 | D,,2 D,,2 | A,,,2 A,,,2 | D,,2 D,,2 | G,,2 G,,2 | A,,,2 A,,,2 | A,,,2 A,,,2 | D,,2 D,,2 |
+% bars 73-80: [C 3] The introduction’s figure returns, now for everyone, and dies away on the dominant
+[V:fl] !f!b4 | d'2 f'2 | g'4 | d'2 b2 | e'4 | g'2 b'2 | !p!f'4 | ^a2 c'2 ||
+[V:ob] !f![Bd]4 | [Bd]4 | [Bd]4 | [Bd]4 | [Bg]4 | [Bg]4 | !p![^Ae]4 | [^Ae]4 ||
+[V:cl] !f![DF]4 | [DF]4 | [B,G]4 | [B,G]4 | [B,G]4 | [B,G]4 | !p![^A,E]4 | [^A,E]4 ||
+[V:bn] !f!B,,B,, B,,B,, | B,,B,, B,,B,, | G,,G,, G,,G,, | G,,G,, G,,G,, | E,,E,, E,,E,, | E,,E,, E,,E,, | !p!F,,F,, F,,F,, | F,,F,, F,,F,, ||
+[V:hn] !f![B,D]2 [B,D]2 | [B,D]2 [B,D]2 | [B,D]2 [B,D]2 | [B,D]2 [B,D]2 | [B,G]2 [B,G]2 | [B,G]2 [B,G]2 | !p![^A,E]2 [A,E]2 | [^A,E]2 [A,E]2 ||
+[V:tpt] !f![Bd]2 [Bd]2 | [Bd]2 [Bd]2 | [Bd]2 [Bd]2 | [Bd]2 [Bd]2 | [Bg]2 [Bg]2 | [Bg]2 [Bg]2 | !p![^Ae]2 [Ae]2 | [^Ae]2 [Ae]2 ||
+[V:timp] !f!B,,2 B,,2 | B,,2 B,,2 | z2 z2 | z2 z2 | z2 z2 | z2 z2 | !p!F,,2 F,,2 | F,,2 F,,2 ||
+[V:harp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 ||
+[V:v1] !f!b4 | d'2 f'2 | g'4 | d'2 b2 | e'4 | g'2 b'2 | !p!f'4 | ^a2 c'2 ||
+[V:v2] !f!FF FF | FF FF | GG GG | GG GG | GG GG | GG GG | !p!EE EE | EE EE ||
+[V:va] !f!DD DD | DD DD | B,B, B,B, | B,B, B,B, | B,B, B,B, | B,B, B,B, | !p!^A,A, A,A, | ^A,A, A,A, ||
+[V:vc] !f!B,,B,, B,,B,, | B,,B,, B,,B,, | G,,G,, G,,G,, | G,,G,, G,,G,, | E,,E,, E,,E,, | E,,E,, E,,E,, | !p!F,,F,, F,,F,, | F,,F,, F,,F,, ||
+[V:cb] !f!B,,,B,,, B,,,B,,, | B,,,B,,, B,,,B,,, | G,,,G,,, G,,,G,,, | G,,,G,,, G,,,G,,, | E,,,E,,, E,,,E,,, | E,,,E,,, E,,,E,,, | !p!F,,,F,,, F,,,F,,, | F,,,F,,, F,,,F,,, ||
+% bars 81-88: [A a 3] The krakowiak tune a last time: violins with flute
+[V:fl] [K:B] !p!b d'2f' | b'2 f'2 | g' e'2c' | d'2 b2 | e' g'2b' | f'2 d'2 | e' c'2a | b2 z2 |
+[V:ob] [K:B] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] [K:B] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] [K:B] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] [K:B] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tpt] [K:B] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:timp] [K:B] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:harp] [K:B] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] [K:B] !mp!b d'2f' | b'2 f'2 | g' e'2c' | d'2 b2 | e' g'2b' | f'2 d'2 | e' c'2a | b2 z2 |
+[V:v2] [K:B] z!p!F zF | zF zF | zG zG | zF zF | zG zG | zD zD | zE zE | zD zD |
+[V:va] [K:B] z!p!D zD | zD zD | zC zC | zB, zB, | zB, zB, | zB, zB, | zA, zA, | zB, zB, |
+[V:vc] [K:B] !p!B,,2 B,,2 | B,,2 B,,2 | E,2 E,2 | D,2 D,2 | E,2 E,2 | F,2 F,2 | F,2 F,2 | B,,2 B,,2 |
+[V:cb] [K:B] !p!B,,,2 B,,,2 | B,,,2 B,,,2 | E,,2 E,,2 | D,,2 D,,2 | E,,2 E,,2 | F,,2 F,,2 | F,,2 F,,2 | B,,,2 B,,,2 |
+% bars 89-96: [A b 3] Full orchestra
+[V:fl] !f!b d'2f' | b'2 f'2 | g' e'2c' | d'2 b2 | e' g'2b' | a'2 f'2 | e' c'2a | b2 z2 |
+[V:ob] !f![Bd]4 | [Bd]4 | [Gc]4 | [FB]4 | [GB]4 | [EA]4 | [EA]4 | [DB]4 |
+[V:cl] !f![DF]4 | [DF]4 | [CG]4 | [B,F]4 | [B,G]4 | [A,E]4 | [A,E]4 | [B,D]4 |
+[V:bn] !f!B,,B,, B,,B,, | B,,B,, B,,B,, | E,E, E,E, | D,D, D,D, | E,E, E,E, | F,F, F,F, | F,F, F,F, | B,,B,, B,,B,, |
+[V:hn] !f![B,D]2 [B,D]2 | [B,D]2 [B,D]2 | [G,C]2 [G,C]2 | [F,B,]2 [F,B,]2 | [G,B,]2 [G,B,]2 | [A,E]2 [A,E]2 | [A,E]2 [A,E]2 | [B,D]2 [B,D]2 |
+[V:tpt] !f![DB]2 [DB]2 | [DB]2 [DB]2 | [CG]2 [CG]2 | [FB]2 [FB]2 | [GB]2 [GB]2 | [EA]2 [EA]2 | [EA]2 [EA]2 | [DB]2 [DB]2 |
+[V:timp] !f!B,,2 B,,2 | B,,2 B,,2 | z2 z2 | z2 z2 | z2 z2 | F,,2 F,,2 | F,,2 F,,2 | B,,2 B,,2 |
+[V:harp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !f!b d'2f' | b'2 f'2 | g' e'2c' | d'2 b2 | e' g'2b' | a'2 f'2 | e' c'2a | b2 z2 |
+[V:v2] !f!FF FF | FF FF | GG GG | FF FF | GG GG | EE EE | EE EE | DD DD |
+[V:va] !f!DD DD | DD DD | CC CC | B,B, B,B, | B,B, B,B, | A,A, A,A, | A,A, A,A, | B,B, B,B, |
+[V:vc] !f!B,,B,, B,,B,, | B,,B,, B,,B,, | E,E, E,E, | D,D, D,D, | E,E, E,E, | F,F, F,F, | F,F, F,F, | B,,B,, B,,B,, |
+[V:cb] !f!B,,,B,,, B,,,B,,, | B,,,B,,, B,,,B,,, | E,,E,, E,,E,, | D,,D,, D,,D,, | E,,E,, E,,E,, | F,,F,, F,,F,, | F,,F,, F,,F,, | B,,,B,,, B,,,B,,, |
+% bars 97-104: [Coda 1] Coda: the tune’s rhythm driven to the end
+[V:fl] !f!b d'2f' | e'2 g'2 | f' d'2b | c'2 a2 | b d'2f' | g'2 b'2 | f'2 c'2 | b2 z2 |
+[V:ob] !f![Bd]4 | [Ge]4 | [Fd]4 | [Ae]4 | [Bd]4 | [Ge]4 | [Fd]2 [Ae]2 | [Bd]4 |
+[V:cl] !f![DF]4 | [EG]4 | [DF]4 | [EA]4 | [DB]4 | [EG]4 | [DF]2 [EA]2 | [DB]4 |
+[V:bn] !f!B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | F,F, F,F, | B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | B,,B,, B,,B,, |
+[V:hn] !f![B,D]2 [B,D]2 | [G,E]2 [G,E]2 | [F,D]2 [F,D]2 | [A,E]2 [A,E]2 | [B,D]2 [B,D]2 | [G,E]2 [G,E]2 | [F,D]2 [A,E]2 | [B,D]2 [B,D]2 |
+[V:tpt] !f![DB]2 [DB]2 | [EG]2 [EG]2 | [DF]2 [DF]2 | [EA]2 [EA]2 | [DB]2 [DB]2 | [EG]2 [EG]2 | [DF]2 [EA]2 | [DB]2 [DB]2 |
+[V:timp] !f!B,,2 B,,2 | z2 z2 | F,,2 F,,2 | F,,2 F,,2 | B,,2 B,,2 | z2 z2 | F,,2 F,,2 | B,,2 B,,2 |
+[V:harp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !f!b d'2f' | e'2 g'2 | f' d'2b | c'2 a2 | b d'2f' | g'2 b'2 | f'2 c'2 | b2 z2 |
+[V:v2] !f!FF FF | GG GG | FF FF | AA AA | BB BB | GG GG | FF AA | BB BB |
+[V:va] !f!DD DD | EE EE | DD DD | EE EE | DD DD | EE EE | DD EE | DD DD |
+[V:vc] !f!B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | F,F, F,F, | B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | B,,B,, B,,B,, |
+[V:cb] !f!B,,,B,,, B,,,B,,, | E,,E,, E,,E,, | F,,F,, F,,F,, | F,,F,, F,,F,, | B,,,B,,, B,,,B,,, | E,,E,, E,,E,, | F,,F,, F,,F,, | B,,,B,,, B,,,B,,, |
+% bars 105-112
+[V:fl] d' f'2b' | c' e'2a' | d' f'2b' | c' e'2a' | b' f'2d' | g'2 e'2 | b' f'2d' | g'2 e'2 |
+[V:ob] [Bd]4 | [Ae]4 | [Bd]4 | [Ae]4 | [Bd]4 | [Ge]4 | [Fd]4 | [Ge]4 |
+[V:cl] [DB]4 | [EA]4 | [DB]4 | [EA]4 | [DB]4 | [EG]4 | [DF]4 | [EG]4 |
+[V:bn] B,,B,, B,,B,, | F,,F,, F,,F,, | B,,B,, B,,B,, | F,,F,, F,,F,, | B,,B,, B,,B,, | E,E, E,E, | B,,B,, B,,B,, | E,E, E,E, |
+[V:hn] [B,D]2 [B,D]2 | [A,E]2 [A,E]2 | [B,D]2 [B,D]2 | [A,E]2 [A,E]2 | [B,D]2 [B,D]2 | [G,E]2 [G,E]2 | [F,D]2 [F,D]2 | [G,E]2 [G,E]2 |
+[V:tpt] [DB]2 [DB]2 | [EA]2 [EA]2 | [DB]2 [DB]2 | [EA]2 [EA]2 | [DB]2 [DB]2 | [EG]2 [EG]2 | [DF]2 [DF]2 | [EG]2 [EG]2 |
+[V:timp] B,,2 B,,2 | F,,2 F,,2 | B,,2 B,,2 | F,,2 F,,2 | B,,2 B,,2 | z2 z2 | B,,2 B,,2 | z2 z2 |
+[V:harp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] d' f'2b' | c' e'2a' | d' f'2b' | c' e'2a' | b' f'2d' | g'2 e'2 | b' f'2d' | g'2 e'2 |
+[V:v2] BB BB | AA AA | BB BB | AA AA | BB BB | GG GG | FF FF | GG GG |
+[V:va] DD DD | EE EE | DD DD | EE EE | DD DD | EE EE | DD DD | EE EE |
+[V:vc] B,,B,, B,,B,, | F,,F,, F,,F,, | B,,B,, B,,B,, | F,,F,, F,,F,, | B,,B,, B,,B,, | E,E, E,E, | B,,B,, B,,B,, | E,E, E,E, |
+[V:cb] B,,,B,,, B,,,B,,, | F,,,F,,, F,,,F,,, | B,,,B,,, B,,,B,,, | F,,,F,,, F,,,F,,, | B,,,B,,, B,,,B,,, | E,,E,, E,,E,, | B,,,B,,, B,,,B,,, | E,,E,, E,,E,, |
+% bars 113-116: [Coda 2] Four quiet bars
+[V:fl] z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 |
+[V:tpt] z4 | z4 | z4 | z4 |
+[V:timp] z4 | z4 | z4 | z4 |
+[V:harp] z4 | z4 | z4 | z4 |
+[V:v1] !pp!f' d'2b | f' d'2b | e' c'2a | e' c'2a |
+[V:v2] z!pp!F zF | zF zF | zA zA | zA zA |
+[V:va] z!pp!D zD | zD zD | zE zE | zE zE |
+[V:vc] !pp!B,,2 B,,2 | B,,2 B,,2 | F,,2 F,,2 | F,,2 F,,2 |
+[V:cb] !pp!B,,,2 B,,,2 | B,,,2 B,,,2 | F,,,2 F,,,2 | F,,,2 F,,,2 |
+% bars 117-120: [Coda 3] And the final chords
+[V:fl] !ff!b2 d'2 | f'2 b'2 | b'2 z2 | b2 z2 |]
+[V:ob] !ff![Bd]4 | [Bd]4 | [Bd]4 | [Bd]4 |]
+[V:cl] !ff![DF]4 | [DF]4 | [DF]4 | [DF]4 |]
+[V:bn] !ff!B,,B,, B,,B,, | B,,B,, B,,B,, | B,,B,, B,,B,, | B,,B,, B,,B,, |]
+[V:hn] !ff![B,D]2 [B,D]2 | [B,D]2 [B,D]2 | [B,D]2 [B,D]2 | [B,D]2 [B,D]2 |]
+[V:tpt] !ff![DB]2 [DB]2 | [DB]2 [DB]2 | [DB]2 [DB]2 | [DB]2 [DB]2 |]
+[V:timp] !ff!B,,2 B,,2 | B,,2 B,,2 | B,,2 B,,2 | B,,2 B,,2 |]
+[V:harp] z4 | z4 | z4 | z4 |]
+[V:v1] !ff!b2 d'2 | f'2 b'2 | b'2 z2 | b2 z2 |]
+[V:v2] !ff!FF FF | FF FF | FF FF | FF FF |]
+[V:va] !ff!DD DD | DD DD | DD DD | DD DD |]
+[V:vc] !ff!B,,B,, B,,B,, | B,,B,, B,,B,, | B,,B,, B,,B,, | B,,B,, B,,B,, |]
+[V:cb] !ff!B,,,B,,, B,,,B,,, | B,,,B,,, B,,,B,,, | B,,,B,,, B,,,B,,, | B,,,B,,, B,,,B,,, |]
