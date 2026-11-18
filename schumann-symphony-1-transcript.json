@@ -1,0 +1,198 @@
+{
+ "title": "Schumann’s Missing Symphony — public composition log",
+ "scope": "The log the composing agent (Claude) kept while writing this work: the request, its progress messages, the commands it ran on the score and their output, draft publications and test results, up to the publication step. It was written during the work, entry by entry; it is not an automatic export of the whole session, and the same session composed other works whose entries are not included here.",
+ "policy": "Messages and tool output are recorded as they occurred, shortened where marked. Private internal reasoning, credentials, access details, private paths and unrelated conversation are not included. Statements made during the work may be provisional or mistaken; later corrections remain in the log.",
+ "sessions": {
+  "main": "Composition session"
+ },
+ "entries": [
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:14:01.000Z",
+   "kind": "message",
+   "speaker": "User",
+   "text": "[A long batch brief was pasted: compose and publish one original symphony for each composer in the Missing Works catalogue who has no completed symphony, one composer at a time, claiming each open symphony request through the admin command, publishing live drafts early, testing every movement in the real browser player, writing a notebook and a public composition log, deploying an atomic release, and completing the request only after the public work is verified. Every work must be labelled an original AI-composed homage.]\n\nNOW I know I said to do all composers, but how about we actually do half of the composers in each section? just to save some money.",
+   "notes": [
+    "the pasted batch brief is summarised in brackets; the last sentence is verbatim"
+   ],
+   "id": "entry-0001"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:14:01.000Z",
+   "kind": "tool",
+   "speaker": "Queue claim",
+   "text": "GET /api/requests -> schumann:symphony:1 status open, votes 0; no request in status composing\nmissing-works-admin start schumann:symphony:1",
+   "notes": [
+    "access details omitted"
+   ],
+   "id": "entry-0002"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:14:01.000Z",
+   "kind": "result",
+   "speaker": "Queue claim",
+   "text": "started schumann:symphony:1",
+   "notes": [],
+   "id": "entry-0003"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:14:01.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "Composition brief — Schumann’s Missing Symphony (work id schumann-symphony-1)\n\nA four-movement symphony in F minor that ends in F major, a key Schumann did not use for a symphony. New music in his manner; no theme is taken from him.\n\nOrchestra (13 staves, sounding pitch): pairs of flutes, oboes, clarinets and bassoons; four horns and two trumpets (valve instruments, written chromatically); three trombones; timpani in F and C; strings.\n\nThe whole work grows from a four-note motto: F, A flat, G, C (up a third, down a step, up a fourth).\nI. Ziemlich langsam – Lebhaft, F minor. The horns state the motto over trombones; the fast movement turns it into an impetuous dotted theme, sets a long clarinet melody in A flat against it, and closes its exposition with the motto triumphant in the major. Development with a fugato on the motto; the reprise brings the second theme in F major, but the coda falls back to the minor.\nII. Romanze, D flat major, 3/4: a song for clarinet and bassoon in octaves over plucked strings, around a chorale for the trombones built on the motto.\nIII. Scherzo, F minor, with cross-rhythms, and a gentler Trio in D flat.\nIV. Langsam – Lebhaft, F major: a slow bridge on the motto, then a finale whose march-like theme is the motto in the major, with a broad chorale at the climax and a faster coda.\n\nTarget length about sixteen minutes. Stylistic approach: cyclic motto, dotted and syncopated rhythms, thick doubling, a brass chorale. Compromise known from the start: tunes, motto transformations, the fugato, chorale and the chord of every bar are written by hand; a program scores quiet, woodwind and full-orchestra passages from the chord plan.",
+   "notes": [],
+   "id": "entry-0004"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:14:14.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. First movement; after the first build a misplaced trombone entry in the fugato and two parallels in the coda were corrected.",
+   "notes": [],
+   "id": "entry-0005"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:14:14.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Ziemlich langsam – Lebhaft: 132 bars written, 339s played; activity fl:59 ob:101 cl:119 bn:56 hn:146 tpt:97 tbn:158 timp:25 v1:91 v2:96 va:96 vc:77 cb:77\n    validator ok: 132 bars, 338.9s, 13 voices; abcjs playback matches the model (8900 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0006"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:14:14.742Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 1 with this public change note:\nFirst playable draft: the whole first movement — the motto in horns and trombones, an impetuous F minor Lebhaft made from it, a clarinet second theme in A flat, a fugato on the motto in the development, and a coda that falls back to the minor.",
+   "notes": [],
+   "id": "entry-0007"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:14:22.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=schumann-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0008"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:14:22.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Ziemlich langsam – Lebhaft132 bars | load 2.7s | state playing | clock 0:01 / 5:39 | {\"peak\":0.9,\"seconds\":339.1,\"rms\":0.1126,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III:57 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0009"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:14:22.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "First playable Schumann draft is live: https://lost-compositions.exe.xyz/work.html?draft=schumann-symphony-1 (first movement, about 5:40). Writing the Romanze, Scherzo and Finale.",
+   "notes": [],
+   "id": "entry-0010"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:16:55.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1, m2, m3, m4: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. All four movements. Fixes after the first build of II–IV: a G natural that should have been G flat in the Scherzo's second part, nine parallel octaves/fifths between first violins and bass (three of them under the Finale's chorale, whose bass was re-harmonised), and a held note against the second theme's bass.",
+   "notes": [],
+   "id": "entry-0011"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:16:55.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Ziemlich langsam – Lebhaft: 132 bars written, 339s played; activity fl:59 ob:101 cl:119 bn:56 hn:146 tpt:97 tbn:158 timp:25 v1:91 v2:96 va:96 vc:77 cb:77\n    validator ok: 132 bars, 338.9s, 13 voices; abcjs playback matches the model (8909 notes)\n    parallel fifths/octaves v1/vc: 0\n  II. Romanze: Andante: 54 bars written, 154s played; activity fl:28 ob:0 cl:87 bn:102 hn:37 tbn:44 v1:72 v2:61 va:75 vc:28 cb:28\n    validator ok: 54 bars, 154.3s, 11 voices; abcjs playback matches the model (668 notes)\n    parallel fifths/octaves v1/vc: 0\n    parallel fifths/octaves cl/vc: 0\n  III. Scherzo: Lebhaft – Trio: 120 bars written, 182s played; activity fl:62 ob:90 cl:135 bn:68 hn:75 tpt:30 tbn:136 timp:11 v1:71 v2:92 va:92 vc:74 cb:74\n    validator ok: 120 bars, 182.1s, 13 voices; abcjs playback matches the model (3750 notes)\n    parallel fifths/octaves v1/vc: 0\n  IV. Langsam – Lebhaft: 144 bars written, 266s played; activity fl:75 ob:132 cl:132 bn:63 hn:172 tpt:127 tbn:191 timp:37 v1:93 v2:100 va:100 vc:83 cb:83\n    validator ok: 144 bars, 265.8s, 13 voices; abcjs playback matches the model (8735 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0012"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:17:13.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m2, m3: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Revision pass: in the Romanze's return the oboe (silent in the first draft of that movement) now doubles the violins; the Scherzo's reprise begins in clarinet and flute instead of repeating the string scoring.",
+   "notes": [],
+   "id": "entry-0013"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:17:13.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Romanze: Andante: 54 bars written, 154s played; activity fl:28 ob:28 cl:87 bn:102 hn:37 tbn:44 v1:72 v2:61 va:75 vc:28 cb:28\n    validator ok: 54 bars, 154.3s, 11 voices; abcjs playback matches the model (712 notes)\n    parallel fifths/octaves v1/vc: 0\n    parallel fifths/octaves cl/vc: 0\n  III. Scherzo: Lebhaft – Trio: 120 bars written, 182s played; activity fl:66 ob:90 cl:139 bn:68 hn:75 tpt:30 tbn:136 timp:11 v1:71 v2:92 va:92 vc:74 cb:74\n    validator ok: 120 bars, 182.1s, 13 voices; abcjs playback matches the model (3811 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0014"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:17:13.265Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 2 with this public change note:\nFirst complete draft: added the Romanze in D flat with its trombone chorale, the F minor Scherzo and Trio, and the Finale in F major, which turns the motto and first-movement theme to the major and recalls the second theme. A revision pass follows.",
+   "notes": [],
+   "id": "entry-0015"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:17:14.479Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 3 with this public change note:\nRevision: the oboe joins the violins in the Romanze's return, and the Scherzo's reprise opens in clarinet and flute. This revision matches the published score.",
+   "notes": [],
+   "id": "entry-0016"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:17:33.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=schumann-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0017"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:17:33.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Ziemlich langsam – Lebhaft132 bars | load 1.7s | state playing | clock 0:01 / 5:39 | {\"peak\":0.9,\"seconds\":339.1,\"rms\":0.1128,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III:57 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   II. Romanze: Andante54 bars | load 0.8s | state playing | clock 0:01 / 2:34 | {\"peak\":0.9,\"seconds\":154.5,\"rms\":0.1183,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tbn. I–III:57 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   III. Scherzo: Lebhaft – Trio120 bars | load 0.6s | state playing | clock 0:01 / 3:02 | {\"peak\":0.9,\"seconds\":182.3,\"rms\":0.1089,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III:57 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   IV. Langsam – Lebhaft144 bars | load 1.3s | state playing | clock 0:01 / 4:26 | {\"peak\":0.9,\"seconds\":266,\"rms\":0.1122,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III:57 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0018"
+  }
+ ]
+}

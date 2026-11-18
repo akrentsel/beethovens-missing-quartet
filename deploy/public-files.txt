@@ -114,3 +114,10 @@ scores/schubert-symphony-1-i.abc
 scores/schubert-symphony-1-ii.abc
 scores/schubert-symphony-1-iii.abc
 scores/schubert-symphony-1-iv.abc
+schumann-symphony-1-notebook.html
+schumann-symphony-1-transcript.html
+schumann-symphony-1-transcript.json
+scores/schumann-symphony-1-i.abc
+scores/schumann-symphony-1-ii.abc
+scores/schumann-symphony-1-iii.abc
+scores/schumann-symphony-1-iv.abc

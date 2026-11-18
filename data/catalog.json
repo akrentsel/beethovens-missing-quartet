@@ -951,6 +951,50 @@
           "durationSeconds": 143
         }
       ]
+    },
+    {
+      "id": "schumann-symphony-1",
+      "composerId": "schumann",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Schumann’s Missing Symphony",
+      "subtitle": "Symphony in F minor",
+      "description": "Four movements bound together by a four-note motto (F, A flat, G, C): an impetuous F minor first movement, a Romanze around a trombone chorale, a Scherzo of cross-rhythms, and a Finale that turns the motto and the first theme to F major. For double woodwind, four horns, trumpets, trombones, timpani and strings. A new AI-composed homage, not a rediscovered work by Schumann.",
+      "durationSeconds": 941,
+      "date": "2026-11-18",
+      "status": "completed",
+      "notebook": "schumann-symphony-1-notebook.html",
+      "transcript": "schumann-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Ziemlich langsam – Lebhaft",
+          "note": "The motto in horns and trombones, then an impetuous F minor movement built from it.",
+          "source": "scores/schumann-symphony-1-i.abc",
+          "durationSeconds": 339
+        },
+        {
+          "id": "ii",
+          "label": "II. Romanze: Andante",
+          "note": "D flat major: a song for clarinet and bassoon around a quiet brass chorale on the motto.",
+          "source": "scores/schumann-symphony-1-ii.abc",
+          "durationSeconds": 154
+        },
+        {
+          "id": "iii",
+          "label": "III. Scherzo: Lebhaft – Trio",
+          "note": "F minor broken chords and hammered cross-rhythms; a calm Trio in D flat.",
+          "source": "scores/schumann-symphony-1-iii.abc",
+          "durationSeconds": 182
+        },
+        {
+          "id": "iv",
+          "label": "IV. Langsam – Lebhaft",
+          "note": "F major: the motto and first theme turned to the major, with a chorale and a faster coda.",
+          "source": "scores/schumann-symphony-1-iv.abc",
+          "durationSeconds": 266
+        }
+      ]
     }
   ]
 }

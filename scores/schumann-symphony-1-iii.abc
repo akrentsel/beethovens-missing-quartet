@@ -1,0 +1,261 @@
+%%label III. Scherzo: Lebhaft – Trio
+%%note F minor. A scherzo in broken chords with hammered cross-rhythms over a held C; the Trio in D flat is a calm song for flute and clarinet.
+X:1
+T:Schumann’s Missing Symphony
+T:III. Scherzo: Lebhaft – Trio
+C:Claude (AI), in the manner of Robert Schumann
+M:3/4
+L:1/8
+Q:"Lebhaft" 1/4=184
+%%score [fl ob cl bn] [hn tpt tbn] timp [v1 v2 va vc cb]
+% Original AI-composed homage. The score is written at sounding pitch.
+V:fl clef=treble name="Fl. I, II"
+V:ob clef=treble name="Ob. I, II"
+V:cl clef=treble name="Cl. I, II"
+V:bn clef=bass name="Bn. I, II"
+V:hn clef=treble name="Hn. I–IV"
+V:tpt clef=treble name="Tpt. I, II"
+V:tbn clef=bass name="Tbn. I–III"
+V:timp clef=bass name="Timp."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:Fm
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tpt
+%%MIDI program 56
+V:tbn
+%%MIDI program 57
+V:timp
+%%MIDI program 47
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-8: [Scherzo A1] Scherzo: broken chords in the strings
+[V:fl] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:ob] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:bn] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tpt] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tbn] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:timp] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] |: !mf!f2 a2 c'2 | b2 g2 =e2 | f2 a2 c'2 | =e'4 g'2 | f'2 c'2 a2 | d'2 b2 d'2 | g2 c'2 =e2 | f4 z2 |
+[V:v2] |: !mf!A2 A2 A2 | B2 B2 B2 | A2 A2 A2 | G2 G2 G2 | A2 A2 A2 | B2 B2 B2 | B2 B2 B2 | A2 A2 A2 |
+[V:va] |: !mf!A,6 | B,6 | A,6 | =E,6 | A,6 | D6 | B,6 | A,6 |
+[V:vc] |: !mf!F,,2 z4 | C,,2 z4 | F,,2 z4 | C,,2 z4 | F,,2 z4 | B,,2 z4 | C,2 z4 | F,2 z4 |
+[V:cb] |: !mf!F,,,2 z4 | C,,2 z4 | F,,,2 z4 | C,,2 z4 | F,,,2 z4 | B,,,2 z4 | C,,2 z4 | F,,2 z4 |
+% bars 9-16: [Scherzo A2] Full orchestra, through A flat and back
+[V:fl] !f!a2 c'2 e'2 | d'2 b2 g2 | a2 c'2 e'2 | e'4 g'2 | f'2 c'2 a2 | f'2 d'2 b2 | g2 b2 =e'2 | f'4 z2 :|
+[V:ob] !f![Ac]6 | [Gd]6 | [Ac]6 | [GB]6 | [Ac]6 | [FB]6 | [=EB]6 | [FA]6 :|
+[V:cl] !f![CE]6 | [DG]6 | [CA]6 | [B,G]6 | [CA]6 | [B,F]6 | [B,=E]6 | [A,F]6 :|
+[V:bn] !f!A,,2 A,,2 A,,2 | E,,2 E,,2 E,,2 | A,,2 A,,2 A,,2 | E,,2 E,,2 E,,2 | F,,2 F,,2 F,,2 | D,,2 D,,2 D,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 :|
+[V:hn] !f![CE]2 z4 | [DG]2 z4 | [CA]2 z4 | [B,G]2 z4 | [CA]2 z4 | [B,F]2 z4 | [B,=E]2 z4 | [A,F]2 z4 :|
+[V:tpt] !f![Ac]2 z4 | [Gd]2 z4 | [Ac]2 z4 | [GB]2 z4 | [Ac]2 z4 | [FB]2 z4 | [=EB]2 z4 | [FA]2 z4 :|
+[V:tbn] !f![E,A,C]6 | [E,G,D]6 | [E,A,C]6 | [E,G,B,]6 | [F,A,C]6 | [F,B,D]6 | [=E,B,C]6 | [F,A,C]6 :|
+[V:timp] z2 z4 | z2 z4 | z2 z4 | z2 z4 | !f!F,,2 z4 | z2 z4 | C,2 z4 | F,,2 z4 :|
+[V:v1] !f!a2 c'2 e'2 | d'2 b2 g2 | a2 c'2 e'2 | e'4 g'2 | f'2 c'2 a2 | f'2 d'2 b2 | g2 b2 =e'2 | f'4 z2 :|
+[V:v2] !f!E2 E2 E2 | G2 G2 G2 | A2 A2 A2 | G2 G2 G2 | A2 A2 A2 | F2 F2 F2 | =E2 E2 E2 | F2 F2 F2 :|
+[V:va] !f!C2 C2 C2 | D2 D2 D2 | C2 C2 C2 | B,2 B,2 B,2 | C2 C2 C2 | B,2 B,2 B,2 | B,2 B,2 B,2 | A,2 A,2 A,2 :|
+[V:vc] !f!A,,2 A,,2 A,,2 | E,,2 E,,2 E,,2 | A,,2 A,,2 A,,2 | E,,2 E,,2 E,,2 | F,,2 F,,2 F,,2 | D,,2 D,,2 D,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 :|
+[V:cb] !f!A,,,2 A,,,2 A,,,2 | E,,2 E,,2 E,,2 | A,,,2 A,,,2 A,,,2 | E,,2 E,,2 E,,2 | F,,,2 F,,,2 F,,,2 | D,,2 D,,2 D,,2 | C,,2 C,,2 C,,2 | F,,,2 F,,,2 F,,,2 :|
+% bars 17-24: [Scherzo B1] Second part: the clarinet turns the figure to D flat and B flat minor
+[V:fl] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:ob] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] |: !mp!f2 a2 d'2 | c'2 e'2 _g'2 | f'2 d'2 a2 | _g2 e2 c2 | f2 b2 d'2 | c'2 =a2 f2 | d'2 b2 f2 | =e2 g2 c'2 |
+[V:bn] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tpt] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tbn] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:timp] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] |: !p!A2 A2 A2 | A2 A2 A2 | A2 A2 A2 | A2 A2 A2 | B2 B2 B2 | c2 c2 c2 | B2 B2 B2 | B2 B2 B2 |
+[V:v2] |: !p!F2 F2 F2 | _G2 G2 G2 | F2 F2 F2 | _G2 G2 G2 | F2 F2 F2 | F2 F2 F2 | F2 F2 F2 | =E2 E2 E2 |
+[V:va] |: !p!D2 D2 D2 | E2 E2 E2 | D2 D2 D2 | C2 C2 C2 | D2 D2 D2 | E2 E2 E2 | D2 D2 D2 | C2 C2 C2 |
+[V:vc] |: !p!D,,2 z4 | C,,2 z4 | D,,2 z4 | A,,2 z4 | B,,2 z4 | =A,,2 z4 | B,,2 z4 | C,2 z4 |
+[V:cb] |: !p!D,,2 z4 | C,,2 z4 | D,,2 z4 | A,,,2 z4 | B,,,2 z4 | =A,,,2 z4 | B,,,2 z4 | C,,2 z4 |
+% bars 25-32: [Scherzo B2] The full orchestra hammers over a held C, and breaks off
+[V:fl] !ff!=e'2 g'2 b'2 | a'2 f'2 c'2 | =e'2 g'2 b'2 | a'2 f'2 c'2 | g'2 =e'2 c'2 | b2 g2 =e2 | c2 z4 | z6 |
+[V:ob] !ff![B=e]6 | [Af]6 | [B=e]6 | [Af]6 | [B=e]6 | [B=e]6 | [B=e]6 | [B=e]6 |
+[V:cl] !ff![=EB]6 | [FA]6 | [=EB]6 | [FA]6 | [=EB]6 | [=EB]6 | [=EB]6 | [=EB]6 |
+[V:bn] !ff!C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 |
+[V:hn] !ff![B,=E]2 z4 | [A,F]2 z4 | [B,=E]2 z4 | [A,F]2 z4 | [B,=E]2 z4 | [B,=E]2 z4 | [B,=E]2 z4 | [B,=E]2 z4 |
+[V:tpt] !ff![=EB]2 z4 | [FA]2 z4 | [=EB]2 z4 | [FA]2 z4 | [=EB]2 z4 | [=EB]2 z4 | [=EB]2 z4 | [=EB]2 z4 |
+[V:tbn] !ff![=E,G,B,]6 | [F,A,C]6 | [=E,B,C]6 | [F,A,C]6 | [=E,B,C]6 | [=E,B,C]6 | [=E,B,C]6 | [=E,B,C]6 |
+[V:timp] !ff!C,2 z4 | C,2 z4 | C,2 z4 | C,2 z4 | C,2 z4 | C,2 z4 | C,2 z4 | C,2 z4 |
+[V:v1] !ff!=e'2 g'2 b'2 | a'2 f'2 c'2 | =e'2 g'2 b'2 | a'2 f'2 c'2 | g'2 =e'2 c'2 | b2 g2 =e2 | c2 z4 | z6 |
+[V:v2] !ff!=E2 E2 E2 | F2 F2 F2 | =E2 E2 E2 | F2 F2 F2 | =E2 E2 E2 | =E2 E2 E2 | =E2 E2 E2 | =E2 E2 E2 |
+[V:va] !ff!B,2 B,2 B,2 | A,2 A,2 A,2 | B,2 B,2 B,2 | A,2 A,2 A,2 | B,2 B,2 B,2 | B,2 B,2 B,2 | B,2 B,2 B,2 | B,2 B,2 B,2 |
+[V:vc] !ff!C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 |
+[V:cb] !ff!C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 |
+% bars 33-40: [Scherzo B3] The opening returns for everyone
+[V:fl] !ff!f2 a2 c'2 | b2 g2 =e2 | f2 a2 c'2 | =e'4 g'2 | f'2 c'2 a2 | d'2 b2 d'2 | g2 c'2 =e2 | f4 z2 :|
+[V:ob] !ff![Ac]6 | [=EB]6 | [FA]6 | [=EG]6 | [FA]6 | [Fd]6 | [=EB]6 | [FA]6 :|
+[V:cl] !ff![FA]6 | [=EB]6 | [FA]6 | [=EG]6 | [FA]6 | [Fd]6 | [=EB]6 | [FA]6 :|
+[V:bn] !ff!F,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 | B,,2 B,,2 B,,2 | C,2 C,2 C,2 | F,2 F,2 F,2 :|
+[V:hn] !ff![A,C]2 z4 | [B,=E]2 z4 | [A,F]2 z4 | [G,=E]2 z4 | [A,F]2 z4 | [DF]2 z4 | [B,=E]2 z4 | [A,F]2 z4 :|
+[V:tpt] !ff![Ac]2 z4 | [=EB]2 z4 | [FA]2 z4 | [=EG]2 z4 | [FA]2 z4 | [Fd]2 z4 | [=EB]2 z4 | [FA]2 z4 :|
+[V:tbn] !ff![F,A,C]6 | [=E,B,C]6 | [F,A,C]6 | [=E,G,C]6 | [F,A,C]6 | [F,B,D]6 | [=E,B,C]6 | [F,A,C]6 :|
+[V:timp] !ff!F,,2 z4 | C,2 z4 | F,,2 z4 | C,2 z4 | F,,2 z4 | z2 z4 | C,2 z4 | F,,2 z4 :|
+[V:v1] !ff!f2 a2 c'2 | b2 g2 =e2 | f2 a2 c'2 | =e'4 g'2 | f'2 c'2 a2 | d'2 b2 d'2 | g2 c'2 =e2 | f4 z2 :|
+[V:v2] !ff!A2 A2 A2 | B2 B2 B2 | A2 A2 A2 | G2 G2 G2 | A2 A2 A2 | d2 d2 d2 | B2 B2 B2 | A2 A2 A2 :|
+[V:va] !ff!F2 F2 F2 | =E2 E2 E2 | F2 F2 F2 | =E2 E2 E2 | F2 F2 F2 | F2 F2 F2 | =E2 E2 E2 | F2 F2 F2 :|
+[V:vc] !ff!F,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 | B,,2 B,,2 B,,2 | C,2 C,2 C,2 | F,2 F,2 F,2 :|
+[V:cb] !ff!F,,,2 F,,,2 F,,,2 | C,,2 C,,2 C,,2 | F,,,2 F,,,2 F,,,2 | C,,2 C,,2 C,,2 | F,,,2 F,,,2 F,,,2 | B,,,2 B,,,2 B,,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 :|
+% bars 41-48: [Trio A] Trio: a calm song for clarinet and flute in D flat
+[V:fl] |: [K:Db] [Q:"Trio: ruhiger" 1/4=152] !p!f4 a2 | d'4 f'2 | e'4 c'2 | d'4 a2 | b4 d'2 | a4 f2 | g4 b2 | a4 z2 |
+[V:ob] |: [K:Db] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] |: [K:Db] !mp!f4 a2 | d'4 f'2 | e'4 c'2 | d'4 a2 | b4 d'2 | a4 f2 | g4 b2 | a4 z2 |
+[V:bn] |: [K:Db] !p!D,6 | D,6 | E,6 | F,6 | G,6 | F,6 | E,6 | A,6 |
+[V:hn] |: [K:Db] !p![DF]6 | [DF]6 | [CG]6 | [DA]6 | [DB]6 | [DA]6 | [EG]6 | [CG]6 |
+[V:tpt] |: [K:Db] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tbn] |: [K:Db] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:timp] |: [K:Db] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] |: [K:Db] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v2] |: [K:Db] z2 !pp!F2 F2 | z2 F2 F2 | z2 G2 G2 | z2 A2 A2 | z2 B2 B2 | z2 A2 A2 | z2 G2 G2 | z2 G2 G2 |
+[V:va] |: [K:Db] z2 !pp!D2 D2 | z2 D2 D2 | z2 C2 C2 | z2 D2 D2 | z2 D2 D2 | z2 D2 D2 | z2 E2 E2 | z2 C2 C2 |
+[V:vc] |: [K:Db] z2 !pp!D,,2 D,,2 | z2 D,,2 D,,2 | z2 E,,2 E,,2 | z2 F,,2 F,,2 | z2 G,,2 G,,2 | z2 F,,2 F,,2 | z2 E,,2 E,,2 | z2 A,,2 A,,2 |
+[V:cb] |: [K:Db] z2 !pp!D,,2 D,,2 | z2 D,,2 D,,2 | z2 E,,2 E,,2 | z2 F,,,2 F,,,2 | z2 G,,,2 G,,,2 | z2 F,,,2 F,,,2 | z2 E,,2 E,,2 | z2 A,,,2 A,,,2 |
+% bars 49-56
+[V:fl] f4 a2 | d'4 f'2 | e'4 g'2 | f'4 d'2 | b4 d'2 | g4 b2 | c'4 e2 | d4 z2 :|
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:cl] f4 a2 | d'4 f'2 | e'4 g'2 | f'4 d'2 | b4 d'2 | g4 b2 | c'4 e2 | d4 z2 :|
+[V:bn] D,6 | D,6 | E,6 | F,6 | G,6 | E,6 | A,6 | D,6 :|
+[V:hn] [DF]6 | [DF]6 | [CG]6 | [DA]6 | [DB]6 | [GB]6 | [CG]6 | [DF]6 :|
+[V:tpt] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:tbn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:timp] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:v1] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:v2] z2 F2 F2 | z2 F2 F2 | z2 G2 G2 | z2 A2 A2 | z2 B2 B2 | z2 B2 B2 | z2 c2 c2 | z2 A2 A2 :|
+[V:va] z2 D2 D2 | z2 D2 D2 | z2 C2 C2 | z2 D2 D2 | z2 D2 D2 | z2 G2 G2 | z2 G2 G2 | z2 F2 F2 :|
+[V:vc] z2 D,2 D,2 | z2 D,2 D,2 | z2 E,2 E,2 | z2 F,2 F,2 | z2 G,2 G,2 | z2 E,2 E,2 | z2 A,,2 A,,2 | z2 D,2 D,2 :|
+[V:cb] z2 D,,2 D,,2 | z2 D,,2 D,,2 | z2 E,,2 E,,2 | z2 F,,2 F,,2 | z2 G,,2 G,,2 | z2 E,,2 E,,2 | z2 A,,,2 A,,,2 | z2 D,,2 D,,2 :|
+% bars 57-64: [Trio B1] The strings take it into B flat minor
+[V:fl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] !pp![Bd]6 | [ce]6 | [df]6 | [__Bf]6 | [Bg]6 | [Ad]6 | [Ge]6 | [Gc]6 |
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tpt] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tbn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:timp] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] !mp!d'4 f'2 | c'4 =a2 | d'4 b2 | c'4 z2 | b4 d'2 | a4 f2 | g4 b2 | a4 c'2 |
+[V:v2] !p!F2 F2 F2 | E2 E2 E2 | F2 F2 F2 | F2 F2 F2 | G2 G2 G2 | A2 A2 A2 | G2 G2 G2 | G2 G2 G2 |
+[V:va] !p!D6 | E6 | D6 | __B,6 | B,6 | A,6 | G,6 | G,6 |
+[V:vc] !p!B,,6 | __B,,6 | B,,6 | F,,6 | G,,6 | F,,6 | E,,6 | A,,6 |
+[V:cb] !p!B,,,6 | __B,,,6 | B,,,6 | F,,,6 | G,,,6 | F,,,6 | E,,6 | A,,,6 |
+% bars 65-72: [Trio B2] And the winds bring it home
+[V:fl] !p!f4 a2 | d'4 f'2 | e'4 g'2 | f'4 d'2 | b4 d'2 | g4 b2 | c'4 e2 | d4 z2 ||
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 ||
+[V:cl] !mp!f4 a2 | d'4 f'2 | e'4 g'2 | f'4 d'2 | b4 d'2 | g4 b2 | c'4 e2 | d4 z2 ||
+[V:bn] !p!D,6 | D,6 | E,6 | F,6 | G,6 | E,6 | A,6 | D,6 ||
+[V:hn] !p![DF]6 | [DF]6 | [CG]6 | [DA]6 | [DB]6 | [GB]6 | [CG]6 | [DF]6 ||
+[V:tpt] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 ||
+[V:tbn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 ||
+[V:timp] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 ||
+[V:v1] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 ||
+[V:v2] z2 !pp!F2 F2 | z2 F2 F2 | z2 G2 G2 | z2 A2 A2 | z2 B2 B2 | z2 B2 B2 | z2 c2 c2 | z2 A2 A2 ||
+[V:va] z2 !pp!D2 D2 | z2 D2 D2 | z2 C2 C2 | z2 D2 D2 | z2 D2 D2 | z2 G2 G2 | z2 G2 G2 | z2 F2 F2 ||
+[V:vc] z2 !pp!D,,2 D,,2 | z2 D,,2 D,,2 | z2 E,,2 E,,2 | z2 F,,2 F,,2 | z2 G,,2 G,,2 | z2 E,,2 E,,2 | z2 A,,2 A,,2 | z2 D,2 D,2 ||
+[V:cb] z2 !pp!D,,2 D,,2 | z2 D,,2 D,,2 | z2 E,,2 E,,2 | z2 F,,,2 F,,,2 | z2 G,,,2 G,,,2 | z2 E,,2 E,,2 | z2 A,,,2 A,,,2 | z2 D,,2 D,,2 ||
+% bars 73-80: [Scherzo A1 da capo] The scherzo returns without repeats, its opening now given to clarinet and flute
+[V:fl] [K:Fm] [Q:"Lebhaft" 1/4=184] !mf!f2 a2 c'2 | b2 g2 =e2 | f2 a2 c'2 | =e'4 g'2 | f'2 c'2 a2 | d'2 b2 d'2 | g2 c'2 =e2 | f4 z2 |
+[V:ob] [K:Fm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] [K:Fm] !mf!f2 a2 c'2 | b2 g2 =e2 | f2 a2 c'2 | =e'4 g'2 | f'2 c'2 a2 | d'2 b2 d'2 | g2 c'2 =e2 | f4 z2 |
+[V:bn] [K:Fm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] [K:Fm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tpt] [K:Fm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tbn] [K:Fm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:timp] [K:Fm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] [K:Fm] !mf!A2 A2 A2 | B2 B2 B2 | A2 A2 A2 | G2 G2 G2 | A2 A2 A2 | B2 B2 B2 | B2 B2 B2 | A2 A2 A2 |
+[V:v2] [K:Fm] !mf!F2 F2 F2 | =E2 E2 E2 | F2 F2 F2 | =E2 E2 E2 | F2 F2 F2 | F2 F2 F2 | =E2 E2 E2 | F2 F2 F2 |
+[V:va] [K:Fm] !mf!C2 C2 C2 | C2 C2 C2 | C2 C2 C2 | C2 C2 C2 | C2 C2 C2 | D2 D2 D2 | C2 C2 C2 | C2 C2 C2 |
+[V:vc] [K:Fm] !mf!F,,2 z4 | C,,2 z4 | F,,2 z4 | C,,2 z4 | F,,2 z4 | B,,2 z4 | C,2 z4 | F,2 z4 |
+[V:cb] [K:Fm] !mf!F,,,2 z4 | C,,2 z4 | F,,,2 z4 | C,,2 z4 | F,,,2 z4 | B,,,2 z4 | C,,2 z4 | F,,2 z4 |
+% bars 81-88: [Scherzo A2 da capo] Full orchestra, through A flat and back
+[V:fl] !f!a2 c'2 e'2 | d'2 b2 g2 | a2 c'2 e'2 | e'4 g'2 | f'2 c'2 a2 | f'2 d'2 b2 | g2 b2 =e'2 | f'4 z2 |
+[V:ob] !f![Ac]6 | [Gd]6 | [Ac]6 | [GB]6 | [Ac]6 | [FB]6 | [=EB]6 | [FA]6 |
+[V:cl] !f![CE]6 | [DG]6 | [CA]6 | [B,G]6 | [CA]6 | [B,F]6 | [B,=E]6 | [A,F]6 |
+[V:bn] !f!A,,2 A,,2 A,,2 | E,,2 E,,2 E,,2 | A,,2 A,,2 A,,2 | E,,2 E,,2 E,,2 | F,,2 F,,2 F,,2 | D,,2 D,,2 D,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 |
+[V:hn] !f![CE]2 z4 | [DG]2 z4 | [CA]2 z4 | [B,G]2 z4 | [CA]2 z4 | [B,F]2 z4 | [B,=E]2 z4 | [A,F]2 z4 |
+[V:tpt] !f![Ac]2 z4 | [Gd]2 z4 | [Ac]2 z4 | [GB]2 z4 | [Ac]2 z4 | [FB]2 z4 | [=EB]2 z4 | [FA]2 z4 |
+[V:tbn] !f![E,A,C]6 | [E,G,D]6 | [E,A,C]6 | [E,G,B,]6 | [F,A,C]6 | [F,B,D]6 | [=E,B,C]6 | [F,A,C]6 |
+[V:timp] z2 z4 | z2 z4 | z2 z4 | z2 z4 | !f!F,,2 z4 | z2 z4 | C,2 z4 | F,,2 z4 |
+[V:v1] !f!a2 c'2 e'2 | d'2 b2 g2 | a2 c'2 e'2 | e'4 g'2 | f'2 c'2 a2 | f'2 d'2 b2 | g2 b2 =e'2 | f'4 z2 |
+[V:v2] !f!E2 E2 E2 | G2 G2 G2 | A2 A2 A2 | G2 G2 G2 | A2 A2 A2 | F2 F2 F2 | =E2 E2 E2 | F2 F2 F2 |
+[V:va] !f!C2 C2 C2 | D2 D2 D2 | C2 C2 C2 | B,2 B,2 B,2 | C2 C2 C2 | B,2 B,2 B,2 | B,2 B,2 B,2 | A,2 A,2 A,2 |
+[V:vc] !f!A,,2 A,,2 A,,2 | E,,2 E,,2 E,,2 | A,,2 A,,2 A,,2 | E,,2 E,,2 E,,2 | F,,2 F,,2 F,,2 | D,,2 D,,2 D,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 |
+[V:cb] !f!A,,,2 A,,,2 A,,,2 | E,,2 E,,2 E,,2 | A,,,2 A,,,2 A,,,2 | E,,2 E,,2 E,,2 | F,,,2 F,,,2 F,,,2 | D,,2 D,,2 D,,2 | C,,2 C,,2 C,,2 | F,,,2 F,,,2 F,,,2 |
+% bars 89-96: [Scherzo B1 da capo] Second part: the clarinet turns the figure to D flat and B flat minor
+[V:fl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cl] !mp!f2 a2 d'2 | c'2 e'2 _g'2 | f'2 d'2 a2 | _g2 e2 c2 | f2 b2 d'2 | c'2 =a2 f2 | d'2 b2 f2 | =e2 g2 c'2 |
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tpt] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tbn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:timp] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] !p!A2 A2 A2 | A2 A2 A2 | A2 A2 A2 | A2 A2 A2 | B2 B2 B2 | c2 c2 c2 | B2 B2 B2 | B2 B2 B2 |
+[V:v2] !p!F2 F2 F2 | _G2 G2 G2 | F2 F2 F2 | _G2 G2 G2 | F2 F2 F2 | F2 F2 F2 | F2 F2 F2 | =E2 E2 E2 |
+[V:va] !p!D2 D2 D2 | E2 E2 E2 | D2 D2 D2 | C2 C2 C2 | D2 D2 D2 | E2 E2 E2 | D2 D2 D2 | C2 C2 C2 |
+[V:vc] !p!D,,2 z4 | C,,2 z4 | D,,2 z4 | A,,2 z4 | B,,2 z4 | =A,,2 z4 | B,,2 z4 | C,2 z4 |
+[V:cb] !p!D,,2 z4 | C,,2 z4 | D,,2 z4 | A,,,2 z4 | B,,,2 z4 | =A,,,2 z4 | B,,,2 z4 | C,,2 z4 |
+% bars 97-104: [Scherzo B2 da capo] The full orchestra hammers over a held C, and breaks off
+[V:fl] !ff!=e'2 g'2 b'2 | a'2 f'2 c'2 | =e'2 g'2 b'2 | a'2 f'2 c'2 | g'2 =e'2 c'2 | b2 g2 =e2 | c2 z4 | z6 |
+[V:ob] !ff![B=e]6 | [Af]6 | [B=e]6 | [Af]6 | [B=e]6 | [B=e]6 | [B=e]6 | [B=e]6 |
+[V:cl] !ff![=EB]6 | [FA]6 | [=EB]6 | [FA]6 | [=EB]6 | [=EB]6 | [=EB]6 | [=EB]6 |
+[V:bn] !ff!C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 |
+[V:hn] !ff![B,=E]2 z4 | [A,F]2 z4 | [B,=E]2 z4 | [A,F]2 z4 | [B,=E]2 z4 | [B,=E]2 z4 | [B,=E]2 z4 | [B,=E]2 z4 |
+[V:tpt] !ff![=EB]2 z4 | [FA]2 z4 | [=EB]2 z4 | [FA]2 z4 | [=EB]2 z4 | [=EB]2 z4 | [=EB]2 z4 | [=EB]2 z4 |
+[V:tbn] !ff![=E,G,B,]6 | [F,A,C]6 | [=E,B,C]6 | [F,A,C]6 | [=E,B,C]6 | [=E,B,C]6 | [=E,B,C]6 | [=E,B,C]6 |
+[V:timp] !ff!C,2 z4 | C,2 z4 | C,2 z4 | C,2 z4 | C,2 z4 | C,2 z4 | C,2 z4 | C,2 z4 |
+[V:v1] !ff!=e'2 g'2 b'2 | a'2 f'2 c'2 | =e'2 g'2 b'2 | a'2 f'2 c'2 | g'2 =e'2 c'2 | b2 g2 =e2 | c2 z4 | z6 |
+[V:v2] !ff!=E2 E2 E2 | F2 F2 F2 | =E2 E2 E2 | F2 F2 F2 | =E2 E2 E2 | =E2 E2 E2 | =E2 E2 E2 | =E2 E2 E2 |
+[V:va] !ff!B,2 B,2 B,2 | A,2 A,2 A,2 | B,2 B,2 B,2 | A,2 A,2 A,2 | B,2 B,2 B,2 | B,2 B,2 B,2 | B,2 B,2 B,2 | B,2 B,2 B,2 |
+[V:vc] !ff!C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 |
+[V:cb] !ff!C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 |
+% bars 105-112: [Scherzo B3 da capo] The opening returns for everyone
+[V:fl] !ff!f2 a2 c'2 | b2 g2 =e2 | f2 a2 c'2 | =e'4 g'2 | f'2 c'2 a2 | d'2 b2 d'2 | g2 c'2 =e2 | f4 z2 |
+[V:ob] !ff![Ac]6 | [=EB]6 | [FA]6 | [=EG]6 | [FA]6 | [Fd]6 | [=EB]6 | [FA]6 |
+[V:cl] !ff![FA]6 | [=EB]6 | [FA]6 | [=EG]6 | [FA]6 | [Fd]6 | [=EB]6 | [FA]6 |
+[V:bn] !ff!F,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 | B,,2 B,,2 B,,2 | C,2 C,2 C,2 | F,2 F,2 F,2 |
+[V:hn] !ff![A,C]2 z4 | [B,=E]2 z4 | [A,F]2 z4 | [G,=E]2 z4 | [A,F]2 z4 | [DF]2 z4 | [B,=E]2 z4 | [A,F]2 z4 |
+[V:tpt] !ff![Ac]2 z4 | [=EB]2 z4 | [FA]2 z4 | [=EG]2 z4 | [FA]2 z4 | [Fd]2 z4 | [=EB]2 z4 | [FA]2 z4 |
+[V:tbn] !ff![F,A,C]6 | [=E,B,C]6 | [F,A,C]6 | [=E,G,C]6 | [F,A,C]6 | [F,B,D]6 | [=E,B,C]6 | [F,A,C]6 |
+[V:timp] !ff!F,,2 z4 | C,2 z4 | F,,2 z4 | C,2 z4 | F,,2 z4 | z2 z4 | C,2 z4 | F,,2 z4 |
+[V:v1] !ff!f2 a2 c'2 | b2 g2 =e2 | f2 a2 c'2 | =e'4 g'2 | f'2 c'2 a2 | d'2 b2 d'2 | g2 c'2 =e2 | f4 z2 |
+[V:v2] !ff!A2 A2 A2 | B2 B2 B2 | A2 A2 A2 | G2 G2 G2 | A2 A2 A2 | d2 d2 d2 | B2 B2 B2 | A2 A2 A2 |
+[V:va] !ff!F2 F2 F2 | =E2 E2 E2 | F2 F2 F2 | =E2 E2 E2 | F2 F2 F2 | F2 F2 F2 | =E2 E2 E2 | F2 F2 F2 |
+[V:vc] !ff!F,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 | B,,2 B,,2 B,,2 | C,2 C,2 C,2 | F,2 F,2 F,2 |
+[V:cb] !ff!F,,,2 F,,,2 F,,,2 | C,,2 C,,2 C,,2 | F,,,2 F,,,2 F,,,2 | C,,2 C,,2 C,,2 | F,,,2 F,,,2 F,,,2 | B,,,2 B,,,2 B,,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 |
+% bars 113-120: [Coda] A short coda on the tonic
+[V:fl] !ff!f2 a2 c'2 | f'2 c'2 a2 | g2 b2 =e'2 | g'2 c'2 =e'2 | f'4 z2 | f4 z2 | z6 | f4 z2 |]
+[V:ob] !ff![Ac]6 | [Ac]6 | [=EB]6 | [=EB]6 | [FA]6 | [FA]6 | [FA]6 | [FA]6 |]
+[V:cl] !ff![FA]6 | [FA]6 | [=EB]6 | [=EB]6 | [FA]6 | [FA]6 | [FA]6 | [FA]6 |]
+[V:bn] !ff!F,,2 F,,2 F,,2 | F,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 | F,,2 F,,2 F,,2 | F,,2 F,,2 F,,2 | F,,2 F,,2 F,,2 |]
+[V:hn] !ff![A,C]2 z4 | [A,C]2 z4 | [B,=E]2 z4 | [B,=E]2 z4 | [A,F]2 z4 | [A,F]2 z4 | [A,F]2 z4 | [A,F]2 z4 |]
+[V:tpt] !ff![Ac]2 z4 | [Ac]2 z4 | [=EB]2 z4 | [=EB]2 z4 | [FA]2 z4 | [FA]2 z4 | [FA]2 z4 | [FA]2 z4 |]
+[V:tbn] !ff![F,A,C]6 | [F,A,C]6 | [=E,B,C]6 | [=E,B,C]6 | [F,A,C]6 | [F,A,C]6 | [F,A,C]6 | [F,A,C]6 |]
+[V:timp] !ff!F,,2 z4 | F,,2 z4 | C,2 z4 | C,2 z4 | F,,2 z4 | F,,2 z4 | F,,2 z4 | F,,2 z4 |]
+[V:v1] !ff!f2 a2 c'2 | f'2 c'2 a2 | g2 b2 =e'2 | g'2 c'2 =e'2 | f'4 z2 | f4 z2 | z6 | f4 z2 |]
+[V:v2] !ff!A2 A2 A2 | A2 A2 A2 | B2 B2 B2 | B2 B2 B2 | A2 A2 A2 | A2 A2 A2 | A2 A2 A2 | A2 A2 A2 |]
+[V:va] !ff!F2 F2 F2 | F2 F2 F2 | =E2 E2 E2 | =E2 E2 E2 | F2 F2 F2 | F2 F2 F2 | F2 F2 F2 | F2 F2 F2 |]
+[V:vc] !ff!F,,2 F,,2 F,,2 | F,,2 F,,2 F,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | F,,2 F,,2 F,,2 | F,,2 F,,2 F,,2 | F,,2 F,,2 F,,2 | F,,2 F,,2 F,,2 |]
+[V:cb] !ff!F,,,2 F,,,2 F,,,2 | F,,,2 F,,,2 F,,,2 | C,,2 C,,2 C,,2 | C,,2 C,,2 C,,2 | F,,,2 F,,,2 F,,,2 | F,,,2 F,,,2 F,,,2 | F,,,2 F,,,2 F,,,2 | F,,,2 F,,,2 F,,,2 |]
