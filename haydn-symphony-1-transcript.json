@@ -1,0 +1,218 @@
+{
+ "title": "Haydn’s Missing Symphony — public composition log",
+ "scope": "The log the composing agent (Claude) kept while writing this work: the request, its progress messages, the commands it ran on the score and their output, draft publications and test results, up to the publication step. It was written during the work, entry by entry; it is not an automatic export of the whole session, and the same session composed other works whose entries are not included here.",
+ "policy": "Messages and tool output are recorded as they occurred, shortened where marked. Private internal reasoning, credentials, access details, private paths and unrelated conversation are not included. Statements made during the work may be provisional or mistaken; later corrections remain in the log.",
+ "sessions": {
+  "main": "Composition session"
+ },
+ "entries": [
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:52:44.000Z",
+   "kind": "message",
+   "speaker": "User",
+   "text": "[A long batch brief was pasted: compose and publish one original symphony for each composer in the Missing Works catalogue who has no completed symphony, one composer at a time, claiming each open symphony request through the admin command, publishing live drafts early, testing every movement in the real browser player, writing a notebook and a public composition log, deploying an atomic release, and completing the request only after the public work is verified. Every work must be labelled an original AI-composed homage.]\n\nNOW I know I said to do all composers, but how about we actually do half of the composers in each section? just to save some money.",
+   "notes": [
+    "the pasted batch brief is summarised in brackets; the last sentence is verbatim"
+   ],
+   "id": "entry-0001"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:52:44.000Z",
+   "kind": "tool",
+   "speaker": "Queue claim",
+   "text": "GET /api/requests -> haydn:symphony:1 status open, votes 0; no request in status composing\nmissing-works-admin start haydn:symphony:1",
+   "notes": [
+    "access details omitted"
+   ],
+   "id": "entry-0002"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:52:44.000Z",
+   "kind": "result",
+   "speaker": "Queue claim",
+   "text": "started haydn:symphony:1",
+   "notes": [],
+   "id": "entry-0003"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:52:44.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "Composition brief — Haydn’s Missing Symphony (work id haydn-symphony-1)\n\nA four-movement symphony in B flat major in the manner of Haydn’s London symphonies. It is new music: no theme is taken from Haydn, and it is not presented as a lost or rediscovered work.\n\nOrchestra (11 staves, sounding pitch): flute, 2 oboes, 2 bassoons, 2 horns and 2 trumpets in B flat (natural instruments: only notes of their harmonic series), timpani in B flat and F, strings. No clarinets.\n\nMovements\nI. Adagio – Allegro. Twelve slow bars that darken to B flat minor, then a sonata-form Allegro that is nearly monothematic, as Haydn’s often are: the main theme returns in F as second subject for the woodwind. The development moves it abruptly to A flat and C minor, runs the transition’s scales through three minor keys, and stages a false reprise in E flat before the real one. Exposition repeated.\nII. Adagio cantabile, F major, 3/4: a song for the violins, repeated with flute; a troubled middle section in F minor and A flat; return and short coda. No trumpets or drums.\nIII. Menuet (B flat) and Trio (E flat, a ländler for solo oboe), with a bar of silence as a joke before the reprise.\nIV. Finale: Presto, 2/4, a rondo on a contredanse tune, with an episode in F, a stormy episode in G minor, and pauses that pretend to lose the thread.\n\nTarget length about twelve minutes. Compromise known from the start: every tune, the chord plan of every bar and the form are written by hand; a program then scores each passage in one of three textures (quiet strings under a tune, woodwind band, full orchestra), writing the accompaniment figures, the sustained wind chords and the natural brass and drum parts from the chord plan.",
+   "notes": [],
+   "id": "entry-0004"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:55:09.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. After fixes: whole-bar rests after the change of metre are written as two half rests (the site's notation library mis-times a whole rest when the opening metre is 3/4); doubled lines are moved by whole octaves instead of note by note; 18 parallel octaves/fifths between tune and bass removed by changing chord inversions and seven melody notes; the flute line in the reprise lowered an octave.",
+   "notes": [],
+   "id": "entry-0005"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:55:09.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Adagio – Allegro: 120 bars written, 303s played; activity fl:60 ob:106 bn:71 hn:69 tpt:37 timp:11 v1:79 v2:92 va:92 vc:75 cb:75\n    validator ok: 120 bars, 302.9s, 11 voices; abcjs playback matches the model (6134 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0006"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:55:11.658Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 1 with this public change note:\nFirst playable draft: the whole first movement — a slow introduction that darkens to B flat minor, and a sonata-form Allegro on one theme, with a false reprise in E flat in the development.",
+   "notes": [],
+   "id": "entry-0007"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:55:20.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=haydn-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0008"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:55:20.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Adagio – Allegro120 bars | load 4.7s | state playing | clock 0:01 / 5:03 | {\"peak\":0.9,\"seconds\":303.1,\"rms\":0.1063,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl.:73 Ob. I, II:68 Bn. I, II:70 Hn. I, II:60 Tpt. I, II:56 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0009"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:56:30.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "First playable Haydn draft is live: https://lost-compositions.exe.xyz/work.html?draft=haydn-symphony-1 (complete first movement, 5:03, plays in the real player). Writing the Adagio, Menuet and Finale now.",
+   "notes": [],
+   "id": "entry-0010"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:57:39.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1, m2, m3, m4: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. All four movements. Fixes since the first build: held accompaniment notes are now re-struck when the chord changes beneath them (this removed about 25 reported clashes in the Adagio and the Menuet); horn chords in quiet passages are restricted to the natural horn's notes; eight parallel octaves/fifths between tune and bass removed in the Adagio and the Finale.",
+   "notes": [],
+   "id": "entry-0011"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:57:39.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Adagio – Allegro: 120 bars written, 303s played; activity fl:60 ob:106 bn:71 hn:69 tpt:37 timp:11 v1:79 v2:92 va:92 vc:75 cb:75\n    validator ok: 120 bars, 302.9s, 11 voices; abcjs playback matches the model (6140 notes)\n    parallel fifths/octaves v1/vc: 0\n  II. Adagio cantabile: 42 bars written, 145s played; activity fl:54 ob:38 bn:85 hn:142 v1:90 v2:93 va:93 vc:52 cb:52\n    validator ok: 42 bars, 145.4s, 9 voices; abcjs playback matches the model (840 notes)\n    parallel fifths/octaves v1/vc: 0\n  III. Menuet: Allegretto – Trio: 68 bars written, 153s played; activity fl:61 ob:120 bn:54 hn:91 tpt:25 timp:8 v1:84 v2:88 va:88 vc:73 cb:73\n    validator ok: 68 bars, 152.7s, 11 voices; abcjs playback matches the model (2207 notes)\n    parallel fifths/octaves v1/vc: 0\n  IV. Finale: Presto: 136 bars written, 137s played; activity fl:53 ob:104 bn:52 hn:91 tpt:84 timp:30 v1:85 v2:97 va:97 vc:95 cb:95\n    validator ok: 136 bars, 137.1s, 11 voices; abcjs playback matches the model (3947 notes)\n    PAR P8 v1/vc bar 68+0 (G6/G2 -> D6/D2)\n    PAR P8 v1/vc bar 84+0 (G6/G2 -> D6/D2)\n    parallel fifths/octaves v1/vc: 2",
+   "notes": [],
+   "id": "entry-0012"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:57:40.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Revision pass, first movement: in the development the cellos, basses and bassoons now answer the violins' scale figure in alternate bars instead of repeating one note; the bassoon doubles the second subject under oboe and flute.",
+   "notes": [],
+   "id": "entry-0013"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:57:40.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Adagio – Allegro: 120 bars written, 303s played; activity fl:60 ob:106 bn:69 hn:69 tpt:37 timp:11 v1:79 v2:92 va:92 vc:75 cb:75\n    validator ok: 120 bars, 302.9s, 11 voices; abcjs playback matches the model (6186 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0014"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:57:40.658Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 2 with this public change note:\nFirst complete draft: added the Adagio cantabile in F with its F minor middle section, the Menuet with an oboe Trio in E flat, and the rondo Finale. A revision pass follows.",
+   "notes": [],
+   "id": "entry-0015"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:58:20.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m4: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Finale: bar 4 of the G minor episode changed once more (parallel octaves with the bass).",
+   "notes": [],
+   "id": "entry-0016"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:58:20.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "IV. Finale: Presto: 136 bars written, 137s played; activity fl:53 ob:104 bn:52 hn:91 tpt:84 timp:30 v1:85 v2:97 va:97 vc:95 cb:95\n    validator ok: 136 bars, 137.1s, 11 voices; abcjs playback matches the model (3947 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0017"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:58:21.594Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 3 with this public change note:\nRevision: in the first movement's development the basses and bassoons now answer the violins' scale figure, and a bassoon doubles the second subject; small voice-leading corrections in the Finale's G minor episode. This revision matches the published score.",
+   "notes": [],
+   "id": "entry-0018"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:58:38.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=haydn-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0019"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:58:38.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Adagio – Allegro120 bars | load 1.2s | state playing | clock 0:01 / 5:03 | {\"peak\":0.9,\"seconds\":303.1,\"rms\":0.1065,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl.:73 Ob. I, II:68 Bn. I, II:70 Hn. I, II:60 Tpt. I, II:56 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   II. Adagio cantabile42 bars | load 0.6s | state playing | clock 0:01 / 2:25 | {\"peak\":0.9,\"seconds\":145.6,\"rms\":0.0965,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl.:73 Ob. I, II:68 Bn. I, II:70 Hn. I, II:60 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   III. Menuet: Allegretto – Trio68 bars | load 0.4s | state playing | clock 0:01 / 2:33 | {\"peak\":0.9,\"seconds\":152.9,\"rms\":0.1315,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl.:73 Ob. I, II:68 Bn. I, II:70 Hn. I, II:60 Tpt. I, II:56 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   IV. Finale: Presto136 bars | load 0.5s | state playing | clock 0:01 / 2:17 | {\"peak\":0.9,\"seconds\":137.3,\"rms\":0.1231,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl.:73 Ob. I, II:68 Bn. I, II:70 Hn. I, II:60 Tpt. I, II:56 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0020"
+  }
+ ]
+}

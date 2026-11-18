@@ -94,3 +94,10 @@ vivaldi-symphony-1-transcript.json
 scores/vivaldi-symphony-1-i.abc
 scores/vivaldi-symphony-1-ii.abc
 scores/vivaldi-symphony-1-iii.abc
+haydn-symphony-1-notebook.html
+haydn-symphony-1-transcript.html
+haydn-symphony-1-transcript.json
+scores/haydn-symphony-1-i.abc
+scores/haydn-symphony-1-ii.abc
+scores/haydn-symphony-1-iii.abc
+scores/haydn-symphony-1-iv.abc

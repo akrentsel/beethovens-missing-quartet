@@ -826,6 +826,50 @@
           "durationSeconds": 120
         }
       ]
+    },
+    {
+      "id": "haydn-symphony-1",
+      "composerId": "haydn",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Haydn’s Missing Symphony",
+      "subtitle": "Symphony in B flat major",
+      "description": "A four-movement symphony in the manner of Haydn’s London symphonies: a slow introduction and a nearly monothematic Allegro with a false reprise, an Adagio cantabile, a Menuet with an oboe Trio, and a rondo Finale full of pauses. For flute, oboes, bassoons, horns, trumpets, timpani and strings. A new AI-composed homage, not a rediscovered work by Haydn.",
+      "durationSeconds": 738,
+      "date": "2026-11-18",
+      "status": "completed",
+      "notebook": "haydn-symphony-1-notebook.html",
+      "transcript": "haydn-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Adagio – Allegro",
+          "note": "A slow introduction that darkens to the minor, and a sonata-form Allegro built almost entirely from one theme.",
+          "source": "scores/haydn-symphony-1-i.abc",
+          "durationSeconds": 303
+        },
+        {
+          "id": "ii",
+          "label": "II. Adagio cantabile",
+          "note": "F major: a song for violins and flute around a troubled F minor middle section.",
+          "source": "scores/haydn-symphony-1-ii.abc",
+          "durationSeconds": 145
+        },
+        {
+          "id": "iii",
+          "label": "III. Menuet: Allegretto – Trio",
+          "note": "A menuet that stops for a bar of silence, and a country-dance Trio for solo oboe.",
+          "source": "scores/haydn-symphony-1-iii.abc",
+          "durationSeconds": 153
+        },
+        {
+          "id": "iv",
+          "label": "IV. Finale: Presto",
+          "note": "A rondo on a contredanse tune with a stormy G minor episode and teasing pauses.",
+          "source": "scores/haydn-symphony-1-iv.abc",
+          "durationSeconds": 137
+        }
+      ]
     }
   ]
 }

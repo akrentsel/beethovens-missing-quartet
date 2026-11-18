@@ -1,0 +1,261 @@
+%%label IV. Finale: Presto
+%%note B flat major. A rondo on a contredanse tune, with a running episode in F, a stormy one in G minor, and pauses that pretend to lose the thread.
+X:1
+T:Haydn’s Missing Symphony
+T:IV. Finale: Presto
+C:Claude (AI), in the manner of Joseph Haydn
+M:2/4
+L:1/8
+Q:"Presto" 1/4=140
+%%score [fl ob bn] [hn tpt] timp [v1 v2 va vc cb]
+% Original AI-composed homage. The score is written at sounding pitch.
+V:fl clef=treble name="Fl."
+V:ob clef=treble name="Ob. I, II"
+V:bn clef=bass name="Bn. I, II"
+V:hn clef=treble name="Hn. I, II"
+V:tpt clef=treble name="Tpt. I, II"
+V:timp clef=bass name="Timp."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:Bb
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tpt
+%%MIDI program 56
+V:timp
+%%MIDI program 47
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-8: [A1 a] The rondo tune: violins, quietly
+[V:fl] |: z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 :|
+[V:ob] |: z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 :|
+[V:bn] |: z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 :|
+[V:hn] |: z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 :|
+[V:tpt] |: z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 :|
+[V:timp] |: z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 :|
+[V:v1] |: !mp!f'd' bd' | f'2 f'2 | e'c' ac' | e'2 e'2 | d'b d'f' | g'2 e'2 | d'c' ba | b2 z2 :|
+[V:v2] |: !p!FF FF | FF FF | AA AA | AA AA | BB BB | GG GG | FF AA | BB BB :|
+[V:va] |: !p!D2 D2 | D2 D2 | E2 E2 | E2 E2 | D2 D2 | G,2 G,2 | D,2 E,2 | D,2 D,2 :|
+[V:vc] |: !p!B,,2 B,,2 | B,,2 B,,2 | F,,2 F,,2 | F,,2 F,,2 | B,,2 B,,2 | E,2 E,2 | F,2 F,2 | B,,2 B,,2 :|
+[V:cb] |: !p!B,,,2 B,,,2 | B,,,2 B,,,2 | F,,,2 F,,,2 | F,,,2 F,,,2 | B,,,2 B,,,2 | E,,2 E,,2 | F,,2 F,,2 | B,,,2 B,,,2 :|
+% bars 9-16: [A1 b] Its second strain, which trails off into a bar of silence
+[V:fl] |: z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] |: z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] |: z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] |: z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tpt] |: z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:timp] |: z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] |: !mp!c'a fa | c'2 c'2 | bg =eg | a2 f2 | e'2 c'2 | a2 f2 | e2 z2 | z4 |
+[V:v2] |: !p!FF FF | FF FF | GG GG | FF FF | EE EE | EE EE | EE EE | EE EE |
+[V:va] |: !p!A,2 A,2 | A,2 A,2 | B,2 B,2 | A,2 A,2 | A,2 A,2 | A,2 A,2 | A,2 A,2 | A,2 A,2 |
+[V:vc] |: !p!F,,2 F,,2 | F,,2 F,,2 | =E,,2 E,,2 | F,,2 F,,2 | F,,2 F,,2 | F,,2 F,,2 | F,,2 F,,2 | F,,2 F,,2 |
+[V:cb] |: !p!F,,,2 F,,,2 | F,,,2 F,,,2 | =E,,,2 E,,,2 | F,,,2 F,,,2 | F,,,2 F,,,2 | F,,,2 F,,,2 | F,,,2 F,,,2 | F,,,2 F,,,2 |
+% bars 17-24: [A1 a2] The tune again, full orchestra
+[V:fl] !f!f'd' bd' | f'2 f'2 | e'c' ac' | e'2 e'2 | d'b d'f' | g'2 e'2 | d'c' ba | b2 z2 :|
+[V:ob] !f![Bd]4 | [Bd]4 | [Ae]4 | [Ae]4 | [Bd]4 | [Ge]4 | [Fd]2 [Ae]2 | [Bd]4 :|
+[V:bn] !f!B,,B,, B,,B,, | B,,B,, B,,B,, | F,,F,, F,,F,, | F,,F,, F,,F,, | B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | B,,B,, B,,B,, :|
+[V:hn] !f![DF]2 [DF]2 | [DF]2 [DF]2 | [Fc]2 [Fc]2 | [Fc]2 [Fc]2 | [DF]2 [DF]2 | [B,B]2 [B,B]2 | [DF]2 [Fc]2 | [DF]2 [DF]2 :|
+[V:tpt] !f![Bd]2 [Bd]2 | [Bd]2 [Bd]2 | [Ff]2 [Ff]2 | [Ff]2 [Ff]2 | [Bd]2 [Bd]2 | [Bb]2 [Bb]2 | [Bd]2 [Ff]2 | [Bd]2 [Bd]2 :|
+[V:timp] !f!B,,2 B,,2 | B,,2 B,,2 | F,,2 F,,2 | F,,2 F,,2 | B,,2 B,,2 | z2 z2 | F,,2 F,,2 | B,,2 B,,2 :|
+[V:v1] !f!f'd' bd' | f'2 f'2 | e'c' ac' | e'2 e'2 | d'b d'f' | g'2 e'2 | d'c' ba | b2 z2 :|
+[V:v2] !f!FF FF | FF FF | AA AA | AA AA | BB BB | GG GG | FF AA | BB BB :|
+[V:va] !f!DD DD | DD DD | EE EE | EE EE | DD DD | EE EE | DD EE | DD DD :|
+[V:vc] !f!B,,B,, B,,B,, | B,,B,, B,,B,, | F,,F,, F,,F,, | F,,F,, F,,F,, | B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | B,,B,, B,,B,, :|
+[V:cb] !f!B,,,B,,, B,,,B,,, | B,,,B,,, B,,,B,,, | F,,,F,,, F,,,F,,, | F,,,F,,, F,,,F,,, | B,,,B,,, B,,,B,,, | E,,E,, E,,E,, | F,,F,, F,,F,, | B,,,B,,, B,,,B,,, :|
+% bars 25-32: [B1] First episode in F: running sixteenth notes for the full orchestra
+[V:fl] !f!f/g/a/b/ c'/d'/=e'/f'/ | d'/f'/d'/b/ d'/f'/b/d'/ | c'/=e'/g'/e'/ c'/b/g/b/ | a/c'/f'/c'/ a2 | d'/=e'/f'/g'/ a'/g'/f'/e'/ | d'/c'/b/a/ g/a/b/g/ | =e/g/b/g/ c'/b/g/e/ | f2 z2 |
+[V:ob] !f![Ac]4 | [Bd]4 | [B=e]4 | [Af]4 | [Af]4 | [Bg]4 | [B=e]4 | [Af]4 |
+[V:bn] !f!F,,F,, F,,F,, | B,,B,, B,,B,, | C,C, C,C, | F,F, F,F, | D,D, D,D, | G,G, G,G, | C,C, C,C, | F,F, F,F, |
+[V:hn] !f![Fc]2 [Fc]2 | [DF]2 [DF]2 | c2 c2 | [Fc]2 [Fc]2 | [DF]2 [DF]2 | [DB]2 [DB]2 | c2 c2 | [Fc]2 [Fc]2 |
+[V:tpt] !f![Ff]2 [Ff]2 | [Bd]2 [Bd]2 | z2 z2 | [Ff]2 [Ff]2 | [df]2 [df]2 | [Bd]2 [Bd]2 | z2 z2 | [Ff]2 [Ff]2 |
+[V:timp] !f!F,,2 F,,2 | B,,2 B,,2 | z2 z2 | F,,2 F,,2 | z2 z2 | z2 z2 | z2 z2 | F,,2 F,,2 |
+[V:v1] !f!f/g/a/b/ c'/d'/=e'/f'/ | d'/f'/d'/b/ d'/f'/b/d'/ | c'/=e'/g'/e'/ c'/b/g/b/ | a/c'/f'/c'/ a2 | d'/=e'/f'/g'/ a'/g'/f'/e'/ | d'/c'/b/a/ g/a/b/g/ | =e/g/b/g/ c'/b/g/e/ | f2 z2 |
+[V:v2] !f!AA AA | BB BB | BB BB | AA AA | AA AA | BB BB | BB BB | AA AA |
+[V:va] !f!FF FF | DD DD | =EE EE | FF FF | FF FF | GG GG | =EE EE | FF FF |
+[V:vc] !f!F,,F,, F,,F,, | B,,B,, B,,B,, | C,C, C,C, | F,F, F,F, | D,D, D,D, | G,G, G,G, | C,C, C,C, | F,F, F,F, |
+[V:cb] !f!F,,,F,,, F,,,F,,, | B,,,B,,, B,,,B,,, | C,,C,, C,,C,, | F,,F,, F,,F,, | D,,D,, D,,D,, | G,,G,, G,,G,, | C,,C,, C,,C,, | F,,F,, F,,F,, |
+% bars 33-40: [B2] The two oboes answer in thirds and sixths
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] !mp![fa]2 [ac']2 | [gb]2 [=eg]2 | [fa]2 [af']2 | [g=e']2 [=ec']2 | [af'][g=e'] [fd'][=ec'] | [fd']2 [db]2 | [fa]2 [=eg]2 | [cf]2 z2 |
+[V:bn] !p!F,,2 F,,2 | C,,2 C,,2 | F,,2 F,,2 | C,,2 C,,2 | F,,2 F,,2 | B,,2 B,,2 | C,2 C,2 | F,2 F,2 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tpt] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:timp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v2] z!pp!F zF | z=E zE | zF zF | z=E zE | zF zF | zD zD | zC z=E | zF zF |
+[V:va] z!pp!A, zA, | zB, zB, | zA, zA, | zB, zB, | zA, zA, | zB, zB, | zA, zB, | zA, zA, |
+[V:vc] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cb] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+% bars 41-48: [B3] The running notes again, breaking off on the dominant seventh
+[V:fl] !f!f/g/a/b/ c'/d'/=e'/f'/ | d'/f'/d'/b/ d'/f'/b/d'/ | c'/=e'/g'/e'/ c'/b/g/b/ | a/c'/f'/c'/ a2 | e'c' af | e'c' af | e'2 z2 | z4 |
+[V:ob] !f![Ac]4 | [Bd]4 | [B=e]4 | [Af]4 | [Ae]4 | [Ae]4 | [Ae]4 | [Ae]4 |
+[V:bn] !f!F,,F,, F,,F,, | B,,B,, B,,B,, | C,C, C,C, | F,F, F,F, | F,F, F,F, | F,F, F,F, | F,F, F,F, | F,F, F,F, |
+[V:hn] !f![Fc]2 [Fc]2 | [DF]2 [DF]2 | c2 c2 | [Fc]2 [Fc]2 | [Fc]2 [Fc]2 | [Fc]2 [Fc]2 | [Fc]2 [Fc]2 | [Fc]2 [Fc]2 |
+[V:tpt] !f![Ff]2 [Ff]2 | [Bd]2 [Bd]2 | z2 z2 | [Ff]2 [Ff]2 | [Ff]2 [Ff]2 | [Ff]2 [Ff]2 | [Ff]2 [Ff]2 | [Ff]2 [Ff]2 |
+[V:timp] !f!F,,2 F,,2 | B,,2 B,,2 | z2 z2 | F,,2 F,,2 | F,,2 F,,2 | F,,2 F,,2 | F,,2 F,,2 | F,,2 F,,2 |
+[V:v1] !f!f/g/a/b/ c'/d'/=e'/f'/ | d'/f'/d'/b/ d'/f'/b/d'/ | c'/=e'/g'/e'/ c'/b/g/b/ | a/c'/f'/c'/ a2 | e'c' af | e'c' af | e'2 z2 | z4 |
+[V:v2] !f!AA AA | BB BB | BB BB | AA AA | AA AA | AA AA | AA AA | AA AA |
+[V:va] !f!FF FF | DD DD | =EE EE | FF FF | EE EE | EE EE | EE EE | EE EE |
+[V:vc] !f!F,,F,, F,,F,, | B,,B,, B,,B,, | C,C, C,C, | F,F, F,F, | F,F, F,F, | F,F, F,F, | F,F, F,F, | F,F, F,F, |
+[V:cb] !f!F,,,F,,, F,,,F,,, | B,,,B,,, B,,,B,,, | C,,C,, C,,C,, | F,,F,, F,,F,, | F,,F,, F,,F,, | F,,F,, F,,F,, | F,,F,, F,,F,, | F,,F,, F,,F,, |
+% bars 49-56: [A2 a] The tune returns, quietly
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tpt] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:timp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !mp!f'd' bd' | f'2 f'2 | e'c' ac' | e'2 e'2 | d'b d'f' | g'2 e'2 | d'c' ba | b2 z2 |
+[V:v2] !p!FF FF | FF FF | AA AA | AA AA | BB BB | GG GG | FF AA | BB BB |
+[V:va] !p!D2 D2 | D2 D2 | E2 E2 | E2 E2 | D2 D2 | G,2 G,2 | D,2 E,2 | D,2 D,2 |
+[V:vc] !p!B,,2 B,,2 | B,,2 B,,2 | F,,2 F,,2 | F,,2 F,,2 | B,,2 B,,2 | E,2 E,2 | F,2 F,2 | B,,2 B,,2 |
+[V:cb] !p!B,,,2 B,,,2 | B,,,2 B,,,2 | F,,,2 F,,,2 | F,,,2 F,,,2 | B,,,2 B,,,2 | E,,2 E,,2 | F,,2 F,,2 | B,,,2 B,,,2 |
+% bars 57-64: [A2 a2] And loudly
+[V:fl] !f!f'd' bd' | f'2 f'2 | e'c' ac' | e'2 e'2 | d'b d'f' | g'2 e'2 | d'c' ba | b2 z2 |
+[V:ob] !f![Bd]4 | [Bd]4 | [Ae]4 | [Ae]4 | [Bd]4 | [Ge]4 | [Fd]2 [Ae]2 | [Bd]4 |
+[V:bn] !f!B,,B,, B,,B,, | B,,B,, B,,B,, | F,,F,, F,,F,, | F,,F,, F,,F,, | B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | B,,B,, B,,B,, |
+[V:hn] !f![DF]2 [DF]2 | [DF]2 [DF]2 | [Fc]2 [Fc]2 | [Fc]2 [Fc]2 | [DF]2 [DF]2 | [B,B]2 [B,B]2 | [DF]2 [Fc]2 | [DF]2 [DF]2 |
+[V:tpt] !f![Bd]2 [Bd]2 | [Bd]2 [Bd]2 | [Ff]2 [Ff]2 | [Ff]2 [Ff]2 | [Bd]2 [Bd]2 | [Bb]2 [Bb]2 | [Bd]2 [Ff]2 | [Bd]2 [Bd]2 |
+[V:timp] !f!B,,2 B,,2 | B,,2 B,,2 | F,,2 F,,2 | F,,2 F,,2 | B,,2 B,,2 | z2 z2 | F,,2 F,,2 | B,,2 B,,2 |
+[V:v1] !f!f'd' bd' | f'2 f'2 | e'c' ac' | e'2 e'2 | d'b d'f' | g'2 e'2 | d'c' ba | b2 z2 |
+[V:v2] !f!FF FF | FF FF | AA AA | AA AA | BB BB | GG GG | FF AA | BB BB |
+[V:va] !f!DD DD | DD DD | EE EE | EE EE | DD DD | EE EE | DD EE | DD DD |
+[V:vc] !f!B,,B,, B,,B,, | B,,B,, B,,B,, | F,,F,, F,,F,, | F,,F,, F,,F,, | B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | B,,B,, B,,B,, |
+[V:cb] !f!B,,,B,,, B,,,B,,, | B,,,B,,, B,,,B,,, | F,,,F,,, F,,,F,,, | F,,,F,,, F,,,F,,, | B,,,B,,, B,,,B,,, | E,,E,, E,,E,, | F,,F,, F,,F,, | B,,,B,,, B,,,B,,, |
+% bars 65-72: [C1] Second episode: G minor, stormy
+[V:fl] !f!gb d'b | ac' ^fa | gb d'g' | ^f'2 a'2 | g'd' bg | e'c' ge' | d'c' a^f | g2 z2 |
+[V:ob] !f![Bd]4 | [Ac]4 | [Bd]4 | [_Gd]4 | [Bd]4 | [ce]4 | [c_g]4 | [Bg]4 |
+[V:bn] !f!G,,G,, G,,G,, | _G,,G,, G,,G,, | G,,G,, G,,G,, | D,,D,, D,,D,, | G,,G,, G,,G,, | C,C, C,C, | D,D, D,D, | G,G, G,G, |
+[V:hn] !f![DB]2 [DB]2 | [Dd]2 [Dd]2 | [DB]2 [DB]2 | [Dd]2 [Dd]2 | [DB]2 [DB]2 | c2 c2 | [Dd]2 [Dd]2 | [DB]2 [DB]2 |
+[V:tpt] !f![Bd]2 [Bd]2 | d2 d2 | [Bd]2 [Bd]2 | d2 d2 | [Bd]2 [Bd]2 | z2 z2 | d2 d2 | [Bd]2 [Bd]2 |
+[V:timp] z2 z2 | z2 z2 | z2 z2 | z2 z2 | z2 z2 | z2 z2 | z2 z2 | z2 z2 |
+[V:v1] !f!gb d'b | ac' ^fa | gb d'g' | ^f'2 a'2 | g'd' bg | e'c' ge' | d'c' a^f | g2 z2 |
+[V:v2] !f!DD DD | CC CC | DD DD | _GG GG | GG GG | GG GG | _GG GG | GG GG |
+[V:va] !f!B,B, B,B, | A,A, A,A, | B,B, B,B, | A,A, A,A, | B,B, B,B, | EE EE | CC CC | B,B, B,B, |
+[V:vc] !f!G,,G,, G,,G,, | _G,,G,, G,,G,, | G,,G,, G,,G,, | D,,D,, D,,D,, | G,,G,, G,,G,, | C,C, C,C, | D,D, D,D, | G,G, G,G, |
+[V:cb] !f!G,,,G,,, G,,,G,,, | _G,,,G,,, G,,,G,,, | G,,,G,,, G,,,G,,, | D,,D,, D,,D,, | G,,,G,,, G,,,G,,, | C,,C,, C,,C,, | D,,D,, D,,D,, | G,,G,, G,,G,, |
+% bars 73-80: [C2] A calm answer in B flat for violins and flute
+[V:fl] !p!d'2 f'2 | e'2 c'2 | d'2 b2 | c'2 a2 | bd' g'd' | c'e' g'e' | f'2 !trill!c'2 | b2 z2 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tpt] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:timp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !mp!d'2 f'2 | e'2 c'2 | d'2 b2 | c'2 a2 | bd' g'd' | c'e' g'e' | f'2 !trill!c'2 | b2 z2 |
+[V:v2] !p!FF FF | AA AA | BB BB | AA AA | BB BB | cc cc | AA AA | BB BB |
+[V:va] !p!D2 D2 | E2 E2 | D2 D2 | E2 E2 | B,2 B,2 | E2 E2 | E2 E2 | D2 D2 |
+[V:vc] !p!B,,2 B,,2 | F,,2 F,,2 | B,,2 B,,2 | F,,2 F,,2 | G,,2 G,,2 | C,2 C,2 | F,2 F,2 | B,,2 B,,2 |
+[V:cb] !p!B,,,2 B,,,2 | F,,,2 F,,,2 | B,,,2 B,,,2 | F,,,2 F,,,2 | G,,,2 G,,,2 | C,,2 C,,2 | F,,2 F,,2 | B,,,2 B,,,2 |
+% bars 81-88: [C3] The storm again, turning to D
+[V:fl] !f!gb d'b | ac' ^fa | gb d'g' | ^f'2 a'2 | g'e' bg | e'c' eg | d2 ^f2 | a2 d'2 |
+[V:ob] !f![Bd]4 | [Ac]4 | [Bd]4 | [_Gd]4 | [Ge]4 | [Gc]4 | [_Gd]4 | [_Gd]4 |
+[V:bn] !f!G,,G,, G,,G,, | _G,,G,, G,,G,, | G,,G,, G,,G,, | D,,D,, D,,D,, | E,,E,, E,,E,, | E,,E,, E,,E,, | D,,D,, D,,D,, | D,,D,, D,,D,, |
+[V:hn] !f![DB]2 [DB]2 | [Dd]2 [Dd]2 | [DB]2 [DB]2 | [Dd]2 [Dd]2 | [B,B]2 [B,B]2 | c2 c2 | [Dd]2 [Dd]2 | [Dd]2 [Dd]2 |
+[V:tpt] !f![Bd]2 [Bd]2 | d2 d2 | [Bd]2 [Bd]2 | d2 d2 | [Bb]2 [Bb]2 | z2 z2 | d2 d2 | d2 d2 |
+[V:timp] z2 z2 | z2 z2 | z2 z2 | z2 z2 | z2 z2 | z2 z2 | z2 z2 | z2 z2 |
+[V:v1] !f!gb d'b | ac' ^fa | gb d'g' | ^f'2 a'2 | g'e' bg | e'c' eg | d2 ^f2 | a2 d'2 |
+[V:v2] !f!DD DD | CC CC | DD DD | _GG GG | GG GG | GG GG | _GG GG | _GG GG |
+[V:va] !f!B,B, B,B, | A,A, A,A, | B,B, B,B, | A,A, A,A, | B,B, B,B, | CC CC | DD DD | DD DD |
+[V:vc] !f!G,,G,, G,,G,, | _G,,G,, G,,G,, | G,,G,, G,,G,, | D,,D,, D,,D,, | E,,E,, E,,E,, | E,,E,, E,,E,, | D,,D,, D,,D,, | D,,D,, D,,D,, |
+[V:cb] !f!G,,,G,,, G,,,G,,, | _G,,,G,,, G,,,G,,, | G,,,G,,, G,,,G,,, | D,,D,, D,,D,, | E,,E,, E,,E,, | E,,E,, E,,E,, | D,,D,, D,,D,, | D,,D,, D,,D,, |
+% bars 89-96: [C4] A quiet way back, note by note, and another silence
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tpt] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:timp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !mp!^f2 a2 | g2 b2 | =e2 g2 | f2 a2 | e'2 z2 | c'2 z2 | a2 z2 | z4 |
+[V:v2] !p!_GG GG | GG GG | =EE EE | FF FF | EE EE | EE EE | EE EE | EE EE |
+[V:va] !p!_G,2 G,2 | B,2 B,2 | B,2 B,2 | A,2 A,2 | A,2 A,2 | A,2 A,2 | A,2 A,2 | A,2 A,2 |
+[V:vc] !p!D,,2 D,,2 | G,,2 G,,2 | C,2 C,2 | F,2 F,2 | F,2 F,2 | F,2 F,2 | F,2 F,2 | F,2 F,2 |
+[V:cb] !p!D,,2 D,,2 | G,,,2 G,,,2 | C,,2 C,,2 | F,,2 F,,2 | F,,2 F,,2 | F,,2 F,,2 | F,,2 F,,2 | F,,2 F,,2 |
+% bars 97-104: [A3 a] The tune a last time, flute with the violins
+[V:fl] !p!f'd' bd' | f'2 f'2 | e'c' ac' | e'2 e'2 | d'b d'f' | g'2 e'2 | d'c' ba | b2 z2 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tpt] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:timp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !mp!f'd' bd' | f'2 f'2 | e'c' ac' | e'2 e'2 | d'b d'f' | g'2 e'2 | d'c' ba | b2 z2 |
+[V:v2] !p!FF FF | FF FF | AA AA | AA AA | BB BB | GG GG | FF AA | BB BB |
+[V:va] !p!D2 D2 | D2 D2 | E2 E2 | E2 E2 | D2 D2 | G,2 G,2 | D,2 E,2 | D,2 D,2 |
+[V:vc] !p!B,,2 B,,2 | B,,2 B,,2 | F,,2 F,,2 | F,,2 F,,2 | B,,2 B,,2 | E,2 E,2 | F,2 F,2 | B,,2 B,,2 |
+[V:cb] !p!B,,,2 B,,,2 | B,,,2 B,,,2 | F,,,2 F,,,2 | F,,,2 F,,,2 | B,,,2 B,,,2 | E,,2 E,,2 | F,,2 F,,2 | B,,,2 B,,,2 |
+% bars 105-112: [A3 b] Second strain
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:tpt] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:timp] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] !mp!c'a fa | c'2 c'2 | bg =eg | a2 f2 | e'2 c'2 | a2 f2 | e2 z2 | z4 |
+[V:v2] !p!FF FF | FF FF | GG GG | FF FF | EE EE | EE EE | EE EE | EE EE |
+[V:va] !p!A,2 A,2 | A,2 A,2 | B,2 B,2 | A,2 A,2 | A,2 A,2 | A,2 A,2 | A,2 A,2 | A,2 A,2 |
+[V:vc] !p!F,,2 F,,2 | F,,2 F,,2 | =E,,2 E,,2 | F,,2 F,,2 | F,,2 F,,2 | F,,2 F,,2 | F,,2 F,,2 | F,,2 F,,2 |
+[V:cb] !p!F,,,2 F,,,2 | F,,,2 F,,,2 | =E,,,2 E,,,2 | F,,,2 F,,,2 | F,,,2 F,,,2 | F,,,2 F,,,2 | F,,,2 F,,,2 | F,,,2 F,,,2 |
+% bars 113-120: [A3 a2] Full orchestra
+[V:fl] !f!f'd' bd' | f'2 f'2 | e'c' ac' | e'2 e'2 | d'b d'f' | g'2 e'2 | d'c' ba | b2 z2 |
+[V:ob] !f![Bd]4 | [Bd]4 | [Ae]4 | [Ae]4 | [Bd]4 | [Ge]4 | [Fd]2 [Ae]2 | [Bd]4 |
+[V:bn] !f!B,,B,, B,,B,, | B,,B,, B,,B,, | F,,F,, F,,F,, | F,,F,, F,,F,, | B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | B,,B,, B,,B,, |
+[V:hn] !f![DF]2 [DF]2 | [DF]2 [DF]2 | [Fc]2 [Fc]2 | [Fc]2 [Fc]2 | [DF]2 [DF]2 | [B,B]2 [B,B]2 | [DF]2 [Fc]2 | [DF]2 [DF]2 |
+[V:tpt] !f![Bd]2 [Bd]2 | [Bd]2 [Bd]2 | [Ff]2 [Ff]2 | [Ff]2 [Ff]2 | [Bd]2 [Bd]2 | [Bb]2 [Bb]2 | [Bd]2 [Ff]2 | [Bd]2 [Bd]2 |
+[V:timp] !f!B,,2 B,,2 | B,,2 B,,2 | F,,2 F,,2 | F,,2 F,,2 | B,,2 B,,2 | z2 z2 | F,,2 F,,2 | B,,2 B,,2 |
+[V:v1] !f!f'd' bd' | f'2 f'2 | e'c' ac' | e'2 e'2 | d'b d'f' | g'2 e'2 | d'c' ba | b2 z2 |
+[V:v2] !f!FF FF | FF FF | AA AA | AA AA | BB BB | GG GG | FF AA | BB BB |
+[V:va] !f!DD DD | DD DD | EE EE | EE EE | DD DD | EE EE | DD EE | DD DD |
+[V:vc] !f!B,,B,, B,,B,, | B,,B,, B,,B,, | F,,F,, F,,F,, | F,,F,, F,,F,, | B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | B,,B,, B,,B,, |
+[V:cb] !f!B,,,B,,, B,,,B,,, | B,,,B,,, B,,,B,,, | F,,,F,,, F,,,F,,, | F,,,F,,, F,,,F,,, | B,,,B,,, B,,,B,,, | E,,E,, E,,E,, | F,,F,, F,,F,, | B,,,B,,, B,,,B,,, |
+% bars 121-128: [Coda 1] Coda
+[V:fl] !f!bd' f'b' | g'2 e'2 | d'f' b'f' | e'c' ac' | bd' f'b' | g'2 e'2 | d'2 c'2 | b2 z2 |
+[V:ob] !f![Bd]4 | [Ge]4 | [Fd]4 | [Ae]4 | [Bd]4 | [Ge]4 | [Fd]2 [Ae]2 | [Bd]4 |
+[V:bn] !f!B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | F,F, F,F, | B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | B,,B,, B,,B,, |
+[V:hn] !f![DF]2 [DF]2 | [B,B]2 [B,B]2 | [DF]2 [DF]2 | [Fc]2 [Fc]2 | [DF]2 [DF]2 | [B,B]2 [B,B]2 | [DF]2 [Fc]2 | [DF]2 [DF]2 |
+[V:tpt] !f![Bd]2 [Bd]2 | [Bb]2 [Bb]2 | [Bd]2 [Bd]2 | [Ff]2 [Ff]2 | [Bd]2 [Bd]2 | [Bb]2 [Bb]2 | [Bd]2 [Ff]2 | [Bd]2 [Bd]2 |
+[V:timp] !f!B,,2 B,,2 | z2 z2 | F,,2 F,,2 | F,,2 F,,2 | B,,2 B,,2 | z2 z2 | F,,2 F,,2 | B,,2 B,,2 |
+[V:v1] !f!bd' f'b' | g'2 e'2 | d'f' b'f' | e'c' ac' | bd' f'b' | g'2 e'2 | d'2 c'2 | b2 z2 |
+[V:v2] !f!FF FF | GG GG | FF FF | AA AA | BB BB | GG GG | FF AA | BB BB |
+[V:va] !f!DD DD | EE EE | DD DD | EE EE | DD DD | EE EE | DD EE | DD DD |
+[V:vc] !f!B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | F,F, F,F, | B,,B,, B,,B,, | E,E, E,E, | F,F, F,F, | B,,B,, B,,B,, |
+[V:cb] !f!B,,,B,,, B,,,B,,, | E,,E,, E,,E,, | F,,F,, F,,F,, | F,,F,, F,,F,, | B,,,B,,, B,,,B,,, | E,,E,, E,,E,, | F,,F,, F,,F,, | B,,,B,,, B,,,B,,, |
+% bars 129-132: [Coda 2] The tune’s first bar, whispered
+[V:fl] z4 | z4 | z4 | z4 |
+[V:ob] z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 |
+[V:tpt] z4 | z4 | z4 | z4 |
+[V:timp] z4 | z4 | z4 | z4 |
+[V:v1] !pp!f'd' bd' | e'c' ea | f'd' bd' | e'c' ea |
+[V:v2] !pp!FF FF | AA AA | BB BB | AA AA |
+[V:va] !pp!D2 D2 | E2 E2 | D2 D2 | E2 E2 |
+[V:vc] !pp!B,,2 B,,2 | F,,2 F,,2 | B,,2 B,,2 | F,,2 F,,2 |
+[V:cb] !pp!B,,,2 B,,,2 | F,,,2 F,,,2 | B,,,2 B,,,2 | F,,,2 F,,,2 |
+% bars 133-136: [Coda 3] And the last chords
+[V:fl] !ff!b2 d'2 | f'2 b'2 | b'2 z2 | b2 z2 |]
+[V:ob] !ff![Bd]4 | [Bd]4 | [Bd]4 | [Bd]4 |]
+[V:bn] !ff!B,,B,, B,,B,, | B,,B,, B,,B,, | B,,B,, B,,B,, | B,,B,, B,,B,, |]
+[V:hn] !ff![DF]2 [DF]2 | [DF]2 [DF]2 | [DF]2 [DF]2 | [DF]2 [DF]2 |]
+[V:tpt] !ff![Bd]2 [Bd]2 | [Bd]2 [Bd]2 | [Bd]2 [Bd]2 | [Bd]2 [Bd]2 |]
+[V:timp] !ff!B,,2 B,,2 | B,,2 B,,2 | B,,2 B,,2 | B,,2 B,,2 |]
+[V:v1] !ff!b2 d'2 | f'2 b'2 | b'2 z2 | b2 z2 |]
+[V:v2] !ff!FF FF | FF FF | FF FF | FF FF |]
+[V:va] !ff!DD DD | DD DD | DD DD | DD DD |]
+[V:vc] !ff!B,,B,, B,,B,, | B,,B,, B,,B,, | B,,B,, B,,B,, | B,,B,, B,,B,, |]
+[V:cb] !ff!B,,,B,,, B,,,B,,, | B,,,B,,, B,,,B,,, | B,,,B,,, B,,,B,,, | B,,,B,,, B,,,B,,, |]
