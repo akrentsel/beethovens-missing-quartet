@@ -789,6 +789,43 @@
           "durationSeconds": 125
         }
       ]
+    },
+    {
+      "id": "vivaldi-symphony-1",
+      "composerId": "vivaldi",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Vivaldi’s Missing Symphony",
+      "subtitle": "Sinfonia in G minor",
+      "description": "A three-movement sinfonia for strings and continuo in the manner of the dozens Vivaldi wrote, with a solo violin borrowed from his concertos: a unison-ritornello Allegro, a Largo over plucked strings and a driving Presto. A new AI-composed homage, not a rediscovered work by Vivaldi.",
+      "durationSeconds": 415,
+      "date": "2026-11-18",
+      "status": "completed",
+      "notebook": "vivaldi-symphony-1-notebook.html",
+      "transcript": "vivaldi-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Allegro",
+          "note": "A hammering unison ritornello and falling sequences, with four episodes for the solo violin.",
+          "source": "scores/vivaldi-symphony-1-i.abc",
+          "durationSeconds": 151
+        },
+        {
+          "id": "ii",
+          "label": "II. Largo",
+          "note": "E flat major: the solo violin sings over plucked strings, its first strain repeated with decoration.",
+          "source": "scores/vivaldi-symphony-1-ii.abc",
+          "durationSeconds": 144
+        },
+        {
+          "id": "iii",
+          "label": "III. Presto",
+          "note": "A driving 3/8 dance in two repeated halves on one eight-bar theme.",
+          "source": "scores/vivaldi-symphony-1-iii.abc",
+          "durationSeconds": 120
+        }
+      ]
     }
   ]
 }

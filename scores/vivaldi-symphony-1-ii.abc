@@ -1,0 +1,81 @@
+%%label II. Largo
+%%note E flat major. The solo violin sings over plucked strings.
+X:1
+T:Vivaldi’s Missing Symphony
+T:II. Largo
+C:Claude (AI), in the manner of A. Vivaldi
+M:3/4
+L:1/8
+Q:"Largo" 1/4=50
+%%score vs [v1 v2 va vc cb] hpd
+% Original AI-composed homage. The score is written at sounding pitch.
+V:vs clef=treble name="Vl. solo"
+V:v1 clef=treble name="Vl. I pizz."
+V:v2 clef=treble name="Vl. II pizz."
+V:va clef=alto name="Vla. pizz."
+V:vc clef=bass name="Vc. pizz."
+V:cb clef=bass name="Cb. pizz."
+V:hpd clef=treble name="Hpd."
+K:Eb
+V:vs
+%%MIDI program 40
+V:v1
+%%MIDI program 45
+V:v2
+%%MIDI program 45
+V:va
+%%MIDI program 45
+V:vc
+%%MIDI program 45
+V:cb
+%%MIDI program 45
+V:hpd
+%%MIDI program 6
+% bars 1-8: [A] The song, from E flat to B flat
+[V:vs] !mf!g4 b2 | c'4 a2 | a3g f2 | g4 e2 | e'4 d'c' | e'3c' =a2 | b4 g2 | =a3b c'2 |
+[V:v1] z2 !p!G2 G2 | z2 A2 A2 | z2 A2 A2 | z2 G2 G2 | z2 G2 G2 | z2 F2 F2 | z2 F2 B2 | z2 c2 c2 |
+[V:v2] z2 !p!E2 E2 | z2 E2 E2 | z2 F2 F2 | z2 E2 E2 | z2 E2 E2 | z2 E2 E2 | z2 D2 E2 | z2 E2 E2 |
+[V:va] z2 !p!B,2 B,2 | z2 C2 C2 | z2 B,2 B,2 | z2 B,2 B,2 | z2 C2 C2 | z2 C2 C2 | z2 B,2 B,2 | z2 =A,2 A,2 |
+[V:vc] !p!E,,2 z4 | E,,2 z4 | D,,2 z4 | E,,2 z4 | C,2 z4 | =A,,2 z4 | B,,2 z4 | F,,2 z4 |
+[V:cb] !p!E,,2 z4 | E,,2 z4 | D,,2 z4 | E,,2 z4 | C,,2 z4 | =A,,,2 z4 | B,,,2 z4 | F,,,2 z4 |
+[V:hpd] !pp!EG BG BG | EA cA cA | FA BA BA | EG BG BG | EG cG cG | EF cF cF | DF BF BE | CE =AE AE |
+% bars 9-12
+[V:vs] d'4 f'2 | g'3f' e'2 | d'2 c'2 !trill!c'2 | b4 z2 |
+[V:v1] z2 d2 d2 | z2 B2 B2 | z2 c2 c2 | z2 d2 d2 |
+[V:v2] z2 F2 F2 | z2 E2 E2 | z2 E2 E2 | z2 F2 F2 |
+[V:va] z2 B,2 B,2 | z2 B,2 B,2 | z2 =A,2 A,2 | z2 B,2 B,2 |
+[V:vc] B,,2 z4 | G,,2 z4 | F,,2 z4 | B,,2 z4 |
+[V:cb] B,,,2 z4 | G,,,2 z4 | F,,,2 z4 | B,,,2 z4 |
+[V:hpd] DF BF BF | B,E BE BE | CE =AE AE | DF BF BF |
+% bars 13-20: [A ornamented] The same twelve bars again, the solo line decorated
+[V:vs] !mf!g2 ab b2 | c'2 ba a2 | ab ag f2 | g2 fg e2 | e'2 d'e' d'c' | e'2 c'e' =a2 | b2 ab g2 | =ag ab c'2 |
+[V:v1] z2 !p!G2 G2 | z2 A2 A2 | z2 A2 A2 | z2 G2 G2 | z2 G2 G2 | z2 F2 F2 | z2 F2 B2 | z2 c2 c2 |
+[V:v2] z2 !p!E2 E2 | z2 E2 E2 | z2 F2 F2 | z2 E2 E2 | z2 E2 E2 | z2 E2 E2 | z2 D2 E2 | z2 E2 E2 |
+[V:va] z2 !p!B,2 B,2 | z2 C2 C2 | z2 B,2 B,2 | z2 B,2 B,2 | z2 C2 C2 | z2 C2 C2 | z2 B,2 B,2 | z2 =A,2 A,2 |
+[V:vc] !p!E,,2 z4 | E,,2 z4 | D,,2 z4 | E,,2 z4 | C,2 z4 | =A,,2 z4 | B,,2 z4 | F,,2 z4 |
+[V:cb] !p!E,,2 z4 | E,,2 z4 | D,,2 z4 | E,,2 z4 | C,,2 z4 | =A,,,2 z4 | B,,,2 z4 | F,,,2 z4 |
+[V:hpd] !pp!EG BG BG | EA cA cA | FA BA BA | EG BG BG | EG cG cG | EF cF cF | DF BF BE | CE =AE AE |
+% bars 21-24
+[V:vs] d'2 e'd' f'2 | g'2 f'g' e'2 | d'e' c'2 !trill!c'2 | b4 z2 |
+[V:v1] z2 d2 d2 | z2 B2 B2 | z2 c2 c2 | z2 d2 d2 |
+[V:v2] z2 F2 F2 | z2 E2 E2 | z2 E2 E2 | z2 F2 F2 |
+[V:va] z2 B,2 B,2 | z2 B,2 B,2 | z2 =A,2 A,2 | z2 B,2 B,2 |
+[V:vc] B,,2 z4 | G,,2 z4 | F,,2 z4 | B,,2 z4 |
+[V:cb] B,,,2 z4 | G,,,2 z4 | F,,,2 z4 | B,,,2 z4 |
+[V:hpd] DF BF BF | B,E BE BE | CE =AE AE | DF BF BF |
+% bars 25-32: [B] Through C minor and A flat, back to E flat
+[V:vs] !mf!f'4 d'2 | e'3d' e'2 | d'4 =b2 | c'4 e'2 | e'3d' c'2 | c'3b a2 | a3g f2 | g4 b2 |
+[V:v1] z2 !p!A2 A2 | z2 B2 B2 | z2 _c2 c2 | z2 c2 c2 | z2 c2 c2 | z2 c2 c2 | z2 B2 B2 | z2 B2 B2 |
+[V:v2] z2 !p!F2 F2 | z2 G2 G2 | z2 G2 G2 | z2 G2 G2 | z2 A2 A2 | z2 F2 F2 | z2 A2 A2 | z2 G2 G2 |
+[V:va] z2 !p!D2 D2 | z2 E2 E2 | z2 F2 F2 | z2 E2 E2 | z2 E2 E2 | z2 C2 C2 | z2 D2 D2 | z2 E2 E2 |
+[V:vc] !p!B,,2 z4 | E,2 z4 | G,2 z4 | C,2 z4 | A,,2 z4 | A,,2 z4 | B,,2 z4 | E,2 z4 |
+[V:cb] !p!B,,,2 z4 | E,,2 z4 | G,,2 z4 | C,,2 z4 | A,,,2 z4 | A,,,2 z4 | B,,,2 z4 | E,,2 z4 |
+[V:hpd] !pp!DA BA BA | EG BG BG | FG _cG cG | EG cG cG | EA cA cA | CF cF cF | DA BA BA | EG BG BG |
+% bars 33-40
+[V:vs] _d'4 b2 | c'4 a2 | a3b c'2 | d'3c' b2 | g4 e'2 | c'4 a2 | g2 f2 !trill!f2 | e4 z2 |]
+[V:v1] z2 _d2 d2 | z2 c2 c2 | z2 c2 c2 | z2 d2 d2 | z2 B2 B2 | z2 c2 c2 | z2 B2 B2 | z2 B2 B2 |]
+[V:v2] z2 B2 B2 | z2 A2 A2 | z2 A2 A2 | z2 A2 A2 | z2 G2 G2 | z2 A2 A2 | z2 G2 A2 | z2 G2 G2 |]
+[V:va] z2 E2 E2 | z2 E2 E2 | z2 F2 F2 | z2 F2 F2 | z2 E2 E2 | z2 E2 F2 | z2 E2 D2 | z2 E2 E2 |]
+[V:vc] G,2 z4 | A,2 z4 | F,2 z4 | B,2 z4 | G,2 z4 | A,2 z4 | B,2 z4 | E,2 z4 |]
+[V:cb] G,,2 z4 | A,,2 z4 | F,,2 z4 | B,,2 z4 | G,,2 z4 | A,,2 z4 | B,,2 z4 | E,,2 z4 |]
+[V:hpd] EB _dB dB | EA cA cA | FA cA cA | FA dA dA | EB eB eB | CA eA fA | B,G eG dA | B,G eG eG |]

@@ -1,0 +1,113 @@
+%%label III. Presto
+%%note G minor, 3/8. A driving dance in two repeated halves, built on one eight-bar theme and its sequences.
+X:1
+T:Vivaldi’s Missing Symphony
+T:III. Presto
+C:Claude (AI), in the manner of A. Vivaldi
+M:3/8
+L:1/8
+Q:"Presto" 3/8=80
+%%score vs [v1 v2 va vc cb] hpd
+% Original AI-composed homage. The score is written at sounding pitch.
+V:vs clef=treble name="Vl. solo"
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+V:hpd clef=treble name="Hpd."
+K:Gm
+V:vs
+%%MIDI program 40
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+V:hpd
+%%MIDI program 6
+% bars 1-8: [A1] The theme, full strings
+[V:vs] |: !f!g2d' | d'c'/b/a | b2g | ^f/g/a2 | g/a/b/c'/d' | e'2c' | a2^f | g3 |
+[V:v1] |: !f!g2d' | d'c'/b/a | b2g | ^f/g/a2 | g/a/b/c'/d' | e'2c' | a2^f | g3 |
+[V:v2] |: !f!DDD | DDD | DDD | ^FFF | GGG | GGG | ^FFF | BBB |
+[V:va] |: !f!B,B,B, | A,A,A, | B,B,B, | A,A,A, | B,B,B, | CCC | DDD | DDD |
+[V:vc] |: !f!G,,G,,G,, | ^F,,F,,F,, | G,,G,,G,, | D,,D,,D,, | G,,G,,G,, | E,,E,,E,, | D,,D,,D,, | G,,G,,G,, |
+[V:cb] |: !f!G,,,G,,,G,,, | ^F,,,F,,,F,,, | G,,,G,,,G,,, | D,,D,,D,, | G,,,G,,,G,,, | E,,E,,E,, | D,,D,,D,, | G,,,G,,,G,,, |
+[V:hpd] |: !mf![DGB][DGB][DGB] | [D^FA][DFA][DFA] | [DGB][DGB][DGB] | [D^FA][DFA][DFA] | [DGB][DGB][DGB] | [CGc][CGc][CGc] | [A,^Fd][A,Fd][A,Fd] | [B,Gd][B,Gd][B,Gd] |
+% bars 9-16: [A2] Sixteenth-note sequence through a circle of fifths to B flat
+[V:vs] !mf!B/d/g/d/B/d/ | c/e/g/e/c/e/ | c/f/a/f/c/f/ | d/f/b/f/d/f/ | e/g/b/g/e/g/ | c/g/c'/g/c/g/ | e/a/c'/a/e/a/ | f/b/d'/b/f/b/ |
+[V:v1] !mf!B/d/g/d/B/d/ | c/e/g/e/c/e/ | c/f/a/f/c/f/ | d/f/b/f/d/f/ | e/g/b/g/e/g/ | c/g/c'/g/c/g/ | e/a/c'/a/e/a/ | f/b/d'/b/f/b/ |
+[V:v2] !mf!DDD | EEE | FFF | DDD | EEE | CCC | EEE | DDD |
+[V:va] !mf!B,B,B, | CCC | A,A,A, | B,B,B, | G,G,G, | G,G,G, | A,A,A, | B,B,B, |
+[V:vc] !mf!G,,3 | C,3 | F,3 | B,,3 | E,3 | E,3 | F,3 | B,,3 |
+[V:cb] !mf!G,,,3 | C,,3 | F,,3 | B,,,3 | E,,3 | E,,3 | F,,3 | B,,,3 |
+[V:hpd] !mf![DGB][DGB][DGB] | [EGc][EGc][EGc] | [FAc][FAc][FAc] | [FBd][FBd][FBd] | [GBe][GBe][GBe] | [Gce][Gce][Gce] | [FAe][FAe][FAe] | [FBd][FBd][FBd] |
+% bars 17-24: [A3] The theme turned to the major, quietly
+[V:vs] !p!b2f' | f'e'/d'/c' | d'2b | a/b/c'2 | b/c'/d'/e'/f' | g'2e' | c'2a | b3 |
+[V:v1] !p!b2f' | f'e'/d'/c' | d'2b | a/b/c'2 | b/c'/d'/e'/f' | g'2e' | c'2a | b3 |
+[V:v2] !p!FFF | FFF | FFF | FFF | DDD | EEE | FFF | DDD |
+[V:va] !p!DDD | CCC | DDD | A,A,A, | B,B,B, | B,B,B, | A,A,A, | B,B,B, |
+[V:vc] !p!B,,B,,B,, | A,,A,,A,, | B,,B,,B,, | F,,F,,F,, | B,,B,,B,, | G,,G,,G,, | F,,F,,F,, | B,,B,,B,, |
+[V:cb] !p!B,,,B,,,B,,, | A,,,A,,,A,,, | B,,,B,,,B,,, | F,,,F,,,F,,, | B,,,B,,,B,,, | G,,,G,,,G,,, | F,,,F,,,F,,, | B,,,B,,,B,,, |
+[V:hpd] !mf![DFB][DFB][DFB] | [CFc][CFc][CFc] | [B,Fd][B,Fd][B,Fd] | [A,Fc][A,Fc][A,Fc] | [B,Fd][B,Fd][B,Fd] | [B,EB][B,EB][B,EB] | [A,Fc][A,Fc][A,Fc] | [B,Fd][B,Fd][B,Fd] |
+% bars 25-32: [A4] Hammered close in B flat
+[V:vs] !f!f'd'b | f'd'b | g'c'e' | f'3 | d'/c'/b/c'/d' | e'/d'/c'/d'/e' | c'2!trill!c' | b3 :|
+[V:v1] !f!f'd'b | f'd'b | g'c'e' | f'3 | d'/c'/b/c'/d' | e'/d'/c'/d'/e' | c'2!trill!c' | b3 :|
+[V:v2] !f!FFF | FFF | GGG | AAA | BBB | GGG | AAA | BBB :|
+[V:va] !f!DDD | DDD | EEE | FFF | DDD | CCC | EEE | DDD :|
+[V:vc] !f!B,,B,,B,, | B,,B,,B,, | C,C,C, | F,F,F, | B,,B,,B,, | E,E,E, | F,F,F, | B,,B,,B,, :|
+[V:cb] !f!B,,,B,,,B,,, | B,,,B,,,B,,, | C,,C,,C,, | F,,F,,F,, | B,,,B,,,B,,, | E,,E,,E,, | F,,F,,F,, | B,,,B,,,B,,, :|
+[V:hpd] !mf![DFB][DFB][DFB] | [DFB][DFB][DFB] | [EGc][EGc][EGc] | [FAc][FAc][FAc] | [FBd][FBd][FBd] | [Gce][Gce][Gce] | [FAe][FAe][FAe] | [FBd][FBd][FBd] :|
+% bars 33-40: [B1] Second half: the sequence climbs to D minor
+[V:vs] |: !mf!B/d/f/d/B/d/ | G/d/f/d/G/d/ | G/c/e/c/G/c/ | G/A/=e/A/G/A/ | F/A/d/A/F/A/ | D/G/d/G/D/G/ | =E/G/^c/G/E/G/ | F/A/d/A/F/A/ |
+[V:v1] |: !mf!B/d/f/d/B/d/ | G/d/f/d/G/d/ | G/c/e/c/G/c/ | G/A/=e/A/G/A/ | F/A/d/A/F/A/ | D/G/d/G/D/G/ | =E/G/^c/G/E/G/ | F/A/d/A/F/A/ |
+[V:v2] |: !mf!FFF | FFF | GGG | GGG | AAA | GGG | GGG | FFF |
+[V:va] |: !mf!DDD | DDD | EEE | =EEE | FFF | DDD | ^CCC | DDD |
+[V:vc] |: !mf!B,,3 | =B,,3 | C,3 | ^C,3 | D,3 | B,,3 | A,,3 | D,3 |
+[V:cb] |: !mf!B,,,3 | =B,,,3 | C,,3 | ^C,,3 | D,,3 | B,,,3 | A,,,3 | D,,3 |
+[V:hpd] |: !mf![DFB][DFB][DFB] | [DFG][DFG][DFG] | [CEG][CEG][CEG] | [A,=EG][A,EG][A,EG] | [A,DF][A,DF][A,DF] | [B,DG][B,DG][B,DG] | [A,^CG][A,CG][A,CG] | [A,DF][A,DF][A,DF] |
+% bars 41-48: [B2] The theme in D minor, quietly
+[V:vs] !p!d2a | ag/f/=e | f2d | ^c/d/=e2 | d/=e/f/g/a | b2g | =e2^c | d3 |
+[V:v1] !p!d2a | ag/f/=e | f2d | ^c/d/=e2 | d/=e/f/g/a | b2g | =e2^c | d3 |
+[V:v2] !p!FFF | =EEE | FFF | ^CCC | FFF | DDD | ^CCC | FFF |
+[V:va] !p!DDD | A,A,A, | A,A,A, | A,A,A, | A,A,A, | G,G,G, | A,A,A, | A,A,A, |
+[V:vc] !p!D,,D,,D,, | ^C,,C,,C,, | D,,D,,D,, | A,,A,,A,, | D,D,D, | B,,B,,B,, | A,,A,,A,, | D,D,D, |
+[V:cb] !p!D,,D,,D,, | ^C,,C,,C,, | D,,D,,D,, | A,,,A,,,A,,, | D,,D,,D,, | B,,,B,,,B,,, | A,,,A,,,A,,, | D,,D,,D,, |
+[V:hpd] !mf![DFA][DFA][DFA] | [A,=EA][A,EA][A,EA] | [A,DF][A,DF][A,DF] | [A,^C=E][A,CE][A,CE] | [A,DF][A,DF][A,DF] | [B,DG][B,DG][B,DG] | [A,^C=E][A,CE][A,CE] | [A,DF][A,DF][A,DF] |
+% bars 49-56: [B3] Falling fifths back towards G minor
+[V:vs] !mf!A/d/f/d/A/d/ | B/d/g/d/B/d/ | c/=e/g/e/c/e/ | c/f/a/f/c/f/ | d/f/b/f/d/f/ | e/g/b/g/e/g/ | c/g/c'/g/c/g/ | A/^f/d'/f/A/f/ |
+[V:v1] !mf!A/d/f/d/A/d/ | B/d/g/d/B/d/ | c/=e/g/e/c/e/ | c/f/a/f/c/f/ | d/f/b/f/d/f/ | e/g/b/g/e/g/ | c/g/c'/g/c/g/ | A/^f/d'/f/A/f/ |
+[V:v2] !mf!FFF | BBB | ccc | AAA | BBB | GGG | GGG | ^FFF |
+[V:va] !mf!DDD | DDD | =EEE | FFF | DDD | EEE | CCC | DDD |
+[V:vc] !mf!D,,3 | G,,3 | C,3 | F,3 | B,,3 | E,3 | E,3 | D,3 |
+[V:cb] !mf!D,,3 | G,,,3 | C,,3 | F,,3 | B,,,3 | E,,3 | E,,3 | D,,3 |
+[V:hpd] !mf![DFA][DFA][DFA] | [DGB][DGB][DGB] | [=EGc][EGc][EGc] | [FAc][FAc][FAc] | [FBd][FBd][FBd] | [GBe][GBe][GBe] | [Gce][Gce][Gce] | [^FAd][FAd][FAd] |
+% bars 57-64: [B4] Over a held D in the bass
+[V:vs] !f!d'^fa | d'gb | d'^fa | d'gb | ^f/g/a/b/c' | d'/c'/b/a/^f | a2^f | d3 |
+[V:v1] !f!d'^fa | d'gb | d'^fa | d'gb | ^f/g/a/b/c' | d'/c'/b/a/^f | a2^f | d3 |
+[V:v2] !f!^FFF | BBB | ^FFF | GGG | ^FFF | ^FFF | ^FFF | ^FFF |
+[V:va] !f!DDD | DDD | CCC | B,B,B, | CCC | CCC | DDD | DDD |
+[V:vc] !f!D,,D,,D,, | D,,D,,D,, | D,,D,,D,, | D,,D,,D,, | D,,D,,D,, | D,,D,,D,, | D,,D,,D,, | D,,D,,D,, |
+[V:cb] !f!D,,D,,D,, | D,,D,,D,, | D,,D,,D,, | D,,D,,D,, | D,,D,,D,, | D,,D,,D,, | D,,D,,D,, | D,,D,,D,, |
+[V:hpd] !mf![D^FA][DFA][DFA] | [DGB][DGB][DGB] | [D^Fc][DFc][DFc] | [DGB][DGB][DGB] | [D^Fc][DFc][DFc] | [D^Fc][DFc][DFc] | [D^FA][DFA][DFA] | [D^FA][DFA][DFA] |
+% bars 65-72: [B5] The theme returns in G minor
+[V:vs] !f!g2d' | d'c'/b/a | b2g | ^f/g/a2 | g/a/b/c'/d' | e'2c' | a2^f | g3 |
+[V:v1] !f!g2d' | d'c'/b/a | b2g | ^f/g/a2 | g/a/b/c'/d' | e'2c' | a2^f | g3 |
+[V:v2] !f!DDD | DDD | DDD | ^FFF | GGG | GGG | ^FFF | BBB |
+[V:va] !f!B,B,B, | A,A,A, | B,B,B, | A,A,A, | B,B,B, | CCC | DDD | DDD |
+[V:vc] !f!G,,G,,G,, | ^F,,F,,F,, | G,,G,,G,, | D,,D,,D,, | G,,G,,G,, | E,,E,,E,, | D,,D,,D,, | G,,G,,G,, |
+[V:cb] !f!G,,,G,,,G,,, | ^F,,,F,,,F,,, | G,,,G,,,G,,, | D,,D,,D,, | G,,,G,,,G,,, | E,,E,,E,, | D,,D,,D,, | G,,,G,,,G,,, |
+[V:hpd] !mf![DGB][DGB][DGB] | [D^FA][DFA][DFA] | [DGB][DGB][DGB] | [D^FA][DFA][DFA] | [DGB][DGB][DGB] | [CGc][CGc][CGc] | [A,^Fd][A,Fd][A,Fd] | [B,Gd][B,Gd][B,Gd] |
+% bars 73-80: [B6] Hammered close
+[V:vs] !f!d'bg | d'bg | e'c'a | d'3 | b/a/g/a/b | c'/b/a/b/c' | a2!trill!a | g3 :|
+[V:v1] !f!d'bg | d'bg | e'c'a | d'3 | b/a/g/a/b | c'/b/a/b/c' | a2!trill!a | g3 :|
+[V:v2] !f!DDD | DDD | EEE | ^FFF | GGG | GGG | ^FFF | GGG :|
+[V:va] !f!B,B,B, | B,B,B, | A,A,A, | A,A,A, | B,B,B, | EEE | CCC | B,B,B, :|
+[V:vc] !f!G,,G,,G,, | G,,G,,G,, | C,C,C, | D,D,D, | G,G,G, | C,C,C, | D,D,D, | G,G,G, :|
+[V:cb] !f!G,,,G,,,G,,, | G,,,G,,,G,,, | C,,C,,C,, | D,,D,,D,, | G,,G,,G,, | C,,C,,C,, | D,,D,,D,, | G,,G,,G,, :|
+[V:hpd] !mf![DGB][DGB][DGB] | [DGB][DGB][DGB] | [EAe][EAe][EAe] | [^FAd][FAd][FAd] | [GBd][GBd][GBd] | [Gce][Gce][Gce] | [^Fcd][Fcd][Fcd] | [GBd][GBd][GBd] :|
