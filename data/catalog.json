@@ -1083,6 +1083,50 @@
           "durationSeconds": 105
         }
       ]
+    },
+    {
+      "id": "stravinsky-symphony-1",
+      "composerId": "stravinsky",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Stravinsky’s Missing Symphony",
+      "subtitle": "Symphony in G",
+      "description": "A short neoclassical symphony built from blocks set side by side: a three-note motto, ostinatos, a steady pulse under changing metres, woodwind arabesques over plucked strings, and a wind chorale that frames the finale. For double woodwind, brass, timpani, piano and strings. A new AI-composed homage, not a rediscovered work by Stravinsky.",
+      "durationSeconds": 484,
+      "date": "2026-11-18",
+      "status": "completed",
+      "notebook": "stravinsky-symphony-1-notebook.html",
+      "transcript": "stravinsky-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Allegro",
+          "note": "Blocks in 4/4, 3/4 and 2/4: a three-note motto, a rocking woodwind figure, a trumpet fanfare, a clarinet song.",
+          "source": "scores/stravinsky-symphony-1-i.abc",
+          "durationSeconds": 133
+        },
+        {
+          "id": "ii",
+          "label": "II. Andante",
+          "note": "E minor: flute and clarinet arabesques over plucked strings, twice interrupted by a bowed chorale.",
+          "source": "scores/stravinsky-symphony-1-ii.abc",
+          "durationSeconds": 120
+        },
+        {
+          "id": "iii",
+          "label": "III. Allegretto",
+          "note": "A six-bar cycle alternating 2/4 and 3/8, with two mock-waltzes.",
+          "source": "scores/stravinsky-symphony-1-iii.abc",
+          "durationSeconds": 91
+        },
+        {
+          "id": "iv",
+          "label": "IV. Largo – Allegro – Largo",
+          "note": "A wind chorale frames a fast movement on an ostinato; the symphony ends quietly.",
+          "source": "scores/stravinsky-symphony-1-iv.abc",
+          "durationSeconds": 140
+        }
+      ]
     }
   ]
 }

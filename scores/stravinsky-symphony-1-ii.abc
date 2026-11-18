@@ -1,0 +1,79 @@
+%%label II. Andante
+%%note E minor. Flute and clarinet trace arabesques over plucked strings; twice the strings take their bows for a plain chorale in three-four.
+X:1
+T:Stravinsky’s Missing Symphony
+T:II. Andante
+C:Claude (AI), in the manner of Igor Stravinsky
+M:2/4
+L:1/8
+Q:"Andante" 1/4=54
+%%score [fl ob cl bn] [hn]  [v1 v2 va vc cb]
+% Original AI-composed homage. The score is written at sounding pitch.
+V:fl clef=treble name="Fl. I, II"
+V:ob clef=treble name="Ob. I, II"
+V:cl clef=treble name="Cl. I, II"
+V:bn clef=bass name="Bn. I, II"
+V:hn clef=treble name="Hn. I–IV"
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:Em
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:v1
+%%MIDI program 45
+V:v2
+%%MIDI program 45
+V:va
+%%MIDI program 45
+V:vc
+%%MIDI program 45
+V:cb
+%%MIDI program 45
+% bars 1-8: [1] Flute arabesque over plucked strings
+[V:fl] !mp!b2 e'/f'/g'/e'/ | f'2 d'/e'/f'/d'/ | e'2 c'/d'/e'/c'/ | b3 z | g'2 e'/f'/g'/e'/ | a'2 f'/g'/a'/f'/ | g'e' c'a | b4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] z!p!G zG | zA zA | zc zc | zB zB | zB zB | zA zA | zA zA | zE zE |
+[V:v2] z!p!E zE | zD zD | zE zE | zE zE | zE zE | zD zD | zC zC | zB, zB, |
+[V:va] z!p!B, zB, | zB, zB, | zB, zB, | zG, zG, | zG, zG, | zA, zA, | zG, zG, | zG, zG, |
+[V:vc] !p!E,, z E,, z | B,, z B,, z | C, z C, z | E, z E, z | E, z E, z | F, z F, z | A,, z A,, z | E,, z E,, z |
+[V:cb] !p!E,,, z E,,, z | B,,, z B,,, z | C,, z C,, z | E,, z E,, z | E,, z E,, z | F,, z F,, z | A,,, z A,,, z | E,,, z E,,, z |
+% bars 9-16: [2] The clarinet answers a fourth lower
+% bars 17-24: [3] The strings take their bows: a plain chorale with horns
+% bars 25-32: [4] Plucked again: flute, with the clarinet a sixth below
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 || [M:3/4] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 || [M:2/4] !mp!b2 e'/f'/g'/e'/ | f'2 d'/e'/f'/d'/ | e'2 c'/d'/e'/c'/ | b3 z | g'2 e'/f'/g'/e'/ | a'2 f'/g'/a'/f'/ | g'e' c'a | b4 |
+[V:ob] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 || [M:3/4] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 || [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:cl] !mp!f2 b/^c'/d'/b/ | ^c'2 a/b/c'/a/ | b2 g/a/b/g/ | f3 z | d'2 b/^c'/d'/b/ | e'2 ^c'/d'/e'/c'/ | d'b ge | f4 || [M:3/4] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 || [M:2/4] !p!d2 g/a/b/g/ | a2 f/g/a/f/ | g2 e/f/g/e/ | d3 z | b2 g/a/b/g/ | c'2 a/b/c'/a/ | bg ec | d4 |
+[V:bn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 || [M:3/4] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 || [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 || [M:3/4] !pp![CE]6 | [DG]6 | [CG]6 | [B,G]6 | [CA]6 | [CG]6 | [C=F]6 | [B,^G]6 || [M:2/4] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 |
+[V:v1] z!p!F zF | zF zF | zG zG | zF zF | zF zF | zA zA | zG zG | zF zF || [I:MIDI program 48] [M:3/4] !mp!e'4 d'2 | d'4 b2 | c'4 e'2 | e'4 z2 | =f'4 e'2 | e'4 c'2 | d'4 =f'2 | e'4 z2 || [I:MIDI program 45] [M:2/4] z!p!G zG | zA zA | zc zc | zB zB | zB zB | zA zA | zA zA | zE zE |
+[V:v2] z!p!D zD | zE zE | zF zF | zD zD | zD zD | zE zE | zE zE | zD zD || [I:MIDI program 48] [M:3/4] !p!E6 | G6 | G6 | G6 | A6 | G6 | =F6 | ^G6 || [I:MIDI program 45] [M:2/4] z!p!E zE | zD zD | zE zE | zE zE | zE zE | zD zD | zC zC | zB, zB, |
+[V:va] z!p!B, zB, | zA, zA, | zB, zB, | zB, zB, | zB, zB, | zA, zA, | zD zD | zB, zB, || [I:MIDI program 48] [M:3/4] !p!C6 | D6 | C6 | B,6 | C6 | C6 | C6 | B,6 || [I:MIDI program 45] [M:2/4] z!p!B, zB, | zB, zB, | zB, zB, | zG, zG, | zG, zG, | zA, zA, | zG, zG, | zG, zG, |
+[V:vc] !p!B,, z B,, z | F,, z F,, z | G,, z G,, z | B,, z B,, z | B,, z B,, z | ^C, z C, z | E, z E, z | B,, z B,, z || [I:MIDI program 48] [M:3/4] !p!C,,6 | B,,6 | A,,6 | E,,6 | =F,,6 | E,,6 | D,,6 | E,,6 || [I:MIDI program 45] [M:2/4] !p!E,, z E,, z | B,, z B,, z | C, z C, z | E, z E, z | E, z E, z | F, z F, z | A,, z A,, z | E,, z E,, z |
+[V:cb] !p!B,,, z B,,, z | F,,, z F,,, z | G,,, z G,,, z | B,,, z B,,, z | B,,, z B,,, z | ^C,, z C,, z | E,, z E,, z | B,,, z B,,, z || [I:MIDI program 43] [M:3/4] !p!C,,6 | B,,,6 | A,,,6 | E,,,6 | =F,,,6 | E,,,6 | D,,6 | E,,,6 || [I:MIDI program 45] [M:2/4] !p!E,,, z E,,, z | B,,, z B,,, z | C,, z C,, z | E,, z E,, z | E,, z E,, z | F,, z F,, z | A,,, z A,,, z | E,,, z E,,, z |
+% bars 33-40: [5] The arabesque in G major, for oboe with bassoon two octaves below
+% bars 41-44: [6] The second half of the chorale, bowed
+% bars 45-48: [7] A plucked close with the flute
+[V:fl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 || [M:3/4] z6 | z6 | z6 | z6 || [M:2/4] !pp!b2 e'/f'/g'/e'/ | b2 e'/f'/g'/e'/ | b4 | e4 |]
+[V:ob] !mp!d2 g/a/^a/g/ | a2 =f/g/a/f/ | g2 ^d/=f/g/d/ | d3 z | ^a2 g/=a/^a/g/ | c'2 a/^a/c'/=a/ | ^ag ^dc | d4 || [M:3/4] z6 | z6 | z6 | z6 || [M:2/4] z4 | z4 | z4 | z4 |]
+[V:cl] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 || [M:3/4] z6 | z6 | z6 | z6 || [M:2/4] z4 | z4 | z4 | z4 |]
+[V:bn] !p!D2 G/A/^A/G/ | A2 =F/G/A/F/ | G2 ^D/=F/G/D/ | D3 z | ^A2 G/=A/^A/G/ | c2 A/^A/c/=A/ | ^AG ^DC | D4 || [M:3/4] z6 | z6 | z6 | z6 || [M:2/4] z4 | z4 | z4 | z4 |]
+[V:hn] z4 | z4 | z4 | z4 | z4 | z4 | z4 | z4 || [M:3/4] z6 | z6 | z6 | z6 || [M:2/4] z4 | z4 | z4 | z4 |]
+[V:v1] z!p!^A zA | zc zc | z^d zd | zd zd | zd zd | zc zc | zc zc | z^A zA || [I:MIDI program 48] [M:3/4] !mp!=f'4 e'2 | e'4 c'2 | d'4 =f'2 | e'4 z2 || [I:MIDI program 45] [M:2/4] z!pp!G zG | zG zG | zG zG | zG zG |]
+[V:v2] z!p!G zG | z=F zF | zG zG | zG zG | zG zG | z=F zF | z^D zD | zD zD || [I:MIDI program 48] [M:3/4] !p!=F6 | G6 | =F6 | ^G6 || [I:MIDI program 45] [M:2/4] z!pp!E zE | zE zE | zE zE | zE zE |]
+[V:va] z!p!D zD | zD zD | zD zD | z^A, zA, | z^A, zA, | zC zC | z^A, zA, | zG, zG, || [I:MIDI program 48] [M:3/4] !p!A,6 | C6 | C6 | B,6 || [I:MIDI program 45] [M:2/4] z!pp!B, zB, | zB, zB, | zB, zB, | zB, zB, |]
+[V:vc] !p!G,, z G,, z | D,, z D,, z | ^D,, z D,, z | G,, z G,, z | G,, z G,, z | A,, z A,, z | C, z C, z | G,, z G,, z || [I:MIDI program 48] [M:3/4] !p!=F,,6 | E,,6 | D,,6 | E,,6 || [I:MIDI program 45] [M:2/4] !pp!E,, z E,, z | C,, z C,, z | E,, z E,, z | E,, z E,, z |]
+[V:cb] !p!G,,, z G,,, z | D,, z D,, z | ^D,, z D,, z | G,,, z G,,, z | G,,, z G,,, z | A,,, z A,,, z | C,, z C,, z | G,,, z G,,, z || [I:MIDI program 43] [M:3/4] !p!=F,,,6 | E,,,6 | D,,6 | E,,,6 || [I:MIDI program 45] [M:2/4] !pp!E,,, z E,,, z | C,, z C,, z | E,,, z E,,, z | E,,, z E,,, z |]

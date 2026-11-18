@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="assets/legacy-host.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Composition log — Stravinsky’s Missing Symphony</title>
+<meta name="description" content="Search the public conversation, score revisions and test logs behind Stravinsky’s Missing Symphony, an original AI-composed homage.">
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#fbfaf5;color:#17232b}body{font:18px/1.5 'Old Standard TT',Georgia,serif}header{background:#8fa5b2;padding:30px max(20px,calc((100% - 900px)/2))}nav{display:flex;flex-wrap:wrap;gap:12px 24px;font-size:16px}a{color:inherit;text-underline-offset:3px}a:hover{color:#765019}h1{font-size:clamp(32px,6vw,50px);font-weight:400;line-height:1.15;margin:22px 0 12px}header p{max-width:70ch;margin:12px 0}main{max-width:940px;margin:auto;padding:24px 20px 48px}button,input,select{font:inherit;color:inherit}button,input,select{border:1px solid #71818b;border-radius:0;background:#fbfaf5;padding:9px 12px}button{cursor:pointer}button:hover{background:#e4e9eb}:focus-visible{outline:2px solid #b8741a;outline-offset:3px}label{display:block;font-size:16px}.search{display:block;width:100%;margin:6px 0 14px;font-size:19px}.filters{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:end}.filters label{flex:1;min-width:140px}select{display:block;width:100%;margin-top:6px}.status{font-size:16px;color:#4d575e;min-height:26px;margin:18px 0 12px}.policy{margin:0 0 22px;font-size:16px}.policy p{max-width:80ch}summary{cursor:pointer}article{border-top:1px solid #b9bec0;padding:20px 0}.entry-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;font-size:15px;color:#4d575e}.entry-head a{white-space:nowrap}h2{font-weight:400;font-size:22px;line-height:1.25;margin:7px 0 10px}pre{font:14px/1.55 ui-monospace,'Courier New',monospace;white-space:pre-wrap;overflow-wrap:anywhere;margin:12px 0;tab-size:2}.message{font:18px/1.55 'Old Standard TT',Georgia,serif}.note{font-size:14px;color:#4d575e;margin:8px 0}.snippet{font-size:15px;margin:8px 0;color:#4d575e;overflow-wrap:anywhere}mark{background:#f4d7a5;color:#17232b}.more{display:block;margin:24px auto 0;min-width:180px}.empty{padding:35px 0}.error{border:1px solid #8b2929;padding:16px}footer{margin-top:32px;border-top:1px solid #b9bec0;padding-top:18px;font-size:16px}#back{display:block;margin:20px 0}time{font-variant-numeric:tabular-nums}@media(max-width:480px){body{font-size:17px}.entry-head{display:block}.entry-head a{display:inline-block;margin-top:4px}.filters{gap:10px}pre{font-size:13px}}
+</style>
+</head>
+<body>
+<header id="top">
+<nav aria-label="Navigation"><a href="work.html?id=stravinsky-symphony-1">Listen</a><a href="stravinsky-symphony-1-notebook.html">Composition notebook</a><a href="https://github.com/akrentsel/beethovens-missing-quartet">Repository</a></nav>
+<h1>The composition, on record</h1>
+<p>Search and browse the recorded messages, score checks, draft publications and tests behind <em>Stravinsky’s Missing Symphony</em>.</p>
+<p>An original AI-composed homage, not a work by Igor Stravinsky.</p>
+</header>
+<main>
+<details class="policy"><summary>What is included, and what is omitted?</summary>
+<p>This is the log the composing agent kept while writing this work: the request, its progress messages, the commands it ran on the score with their output, each draft publication and the test results. Entries were written during the work, one at a time. It is not an automatic export of the whole session and not a complete internal execution log.</p>
+<p>Private internal reasoning is not included. Credentials, access details, private paths and unrelated conversation are left out; long outputs are shortened where an entry says so. The same session composed other works, which have their own logs.</p>
+<p>Claims are left as recorded, including provisional or mistaken conclusions; later corrections remain. Times are shown in your browser’s local time zone.</p>
+<p><a href="stravinsky-symphony-1-transcript.json" download>Download the public log as JSON</a> · <a href="stravinsky-symphony-1-notebook.html">Read the shorter composition notebook</a></p>
+</details>
+<form id="filters" role="search">
+<label for="query">Search all text in the selected histories</label>
+<input class="search" id="query" type="search" placeholder="Try “block”, “metre”, “chorale” or “browser”" autocomplete="off">
+<div class="filters">
+<label>Conversation<select id="session"><option value="">The whole session</option></select></label>
+<label>Entries<select id="kind"><option value="">Messages &amp; tool logs</option><option value="message">Messages only</option><option value="tool">Tool calls only</option><option value="result">Tool results only</option><option value="omission">Omission markers</option><option value="all">Everything</option></select></label>
+<label>Order<select id="order"><option value="old">Oldest first</option><option value="new">Newest first</option></select></label>
+<button type="button" id="reset">Reset</button>
+</div>
+</form>
+<p class="status" id="status" aria-live="polite">Loading the public transcript…</p>
+<div id="entries"></div>
+<button class="more" id="more" type="button" hidden>Load 40 more entries</button>
+<a id="back" href="#top">Back to search</a>
+<footer>Want the musical overview instead? <a href="stravinsky-symphony-1-notebook.html">Read the composition notebook.</a> The notebook and transcript describe a composition experiment, not proof of music of Stravinsky’s quality.</footer>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+let data=[],matches=[],shown=0;
+const PAGE=40;
+const make=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
+function highlight(el,text,q){
+ if(!q){el.textContent=text;return;}
+ const lower=text.toLocaleLowerCase(),needle=q.toLocaleLowerCase();let start=0,at;
+ while((at=lower.indexOf(needle,start))!==-1){el.append(document.createTextNode(text.slice(start,at)),make('mark',text.slice(at,at+q.length)));start=at+q.length;}
+ el.append(document.createTextNode(text.slice(start)));
+}
+function renderEntry(e,q){
+ const article=make('article');article.id=e.id;
+ const head=make('div',undefined,'entry-head');const context=make('span',e.sessionLabel+' · ');
+ const time=make('time',new Date(e.time).toLocaleString());time.dateTime=e.time;context.append(time);
+ const link=make('a',e.id.replace('entry-','#'));link.href='#'+e.id;head.append(context,link);
+ article.append(head,make('h2',e.speaker));
+ if(e.notes.length)article.append(make('p','Edited: '+e.notes.join(', ')+'.','note'));
+ const content=make('pre',undefined,e.kind==='message'?'message':'');highlight(content,e.text,q);
+ if(e.kind==='tool'||e.kind==='result'){
+  const details=make('details');const summary=make('summary',e.kind==='tool'?'Open recorded tool call':'Open recorded tool result');details.append(summary,content);
+  if(q){const at=e.text.toLocaleLowerCase().indexOf(q.toLocaleLowerCase());const snippet=make('p',undefined,'snippet');highlight(snippet,(at>90?'…':'')+e.text.slice(Math.max(0,at-90),at+q.length+180)+(at+q.length+180<e.text.length?'…':''),q);article.append(snippet);}
+  article.append(details);
+ }else article.append(content);
+ return article;
+}
+function more(){
+ const q=$('query').value.trim(),end=Math.min(shown+PAGE,matches.length),frag=document.createDocumentFragment();
+ for(let i=shown;i<end;i++)frag.append(renderEntry(matches[i],q));
+ $('entries').append(frag);shown=end;$('more').hidden=shown>=matches.length;
+ $('status').textContent=matches.length+' matching entries · showing '+shown+' · '+data.length+' recorded entries in this export';
+}
+function filter(){
+ const q=$('query').value.trim().toLocaleLowerCase(),session=$('session').value,kind=$('kind').value;
+ matches=data.filter(e=>(!session||e.session===session)&&(kind==='all'||(kind?e.kind===kind:e.kind!=='omission'))&&(!q||e.text.toLocaleLowerCase().includes(q)||e.speaker.toLocaleLowerCase().includes(q)));
+ if($('order').value==='new')matches.reverse();
+ shown=0;$('entries').replaceChildren();more();
+ if(!matches.length)$('entries').append(make('p','No matches. Try a shorter phrase or another conversation.','empty'));
+}
+function goToHash(){
+ const id=location.hash.slice(1);if(!/^entry-\d+$/.test(id)||!data.some(e=>e.id===id))return;
+ $('query').value='';$('session').value='';$('kind').value='all';$('order').value='old';filter();
+ const index=matches.findIndex(e=>e.id===id);while(shown<=index)more();
+ const target=$(id);const details=target.querySelector('details');if(details)details.open=true;target.scrollIntoView();
+}
+$('filters').addEventListener('submit',e=>e.preventDefault());
+let timer;$('query').addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(filter,120);});
+['session','kind','order'].forEach(id=>$(id).addEventListener('change',filter));
+$('reset').addEventListener('click',()=>{HTMLFormElement.prototype.reset.call($('filters'));try{history.replaceState(null,'',location.pathname);}catch(e){}filter();$('query').focus();});
+$('more').addEventListener('click',more);window.addEventListener('hashchange',goToHash);
+fetch('stravinsky-symphony-1-transcript.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json();}).then(d=>{
+ data=d.entries;
+ Object.entries(d.sessions).forEach(([value,label])=>{const option=make('option',label);option.value=value;$('session').append(option);});
+ filter();goToHash();
+}).catch(()=>{$('status').textContent='The transcript could not load.';const p=make('p','Please reload the page. If you downloaded these files, serve the folder with a local web server rather than opening this page directly.','error');$('entries').append(p);});
+</script>
+</body>
+</html>

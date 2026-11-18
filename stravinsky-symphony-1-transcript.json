@@ -1,0 +1,198 @@
+{
+ "title": "Stravinsky’s Missing Symphony — public composition log",
+ "scope": "The log the composing agent (Claude) kept while writing this work: the request, its progress messages, the commands it ran on the score and their output, draft publications and test results, up to the publication step. It was written during the work, entry by entry; it is not an automatic export of the whole session, and the same session composed other works whose entries are not included here.",
+ "policy": "Messages and tool output are recorded as they occurred, shortened where marked. Private internal reasoning, credentials, access details, private paths and unrelated conversation are not included. Statements made during the work may be provisional or mistaken; later corrections remain in the log.",
+ "sessions": {
+  "main": "Composition session"
+ },
+ "entries": [
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:32:16.000Z",
+   "kind": "message",
+   "speaker": "User",
+   "text": "[A long batch brief was pasted: compose and publish one original symphony for each composer in the Missing Works catalogue who has no completed symphony, one composer at a time, claiming each open symphony request through the admin command, publishing live drafts early, testing every movement in the real browser player, writing a notebook and a public composition log, deploying an atomic release, and completing the request only after the public work is verified. Every work must be labelled an original AI-composed homage.]\n\nNOW I know I said to do all composers, but how about we actually do half of the composers in each section? just to save some money.",
+   "notes": [
+    "the pasted batch brief is summarised in brackets; the last sentence is verbatim"
+   ],
+   "id": "entry-0001"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:32:16.000Z",
+   "kind": "tool",
+   "speaker": "Queue claim",
+   "text": "GET /api/requests -> stravinsky:symphony:1 status open, votes 0; no request in status composing\nmissing-works-admin start stravinsky:symphony:1",
+   "notes": [
+    "access details omitted"
+   ],
+   "id": "entry-0002"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:32:16.000Z",
+   "kind": "result",
+   "speaker": "Queue claim",
+   "text": "started stravinsky:symphony:1",
+   "notes": [],
+   "id": "entry-0003"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:32:16.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "Composition brief — Stravinsky’s Missing Symphony (work id stravinsky-symphony-1)\n\nStravinsky wrote several works called symphony, among them the Symphony in C and the Symphony in Three Movements. This is a new short “Symphony in G” in the manner of his neoclassical years. No theme is taken from him.\n\nOrchestra (14 staves, sounding pitch): pairs of flutes, oboes, clarinets and bassoons, four horns, two trumpets, three trombones, timpani, piano, strings.\n\nMethod: the music is built from short blocks, each in one metre and one texture, set side by side without transitions and returning in changed order; ostinatos; a pulse that stays constant while the metre changes (4/4, 3/4, 2/4, 3/8); mostly white-note harmony with added seconds, sixths and sevenths; dry, detached string writing, prominent winds, and the piano as a percussive member of the orchestra. Half-step clashes inside chords and parallel motion are part of the style and are not reported by the checks for this work.\n\nMovements\nI. Allegro, G: a motto of three repeated notes; a rocking woodwind figure in 3/4; a trumpet fanfare in 2/4; a clarinet song in D; a middle part with a short fugato on the motto; return and abrupt close.\nII. Andante, E minor: flute and clarinet arabesques over plucked strings, around a bowed chorale in 3/4.\nIII. Allegretto: a six-bar cycle that alternates 2/4 and 3/8, with two short mock-waltzes for bassoon and clarinet.\nIV. Largo – Allegro – Largo: a chorale for winds and brass frames a fast movement on an ostinato; the symphony ends quietly on the chorale.\n\nTarget length about eight or nine minutes. Compromise known from the start: tunes, the fugato, chorale and the chord of every bar are written by hand; a program writes the ostinato accompaniments, held chords, piano chords and full-orchestra textures from the chord plan.",
+   "notes": [],
+   "id": "entry-0004"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:33:16.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. First movement: 20 blocks in 4/4, 3/4 and 2/4 (half-step clashes and parallel motion are not reported for this work).",
+   "notes": [],
+   "id": "entry-0005"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:33:16.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Allegro: 94 bars written, 133s played; activity fl:54 ob:106 cl:132 bn:61 hn:93 tpt:51 tbn:147 timp:24 pno:136 v1:73 v2:71 va:79 vc:78 cb:78\n    validator ok: 94 bars, 132.7s, 14 voices; abcjs playback matches the model (3204 notes)",
+   "notes": [],
+   "id": "entry-0006"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:33:17.541Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 1 with this public change note:\nFirst playable draft: the whole first movement, built from short blocks in 4/4, 3/4 and 2/4 — a three-note motto, a rocking woodwind figure, a trumpet fanfare, a clarinet song, and a fugato on the motto in the middle.",
+   "notes": [],
+   "id": "entry-0007"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:33:23.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=stravinsky-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0008"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:33:23.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Allegro94 bars | load 1.7s | state playing | clock 0:01 / 2:13 | {\"peak\":0.9,\"seconds\":132.9,\"rms\":0.1304,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III:57 Timp.:47 Piano:0 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0009"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:33:23.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "First playable Stravinsky draft is live: https://lost-compositions.exe.xyz/work.html?draft=stravinsky-symphony-1 (first movement, 2:13). Writing the other three movements.",
+   "notes": [],
+   "id": "entry-0010"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:33:48.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m2, m3, m4: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Movements II–IV, first build.",
+   "notes": [],
+   "id": "entry-0011"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:33:48.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Andante: 48 bars written, 120s played; activity fl:36 ob:14 cl:28 bn:14 hn:44 v1:63 v2:66 va:66 vc:66 cb:66\n    validator ok: 48 bars, 120s, 10 voices; abcjs playback matches the model (643 notes)\n  III. Allegretto: 80 bars written, 80s played; activity fl:45 ob:87 cl:95 bn:70 hn:114 tpt:75 tbn:112 timp:14 pno:150 v1:60 v2:59 va:59 vc:58 cb:58\n    validator ok: 80 bars, 80.5s, 14 voices; abcjs playback matches the model (1805 notes)\n  IV. Largo – Allegro – Largo: 76 bars written, 140s played; activity fl:71 ob:140 cl:174 bn:91 hn:159 tpt:91 tbn:251 timp:29 pno:155 v1:63 v2:71 va:71 vc:71 cb:71\n    validator ok: 76 bars, 139.7s, 14 voices; abcjs playback matches the model (2482 notes)",
+   "notes": [],
+   "id": "entry-0012"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:33:49.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m3: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Revision pass, third movement: two cycles added in which the piano plays alone in octaves over plucked basses, so that the cycle is heard in a fourth colour and the movement is a little longer.",
+   "notes": [],
+   "id": "entry-0013"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:33:49.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "III. Allegretto: 92 bars written, 91s played; activity fl:40 ob:77 cl:84 bn:62 hn:101 tpt:66 tbn:99 timp:12 pno:154 v1:53 v2:53 va:53 vc:56 cb:56\n    validator ok: 92 bars, 91s, 14 voices; abcjs playback matches the model (1909 notes)",
+   "notes": [],
+   "id": "entry-0014"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:33:49.656Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 2 with this public change note:\nFirst complete draft: added the Andante of woodwind arabesques over plucked strings, the Allegretto that alternates 2/4 and 3/8, and the finale framed by a wind chorale. A revision pass follows.",
+   "notes": [],
+   "id": "entry-0015"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:33:50.560Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 3 with this public change note:\nRevision: the Allegretto gains two cycles for the piano alone over plucked basses. This revision matches the published score.",
+   "notes": [],
+   "id": "entry-0016"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:34:07.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=stravinsky-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0017"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:34:07.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Allegro94 bars | load 0.9s | state playing | clock 0:01 / 2:13 | {\"peak\":0.9,\"seconds\":132.9,\"rms\":0.1304,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III:57 Timp.:47 Piano:0 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   II. Andante48 bars | load 0.6s | state playing | clock 0:01 / 2:00 | {\"peak\":0.9,\"seconds\":120.2,\"rms\":0.162,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Vl. I:45 Vl. II:45 Vla.:45 Vc.:45 Cb.:45\nok   III. Allegretto92 bars | load 0.7s | state playing | clock 0:01 / 1:31 | {\"peak\":0.9,\"seconds\":91.2,\"rms\":0.1171,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III:57 Timp.:47 Piano:0 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   IV. Largo – Allegro – Largo76 bars | load 0.8s | state playing | clock 0:01 / 2:20 | {\"peak\":0.9,\"seconds\":139.9,\"rms\":0.1271,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III:57 Timp.:47 Piano:0 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0018"
+  }
+ ]
+}
