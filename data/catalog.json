@@ -701,6 +701,50 @@
           "durationSeconds": 138
         }
       ]
+    },
+    {
+      "id": "bach-symphony-1",
+      "composerId": "bach",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Bach’s Missing Symphony",
+      "subtitle": "Sinfonia in D major",
+      "description": "An imagined four-movement sinfonia in Bach’s orchestral-suite manner, a form he never wrote: French overture with fugue, Siciliano for oboe, a pair of minuets and a fugal gigue, for trumpets, timpani, oboes, bassoon, strings and harpsichord. A new AI-composed homage, not a rediscovered work by Bach.",
+      "durationSeconds": 662,
+      "date": "2026-11-18",
+      "status": "completed",
+      "notebook": "bach-symphony-1-notebook.html",
+      "transcript": "bach-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Ouverture: Grave – Vivace – Grave",
+          "note": "A dotted Grave, a four-voice fugue with episodes for oboes and for strings, and a short return of the Grave.",
+          "source": "scores/bach-symphony-1-i.abc",
+          "durationSeconds": 233
+        },
+        {
+          "id": "ii",
+          "label": "II. Siciliano: Andante",
+          "note": "B minor: a lilting song for solo oboe over strings and harpsichord, in two repeated halves.",
+          "source": "scores/bach-symphony-1-ii.abc",
+          "durationSeconds": 131
+        },
+        {
+          "id": "iii",
+          "label": "III. Menuet I – Menuet II – Menuet I",
+          "note": "A D major minuet for the full band around a D minor minuet for two oboes and bassoon.",
+          "source": "scores/bach-symphony-1-iii.abc",
+          "durationSeconds": 164
+        },
+        {
+          "id": "iv",
+          "label": "IV. Gigue: Allegro",
+          "note": "A fugal gigue in two repeated halves; the second begins with the subject upside down.",
+          "source": "scores/bach-symphony-1-iv.abc",
+          "durationSeconds": 134
+        }
+      ]
     }
   ]
 }

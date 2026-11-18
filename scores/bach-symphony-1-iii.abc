@@ -1,0 +1,165 @@
+%%label III. Menuet I – Menuet II – Menuet I
+%%note D major, with a second minuet in D minor for two oboes and bassoon; the first returns without repeats.
+X:1
+T:Bach’s Missing Symphony
+T:III. Menuet I – Menuet II – Menuet I
+C:Claude (AI), in the manner of J. S. Bach
+M:3/4
+L:1/8
+Q:"Menuet" 1/4=132
+%%score [tpt1 tpt2] timp [ob1 ob2 bn] [v1 v2 va vc cb] hpd
+% Original AI-composed homage. The score is written at sounding pitch.
+V:tpt1 clef=treble name="Tpt. I"
+V:tpt2 clef=treble name="Tpt. II"
+V:timp clef=bass name="Timp."
+V:ob1 clef=treble name="Ob. I"
+V:ob2 clef=treble name="Ob. II"
+V:bn clef=bass name="Bn."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+V:hpd clef=treble name="Hpd."
+K:D
+V:tpt1
+%%MIDI program 56
+V:tpt2
+%%MIDI program 56
+V:timp
+%%MIDI program 47
+V:ob1
+%%MIDI program 68
+V:ob2
+%%MIDI program 68
+V:bn
+%%MIDI program 70
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+V:hpd
+%%MIDI program 6
+% bars 1-8: [Menuet I A] Menuet I: full band, D to A
+[V:tpt1] |: !f!d'2 a2 a2 | z6 | e2 e2 e2 | a4 f2 | z6 | z6 | z6 | e4 z2 :|
+[V:tpt2] |: !f!f2 f2 f2 | z6 | A2 A2 A2 | d4 d2 | z6 | z6 | z6 | A4 z2 :|
+[V:timp] |: !f!D,2 D,2 D,2 | z6 | A,,2 A,,2 A,,2 | D,4 z2 | z6 | z6 | z6 | A,,4 z2 :|
+[V:ob1] |: !f!d'2 d'c' ba | b2 g2 e'2 | c'2 c'b ag | f4 d2 | a2 d'2 b2 | b2 e'2 c'2 | d'2 b2 ^g2 | a6 :|
+[V:ob2] |: !f!F2 F2 F2 | G2 G2 G2 | G2 G2 G2 | F2 F2 F2 | A2 A2 B2 | B2 B2 A2 | F2 F2 ^G2 | A2 A2 A2 :|
+[V:bn] |: !f!D,2 F,2 A,2 | G,2 B,2 E,2 | A,2 E,2 C,2 | D,2 A,,2 D,2 | F,4 G,2 | ^G,4 A,2 | D,4 E,2 | A,,2 E,2 A,2 :|
+[V:v1] |: !f!d'2 d'c' ba | b2 g2 e'2 | c'2 c'b ag | f4 d2 | a2 d'2 b2 | b2 e'2 c'2 | d'2 b2 ^g2 | a6 :|
+[V:v2] |: !f!F2 F2 F2 | G2 G2 G2 | G2 G2 G2 | F2 F2 F2 | A2 A2 B2 | B2 B2 A2 | F2 F2 ^G2 | A2 A2 A2 :|
+[V:va] |: !f!D2 D2 D2 | B,2 B,2 B,2 | C2 C2 C2 | D2 D2 D2 | D2 D2 D2 | D2 D2 C2 | B,2 B,2 D2 | C2 C2 C2 :|
+[V:vc] |: !f!D,2 F,2 A,2 | G,2 B,2 E,2 | A,2 E,2 C,2 | D,2 A,,2 D,2 | F,4 G,2 | ^G,4 A,2 | D,4 E,2 | A,,2 E,2 A,2 :|
+[V:cb] |: !f!D,,2 F,,2 A,,2 | G,,2 B,,2 E,,2 | A,,2 E,,2 C,,2 | D,,2 A,,,2 D,,2 | F,,4 G,,2 | ^G,,4 A,,2 | D,,4 E,,2 | A,,,2 E,,2 A,,2 :|
+[V:hpd] |: !mf![DFA]2 [DFA]2 [DFA]2 | [DGB]2 [DGB]2 [EGB]2 | [EGc]2 [EGc]2 [EGc]2 | [FAd]2 [FAd]2 [FAd]2 | [DAd]2 [DAd]2 [B,Gd]2 | [B,Ed]2 [B,Ed]2 [A,Ec]2 | [B,FB]2 [B,FB]2 [B,^Gd]2 | [CAe]2 [CAe]2 [CAe]2 :|
+% bars 9-16: [Menuet I B] Second half: through B minor and back, closing in D
+[V:tpt1] |: e2 e2 e2 | z6 | z6 | z6 | z6 | z6 | z6 | a2 a2 d'2 |
+[V:tpt2] |: A2 A2 A2 | z6 | z6 | z6 | z6 | z6 | z6 | f2 f2 f2 |
+[V:timp] |: A,,2 z4 | z6 | z6 | z6 | z6 | z6 | z6 | D,2 z4 |
+[V:ob1] |: !f!e'2 e'd' c'b | c'2 e'2 f'2 | d'2 d'c' ba | g2 b2 ^a2 | b4 f2 | g2 b2 d'2 | e'2 b2 ag | f2 a2 d'2 |
+[V:ob2] |: !f!E2 E2 E2 | E2 E2 E2 | F2 F2 F2 | G2 G2 _B2 | d2 d2 d2 | d2 d2 B2 | B2 B2 c2 | d2 d2 d2 |
+[V:bn] |: !f!A,2 C2 A,2 | ^A,2 A,2 A,2 | B,2 F,2 D,2 | E,2 G,2 F,2 | B,,2 D,2 B,,2 | B,,2 D,2 G,2 | E,2 G,2 A,2 | D,2 F,2 D,2 |
+[V:v1] |: !f!e'2 e'd' c'b | c'2 e'2 f'2 | d'2 d'c' ba | g2 b2 ^a2 | b4 f2 | g2 b2 d'2 | e'2 b2 ag | f2 a2 d'2 |
+[V:v2] |: !f!E2 E2 E2 | E2 E2 E2 | F2 F2 F2 | G2 G2 _B2 | d2 d2 d2 | d2 d2 B2 | B2 B2 c2 | d2 d2 d2 |
+[V:va] |: !f!C2 C2 C2 | C2 C2 C2 | D2 D2 D2 | E2 E2 F2 | F2 F2 F2 | G2 G2 G2 | G2 G2 G2 | F2 F2 F2 |
+[V:vc] |: !f!A,2 C2 A,2 | ^A,2 A,2 A,2 | B,2 F,2 D,2 | E,2 G,2 F,2 | B,,2 D,2 B,,2 | B,,2 D,2 G,2 | E,2 G,2 A,2 | D,2 F,2 D,2 |
+[V:cb] |: !f!A,,2 C,2 A,,2 | ^A,,2 A,,2 A,,2 | B,,2 F,,2 D,,2 | E,,2 G,,2 F,,2 | B,,,2 D,,2 B,,,2 | B,,,2 D,,2 G,,2 | E,,2 G,,2 A,,2 | D,,2 F,,2 D,,2 |
+[V:hpd] |: !mf![CEA]2 [CEA]2 [CEA]2 | [CEF]2 [CEF]2 [CEF]2 | [B,DF]2 [B,DF]2 [B,DF]2 | [B,EG]2 [B,EG]2 [_B,CF]2 | [B,DF]2 [B,DF]2 [B,DF]2 | [B,DG]2 [B,DG]2 [B,DG]2 | [B,EG]2 [B,EG]2 [A,CG]2 | [A,DF]2 [A,DF]2 [A,DF]2 |
+% bars 17-24
+[V:tpt1] z6 | e2 e2 e2 | f2 a2 z2 | z6 | z6 | a2 a2 a2 | e2 e4 | d'6 :|
+[V:tpt2] z6 | A2 A2 A2 | d2 f2 z2 | z6 | z6 | f2 f2 f2 | A2 A4 | f6 :|
+[V:timp] z6 | A,,2 A,,2 A,,2 | D,2 z4 | z6 | z6 | A,,2 A,,2 A,,2 | A,,2 A,,4 | D,6 :|
+[V:ob1] b2 g2 e'2 | c'2 c'b ag | f2 a2 d'2 | d'2 g'2 d'2 | e'2 g'2 c'2 | f'2 e'd' c'b | c'2 !trill!e'4 | d'6 :|
+[V:ob2] B2 B2 B2 | c2 c2 c2 | d2 d2 d2 | d2 d2 d2 | B2 B2 c2 | d2 d2 d2 | c2 c2 c2 | d2 d2 d2 :|
+[V:bn] G,2 B,2 E,2 | A,2 E,2 C,2 | D,2 F,2 =C,2 | B,,4 G,,2 | G,4 A,2 | A,4 A,,2 | A,,2 A,2 A,,2 | D,4 D,,2 :|
+[V:v1] b2 g2 e'2 | c'2 c'b ag | f2 a2 d'2 | d'2 g'2 d'2 | e'2 g'2 c'2 | f'2 e'd' c'b | c'2 !trill!e'4 | d'6 :|
+[V:v2] B2 B2 B2 | c2 c2 c2 | d2 d2 d2 | d2 d2 d2 | B2 B2 c2 | d2 d2 d2 | c2 c2 c2 | d2 d2 d2 :|
+[V:va] G2 G2 G2 | G2 G2 G2 | F2 F2 F2 | G2 G2 G2 | E2 E2 G2 | F2 F2 F2 | G2 G2 G2 | F2 F2 F2 :|
+[V:vc] G,2 B,2 E,2 | A,2 E,2 C,2 | D,2 F,2 =C,2 | B,,4 G,,2 | G,4 A,2 | A,4 A,,2 | A,,2 A,2 A,,2 | D,4 D,,2 :|
+[V:cb] G,,2 B,,2 E,,2 | A,,2 E,,2 C,,2 | D,,2 F,,2 =C,,2 | B,,,4 G,,,2 | G,,4 A,,2 | A,,4 A,,,2 | A,,,2 A,,2 A,,,2 | D,,4 D,,2 :|
+[V:hpd] [B,DG]2 [B,DG]2 [B,EG]2 | [A,CG]2 [A,CG]2 [A,CG]2 | [A,DF]2 [A,DF]2 [A,DF]2 | [B,DG]2 [B,DG]2 [B,DG]2 | [B,EG]2 [B,EG]2 [A,CG]2 | [A,DF]2 [A,DF]2 [A,DF]2 | [A,CG]2 [A,CG]2 [A,CG]2 | [A,DF]2 [A,DF]2 [A,DF]2 :|
+% bars 25-32: [Menuet II A] Menuet II: two oboes and bassoon in D minor
+[V:tpt1] |: [K:Dm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:tpt2] |: [K:Dm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:timp] |: [K:Dm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:ob1] |: [K:Dm] !mp!d2 f2 a2 | g2 e2 ^c2 | d2 a2 f2 | e4 A2 | f2 a2 d'2 | b2 g2 e2 | a2 gf e2 | f6 :|
+[V:ob2] |: [K:Dm] !mp!A2 d2 f2 | e2 ^c2 A2 | A2 f2 d2 | ^c4 E2 | d2 f2 a2 | g2 d2 c2 | f2 ed c2 | A6 :|
+[V:bn] |: [K:Dm] !mp!D,4 F,2 | ^C,4 A,,2 | D,2 F,2 D,2 | A,,2 E,2 ^C,2 | D,2 F,2 F,2 | G,2 B,,2 C,2 | C,4 C,,2 | F,,2 C,2 F,2 :|
+[V:v1] |: [K:Dm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:v2] |: [K:Dm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:va] |: [K:Dm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:vc] |: [K:Dm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:cb] |: [K:Dm] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:hpd] |: [K:Dm] z2 !p![DFA]2 [DFA]2 | z2 [EGA]2 [EGA]2 | z2 [DFA]2 [DFA]2 | z2 [^CEA]2 [CEA]2 | z2 [DFA]2 [DFA]2 | z2 [DGB]2 [CEB]2 | z2 [CFA]2 [CEB]2 | z2 [CFA]2 [CFA]2 :|
+% bars 33-40: [Menuet II B] Second half: F major, G minor and home
+[V:tpt1] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:tpt2] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:timp] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:ob1] |: c'2 a2 f2 | c'2 a2 ^f2 | b2 g2 d'2 | d'2 c'b a2 | b2 d'2 g2 | e2 g2 ^c'2 | d'2 a2 b2 | a4 e2 |
+[V:ob2] |: a2 f2 c2 | a2 ^f2 d2 | g2 d2 b2 | b2 ag ^f2 | g2 b2 d2 | ^c2 e2 a2 | f2 f2 g2 | e4 ^c2 |
+[V:bn] |: !mp!F,4 A,,2 | ^F,4 D,2 | G,2 B,,2 G,,2 | B,,2 G,,2 D,2 | G,,2 B,,2 D,2 | ^C,2 A,,2 E,2 | D,2 F,2 G,2 | A,2 A,,2 ^C,2 |
+[V:v1] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v2] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:va] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:vc] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:cb] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hpd] |: z2 !p![CFA]2 [CFA]2 | z2 [CDA]2 [CDA]2 | z2 [B,DG]2 [B,DG]2 | z2 [B,DG]2 [A,D^F]2 | z2 [B,DG]2 [B,DG]2 | z2 [A,^CG]2 [A,CG]2 | z2 [A,DF]2 [B,DG]2 | z2 [A,^CE]2 [A,CE]2 |
+% bars 41-48
+[V:tpt1] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:tpt2] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:timp] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:ob1] d2 f2 a2 | g2 e2 ^c2 | d2 ^f2 c'2 | b2 d'2 b2 | b2 g2 e2 | a2 f2 d'2 | e2 !trill!e4 | d6 :|
+[V:ob2] A2 d2 f2 | e2 ^c2 A2 | A2 d2 ^f2 | g2 b2 g2 | g2 e2 ^c2 | f2 d2 f2 | ^c2 c4 | F6 :|
+[V:bn] D,4 F,2 | ^C,4 A,,2 | D,2 D,2 ^F,2 | G,2 B,,2 G,2 | G,4 G,2 | F,2 F,2 A,,2 | A,,2 A,2 A,,2 | D,2 A,,2 D,,2 :|
+[V:v1] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:v2] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:va] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:vc] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:cb] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:hpd] z2 [A,DF]2 [A,DF]2 | z2 [A,EG]2 [A,EG]2 | z2 [A,CD]2 [A,D^F]2 | z2 [B,DG]2 [B,DG]2 | z2 [B,EB]2 [A,E^c]2 | z2 [A,DA]2 [A,DF]2 | z2 [A,^CG]2 [A,CG]2 | z2 [A,DF]2 [A,DF]2 :|
+% bars 49-56: [Menuet I A da capo] Menuet I: full band, D to A (da capo, without repeats)
+[V:tpt1] [K:D] !f!d'2 a2 a2 | z6 | e2 e2 e2 | a4 f2 | z6 | z6 | z6 | e4 z2 |
+[V:tpt2] [K:D] !f!f2 f2 f2 | z6 | A2 A2 A2 | d4 d2 | z6 | z6 | z6 | A4 z2 |
+[V:timp] [K:D] !f!D,2 D,2 D,2 | z6 | A,,2 A,,2 A,,2 | D,4 z2 | z6 | z6 | z6 | A,,4 z2 |
+[V:ob1] [K:D] !f!d'2 d'c' ba | b2 g2 e'2 | c'2 c'b ag | f4 d2 | a2 d'2 b2 | b2 e'2 c'2 | d'2 b2 ^g2 | a6 |
+[V:ob2] [K:D] !f!F2 F2 F2 | G2 G2 G2 | G2 G2 G2 | F2 F2 F2 | A2 A2 B2 | B2 B2 A2 | F2 F2 ^G2 | A2 A2 A2 |
+[V:bn] [K:D] !f!D,2 F,2 A,2 | G,2 B,2 E,2 | A,2 E,2 C,2 | D,2 A,,2 D,2 | F,4 G,2 | ^G,4 A,2 | D,4 E,2 | A,,2 E,2 A,2 |
+[V:v1] [K:D] !f!d'2 d'c' ba | b2 g2 e'2 | c'2 c'b ag | f4 d2 | a2 d'2 b2 | b2 e'2 c'2 | d'2 b2 ^g2 | a6 |
+[V:v2] [K:D] !f!F2 F2 F2 | G2 G2 G2 | G2 G2 G2 | F2 F2 F2 | A2 A2 B2 | B2 B2 A2 | F2 F2 ^G2 | A2 A2 A2 |
+[V:va] [K:D] !f!D2 D2 D2 | B,2 B,2 B,2 | C2 C2 C2 | D2 D2 D2 | D2 D2 D2 | D2 D2 C2 | B,2 B,2 D2 | C2 C2 C2 |
+[V:vc] [K:D] !f!D,2 F,2 A,2 | G,2 B,2 E,2 | A,2 E,2 C,2 | D,2 A,,2 D,2 | F,4 G,2 | ^G,4 A,2 | D,4 E,2 | A,,2 E,2 A,2 |
+[V:cb] [K:D] !f!D,,2 F,,2 A,,2 | G,,2 B,,2 E,,2 | A,,2 E,,2 C,,2 | D,,2 A,,,2 D,,2 | F,,4 G,,2 | ^G,,4 A,,2 | D,,4 E,,2 | A,,,2 E,,2 A,,2 |
+[V:hpd] [K:D] !mf![DFA]2 [DFA]2 [DFA]2 | [DGB]2 [DGB]2 [EGB]2 | [EGc]2 [EGc]2 [EGc]2 | [FAd]2 [FAd]2 [FAd]2 | [DAd]2 [DAd]2 [B,Gd]2 | [B,Ed]2 [B,Ed]2 [A,Ec]2 | [B,FB]2 [B,FB]2 [B,^Gd]2 | [CAe]2 [CAe]2 [CAe]2 |
+% bars 57-64: [Menuet I B da capo] Second half: through B minor and back, closing in D (da capo, without repeats)
+[V:tpt1] e2 e2 e2 | z6 | z6 | z6 | z6 | z6 | z6 | a2 a2 d'2 |
+[V:tpt2] A2 A2 A2 | z6 | z6 | z6 | z6 | z6 | z6 | f2 f2 f2 |
+[V:timp] A,,2 z4 | z6 | z6 | z6 | z6 | z6 | z6 | D,2 z4 |
+[V:ob1] !f!e'2 e'd' c'b | c'2 e'2 f'2 | d'2 d'c' ba | g2 b2 ^a2 | b4 f2 | g2 b2 d'2 | e'2 b2 ag | f2 a2 d'2 |
+[V:ob2] !f!E2 E2 E2 | E2 E2 E2 | F2 F2 F2 | G2 G2 _B2 | d2 d2 d2 | d2 d2 B2 | B2 B2 c2 | d2 d2 d2 |
+[V:bn] !f!A,2 C2 A,2 | ^A,2 A,2 A,2 | B,2 F,2 D,2 | E,2 G,2 F,2 | B,,2 D,2 B,,2 | B,,2 D,2 G,2 | E,2 G,2 A,2 | D,2 F,2 D,2 |
+[V:v1] !f!e'2 e'd' c'b | c'2 e'2 f'2 | d'2 d'c' ba | g2 b2 ^a2 | b4 f2 | g2 b2 d'2 | e'2 b2 ag | f2 a2 d'2 |
+[V:v2] !f!E2 E2 E2 | E2 E2 E2 | F2 F2 F2 | G2 G2 _B2 | d2 d2 d2 | d2 d2 B2 | B2 B2 c2 | d2 d2 d2 |
+[V:va] !f!C2 C2 C2 | C2 C2 C2 | D2 D2 D2 | E2 E2 F2 | F2 F2 F2 | G2 G2 G2 | G2 G2 G2 | F2 F2 F2 |
+[V:vc] !f!A,2 C2 A,2 | ^A,2 A,2 A,2 | B,2 F,2 D,2 | E,2 G,2 F,2 | B,,2 D,2 B,,2 | B,,2 D,2 G,2 | E,2 G,2 A,2 | D,2 F,2 D,2 |
+[V:cb] !f!A,,2 C,2 A,,2 | ^A,,2 A,,2 A,,2 | B,,2 F,,2 D,,2 | E,,2 G,,2 F,,2 | B,,,2 D,,2 B,,,2 | B,,,2 D,,2 G,,2 | E,,2 G,,2 A,,2 | D,,2 F,,2 D,,2 |
+[V:hpd] !mf![CEA]2 [CEA]2 [CEA]2 | [CEF]2 [CEF]2 [CEF]2 | [B,DF]2 [B,DF]2 [B,DF]2 | [B,EG]2 [B,EG]2 [_B,CF]2 | [B,DF]2 [B,DF]2 [B,DF]2 | [B,DG]2 [B,DG]2 [B,DG]2 | [B,EG]2 [B,EG]2 [A,CG]2 | [A,DF]2 [A,DF]2 [A,DF]2 |
+% bars 65-72
+[V:tpt1] z6 | e2 e2 e2 | f2 a2 z2 | z6 | z6 | a2 a2 a2 | e2 e4 | d'6 |]
+[V:tpt2] z6 | A2 A2 A2 | d2 f2 z2 | z6 | z6 | f2 f2 f2 | A2 A4 | f6 |]
+[V:timp] z6 | A,,2 A,,2 A,,2 | D,2 z4 | z6 | z6 | A,,2 A,,2 A,,2 | A,,2 A,,4 | D,6 |]
+[V:ob1] b2 g2 e'2 | c'2 c'b ag | f2 a2 d'2 | d'2 g'2 d'2 | e'2 g'2 c'2 | f'2 e'd' c'b | c'2 !trill!e'4 | d'6 |]
+[V:ob2] B2 B2 B2 | c2 c2 c2 | d2 d2 d2 | d2 d2 d2 | B2 B2 c2 | d2 d2 d2 | c2 c2 c2 | d2 d2 d2 |]
+[V:bn] G,2 B,2 E,2 | A,2 E,2 C,2 | D,2 F,2 =C,2 | B,,4 G,,2 | G,4 A,2 | A,4 A,,2 | A,,2 A,2 A,,2 | D,4 D,,2 |]
+[V:v1] b2 g2 e'2 | c'2 c'b ag | f2 a2 d'2 | d'2 g'2 d'2 | e'2 g'2 c'2 | f'2 e'd' c'b | c'2 !trill!e'4 | d'6 |]
+[V:v2] B2 B2 B2 | c2 c2 c2 | d2 d2 d2 | d2 d2 d2 | B2 B2 c2 | d2 d2 d2 | c2 c2 c2 | d2 d2 d2 |]
+[V:va] G2 G2 G2 | G2 G2 G2 | F2 F2 F2 | G2 G2 G2 | E2 E2 G2 | F2 F2 F2 | G2 G2 G2 | F2 F2 F2 |]
+[V:vc] G,2 B,2 E,2 | A,2 E,2 C,2 | D,2 F,2 =C,2 | B,,4 G,,2 | G,4 A,2 | A,4 A,,2 | A,,2 A,2 A,,2 | D,4 D,,2 |]
+[V:cb] G,,2 B,,2 E,,2 | A,,2 E,,2 C,,2 | D,,2 F,,2 =C,,2 | B,,,4 G,,,2 | G,,4 A,,2 | A,,4 A,,,2 | A,,,2 A,,2 A,,,2 | D,,4 D,,2 |]
+[V:hpd] [B,DG]2 [B,DG]2 [B,EG]2 | [A,CG]2 [A,CG]2 [A,CG]2 | [A,DF]2 [A,DF]2 [A,DF]2 | [B,DG]2 [B,DG]2 [B,DG]2 | [B,EG]2 [B,EG]2 [A,CG]2 | [A,DF]2 [A,DF]2 [A,DF]2 | [A,CG]2 [A,CG]2 [A,CG]2 | [A,DF]2 [A,DF]2 [A,DF]2 |]

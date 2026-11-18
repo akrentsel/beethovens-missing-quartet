@@ -1,0 +1,246 @@
+{
+ "title": "Bach’s Missing Symphony — public composition log",
+ "scope": "The log the composing agent (Claude) kept while writing this work: the request, its progress messages, the commands it ran on the score and their output, draft publications and test results, up to the publication step. It was written during the work, entry by entry; it is not an automatic export of the whole session, and the same session composed other works whose entries are not included here.",
+ "policy": "Messages and tool output are recorded as they occurred, shortened where marked. Private internal reasoning, credentials, access details, private paths and unrelated conversation are not included. Statements made during the work may be provisional or mistaken; later corrections remain in the log.",
+ "sessions": {
+  "main": "Composition session"
+ },
+ "entries": [
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:03:00.000Z",
+   "kind": "message",
+   "speaker": "User",
+   "text": "[A long batch brief was pasted: compose and publish one original symphony for each composer in the Missing Works catalogue who has no completed symphony, one composer at a time, claiming each open symphony request through the admin command, publishing live drafts early, testing every movement in the real browser player, writing a notebook and a public composition log, deploying an atomic release, and completing the request only after the public work is verified. Every work must be labelled an original AI-composed homage.]\n\nNOW I know I said to do all composers, but how about we actually do half of the composers in each section? just to save some money.",
+   "notes": [
+    "the pasted brief is summarised in brackets, not quoted in full; the last sentence is verbatim"
+   ],
+   "id": "entry-0001"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:09:00.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "Setup is done (repo cloned, Node 24 installed, VM reachable, baseline tests pass); I'm now building my private composing/checking toolkit before claiming Bach's symphony request.\n\nOn \"half per section\", I'm reading it as the first half (in catalogue order, rounded down) of the composers who still need a symphony in each era — 14 works: Bach, Handel, Vivaldi · Haydn, C.P.E. Bach · Schubert, Schumann, Chopin · Ravel, Stravinsky · Ives, Price, Gershwin, Copland. Debussy is skipped (another agent is composing it).",
+   "notes": [
+    "entered in the log at publication time from the session’s recorded output; time approximate"
+   ],
+   "id": "entry-0002"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:12:00.000Z",
+   "kind": "tool",
+   "speaker": "Queue claim",
+   "text": "GET /api/requests  ->  bach:symphony:1  status open, votes 0, round 1; no request in status composing\nmissing-works-admin start bach:symphony:1",
+   "notes": [
+    "entered in the log at publication time from the session’s recorded output; time approximate",
+    "access details omitted"
+   ],
+   "id": "entry-0003"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:12:05.000Z",
+   "kind": "result",
+   "speaker": "Queue claim",
+   "text": "started bach:symphony:1",
+   "notes": [
+    "entered in the log at publication time from the session’s recorded output; time approximate"
+   ],
+   "id": "entry-0004"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:13:00.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "Composition brief — Bach’s Missing Symphony (work id bach-symphony-1)\n\nHonest counterfactual: J. S. Bach wrote no symphony in the later sense. His nearest orchestral forms are the four Ouvertures (orchestral suites), the Brandenburg Concertos and the sinfonias that open some cantatas. This work imagines a four-movement \"Sinfonia\" built from the suite manner: a French overture, a slow movement, a pair of dances and a fugal gigue. It is a new piece; no theme is taken from Bach.\n\nInstrumentation (12 staves, sounding pitch): 2 natural trumpets in D (restricted to the harmonic series of D), timpani (D and A only), 2 oboes, bassoon, violins I and II, violas, cellos, double basses, harpsichord continuo.\n\nMovements\nI. Ouverture, D major: Grave in dotted rhythm (repeated), a four-voice fugue (Vivace) on a three-bar subject with a turning sixteenth-note figure, with a countersubject, a wind-trio episode, entries in B minor, F sharp minor and G, a stretto on a dominant pedal and a final tutti entry; short return of the Grave.\nII. Siciliano, B minor, 6/8: solo oboe over strings and harpsichord, two repeated halves.\nIII. Menuet I (D major, full band) – Menuet II (D minor, two oboes and bassoon) – Menuet I again.\nIV. Gigue, D major, 6/8: fugal; the second half starts with the subject inverted, as in Bach’s gigues.\n\nTarget length about 11–12 minutes. Stylistic approach: functional harmony with circle-of-fifths sequences, invertible subject/countersubject pairs, outer voices checked for parallel fifths and octaves, terraced dynamics, trills only at cadences. Known compromise from the start: inner filling parts and the harpsichord right hand are realised by a program from a chord plan written by hand for every bar; themes, subjects, countersubjects, episodes and (after revision) the important basses are written by hand.",
+   "notes": [
+    "entered in the log at publication time from the session’s recorded output; time approximate"
+   ],
+   "id": "entry-0005"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:15:00.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "python3 m1.py 1   # build the Grave only: write ABC, check ranges, sustained notes and clashes, validate with the site validator, compare with abcjs playback",
+   "notes": [
+    "entered in the log at publication time from the session’s recorded output; time approximate"
+   ],
+   "id": "entry-0006"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:15:10.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Ouverture: Grave – Vivace – Grave: 12 bars written, 96s played; activity tpt1:58 tpt2:54 timp:35 ob1:100 ob2:100 bn:100 v1:100 v2:100 va:100 vc:100 cb:100 hpd:300\nvalidator ok: 12 bars, 96s, 12 voices; abcjs playback matches the model (1052 notes)",
+   "notes": [
+    "entered in the log at publication time from the session’s recorded output; time approximate"
+   ],
+   "id": "entry-0007"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:15:50.348Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 1 with this public change note:\nFirst playable section: the dotted Grave that opens the overture, for trumpets, timpani, oboes, bassoon, strings and harpsichord.",
+   "notes": [],
+   "id": "entry-0008"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:17:00.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "node playtest.cjs https://lost-compositions.exe.xyz/ draft=bach-symphony-1   # headless Chromium, the site's real player",
+   "notes": [
+    "entered in the log at publication time from the session’s recorded output; time approximate"
+   ],
+   "id": "entry-0009"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:17:30.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Ouverture: Grave – Vivace – Grave (12 bars) | load 1.2s | state playing | clock 0:01 / 1:36 | {\"peak\":0.9,\"seconds\":96.2,\"rms\":0.1618,\"silent\":[]} | warn=\"\" err=\"\"\nparts Tpt. I:56 Tpt. II:56 Timp.:47 Ob. I:68 Ob. II:68 Bn.:70 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43 Hpd.:6\nconsole errors: none",
+   "notes": [
+    "entered in the log at publication time from the session’s recorded output; time approximate"
+   ],
+   "id": "entry-0010"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:17:40.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "First playable draft is live: https://lost-compositions.exe.xyz/work.html?draft=bach-symphony-1 (opening Grave; verified rendering real audio in a headless browser). Now writing the overture's fugue.",
+   "notes": [
+    "entered in the log at publication time from the session’s recorded output; time approximate"
+   ],
+   "id": "entry-0011"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:19:30.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "First build of the whole overture (69 bars, 233 s). The checker reported an oboe note below the instrument (A3 at bar 15) and sustained half-step clashes where the countersubject's C sharp met a D major chord in the filling parts, for example:\nCLASH hpd D4 / ob1 C#5 for 2 eighths at bar 21+2\nCLASH va D4 / v1 C#5 for 2 eighths at bar 21+2\nCLASH ob2 A4 / v1 Ab5 for 2 eighths at bar 24+2\nCLASH ob1 C5 / va B3 for 2 eighths at bar 47+6\nCLASH timp D3 / v2 C#5 for 2 eighths at bar 58+2\nFixes: the second beat of the subject's second bar is harmonised as F sharp minor instead of D major; the oboes in the G major entry move in quarter notes instead of holding across chord changes; the second trumpet and timpani rest on that beat in the final entry; the second oboe stops one note early in the opening subject; one bar of the closing Grave was re-harmonised.\nAfter the fixes: validator ok: 69 bars, 233s, 12 voices; abcjs playback matches the model (3407 notes); no range, sustain or clash messages.",
+   "notes": [
+    "entered in the log at publication time from the session’s recorded output; time approximate",
+    "checker output shortened"
+   ],
+   "id": "entry-0012"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:20:44.991Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 2 with this public change note:\nMovement I is complete in first draft: after the Grave, a four-voice fugue (exposition, an oboe-and-bassoon episode, entries in B minor, F sharp minor and G, a stretto over a dominant pedal and a final entry with trumpet), then the Grave returns to close in D.",
+   "notes": [],
+   "id": "entry-0013"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:23:30.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Siciliano: Andante: 24 bars written, 131s played — validator ok; abcjs playback matches the model (1290 notes)\nIII. Menuet I – Menuet II – Menuet I: first build reported about 160 clashes and trumpet notes outside the harmonic series in the da capo: the return of Menuet I had been read in the D minor key signature of Menuet II (F natural instead of F sharp). Fixed by resetting the key before the return; one bar of Menuet II (D minor to D7) was re-harmonised. Then: 72 bars, 164s, validator ok; playback matches (3320 notes).\nIV. Gigue: Allegro: 56 bars written, 134s played; one clash from a major-seventh chord in the inverted entry (bar 39), re-harmonised as plain G major. Then validator ok; playback matches (3934 notes).",
+   "notes": [
+    "entered in the log at publication time from the session’s recorded output; time approximate",
+    "summary of three build runs"
+   ],
+   "id": "entry-0014"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:24:35.063Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 3 with this public change note:\nFirst complete draft of all four movements: added the B minor Siciliano for solo oboe, the pair of minuets (the second for two oboes and bassoon in D minor) and the fugal Gigue finale. A revision pass follows.",
+   "notes": [],
+   "id": "entry-0015"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:26:00.000Z",
+   "kind": "tool",
+   "speaker": "Voice-leading check",
+   "text": "parallels(score, top, bottom)   # consecutive perfect fifths/octaves in similar motion between melody and bass, every movement",
+   "notes": [
+    "entered in the log at publication time from the session’s recorded output; time approximate"
+   ],
+   "id": "entry-0016"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:26:10.000Z",
+   "kind": "result",
+   "speaker": "Voice-leading check",
+   "text": "First run, melody against bass (excerpt):\nI.  PAR P8 v1/vc bar 7+0 (Ab5/Ab2 -> A5/A2)      [leading tone doubled in octaves]\nI.  PAR P8 v1/vc bar 10+0 (D6/D3 -> Eb6/Eb3)\nI.  PAR P8 v1/vc bar 60+2 .. 61+0               [four in a row: melody and bass in octaves in the fugue's close]\nI.  16 in all; II. 3; III. 6 in Menuet I and 14 in Menuet II; IV. 8\nMost came from the program-written basses of the minuets, which arpeggiated in the same direction as the tune.\nRevision: new hand-written bass lines for both minuets; four melody bars of Menuet I and one of Menuet II changed so that the tune no longer doubles the bass of a first-inversion chord; subject entries of the fugue re-harmonised (root-position chords on the second and third beats of the subject's second bar, a different chord under the B minor entry); new top line for the fugue's close; melody changes in bars 6, 7 and 10 of the Grave and bar 6 of its return; three bars of the Siciliano and seven of the Gigue adjusted. The voicing program was also changed so that inner parts no longer double the bass of first-inversion chords.\nFinal run: melody against bass, 0 parallels in all four movements. Second violins against bass (inner part, written by the program): 5, 1, 2 and 1 remain and were left.",
+   "notes": [
+    "entered in the log at publication time from the session’s recorded output; time approximate",
+    "checker output shortened"
+   ],
+   "id": "entry-0017"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:28:20.055Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 4 with this public change note:\nRevision pass: outer-voice parallel octaves and fifths removed (new hand-written basses for both minuets, re-harmonised subject entries in the fugue, several melody notes changed in the Grave, Siciliano and Gigue); the first violins now answer the oboe at the Siciliano's cadences; inner parts no longer double the bass of first-inversion chords.",
+   "notes": [],
+   "id": "entry-0018"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:29:00.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "node playtest.cjs https://lost-compositions.exe.xyz/ draft=bach-symphony-1   # draft revision 4, all movements",
+   "notes": [
+    "entered in the log at publication time from the session’s recorded output; time approximate"
+   ],
+   "id": "entry-0019"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T00:29:40.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Ouverture: Grave – Vivace – Grave (69 bars) | load 3.5s | state playing | clock 0:01 / 3:53 | {\"peak\":0.9,\"seconds\":233.2,\"rms\":0.1102,\"silent\":[]} | warn=\"\" err=\"\"\nok   II. Siciliano: Andante (24 bars) | load 0.5s | state playing | clock 0:01 / 2:11 | {\"peak\":0.9,\"seconds\":131.1,\"rms\":0.1464,\"silent\":[]} | warn=\"\" err=\"\"\nok   III. Menuet I – Menuet II – Menuet I (72 bars) | load 0.5s | state playing | clock 0:01 / 2:44 | {\"peak\":0.9,\"seconds\":163.8,\"rms\":0.1245,\"silent\":[]} | warn=\"\" err=\"\"\nok   IV. Gigue: Allegro (56 bars) | load 0.4s | state playing | clock 0:01 / 2:14 | {\"peak\":0.9,\"seconds\":134.6,\"rms\":0.1433,\"silent\":[]} | warn=\"\" err=\"\"\nconsole errors: none\n(\"silent\" lists whole seconds of the rendered audio buffer whose level is below a small threshold; none were found. This is an inspection of the audio buffer, not listening.)",
+   "notes": [
+    "entered in the log at publication time from the session’s recorded output; time approximate"
+   ],
+   "id": "entry-0020"
+  }
+ ]
+}

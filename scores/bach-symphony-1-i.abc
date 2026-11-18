@@ -1,0 +1,282 @@
+%%label I. Ouverture: Grave – Vivace – Grave
+%%note D major. A French overture: a dotted Grave (repeated), a four-voice fugue, and a short return of the Grave.
+X:1
+T:Bach’s Missing Symphony
+T:I. Ouverture: Grave – Vivace – Grave
+C:Claude (AI), in the manner of J. S. Bach
+M:4/4
+L:1/8
+Q:"Grave" 1/4=60
+%%score [tpt1 tpt2] timp [ob1 ob2 bn] [v1 v2 va vc cb] hpd
+% Original AI-composed homage. The score is written at sounding pitch.
+V:tpt1 clef=treble name="Tpt. I"
+V:tpt2 clef=treble name="Tpt. II"
+V:timp clef=bass name="Timp."
+V:ob1 clef=treble name="Ob. I"
+V:ob2 clef=treble name="Ob. II"
+V:bn clef=bass name="Bn."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+V:hpd clef=treble name="Hpd."
+K:D
+V:tpt1
+%%MIDI program 56
+V:tpt2
+%%MIDI program 56
+V:timp
+%%MIDI program 47
+V:ob1
+%%MIDI program 68
+V:ob2
+%%MIDI program 68
+V:bn
+%%MIDI program 70
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+V:hpd
+%%MIDI program 6
+% bars 1-8: [Grave] Dotted opening for the full band, moving from D to the dominant; repeated
+[V:tpt1] |: !f!f3f a3a | z8 | a3a f3f | z8 | f3a d'4 | z8 | e3e a3a | z8 |
+[V:tpt2] |: !f!d3d d3d | z8 | f3f d3d | z8 | d3f a4 | z8 | A3A A3A | z8 |
+[V:timp] |: !f!D,3D, D,3D, | z8 | D,3D, z4 | z8 | D,3D, z4 | z8 | A,,3A,, z4 | z8 |
+[V:ob1] |: !f!d3d/e/ f3f/g/ | g3b a3g/f/ | f3a d'3c'/b/ | b3g e3e/f/ | f3a d'3d' | d'3b/a/ b3e'/d'/ | c'3a e'3d'/c'/ | d'3b ^g3a/b/ |
+[V:ob2] |: !f!F3F A3A | B3B A3A | A3A B3B | B3B c3c | d3d d3d | d3d d3d | c3c c3c | B3B d3d |
+[V:bn] |: !f!D,3D, F,3F, | G,3G, G,3G, | F,3F, B,,3B,, | G,,3G,, A,,3A,, | D,3D, =C,3C, | B,,3B,, ^G,,3G,, | A,,3A,, F,3F, | D,3D, E,3E, |
+[V:v1] |: !f!d3d/e/ f3f/g/ | g3b a3g/f/ | f3a d'3c'/b/ | b3g e3e/f/ | f3a d'3d' | d'3b/a/ b3e'/d'/ | c'3a e'3d'/c'/ | d'3b ^g3a/b/ |
+[V:v2] |: !f!F3F A3A | B3B A3A | A3A B3B | B3B c3c | d3d d3d | d3d d3d | c3c c3c | B3B d3d |
+[V:va] |: !f!D3D D3D | D3D C3C | D3D D3D | E3E E3E | F3F F3F | G3G B3B | A3A A3A | F3F ^G3G |
+[V:vc] |: !f!D,3D, F,3F, | G,3G, G,3G, | F,3F, B,,3B,, | G,,3G,, A,,3A,, | D,3D, =C,3C, | B,,3B,, ^G,,3G,, | A,,3A,, F,3F, | D,3D, E,3E, |
+[V:cb] |: !f!D,,3D,, F,,3F,, | G,,3G,, G,,3G,, | F,,3F,, B,,,3B,,, | G,,,3G,,, A,,,3A,,, | D,,3D,, =C,,3C,, | B,,,3B,,, ^G,,,3G,,, | A,,,3A,,, F,,3F,, | D,,3D,, E,,3E,, |
+[V:hpd] |: !mf![DFA]4 [DFA]4 | [DGB]4 [CEA]4 | [A,DA]4 [B,DF]4 | [B,EG]4 [CEA]4 | [DFA]4 [DFA]4 | [DGd]4 [DBe]4 | [CAe]4 [CAe]4 | [B,FB]4 [B,^Gd]4 |
+% bars 9-12
+[V:tpt1] e3e f3f | z8 | e3e e3e | a8 :|
+[V:tpt2] A3A d3d | z8 | A3A z4 | e8 :|
+[V:timp] A,,3A,, D,3D, | z8 | A,,3A,, z4 | A,,2 z6 :|
+[V:ob1] c'3e' f'3e'/d'/ | b3f' e'3d'/c'/ | c'3b/a/ !trill!b3a | a8 :|
+[V:ob2] c3c d3d | A3A ^G3G | A3A ^G3G | A3A A3A :|
+[V:bn] C,3C, D,3D, | ^D,3D, E,3E, | E,3E, E,,3E,, | A,,8 :|
+[V:v1] c'3e' f'3e'/d'/ | b3f' e'3d'/c'/ | c'3b/a/ !trill!b3a | a8 :|
+[V:v2] c3c d3d | A3A ^G3G | A3A ^G3G | A3A A3A :|
+[V:va] A3A F3F | F3F E3E | C3C D3D | C3C C3C :|
+[V:vc] C,3C, D,3D, | ^D,3D, E,3E, | E,3E, E,,3E,, | A,,8 :|
+[V:cb] C,,3C,, D,,3D,, | ^D,,3D,, E,,3E,, | E,,3E,, E,,,3E,,, | A,,,8 :|
+[V:hpd] [EAe]4 [FAd]4 | [FAB]4 [E^GB]4 | [EAc]4 [E^Gd]4 | [EAc]4 [EAc]4 :|
+% bars 13-15: [Fugue 1] Vivace. Subject: second violins and second oboe alone
+[V:tpt1] [Q:"Vivace" 1/4=112] z8 | z8 | z8 |
+[V:tpt2] z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 |
+[V:ob1] z8 | z8 | z8 |
+[V:ob2] !f!D2 FA d2 cB | BA/G/ AF GF/E/ FD | EG FE DC/B,/ z2 |
+[V:bn] z8 | z8 | z8 |
+[V:v1] z8 | z8 | z8 |
+[V:v2] !f!D2 FA d2 cB | BA/G/ AF GF/E/ FD | EG FE DC/B,/ A,2 |
+[V:va] z8 | z8 | z8 |
+[V:vc] z8 | z8 | z8 |
+[V:cb] z8 | z8 | z8 |
+[V:hpd] z8 | z8 | z8 |
+% bars 16-18: [Fugue 2] Answer in the first violins and first oboe; countersubject below
+[V:tpt1] z8 | z8 | z8 |
+[V:tpt2] z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 |
+[V:ob1] !f!A2 ce a2 ^gf | fe/d/ ec dc/B/ cA | Bd cB A^G/F/ E2 |
+[V:ob2] zE/F/ A/B/^G/E/ c2 B2 | A4 B2 F2 | ^G2 E2 CD/E/ B,2 |
+[V:bn] z8 | z8 | z8 |
+[V:v1] !f!A2 ce a2 ^gf | fe/d/ ec dc/B/ cA | Bd cB A^G/F/ E2 |
+[V:v2] zE/F/ A/B/^G/E/ c2 B2 | A4 B2 F2 | ^G2 E2 CD/E/ B,2 |
+[V:va] z8 | z8 | z8 |
+[V:vc] z8 | z8 | z8 |
+[V:cb] z8 | z8 | z8 |
+[V:hpd] z8 | z8 | z8 |
+% bars 19-19: [Link] One bar back to D
+[V:tpt1] z8 |
+[V:tpt2] z8 |
+[V:timp] z8 |
+[V:ob1] zA/B/ c/d/e/f/ g2- gf/e/ |
+[V:ob2] C2 E2 E2 C2 |
+[V:bn] z8 |
+[V:v1] zA/B/ c/d/e/f/ g2- gf/e/ |
+[V:v2] C2 E2 E2 C2 |
+[V:va] z8 |
+[V:vc] z8 |
+[V:cb] z8 |
+[V:hpd] z8 |
+% bars 20-22: [Fugue 3] Subject in the basses and bassoon; the harpsichord joins
+[V:tpt1] z8 | z8 | z8 |
+[V:tpt2] z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 |
+[V:ob1] zA/B/ d/e/c/A/ f2 e2 | d2 c2 e2 d2 | c4 FG/A/ E2 |
+[V:ob2] z8 | z8 | z8 |
+[V:bn] !f!D,2 F,A, D2 CB, | B,A,/G,/ A,F, G,F,/E,/ F,D, | E,G, F,E, D,C,/B,,/ A,,2 |
+[V:v1] zA/B/ d/e/c/A/ f2 e2 | d2 c2 e2 d2 | c4 FG/A/ E2 |
+[V:v2] zF F2 zF E2 | zF A2 zG F2 | zG G2 zA A2 |
+[V:va] zD D2 zD C2 | zD C2 zB, D2 | zC C2 zD C2 |
+[V:vc] !f!D,2 F,A, D2 CB, | B,A,/G,/ A,F, G,F,/E,/ F,D, | E,G, F,E, D,C,/B,,/ A,,2 |
+[V:cb] !f!D,,2 F,,A,, D,2 C,B,, | B,,A,,/G,,/ A,,F,, G,,F,,/E,,/ F,,D,, | E,,G,, F,,E,, D,,C,,/B,,,/ A,,,2 |
+[V:hpd] z2 !mp![DFA]2 z2 [CEA]2 | z2 [CFA]2 z2 [B,DF]2 | z2 [A,CG]2 z2 [A,CA]2 |
+% bars 23-25: [Fugue 4] Answer in the violas; all four string voices are in
+[V:tpt1] z8 | z8 | z8 |
+[V:tpt2] z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 |
+[V:ob1] ze/f/ a/b/^g/e/ c'2 b2 | a2 ^g2 b2 a2 | ^g4 cd/e/ B2 |
+[V:ob2] zA A2 zA ^G2 | zA ^G2 zF A2 | z^G G2 zA G2 |
+[V:bn] A,,2 A,,2 A,,2 E,,2 | F,,2 C,2 B,,2 F,,2 | E,,2 E,,2 C,2 E,2 |
+[V:v1] ze/f/ a/b/^g/e/ c'2 b2 | a2 ^g2 b2 a2 | ^g4 cd/e/ B2 |
+[V:v2] zA A2 zA ^G2 | zA ^G2 zF A2 | z^G G2 zA G2 |
+[V:va] !f!A,2 CE A2 ^GF | FE/D/ EC DC/B,/ CA, | B,D CB, A,^G,/F,/ E,2 |
+[V:vc] A,,2 A,,2 A,,2 E,,2 | F,,2 C,2 B,,2 F,,2 | E,,2 E,,2 C,2 E,2 |
+[V:cb] A,,,2 A,,,2 A,,,2 E,,,2 | F,,,2 C,,2 B,,,2 F,,,2 | E,,,2 E,,,2 C,,2 E,,2 |
+[V:hpd] z2 !mp![CEA]2 z2 [B,E^G]2 | z2 [CE^G]2 z2 [A,CF]2 | z2 [B,D^G]2 z2 [B,EG]2 |
+% bars 26-27: [Cadence] Tutti close in A with trumpets and drums
+[V:tpt1] !f!z4 e2 e2 | e4 z4 |
+[V:tpt2] !f!z4 e2 e2 | A4 z4 |
+[V:timp] z8 | !f!A,,2 z6 |
+[V:ob1] e'2 f'2 e'2 d'2 | c'4 z4 |
+[V:ob2] A2 A2 ^G2 G2 | A2 A2 A2 A2 |
+[V:bn] C,2 D,2 E,2 E,,2 | A,,4 z4 |
+[V:v1] e'2 f'2 e'2 d'2 | c'4 z4 |
+[V:v2] A2 A2 ^G2 G2 | A2 A2 A2 A2 |
+[V:va] E2 F2 E2 D2 | C2 C2 C2 C2 |
+[V:vc] C,2 D,2 E,2 E,,2 | A,,4 z4 |
+[V:cb] C,,2 D,,2 E,,2 E,,,2 | A,,,4 z4 |
+[V:hpd] !mp![A,EA]2 [A,DF]2 [B,E^G]2 [DEG]2 | [CEA]2 [CEA]2 [CEA]2 [CEA]2 |
+% bars 28-33: [Episode 1] Oboes and bassoon alone: the subject’s turning figure falls through a circle of fifths
+[V:tpt1] z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tpt2] z8 | z8 | z8 | z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob1] !mp!ag/f/ ge f4 | gf/e/ fd e4 | fe/d/ ec d4 | ed/c/ dB c4 | dc/B/ cA B4 | B2 e2 c2 ^A2 |
+[V:ob2] !mp!c4 dc/B/ cA | B4 cB/A/ BG | A4 BA/G/ AF | G4 AG/F/ GE | F4 GF/E/ FD | G2 G2 F4 |
+[V:bn] !mp!A,,2 C,2 D,2 F,2 | G,2 B,2 C,2 E,2 | F,2 A,2 B,2 D2 | E,2 G,2 A,2 C2 | D2 F,2 G,2 B,2 | G,2 G,2 F,2 _B,2 |
+[V:v1] z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v2] z8 | z8 | z8 | z8 | z8 | z8 |
+[V:va] z8 | z8 | z8 | z8 | z8 | z8 |
+[V:vc] z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cb] z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hpd] z2 !p![CEA]2 z2 [DFA]2 | z2 [DGB]2 z2 [EGc]2 | z2 [FAc]2 z2 [FBd]2 | z2 [GBe]2 z2 [Gce]2 | z2 [FAd]2 z2 [GBd]2 | z2 [EBe]2 z2 [F_Be]2 |
+% bars 34-36: [Middle 1] Subject in B minor: first violins and oboe, countersubject in the second violins
+[V:tpt1] z8 | z8 | z8 |
+[V:tpt2] z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 |
+[V:ob1] !mf!B2 df b2 ag | gf/e/ fd ed/c/ dB | ce dc BA/G/ F2 |
+[V:ob2] z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 |
+[V:v1] !mf!B2 df b2 ag | gf/e/ fd ed/c/ dB | ce dc BA/G/ F2 |
+[V:v2] z!mf!F/G/ B/c/A/F/ d2 c2 | B2 A2 c2 B2 | ^A4 B2 A2 |
+[V:va] z!mf!B, B,2 zB, A,2 | zB, F,2 zG, F,2 | z_B, B,2 z=B, _B,2 |
+[V:vc] !mf!B,,2 B,,2 B,,2 C,2 | G,,2 D,,2 A,,2 B,,2 | F,,2 F,,2 B,,2 F,,2 |
+[V:cb] !mf!B,,,2 B,,,2 B,,,2 C,,2 | G,,,2 D,,2 A,,,2 B,,,2 | F,,,2 F,,,2 B,,,2 F,,,2 |
+[V:hpd] z2 !mp![DFB]2 z2 [A,EA]2 | z2 [A,DF]2 z2 [B,DF]2 | z2 [_B,EF]2 z2 [B,CF]2 |
+% bars 37-39: [Middle 2] Answer in F sharp minor: second violins and second oboe
+[V:tpt1] z8 | z8 | z8 |
+[V:tpt2] z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 |
+[V:ob1] z8 | z8 | z8 |
+[V:ob2] F2 Ac f2 ed | dc/B/ cA BA/^G/ AF | ^GB AG FE/D/ C2 |
+[V:bn] F,,2 F,,2 F,,2 ^G,,2 | D,,2 A,,2 E,,2 F,,2 | C,2 C,2 F,2 C,2 |
+[V:v1] zc/d/ f/^g/e/c/ a2 g2 | f2 e2 ^g2 f2 | =f4 ^f2 =f2 |
+[V:v2] F2 Ac f2 ed | dc/B/ cA BA/^G/ AF | ^GB AG FE/D/ C2 |
+[V:va] zA, A,2 zA, B,2 | zA, A,2 z^G, A,2 | zB, B,2 zA, ^G,2 |
+[V:vc] F,,2 F,,2 F,,2 ^G,,2 | D,,2 A,,2 E,,2 F,,2 | C,2 C,2 F,2 C,2 |
+[V:cb] F,,,2 F,,,2 F,,,2 ^G,,,2 | D,,2 A,,,2 E,,,2 F,,,2 | C,,2 C,,2 F,,2 C,,2 |
+[V:hpd] z2 !mp![CFA]2 z2 [B,EB]2 | z2 [A,Ec]2 z2 [A,Fc]2 | z2 [B,=Fc]2 z2 [CFc]2 |
+% bars 40-45: [Episode 2] Strings alone: running figures passed between the violins, towards G
+[V:tpt1] z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tpt2] z8 | z8 | z8 | z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob1] z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob2] z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !mp!zf/g/ a/g/f/e/ ^d2 B2 | ze/f/ g/f/e/d/ c2 A2 | zd/e/ f/e/d/c/ =c2 A2 | B2 d2 e2 g2 | !<(!a2 e2 f2 a2 | =c'2 a2 f2 !<)!d2 |
+[V:v2] !mp!=c4 B^d/f/ a/f/d/B/ | B4 Ac/e/ g/e/c/A/ | A4 FA/d/ f/d/A/F/ | Gg/f/ g/d/B/d/ ce/g/ e/c/G/c/ | =ce/a/ e/c/A/c/ df/a/ f/d/A/d/ | F2 A2 =c2 A2 |
+[V:va] !mp!A,2 A,2 A,2 A,2 | G,2 G,2 G,2 G,2 | F,2 F,2 F,2 F,2 | G,2 G,2 G,2 G,2 | A,2 A,2 A,2 A,2 | =C2 C2 C2 C2 |
+[V:vc] !mp!F,,A,, =C,A,, B,,_E, F,E, | E,G, B,G, A,C, E,C, | D,F, A,F, =C,F, A,F, | B,,2 B,,2 =C,2 C,2 | =C,2 C,2 D,2 D,2 | D,2 D,2 D,2 D,2 |
+[V:cb] !mp!F,,,A,,, =C,,A,,, B,,,_E,, F,,E,, | E,,G,, B,,G,, A,,C,, E,,C,, | D,,F,, A,,F,, =C,,F,, A,,F,, | B,,,2 B,,,2 =C,,2 C,,2 | =C,,2 C,,2 D,,2 D,,2 | D,,2 D,,2 D,,2 D,,2 |
+[V:hpd] z2 !p![EFA]2 z2 [_EFA]2 | z2 [EGB]2 z2 [EGc]2 | z2 [FAd]2 z2 [FAd]2 | z2 [DGd]2 z2 [=CGe]2 | z2 [=CAe]2 z2 [A,Fd]2 | z2 [=CFd]2 z2 [CFd]2 |
+% bars 46-48: [Middle 3] Subject in G in the basses, countersubject on top, oboes holding the harmony
+[V:tpt1] z8 | z8 | z8 |
+[V:tpt2] z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 |
+[V:ob1] !mf!d2 d2 d2 d2 | e2 d2 =c2 B2 | =c2 c2 d2 d2 |
+[V:ob2] !mf!B2 B2 B2 F2 | G2 F2 E2 G2 | F2 F2 G2 F2 |
+[V:bn] !f!G,2 B,D G2 FE | ED/=C/ DB, CB,/A,/ B,G, | A,=C B,A, G,F,/E,/ D,2 |
+[V:v1] z!f!d/e/ g/a/f/d/ b2 a2 | g2 f2 a2 g2 | f4 B=c/d/ A2 |
+[V:v2] z!f!D D2 zD F2 | zG F2 zE G2 | zF F2 zG F2 |
+[V:va] z!f!B, B,2 zB, A,2 | zB, D2 z=C B,2 | z=C C2 zD D2 |
+[V:vc] !f!G,2 B,D G2 FE | ED/=C/ DB, CB,/A,/ B,G, | A,=C B,A, G,F,/E,/ D,2 |
+[V:cb] !f!G,,2 B,,D, G,2 F,E, | E,D,/=C,/ D,B,, C,B,,/A,,/ B,,G,, | A,,=C, B,,A,, G,,F,,/E,,/ D,,2 |
+[V:hpd] z2 !mp![DGB]2 z2 [DFA]2 | z2 [DFB]2 z2 [B,EG]2 | z2 [=CDF]2 z2 [A,DF]2 |
+% bars 49-52: [Episode 3] The turning figure climbs over a rising bass to the dominant
+[V:tpt1] z8 | z8 | z8 | !f!z4 e2 e2 |
+[V:tpt2] z8 | z8 | z8 | !f!z4 A2 A2 |
+[V:timp] z8 | z8 | z8 | !f!z4 A,,2 A,,2 |
+[V:ob1] gf/e/ fd e'd'/c'/ d'b | ag/f/ ge f'e'/d'/ e'c' | ba/g/ af gf/e/ fd | gf/e/ gb a2 c'2 |
+[V:ob2] zG G2 zD D2 | zC C2 zE E2 | zF F2 zG G2 | zE E2 zE E2 |
+[V:bn] G,2 G,2 ^G,2 G,2 | A,2 A,2 ^A,2 A,2 | B,2 B,2 G,2 G,2 | G,2 G,2 A,2 A,,2 |
+[V:v1] gf/e/ fd e'd'/c'/ d'b | ag/f/ ge f'e'/d'/ e'c' | ba/g/ af gf/e/ fd | gf/e/ gb a2 c'2 |
+[V:v2] zG G2 zD D2 | zC C2 zE E2 | zF F2 zG G2 | zE E2 zE E2 |
+[V:va] zB, B,2 zB, B,2 | zA, A,2 zC C2 | zD D2 zB, B,2 | zB, B,2 zC C2 |
+[V:vc] G,2 G,2 ^G,2 G,2 | A,2 A,2 ^A,2 A,2 | B,2 B,2 G,2 G,2 | G,2 G,2 A,2 A,,2 |
+[V:cb] G,,2 G,,2 ^G,,2 G,,2 | A,,2 A,,2 ^A,,2 A,,2 | B,,2 B,,2 G,,2 G,,2 | G,,2 G,,2 A,,2 A,,,2 |
+[V:hpd] z2 !mp![DGB]2 z2 [DEB]2 | z2 [CEA]2 z2 [CEF]2 | z2 [B,DF]2 z2 [B,DG]2 | z2 [B,EG]2 z2 [CEA]2 |
+% bars 53-56: [Stretto] Over a dominant pedal the head of the subject enters a bar apart: violas, second violins, first violins, then everyone
+[V:tpt1] z8 | z8 | z8 | !f!e2 ee e2 e2 |
+[V:tpt2] z8 | z8 | z8 | !f!A2 AA A2 A2 |
+[V:timp] !mf!A,,2 z2 A,,2 z2 | A,,2 z2 A,,2 z2 | A,,2 z2 A,,2 z2 | !f!A,,A,, A,,A,, A,,A,, A,,A,, |
+[V:ob1] z8 | z8 | !f!d2 fa d'2 c'b | ag/f/ ge ag/f/ ge |
+[V:ob2] z8 | !f!A2 ce a2 gf | f2 d2 f2 e2 | c2 e2 c2 e2 |
+[V:bn] A,,4 A,,4 | A,,4 A,,4 | A,,4 A,,4 | A,,4 A,,4 |
+[V:v1] z8 | z8 | !f!d2 fa d'2 c'b | ag/f/ ge ag/f/ ge |
+[V:v2] z8 | !f!A2 ce a2 gf | f2 d2 f2 e2 | c2 e2 c2 e2 |
+[V:va] !f!D2 FA d2 cB | A2 E2 A2 G2 | F2 A2 A2 G2 | E2 G2 E2 G2 |
+[V:vc] A,,A,, A,,A,, A,,A,, A,,A,, | A,,A,, A,,A,, A,,A,, A,,A,, | A,,A,, A,,A,, A,,A,, A,,A,, | A,,A,, A,,A,, A,,A,, A,,A,, |
+[V:cb] A,,,A,,, A,,,A,,, A,,,A,,, A,,,A,,, | A,,,A,,, A,,,A,,, A,,,A,,, A,,,A,,, | A,,,A,,, A,,,A,,, A,,,A,,, A,,,A,,, | A,,,A,,, A,,,A,,, A,,,A,,, A,,,A,,, |
+[V:hpd] !mp![DFA]2 [DFA]2 [DFA]2 [CGA]2 | [CEA]2 [CEA]2 [CEA]2 [CGA]2 | [DFA]2 [DFA]2 [DFA]2 [CGA]2 | [CGA]2 [CGA]2 [CGA]2 [CGA]2 |
+% bars 57-59: [Final entry] The whole subject in D with the first trumpet
+[V:tpt1] !f!d2 fa d'2 c'b | ba/g/ af gf/e/ fd | eg fe d2 A2 |
+[V:tpt2] !f!d2 dd d2 A2 | d2 z2 e2 d2 | e2 e2 d2 e2 |
+[V:timp] !f!D,2 D,D, D,2 A,,2 | D,2 z4 D,2 | A,,2 A,,2 D,2 A,,2 |
+[V:ob1] !f!d2 fa d'2 c'b | ba/g/ af gf/e/ fd | eg fe dc/B/ A2 |
+[V:ob2] zA/B/ d/e/c/A/ f2 e2 | d2 c2 e2 d2 | c4 FG/A/ E2 |
+[V:bn] D,,2 D,,2 D,,2 A,,2 | B,,2 F,,2 E,,2 B,,2 | A,,2 A,,2 F,,2 A,,2 |
+[V:v1] !f!d2 fa d'2 c'b | ba/g/ af gf/e/ fd | eg fe dc/B/ A2 |
+[V:v2] zA/B/ d/e/c/A/ f2 e2 | d2 c2 e2 d2 | c4 FG/A/ E2 |
+[V:va] zD D2 zD C2 | zD C2 zB, D2 | zC C2 zD C2 |
+[V:vc] D,,2 D,,2 D,,2 A,,2 | B,,2 F,,2 E,,2 B,,2 | A,,2 A,,2 F,,2 A,,2 |
+[V:cb] D,,2 D,,2 D,,2 A,,,2 | B,,,2 F,,,2 E,,,2 B,,,2 | A,,,2 A,,,2 F,,,2 A,,,2 |
+[V:hpd] !mp![DFA]2 [DFA]2 [DFA]2 [CEA]2 | [DFB]2 [CFA]2 [B,EG]2 [B,DF]2 | [A,CG]2 [A,CG]2 [A,DA]2 [A,CA]2 |
+% bars 60-61: [Close] A broad half close on the dominant, leading to the Grave
+[V:tpt1] z8 | !f!a8 ||
+[V:tpt2] z8 | !f!e8 ||
+[V:timp] z8 | !f!A,,2 z6 ||
+[V:ob1] f'2 f'2 g'2 g'2 | e'8 ||
+[V:ob2] F2 F2 G2 G2 | A2 A2 A2 A2 ||
+[V:bn] D,2 =C,2 B,,2 _B,,2 | A,,8 ||
+[V:v1] f'2 f'2 g'2 g'2 | e'8 ||
+[V:v2] F2 F2 G2 G2 | A2 A2 A2 A2 ||
+[V:va] D2 D2 D2 D2 | C2 C2 C2 C2 ||
+[V:vc] D,2 =C,2 B,,2 _B,,2 | A,,8 ||
+[V:cb] D,,2 =C,,2 B,,,2 _B,,,2 | A,,,8 ||
+[V:hpd] !mp![DFA]2 [DFA]2 [DGd]2 [DGd]2 | [CAe]2 [CAe]2 [CAe]2 [CAe]2 ||
+% bars 62-69: [Grave II] The opening returns and closes in D
+[V:tpt1] [Q:"Grave" 1/4=60] !f!f3f a3a | z8 | a3a f3f | z8 | f3a d'3d' | z8 | a2 z2 e3e | f8 |]
+[V:tpt2] !f!d3d d3d | z8 | f3f d3d | z8 | d3f a3f | z8 | f2 z2 A3A | d8 |]
+[V:timp] !f!D,3D, D,3D, | z8 | D,3D, z4 | z8 | D,3D, z4 | z8 | D,2 z2 A,,3A,, | D,2 z6 |]
+[V:ob1] !f!d3d/e/ f3f/g/ | g3b a3g/f/ | f3a d'3c'/b/ | b3g e3e/f/ | f3a d'3b | e'3d'/c'/ a3g/f/ | f3e/d/ !trill!e3d | d8 |]
+[V:ob2] !f!F3F A3A | B3B A3A | A3A B3B | B3B c3c | d3d d3d | B3B c3c | A3A G3G | F3F F3F |]
+[V:bn] !f!D,3D, F,3F, | G,3G, G,3G, | F,3F, B,,3B,, | G,,3G,, A,,3A,, | D,3D, B,,3B,, | G,,3G,, G,3G, | F,3F, A,3A,, | D,8 |]
+[V:v1] !f!d3d/e/ f3f/g/ | g3b a3g/f/ | f3a d'3c'/b/ | b3g e3e/f/ | f3a d'3b | e'3d'/c'/ a3g/f/ | f3e/d/ !trill!e3d | d8 |]
+[V:v2] !f!F3F A3A | B3B A3A | A3A B3B | B3B c3c | d3d d3d | B3B c3c | A3A G3G | F3F F3F |]
+[V:va] !f!D3D D3D | D3D C3C | D3D D3D | E3E E3E | F3F F3F | E3E E3E | D3D C3C | D3D D3D |]
+[V:vc] !f!D,3D, F,3F, | G,3G, G,3G, | F,3F, B,,3B,, | G,,3G,, A,,3A,, | D,3D, B,,3B,, | G,,3G,, G,3G, | F,3F, A,3A,, | D,8 |]
+[V:cb] !f!D,,3D,, F,,3F,, | G,,3G,, G,,3G,, | F,,3F,, B,,,3B,,, | G,,,3G,,, A,,,3A,,, | D,,3D,, B,,,3B,,, | G,,,3G,,, G,,3G,, | F,,3F,, A,,3A,,, | D,,8 |]
+[V:hpd] !mf![DFA]4 [DFA]4 | [DGB]4 [CEA]4 | [A,DA]4 [B,DF]4 | [B,EG]4 [CEA]4 | [DFA]4 [DFB]4 | [B,EB]4 [A,Ec]4 | [A,DA]4 [A,CG]4 | [A,DF]4 [A,DF]4 |]

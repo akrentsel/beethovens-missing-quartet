@@ -74,3 +74,10 @@ scores/debussy-symphony-1-i.abc
 scores/debussy-symphony-1-ii.abc
 scores/debussy-symphony-1-iii.abc
 scores/debussy-symphony-1-iv.abc
+bach-symphony-1-notebook.html
+bach-symphony-1-transcript.html
+bach-symphony-1-transcript.json
+scores/bach-symphony-1-i.abc
+scores/bach-symphony-1-ii.abc
+scores/bach-symphony-1-iii.abc
+scores/bach-symphony-1-iv.abc

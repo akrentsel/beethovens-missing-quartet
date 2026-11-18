@@ -1,0 +1,57 @@
+%%label II. Siciliano: Andante
+%%note B minor. A lilting song for solo oboe over strings and harpsichord, in two repeated halves.
+X:1
+T:Bach’s Missing Symphony
+T:II. Siciliano: Andante
+C:Claude (AI), in the manner of J. S. Bach
+M:6/8
+L:1/8
+Q:"Andante" 3/8=44
+%%score ob1 [v1 v2 va vc cb] hpd
+% Original AI-composed homage. The score is written at sounding pitch.
+V:ob1 clef=treble name="Ob. solo"
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+V:hpd clef=treble name="Hpd."
+K:Bm
+V:ob1
+%%MIDI program 68
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+V:hpd
+%%MIDI program 6
+% bars 1-8: [A] The oboe’s tune, from B minor to D
+[V:ob1] |: !mf!f3/2g/f b2a | g3/2f/e ^a2f | b3/2c'/d' c'2f | d'3/2c'/b a2g | f3/2e/d a2f | g3/2a/b e2g | f3/2e/d e2c | d3- d2 z :|
+[V:v1] |: !p!F2F F2F | G2G F2F | F2F F2F | D2D E2E | D2D D2D | D2D E2E | D2D C2C | !mp!d3/2e/f a2 z :|
+[V:v2] |: !p!D2D D2D | E2E E2E | D2D C2C | B,2B, A,2A, | A,2A, A,2A, | B,2B, B,2B, | A,2A, A,2A, | A,2A, A,2A, :|
+[V:va] |: !p!B,2B, B,2B, | B,2B, ^A,2A, | B,2B, F,2F, | F,2F, G,2G, | F,2F, F,2F, | G,2G, G,2G, | F,2F, G,2G, | F,2F, F,2F, :|
+[V:vc] |: !p!B,,3 D,3 | G,3 F,3 | B,,3 ^A,,3 | B,,3 C,3 | D,3 D,3 | G,3 E,3 | A,3 A,3 | D,3 D,3 :|
+[V:cb] |: !p!B,,,3 D,,3 | G,,3 F,,3 | B,,,3 ^A,,,3 | B,,,3 C,,3 | D,,3 D,,3 | G,,3 E,,3 | A,,3 A,,3 | D,,3 D,,3 :|
+[V:hpd] |: !p!FBd FBd | EBe E^Af | DBf C^Af | DBf EAg | DAf DAf | DBg EBg | DAf CAg | DAf DAf :|
+% bars 9-16: [B] Through E minor and F sharp minor; the tune returns with the first violins and is closed in B minor
+[V:ob1] |: !mf!a3/2b/a d'2a | b3/2a/g e2c' | f3/2g/a b2a | g3/2f/e B2e | b3/2c'/b ^g2^e | f3/2^g/a c'2a | b3/2a/^g ^e2g | f3 ^a2c' |
+[V:v1] |: !p!F2F A2A | B2B A2A | A2A B2B | B2B B2B | B2B B2B | A2A A2A | F2F ^E2E | F2F F2F |
+[V:v2] |: !p!D2D D2D | D2D C2C | D2D F2F | E2E E2E | E2E ^E2E | C2C C2C | B,2B, B,2B, | C2C C2C |
+[V:va] |: !p!A,2A, A,2A, | G,2G, A,2A, | A,2A, A,2A, | G,2G, G,2G, | G,2G, ^G,2G, | F,2F, F,2F, | F,2F, ^G,2G, | A,2A, ^A,2A, |
+[V:vc] |: !p!D,,3 F,,3 | G,,3 G,,3 | F,,3 ^D,,3 | E,,3 E,,3 | G,,3 ^G,,3 | F,,3 F,,3 | D,,3 C,3 | F,3 E,3 |
+[V:cb] |: !p!D,,3 F,,,3 | G,,,3 G,,,3 | F,,,3 ^D,,3 | E,,,3 E,,,3 | G,,,3 ^G,,,3 | F,,,3 F,,,3 | D,,3 C,,3 | F,,3 E,,3 |
+[V:hpd] |: !p!FAd DAd | B,Gd CAe | DAd FAB | EGB EGB | EGB C^EB | CFA CFA | B,FB B,^Ec | CFA CF^A |
+% bars 17-24
+[V:ob1] f3/2g/f b2a | g3/2f/e ^a2f | b3/2c'/d' e'2d' | c'3/2b/^a f2e | d3/2e/f g2b | ^a3/2b/c' b2g | e3/2f/g f2e | d3/2c/B B3 :|
+[V:v1] !mp!F3/2G/F B2A | G3/2F/E ^A2F | B3/2c/d e2d | c3/2B/^A F2E | !p!F2F G2G | F2F G2G | E2E E2E | f3/2e/d d3 :|
+[V:v2] D2D D2D | E2E E2E | D2D D2D | C2C E2E | D2D E2E | E2E D2D | C2C C2C | D2D D2D :|
+[V:va] B,2B, B,2B, | B,2B, ^A,2A, | B,2B, B,2B, | B,2B, ^A,2A, | B,2B, B,2B, | ^A,2A, B,2B, | B,2B, ^A,2A, | B,2B, B,2B, :|
+[V:vc] B,,3 D,3 | G,3 F,3 | B,,3 G,,3 | E,,3 F,,3 | D,,3 E,,3 | F,,3 G,,3 | C,3 F,3 | B,,3 B,,3 :|
+[V:cb] B,,,3 D,,3 | G,,3 F,,3 | B,,,3 G,,,3 | E,,,3 F,,,3 | D,,3 E,,,3 | F,,,3 G,,,3 | C,,3 F,,3 | B,,,3 B,,,3 :|
+[V:hpd] DFB B,FB | B,EB CE^A | DFB DGB | CGB EF^A | B,FB B,EG | CE^A DGB | CEB CE^A | DFB DFB :|
