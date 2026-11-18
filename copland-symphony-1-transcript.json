@@ -1,0 +1,198 @@
+{
+ "title": "Copland’s Missing Symphony — public composition log",
+ "scope": "The log the composing agent (Claude) kept while writing this work: the request, its progress messages, the commands it ran on the score and their output, draft publications and test results, up to the publication step. It was written during the work, entry by entry; it is not an automatic export of the whole session, and the same session composed other works whose entries are not included here.",
+ "policy": "Messages and tool output are recorded as they occurred, shortened where marked. Private internal reasoning, credentials, access details, private paths and unrelated conversation are not included. Statements made during the work may be provisional or mistaken; later corrections remain in the log.",
+ "sessions": {
+  "main": "Composition session"
+ },
+ "entries": [
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:51:42.000Z",
+   "kind": "message",
+   "speaker": "User",
+   "text": "[A long batch brief was pasted: compose and publish one original symphony for each composer in the Missing Works catalogue who has no completed symphony, one composer at a time, claiming each open symphony request through the admin command, publishing live drafts early, testing every movement in the real browser player, writing a notebook and a public composition log, deploying an atomic release, and completing the request only after the public work is verified. Every work must be labelled an original AI-composed homage.]\n\nNOW I know I said to do all composers, but how about we actually do half of the composers in each section? just to save some money.",
+   "notes": [
+    "the pasted batch brief is summarised in brackets; the last sentence is verbatim"
+   ],
+   "id": "entry-0001"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:51:42.000Z",
+   "kind": "tool",
+   "speaker": "Queue claim",
+   "text": "GET /api/requests -> copland:symphony:1 status open, votes 0; no request in status composing\nmissing-works-admin start copland:symphony:1",
+   "notes": [
+    "access details omitted"
+   ],
+   "id": "entry-0002"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:51:42.000Z",
+   "kind": "result",
+   "speaker": "Queue claim",
+   "text": "started copland:symphony:1",
+   "notes": [],
+   "id": "entry-0003"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:51:42.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "Composition brief — Copland’s Missing Symphony (work id copland-symphony-1)\n\nAaron Copland wrote three numbered symphonies and a Dance Symphony. This is a new “Symphony in D” in the open, plain-spoken manner of his Third Symphony and the ballets of the 1940s. No theme is taken from Copland, and no folk tune, hymn or cowboy song is quoted; in particular the brass fanfare of the finale is new and is not the “Fanfare for the Common Man”.\n\nOrchestra (14 staves, sounding pitch): pairs of flutes, oboes, clarinets and bassoons, four horns, three trumpets, three trombones and tuba, timpani, piano, strings.\n\nLanguage: melodies built from fourths and fifths; lines stated first in bare octaves; plain major chords with an added second or fourth; wide spacing; one colour at a time; a fiddle-style dance; a brass fanfare with timpani. Because added-note chords and parallel fifths are the vocabulary, the half-step and parallel-motion checks are switched off for this work.\n\nMovements\nI. Molto moderato, D: the main theme alone in octaves, then harmonised; a second, flowing idea; the theme in F and G; a climax for the brass; a quiet close on an open fifth.\nII. Allegro molto, D, 2/4 with bars of 3/4: a newly written fiddle-style dance, interrupted by spaced brass chords, with a gentle trio in G for clarinet.\nIII. Andantino, A: a long flute solo over held strings; the oboe follows it in canon; a small dance for clarinet and bassoon; the flute’s melody returns in the violins.\nIV. Molto deliberato – Allegro risoluto – Maestoso: a fanfare for brass and timpani; a quick movement on a theme made from the first movement’s fourths; the dance of the second movement looks in; and the first movement’s theme returns broadly to end.\n\nTarget length about nine minutes. Compromise known from the start: themes, the canon, the fanfare and the chord of every bar are written by hand; a program writes the held chords, the dance accompaniments, piano and full-orchestra textures from the chord plan.",
+   "notes": [],
+   "id": "entry-0004"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:52:35.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. First movement (added-note chords and parallel fifths are intended; half-step and parallel checks are off for this work).",
+   "notes": [],
+   "id": "entry-0005"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:52:35.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Molto moderato: 62 bars written, 225s played; activity fl:50 ob:38 cl:63 bn:25 hn:122 tpt:12 tbn:12 timp:6 pno:54 v1:84 v2:99 va:99 vc:99 cb:87\n    validator ok: 62 bars, 225.5s, 14 voices; abcjs playback matches the model (1298 notes)",
+   "notes": [],
+   "id": "entry-0006"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:52:35.816Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 1 with this public change note:\nFirst playable draft: the first movement — a theme of rising fourths and fifths in bare octaves, then harmonised, a second flowing idea, a brass climax, and a quiet close on an open fifth.",
+   "notes": [],
+   "id": "entry-0007"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:52:40.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=copland-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0008"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:52:40.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Molto moderato62 bars | load 1.5s | state playing | clock 0:01 / 3:45 | {\"peak\":0.9,\"seconds\":225.7,\"rms\":0.0811,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I–III:56 Tbn. I–III, Tuba:57 Timp.:47 Piano:0 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0009"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:52:40.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "First playable Copland draft is live: https://lost-compositions.exe.xyz/work.html?draft=copland-symphony-1 (first movement, 3:45). Writing the other three movements.",
+   "notes": [],
+   "id": "entry-0010"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:52:54.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m2, m3, m4: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Movements II–IV, first build.",
+   "notes": [],
+   "id": "entry-0011"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:52:54.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Allegro molto: 84 bars written, 95s played; activity fl:68 ob:100 cl:120 bn:50 hn:83 tpt:83 tbn:150 timp:37 pno:166 v1:85 v2:87 va:87 vc:100 cb:100\n    validator ok: 84 bars, 95.5s, 14 voices; abcjs playback matches the model (2691 notes)\n  III. Andantino: 36 bars written, 114s played; activity fl:64 ob:19 cl:19 bn:19 hn:66 pno:19 v1:86 v2:88 va:88 vc:88 cb:88\n    validator ok: 36 bars, 113.7s, 11 voices; abcjs playback matches the model (459 notes)\n  IV. Molto deliberato – Allegro risoluto – Maestoso: 68 bars written, 125s played; activity fl:71 ob:109 cl:126 bn:54 hn:145 tpt:99 tbn:181 timp:32 pno:181 v1:72 v2:68 va:68 vc:81 cb:81\n    validator ok: 68 bars, 124.9s, 14 voices; abcjs playback matches the model (2166 notes)",
+   "notes": [],
+   "id": "entry-0012"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:52:55.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m2, m3: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Revision pass: the dance is heard once more in G before the last interruption; in the Andantino the oboe's canon now returns with the melody in the last section, where it had been dropped.",
+   "notes": [],
+   "id": "entry-0013"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:52:55.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Allegro molto: 92 bars written, 103s played; activity fl:70 ob:107 cl:126 bn:53 hn:92 tpt:92 tbn:161 timp:36 pno:184 v1:86 v2:88 va:88 vc:100 cb:100\n    validator ok: 92 bars, 102.7s, 14 voices; abcjs playback matches the model (3087 notes)\n  III. Andantino: 36 bars written, 114s played; activity fl:64 ob:38 cl:19 bn:19 hn:66 pno:19 v1:86 v2:88 va:88 vc:88 cb:88\n    validator ok: 36 bars, 113.7s, 11 voices; abcjs playback matches the model (480 notes)",
+   "notes": [],
+   "id": "entry-0014"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:52:55.387Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 2 with this public change note:\nFirst complete draft: added the fiddle-style dance with its clarinet trio, the Andantino for flute with an oboe canon, and the finale that opens with a brass fanfare and ends with the first movement's theme. A revision pass follows.",
+   "notes": [],
+   "id": "entry-0015"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:52:56.347Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 3 with this public change note:\nRevision: one more statement of the dance, in G, in the second movement; the oboe's canon restored in the Andantino's return. This revision matches the published score.",
+   "notes": [],
+   "id": "entry-0016"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:53:12.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=copland-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0017"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:53:12.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Molto moderato62 bars | load 0.8s | state playing | clock 0:01 / 3:45 | {\"peak\":0.9,\"seconds\":225.7,\"rms\":0.0811,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I–III:56 Tbn. I–III, Tuba:57 Timp.:47 Piano:0 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   II. Allegro molto92 bars | load 0.7s | state playing | clock 0:01 / 1:43 | {\"peak\":0.9,\"seconds\":102.9,\"rms\":0.131,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I–III:56 Tbn. I–III, Tuba:57 Timp.:47 Piano:0 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   III. Andantino36 bars | load 0.4s | state playing | clock 0:01 / 1:54 | {\"peak\":0.9,\"seconds\":113.9,\"rms\":0.1461,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Piano:0 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   IV. Molto deliberato – Allegro risoluto – Maestoso68 bars | load 0.6s | state playing | clock 0:01 / 2:05 | {\"peak\":0.9,\"seconds\":125.1,\"rms\":0.1243,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I–III:56 Tbn. I–III, Tuba:57 Timp.:47 Piano:0 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0018"
+  }
+ ]
+}

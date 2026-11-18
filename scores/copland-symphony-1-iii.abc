@@ -1,0 +1,105 @@
+%%label III. Andantino
+%%note A. A long flute solo over held strings; the oboe follows it in canon; a small dance for clarinet and bassoon; the melody returns in the violins.
+X:1
+T:Copland’s Missing Symphony
+T:III. Andantino
+C:Claude (AI), in the manner of Aaron Copland
+M:4/4
+L:1/8
+Q:"Andantino quasi allegretto" 1/4=76
+%%score [fl ob cl bn] [hn] pno [v1 v2 va vc cb]
+% Original AI-composed homage. The score is written at sounding pitch.
+V:fl clef=treble name="Fl. I, II"
+V:ob clef=treble name="Ob. I, II"
+V:cl clef=treble name="Cl. I, II"
+V:bn clef=bass name="Bn. I, II"
+V:hn clef=treble name="Hn. I–IV"
+V:pno clef=treble name="Piano"
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:A
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:pno
+%%MIDI program 0
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-8: [1] The flute alone over held strings
+[V:fl] !pp!e'4 c'2 a2 | b4 e2 a2 | c'4 e'2 a'2 | f'6 e'2 | d'4 b2 a2 | f4 a2 b2 | c'2 e'2 d'2 b2 | a6 z2 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:pno] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !pp!A8 | A8 | A8 | A8 | A8 | A8 | A4 A4 | A8 |
+[V:v2] !pp!E8 | E8 | E8 | F8 | F8 | F8 | E4 E4 | E8 |
+[V:va] !pp!C8 | D8 | C8 | D8 | D8 | E8 | C4 D4 | C8 |
+[V:vc] !pp!A,,8 | E,,8 | A,,8 | D,8 | B,,8 | F,,8 | E,,4 E,,4 | A,,8 |
+[V:cb] !pp!A,,,8 | E,,,8 | A,,,8 | D,,8 | B,,,8 | F,,,8 | E,,,4 E,,,4 | A,,,8 |
+% bars 9-16: [2] The flute again; the oboe follows a bar later and a fifth lower
+[V:fl] !pp!e'4 c'2 a2 | b4 e2 a2 | c'4 e'2 a'2 | f'6 e'2 | d'4 b2 a2 | f4 a2 b2 | c'2 e'2 d'2 b2 | a6 z2 |
+[V:ob] z8 | !p!a4 f2 d2 | e4 A2 d2 | f4 a2 d'2 | b6 a2 | =g4 e2 d2 | B4 d2 e2 | f2 a2 =g2 e2 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:pno] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !pp!A8 | A8 | A8 | A8 | A8 | A8 | A4 A4 | A8 |
+[V:v2] !pp!E8 | E8 | E8 | F8 | F8 | F8 | E4 E4 | E8 |
+[V:va] !pp!C8 | D8 | C8 | D8 | D8 | E8 | C4 D4 | C8 |
+[V:vc] !pp!A,,8 | E,,8 | A,,8 | D,8 | B,,8 | F,,8 | E,,4 E,,4 | A,,8 |
+[V:cb] !pp!A,,,8 | E,,,8 | A,,,8 | D,,8 | B,,,8 | F,,,8 | E,,,4 E,,,4 | A,,,8 |
+% bars 17-24: [3] A small dance for clarinet, with the bassoon an octave below, over off-beat strings
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] !mp!f2 a2 c'2 a2 | b2 a2 f2 e2 | d2 f2 a2 f2 | e4 z4 | f2 a2 c'2 e'2 | d'2 c'2 a2 f2 | e2 g2 b2 g2 | a4 z4 |
+[V:bn] !mp!F,2 A,2 C2 A,2 | B,2 A,2 F,2 E,2 | D,2 F,2 A,2 F,2 | E,4 z4 | F,2 A,2 C2 E2 | D2 C2 A,2 F,2 | E,2 G,2 B,2 G,2 | A,4 z4 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:pno] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] z2 !mp!A2 z2 A2 | z2 A2 z2 A2 | z2 A2 z2 A2 | z2 G2 z2 G2 | z2 A2 z2 A2 | z2 A2 z2 A2 | z2 A2 z2 G2 | z2 A2 z2 A2 |
+[V:v2] z2 !mp!F2 z2 F2 | z2 F2 z2 F2 | z2 F2 z2 F2 | z2 E2 z2 E2 | z2 F2 z2 F2 | z2 F2 z2 F2 | z2 E2 z2 E2 | z2 E2 z2 E2 |
+[V:va] z2 !mp!C2 z2 C2 | z2 D2 z2 D2 | z2 D2 z2 D2 | z2 B,2 z2 B,2 | z2 C2 z2 C2 | z2 D2 z2 D2 | z2 D2 z2 B,2 | z2 C2 z2 C2 |
+[V:vc] !mp!F,,2 z2 F,,2 z2 | B,,2 z2 B,,2 z2 | D,2 z2 D,2 z2 | E,2 z2 E,2 z2 | F,2 z2 F,2 z2 | D,2 z2 D,2 z2 | E,2 z2 E,2 z2 | A,,2 z2 A,,2 z2 |
+[V:cb] !mp!F,,,2 z2 F,,,2 z2 | B,,,2 z2 B,,,2 z2 | D,,2 z2 D,,2 z2 | E,,2 z2 E,,2 z2 | F,,2 z2 F,,2 z2 | D,,2 z2 D,,2 z2 | E,,2 z2 E,,2 z2 | A,,,2 z2 A,,,2 z2 |
+% bars 25-32: [4] The flute’s melody returns in the violins with the flute above, horns holding, the piano adding bell-like fifths
+[V:fl] !p!e'4 c'2 a2 | b4 e2 a2 | c'4 e'2 a'2 | f'6 e'2 | d'4 b2 a2 | f4 a2 b2 | c'2 e'2 d'2 b2 | a6 z2 |
+[V:ob] z8 | !p!a4 f2 d2 | e4 A2 d2 | f4 a2 d'2 | b6 a2 | =g4 e2 d2 | B4 d2 e2 | f2 a2 =g2 e2 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] !pp![B,C]4 [B,C]4 | [B,D]4 [B,D]4 | [A,C]4 [A,C]4 | [F,D]4 [F,D]4 | [A,D]4 [A,D]4 | [A,E]4 [A,E]4 | [A,C]4 [A,D]4 | [A,C]4 [A,C]4 |
+[V:pno] !p![Ae]4 z4 | z8 | [Ae]4 z4 | z8 | [Bf]4 z4 | z8 | [Ae]4 z4 | [Ae]4 z4 |
+[V:v1] !mp!e'4 c'2 a2 | b4 e2 a2 | c'4 e'2 a'2 | f'6 e'2 | d'4 b2 a2 | f4 a2 b2 | c'2 e'2 d'2 b2 | a6 z2 |
+[V:v2] !p!E8 | E8 | E8 | F8 | A8 | A8 | A4 A4 | A8 |
+[V:va] !p!C8 | D8 | C8 | D8 | D8 | E8 | C4 D4 | C8 |
+[V:vc] !p!A,,8 | E,,8 | A,,8 | D,8 | B,,8 | F,,8 | E,,4 E,,4 | A,,8 |
+[V:cb] !p!A,,,8 | E,,,8 | A,,,8 | D,,8 | B,,,8 | F,,,8 | E,,,4 E,,,4 | A,,,8 |
+% bars 33-36: [5] Four bars to close on an open fifth
+[V:fl] z8 | z8 | z8 | z8 |]
+[V:ob] z8 | z8 | z8 | z8 |]
+[V:cl] z8 | z8 | z8 | z8 |]
+[V:bn] z8 | z8 | z8 | z8 |]
+[V:hn] !p![CE]4 [DF]4 | [CE]4 [DF]4 | [EA]4 [EA]4 | [EA]4 [EA]4 |]
+[V:pno] z8 | z8 | !pp![Ae]4 z4 | [Ae]4 z4 |]
+[V:v1] !pp!e'4 f'4 | e'4 d'4 | e'8 | e'4 z4 |]
+[V:v2] !pp!E4 F4 | E4 F4 | A8 | A8 |]
+[V:va] !pp!C4 D4 | C4 D4 | E8 | E8 |]
+[V:vc] !pp!A,,4 A,,4 | A,,4 A,,4 | A,,8 | A,,8 |]
+[V:cb] !pp!A,,,4 A,,,4 | A,,,4 A,,,4 | A,,,8 | A,,,8 |]

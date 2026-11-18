@@ -1252,6 +1252,50 @@
           "durationSeconds": 102
         }
       ]
+    },
+    {
+      "id": "copland-symphony-1",
+      "composerId": "copland",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Copland’s Missing Symphony",
+      "subtitle": "Symphony in D",
+      "description": "A four-movement symphony in Copland’s open, plain-spoken manner: a theme of rising fourths and fifths stated in bare octaves, a fiddle-style dance, a flute solo with an oboe canon, and a finale that opens with a newly written brass fanfare and ends with the first theme. For orchestra with piano. A new AI-composed homage, not a rediscovered work by Copland; no folk tune and no existing fanfare is quoted.",
+      "durationSeconds": 568,
+      "date": "2026-11-18",
+      "status": "completed",
+      "notebook": "copland-symphony-1-notebook.html",
+      "transcript": "copland-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Molto moderato",
+          "note": "A theme of rising fourths and fifths, first in bare octaves, then harmonised, growing to a brass climax.",
+          "source": "scores/copland-symphony-1-i.abc",
+          "durationSeconds": 226
+        },
+        {
+          "id": "ii",
+          "label": "II. Allegro molto",
+          "note": "A fiddle-style dance interrupted by spaced chords in three-four, with a clarinet trio.",
+          "source": "scores/copland-symphony-1-ii.abc",
+          "durationSeconds": 103
+        },
+        {
+          "id": "iii",
+          "label": "III. Andantino",
+          "note": "A flute solo over held strings, followed in canon by the oboe; a small dance for clarinet and bassoon.",
+          "source": "scores/copland-symphony-1-iii.abc",
+          "durationSeconds": 114
+        },
+        {
+          "id": "iv",
+          "label": "IV. Molto deliberato – Allegro risoluto – Maestoso",
+          "note": "A fanfare for brass and timpani, a quick movement, and the first movement’s theme to end.",
+          "source": "scores/copland-symphony-1-iv.abc",
+          "durationSeconds": 125
+        }
+      ]
     }
   ]
 }

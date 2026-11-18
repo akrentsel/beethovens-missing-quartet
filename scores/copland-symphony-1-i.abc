@@ -1,0 +1,174 @@
+%%label I. Molto moderato
+%%note D. A theme of rising fourths and fifths, first in bare octaves, then harmonised; it grows to a climax for the brass and subsides.
+X:1
+T:Copland’s Missing Symphony
+T:I. Molto moderato
+C:Claude (AI), in the manner of Aaron Copland
+M:4/4
+L:1/8
+Q:"Molto moderato" 1/4=66
+%%score [fl ob cl bn] [hn tpt tbn] timp pno [v1 v2 va vc cb]
+% Original AI-composed homage. The score is written at sounding pitch.
+V:fl clef=treble name="Fl. I, II"
+V:ob clef=treble name="Ob. I, II"
+V:cl clef=treble name="Cl. I, II"
+V:bn clef=bass name="Bn. I, II"
+V:hn clef=treble name="Hn. I–IV"
+V:tpt clef=treble name="Tpt. I–III"
+V:tbn clef=bass name="Tbn. I–III, Tuba"
+V:timp clef=bass name="Timp."
+V:pno clef=treble name="Piano"
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:D
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tpt
+%%MIDI program 56
+V:tbn
+%%MIDI program 57
+V:timp
+%%MIDI program 47
+V:pno
+%%MIDI program 0
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-8: [1] The theme alone, in octaves: flute, clarinet and strings, nothing else
+[V:fl] !mp!a4 d'4 | e'6 d'2 | b4 e'4 | a8 | a4 d'4 | f'6 e'2 | d'4 b4 | a6 z2 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] !mp!a4 d'4 | e'6 d'2 | b4 e'4 | a8 | a4 d'4 | f'6 e'2 | d'4 b4 | a6 z2 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tpt] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tbn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:pno] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !mp!a4 d'4 | e'6 d'2 | b4 e'4 | a8 | a4 d'4 | f'6 e'2 | d'4 b4 | a6 z2 |
+[V:v2] !mp!A4 d4 | e6 d2 | B4 e4 | A8 | A4 d4 | f6 e2 | d4 B4 | A6 z2 |
+[V:va] !mp!A4 d4 | e6 d2 | B4 e4 | A8 | A4 d4 | f6 e2 | d4 B4 | A6 z2 |
+[V:vc] !mp!A,4 D4 | E6 D2 | B,4 E4 | A,8 | A,4 D4 | F6 E2 | D4 B,4 | A,6 z2 |
+[V:cb] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+% bars 9-16: [2] The theme harmonised: violins over plain chords with added seconds, horns holding
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] !pp![DF]4 [DF]4 | [B,G]4 [B,G]4 | [DG]4 [DG]4 | [DG]4 [DG]4 | [DF]4 [DF]4 | [DA]4 [DA]4 | [B,G]4 [DG]4 | [DG]4 [DG]4 |
+[V:tpt] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tbn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:pno] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !mp!a4 d'4 | e'6 d'2 | b4 e'4 | a8 | a4 d'4 | f'6 e'2 | d'4 b4 | a6 z2 |
+[V:v2] !p!F4 F4 | G4 G4 | G4 G4 | G4 G4 | F4 F4 | A4 A4 | B4 G4 | G4 G4 |
+[V:va] !p!D4 D4 | B,4 B,4 | D4 D4 | D4 D4 | D4 D4 | D4 D4 | D4 D4 | D4 D4 |
+[V:vc] !p!D,,4 D,,4 | D,,4 D,,4 | E,,4 E,,4 | A,,4 A,,4 | D,4 D,4 | B,,4 B,,4 | G,,4 E,,4 | A,,4 A,,4 |
+[V:cb] !p!D,,4 D,,4 | D,,4 D,,4 | E,,,4 E,,,4 | A,,,4 A,,,4 | D,,4 D,,4 | B,,,4 B,,,4 | G,,,4 E,,,4 | A,,,4 A,,,4 |
+% bars 17-24: [3] A second, more flowing idea for oboe and violas
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] !mp!f2 a2 b2 a2 | f2 e2 d4 | e2 f2 a2 b2 | a8 | d'2 c'2 b2 a2 | b2 a2 f4 | e2 f2 e2 d2 | d6 z2 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tpt] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tbn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:pno] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !p!A4 B4 | A4 B4 | B4 B4 | A4 A4 | B4 B4 | d4 d4 | d4 d4 | d4 d4 |
+[V:v2] !p!F4 G4 | F4 F4 | G4 G4 | E4 E4 | F4 G4 | A4 A4 | G4 G4 | A4 A4 |
+[V:va] !mp!F2 A2 B2 A2 | F2 E2 D4 | E2 F2 A2 B2 | A8 | d2 c2 B2 A2 | B2 A2 F4 | E2 F2 E2 D2 | D6 z2 |
+[V:vc] !p!D,,4 G,,4 | D,,4 B,,4 | E,4 G,4 | A,,4 A,,4 | B,,4 G,,4 | F,,4 D,,4 | E,,4 A,,4 | D,4 D,4 |
+[V:cb] !p!D,,4 G,,,4 | D,,4 B,,,4 | E,,4 G,,4 | A,,,4 A,,,4 | B,,,4 G,,,4 | F,,,4 D,,4 | E,,,4 A,,,4 | D,,4 D,,4 |
+% bars 25-32: [4] The first theme in F, for clarinets and bassoons, darker
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] !mp!=c4 =f4 | g6 =f2 | d4 g4 | =c8 | =c4 =f4 | a6 g2 | =f4 d4 | =c6 z2 |
+[V:bn] !mp!=F,,4 F,,4 | =F,,4 F,,4 | G,,4 G,,4 | =C,4 C,4 | =F,4 F,4 | D,4 D,4 | _B,,4 G,,4 | =C,4 C,4 |
+[V:hn] !mp![A,=C]4 [A,C]4 | [_B,D]4 [B,D]4 | [_B,=F]4 [B,F]4 | [_B,=F]4 [B,F]4 | [A,=F]4 [A,F]4 | [=C=F]4 [CF]4 | [D=F]4 [_B,F]4 | [_B,=F]4 [B,F]4 |
+[V:tpt] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tbn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:pno] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v2] !pp!=F4 F4 | D4 D4 | =F4 F4 | =F4 F4 | =F4 F4 | =F4 F4 | =F4 F4 | =F4 F4 |
+[V:va] !pp!A,4 A,4 | _B,4 B,4 | _B,4 B,4 | _B,4 B,4 | A,4 A,4 | =C4 C4 | D4 _B,4 | _B,4 B,4 |
+[V:vc] !pp!=F,,4 F,,4 | =F,,4 F,,4 | G,,4 G,,4 | =C,4 C,4 | =F,4 F,4 | D,4 D,4 | _B,,4 G,,4 | =C,4 C,4 |
+[V:cb] !pp!=F,,,4 F,,,4 | =F,,,4 F,,,4 | G,,,4 G,,,4 | =C,,4 C,,4 | =F,,4 F,,4 | D,,4 D,,4 | _B,,,4 G,,,4 | =C,,4 C,,4 |
+% bars 33-40: [5] It rises a step, to G, in the violins, with the flute above
+[V:fl] !mf!d'4 g'4 | a'6 g'2 | e'4 a'4 | d'8 | d'4 g'4 | b'6 a'2 | g'4 e'4 | d'6 z2 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] !p![B,D]4 [B,D]4 | [=CE]4 [CE]4 | [=CG]4 [CG]4 | [=CG]4 [CG]4 | [B,G]4 [B,G]4 | [DG]4 [DG]4 | [EG]4 [=CG]4 | [=CG]4 [CG]4 |
+[V:tpt] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tbn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:pno] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !mf!d'4 g'4 | a'6 g'2 | e'4 a'4 | d'8 | d'4 g'4 | b'6 a'2 | g'4 e'4 | d'6 z2 |
+[V:v2] !mf!D4 D4 | E4 E4 | G4 G4 | G4 G4 | G4 G4 | G4 G4 | G4 G4 | G4 G4 |
+[V:va] !mf!B,4 B,4 | =C4 C4 | =C4 C4 | =C4 C4 | B,4 B,4 | D4 D4 | E4 =C4 | =C4 C4 |
+[V:vc] !mf!G,,4 G,,4 | G,,4 G,,4 | A,,4 A,,4 | D,4 D,4 | G,4 G,4 | E,4 E,4 | =C,4 A,,4 | D,4 D,4 |
+[V:cb] !mf!G,,,4 G,,,4 | G,,,4 G,,,4 | A,,,4 A,,,4 | D,,4 D,,4 | G,,4 G,,4 | E,,4 E,,4 | =C,,4 A,,,4 | D,,4 D,,4 |
+% bars 41-48: [6] Climax: the theme in D for trumpets and trombones, the strings trembling, timpani and piano
+[V:fl] !ff!a4 d'4 | e'6 d'2 | b4 e'4 | a8 | a4 d'4 | f'6 e'2 | d'4 b4 | a6 z2 |
+[V:ob] !ff![FA]4 [FA]4 | [GB]4 [GB]4 | [Gd]4 [Gd]4 | [Gd]4 [Gd]4 | [Fd]4 [Fd]4 | [Ad]4 [Ad]4 | [Bd]4 [Gd]4 | [Gd]4 [Gd]4 |
+[V:cl] !ff![EF]4 [EF]4 | [B,G]4 [B,G]4 | [DG]4 [DG]4 | [DG]4 [DG]4 | [DF]4 [DF]4 | [DA]4 [DA]4 | [DB]4 [DG]4 | [DG]4 [DG]4 |
+[V:bn] !ff!D,,4 D,,4 | D,,4 D,,4 | E,,4 E,,4 | A,,4 A,,4 | D,4 D,4 | B,,4 B,,4 | G,,4 E,,4 | A,,4 A,,4 |
+[V:hn] !ff![DF]4 [DF]4 | [B,G]4 [B,G]4 | [DG]4 [DG]4 | [DG]4 [DG]4 | [DF]4 [DF]4 | [DA]4 [DA]4 | [DB]4 [DG]4 | [DG]4 [DG]4 |
+[V:tpt] !ff!A4 d4 | e6 d2 | B4 e4 | A8 | A4 d4 | f6 e2 | d4 B4 | A6 z2 |
+[V:tbn] !ff!A,4 D4 | E6 D2 | B,4 E4 | A,8 | A,4 D4 | F6 E2 | D4 B,4 | A,6 z2 |
+[V:timp] !ff!D,4 D,4 | z4 z4 | z4 z4 | A,,4 A,,4 | D,4 D,4 | z4 z4 | z4 z4 | A,,4 A,,4 |
+[V:pno] !ff![DEFA]4 [DEFA]4 | [B,DGB]4 [B,DGB]4 | [B,DGB]4 [B,DGB]4 | [A,DGA]4 [A,DGA]4 | [A,DFA]4 [A,DFA]4 | [A,DFB]4 [A,DFB]4 | [G,DGB]4 [G,DEB]4 | [G,DEA]4 [G,DEA]4 |
+[V:v1] !ff!a4 d'4 | e'6 d'2 | b4 e'4 | a8 | a4 d'4 | f'6 e'2 | d'4 b4 | a6 z2 |
+[V:v2] !ff!F/F/F/F/ F/F/F/F/ F/F/F/F/ F/F/F/F/ | G/G/G/G/ G/G/G/G/ G/G/G/G/ G/G/G/G/ | G/G/G/G/ G/G/G/G/ G/G/G/G/ G/G/G/G/ | G/G/G/G/ G/G/G/G/ G/G/G/G/ G/G/G/G/ | F/F/F/F/ F/F/F/F/ F/F/F/F/ F/F/F/F/ | A/A/A/A/ A/A/A/A/ A/A/A/A/ A/A/A/A/ | B/B/B/B/ B/B/B/B/ G/G/G/G/ G/G/G/G/ | G/G/G/G/ G/G/G/G/ G/G/G/G/ G/G/G/G/ |
+[V:va] !ff!E/E/E/E/ E/E/E/E/ E/E/E/E/ E/E/E/E/ | B,/B,/B,/B,/ B,/B,/B,/B,/ B,/B,/B,/B,/ B,/B,/B,/B,/ | D/D/D/D/ D/D/D/D/ D/D/D/D/ D/D/D/D/ | D/D/D/D/ D/D/D/D/ D/D/D/D/ D/D/D/D/ | D/D/D/D/ D/D/D/D/ D/D/D/D/ D/D/D/D/ | D/D/D/D/ D/D/D/D/ D/D/D/D/ D/D/D/D/ | D/D/D/D/ D/D/D/D/ D/D/D/D/ D/D/D/D/ | D/D/D/D/ D/D/D/D/ D/D/D/D/ D/D/D/D/ |
+[V:vc] !ff!D,,4 D,,4 | D,,4 D,,4 | E,,4 E,,4 | A,,4 A,,4 | D,4 D,4 | B,,4 B,,4 | G,,4 E,,4 | A,,4 A,,4 |
+[V:cb] !ff!D,,4 D,,4 | D,,4 D,,4 | E,,,4 E,,,4 | A,,,4 A,,,4 | D,,4 D,,4 | B,,,4 B,,,4 | G,,,4 E,,,4 | A,,,4 A,,,4 |
+% bars 49-56: [7] The second idea returns quietly, flute and clarinet in octaves
+[V:fl] !mp!f2 a2 b2 a2 | f2 e2 d4 | e2 f2 a2 b2 | a8 | d'2 c'2 b2 a2 | b2 a2 f4 | e2 f2 e2 d2 | d6 z2 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] !p!F2 A2 B2 A2 | F2 E2 D4 | E2 F2 A2 B2 | A8 | d2 c2 B2 A2 | B2 A2 F4 | E2 F2 E2 D2 | D6 z2 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tpt] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tbn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:pno] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !p!A4 B4 | A4 B4 | B4 B4 | A4 A4 | B4 B4 | d4 d4 | d4 d4 | d4 d4 |
+[V:v2] !p!F4 G4 | F4 F4 | G4 G4 | E4 E4 | F4 G4 | A4 A4 | G4 G4 | A4 A4 |
+[V:va] !p!D4 D4 | D4 D4 | E4 D4 | C4 C4 | D4 D4 | D4 F4 | E4 E4 | F4 F4 |
+[V:vc] !p!D,,4 G,,4 | D,,4 B,,4 | E,4 G,4 | A,,4 A,,4 | B,,4 G,,4 | F,,4 D,,4 | E,,4 A,,4 | D,4 D,4 |
+[V:cb] !p!D,,4 G,,,4 | D,,4 B,,,4 | E,,4 G,,4 | A,,,4 A,,,4 | B,,,4 G,,,4 | F,,,4 D,,4 | E,,,4 A,,,4 | D,,4 D,,4 |
+% bars 57-62: [8] The theme’s first rise, twice more, and an open chord
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:hn] !p![DF]4 [DF]4 | [B,G]4 [B,G]4 | [A,F]4 [A,F]4 | [B,G]4 [B,G]4 | [DA]4 [DA]4 | [DA]4 [DA]4 |]
+[V:tpt] z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:tbn] z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:timp] z8 | z8 | z8 | z8 | z8 | z8 |]
+[V:pno] z8 | z8 | z8 | z8 | !pp![da]4 z4 | [da]4 z4 |]
+[V:v1] !pp!a4 d'4 | e'6 d'2 | a4 d'4 | e'6 d'2 | a8 | a4 z4 |]
+[V:v2] !pp!F4 F4 | G4 G4 | F4 F4 | G4 G4 | A4 A4 | A4 A4 |]
+[V:va] !pp!D4 D4 | B,4 B,4 | A,4 A,4 | B,4 B,4 | D4 D4 | D4 D4 |]
+[V:vc] !pp!D,,4 D,,4 | D,,4 D,,4 | D,,4 D,,4 | D,,4 D,,4 | D,,4 D,,4 | D,,4 D,,4 |]
+[V:cb] !pp!D,,4 D,,4 | D,,4 D,,4 | D,,4 D,,4 | D,,4 D,,4 | D,,4 D,,4 | D,,4 D,,4 |]
