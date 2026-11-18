@@ -156,3 +156,9 @@ scores/price-symphony-1-i.abc
 scores/price-symphony-1-ii.abc
 scores/price-symphony-1-iii.abc
 scores/price-symphony-1-iv.abc
+gershwin-symphony-1-notebook.html
+gershwin-symphony-1-transcript.html
+gershwin-symphony-1-transcript.json
+scores/gershwin-symphony-1-i.abc
+scores/gershwin-symphony-1-ii.abc
+scores/gershwin-symphony-1-iii.abc

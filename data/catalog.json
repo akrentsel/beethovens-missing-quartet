@@ -1215,6 +1215,43 @@
           "durationSeconds": 104
         }
       ]
+    },
+    {
+      "id": "gershwin-symphony-1",
+      "composerId": "gershwin",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Gershwin’s Missing Symphony",
+      "subtitle": "Symphony in B flat",
+      "description": "Gershwin wrote no symphony. This imagines a short one in three movements from the language of his concert works: a syncopated Allegro over Charleston-rhythm chords with a broad second tune, a twelve-bar Blues for trumpet and alto saxophone, and a rondo finale that brings the earlier themes back. For orchestra with alto saxophone and piano. A new AI-composed homage, not a rediscovered work by Gershwin.",
+      "durationSeconds": 483,
+      "date": "2026-11-18",
+      "status": "completed",
+      "notebook": "gershwin-symphony-1-notebook.html",
+      "transcript": "gershwin-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Allegro",
+          "note": "A syncopated theme with blue notes over Charleston-rhythm chords, and a broad tune in E flat.",
+          "source": "scores/gershwin-symphony-1-i.abc",
+          "durationSeconds": 221
+        },
+        {
+          "id": "ii",
+          "label": "II. Blues: Andante con moto",
+          "note": "E flat: a twelve-bar blues for trumpet, then alto saxophone, then the whole orchestra.",
+          "source": "scores/gershwin-symphony-1-ii.abc",
+          "durationSeconds": 160
+        },
+        {
+          "id": "iii",
+          "label": "III. Allegro agitato",
+          "note": "A rondo on hammered repeated notes; the earlier themes return between its statements.",
+          "source": "scores/gershwin-symphony-1-iii.abc",
+          "durationSeconds": 102
+        }
+      ]
     }
   ]
 }

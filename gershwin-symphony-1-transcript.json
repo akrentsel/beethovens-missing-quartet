@@ -1,0 +1,198 @@
+{
+ "title": "Gershwin’s Missing Symphony — public composition log",
+ "scope": "The log the composing agent (Claude) kept while writing this work: the request, its progress messages, the commands it ran on the score and their output, draft publications and test results, up to the publication step. It was written during the work, entry by entry; it is not an automatic export of the whole session, and the same session composed other works whose entries are not included here.",
+ "policy": "Messages and tool output are recorded as they occurred, shortened where marked. Private internal reasoning, credentials, access details, private paths and unrelated conversation are not included. Statements made during the work may be provisional or mistaken; later corrections remain in the log.",
+ "sessions": {
+  "main": "Composition session"
+ },
+ "entries": [
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:47:54.000Z",
+   "kind": "message",
+   "speaker": "User",
+   "text": "[A long batch brief was pasted: compose and publish one original symphony for each composer in the Missing Works catalogue who has no completed symphony, one composer at a time, claiming each open symphony request through the admin command, publishing live drafts early, testing every movement in the real browser player, writing a notebook and a public composition log, deploying an atomic release, and completing the request only after the public work is verified. Every work must be labelled an original AI-composed homage. For composers outside the symphonic tradition it asks for an honest counterfactual.]\n\nNOW I know I said to do all composers, but how about we actually do half of the composers in each section? just to save some money.",
+   "notes": [
+    "the pasted batch brief is summarised in brackets; the last sentence is verbatim"
+   ],
+   "id": "entry-0001"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:47:54.000Z",
+   "kind": "tool",
+   "speaker": "Queue claim",
+   "text": "GET /api/requests -> gershwin:symphony:1 status open, votes 0; no request in status composing\nmissing-works-admin start gershwin:symphony:1",
+   "notes": [
+    "access details omitted"
+   ],
+   "id": "entry-0002"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:47:54.000Z",
+   "kind": "result",
+   "speaker": "Queue claim",
+   "text": "started gershwin:symphony:1",
+   "notes": [],
+   "id": "entry-0003"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:47:54.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "Composition brief — Gershwin’s Missing Symphony (work id gershwin-symphony-1)\n\nHonest counterfactual: Gershwin wrote no symphony. His concert works are rhapsodies, a piano concerto, a tone poem, an overture and variations, and all but two of them have a solo piano. This piece imagines a short “Symphony in B flat” in three movements, fast–slow–fast like the Concerto in F, with the piano moved back into the orchestra. No theme is taken from Gershwin.\n\nOrchestra (15 staves, sounding pitch): pairs of flutes, oboes, clarinets and bassoons, alto saxophone, four horns, three trumpets, three trombones and tuba, timpani, piano, strings. There is no drum kit, banjo or other percussion: the site’s player has no such sounds.\n\nLanguage: melodies with flattened thirds and sevenths against major harmony (“blue notes”), chords of the sixth, ninth and thirteenth, the Charleston rhythm (a stab on the beat and another just before the third beat), walking basses, a twelve-bar blues. Because blue notes clash with the chords by design, the half-step and parallel-motion checks are switched off for this work.\n\nMovements\nI. Allegro, B flat: a syncopated clarinet theme over Charleston stabs; a broad tune in E flat; a short development with a piano break; reprise with the broad tune for full orchestra.\nII. Blues: Andante con moto, E flat: a twelve-bar blues for trumpet, then alto saxophone with flute answers; a livelier middle in A flat; the blues for everyone.\nIII. Allegro agitato, B flat, 2/4: a rondo on a theme of hammered repeated notes, with the first movement’s theme, the blues and finally the broad tune returning between its statements.\n\nTarget length about eight minutes. What cannot be translated: swing. The player performs rhythms exactly as written, so the eighth notes are even. Compromise known from the start: tunes and chords are written by hand; a program writes the rhythm-section stabs, walking basses, piano figuration and full-orchestra textures from the chord plan.",
+   "notes": [],
+   "id": "entry-0004"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:48:44.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. First movement (blue notes against major chords are intended; half-step and parallel checks are off for this work).",
+   "notes": [],
+   "id": "entry-0005"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:48:44.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Allegro: 80 bars written, 221s played; activity fl:55 ob:98 cl:109 sax:23 bn:49 hn:98 tpt:36 tbn:147 timp:12 pno:98 v1:76 v2:52 va:52 vc:97 cb:97\n    validator ok: 80 bars, 221s, 15 voices; abcjs playback matches the model (4769 notes)",
+   "notes": [],
+   "id": "entry-0006"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:48:45.105Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 1 with this public change note:\nFirst playable draft: the first movement — Charleston-rhythm chords, a syncopated clarinet theme with blue notes, a broad tune in E flat, a piano break, and the broad tune again for full orchestra.",
+   "notes": [],
+   "id": "entry-0007"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:48:51.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=gershwin-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0008"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:48:51.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Allegro80 bars | load 2.0s | state playing | clock 0:01 / 3:41 | {\"peak\":0.9,\"seconds\":221.2,\"rms\":0.1163,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 A. Sax.:65 Bn. I, II:70 Hn. I–IV:60 Tpt. I–III:56 Tbn. I–III, Tuba:57 Timp.:47 Piano:0 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0009"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:48:51.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "First playable Gershwin draft is live: https://lost-compositions.exe.xyz/work.html?draft=gershwin-symphony-1 (first movement, 3:41). Writing the Blues and the finale.",
+   "notes": [],
+   "id": "entry-0010"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:49:09.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m2, m3: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Movements II and III, first build.",
+   "notes": [],
+   "id": "entry-0011"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:49:09.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Blues: Andante con moto: 48 bars written, 160s played; activity fl:43 ob:50 cl:66 sax:46 bn:25 hn:50 tpt:54 tbn:75 timp:5 pno:183 v1:85 v2:87 va:87 vc:100 cb:100\n    validator ok: 48 bars, 160s, 15 voices; abcjs playback matches the model (1778 notes)\n  III. Allegro agitato: 112 bars written, 102s played; activity fl:45 ob:100 cl:112 sax:33 bn:50 hn:64 tpt:64 tbn:150 timp:22 pno:185 v1:76 v2:57 va:57 vc:100 cb:100\n    validator ok: 112 bars, 101.8s, 15 voices; abcjs playback matches the model (3502 notes)",
+   "notes": [],
+   "id": "entry-0012"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:49:11.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1, m2: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Revision pass: in the Blues the double basses now pluck their walking line (the sample changes from bowed to plucked for that part); in the first movement the alto saxophone, used very little in the first draft, doubles the main theme an octave below in both full statements.",
+   "notes": [],
+   "id": "entry-0013"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:49:11.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Allegro: 80 bars written, 221s played; activity fl:55 ob:98 cl:109 sax:40 bn:49 hn:98 tpt:36 tbn:147 timp:12 pno:98 v1:76 v2:52 va:52 vc:97 cb:97\n    validator ok: 80 bars, 221s, 15 voices; abcjs playback matches the model (4883 notes)\n  II. Blues: Andante con moto: 48 bars written, 160s played; activity fl:43 ob:50 cl:66 sax:46 bn:25 hn:50 tpt:54 tbn:75 timp:5 pno:183 v1:85 v2:87 va:87 vc:100 cb:100\n    validator ok: 48 bars, 160s, 15 voices; abcjs playback matches the model (1778 notes)",
+   "notes": [],
+   "id": "entry-0014"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:49:11.254Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 2 with this public change note:\nFirst complete draft: added the twelve-bar Blues for trumpet and alto saxophone and the rondo finale that brings back the earlier themes. A revision pass follows.",
+   "notes": [],
+   "id": "entry-0015"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:49:12.393Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 3 with this public change note:\nRevision: plucked double basses under the Blues; the alto saxophone added to the first movement's full statements of the theme. This revision matches the published score.",
+   "notes": [],
+   "id": "entry-0016"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:49:27.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=gershwin-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0017"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:49:27.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Allegro80 bars | load 3.1s | state playing | clock 0:01 / 3:41 | {\"peak\":0.9,\"seconds\":221.2,\"rms\":0.1174,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 A. Sax.:65 Bn. I, II:70 Hn. I–IV:60 Tpt. I–III:56 Tbn. I–III, Tuba:57 Timp.:47 Piano:0 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   II. Blues: Andante con moto48 bars | load 0.8s | state playing | clock 0:01 / 2:40 | {\"peak\":0.9,\"seconds\":160.2,\"rms\":0.0927,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 A. Sax.:65 Bn. I, II:70 Hn. I–IV:60 Tpt. I–III:56 Tbn. I–III, Tuba:57 Timp.:47 Piano:0 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb. pizz.:45\nok   III. Allegro agitato112 bars | load 0.3s | state playing | clock 0:01 / 1:42 | {\"peak\":0.9,\"seconds\":102,\"rms\":0.1216,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 A. Sax.:65 Bn. I, II:70 Hn. I–IV:60 Tpt. I–III:56 Tbn. I–III, Tuba:57 Timp.:47 Piano:0 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0018"
+  }
+ ]
+}
