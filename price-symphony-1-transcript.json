@@ -1,0 +1,250 @@
+{
+ "title": "Price’s Missing Symphony — public composition log",
+ "scope": "The log the composing agent (Claude) kept while writing this work: the request, its progress messages, the commands it ran on the score and their output, draft publications and test results, up to the publication step. It was written during the work, entry by entry; it is not an automatic export of the whole session, and the same session composed other works whose entries are not included here.",
+ "policy": "Messages and tool output are recorded as they occurred, shortened where marked. Private internal reasoning, credentials, access details, private paths and unrelated conversation are not included. Statements made during the work may be provisional or mistaken; later corrections remain in the log.",
+ "sessions": {
+  "main": "Composition session"
+ },
+ "entries": [
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:41:49.000Z",
+   "kind": "message",
+   "speaker": "User",
+   "text": "[A long batch brief was pasted: compose and publish one original symphony for each composer in the Missing Works catalogue who has no completed symphony, one composer at a time, claiming each open symphony request through the admin command, publishing live drafts early, testing every movement in the real browser player, writing a notebook and a public composition log, deploying an atomic release, and completing the request only after the public work is verified. Every work must be labelled an original AI-composed homage, with new thematic material rather than recognisable existing melodies.]\n\nNOW I know I said to do all composers, but how about we actually do half of the composers in each section? just to save some money.",
+   "notes": [
+    "the pasted batch brief is summarised in brackets; the last sentence is verbatim"
+   ],
+   "id": "entry-0001"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:41:49.000Z",
+   "kind": "tool",
+   "speaker": "Queue claim",
+   "text": "GET /api/requests -> price:symphony:1 status open, votes 0; no request in status composing\nmissing-works-admin start price:symphony:1",
+   "notes": [
+    "access details omitted"
+   ],
+   "id": "entry-0002"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:41:49.000Z",
+   "kind": "result",
+   "speaker": "Queue claim",
+   "text": "started price:symphony:1",
+   "notes": [],
+   "id": "entry-0003"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:41:49.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "Composition brief — Price’s Missing Symphony (work id price-symphony-1)\n\nFlorence Price wrote four symphonies (in E minor, G minor — now lost —, C minor and D minor). This is a new symphony in A flat major in her manner. It is not a reconstruction of the lost Second Symphony or of anything else of hers, and no theme is taken from her or from any spiritual.\n\nOrchestra (13 staves, sounding pitch): pairs of flutes, oboes, clarinets and bassoons, four horns, two trumpets, three trombones and tuba (one staff), timpani in A flat and E flat, strings.\n\nHer symphonies join the late-Romantic symphony she learned in Boston to the music she grew up with. The features taken up here: themes built on the five-note (pentatonic) scale, in the manner of spirituals but newly written; call and response between solo instruments; a slow movement that is a hymn for the brass choir answered by the woodwind; a “Juba” — the syncopated plantation dance she used in place of a scherzo — as third movement; and a fast, short finale in 6/8.\n\nMovements\nI. Andante – Allegro ma non troppo, A flat: a horn call; a broad pentatonic main theme; a second theme in C minor given as call and response between oboe and clarinet; in the reprise it returns in F minor.\nII. Largo, D flat: a newly written hymn for trumpets, horns and trombones, with woodwind responses and a middle section for strings and clarinet in B flat minor.\nIII. Juba: Allegro, A flat, 2/4: a syncopated tune over a steady off-beat accompaniment, with a gentler trio in D flat.\nIV. Finale: Presto, A flat, 6/8: a rondo in constant motion.\n\nTarget length about fourteen minutes. Compromise known from the start: every tune, the hymn and the chord of every bar are written by hand; a program scores quiet, woodwind and full-orchestra passages from the chord plan.",
+   "notes": [],
+   "id": "entry-0004"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:42:23.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. First movement. The first build reported 68 half-step clashes, nearly all where a pentatonic melody note met the seventh of a chord in the accompaniment (the chords were simplified to triads there), and eight parallels with the bass, removed by changing inversions.",
+   "notes": [],
+   "id": "entry-0005"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:42:23.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Andante – Allegro ma non troppo: 144 bars written, 404s played; activity fl:62 ob:104 cl:122 bn:55 hn:160 tpt:100 tbn:150 timp:27 v1:90 v2:100 va:100 vc:85 cb:85\n    validator ok: 144 bars, 403.6s, 13 voices; abcjs playback matches the model (9734 notes)\n    PAR P5 v1/vc bar 43+4 (Eb4/Ab2 -> F4/Bb2)\n    PAR P8 v1/vc bar 114+4 (Eb4/Eb2 -> F4/F2)\n    PAR P8 v1/vc bar 116+0 (Eb4/Eb2 -> F4/F2)\n    parallel fifths/octaves v1/vc: 3",
+   "notes": [],
+   "id": "entry-0006"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:42:23.911Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 1 with this public change note:\nFirst playable draft: the whole first movement — a horn call, a broad pentatonic main theme, a call-and-response second theme for oboe and clarinet in C minor, and a reprise that brings it back in F minor.",
+   "notes": [],
+   "id": "entry-0007"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:42:31.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=price-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0008"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:42:31.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Andante – Allegro ma non troppo144 bars | load 2.1s | state playing | clock 0:01 / 6:44 | {\"peak\":0.9,\"seconds\":403.8,\"rms\":0.1117,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III, Tuba:57 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0009"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:42:31.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "First playable Price draft is live: https://lost-compositions.exe.xyz/work.html?draft=price-symphony-1 (first movement, 6:44). Writing the hymn movement, the Juba and the finale.",
+   "notes": [],
+   "id": "entry-0010"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:44:34.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m2, m3, m4: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Movements II–IV. Fixes after the first build: in the hymn, a melody note a sixth above the bass was sounding against the chord's seventh (the seventh was removed); eight parallel octaves/fifths between first violins and bass; one bar of the Juba's trio rewritten; the timpani of the slow movement retuned to D flat and A flat.",
+   "notes": [],
+   "id": "entry-0011"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:44:34.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Largo: 48 bars written, 213s played; activity fl:40 ob:50 cl:82 bn:33 hn:133 tpt:48 tbn:175 timp:15 v1:56 v2:58 va:58 vc:45 cb:45\n    validator ok: 48 bars, 213.3s, 13 voices; abcjs playback matches the model (1175 notes)\n    parallel fifths/octaves v1/vc: 0\n  III. Juba: Allegro: 68 bars written, 120s played; activity fl:63 ob:103 cl:103 bn:44 hn:76 tpt:44 tbn:132 timp:18 v1:83 v2:50 va:57 vc:100 cb:100\n    validator ok: 68 bars, 120s, 13 voices; abcjs playback matches the model (2162 notes)\n    parallel fifths/octaves v1/vc: 0\n  IV. Finale: Presto: 104 bars written, 104s played; activity fl:67 ob:130 cl:129 bn:61 hn:153 tpt:123 tbn:184 timp:43 v1:89 v2:100 va:100 vc:100 cb:100\n    validator ok: 104 bars, 104s, 13 voices; abcjs playback matches the model (4025 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0012"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:44:35.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m2, m4: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Revision pass: chimes (tubular bells) added to the last statement of the hymn and its closing cadences; clarinets double the Finale's broad melody an octave lower in its second half.",
+   "notes": [],
+   "id": "entry-0013"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:44:35.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Largo: 48 bars written, 213s played; activity fl:40 ob:50 cl:82 bn:33 hn:133 tpt:48 tbn:175 timp:15 bells:5 v1:56 v2:58 va:58 vc:45 cb:45\n    RANGE bells: Ab5 at bar 40+0 (range C4-G5)\n    validator ok: 48 bars, 213.3s, 14 voices; abcjs playback matches the model (1180 notes)\n    parallel fifths/octaves v1/vc: 0\n  IV. Finale: Presto: 104 bars written, 104s played; activity fl:67 ob:130 cl:137 bn:61 hn:153 tpt:123 tbn:184 timp:43 v1:89 v2:100 va:100 vc:100 cb:100\n    validator ok: 104 bars, 104s, 13 voices; abcjs playback matches the model (4040 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0014"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:44:35.381Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 2 with this public change note:\nFirst complete draft: added the brass hymn of the Largo with its woodwind responses, the Juba dance, and the six-eight Finale. A revision pass follows.",
+   "notes": [],
+   "id": "entry-0015"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:44:36.557Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 3 with this public change note:\nRevision: chimes added to the hymn's last statement and its Amen cadences; clarinets added under the Finale's broad melody. This revision matches the published score.",
+   "notes": [],
+   "id": "entry-0016"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:44:55.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=price-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0017"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:44:55.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Andante – Allegro ma non troppo144 bars | load 2.2s | state playing | clock 0:01 / 6:44 | {\"peak\":0.9,\"seconds\":403.8,\"rms\":0.1117,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III, Tuba:57 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   II. Largo48 bars | load 0.8s | state playing | clock 0:01 / 3:33 | {\"peak\":0.9,\"seconds\":213.5,\"rms\":0.0908,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III, Tuba:57 Timp.:47 Chimes:14 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   III. Juba: Allegro68 bars | load 0.4s | state playing | clock 0:01 / 2:00 | {\"peak\":0.9,\"seconds\":120.2,\"rms\":0.1141,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III, Tuba:57 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   IV. Finale: Presto104 bars | load 0.7s | state playing | clock 0:01 / 1:44 | {\"peak\":0.9,\"seconds\":104.2,\"rms\":0.1221,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III, Tuba:57 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0018"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:45:31.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m2: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Second movement: one chime note above the instrument's range lowered an octave.",
+   "notes": [],
+   "id": "entry-0019"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:45:31.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "II. Largo: 48 bars written, 213s played; activity fl:40 ob:50 cl:82 bn:33 hn:133 tpt:48 tbn:175 timp:15 bells:5 v1:56 v2:58 va:58 vc:45 cb:45\n    validator ok: 48 bars, 213.3s, 14 voices; abcjs playback matches the model (1180 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0020"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:45:31.994Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 4 with this public change note:\nOne chime note lowered into range. This revision matches the published score.",
+   "notes": [],
+   "id": "entry-0021"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:45:50.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=price-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0022"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:45:50.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Andante – Allegro ma non troppo144 bars | load 2.1s | state playing | clock 0:01 / 6:44 | {\"peak\":0.9,\"seconds\":403.8,\"rms\":0.1117,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III, Tuba:57 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   II. Largo48 bars | load 0.6s | state playing | clock 0:01 / 3:33 | {\"peak\":0.9,\"seconds\":213.5,\"rms\":0.0908,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III, Tuba:57 Timp.:47 Chimes:14 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   III. Juba: Allegro68 bars | load 0.3s | state playing | clock 0:01 / 2:00 | {\"peak\":0.9,\"seconds\":120.2,\"rms\":0.1141,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III, Tuba:57 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nok   IV. Finale: Presto104 bars | load 0.5s | state playing | clock 0:01 / 1:44 | {\"peak\":0.9,\"seconds\":104.2,\"rms\":0.1221,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Cl. I, II:71 Bn. I, II:70 Hn. I–IV:60 Tpt. I, II:56 Tbn. I–III, Tuba:57 Timp.:47 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0023"
+  }
+ ]
+}

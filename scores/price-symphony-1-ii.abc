@@ -1,0 +1,174 @@
+%%label II. Largo
+%%note D flat major. A hymn for the brass choir, answered by the woodwind; a middle section in B flat minor for clarinet and strings; the hymn returns for the whole orchestra.
+X:1
+T:Price’s Missing Symphony
+T:II. Largo
+C:Claude (AI), in the manner of Florence Price
+M:4/4
+L:1/8
+Q:"Largo" 1/4=54
+%%score [fl ob cl bn] [hn tpt tbn] timp bells [v1 v2 va vc cb]
+% Original AI-composed homage. The score is written at sounding pitch.
+V:fl clef=treble name="Fl. I, II"
+V:ob clef=treble name="Ob. I, II"
+V:cl clef=treble name="Cl. I, II"
+V:bn clef=bass name="Bn. I, II"
+V:hn clef=treble name="Hn. I–IV"
+V:tpt clef=treble name="Tpt. I, II"
+V:tbn clef=bass name="Tbn. I–III, Tuba"
+V:timp clef=bass name="Timp."
+V:bells clef=treble name="Chimes"
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:Db
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tpt
+%%MIDI program 56
+V:tbn
+%%MIDI program 57
+V:timp
+%%MIDI program 47
+V:bells
+%%MIDI program 14
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-8: [1] The hymn: trumpets, horns and trombones alone
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] !mf![DF]4 [DF]4 | [B,G]4 [A,F]4 | [CG]4 [DA]4 | [DF]4 [DF]4 | [B,G]4 [DF]4 | [B,G]4 [A,F]4 | [G,D]4 [A,C]4 | [F,D]4 [F,D]4 |
+[V:tpt] !mf!F4 A4 | B4 A2 F2 | E4 F4 | A8 | B4 d4 | B2 A2 F4 | E4 F2 E2 | D6 z2 |
+[V:tbn] !mf![D,F,A,]4 [D,F,A,]4 | [D,G,B,]4 [D,F,A,]4 | [C,G,A,]4 [D,F,A,]4 | [D,F,A,]4 [D,F,A,]4 | [D,G,B,]4 [D,F,B,]4 | [D,G,B,]4 [D,F,A,]4 | [D,E,G,]4 [C,E,A,]4 | [D,F,A,]4 [D,F,A,]4 |
+[V:timp] !p!D,2 z6 | z8 | A,,2 z6 | D,2 z6 | z8 | z8 | A,,2 z6 | D,2 z6 |
+[V:bells] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v2] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:va] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:vc] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cb] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+% bars 9-12: [2] The woodwind respond
+[V:fl] !mp!a'2 b'2 d''2 b'2 | a'2 f'2 e'2 f'2 | a'2 b'2 a'2 f'2 | e'4 d'4 |
+[V:ob] !p!a2 b2 d'2 b2 | a2 f2 e2 f2 | a2 b2 a2 f2 | e4 d4 |
+[V:cl] !p![FA]4 [Fd]4 | [Fd]4 [Fd]4 | [Fd]4 [Fd]4 | [Gc]4 [Fd]4 |
+[V:bn] !p!D,4 B,,4 | B,,4 D,4 | D,4 B,,4 | A,,4 D,4 |
+[V:hn] z8 | z8 | z8 | z8 |
+[V:tpt] z8 | z8 | z8 | z8 |
+[V:tbn] z8 | z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 | z8 |
+[V:bells] z8 | z8 | z8 | z8 |
+[V:v1] z8 | z8 | z8 | z8 |
+[V:v2] z8 | z8 | z8 | z8 |
+[V:va] z8 | z8 | z8 | z8 |
+[V:vc] z8 | z8 | z8 | z8 |
+[V:cb] z8 | z8 | z8 | z8 |
+% bars 13-20: [3] The hymn again, the strings marking the beats beneath
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] !mf![DF]4 [DF]4 | [B,G]4 [A,F]4 | [CG]4 [DA]4 | [DF]4 [DF]4 | [B,G]4 [DF]4 | [B,G]4 [A,F]4 | [G,D]4 [A,C]4 | [F,D]4 [F,D]4 |
+[V:tpt] !mf!F4 A4 | B4 A2 F2 | E4 F4 | A8 | B4 d4 | B2 A2 F4 | E4 F2 E2 | D6 z2 |
+[V:tbn] !mf![D,F,A,]4 [D,F,A,]4 | [D,G,B,]4 [D,F,A,]4 | [C,G,A,]4 [D,F,A,]4 | [D,F,A,]4 [D,F,A,]4 | [D,G,B,]4 [D,F,B,]4 | [D,G,B,]4 [D,F,A,]4 | [D,E,G,]4 [C,E,A,]4 | [D,F,A,]4 [D,F,A,]4 |
+[V:timp] !p!D,2 z6 | z8 | A,,2 z6 | D,2 z6 | z8 | z8 | A,,2 z6 | D,2 z6 |
+[V:bells] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] z2 !p!F2 z2 F2 | z2 G2 z2 F2 | z2 G2 z2 A2 | z2 A2 z2 A2 | z2 B2 z2 B2 | z2 B2 z2 A2 | z2 B2 z2 c2 | z2 A2 z2 A2 |
+[V:v2] z2 !p!D2 z2 D2 | z2 D2 z2 D2 | z2 C2 z2 D2 | z2 D2 z2 D2 | z2 D2 z2 D2 | z2 D2 z2 D2 | z2 D2 z2 E2 | z2 D2 z2 D2 |
+[V:va] z2 !p!A,2 z2 A,2 | z2 B,2 z2 A,2 | z2 A,2 z2 A,2 | z2 F,2 z2 F,2 | z2 G,2 z2 F,2 | z2 G,2 z2 F,2 | z2 G,2 z2 A,2 | z2 F,2 z2 F,2 |
+[V:vc] !p!D,,2 z2 D,,2 z2 | G,,2 z2 D,,2 z2 | A,,2 z2 F,,2 z2 | D,,2 z2 D,,2 z2 | G,,2 z2 B,,2 z2 | G,,2 z2 D,,2 z2 | E,,2 z2 A,,2 z2 | D,2 z2 D,2 z2 |
+[V:cb] !p!D,,2 z2 D,,2 z2 | G,,,2 z2 D,,2 z2 | A,,,2 z2 F,,,2 z2 | D,,2 z2 D,,2 z2 | G,,,2 z2 B,,,2 z2 | G,,,2 z2 D,,2 z2 | E,,2 z2 A,,,2 z2 | D,,2 z2 D,,2 z2 |
+% bars 21-24: [4] The woodwind respond
+[V:fl] !mp!a'2 b'2 d''2 b'2 | a'2 f'2 e'2 f'2 | a'2 b'2 a'2 f'2 | e'4 d'4 |
+[V:ob] !p!a2 b2 d'2 b2 | a2 f2 e2 f2 | a2 b2 a2 f2 | e4 d4 |
+[V:cl] !p![FA]4 [Fd]4 | [Fd]4 [Fd]4 | [Fd]4 [Fd]4 | [Gc]4 [Fd]4 |
+[V:bn] !p!D,4 B,,4 | B,,4 D,4 | D,4 B,,4 | A,,4 D,4 |
+[V:hn] z8 | z8 | z8 | z8 |
+[V:tpt] z8 | z8 | z8 | z8 |
+[V:tbn] z8 | z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 | z8 |
+[V:bells] z8 | z8 | z8 | z8 |
+[V:v1] z8 | z8 | z8 | z8 |
+[V:v2] z8 | z8 | z8 | z8 |
+[V:va] z8 | z8 | z8 | z8 |
+[V:vc] z8 | z8 | z8 | z8 |
+[V:cb] z8 | z8 | z8 | z8 |
+% bars 25-32: [5] Middle section in B flat minor: a clarinet sings over the strings
+[V:fl] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:ob] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:cl] !mp!B4 d2 f2 | e4 d2 B2 | c4 e2 g2 | f6 z2 | f4 a2 f2 | e2 d2 B2 d2 | c2 e2 =A2 c2 | B6 z2 |
+[V:bn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:hn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tpt] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:tbn] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:bells] z8 | z8 | z8 | z8 | z8 | z8 | z8 | z8 |
+[V:v1] !p!BB BB BB BB | BB BB BB BB | AA AA AA AA | AA AA AA AA | BB BB AA AA | BB BB BB BB | __BB BB BB BB | BB BB BB BB |
+[V:v2] !p!FF FF FF FF | GG GG FF FF | GG GG GG GG | FF FF FF FF | FF FF FF FF | GG GG FF FF | FF FF FF FF | FF FF FF FF |
+[V:va] !p!DD DD DD DD | EE EE DD DD | CC CC CC CC | DD DD DD DD | DD DD DD DD | EE EE DD DD | EE EE EE EE | DD DD DD DD |
+[V:vc] !p!B,,2 z2 B,,2 z2 | E,2 z2 B,,2 z2 | A,,2 z2 A,,2 z2 | D,2 z2 D,2 z2 | B,,2 z2 D,2 z2 | E,2 z2 B,,2 z2 | F,,2 z2 F,,2 z2 | B,,2 z2 B,,2 z2 |
+[V:cb] !p!B,,,2 z2 B,,,2 z2 | E,,2 z2 B,,,2 z2 | A,,,2 z2 A,,,2 z2 | D,,2 z2 D,,2 z2 | B,,,2 z2 D,,2 z2 | E,,2 z2 B,,,2 z2 | F,,,2 z2 F,,,2 z2 | B,,,2 z2 B,,,2 z2 |
+% bars 33-36: [6] Violins and flute lead back
+[V:fl] !p!g'2 b'2 d''2 b'2 | a'2 f'2 d'2 f'2 | e'2 g'2 b'2 g'2 | a'6 z2 |
+[V:ob] z8 | z8 | z8 | z8 |
+[V:cl] z8 | z8 | z8 | z8 |
+[V:bn] z8 | z8 | z8 | z8 |
+[V:hn] !pp![B,D]4 [B,D]4 | [A,D]4 [A,D]4 | [G,D]4 [G,D]4 | [G,C]4 [G,C]4 |
+[V:tpt] z8 | z8 | z8 | z8 |
+[V:tbn] z8 | z8 | z8 | z8 |
+[V:timp] z8 | z8 | z8 | z8 |
+[V:bells] z8 | z8 | z8 | z8 |
+[V:v1] !mp!g2 b2 d'2 b2 | a2 f2 d2 f2 | e2 g2 b2 g2 | a6 z2 |
+[V:v2] !p!DD DD DD DD | DD DD DD DD | DD DD DD DD | GG GG GG GG |
+[V:va] !p!B,4 B,4 | A,4 A,4 | G,4 G,4 | G,4 G,4 |
+[V:vc] !p!G,,2 z2 G,,2 z2 | F,,2 z2 F,,2 z2 | E,,2 z2 E,,2 z2 | A,,2 z2 A,,2 z2 |
+[V:cb] !p!G,,,2 z2 G,,,2 z2 | F,,,2 z2 F,,,2 z2 | E,,2 z2 E,,2 z2 | A,,,2 z2 A,,,2 z2 |
+% bars 37-44: [7] The hymn for the whole orchestra
+[V:fl] !ff!f'4 a'4 | b'4 a'2 f'2 | e'4 f'4 | a'8 | b'4 d''4 | b'2 a'2 f'4 | e'4 f'2 e'2 | d'6 z2 |
+[V:ob] !ff![Fd]4 [Fd]4 | [GB]4 [FA]4 | [Gc]4 [Ad]4 | [Fd]4 [Fd]4 | [GB]4 [Fd]4 | [GB]4 [FA]4 | [Gd]4 [Ac]4 | [Fd]4 [Fd]4 |
+[V:cl] !ff![FA]4 [FA]4 | [GB]4 [FA]4 | [Gc]4 [Ad]4 | [Fd]4 [Fd]4 | [GB]4 [Fd]4 | [GB]4 [FA]4 | [DG]4 [CA]4 | [DF]4 [DF]4 |
+[V:bn] !ff!D,,2 D,,2 D,,2 D,,2 | G,,2 G,,2 D,,2 D,,2 | A,,2 A,,2 F,,2 F,,2 | D,,2 D,,2 D,,2 D,,2 | G,,2 G,,2 B,,2 B,,2 | G,,2 G,,2 D,,2 D,,2 | E,,2 E,,2 A,,2 A,,2 | D,2 D,2 D,2 D,2 |
+[V:hn] !ff![DF]4 [DF]4 | [B,G]4 [A,F]4 | [CG]4 [DA]4 | [DF]4 [DF]4 | [B,G]4 [DF]4 | [B,G]4 [A,F]4 | [G,D]4 [A,C]4 | [F,D]4 [F,D]4 |
+[V:tpt] !ff!F4 A4 | B4 A2 F2 | E4 F4 | A8 | B4 d4 | B2 A2 F4 | E4 F2 E2 | D6 z2 |
+[V:tbn] !ff![F,A,D]4 [F,A,D]4 | [G,B,D]4 [F,A,D]4 | [G,A,C]4 [D,A,D]4 | [D,A,F]4 [D,A,F]4 | [D,B,G]4 [D,B,F]4 | [D,B,G]4 [D,A,F]4 | [D,G,E]4 [C,A,E]4 | [D,A,F]4 [D,A,F]4 |
+[V:timp] !ff!D,4 D,4 | z4 D,4 | A,,4 z4 | D,4 D,4 | z4 z4 | z4 D,4 | z4 A,,4 | D,4 D,4 |
+[V:bells] !f!d4 z4 | z8 | z8 | A4 z4 | z8 | z8 | z8 | d4 z4 |
+[V:v1] !ff!f'4 a'4 | b'4 a'2 f'2 | e'4 f'4 | a'8 | b'4 d''4 | b'2 a'2 f'4 | e'4 f'2 e'2 | d'6 z2 |
+[V:v2] !ff!F2 F2 F2 F2 | G2 G2 F2 F2 | G2 G2 A2 A2 | F2 F2 F2 F2 | G2 G2 F2 F2 | G2 G2 F2 F2 | G2 G2 A2 A2 | F2 F2 F2 F2 |
+[V:va] !ff!D2 D2 D2 D2 | B,2 B,2 A,2 A,2 | C2 C2 D2 D2 | D2 D2 D2 D2 | B,2 B,2 D2 D2 | B,2 B,2 A,2 A,2 | D2 D2 C2 C2 | D2 D2 D2 D2 |
+[V:vc] !ff!D,,2 D,,2 D,,2 D,,2 | G,,2 G,,2 D,,2 D,,2 | A,,2 A,,2 F,,2 F,,2 | D,,2 D,,2 D,,2 D,,2 | G,,2 G,,2 B,,2 B,,2 | G,,2 G,,2 D,,2 D,,2 | E,,2 E,,2 A,,2 A,,2 | D,2 D,2 D,2 D,2 |
+[V:cb] !ff!D,,2 D,,2 D,,2 D,,2 | G,,,2 G,,,2 D,,2 D,,2 | A,,,2 A,,,2 F,,,2 F,,,2 | D,,2 D,,2 D,,2 D,,2 | G,,,2 G,,,2 B,,,2 B,,,2 | G,,,2 G,,,2 D,,2 D,,2 | E,,2 E,,2 A,,,2 A,,,2 | D,,2 D,,2 D,,2 D,,2 |
+% bars 45-48: [8] Two quiet “Amen” cadences
+[V:fl] z8 | z8 | z8 | z8 |]
+[V:ob] z8 | z8 | z8 | z8 |]
+[V:cl] z8 | z8 | z8 | z8 |]
+[V:bn] z8 | z8 | z8 | z8 |]
+[V:hn] !p![B,D]4 [F,D]4 | [G,B,]4 [F,A,]4 | [F,A,]4 [F,A,]4 | [F,A,]4 [F,A,]4 |]
+[V:tpt] z8 | z8 | z8 | z8 |]
+[V:tbn] !pp![B,,D,G,]4 [A,,D,F,]4 | [B,,D,G,]4 [A,,D,F,]4 | [A,,D,F,]4 [A,,D,F,]4 | [A,,D,F,]4 [A,,D,F,]4 |]
+[V:timp] z8 | z8 | z8 | z8 |]
+[V:bells] z8 | z8 | !p!d4 z4 | d4 z4 |]
+[V:v1] !pp!b4 a4 | b4 a4 | f8 | f4 z4 |]
+[V:v2] !pp!D4 F4 | G4 F4 | F4 F4 | F4 F4 |]
+[V:va] !pp!B,4 A,4 | B,4 A,4 | A,4 A,4 | A,4 A,4 |]
+[V:vc] !pp!G,,4 D,,4 | G,,4 D,,4 | D,,4 D,,4 | D,,4 D,,4 |]
+[V:cb] !pp!G,,,4 D,,4 | G,,,4 D,,4 | D,,4 D,,4 | D,,4 D,,4 |]

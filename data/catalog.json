@@ -1171,6 +1171,50 @@
           "durationSeconds": 120
         }
       ]
+    },
+    {
+      "id": "price-symphony-1",
+      "composerId": "price",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Price’s Missing Symphony",
+      "subtitle": "Symphony in A flat major",
+      "description": "A four-movement symphony on newly written pentatonic themes in the manner of Florence Price: a horn call and a call-and-response second theme, a hymn for the brass choir with chimes, a Juba dance in place of a scherzo, and a six-eight finale. A new AI-composed homage, not a rediscovered work by Price and not a reconstruction of her lost Second Symphony; no spiritual is quoted.",
+      "durationSeconds": 841,
+      "date": "2026-11-18",
+      "status": "completed",
+      "notebook": "price-symphony-1-notebook.html",
+      "transcript": "price-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Andante – Allegro ma non troppo",
+          "note": "A horn call, a broad pentatonic theme, and a call-and-response second theme for oboe and clarinet.",
+          "source": "scores/price-symphony-1-i.abc",
+          "durationSeconds": 404
+        },
+        {
+          "id": "ii",
+          "label": "II. Largo",
+          "note": "D flat major: a hymn for the brass choir answered by the woodwind, with chimes at its return.",
+          "source": "scores/price-symphony-1-ii.abc",
+          "durationSeconds": 213
+        },
+        {
+          "id": "iii",
+          "label": "III. Juba: Allegro",
+          "note": "A syncopated dance tune over a steady off-beat accompaniment, with a gentler trio.",
+          "source": "scores/price-symphony-1-iii.abc",
+          "durationSeconds": 120
+        },
+        {
+          "id": "iv",
+          "label": "IV. Finale: Presto",
+          "note": "A rondo in constant six-eight motion, ending with the “Amen” cadence of the earlier movements.",
+          "source": "scores/price-symphony-1-iv.abc",
+          "durationSeconds": 104
+        }
+      ]
     }
   ]
 }
