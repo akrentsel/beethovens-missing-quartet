@@ -1,0 +1,168 @@
+{
+ "title": "C. P. E. Bach’s Missing Symphony — public composition log",
+ "scope": "The log the composing agent (Claude) kept while writing this work: the request, its progress messages, the commands it ran on the score and their output, draft publications and test results, up to the publication step. It was written during the work, entry by entry; it is not an automatic export of the whole session, and the same session composed other works whose entries are not included here.",
+ "policy": "Messages and tool output are recorded as they occurred, shortened where marked. Private internal reasoning, credentials, access details, private paths and unrelated conversation are not included. Statements made during the work may be provisional or mistaken; later corrections remain in the log.",
+ "sessions": {
+  "main": "Composition session"
+ },
+ "entries": [
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:01:35.000Z",
+   "kind": "message",
+   "speaker": "User",
+   "text": "[A long batch brief was pasted: compose and publish one original symphony for each composer in the Missing Works catalogue who has no completed symphony, one composer at a time, claiming each open symphony request through the admin command, publishing live drafts early, testing every movement in the real browser player, writing a notebook and a public composition log, deploying an atomic release, and completing the request only after the public work is verified. Every work must be labelled an original AI-composed homage.]\n\nNOW I know I said to do all composers, but how about we actually do half of the composers in each section? just to save some money.",
+   "notes": [
+    "the pasted batch brief is summarised in brackets; the last sentence is verbatim"
+   ],
+   "id": "entry-0001"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:01:35.000Z",
+   "kind": "tool",
+   "speaker": "Queue claim",
+   "text": "GET /api/requests -> cpe-bach:symphony:1 status open, votes 0; no request in status composing\nmissing-works-admin start cpe-bach:symphony:1",
+   "notes": [
+    "access details omitted"
+   ],
+   "id": "entry-0002"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:01:35.000Z",
+   "kind": "result",
+   "speaker": "Queue claim",
+   "text": "started cpe-bach:symphony:1",
+   "notes": [],
+   "id": "entry-0003"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:01:35.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "Composition brief — C. P. E. Bach’s Missing Symphony (work id cpe-bach-symphony-1)\n\nCarl Philipp Emanuel Bach wrote about nineteen symphonies, among them the six for strings and the four “for twelve obbligato parts” of his Hamburg years: three movements played without a break, full of unison outbursts, sudden silences, abrupt changes of key and hushed, sighing answers. This is a new symphony in that manner, in A minor. No theme is taken from him.\n\nOrchestra (10 staves, sounding pitch): 2 flutes, 2 oboes, bassoon, 2 natural horns in C, strings and harpsichord.\n\nMovements (each leads into the next)\nI. Allegro di molto, A minor, 4/4. A jagged theme for the whole orchestra in octaves that breaks off into silence; a hushed answer; tremolo outbursts; a tender second idea in C. The middle starts with the unison theme in D minor without preparation, climbs in sequence to a halt, and is interrupted by a strange calm in F major for flutes. Varied reprise; the end dissolves towards F.\nII. Larghetto, F major, 3/4. Two flutes in thirds over hushed strings; a restless middle for strings that strays through flat keys; return; four bars that turn to the dominant of A minor.\nIII. Presto, A minor, 6/8. Two repeated halves: racing broken chords, unisons, a sudden quiet episode, scales in octaves to finish.\n\nTarget length about seven or eight minutes (his own run ten to twelve). Compromise known from the start: themes, unisons, the flute duet and every chord are written by hand; a program scores quiet and loud passages from the chord plan (accompaniment figures, tremolo, wind chords, horn notes, harpsichord).",
+   "notes": [],
+   "id": "entry-0004"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:02:00.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1, m2, m3: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. First build of all three movements, after fixing 13 parallel octaves/fifths between tune and bass (mostly where a broken chord in the Presto ended on the bass note of the next bar) and a missing natural sign in the Larghetto's last bars.",
+   "notes": [],
+   "id": "entry-0005"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:02:00.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Allegro di molto: 74 bars written, 141s played; activity fl:71 ob:81 bn:49 hn:28 v1:92 v2:97 va:97 vc:76 cb:76 hpd:179\n    validator ok: 74 bars, 141s, 10 voices; abcjs playback matches the model (3621 notes)\n    parallel fifths/octaves v1/vc: 0\n  II. Larghetto: 32 bars written, 115s played; activity fl:95 v1:96 v2:100 va:100 vc:41 cb:41 hpd:200\n    validator ok: 32 bars, 115.2s, 7 voices; abcjs playback matches the model (562 notes)\n    parallel fifths/octaves v1/vc: 0\n  III. Presto: 64 bars written, 116s played; activity fl:82 ob:130 bn:74 hn:105 v1:94 v2:99 va:99 vc:99 cb:99 hpd:236\n    validator ok: 64 bars, 116.4s, 10 voices; abcjs playback matches the model (5574 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0006"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:02:24.983Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 1 with this public change note:\nFirst draft of all three linked movements: the A minor Allegro di molto with its unison theme and hushed answers, the Larghetto for two flutes, and the Presto in 6/8. A revision pass follows.",
+   "notes": [],
+   "id": "entry-0007"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:02:37.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=cpe-bach-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0008"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:02:37.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Allegro di molto74 bars | load 1.4s | state playing | clock 0:01 / 2:21 | {\"peak\":0.9,\"seconds\":141.2,\"rms\":0.1419,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Bn.:70 Hn. I, II:60 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43 Hpd.:6\nok   II. Larghetto32 bars | load 0.3s | state playing | clock 0:01 / 1:55 | {\"peak\":0.9,\"seconds\":115.4,\"rms\":0.1463,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43 Hpd.:6\nok   III. Presto64 bars | load 0.6s | state playing | clock 0:01 / 1:56 | {\"peak\":0.9,\"seconds\":116.6,\"rms\":0.16,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Bn.:70 Hn. I, II:60 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43 Hpd.:6\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0009"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:02:37.000Z",
+   "kind": "message",
+   "speaker": "Claude",
+   "text": "First playable draft of the C. P. E. Bach symphony is live: https://lost-compositions.exe.xyz/work.html?draft=cpe-bach-symphony-1 — all three movements; each renders and plays in the real player. Revision pass next.",
+   "notes": [],
+   "id": "entry-0010"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:02:38.000Z",
+   "kind": "tool",
+   "speaker": "Score build and checks",
+   "text": "Build m1, m2, m3: write the score, check bar lengths, ranges, sustained notes and half-step clashes, validate with the site validator, compare with abcjs playback, and count parallel fifths/octaves between the outer voices. Revision pass: a two-bar fortissimo diminished-seventh outburst now interrupts the second idea in the first movement's reprise; in the Presto's quiet episode the two flutes play in thirds and sixths instead of doubling the violins.",
+   "notes": [],
+   "id": "entry-0011"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:02:38.000Z",
+   "kind": "result",
+   "speaker": "Score build and checks",
+   "text": "I. Allegro di molto: 76 bars written, 145s played; activity fl:72 ob:84 bn:50 hn:28 v1:92 v2:98 va:98 vc:76 cb:76 hpd:182\n    validator ok: 76 bars, 144.8s, 10 voices; abcjs playback matches the model (3834 notes)\n    parallel fifths/octaves v1/vc: 0\n  II. Larghetto: 32 bars written, 115s played; activity fl:95 v1:96 v2:100 va:100 vc:41 cb:41 hpd:200\n    validator ok: 32 bars, 115.2s, 7 voices; abcjs playback matches the model (562 notes)\n    parallel fifths/octaves v1/vc: 0\n  III. Presto: 64 bars written, 116s played; activity fl:94 ob:130 bn:74 hn:105 v1:94 v2:99 va:99 vc:99 cb:99 hpd:236\n    validator ok: 64 bars, 116.4s, 10 voices; abcjs playback matches the model (5604 notes)\n    parallel fifths/octaves v1/vc: 0",
+   "notes": [],
+   "id": "entry-0012"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:03:07.599Z",
+   "kind": "tool",
+   "speaker": "Draft publication",
+   "text": "Published live draft revision 2 with this public change note:\nRevision: a two-bar fortissimo outburst now interrupts the second idea in the first movement's reprise; in the Presto's quiet episode the two flutes play in thirds and sixths. This revision matches the published score.",
+   "notes": [],
+   "id": "entry-0013"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:03:19.000Z",
+   "kind": "tool",
+   "speaker": "Browser playback test",
+   "text": "Headless Chromium, the site's real player at https://lost-compositions.exe.xyz/ work.html?draft=cpe-bach-symphony-1 : every movement engraved, played, and its rendered audio buffer inspected (peak, loudness, silent seconds).",
+   "notes": [],
+   "id": "entry-0014"
+  },
+  {
+   "session": "main",
+   "sessionLabel": "Composition session",
+   "time": "2026-11-18T01:03:19.000Z",
+   "kind": "result",
+   "speaker": "Browser playback test",
+   "text": "ok   I. Allegro di molto76 bars | load 0.8s | state playing | clock 0:01 / 2:25 | {\"peak\":0.9,\"seconds\":145,\"rms\":0.1446,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Bn.:70 Hn. I, II:60 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43 Hpd.:6\nok   II. Larghetto32 bars | load 0.3s | state playing | clock 0:01 / 1:55 | {\"peak\":0.9,\"seconds\":115.4,\"rms\":0.1463,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43 Hpd.:6\nok   III. Presto64 bars | load 0.6s | state playing | clock 0:01 / 1:56 | {\"peak\":0.9,\"seconds\":116.6,\"rms\":0.1606,\"silent\":[]} | warn=\"\" err=\"\"\n     parts Fl. I, II:73 Ob. I, II:68 Bn.:70 Hn. I, II:60 Vl. I:48 Vl. II:48 Vla.:48 Vc.:48 Cb.:43 Hpd.:6\nconsole errors: none",
+   "notes": [
+    "inspection of rendered audio data, not listening"
+   ],
+   "id": "entry-0015"
+  }
+ ]
+}

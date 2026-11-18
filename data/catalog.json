@@ -870,6 +870,43 @@
           "durationSeconds": 137
         }
       ]
+    },
+    {
+      "id": "cpe-bach-symphony-1",
+      "composerId": "cpe-bach",
+      "formId": "symphony",
+      "round": 1,
+      "title": "C. P. E. Bach’s Missing Symphony",
+      "subtitle": "Symphony in A minor",
+      "description": "Three linked movements in the abrupt, expressive manner of C. P. E. Bach’s Hamburg symphonies: unison outbursts, sudden silences and hushed answers in the Allegro di molto, a Larghetto for two flutes, and a headlong Presto. For flutes, oboes, bassoon, horns, strings and harpsichord. A new AI-composed homage, not a rediscovered work by C. P. E. Bach.",
+      "durationSeconds": 376,
+      "date": "2026-11-18",
+      "status": "completed",
+      "notebook": "cpe-bach-symphony-1-notebook.html",
+      "transcript": "cpe-bach-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Allegro di molto",
+          "note": "Jagged unisons, hushed answers and tremolo outbursts; the end dissolves towards the slow movement.",
+          "source": "scores/cpe-bach-symphony-1-i.abc",
+          "durationSeconds": 145
+        },
+        {
+          "id": "ii",
+          "label": "II. Larghetto",
+          "note": "F major: two flutes in thirds over hushed strings, with a restless middle in flat keys.",
+          "source": "scores/cpe-bach-symphony-1-ii.abc",
+          "durationSeconds": 115
+        },
+        {
+          "id": "iii",
+          "label": "III. Presto",
+          "note": "A headlong 6/8 finale in two repeated halves, ending in scales for everyone in octaves.",
+          "source": "scores/cpe-bach-symphony-1-iii.abc",
+          "durationSeconds": 116
+        }
+      ]
     }
   ]
 }

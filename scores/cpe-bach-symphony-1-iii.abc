@@ -1,0 +1,141 @@
+%%label III. Presto
+%%note A minor, 6/8. A headlong finale in two repeated halves, with unisons, a quiet episode for the flutes and a rush of scales to end.
+X:1
+T:C. P. E. Bach’s Missing Symphony
+T:III. Presto
+C:Claude (AI), in the manner of C. P. E. Bach
+M:6/8
+L:1/8
+Q:"Presto" 3/8=132
+%%score [fl ob bn] hn [v1 v2 va vc cb] hpd
+% Original AI-composed homage. The score is written at sounding pitch.
+V:fl clef=treble name="Fl. I, II"
+V:ob clef=treble name="Ob. I, II"
+V:bn clef=bass name="Bn."
+V:hn clef=treble name="Hn. I, II"
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+V:hpd clef=treble name="Hpd."
+K:Am
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+V:hpd
+%%MIDI program 6
+% bars 1-8: [A1] The theme: racing broken chords for the full orchestra
+[V:fl] |: !f!ac'e' a'e'c' | bd'e' ^g'e'd' | c'e'a' c''a'c' | b3 e'3 | ac'e' a'e'c' | fad' f'd'a | e'c'a ^geb | a3 z3 |
+[V:ob] |: !f![Ac]3 [Ac]3 | [Bd]3 [Bd]3 | [ce]3 [ce]3 | [^Ge]3 [Ge]3 | [ce]3 [ce]3 | [df]3 [df]3 | [ce]3 [^Gd]3 | [Ac]3 [Ac]3 |
+[V:bn] |: !f!A,,A,,A,, A,,A,,A,, | ^G,,G,,G,, G,,G,,G,, | A,,A,,A,, A,,A,,A,, | E,,E,,E,, E,,E,,E,, | A,,A,,A,, A,,A,,A,, | D,D,D, D,D,D, | E,E,E, E,E,E, | A,,A,,A,, A,,A,,A,, |
+[V:hn] |: !f![CE]3 [CE]3 | [Ee]3 [Ee]3 | [CE]3 [CE]3 | [Ee]3 [Ee]3 | [CE]3 [CE]3 | d3 d3 | [CE]3 [Ee]3 | [CE]3 [CE]3 |
+[V:v1] |: !f!ac'e' a'e'c' | bd'e' ^g'e'd' | c'e'a' c''a'c' | b3 e'3 | ac'e' a'e'c' | fad' f'd'a | e'c'a ^geb | a3 z3 |
+[V:v2] |: !f!EEE EEE | DDD DDD | EEE EEE | EEE EEE | EEE EEE | FFF FFF | EEE DDD | CCC CCC |
+[V:va] |: !f!CCC CCC | B,B,B, B,B,B, | CCC CCC | ^G,G,G, G,G,G, | CCC CCC | DDD DDD | CCC ^G,G,G, | A,A,A, A,A,A, |
+[V:vc] |: !f!A,,A,,A,, A,,A,,A,, | ^G,,G,,G,, G,,G,,G,, | A,,A,,A,, A,,A,,A,, | E,,E,,E,, E,,E,,E,, | A,,A,,A,, A,,A,,A,, | D,D,D, D,D,D, | E,E,E, E,E,E, | A,,A,,A,, A,,A,,A,, |
+[V:cb] |: !f!A,,,A,,,A,,, A,,,A,,,A,,, | ^G,,,G,,,G,,, G,,,G,,,G,,, | A,,,A,,,A,,, A,,,A,,,A,,, | E,,,E,,,E,,, E,,,E,,,E,,, | A,,,A,,,A,,, A,,,A,,,A,,, | D,,D,,D,, D,,D,,D,, | E,,E,,E,, E,,E,,E,, | A,,,A,,,A,,, A,,,A,,,A,,, |
+[V:hpd] |: !mf![CEA]3 [CEA]3 | [DEB]3 [DEB]3 | [CEA]3 [CEA]3 | [B,E^G]3 [B,EG]3 | [CEA]3 [CEA]3 | [DFA]3 [DFA]3 | [CEA]3 [DE^G]3 | [CEA]3 [CEA]3 |
+% bars 9-16: [A2] The same figure in C major
+[V:fl] !f!gc'e' g'e'c' | fgb d'bg | egc' e'c'e | g3 d3 | c'e'g' c''g'e' | ac'f' a'f'c' | g'e'c' d'bd' | c'3 z3 |
+[V:ob] !f![ce]3 [ce]3 | [df]3 [df]3 | [ce]3 [ce]3 | [Bd]3 [Bd]3 | [ce]3 [ce]3 | [Af]3 [Af]3 | [Ge]3 [Bf]3 | [ce]3 [ce]3 |
+[V:bn] !f!C,,C,,C,, C,,C,,C,, | B,,B,,B,, B,,B,,B,, | C,C,C, C,C,C, | G,,G,,G,, G,,G,,G,, | C,C,C, C,C,C, | F,F,F, F,F,F, | G,G,G, G,G,G, | C,C,C, C,C,C, |
+[V:hn] !f![EG]3 [EG]3 | [Gd]3 [Gd]3 | [EG]3 [EG]3 | [Gd]3 [Gd]3 | [EG]3 [EG]3 | [Cc]3 [Cc]3 | [EG]3 [Gd]3 | [EG]3 [EG]3 |
+[V:v1] !f!gc'e' g'e'c' | fgb d'bg | egc' e'c'e | g3 d3 | c'e'g' c''g'e' | ac'f' a'f'c' | g'e'c' d'bd' | c'3 z3 |
+[V:v2] !f!GGG GGG | GGG GGG | GGG GGG | GGG GGG | EEE EEE | FFF FFF | EEE FFF | EEE EEE |
+[V:va] !f!EEE EEE | FFF FFF | EEE EEE | B,B,B, B,B,B, | CCC CCC | A,A,A, A,A,A, | G,G,G, B,B,B, | CCC CCC |
+[V:vc] !f!C,,C,,C,, C,,C,,C,, | B,,B,,B,, B,,B,,B,, | C,C,C, C,C,C, | G,,G,,G,, G,,G,,G,, | C,C,C, C,C,C, | F,F,F, F,F,F, | G,G,G, G,G,G, | C,C,C, C,C,C, |
+[V:cb] !f!C,,C,,C,, C,,C,,C,, | B,,,B,,,B,,, B,,,B,,,B,,, | C,,C,,C,, C,,C,,C,, | G,,,G,,,G,,, G,,,G,,,G,,, | C,,C,,C,, C,,C,,C,, | F,,F,,F,, F,,F,,F,, | G,,G,,G,, G,,G,,G,, | C,,C,,C,, C,,C,,C,, |
+[V:hpd] !mf![CEG]3 [CEG]3 | [DFG]3 [DFG]3 | [CEG]3 [CEG]3 | [B,DG]3 [B,DG]3 | [CEG]3 [CEG]3 | [CFA]3 [CFA]3 | [CEG]3 [B,FG]3 | [CEG]3 [CEG]3 |
+% bars 17-24: [A3] A closing phrase that starts quietly and ends loud
+[V:fl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:hn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:v1] !mp!e'3 g'3 | e'3 c'3 | a3 c'3 | b3 d'3 | !f!e'g'e' c'e'g' | ac'a eac' | ac'f' gbd' | c'3 z3 :|
+[V:v2] !p!EEE EEE | EEE EEE | FFF FFF | FFF FFF | !f!EEE EEE | EEE EEE | FFF FFF | EEE EEE :|
+[V:va] !p!E,3 E,3 | E,3 E,3 | A,3 A,3 | B,3 B,3 | !f!E3 E3 | C3 C3 | A,3 B,3 | E3 E3 :|
+[V:vc] !p!C,,3 C,,3 | C,,3 C,,3 | F,,3 F,,3 | G,,3 G,,3 | !f!C,3 C,3 | A,,3 A,,3 | F,,3 G,,3 | C,3 C,3 :|
+[V:cb] !p!C,,3 C,,3 | C,,3 C,,3 | F,,,3 F,,,3 | G,,,3 G,,,3 | !f!C,,3 C,,3 | A,,,3 A,,,3 | F,,,3 G,,,3 | C,,3 C,,3 :|
+[V:hpd] z!p![CEG]2 z[CEG]2 | z[CEG]2 z[CEG]2 | z[CFA]2 z[CFA]2 | z[B,FG]2 z[B,FG]2 | z!f![CEG]2 z[CEG]2 | z[CEA]2 z[CEA]2 | z[CFA]2 z[B,FG]2 | z[CEG]2 z[CEG]2 :|
+% bars 25-28: [B1] Second half: the theme bursts in in E minor, all in octaves
+[V:fl] |: !ff!egb e'bg | ^fab ^d'ba | gbe' g'e'g | ^f3 b3 |
+[V:ob] |: !ff!egb e'bg | ^fab ^d'ba | gbe' g'e'g | ^f3 b3 |
+[V:bn] |: !ff!E,G,B, EB,G, | ^F,A,B, ^DB,A, | G,B,E GEG, | ^F,3 B,3 |
+[V:hn] |: z6 | z6 | z6 | z6 |
+[V:v1] |: !ff!egb e'bg | ^fab ^d'ba | gbe' g'e'g | ^f3 b3 |
+[V:v2] |: !ff!egb e'bg | ^fab ^d'ba | gbe' g'e'g | ^f3 b3 |
+[V:va] |: !ff!EGB eBG | ^FAB ^dBA | GBe geG | ^F3 B3 |
+[V:vc] |: !ff!E,G,B, EB,G, | ^F,A,B, ^DB,A, | G,B,E GEG, | ^F,3 B,3 |
+[V:cb] |: !ff!E,,G,,B,, E,B,,G,, | ^F,,A,,B,, ^D,B,,A,, | G,,B,,E, G,E,G,, | ^F,,3 B,,3 |
+[V:hpd] |: !ff!EGB eBG | ^FAB ^dBA | GBe geG | ^F3 B3 |
+% bars 29-32: [B2] A sequence falling by fifths
+[V:fl] !f!^gbd' e'd'b | ac'e' a'e'c' | ^fac' d'c'a | gbd' g'd'b |
+[V:ob] !f![^Gd]3 [Gd]3 | [Ac]3 [Ac]3 | [^Fc]3 [Fc]3 | [GB]3 [GB]3 |
+[V:bn] !f!E,,E,,E,, E,,E,,E,, | A,,A,,A,, A,,A,,A,, | D,D,D, D,D,D, | G,G,G, G,G,G, |
+[V:hn] !f![Ee]3 [Ee]3 | [CE]3 [CE]3 | d3 d3 | [Gd]3 [Gd]3 |
+[V:v1] !f!^gbd' e'd'b | ac'e' a'e'c' | ^fac' d'c'a | gbd' g'd'b |
+[V:v2] !f!^GGG GGG | AAA AAA | ^FFF FFF | GGG GGG |
+[V:va] !f!DDD DDD | CCC CCC | CCC CCC | B,B,B, B,B,B, |
+[V:vc] !f!E,,E,,E,, E,,E,,E,, | A,,A,,A,, A,,A,,A,, | D,D,D, D,D,D, | G,G,G, G,G,G, |
+[V:cb] !f!E,,,E,,,E,,, E,,,E,,,E,,, | A,,,A,,,A,,, A,,,A,,,A,,, | D,,D,,D,, D,,D,,D,, | G,,G,,G,, G,,G,,G,, |
+[V:hpd] !mf![DE^G]3 [DEG]3 | [CEA]3 [CEA]3 | [C^FA]3 [CFA]3 | [DGB]3 [DGB]3 |
+% bars 33-40: [B3] Suddenly quiet: flutes and violins in long notes
+[V:fl] !p![c'e']3 [e'g']3 | [d'f']3 [bd']3 | [c'e']3 [gc']3 | [bd']3 [^gb]3 | [ac']3 [c'e']3 | [d'f']3 [ad']3 | [db]3 [e^g]3 | [Be]3 z3 |
+[V:ob] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:bn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:hn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] !mp!e'3 g'3 | f'3 d'3 | e'3 c'3 | d'3 b3 | c'3 e'3 | f'3 d'3 | b3 ^g3 | e3 z3 |
+[V:v2] !p!EEE EEE | FFF FFF | EEE EEE | DDD DDD | EEE EEE | FFF FFF | FFF ^GGG | ^GGG GGG |
+[V:va] !p!E,3 E,3 | F,3 F,3 | E,3 E,3 | D,3 D,3 | E,3 E,3 | F,3 F,3 | F,3 ^G,3 | ^G,3 G,3 |
+[V:vc] !p!C,,3 C,,3 | G,,3 G,,3 | C,3 C,3 | ^G,,3 G,,3 | A,,3 A,,3 | D,3 D,3 | D,3 E,3 | E,3 E,3 |
+[V:cb] !p!C,,3 C,,3 | G,,,3 G,,,3 | C,,3 C,,3 | ^G,,,3 G,,,3 | A,,,3 A,,,3 | D,,3 D,,3 | D,,3 E,,3 | E,,3 E,,3 |
+[V:hpd] z!p![CEG]2 z[CEG]2 | z[B,FG]2 z[B,FG]2 | z[CEG]2 z[CEG]2 | z[B,DE]2 z[B,DE]2 | z[A,CE]2 z[A,CE]2 | z[A,DF]2 z[A,DF]2 | z[B,DF]2 z[B,E^G]2 | z[B,E^G]2 z[B,EG]2 |
+% bars 41-48: [B4] The theme returns in A minor
+[V:fl] !f!ac'e' a'e'c' | bd'e' ^g'e'd' | c'e'a' c''a'c' | b3 e'3 | ac'e' a'e'c' | fad' f'd'a | e'c'a ^geb | a3 z3 |
+[V:ob] !f![Ac]3 [Ac]3 | [Bd]3 [Bd]3 | [ce]3 [ce]3 | [^Ge]3 [Ge]3 | [ce]3 [ce]3 | [df]3 [df]3 | [ce]3 [^Gd]3 | [Ac]3 [Ac]3 |
+[V:bn] !f!A,,A,,A,, A,,A,,A,, | ^G,,G,,G,, G,,G,,G,, | A,,A,,A,, A,,A,,A,, | E,,E,,E,, E,,E,,E,, | A,,A,,A,, A,,A,,A,, | D,D,D, D,D,D, | E,E,E, E,E,E, | A,,A,,A,, A,,A,,A,, |
+[V:hn] !f![CE]3 [CE]3 | [Ee]3 [Ee]3 | [CE]3 [CE]3 | [Ee]3 [Ee]3 | [CE]3 [CE]3 | d3 d3 | [CE]3 [Ee]3 | [CE]3 [CE]3 |
+[V:v1] !f!ac'e' a'e'c' | bd'e' ^g'e'd' | c'e'a' c''a'c' | b3 e'3 | ac'e' a'e'c' | fad' f'd'a | e'c'a ^geb | a3 z3 |
+[V:v2] !f!EEE EEE | DDD DDD | EEE EEE | EEE EEE | EEE EEE | FFF FFF | EEE DDD | CCC CCC |
+[V:va] !f!CCC CCC | B,B,B, B,B,B, | CCC CCC | ^G,G,G, G,G,G, | CCC CCC | DDD DDD | CCC ^G,G,G, | A,A,A, A,A,A, |
+[V:vc] !f!A,,A,,A,, A,,A,,A,, | ^G,,G,,G,, G,,G,,G,, | A,,A,,A,, A,,A,,A,, | E,,E,,E,, E,,E,,E,, | A,,A,,A,, A,,A,,A,, | D,D,D, D,D,D, | E,E,E, E,E,E, | A,,A,,A,, A,,A,,A,, |
+[V:cb] !f!A,,,A,,,A,,, A,,,A,,,A,,, | ^G,,,G,,,G,,, G,,,G,,,G,,, | A,,,A,,,A,,, A,,,A,,,A,,, | E,,,E,,,E,,, E,,,E,,,E,,, | A,,,A,,,A,,, A,,,A,,,A,,, | D,,D,,D,, D,,D,,D,, | E,,E,,E,, E,,E,,E,, | A,,,A,,,A,,, A,,,A,,,A,,, |
+[V:hpd] !mf![CEA]3 [CEA]3 | [DEB]3 [DEB]3 | [CEA]3 [CEA]3 | [B,E^G]3 [B,EG]3 | [CEA]3 [CEA]3 | [DFA]3 [DFA]3 | [CEA]3 [DE^G]3 | [CEA]3 [CEA]3 |
+% bars 49-56: [B5] The closing phrase in the minor
+[V:fl] !f!c'3 e'3 | c'3 a3 | f3 a3 | ^g3 b3 | c'e'c' ac'e' | faf cfa | fad' e^gb | a3 z3 |
+[V:ob] !f![Ac]3 [Ac]3 | [Ac]3 [Ac]3 | [Af]3 [Af]3 | [^Gd]3 [Gd]3 | [Ac]3 [Ac]3 | [Ac]3 [Ac]3 | [Af]3 [^Gd]3 | [Ac]3 [Ac]3 |
+[V:bn] !f!A,,A,,A,, A,,A,,A,, | A,,A,,A,, A,,A,,A,, | D,D,D, D,D,D, | E,E,E, E,E,E, | A,,A,,A,, A,,A,,A,, | F,,F,,F,, F,,F,,F,, | D,,D,,D,, E,,E,,E,, | A,,A,,A,, A,,A,,A,, |
+[V:hn] !f![CE]3 [CE]3 | [CE]3 [CE]3 | d3 d3 | [Ee]3 [Ee]3 | [CE]3 [CE]3 | [Cc]3 [Cc]3 | d3 [Ee]3 | [CE]3 [CE]3 |
+[V:v1] !f!c'3 e'3 | c'3 a3 | f3 a3 | ^g3 b3 | c'e'c' ac'e' | faf cfa | fad' e^gb | a3 z3 |
+[V:v2] !f!EEE EEE | EEE EEE | FFF FFF | ^GGG GGG | AAA AAA | AAA AAA | AAA ^GGG | AAA AAA |
+[V:va] !f!CCC CCC | CCC CCC | DDD DDD | DDD DDD | CCC CCC | CCC CCC | FFF DDD | CCC CCC |
+[V:vc] !f!A,,A,,A,, A,,A,,A,, | A,,A,,A,, A,,A,,A,, | D,D,D, D,D,D, | E,E,E, E,E,E, | A,,A,,A,, A,,A,,A,, | F,,F,,F,, F,,F,,F,, | D,,D,,D,, E,,E,,E,, | A,,A,,A,, A,,A,,A,, |
+[V:cb] !f!A,,,A,,,A,,, A,,,A,,,A,,, | A,,,A,,,A,,, A,,,A,,,A,,, | D,,D,,D,, D,,D,,D,, | E,,E,,E,, E,,E,,E,, | A,,,A,,,A,,, A,,,A,,,A,,, | F,,,F,,,F,,, F,,,F,,,F,,, | D,,D,,D,, E,,,E,,,E,,, | A,,,A,,,A,,, A,,,A,,,A,,, |
+[V:hpd] !mf![CEA]3 [CEA]3 | [CEA]3 [CEA]3 | [DFA]3 [DFA]3 | [DE^G]3 [DEG]3 | [CEA]3 [CEA]3 | [CFA]3 [CFA]3 | [DFA]3 [DE^G]3 | [CEA]3 [CEA]3 |
+% bars 57-64: [B6] Scales in octaves for everyone, and the end
+[V:fl] !ff!abc' d'e'f' | f'e'd' c'ba | ^gbd' e'd'b | ac'e' a'e'c' | fad' f'd'a | e^gb e'bg | a3 a'3 | a3 z3 :|
+[V:ob] !ff!ABc def | fed cBA | ^GBd edB | Ace aec | FAd fdA | E^GB eBG | A3 a3 | A3 z3 :|
+[V:bn] !ff!A,B,C DEF | FED CB,A, | ^G,B,D EDB, | A,CE AEC | F,A,D FDA, | E,^G,B, EB,G, | A,3 A3 | A,3 z3 :|
+[V:hn] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:v1] !ff!abc' d'e'f' | f'e'd' c'ba | ^gbd' e'd'b | ac'e' a'e'c' | fad' f'd'a | e^gb e'bg | a3 a'3 | a3 z3 :|
+[V:v2] !ff!abc' d'e'f' | f'e'd' c'ba | ^gbd' e'd'b | ac'e' a'e'c' | fad' f'd'a | e^gb e'bg | a3 a'3 | a3 z3 :|
+[V:va] !ff!ABc def | fed cBA | ^GBd edB | Ace aec | FAd fdA | E^GB eBG | A3 a3 | A3 z3 :|
+[V:vc] !ff!A,B,C DEF | FED CB,A, | ^G,B,D EDB, | A,CE AEC | F,A,D FDA, | E,^G,B, EB,G, | A,3 A3 | A,3 z3 :|
+[V:cb] !ff!A,,B,,C, D,E,F, | F,E,D, C,B,,A,, | ^G,,B,,D, E,D,B,, | A,,C,E, A,E,C, | F,,A,,D, F,D,A,, | E,,^G,,B,, E,B,,G,, | A,,3 A,3 | A,,3 z3 :|
+[V:hpd] !ff!ABc def | fed cBA | ^GBd edB | Ace aec | FAd fdA | E^GB eBG | A3 a3 | A3 z3 :|

@@ -1,0 +1,73 @@
+%%label II. Larghetto
+%%note F major. Two flutes in thirds over hushed strings; a restless middle that strays into flat keys; the close turns to the dominant of A minor for the finale.
+X:1
+T:C. P. E. Bach’s Missing Symphony
+T:II. Larghetto
+C:Claude (AI), in the manner of C. P. E. Bach
+M:3/4
+L:1/8
+Q:"Larghetto" 1/4=50
+%%score [fl ob bn] hn [v1 v2 va vc cb] hpd
+% Original AI-composed homage. The score is written at sounding pitch.
+V:fl clef=treble name="Fl. I, II"
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+V:hpd clef=treble name="Hpd."
+K:F
+V:fl
+%%MIDI program 73
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+V:hpd
+%%MIDI program 6
+% bars 1-8: [A] The flutes’ song in thirds over soft strings
+[V:fl] !p![ac']4 [fa]2 | [gb]4 [eg]2 | [fa]2 [ac']2 [d'f']2 | [bd']4 [c'e']2 | [c'f']4 [ac']2 | [bd']2 [gb]2 [dg]2 | [fa]4 [eg]2 | [Af]4 z2 |
+[V:v1] !pp!F2 F2 F2 | G2 G2 G2 | F2 F2 F2 | F2 F2 E2 | F2 F2 F2 | D2 D2 D2 | C2 C2 E2 | F2 F2 F2 |
+[V:v2] !pp!C2 C2 C2 | C2 C2 C2 | C2 C2 D2 | D2 D2 C2 | C2 C2 C2 | B,2 B,2 B,2 | A,2 A,2 B,2 | C2 C2 C2 |
+[V:va] !pp!A,2 A,2 A,2 | B,2 B,2 B,2 | A,2 A,2 A,2 | B,2 B,2 G,2 | F,2 F,2 F,2 | F,2 F,2 G,2 | F,2 F,2 G,2 | A,2 A,2 A,2 |
+[V:vc] !pp!F,,2 z4 | E,,2 z4 | F,,2 z2 z2 | B,,2 z2 z2 | A,,2 z4 | B,,2 z2 z2 | C,2 z2 z2 | F,2 z4 |
+[V:cb] !pp!F,,,2 z4 | E,,,2 z4 | F,,,2 z2 z2 | B,,,2 z2 z2 | A,,,2 z4 | B,,,2 z2 z2 | C,,2 z2 z2 | F,,2 z4 |
+[V:hpd] z2 !pp![CFA]2 [CFA]2 | z2 [CGB]2 [CGB]2 | z2 [CFA]2 [DFA]2 | z2 [DFB]2 [CEG]2 | z2 [CFc]2 [CFc]2 | z2 [B,Fd]2 [B,Gd]2 | z2 [A,Fc]2 [B,Ec]2 | z2 [A,Fc]2 [A,Fc]2 |
+% bars 9-16: [B] The strings alone: the harmony slips through C minor, A flat and D flat before finding F again
+[V:fl] z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 |
+[V:v1] !mp!_e'4 c'2 | d'4 b2 | f'4 d'2 | _e'4 c'2 | _e'2 c'2 _a2 | _a2 c'2 f'2 | f'4 _d'2 | _d'4 c'2 |
+[V:v2] !p!_E2 E2 E2 | D2 D2 D2 | F2 F2 F2 | G2 G2 G2 | _A2 A2 A2 | _A2 A2 A2 | F2 F2 F2 | F2 F2 E2 |
+[V:va] !p!_E,6 | D,6 | F,6 | _E,6 | _E,6 | _A,6 | F,6 | F,4 E,2 |
+[V:vc] !p!A,,2 z4 | B,,2 z4 | =B,,2 z4 | C,2 z4 | _A,,2 z4 | F,,2 z4 | _D,,2 z4 | B,,2 z2 z2 |
+[V:cb] !p!A,,,2 z4 | B,,,2 z4 | =B,,,2 z4 | C,,2 z4 | _A,,,2 z4 | F,,,2 z4 | _D,,2 z4 | B,,,2 z2 z2 |
+[V:hpd] z2 !pp![C_EF]2 [CEF]2 | z2 [B,DF]2 [B,DF]2 | z2 [=B,DF]2 [B,DF]2 | z2 [C_EG]2 [CEG]2 | z2 [C_E_A]2 [CEA]2 | z2 [CF_A]2 [CFA]2 | z2 [_DF_A]2 [DFA]2 | z2 [_DFB]2 [CEG]2 |
+% bars 17-20
+[V:fl] z6 | z6 | z6 | z6 |
+[V:v1] _a2 c'2 b2 | a4 c'2 | d'2 b2 g2 | f4 z2 |
+[V:v2] _A2 A2 E2 | F2 F2 F2 | D2 D2 E2 | F2 F2 F2 |
+[V:va] _A,4 B,2 | A,6 | D4 E2 | A,6 |
+[V:vc] C,2 z2 z2 | F,2 z4 | B,,2 z2 z2 | F,,2 z4 |
+[V:cb] C,,2 z2 z2 | F,,2 z4 | B,,,2 z2 z2 | F,,,2 z4 |
+[V:hpd] z2 [CF_A]2 [CEB]2 | z2 [CFA]2 [CFA]2 | z2 [DFB]2 [CEB]2 | z2 [CFA]2 [CFA]2 |
+% bars 21-28: [A return] The song again, the first violins now singing with the flutes
+[V:fl] !p![ac']4 [fa]2 | [gb]4 [eg]2 | [fa]2 [ac']2 [d'f']2 | [bd']4 [c'e']2 | [c'f']4 [ac']2 | [bd']2 [gb]2 [dg]2 | [fa]4 [eg]2 | [Af]4 z2 |
+[V:v1] !pp!c'4 a2 | b4 g2 | a2 c'2 f'2 | d'4 e'2 | f'4 c'2 | d'2 b2 g2 | a4 g2 | f4 z2 |
+[V:v2] !pp!C2 C2 C2 | C2 C2 C2 | C2 C2 D2 | D2 D2 C2 | C2 C2 C2 | B,2 B,2 B,2 | A,2 A,2 B,2 | C2 C2 C2 |
+[V:va] !pp!A,2 A,2 A,2 | B,2 B,2 B,2 | A,2 A,2 A,2 | B,2 B,2 G,2 | F,2 F,2 F,2 | F,2 F,2 G,2 | F,2 F,2 G,2 | A,2 A,2 A,2 |
+[V:vc] !pp!F,,2 z4 | E,,2 z4 | F,,2 z2 z2 | B,,2 z2 z2 | A,,2 z4 | B,,2 z2 z2 | C,2 z2 z2 | F,2 z4 |
+[V:cb] !pp!F,,,2 z4 | E,,,2 z4 | F,,,2 z2 z2 | B,,,2 z2 z2 | A,,,2 z4 | B,,,2 z2 z2 | C,,2 z2 z2 | F,,2 z4 |
+[V:hpd] z2 !pp![CFA]2 [CFA]2 | z2 [CGB]2 [CGB]2 | z2 [CFA]2 [DFA]2 | z2 [DFB]2 [CEG]2 | z2 [CFc]2 [CFc]2 | z2 [B,Fd]2 [B,Gd]2 | z2 [A,Fc]2 [B,Ec]2 | z2 [A,Fc]2 [A,Fc]2 |
+% bars 29-32: [Link] Four bars that turn aside to the dominant of A minor
+[V:fl] z6 | z6 | z6 | z6 |]
+[V:v1] !mp!f'4 d'2 | a4 f2 | ^g4 =b2 | e'4 z2 |]
+[V:v2] !p!F2 F2 F2 | A2 A2 A2 | _A2 A2 A2 | _A2 A2 A2 |]
+[V:va] !p!F,6 | D,6 | _A,6 | _A,6 |]
+[V:vc] !p!D,,6 | F,,6 | E,,6 | E,,6 |]
+[V:cb] !p!D,,6 | F,,,6 | E,,,6 | E,,,6 |]
+[V:hpd] z2 !pp![DFA]2 [DFA]2 | z2 [DFA]2 [DFA]2 | z2 [=B,E_A]2 [B,EA]2 | z2 [=B,E_A]2 [B,EA]2 |]
