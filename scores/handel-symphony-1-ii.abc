@@ -1,0 +1,57 @@
+%%label II. Larghetto
+%%note D minor. A sarabande-like air for the strings; a solo oboe takes the tune in the second half and the violins join it for the return.
+X:1
+T:Handel’s Missing Symphony
+T:II. Larghetto
+C:Claude (AI), in the manner of G. F. Handel
+M:3/4
+L:1/8
+Q:"Larghetto" 1/4=58
+%%score ob1 [v1 v2 va vc cb] hpd
+% Original AI-composed homage. The score is written at sounding pitch.
+V:ob1 clef=treble name="Ob. solo"
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+V:hpd clef=treble name="Hpd."
+K:Dm
+V:ob1
+%%MIDI program 68
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+V:hpd
+%%MIDI program 6
+% bars 1-8: [A] The air in the first violins, closing on the dominant
+[V:ob1] |: z6 | z6 | z6 | z6 | z6 | z6 | z6 | z6 :|
+[V:v1] |: !mp!a2 d'3a | g2 b3a | e2 g3f | f4 d2 | d'2 f'3d' | b2 e'3d' | f'2 e'3d' | ^c'4 z2 :|
+[V:v2] |: !p!D2 D4 | D2 D4 | E2 E4 | D2 D4 | D2 D4 | D2 D4 | D2 ^C4 | ^C2 C4 :|
+[V:va] |: !p!A,2 A,4 | G,2 G,4 | G,2 G,4 | F,2 F,4 | F,2 F,4 | B,2 B,4 | F,2 A,4 | A,2 A,4 :|
+[V:vc] |: !p!D,4 D,2 | B,,4 B,,2 | ^C,4 C,2 | D,2 A,,2 D,,2 | B,,4 B,,2 | G,,4 G,,2 | A,,4 A,,2 | A,,4 z2 :|
+[V:cb] |: !p!D,,4 D,,2 | B,,,4 B,,,2 | ^C,,4 C,,2 | D,,2 A,,,2 D,,2 | B,,,4 B,,,2 | G,,,4 G,,,2 | A,,,4 A,,,2 | A,,,4 z2 :|
+[V:hpd] |: !p![DFA]2 [DFA]4 | [DGB]2 [DGB]4 | [EGA]2 [EGA]4 | [DFA]2 [DFA]4 | [DFB]2 [DFB]4 | [DEB]2 [DEB]4 | [DFA]2 [^CEA]4 | [^CEA]2 [CEA]4 :|
+% bars 9-16: [B] F major and G minor: the solo oboe has the tune; at the return the first violins play it with the oboe
+[V:ob1] |: !mf!c'2 f'3c' | b2 g3b | a2 c'3a | a2 d'3c' | b2 d'3b | a2 ^c'3e' | d'2 f'3d' | d'2 ^c'3a |
+[V:v1] |: !p!A2 A4 | B2 B4 | A2 A4 | A2 A4 | B2 B4 | A2 A4 | A2 A4 | G2 E4 |
+[V:v2] |: !p!C2 C4 | C2 C4 | C2 C4 | C2 C4 | D2 D4 | ^C2 C4 | D2 D4 | D2 ^C4 |
+[V:va] |: !p!F,2 F,4 | G,2 G,4 | F,2 F,4 | A,2 A,4 | G,2 G,4 | A,2 A,4 | A,2 A,4 | G,2 A,4 |
+[V:vc] |: !p!F,4 F,2 | E,4 E,2 | F,4 F,2 | ^F,4 F,2 | G,4 G,2 | G,4 G,2 | F,4 F,2 | B,,2 A,,4 |
+[V:cb] |: !p!F,,4 F,,2 | E,,4 E,,2 | F,,4 F,,2 | ^F,,4 F,,2 | G,,4 G,,2 | G,,4 G,,2 | F,,4 F,,2 | B,,,2 A,,,4 |
+[V:hpd] |: !p![CFA]2 [CFA]4 | [CGB]2 [CGB]4 | [CFA]2 [CFA]4 | [CDA]2 [CDA]4 | [B,DG]2 [B,DG]4 | [A,^CE]2 [A,CE]4 | [A,DF]2 [A,DF]4 | [B,DG]2 [A,^CE]4 |
+% bars 17-24
+[V:ob1] a2 d'3a | g2 b3a | e2 g3f | f2 a3^f | g2 b3d' | e'2 d'3^c' | d'2 e'3^c' | d'4 z2 :|
+[V:v1] !mp!a2 d'3a | g2 b3a | e2 g3f | f2 a3^f | g2 b3d' | e'2 d'3^c' | d'2 e'3^c' | d'4 z2 :|
+[V:v2] D2 D4 | D2 D4 | E2 E4 | D2 D4 | D2 D4 | D2 D4 | D2 ^C4 | D2 D4 :|
+[V:va] A,2 A,4 | G,2 G,4 | G,2 G,4 | F,2 F,4 | G,2 G,4 | B,2 B,4 | A,2 A,4 | A,2 A,4 :|
+[V:vc] D,4 D,2 | B,,4 B,,2 | ^C,4 C,2 | D,4 C,2 | B,,4 B,,2 | G,,4 G,,2 | A,,4 A,,2 | D,,4 z2 :|
+[V:cb] D,,4 D,,2 | B,,,4 B,,,2 | ^C,,4 C,,2 | D,,4 C,,2 | B,,,4 B,,,2 | G,,,4 G,,,2 | A,,,4 A,,,2 | D,,4 z2 :|
+[V:hpd] [A,DF]2 [A,DF]4 | [B,DG]2 [B,DG]4 | [A,EG]2 [A,EG]4 | [A,DF]2 [A,DF]4 | [B,DG]2 [B,DG]4 | [B,DE]2 [B,DE]4 | [A,DF]2 [A,^CG]4 | [A,DF]2 [A,DF]4 :|

@@ -745,6 +745,50 @@
           "durationSeconds": 134
         }
       ]
+    },
+    {
+      "id": "handel-symphony-1",
+      "composerId": "handel",
+      "formId": "symphony",
+      "round": 1,
+      "title": "Handel’s Missing Symphony",
+      "subtitle": "Sinfonia in F major",
+      "description": "An imagined four-movement sinfonia in the manner of Handel’s concerti grossi and outdoor music, a form he never wrote: a ritornello Allegro, a D minor Larghetto, a hornpipe and a chaconne, for horns, oboes, bassoon, strings and harpsichord. A new AI-composed homage, not a rediscovered work by Handel.",
+      "durationSeconds": 559,
+      "date": "2026-11-18",
+      "status": "completed",
+      "notebook": "handel-symphony-1-notebook.html",
+      "transcript": "handel-symphony-1-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Largo – Allegro",
+          "note": "A stately introduction and a ritornello Allegro with episodes for oboes, strings and horns.",
+          "source": "scores/handel-symphony-1-i.abc",
+          "durationSeconds": 168
+        },
+        {
+          "id": "ii",
+          "label": "II. Larghetto",
+          "note": "D minor: a sarabande-like air for strings, then for solo oboe.",
+          "source": "scores/handel-symphony-1-ii.abc",
+          "durationSeconds": 149
+        },
+        {
+          "id": "iii",
+          "label": "III. Alla Hornpipe",
+          "note": "A syncopated hornpipe in 3/2 around a quiet D minor middle section for strings.",
+          "source": "scores/handel-symphony-1-iii.abc",
+          "durationSeconds": 117
+        },
+        {
+          "id": "iv",
+          "label": "IV. Chaconne",
+          "note": "Seventeen variations on a four-bar ground bass, four of them in F minor.",
+          "source": "scores/handel-symphony-1-iv.abc",
+          "durationSeconds": 125
+        }
+      ]
     }
   ]
 }
