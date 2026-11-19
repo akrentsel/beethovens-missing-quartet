@@ -1296,6 +1296,50 @@
           "durationSeconds": 125
         }
       ]
+    },
+    {
+      "id": "beethoven-symphony-2",
+      "composerId": "beethoven",
+      "formId": "symphony",
+      "round": 2,
+      "title": "Beethoven’s Second Missing Symphony",
+      "subtitle": "Symphony in D minor",
+      "description": "A four-movement symphony in D minor, in the manner of Beethoven, composed for the Missing Works symphony 2 queue; not a rediscovered work by the historical composer.",
+      "durationSeconds": 89,
+      "date": "2026-11-19",
+      "status": "completed",
+      "notebook": "beethoven-symphony-2-notebook.html",
+      "transcript": "beethoven-symphony-2-transcript.html",
+      "movements": [
+        {
+          "id": "i",
+          "label": "I. Allegro con brio",
+          "note": "Allegro con brio — a new motto in octaves; development with a fugato on the motto; the second theme returns in D major before the coda.",
+          "source": "scores/beethoven-symphony-2-i.abc",
+          "durationSeconds": 41
+        },
+        {
+          "id": "ii",
+          "label": "II. Andante con moto",
+          "note": "Andante con moto — a hymn-like theme with variations and a minor episode.",
+          "source": "scores/beethoven-symphony-2-ii.abc",
+          "durationSeconds": 17
+        },
+        {
+          "id": "iii",
+          "label": "III. Scherzo: Allegro vivace",
+          "note": "Scherzo: Allegro vivace — a clipped B flat minor tune with a trio for the horns.",
+          "source": "scores/beethoven-symphony-2-iii.abc",
+          "durationSeconds": 7
+        },
+        {
+          "id": "iv",
+          "label": "IV. Finale: Allegro molto",
+          "note": "Finale: Allegro molto — the new first theme returns in D major and a Presto closes the symphony.",
+          "source": "scores/beethoven-symphony-2-iv.abc",
+          "durationSeconds": 24
+        }
+      ]
     }
   ]
 }

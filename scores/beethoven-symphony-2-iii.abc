@@ -1,0 +1,74 @@
+%%label III. Scherzo: Allegro vivace
+%%note B flat minor. A clipped staccato tune hammered by the full orchestra; a trio led by the horns.
+X:1
+T:Beethoven’s Second Missing Symphony
+T:III. Scherzo: Allegro vivace
+C:Lor, in the manner of Beethoven
+M:3/4
+L:1/8
+Q:"Allegro vivace" 1/4=216
+%%score [fl ob cl bn] [hn tp] tm [v1 v2 va vc cb]
+% The score is written at sounding pitch. Dynamics in the wind, brass and double-bass parts are set one to three levels below the strings to balance the playback samples of this site; they are a playback compromise, not dynamics for live players.
+V:fl clef=treble name="Fl."
+V:ob clef=treble name="Ob."
+V:cl clef=treble name="Cl."
+V:bn clef=bass name="Bn."
+V:hn clef=treble name="Hn."
+V:tp clef=treble name="Tpt."
+V:tm clef=bass name="Timp."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:Bbm
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tp
+%%MIDI program 56
+V:tm
+%%MIDI program 47
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-4: The tune: a clipped staccato motif
+[V:fl] !mp!f3 =g3 | =a3 =b3 | g3 =a3 | =b3 c'3 |
+[V:ob] !mf!F3 =G3 | =A3 =B3 | G3 =A3 | =B3 c3 |
+[V:cl] !mf!F,3 =G,3 | =A,3 =B,3 | G,3 =A,3 | =B,3 C3 |
+[V:bn] !mf!=B,,3 _C,3 | =B,,3 _C,3 | =B,,3 _C,3 | =B,,4 z2 |
+[V:hn] !mf![_C=E]6 | [_C=E]6 | [_C=E]6 | [_C=E]4 z2 |
+[V:tp] !f!F3 F3 | F3 F3 | F3 F3 | F4 z2 |
+[V:tm] !ff!F,,2 z4 | F,,2 z4 | F,,2 z4 | F,,4 z2 |
+[V:v1] !ff!F3 =G3 | =A3 =B3 | G3 =A3 | =B3 c3 |
+[V:v2] !ff!F3 =G3 | =A3 =B3 | G3 =A3 | =B3 c3 |
+[V:va] !ff!=D3 E3 | F3 =G3 | E3 F3 | =G3 =A3 |
+[V:vc] !ff!=B,,3 _C,3 | =B,,3 _C,3 | =B,,3 _C,3 | =B,,4 z2 |
+[V:cb] z6 | z6 | z6 | z6 |
+% bars 5-8: The tune again, hammered by the full orchestra
+[V:fl] !mp!f3 =g3 | =a3 =b3 | g3 =a3 | =b3 c'3 |
+[V:ob] !mf!F3 =G3 | =A3 =B3 | G3 =A3 | =B3 c3 |
+[V:cl] !mf!F,3 =G,3 | =A,3 =B,3 | G,3 =A,3 | =B,3 C3 |
+[V:bn] !mf!=B,,3 _C,3 | =B,,3 _C,3 | =B,,3 _C,3 | =B,,4 z2 |
+[V:hn] !mf![F=A]6 | [F=A]6 | [F=A]6 | [F=A]4 z2 |
+[V:tp] !f!F3 F3 | F3 F3 | F3 F3 | F4 z2 |
+[V:tm] !ff!F,,2 z4 | F,,2 z4 | F,,2 z4 | F,,4 z2 |
+[V:v1] !ff!F3 =G3 | =A3 =B3 | G3 =A3 | =B3 c3 |
+[V:v2] !ff!F3 =G3 | =A3 =B3 | G3 =A3 | =B3 c3 |
+[V:va] !ff!=D3 E3 | F3 =G3 | E3 F3 | =G3 =A3 |
+[V:vc] !ff!=B,,3 _C,3 | =B,,3 _C,3 | =B,,3 _C,3 | =B,,4 z2 |
+[V:cb] z6 | z6 | z6 | z6 |

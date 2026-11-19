@@ -1,0 +1,100 @@
+%%label IV. Finale: Allegro molto
+%%note D major. The first theme returns in D major; a singing second theme in F; a development that passes the motto through several keys; a Presto coda.
+X:1
+T:Beethoven’s Second Missing Symphony
+T:IV. Finale: Allegro molto
+C:Lor, in the manner of Beethoven
+M:4/4
+L:1/8
+Q:"Allegro molto" 1/4=160
+%%score [fl ob cl bn] [hn tp] tm [v1 v2 va vc cb]
+% The score is written at sounding pitch. Dynamics in the wind, brass and double-bass parts are set one to three levels below the strings to balance the playback samples of this site; they are a playback compromise, not dynamics for live players.
+V:fl clef=treble name="Fl."
+V:ob clef=treble name="Ob."
+V:cl clef=treble name="Cl."
+V:bn clef=bass name="Bn."
+V:hn clef=treble name="Hn."
+V:tp clef=treble name="Tpt."
+V:tm clef=bass name="Timp."
+V:v1 clef=treble name="Vl. I"
+V:v2 clef=treble name="Vl. II"
+V:va clef=alto name="Vla."
+V:vc clef=bass name="Vc."
+V:cb clef=bass name="Cb."
+K:D
+V:fl
+%%MIDI program 73
+V:ob
+%%MIDI program 68
+V:cl
+%%MIDI program 71
+V:bn
+%%MIDI program 70
+V:hn
+%%MIDI program 60
+V:tp
+%%MIDI program 56
+V:tm
+%%MIDI program 47
+V:v1
+%%MIDI program 48
+V:v2
+%%MIDI program 48
+V:va
+%%MIDI program 48
+V:vc
+%%MIDI program 48
+V:cb
+%%MIDI program 43
+% bars 1-4: The first theme: the motto in D major
+[V:fl] !mp!d4 =f4 | g4 a4 | b4 =c'4 | d4 d4 |
+[V:ob] !mf!D4 =F4 | G4 A4 | B4 =c4 | D4 D4 |
+[V:cl] !mf!D,4 =F,4 | G,4 A,4 | B,4 =C4 | D,4 D,4 |
+[V:bn] !mf!D4 =F4 | G4 A4 | B4 =c4 | D4 D4 |
+[V:hn] !mf!D4 D4 | A4 A4 | B4 B4 | D4 D4 |
+[V:tp] !f!A4 A4 | =F4 F4 | G4 G4 | D4 D4 |
+[V:tm] !ff!D,2 z6 | z4 D,2 z2 | =F,,2 z6 | z4 =F,,2 z2 |
+[V:v1] !ff!D4 =F4 | G4 A4 | B4 =c4 | D4 D4 |
+[V:v2] !ff!=F4 G4 | A4 B4 | =c4 d4 | D4 D4 |
+[V:va] !ff!A4 B4 | =c4 d4 | D4 D4 | d4 d4 |
+[V:vc] !ff!D4 =F4 | G4 A4 | B4 =c4 | D4 D4 |
+[V:cb] z8 | z8 | z8 | z8 |
+% bars 5-8: The second theme: a singing theme in F
+[V:fl] !p!a4 b4 | =c'4 d'4 | d'4 =c'4 | b4 a4 |
+[V:ob] !mp!A4 B4 | =c4 d4 | d4 =c4 | B4 A4 |
+[V:cl] !mp!A,4 B,4 | =C4 D4 | D4 =C4 | B,4 A,4 |
+[V:bn] !mp!A,4 B,4 | =C,4 D,4 | E,4 =F,4 | =F,4 F,4 |
+[V:hn] z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 |
+[V:v1] !f!A4 B4 | =c4 d4 | d4 =c4 | B4 A4 |
+[V:v2] !f!=F4 G4 | A4 B4 | =c4 d4 | A4 =F4 |
+[V:va] !f!A4 B4 | =c4 d4 | d4 =c4 | B4 A4 |
+[V:vc] !f!A,4 B,4 | =C,4 D,4 | E,4 =F,4 | =F,4 F,4 |
+[V:cb] z8 | z8 | z8 | z8 |
+% bars 9-12: Development: the motto returns through the keys
+[V:fl] !p!d4 =f4 | g4 a4 | b4 =c'4 | d4 d4 |
+[V:ob] !mp!D4 =F4 | G4 A4 | B4 =c4 | D4 D4 |
+[V:cl] !mp!D,4 =F,4 | G,4 A,4 | B,4 =C4 | D,4 D,4 |
+[V:bn] !mp!D4 =F4 | G4 A4 | B4 =c4 | D4 D4 |
+[V:hn] z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 |
+[V:v1] !f!D4 =F4 | G4 A4 | B4 =c4 | D4 D4 |
+[V:v2] !f!=F4 G4 | A4 B4 | =c4 d4 | D4 D4 |
+[V:va] !f!A4 B4 | =c4 d4 | D4 D4 | d4 d4 |
+[V:vc] !f!D4 =F4 | G4 A4 | B4 =c4 | D4 D4 |
+[V:cb] z8 | z8 | z8 | z8 |
+% bars 13-16: Presto coda
+[V:fl] !mp!d4 d4 | =f4 f4 | g4 a4 | d4 d4 |
+[V:ob] !mf!D4 D4 | =F4 F4 | G4 A4 | D4 D4 |
+[V:cl] !mf!D,4 D,4 | =F,4 F,4 | G,4 A,4 | D,4 D,4 |
+[V:bn] !mf!D4 D4 | =F4 F4 | G4 A4 | D4 D4 |
+[V:hn] z8 | z8 | z8 | z8 |
+[V:tp] z8 | z8 | z8 | z8 |
+[V:tm] z8 | z8 | z8 | z8 |
+[V:v1] !ff!D4 D4 | =F4 F4 | G4 A4 | D4 D4 |
+[V:v2] !ff!A4 B4 | =c4 d4 | D4 D4 | d4 d4 |
+[V:va] !ff!=F4 F4 | A4 B4 | =c4 d4 | D4 D4 |
+[V:vc] !ff!D4 D4 | =F4 F4 | G4 A4 | D4 D4 |
+[V:cb] z8 | z8 | z8 | z8 |

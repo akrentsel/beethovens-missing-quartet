@@ -169,3 +169,10 @@ scores/copland-symphony-1-i.abc
 scores/copland-symphony-1-ii.abc
 scores/copland-symphony-1-iii.abc
 scores/copland-symphony-1-iv.abc
+beethoven-symphony-2-notebook.html
+beethoven-symphony-2-transcript.html
+beethoven-symphony-2-transcript.json
+scores/beethoven-symphony-2-i.abc
+scores/beethoven-symphony-2-ii.abc
+scores/beethoven-symphony-2-iii.abc
+scores/beethoven-symphony-2-iv.abc
